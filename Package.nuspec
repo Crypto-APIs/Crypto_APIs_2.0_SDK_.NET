@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>CryptoAPIs</id>
+    <version>1.0.0</version>
+    <authors>CryptoAPIs Team</authors>
+    <owners>CryptoAPIs Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_.NET</projectUrl>
+    <icon>logo.svg</icon>
+    <description>the C# library for the Crypto APIs</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>Crypto Blockchain</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="SampleDependency" version="1.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
