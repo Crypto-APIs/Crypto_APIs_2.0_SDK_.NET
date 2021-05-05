@@ -8,7 +8,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_.NET</projectUrl>
-    <icon>logo.svg</icon>
+    <icon>logo.png</icon>
     <description>the C# library for the Crypto APIs</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2021</copyright>
