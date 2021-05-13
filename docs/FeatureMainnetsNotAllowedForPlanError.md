@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.FeatureMainnetsNotAllowedForPlanError
+# CryptoAPIs.Model.FeatureMainnetsNotAllowedForPlanError
 
 ## Properties
 

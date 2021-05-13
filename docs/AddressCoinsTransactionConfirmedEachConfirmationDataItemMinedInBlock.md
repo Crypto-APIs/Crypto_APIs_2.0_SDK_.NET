@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock
+# CryptoAPIs.Model.AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock
 Refers to the specific block the transaction was mined in.
 
 ## Properties

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TransactionMined
+# CryptoAPIs.Model.TransactionMined
 
 ## Properties
 

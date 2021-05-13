@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.UnifiedEndpointsApi
+# CryptoAPIs.Api.UnifiedEndpointsApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getaddressdetails"></a>
 # **GetAddressDetails**
-> GetAddressDetailsResponse GetAddressDetails (string blockchain, string network, string address, string context = null)
+> GetAddressDetailsR GetAddressDetails (string blockchain, string network, string address, string context = null)
 
 Get Address Details
 
@@ -27,9 +27,9 @@ Through this endpoint the customer can receive basic information about a given a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -53,7 +53,7 @@ namespace Example
             try
             {
                 // Get Address Details
-                GetAddressDetailsResponse result = apiInstance.GetAddressDetails(blockchain, network, address, context);
+                GetAddressDetailsR result = apiInstance.GetAddressDetails(blockchain, network, address, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAddressDetailsResponse**](GetAddressDetailsResponse.md)
+[**GetAddressDetailsR**](GetAddressDetailsR.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 <a name="getblockdetailsbyblockhash"></a>
 # **GetBlockDetailsByBlockHash**
-> GetBlockDetailsByBlockHashResponse GetBlockDetailsByBlockHash (string blockchain, string network, string blockHash, string context = null)
+> GetBlockDetailsByBlockHashR GetBlockDetailsByBlockHash (string blockchain, string network, string blockHash, string context = null)
 
 Get Block Details By Block Hash
 
@@ -118,9 +118,9 @@ Through this endpoint customers can obtain basic information about a given mined
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -144,7 +144,7 @@ namespace Example
             try
             {
                 // Get Block Details By Block Hash
-                GetBlockDetailsByBlockHashResponse result = apiInstance.GetBlockDetailsByBlockHash(blockchain, network, blockHash, context);
+                GetBlockDetailsByBlockHashR result = apiInstance.GetBlockDetailsByBlockHash(blockchain, network, blockHash, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBlockDetailsByBlockHashResponse**](GetBlockDetailsByBlockHashResponse.md)
+[**GetBlockDetailsByBlockHashR**](GetBlockDetailsByBlockHashR.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 <a name="getblockdetailsbyblockheight"></a>
 # **GetBlockDetailsByBlockHeight**
-> GetBlockDetailsByBlockHeightResponse GetBlockDetailsByBlockHeight (string blockchain, string network, int height, string context = null)
+> GetBlockDetailsByBlockHeightR GetBlockDetailsByBlockHeight (string blockchain, string network, int height, string context = null)
 
 Get Block Details By Block Height
 
@@ -210,9 +210,9 @@ Through this endpoint customers can obtain basic information about a given mined
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -236,7 +236,7 @@ namespace Example
             try
             {
                 // Get Block Details By Block Height
-                GetBlockDetailsByBlockHeightResponse result = apiInstance.GetBlockDetailsByBlockHeight(blockchain, network, height, context);
+                GetBlockDetailsByBlockHeightR result = apiInstance.GetBlockDetailsByBlockHeight(blockchain, network, height, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBlockDetailsByBlockHeightResponse**](GetBlockDetailsByBlockHeightResponse.md)
+[**GetBlockDetailsByBlockHeightR**](GetBlockDetailsByBlockHeightR.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 <a name="getfeerecommendations"></a>
 # **GetFeeRecommendations**
-> GetFeeRecommendationsResponse GetFeeRecommendations (string blockchain, string network, string context = null)
+> GetFeeRecommendationsR GetFeeRecommendations (string blockchain, string network, string context = null)
 
 Get Fee Recommendations
 
@@ -302,9 +302,9 @@ Through this endpoint customers can obtain fee recommendations. Our fees recomme
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -327,7 +327,7 @@ namespace Example
             try
             {
                 // Get Fee Recommendations
-                GetFeeRecommendationsResponse result = apiInstance.GetFeeRecommendations(blockchain, network, context);
+                GetFeeRecommendationsR result = apiInstance.GetFeeRecommendations(blockchain, network, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetFeeRecommendationsResponse**](GetFeeRecommendationsResponse.md)
+[**GetFeeRecommendationsR**](GetFeeRecommendationsR.md)
 
 ### Authorization
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 <a name="getlatestminedblock"></a>
 # **GetLatestMinedBlock**
-> GetLatestMinedBlockResponse GetLatestMinedBlock (string blockchain, string network, string context = null)
+> GetLatestMinedBlockR GetLatestMinedBlock (string blockchain, string network, string context = null)
 
 Get Latest Mined Block
 
@@ -392,9 +392,9 @@ Through this endpoint customers can fetch the last mined block in a specific blo
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -417,7 +417,7 @@ namespace Example
             try
             {
                 // Get Latest Mined Block
-                GetLatestMinedBlockResponse result = apiInstance.GetLatestMinedBlock(blockchain, network, context);
+                GetLatestMinedBlockR result = apiInstance.GetLatestMinedBlock(blockchain, network, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetLatestMinedBlockResponse**](GetLatestMinedBlockResponse.md)
+[**GetLatestMinedBlockR**](GetLatestMinedBlockR.md)
 
 ### Authorization
 
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 <a name="gettransactiondetailsbytransactionid"></a>
 # **GetTransactionDetailsByTransactionID**
-> GetTransactionDetailsByTransactionIDResponse GetTransactionDetailsByTransactionID (string blockchain, string network, string transactionId, string context = null)
+> GetTransactionDetailsByTransactionIDR GetTransactionDetailsByTransactionID (string blockchain, string network, string transactionId, string context = null)
 
 Get Transaction Details By Transaction ID
 
@@ -482,9 +482,9 @@ Through this endpoint customers can obtain details about a transaction by the tr
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -508,7 +508,7 @@ namespace Example
             try
             {
                 // Get Transaction Details By Transaction ID
-                GetTransactionDetailsByTransactionIDResponse result = apiInstance.GetTransactionDetailsByTransactionID(blockchain, network, transactionId, context);
+                GetTransactionDetailsByTransactionIDR result = apiInstance.GetTransactionDetailsByTransactionID(blockchain, network, transactionId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -533,7 +533,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetTransactionDetailsByTransactionIDResponse**](GetTransactionDetailsByTransactionIDResponse.md)
+[**GetTransactionDetailsByTransactionIDR**](GetTransactionDetailsByTransactionIDR.md)
 
 ### Authorization
 
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 
 <a name="listtransactionsbyaddress"></a>
 # **ListTransactionsByAddress**
-> ListTransactionsByAddressResponse ListTransactionsByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
+> ListTransactionsByAddressR ListTransactionsByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
 
 List Transactions By Address
 
@@ -574,9 +574,9 @@ This endpoint will list transactions by an attribute `address`. The transactions
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -602,7 +602,7 @@ namespace Example
             try
             {
                 // List Transactions By Address
-                ListTransactionsByAddressResponse result = apiInstance.ListTransactionsByAddress(blockchain, network, address, context, limit, offset);
+                ListTransactionsByAddressR result = apiInstance.ListTransactionsByAddress(blockchain, network, address, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -629,7 +629,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListTransactionsByAddressResponse**](ListTransactionsByAddressResponse.md)
+[**ListTransactionsByAddressR**](ListTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -659,7 +659,7 @@ Name | Type | Description  | Notes
 
 <a name="listtransactionsbyblockhash"></a>
 # **ListTransactionsByBlockHash**
-> ListTransactionsByBlockHashResponse ListTransactionsByBlockHash (string blockchain, string network, string blockHash, string context = null, int? limit = null, int? offset = null)
+> ListTransactionsByBlockHashR ListTransactionsByBlockHash (string blockchain, string network, string blockHash, string context = null, int? limit = null, int? offset = null)
 
 List Transactions by Block Hash
 
@@ -669,9 +669,9 @@ This endpoint will list transactions by an attribute `transactionHash`. The tran
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -697,7 +697,7 @@ namespace Example
             try
             {
                 // List Transactions by Block Hash
-                ListTransactionsByBlockHashResponse result = apiInstance.ListTransactionsByBlockHash(blockchain, network, blockHash, context, limit, offset);
+                ListTransactionsByBlockHashR result = apiInstance.ListTransactionsByBlockHash(blockchain, network, blockHash, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -724,7 +724,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListTransactionsByBlockHashResponse**](ListTransactionsByBlockHashResponse.md)
+[**ListTransactionsByBlockHashR**](ListTransactionsByBlockHashR.md)
 
 ### Authorization
 
@@ -754,7 +754,7 @@ Name | Type | Description  | Notes
 
 <a name="listtransactionsbyblockheight"></a>
 # **ListTransactionsByBlockHeight**
-> ListTransactionsByBlockHeightResponse ListTransactionsByBlockHeight (string blockchain, string network, int height, string context = null, int? limit = null, int? offset = null)
+> ListTransactionsByBlockHeightR ListTransactionsByBlockHeight (string blockchain, string network, int height, string context = null, int? limit = null, int? offset = null)
 
 List Transactions by Block Height
 
@@ -764,9 +764,9 @@ This endpoint will list transactions by an attribute `blockHeight`. The transact
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -792,7 +792,7 @@ namespace Example
             try
             {
                 // List Transactions by Block Height
-                ListTransactionsByBlockHeightResponse result = apiInstance.ListTransactionsByBlockHeight(blockchain, network, height, context, limit, offset);
+                ListTransactionsByBlockHeightR result = apiInstance.ListTransactionsByBlockHeight(blockchain, network, height, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -819,7 +819,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListTransactionsByBlockHeightResponse**](ListTransactionsByBlockHeightResponse.md)
+[**ListTransactionsByBlockHeightR**](ListTransactionsByBlockHeightR.md)
 
 ### Authorization
 

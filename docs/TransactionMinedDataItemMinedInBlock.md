@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TransactionMinedDataItemMinedInBlock
+# CryptoAPIs.Model.TransactionMinedDataItemMinedInBlock
 Refers to the specific block the transaction was mined in.
 
 ## Properties

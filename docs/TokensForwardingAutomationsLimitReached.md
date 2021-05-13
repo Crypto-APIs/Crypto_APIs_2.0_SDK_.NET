@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingAutomationsLimitReached
+# CryptoAPIs.Model.TokensForwardingAutomationsLimitReached
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InvalidRequestBodyStructure
+# CryptoAPIs.Model.InvalidRequestBodyStructure
 
 ## Properties
 

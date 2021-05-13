@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InvalidDataError
+# CryptoAPIs.Model.InvalidDataError
 
 ## Properties
 

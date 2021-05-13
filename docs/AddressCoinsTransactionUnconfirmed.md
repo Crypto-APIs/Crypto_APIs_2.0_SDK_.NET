@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressCoinsTransactionUnconfirmed
+# CryptoAPIs.Model.AddressCoinsTransactionUnconfirmed
 
 ## Properties
 

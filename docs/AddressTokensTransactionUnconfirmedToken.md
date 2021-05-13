@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressTokensTransactionUnconfirmedToken
+# CryptoAPIs.Model.AddressTokensTransactionUnconfirmedToken
 
 ## Properties
 

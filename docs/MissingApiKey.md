@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.MissingApiKey
+# CryptoAPIs.Model.MissingApiKey
 
 ## Properties
 

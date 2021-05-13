@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.OmniLayerApi
+# CryptoAPIs.Api.OmniLayerApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getomnitransactiondetailsbytransactionidtxid"></a>
 # **GetOmniTransactionDetailsByTransactionIDTxid**
-> GetOmniTransactionDetailsByTransactionIDTxidResponse GetOmniTransactionDetailsByTransactionIDTxid (string network, string blockchain, string transactionId, string context = null)
+> GetOmniTransactionDetailsByTransactionIDTxidR GetOmniTransactionDetailsByTransactionIDTxid (string network, string blockchain, string transactionId, string context = null)
 
 Get Omni Transaction Details By Transaction ID (Txid)
 
@@ -26,9 +26,9 @@ Through this endpoint customers can obtain details about an Omni transaction by 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -52,7 +52,7 @@ namespace Example
             try
             {
                 // Get Omni Transaction Details By Transaction ID (Txid)
-                GetOmniTransactionDetailsByTransactionIDTxidResponse result = apiInstance.GetOmniTransactionDetailsByTransactionIDTxid(network, blockchain, transactionId, context);
+                GetOmniTransactionDetailsByTransactionIDTxidR result = apiInstance.GetOmniTransactionDetailsByTransactionIDTxid(network, blockchain, transactionId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetOmniTransactionDetailsByTransactionIDTxidResponse**](GetOmniTransactionDetailsByTransactionIDTxidResponse.md)
+[**GetOmniTransactionDetailsByTransactionIDTxidR**](GetOmniTransactionDetailsByTransactionIDTxidR.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 <a name="getunconfirmedomnitransactionbytransactionidtxid"></a>
 # **GetUnconfirmedOmniTransactionByTransactionIDTxid**
-> GetUnconfirmedOmniTransactionByTransactionIDTxidResponse GetUnconfirmedOmniTransactionByTransactionIDTxid (string network, string blockchain, string transactionId, string context = null)
+> GetUnconfirmedOmniTransactionByTransactionIDTxidR GetUnconfirmedOmniTransactionByTransactionIDTxid (string network, string blockchain, string transactionId, string context = null)
 
 Get Unconfirmed Omni Transaction By Transaction ID (Txid)
 
@@ -118,9 +118,9 @@ Through this endpoint customers can obtain information on unconfirmed Omni trans
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -144,7 +144,7 @@ namespace Example
             try
             {
                 // Get Unconfirmed Omni Transaction By Transaction ID (Txid)
-                GetUnconfirmedOmniTransactionByTransactionIDTxidResponse result = apiInstance.GetUnconfirmedOmniTransactionByTransactionIDTxid(network, blockchain, transactionId, context);
+                GetUnconfirmedOmniTransactionByTransactionIDTxidR result = apiInstance.GetUnconfirmedOmniTransactionByTransactionIDTxid(network, blockchain, transactionId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetUnconfirmedOmniTransactionByTransactionIDTxidResponse**](GetUnconfirmedOmniTransactionByTransactionIDTxidResponse.md)
+[**GetUnconfirmedOmniTransactionByTransactionIDTxidR**](GetUnconfirmedOmniTransactionByTransactionIDTxidR.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 <a name="listomnitokensbyaddress"></a>
 # **ListOmniTokensByAddress**
-> ListOmniTokensByAddressResponse ListOmniTokensByAddress (string network, string blockchain, string address, string context = null)
+> ListOmniTokensByAddressR ListOmniTokensByAddress (string network, string blockchain, string address, string context = null)
 
 List Omni Tokens By Address
 
@@ -210,9 +210,9 @@ Through this endpoint the customer can receive basic information about a given O
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -236,7 +236,7 @@ namespace Example
             try
             {
                 // List Omni Tokens By Address
-                ListOmniTokensByAddressResponse result = apiInstance.ListOmniTokensByAddress(network, blockchain, address, context);
+                ListOmniTokensByAddressR result = apiInstance.ListOmniTokensByAddress(network, blockchain, address, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListOmniTokensByAddressResponse**](ListOmniTokensByAddressResponse.md)
+[**ListOmniTokensByAddressR**](ListOmniTokensByAddressR.md)
 
 ### Authorization
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 <a name="listomnitransactionsbyaddress"></a>
 # **ListOmniTransactionsByAddress**
-> ListOmniTransactionsByAddressResponse ListOmniTransactionsByAddress (string network, string blockchain, string address, string context = null, int? limit = null, int? offset = null)
+> ListOmniTransactionsByAddressR ListOmniTransactionsByAddress (string network, string blockchain, string address, string context = null, int? limit = null, int? offset = null)
 
 List Omni Transactions By Address
 
@@ -301,9 +301,9 @@ This endpoint will list Omni transactions by an attribute `address`. The transac
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -329,7 +329,7 @@ namespace Example
             try
             {
                 // List Omni Transactions By Address
-                ListOmniTransactionsByAddressResponse result = apiInstance.ListOmniTransactionsByAddress(network, blockchain, address, context, limit, offset);
+                ListOmniTransactionsByAddressR result = apiInstance.ListOmniTransactionsByAddress(network, blockchain, address, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListOmniTransactionsByAddressResponse**](ListOmniTransactionsByAddressResponse.md)
+[**ListOmniTransactionsByAddressR**](ListOmniTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 <a name="listomnitransactionsbyblockhash"></a>
 # **ListOmniTransactionsByBlockHash**
-> ListOmniTransactionsByBlockHashResponse ListOmniTransactionsByBlockHash (string network, string blockchain, string blockHash, string context = null, int? limit = null, int? offset = null)
+> ListOmniTransactionsByBlockHashR ListOmniTransactionsByBlockHash (string network, string blockchain, string blockHash, string context = null, int? limit = null, int? offset = null)
 
 List Omni Transactions By Block Hash
 
@@ -396,9 +396,9 @@ This endpoint will list Omni transactions by an attribute `transactionHash`. The
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -424,7 +424,7 @@ namespace Example
             try
             {
                 // List Omni Transactions By Block Hash
-                ListOmniTransactionsByBlockHashResponse result = apiInstance.ListOmniTransactionsByBlockHash(network, blockchain, blockHash, context, limit, offset);
+                ListOmniTransactionsByBlockHashR result = apiInstance.ListOmniTransactionsByBlockHash(network, blockchain, blockHash, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListOmniTransactionsByBlockHashResponse**](ListOmniTransactionsByBlockHashResponse.md)
+[**ListOmniTransactionsByBlockHashR**](ListOmniTransactionsByBlockHashR.md)
 
 ### Authorization
 
@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 
 <a name="listomnitransactionsbyblockheight"></a>
 # **ListOmniTransactionsByBlockHeight**
-> ListOmniTransactionsByBlockHeightResponse ListOmniTransactionsByBlockHeight (string network, string blockchain, string blockHeight, string context = null, int? limit = null, int? offset = null)
+> ListOmniTransactionsByBlockHeightR ListOmniTransactionsByBlockHeight (string network, string blockchain, string blockHeight, string context = null, int? limit = null, int? offset = null)
 
 List Omni Transactions By Block Height
 
@@ -491,9 +491,9 @@ This endpoint will list Omni transactions by an attribute `blockHeight`. The tra
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -519,7 +519,7 @@ namespace Example
             try
             {
                 // List Omni Transactions By Block Height
-                ListOmniTransactionsByBlockHeightResponse result = apiInstance.ListOmniTransactionsByBlockHeight(network, blockchain, blockHeight, context, limit, offset);
+                ListOmniTransactionsByBlockHeightR result = apiInstance.ListOmniTransactionsByBlockHeight(network, blockchain, blockHeight, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListOmniTransactionsByBlockHeightResponse**](ListOmniTransactionsByBlockHeightResponse.md)
+[**ListOmniTransactionsByBlockHeightR**](ListOmniTransactionsByBlockHeightR.md)
 
 ### Authorization
 
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 
 <a name="listunconfirmedomnitransactionsbyaddress"></a>
 # **ListUnconfirmedOmniTransactionsByAddress**
-> ListUnconfirmedOmniTransactionsByAddressResponse ListUnconfirmedOmniTransactionsByAddress (string network, string blockchain, string address, string context = null, int? limit = null, int? offset = null)
+> ListUnconfirmedOmniTransactionsByAddressR ListUnconfirmedOmniTransactionsByAddress (string network, string blockchain, string address, string context = null, int? limit = null, int? offset = null)
 
 List Unconfirmed Omni Transactions By Address
 
@@ -586,9 +586,9 @@ This endpoint will list unconfirmed Omni transactions by an attribute `address`.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -614,7 +614,7 @@ namespace Example
             try
             {
                 // List Unconfirmed Omni Transactions By Address
-                ListUnconfirmedOmniTransactionsByAddressResponse result = apiInstance.ListUnconfirmedOmniTransactionsByAddress(network, blockchain, address, context, limit, offset);
+                ListUnconfirmedOmniTransactionsByAddressR result = apiInstance.ListUnconfirmedOmniTransactionsByAddress(network, blockchain, address, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListUnconfirmedOmniTransactionsByAddressResponse**](ListUnconfirmedOmniTransactionsByAddressResponse.md)
+[**ListUnconfirmedOmniTransactionsByAddressR**](ListUnconfirmedOmniTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
 
 <a name="listunconfirmedomnitransactionsbypropertyid"></a>
 # **ListUnconfirmedOmniTransactionsByPropertyID**
-> ListUnconfirmedOmniTransactionsByPropertyIDResponse ListUnconfirmedOmniTransactionsByPropertyID (string network, string blockchain, string propertyId, string context = null, int? limit = null, int? offset = null)
+> ListUnconfirmedOmniTransactionsByPropertyIDR ListUnconfirmedOmniTransactionsByPropertyID (string network, string blockchain, string propertyId, string context = null, int? limit = null, int? offset = null)
 
 List Unconfirmed Omni Transactions By Property ID
 
@@ -681,9 +681,9 @@ This endpoint will list unconfirmed Omni transactions by an attribute `propertyI
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -709,7 +709,7 @@ namespace Example
             try
             {
                 // List Unconfirmed Omni Transactions By Property ID
-                ListUnconfirmedOmniTransactionsByPropertyIDResponse result = apiInstance.ListUnconfirmedOmniTransactionsByPropertyID(network, blockchain, propertyId, context, limit, offset);
+                ListUnconfirmedOmniTransactionsByPropertyIDR result = apiInstance.ListUnconfirmedOmniTransactionsByPropertyID(network, blockchain, propertyId, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -736,7 +736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListUnconfirmedOmniTransactionsByPropertyIDResponse**](ListUnconfirmedOmniTransactionsByPropertyIDResponse.md)
+[**ListUnconfirmedOmniTransactionsByPropertyIDR**](ListUnconfirmedOmniTransactionsByPropertyIDR.md)
 
 ### Authorization
 

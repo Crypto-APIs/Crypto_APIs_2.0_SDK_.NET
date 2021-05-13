@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.MissingApiKeyError
+# CryptoAPIs.Model.MissingApiKeyError
 
 ## Properties
 

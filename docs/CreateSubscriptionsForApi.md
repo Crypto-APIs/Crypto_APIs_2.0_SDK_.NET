@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.CreateSubscriptionsForApi
+# CryptoAPIs.Api.CreateSubscriptionsForApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="minedtransaction"></a>
 # **MinedTransaction**
-> MinedTransactionResponse MinedTransaction (string blockchain, string network, string context = null, MinedTransactionRequestBody minedTransactionRequestBody = null)
+> MinedTransactionR MinedTransaction (string blockchain, string network, string context = null, MinedTransactionRB minedTransactionRB = null)
 
 Mined transaction
 
@@ -26,9 +26,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -47,12 +47,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var minedTransactionRequestBody = new MinedTransactionRequestBody(); // MinedTransactionRequestBody |  (optional) 
+            var minedTransactionRB = new MinedTransactionRB(); // MinedTransactionRB |  (optional) 
 
             try
             {
                 // Mined transaction
-                MinedTransactionResponse result = apiInstance.MinedTransaction(blockchain, network, context, minedTransactionRequestBody);
+                MinedTransactionR result = apiInstance.MinedTransaction(blockchain, network, context, minedTransactionRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -73,11 +73,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **minedTransactionRequestBody** | [**MinedTransactionRequestBody**](MinedTransactionRequestBody.md)|  | [optional] 
+ **minedTransactionRB** | [**MinedTransactionRB**](MinedTransactionRB.md)|  | [optional] 
 
 ### Return type
 
-[**MinedTransactionResponse**](MinedTransactionResponse.md)
+[**MinedTransactionR**](MinedTransactionR.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 <a name="newblock"></a>
 # **NewBlock**
-> NewBlockResponse NewBlock (string blockchain, string network, string context = null, NewBlockRequestBody newBlockRequestBody = null)
+> NewBlockR NewBlock (string blockchain, string network, string context = null, NewBlockRB newBlockRB = null)
 
 New Block
 
@@ -117,9 +117,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -138,12 +138,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var newBlockRequestBody = new NewBlockRequestBody(); // NewBlockRequestBody |  (optional) 
+            var newBlockRB = new NewBlockRB(); // NewBlockRB |  (optional) 
 
             try
             {
                 // New Block
-                NewBlockResponse result = apiInstance.NewBlock(blockchain, network, context, newBlockRequestBody);
+                NewBlockR result = apiInstance.NewBlock(blockchain, network, context, newBlockRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,11 +164,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **newBlockRequestBody** | [**NewBlockRequestBody**](NewBlockRequestBody.md)|  | [optional] 
+ **newBlockRB** | [**NewBlockRB**](NewBlockRB.md)|  | [optional] 
 
 ### Return type
 
-[**NewBlockResponse**](NewBlockResponse.md)
+[**NewBlockR**](NewBlockR.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 <a name="newconfirmedcoinstransactions"></a>
 # **NewConfirmedCoinsTransactions**
-> NewConfirmedCoinsTransactionsResponse NewConfirmedCoinsTransactions (string blockchain, string network, string context = null, NewConfirmedCoinsTransactionsRequestBody newConfirmedCoinsTransactionsRequestBody = null)
+> NewConfirmedCoinsTransactionsR NewConfirmedCoinsTransactions (string blockchain, string network, string context = null, NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = null)
 
 New confirmed coins transactions
 
@@ -208,9 +208,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -229,12 +229,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var newConfirmedCoinsTransactionsRequestBody = new NewConfirmedCoinsTransactionsRequestBody(); // NewConfirmedCoinsTransactionsRequestBody |  (optional) 
+            var newConfirmedCoinsTransactionsRB = new NewConfirmedCoinsTransactionsRB(); // NewConfirmedCoinsTransactionsRB |  (optional) 
 
             try
             {
                 // New confirmed coins transactions
-                NewConfirmedCoinsTransactionsResponse result = apiInstance.NewConfirmedCoinsTransactions(blockchain, network, context, newConfirmedCoinsTransactionsRequestBody);
+                NewConfirmedCoinsTransactionsR result = apiInstance.NewConfirmedCoinsTransactions(blockchain, network, context, newConfirmedCoinsTransactionsRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,11 +255,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **newConfirmedCoinsTransactionsRequestBody** | [**NewConfirmedCoinsTransactionsRequestBody**](NewConfirmedCoinsTransactionsRequestBody.md)|  | [optional] 
+ **newConfirmedCoinsTransactionsRB** | [**NewConfirmedCoinsTransactionsRB**](NewConfirmedCoinsTransactionsRB.md)|  | [optional] 
 
 ### Return type
 
-[**NewConfirmedCoinsTransactionsResponse**](NewConfirmedCoinsTransactionsResponse.md)
+[**NewConfirmedCoinsTransactionsR**](NewConfirmedCoinsTransactionsR.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 <a name="newconfirmedcoinstransactionsandeachconfirmation"></a>
 # **NewConfirmedCoinsTransactionsAndEachConfirmation**
-> NewConfirmedCoinsTransactionsAndEachConfirmationResponse NewConfirmedCoinsTransactionsAndEachConfirmation (string blockchain, string network, string context = null, NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody newConfirmedCoinsTransactionsAndEachConfirmationRequestBody = null)
+> NewConfirmedCoinsTransactionsAndEachConfirmationR NewConfirmedCoinsTransactionsAndEachConfirmation (string blockchain, string network, string context = null, NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = null)
 
 New confirmed coins transactions and each confirmation
 
@@ -299,9 +299,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -320,12 +320,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var newConfirmedCoinsTransactionsAndEachConfirmationRequestBody = new NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody(); // NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody |  (optional) 
+            var newConfirmedCoinsTransactionsAndEachConfirmationRB = new NewConfirmedCoinsTransactionsAndEachConfirmationRB(); // NewConfirmedCoinsTransactionsAndEachConfirmationRB |  (optional) 
 
             try
             {
                 // New confirmed coins transactions and each confirmation
-                NewConfirmedCoinsTransactionsAndEachConfirmationResponse result = apiInstance.NewConfirmedCoinsTransactionsAndEachConfirmation(blockchain, network, context, newConfirmedCoinsTransactionsAndEachConfirmationRequestBody);
+                NewConfirmedCoinsTransactionsAndEachConfirmationR result = apiInstance.NewConfirmedCoinsTransactionsAndEachConfirmation(blockchain, network, context, newConfirmedCoinsTransactionsAndEachConfirmationRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -346,11 +346,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **newConfirmedCoinsTransactionsAndEachConfirmationRequestBody** | [**NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody**](NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody.md)|  | [optional] 
+ **newConfirmedCoinsTransactionsAndEachConfirmationRB** | [**NewConfirmedCoinsTransactionsAndEachConfirmationRB**](NewConfirmedCoinsTransactionsAndEachConfirmationRB.md)|  | [optional] 
 
 ### Return type
 
-[**NewConfirmedCoinsTransactionsAndEachConfirmationResponse**](NewConfirmedCoinsTransactionsAndEachConfirmationResponse.md)
+[**NewConfirmedCoinsTransactionsAndEachConfirmationR**](NewConfirmedCoinsTransactionsAndEachConfirmationR.md)
 
 ### Authorization
 
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
 
 <a name="newconfirmedtokenstransactions"></a>
 # **NewConfirmedTokensTransactions**
-> NewConfirmedTokensTransactionsResponse NewConfirmedTokensTransactions (string blockchain, string network, string context = null, NewConfirmedTokensTransactionsRequestBody newConfirmedTokensTransactionsRequestBody = null)
+> NewConfirmedTokensTransactionsR NewConfirmedTokensTransactions (string blockchain, string network, string context = null, NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = null)
 
 New confirmed tokens transactions
 
@@ -390,9 +390,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -411,12 +411,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var newConfirmedTokensTransactionsRequestBody = new NewConfirmedTokensTransactionsRequestBody(); // NewConfirmedTokensTransactionsRequestBody |  (optional) 
+            var newConfirmedTokensTransactionsRB = new NewConfirmedTokensTransactionsRB(); // NewConfirmedTokensTransactionsRB |  (optional) 
 
             try
             {
                 // New confirmed tokens transactions
-                NewConfirmedTokensTransactionsResponse result = apiInstance.NewConfirmedTokensTransactions(blockchain, network, context, newConfirmedTokensTransactionsRequestBody);
+                NewConfirmedTokensTransactionsR result = apiInstance.NewConfirmedTokensTransactions(blockchain, network, context, newConfirmedTokensTransactionsRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -437,11 +437,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **newConfirmedTokensTransactionsRequestBody** | [**NewConfirmedTokensTransactionsRequestBody**](NewConfirmedTokensTransactionsRequestBody.md)|  | [optional] 
+ **newConfirmedTokensTransactionsRB** | [**NewConfirmedTokensTransactionsRB**](NewConfirmedTokensTransactionsRB.md)|  | [optional] 
 
 ### Return type
 
-[**NewConfirmedTokensTransactionsResponse**](NewConfirmedTokensTransactionsResponse.md)
+[**NewConfirmedTokensTransactionsR**](NewConfirmedTokensTransactionsR.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 <a name="newconfirmedtokenstransactionsandeachconfirmation"></a>
 # **NewConfirmedTokensTransactionsAndEachConfirmation**
-> NewConfirmedTokensTransactionsAndEachConfirmationResponse NewConfirmedTokensTransactionsAndEachConfirmation (string blockchain, string network, string context = null, NewConfirmedTokensTransactionsAndEachConfirmationRequestBody newConfirmedTokensTransactionsAndEachConfirmationRequestBody = null)
+> NewConfirmedTokensTransactionsAndEachConfirmationR NewConfirmedTokensTransactionsAndEachConfirmation (string blockchain, string network, string context = null, NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = null)
 
 New confirmed tokens transactions and each confirmation
 
@@ -481,9 +481,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -502,12 +502,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var newConfirmedTokensTransactionsAndEachConfirmationRequestBody = new NewConfirmedTokensTransactionsAndEachConfirmationRequestBody(); // NewConfirmedTokensTransactionsAndEachConfirmationRequestBody |  (optional) 
+            var newConfirmedTokensTransactionsAndEachConfirmationRB = new NewConfirmedTokensTransactionsAndEachConfirmationRB(); // NewConfirmedTokensTransactionsAndEachConfirmationRB |  (optional) 
 
             try
             {
                 // New confirmed tokens transactions and each confirmation
-                NewConfirmedTokensTransactionsAndEachConfirmationResponse result = apiInstance.NewConfirmedTokensTransactionsAndEachConfirmation(blockchain, network, context, newConfirmedTokensTransactionsAndEachConfirmationRequestBody);
+                NewConfirmedTokensTransactionsAndEachConfirmationR result = apiInstance.NewConfirmedTokensTransactionsAndEachConfirmation(blockchain, network, context, newConfirmedTokensTransactionsAndEachConfirmationRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -528,11 +528,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **newConfirmedTokensTransactionsAndEachConfirmationRequestBody** | [**NewConfirmedTokensTransactionsAndEachConfirmationRequestBody**](NewConfirmedTokensTransactionsAndEachConfirmationRequestBody.md)|  | [optional] 
+ **newConfirmedTokensTransactionsAndEachConfirmationRB** | [**NewConfirmedTokensTransactionsAndEachConfirmationRB**](NewConfirmedTokensTransactionsAndEachConfirmationRB.md)|  | [optional] 
 
 ### Return type
 
-[**NewConfirmedTokensTransactionsAndEachConfirmationResponse**](NewConfirmedTokensTransactionsAndEachConfirmationResponse.md)
+[**NewConfirmedTokensTransactionsAndEachConfirmationR**](NewConfirmedTokensTransactionsAndEachConfirmationR.md)
 
 ### Authorization
 
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 
 <a name="newunconfirmedcoinstransactions"></a>
 # **NewUnconfirmedCoinsTransactions**
-> NewUnconfirmedCoinsTransactionsResponse NewUnconfirmedCoinsTransactions (string blockchain, string network, string context = null, NewUnconfirmedCoinsTransactionsRequestBody newUnconfirmedCoinsTransactionsRequestBody = null)
+> NewUnconfirmedCoinsTransactionsR NewUnconfirmedCoinsTransactions (string blockchain, string network, string context = null, NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = null)
 
 New unconfirmed coins transactions
 
@@ -572,9 +572,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -593,12 +593,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var newUnconfirmedCoinsTransactionsRequestBody = new NewUnconfirmedCoinsTransactionsRequestBody(); // NewUnconfirmedCoinsTransactionsRequestBody |  (optional) 
+            var newUnconfirmedCoinsTransactionsRB = new NewUnconfirmedCoinsTransactionsRB(); // NewUnconfirmedCoinsTransactionsRB |  (optional) 
 
             try
             {
                 // New unconfirmed coins transactions
-                NewUnconfirmedCoinsTransactionsResponse result = apiInstance.NewUnconfirmedCoinsTransactions(blockchain, network, context, newUnconfirmedCoinsTransactionsRequestBody);
+                NewUnconfirmedCoinsTransactionsR result = apiInstance.NewUnconfirmedCoinsTransactions(blockchain, network, context, newUnconfirmedCoinsTransactionsRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -619,11 +619,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **newUnconfirmedCoinsTransactionsRequestBody** | [**NewUnconfirmedCoinsTransactionsRequestBody**](NewUnconfirmedCoinsTransactionsRequestBody.md)|  | [optional] 
+ **newUnconfirmedCoinsTransactionsRB** | [**NewUnconfirmedCoinsTransactionsRB**](NewUnconfirmedCoinsTransactionsRB.md)|  | [optional] 
 
 ### Return type
 
-[**NewUnconfirmedCoinsTransactionsResponse**](NewUnconfirmedCoinsTransactionsResponse.md)
+[**NewUnconfirmedCoinsTransactionsR**](NewUnconfirmedCoinsTransactionsR.md)
 
 ### Authorization
 
@@ -653,7 +653,7 @@ Name | Type | Description  | Notes
 
 <a name="newunconfirmedtokenstransactions"></a>
 # **NewUnconfirmedTokensTransactions**
-> NewUnconfirmedTokensTransactionsResponse NewUnconfirmedTokensTransactions (string blockchain, string network, string context = null, NewUnconfirmedTokensTransactionsRequestBody newUnconfirmedTokensTransactionsRequestBody = null)
+> NewUnconfirmedTokensTransactionsR NewUnconfirmedTokensTransactions (string blockchain, string network, string context = null, NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = null)
 
 New unconfirmed tokens transactions
 
@@ -663,9 +663,9 @@ Through this endpoint customers can create callback subscriptions for a specific
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -684,12 +684,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var newUnconfirmedTokensTransactionsRequestBody = new NewUnconfirmedTokensTransactionsRequestBody(); // NewUnconfirmedTokensTransactionsRequestBody |  (optional) 
+            var newUnconfirmedTokensTransactionsRB = new NewUnconfirmedTokensTransactionsRB(); // NewUnconfirmedTokensTransactionsRB |  (optional) 
 
             try
             {
                 // New unconfirmed tokens transactions
-                NewUnconfirmedTokensTransactionsResponse result = apiInstance.NewUnconfirmedTokensTransactions(blockchain, network, context, newUnconfirmedTokensTransactionsRequestBody);
+                NewUnconfirmedTokensTransactionsR result = apiInstance.NewUnconfirmedTokensTransactions(blockchain, network, context, newUnconfirmedTokensTransactionsRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -710,11 +710,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **newUnconfirmedTokensTransactionsRequestBody** | [**NewUnconfirmedTokensTransactionsRequestBody**](NewUnconfirmedTokensTransactionsRequestBody.md)|  | [optional] 
+ **newUnconfirmedTokensTransactionsRB** | [**NewUnconfirmedTokensTransactionsRB**](NewUnconfirmedTokensTransactionsRB.md)|  | [optional] 
 
 ### Return type
 
-[**NewUnconfirmedTokensTransactionsResponse**](NewUnconfirmedTokensTransactionsResponse.md)
+[**NewUnconfirmedTokensTransactionsR**](NewUnconfirmedTokensTransactionsR.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TransactionMinedDataItem
+# CryptoAPIs.Model.TransactionMinedDataItem
 Defines an `item` as one result.
 
 ## Properties

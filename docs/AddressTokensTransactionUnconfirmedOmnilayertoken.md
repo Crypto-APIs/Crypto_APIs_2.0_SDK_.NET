@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressTokensTransactionUnconfirmedOmnilayertoken
+# CryptoAPIs.Model.AddressTokensTransactionUnconfirmedOmnilayertoken
 omniLayerToken
 
 ## Properties

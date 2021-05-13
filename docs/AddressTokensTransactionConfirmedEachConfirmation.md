@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressTokensTransactionConfirmedEachConfirmation
+# CryptoAPIs.Model.AddressTokensTransactionConfirmedEachConfirmation
 
 ## Properties
 

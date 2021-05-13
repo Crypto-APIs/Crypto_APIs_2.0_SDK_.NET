@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InvalidPaginationError
+# CryptoAPIs.Model.InvalidPaginationError
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EndpointNotAllowedForApiKey
+# CryptoAPIs.Model.EndpointNotAllowedForApiKey
 
 ## Properties
 

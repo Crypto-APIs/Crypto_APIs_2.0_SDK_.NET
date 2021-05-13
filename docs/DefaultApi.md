@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.DefaultApi
+# CryptoAPIs.Api.DefaultApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getcontractdetailsbyaddress"></a>
 # **GetContractDetailsByAddress**
-> GetContractDetailsByAddressResponse GetContractDetailsByAddress (string blockchain, string network, string contractAddress, string context = null)
+> GetContractDetailsByAddressR GetContractDetailsByAddress (string blockchain, string network, string contractAddress, string context = null)
 
 Get Contract Details by Address
 
@@ -19,9 +19,9 @@ This endpoint will return a smart contract details by address, this address is t
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // Get Contract Details by Address
-                GetContractDetailsByAddressResponse result = apiInstance.GetContractDetailsByAddress(blockchain, network, contractAddress, context);
+                GetContractDetailsByAddressR result = apiInstance.GetContractDetailsByAddress(blockchain, network, contractAddress, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContractDetailsByAddressResponse**](GetContractDetailsByAddressResponse.md)
+[**GetContractDetailsByAddressR**](GetContractDetailsByAddressR.md)
 
 ### Authorization
 

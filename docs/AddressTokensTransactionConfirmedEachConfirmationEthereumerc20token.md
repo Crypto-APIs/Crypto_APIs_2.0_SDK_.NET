@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token
+# CryptoAPIs.Model.AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token
 ethereumERC20Token
 
 ## Properties

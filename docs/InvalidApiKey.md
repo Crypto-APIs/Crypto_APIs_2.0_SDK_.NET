@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InvalidApiKey
+# CryptoAPIs.Model.InvalidApiKey
 
 ## Properties
 

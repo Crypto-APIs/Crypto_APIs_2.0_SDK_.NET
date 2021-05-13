@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CoinsForwardingSuccess
+# CryptoAPIs.Model.CoinsForwardingSuccess
 
 ## Properties
 

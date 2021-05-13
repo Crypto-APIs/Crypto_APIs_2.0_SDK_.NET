@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingSuccessToken
+# CryptoAPIs.Model.TokensForwardingSuccessToken
 
 ## Properties
 

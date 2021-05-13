@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BannedIpAddressErrorDetails
+# CryptoAPIs.Model.BannedIpAddressErrorDetails
 
 ## Properties
 

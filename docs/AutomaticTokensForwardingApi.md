@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.AutomaticTokensForwardingApi
+# CryptoAPIs.Api.AutomaticTokensForwardingApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="addtokenstoexistingfromaddress"></a>
 # **AddTokensToExistingFromAddress**
-> AddTokensToExistingFromAddressResponse AddTokensToExistingFromAddress (string blockchain, string network, string context = null, AddTokensToExistingFromAddressRequestBody addTokensToExistingFromAddressRequestBody = null)
+> AddTokensToExistingFromAddressR AddTokensToExistingFromAddress (string blockchain, string network, string context = null, AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = null)
 
 Add Tokens To Existing fromAddress
 
@@ -23,9 +23,9 @@ Through this endpoint customers can add **Automatic Tokens forwardings** to an a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -44,12 +44,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Network
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var addTokensToExistingFromAddressRequestBody = new AddTokensToExistingFromAddressRequestBody(); // AddTokensToExistingFromAddressRequestBody |  (optional) 
+            var addTokensToExistingFromAddressRB = new AddTokensToExistingFromAddressRB(); // AddTokensToExistingFromAddressRB |  (optional) 
 
             try
             {
                 // Add Tokens To Existing fromAddress
-                AddTokensToExistingFromAddressResponse result = apiInstance.AddTokensToExistingFromAddress(blockchain, network, context, addTokensToExistingFromAddressRequestBody);
+                AddTokensToExistingFromAddressR result = apiInstance.AddTokensToExistingFromAddress(blockchain, network, context, addTokensToExistingFromAddressRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,11 +70,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Network | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **addTokensToExistingFromAddressRequestBody** | [**AddTokensToExistingFromAddressRequestBody**](AddTokensToExistingFromAddressRequestBody.md)|  | [optional] 
+ **addTokensToExistingFromAddressRB** | [**AddTokensToExistingFromAddressRB**](AddTokensToExistingFromAddressRB.md)|  | [optional] 
 
 ### Return type
 
-[**AddTokensToExistingFromAddressResponse**](AddTokensToExistingFromAddressResponse.md)
+[**AddTokensToExistingFromAddressR**](AddTokensToExistingFromAddressR.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 <a name="createautomatictokensforwarding"></a>
 # **CreateAutomaticTokensForwarding**
-> CreateAutomaticTokensForwardingResponse CreateAutomaticTokensForwarding (string blockchain, string network, string context = null, CreateAutomaticTokensForwardingRequestBody createAutomaticTokensForwardingRequestBody = null)
+> CreateAutomaticTokensForwardingR CreateAutomaticTokensForwarding (string blockchain, string network, string context = null, CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = null)
 
 Create Automatic Tokens Forwarding
 
@@ -115,9 +115,9 @@ Through this endpoint customers can set up an automatic forwarding function spec
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -136,12 +136,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var createAutomaticTokensForwardingRequestBody = new CreateAutomaticTokensForwardingRequestBody(); // CreateAutomaticTokensForwardingRequestBody |  (optional) 
+            var createAutomaticTokensForwardingRB = new CreateAutomaticTokensForwardingRB(); // CreateAutomaticTokensForwardingRB |  (optional) 
 
             try
             {
                 // Create Automatic Tokens Forwarding
-                CreateAutomaticTokensForwardingResponse result = apiInstance.CreateAutomaticTokensForwarding(blockchain, network, context, createAutomaticTokensForwardingRequestBody);
+                CreateAutomaticTokensForwardingR result = apiInstance.CreateAutomaticTokensForwarding(blockchain, network, context, createAutomaticTokensForwardingRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,11 +162,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **createAutomaticTokensForwardingRequestBody** | [**CreateAutomaticTokensForwardingRequestBody**](CreateAutomaticTokensForwardingRequestBody.md)|  | [optional] 
+ **createAutomaticTokensForwardingRB** | [**CreateAutomaticTokensForwardingRB**](CreateAutomaticTokensForwardingRB.md)|  | [optional] 
 
 ### Return type
 
-[**CreateAutomaticTokensForwardingResponse**](CreateAutomaticTokensForwardingResponse.md)
+[**CreateAutomaticTokensForwardingR**](CreateAutomaticTokensForwardingR.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteautomatictokensforwarding"></a>
 # **DeleteAutomaticTokensForwarding**
-> DeleteAutomaticTokensForwardingResponse DeleteAutomaticTokensForwarding (string blockchain, string network, string referenceId, string context = null)
+> DeleteAutomaticTokensForwardingR DeleteAutomaticTokensForwarding (string blockchain, string network, string referenceId, string context = null)
 
 Delete Automatic Tokens Forwarding
 
@@ -207,9 +207,9 @@ Through this endpoint customers can delete a forwarding function they have set f
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -233,7 +233,7 @@ namespace Example
             try
             {
                 // Delete Automatic Tokens Forwarding
-                DeleteAutomaticTokensForwardingResponse result = apiInstance.DeleteAutomaticTokensForwarding(blockchain, network, referenceId, context);
+                DeleteAutomaticTokensForwardingR result = apiInstance.DeleteAutomaticTokensForwarding(blockchain, network, referenceId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteAutomaticTokensForwardingResponse**](DeleteAutomaticTokensForwardingResponse.md)
+[**DeleteAutomaticTokensForwardingR**](DeleteAutomaticTokensForwardingR.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 <a name="getfeeaddressdetails"></a>
 # **GetFeeAddressDetails**
-> GetFeeAddressDetailsResponse GetFeeAddressDetails (string blockchain, string network, string context = null)
+> GetFeeAddressDetailsR GetFeeAddressDetails (string blockchain, string network, string context = null)
 
 Get Fee Address Details
 
@@ -299,9 +299,9 @@ Through this endpoint customers can obtain details about a fee address. Only one
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -324,7 +324,7 @@ namespace Example
             try
             {
                 // Get Fee Address Details
-                GetFeeAddressDetailsResponse result = apiInstance.GetFeeAddressDetails(blockchain, network, context);
+                GetFeeAddressDetailsR result = apiInstance.GetFeeAddressDetails(blockchain, network, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetFeeAddressDetailsResponse**](GetFeeAddressDetailsResponse.md)
+[**GetFeeAddressDetailsR**](GetFeeAddressDetailsR.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 <a name="listtokensforwardingautomations"></a>
 # **ListTokensForwardingAutomations**
-> ListTokensForwardingAutomationsResponse ListTokensForwardingAutomations (string blockchain, string network, string context = null, int? limit = null, int? offset = null)
+> ListTokensForwardingAutomationsR ListTokensForwardingAutomations (string blockchain, string network, string context = null, int? limit = null, int? offset = null)
 
 List Tokens Forwarding Automations
 
@@ -389,9 +389,9 @@ Through this endpoint customers can list all of their **tokens** forwarding auto
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -416,7 +416,7 @@ namespace Example
             try
             {
                 // List Tokens Forwarding Automations
-                ListTokensForwardingAutomationsResponse result = apiInstance.ListTokensForwardingAutomations(blockchain, network, context, limit, offset);
+                ListTokensForwardingAutomationsR result = apiInstance.ListTokensForwardingAutomations(blockchain, network, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListTokensForwardingAutomationsResponse**](ListTokensForwardingAutomationsResponse.md)
+[**ListTokensForwardingAutomationsR**](ListTokensForwardingAutomationsR.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.AutomaticCoinsForwardingApi
+# CryptoAPIs.Api.AutomaticCoinsForwardingApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="createautomaticcoinsforwarding"></a>
 # **CreateAutomaticCoinsForwarding**
-> CreateAutomaticCoinsForwardingResponse CreateAutomaticCoinsForwarding (string blockchain, string network, string context = null, CreateAutomaticCoinsForwardingRequestBody createAutomaticCoinsForwardingRequestBody = null)
+> CreateAutomaticCoinsForwardingR CreateAutomaticCoinsForwarding (string blockchain, string network, string context = null, CreateAutomaticCoinsForwardingRB createAutomaticCoinsForwardingRB = null)
 
 Create Automatic Coins Forwarding
 
@@ -21,9 +21,9 @@ Through this endpoint customers can set up an automatic forwarding function spec
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -42,12 +42,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var createAutomaticCoinsForwardingRequestBody = new CreateAutomaticCoinsForwardingRequestBody(); // CreateAutomaticCoinsForwardingRequestBody |  (optional) 
+            var createAutomaticCoinsForwardingRB = new CreateAutomaticCoinsForwardingRB(); // CreateAutomaticCoinsForwardingRB |  (optional) 
 
             try
             {
                 // Create Automatic Coins Forwarding
-                CreateAutomaticCoinsForwardingResponse result = apiInstance.CreateAutomaticCoinsForwarding(blockchain, network, context, createAutomaticCoinsForwardingRequestBody);
+                CreateAutomaticCoinsForwardingR result = apiInstance.CreateAutomaticCoinsForwarding(blockchain, network, context, createAutomaticCoinsForwardingRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **createAutomaticCoinsForwardingRequestBody** | [**CreateAutomaticCoinsForwardingRequestBody**](CreateAutomaticCoinsForwardingRequestBody.md)|  | [optional] 
+ **createAutomaticCoinsForwardingRB** | [**CreateAutomaticCoinsForwardingRB**](CreateAutomaticCoinsForwardingRB.md)|  | [optional] 
 
 ### Return type
 
-[**CreateAutomaticCoinsForwardingResponse**](CreateAutomaticCoinsForwardingResponse.md)
+[**CreateAutomaticCoinsForwardingR**](CreateAutomaticCoinsForwardingR.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteautomaticcoinsforwarding"></a>
 # **DeleteAutomaticCoinsForwarding**
-> DeleteAutomaticCoinsForwardingResponse DeleteAutomaticCoinsForwarding (string blockchain, string network, string referenceId, string context = null)
+> DeleteAutomaticCoinsForwardingR DeleteAutomaticCoinsForwarding (string blockchain, string network, string referenceId, string context = null)
 
 Delete Automatic Coins Forwarding
 
@@ -113,9 +113,9 @@ Through this endpoint customers can delete a forwarding function they have set f
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -139,7 +139,7 @@ namespace Example
             try
             {
                 // Delete Automatic Coins Forwarding
-                DeleteAutomaticCoinsForwardingResponse result = apiInstance.DeleteAutomaticCoinsForwarding(blockchain, network, referenceId, context);
+                DeleteAutomaticCoinsForwardingR result = apiInstance.DeleteAutomaticCoinsForwarding(blockchain, network, referenceId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteAutomaticCoinsForwardingResponse**](DeleteAutomaticCoinsForwardingResponse.md)
+[**DeleteAutomaticCoinsForwardingR**](DeleteAutomaticCoinsForwardingR.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 <a name="listcoinsforwardingautomations"></a>
 # **ListCoinsForwardingAutomations**
-> ListCoinsForwardingAutomationsResponse ListCoinsForwardingAutomations (string blockchain, string network, string context = null, int? limit = null, int? offset = null)
+> ListCoinsForwardingAutomationsR ListCoinsForwardingAutomations (string blockchain, string network, string context = null, int? limit = null, int? offset = null)
 
 List Coins Forwarding Automations
 
@@ -205,9 +205,9 @@ Through this endpoint customers can list all of their **coins** forwarding autom
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -232,7 +232,7 @@ namespace Example
             try
             {
                 // List Coins Forwarding Automations
-                ListCoinsForwardingAutomationsResponse result = apiInstance.ListCoinsForwardingAutomations(blockchain, network, context, limit, offset);
+                ListCoinsForwardingAutomationsR result = apiInstance.ListCoinsForwardingAutomations(blockchain, network, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListCoinsForwardingAutomationsResponse**](ListCoinsForwardingAutomationsResponse.md)
+[**ListCoinsForwardingAutomationsR**](ListCoinsForwardingAutomationsR.md)
 
 ### Authorization
 

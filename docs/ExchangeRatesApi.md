@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ExchangeRatesApi
+# CryptoAPIs.Api.ExchangeRatesApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getexchangeratebyassetsymbols"></a>
 # **GetExchangeRateByAssetSymbols**
-> GetExchangeRateByAssetSymbolsResponse GetExchangeRateByAssetSymbols (string fromAssetSymbol, string toAssetSymbol, string context = null)
+> GetExchangeRateByAssetSymbolsR GetExchangeRateByAssetSymbols (string fromAssetSymbol, string toAssetSymbol, string context = null)
 
 Get Exchange Rate By Asset Symbols
 
@@ -20,9 +20,9 @@ Through this endpoint customers can obtain exchange rates by asset symbols. The 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // Get Exchange Rate By Asset Symbols
-                GetExchangeRateByAssetSymbolsResponse result = apiInstance.GetExchangeRateByAssetSymbols(fromAssetSymbol, toAssetSymbol, context);
+                GetExchangeRateByAssetSymbolsR result = apiInstance.GetExchangeRateByAssetSymbols(fromAssetSymbol, toAssetSymbol, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetExchangeRateByAssetSymbolsResponse**](GetExchangeRateByAssetSymbolsResponse.md)
+[**GetExchangeRateByAssetSymbolsR**](GetExchangeRateByAssetSymbolsR.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 <a name="getexchangeratebyassetsids"></a>
 # **GetExchangeRateByAssetsIDs**
-> GetExchangeRateByAssetsIDsResponse GetExchangeRateByAssetsIDs (string fromAssetId, string toAssetId, string context = null)
+> GetExchangeRateByAssetsIDsR GetExchangeRateByAssetsIDs (string fromAssetId, string toAssetId, string context = null)
 
 Get Exchange Rate By Assets IDs
 
@@ -109,9 +109,9 @@ Through this endpoint customers can obtain exchange rates by asset IDs. The proc
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -134,7 +134,7 @@ namespace Example
             try
             {
                 // Get Exchange Rate By Assets IDs
-                GetExchangeRateByAssetsIDsResponse result = apiInstance.GetExchangeRateByAssetsIDs(fromAssetId, toAssetId, context);
+                GetExchangeRateByAssetsIDsR result = apiInstance.GetExchangeRateByAssetsIDs(fromAssetId, toAssetId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetExchangeRateByAssetsIDsResponse**](GetExchangeRateByAssetsIDsResponse.md)
+[**GetExchangeRateByAssetsIDsR**](GetExchangeRateByAssetsIDsR.md)
 
 ### Authorization
 

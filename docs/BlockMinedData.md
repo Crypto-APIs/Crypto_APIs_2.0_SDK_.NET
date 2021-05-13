@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BlockMinedData
+# CryptoAPIs.Model.BlockMinedData
 Specifies all data, as attributes, included into the callback notification, which depends on the `event`.
 
 ## Properties

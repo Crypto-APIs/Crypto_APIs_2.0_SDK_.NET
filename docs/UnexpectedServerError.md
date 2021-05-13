@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.UnexpectedServerError
+# CryptoAPIs.Model.UnexpectedServerError
 
 ## Properties
 

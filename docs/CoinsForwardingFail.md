@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CoinsForwardingFail
+# CryptoAPIs.Model.CoinsForwardingFail
 
 ## Properties
 

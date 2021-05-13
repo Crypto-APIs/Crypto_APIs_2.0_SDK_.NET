@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.RequestLimitReached
+# CryptoAPIs.Model.RequestLimitReached
 
 ## Properties
 

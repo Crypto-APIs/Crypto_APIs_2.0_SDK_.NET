@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BlockchainDataTransactionNotFound
+# CryptoAPIs.Model.BlockchainDataTransactionNotFound
 
 ## Properties
 

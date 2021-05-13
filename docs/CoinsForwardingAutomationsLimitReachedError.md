@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CoinsForwardingAutomationsLimitReachedError
+# CryptoAPIs.Model.CoinsForwardingAutomationsLimitReachedError
 
 ## Properties
 

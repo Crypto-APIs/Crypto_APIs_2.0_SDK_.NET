@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingSuccessEthereumerc20token
+# CryptoAPIs.Model.TokensForwardingSuccessEthereumerc20token
 ethereumERC20Token
 
 ## Properties

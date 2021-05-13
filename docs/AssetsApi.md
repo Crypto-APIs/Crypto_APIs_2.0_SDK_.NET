@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.AssetsApi
+# CryptoAPIs.Api.AssetsApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listassetsdetails"></a>
 # **ListAssetsDetails**
-> ListAssetsDetailsResponse ListAssetsDetails (string context = null, string assetType = null, int? limit = null, int? offset = null)
+> ListAssetsDetailsR ListAssetsDetails (string context = null, string assetType = null, int? limit = null, int? offset = null)
 
 List Assets Details
 
@@ -19,9 +19,9 @@ This endpoint will return details on a requested asset. The asset could be a cry
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // List Assets Details
-                ListAssetsDetailsResponse result = apiInstance.ListAssetsDetails(context, assetType, limit, offset);
+                ListAssetsDetailsR result = apiInstance.ListAssetsDetails(context, assetType, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListAssetsDetailsResponse**](ListAssetsDetailsResponse.md)
+[**ListAssetsDetailsR**](ListAssetsDetailsR.md)
 
 ### Authorization
 

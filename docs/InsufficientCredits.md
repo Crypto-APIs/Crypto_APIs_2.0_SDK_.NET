@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InsufficientCredits
+# CryptoAPIs.Model.InsufficientCredits
 
 ## Properties
 

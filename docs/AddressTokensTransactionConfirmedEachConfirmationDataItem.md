@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressTokensTransactionConfirmedEachConfirmationDataItem
+# CryptoAPIs.Model.AddressTokensTransactionConfirmedEachConfirmationDataItem
 Defines an `item` as one result.
 
 ## Properties

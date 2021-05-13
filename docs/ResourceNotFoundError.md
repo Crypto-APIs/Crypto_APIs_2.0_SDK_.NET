@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ResourceNotFoundError
+# CryptoAPIs.Model.ResourceNotFoundError
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BlockchainDataBlockNotFound
+# CryptoAPIs.Model.BlockchainDataBlockNotFound
 
 ## Properties
 

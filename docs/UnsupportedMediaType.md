@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.UnsupportedMediaType
+# CryptoAPIs.Model.UnsupportedMediaType
 
 ## Properties
 

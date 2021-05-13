@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CoinsForwardingFailDataItem
+# CryptoAPIs.Model.CoinsForwardingFailDataItem
 Defines an `item` as one result.
 
 ## Properties

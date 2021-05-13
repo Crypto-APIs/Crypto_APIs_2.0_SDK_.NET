@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingFail
+# CryptoAPIs.Model.TokensForwardingFail
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingSuccessEthereumerc721token
+# CryptoAPIs.Model.TokensForwardingSuccessEthereumerc721token
 ethereumERC721Token
 
 ## Properties

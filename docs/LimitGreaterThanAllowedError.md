@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LimitGreaterThanAllowedError
+# CryptoAPIs.Model.LimitGreaterThanAllowedError
 
 ## Properties
 

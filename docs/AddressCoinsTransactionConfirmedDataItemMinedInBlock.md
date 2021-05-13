@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressCoinsTransactionConfirmedDataItemMinedInBlock
+# CryptoAPIs.Model.AddressCoinsTransactionConfirmedDataItemMinedInBlock
 Defines the block height in which this transaction was mined and confirmed in.
 
 ## Properties

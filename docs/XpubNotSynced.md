@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.XpubNotSynced
+# CryptoAPIs.Model.XpubNotSynced
 
 ## Properties
 

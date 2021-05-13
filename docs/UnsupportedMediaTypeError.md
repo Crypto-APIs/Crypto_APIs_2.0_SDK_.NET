@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.UnsupportedMediaTypeError
+# CryptoAPIs.Model.UnsupportedMediaTypeError
 
 ## Properties
 

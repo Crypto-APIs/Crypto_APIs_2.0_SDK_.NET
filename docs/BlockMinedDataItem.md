@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BlockMinedDataItem
+# CryptoAPIs.Model.BlockMinedDataItem
 Defines an `item` as one result.
 
 ## Properties

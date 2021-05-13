@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressTokensTransactionConfirmedEthereumerc721token
+# CryptoAPIs.Model.AddressTokensTransactionConfirmedEthereumerc721token
 ethereumERC721Token
 
 ## Properties

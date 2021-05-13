@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CouldNotCalculateRateForPairError
+# CryptoAPIs.Model.CouldNotCalculateRateForPairError
 
 ## Properties
 

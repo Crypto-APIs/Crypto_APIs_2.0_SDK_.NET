@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingSuccessDataItem
+# CryptoAPIs.Model.TokensForwardingSuccessDataItem
 Defines an `item` as one result.
 
 ## Properties

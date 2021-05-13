@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InvalidNetworkError
+# CryptoAPIs.Model.InvalidNetworkError
 
 ## Properties
 

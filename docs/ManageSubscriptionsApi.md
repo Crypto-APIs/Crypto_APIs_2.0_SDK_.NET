@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ManageSubscriptionsApi
+# CryptoAPIs.Api.ManageSubscriptionsApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="deleteblockchaineventsubscription"></a>
 # **DeleteBlockchainEventSubscription**
-> DeleteBlockchainEventSubscriptionResponse DeleteBlockchainEventSubscription (string blockchain, string network, string referenceId, string context = null)
+> DeleteBlockchainEventSubscriptionR DeleteBlockchainEventSubscription (string blockchain, string network, string referenceId, string context = null)
 
 Delete Blockchain Event Subscription
 
@@ -20,9 +20,9 @@ Through this endpoint the customer can delete blockchain event subscriptions the
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -46,7 +46,7 @@ namespace Example
             try
             {
                 // Delete Blockchain Event Subscription
-                DeleteBlockchainEventSubscriptionResponse result = apiInstance.DeleteBlockchainEventSubscription(blockchain, network, referenceId, context);
+                DeleteBlockchainEventSubscriptionR result = apiInstance.DeleteBlockchainEventSubscription(blockchain, network, referenceId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteBlockchainEventSubscriptionResponse**](DeleteBlockchainEventSubscriptionResponse.md)
+[**DeleteBlockchainEventSubscriptionR**](DeleteBlockchainEventSubscriptionR.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 <a name="listblockchaineventssubscriptions"></a>
 # **ListBlockchainEventsSubscriptions**
-> ListBlockchainEventsSubscriptionsResponse ListBlockchainEventsSubscriptions (string blockchain, string network, string context = null, int? limit = null, int? offset = null)
+> ListBlockchainEventsSubscriptionsR ListBlockchainEventsSubscriptions (string blockchain, string network, string context = null, int? limit = null, int? offset = null)
 
 List Blockchain Events Subscriptions
 
@@ -112,9 +112,9 @@ Through this endpoint the customer can obtain a list of their callback subscript
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -139,7 +139,7 @@ namespace Example
             try
             {
                 // List Blockchain Events Subscriptions
-                ListBlockchainEventsSubscriptionsResponse result = apiInstance.ListBlockchainEventsSubscriptions(blockchain, network, context, limit, offset);
+                ListBlockchainEventsSubscriptionsR result = apiInstance.ListBlockchainEventsSubscriptions(blockchain, network, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBlockchainEventsSubscriptionsResponse**](ListBlockchainEventsSubscriptionsResponse.md)
+[**ListBlockchainEventsSubscriptionsR**](ListBlockchainEventsSubscriptionsR.md)
 
 ### Authorization
 

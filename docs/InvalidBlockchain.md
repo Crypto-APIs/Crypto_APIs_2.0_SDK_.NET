@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InvalidBlockchain
+# CryptoAPIs.Model.InvalidBlockchain
 
 ## Properties
 

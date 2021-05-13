@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.TokensApi
+# CryptoAPIs.Api.TokensApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="listtokensbyaddress"></a>
 # **ListTokensByAddress**
-> ListTokensByAddressResponse ListTokensByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
+> ListTokensByAddressR ListTokensByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
 
 List Tokens By Address
 
@@ -21,9 +21,9 @@ Through this endpoint customers can obtain token data by providing an attribute 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -49,7 +49,7 @@ namespace Example
             try
             {
                 // List Tokens By Address
-                ListTokensByAddressResponse result = apiInstance.ListTokensByAddress(blockchain, network, address, context, limit, offset);
+                ListTokensByAddressR result = apiInstance.ListTokensByAddress(blockchain, network, address, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListTokensByAddressResponse**](ListTokensByAddressResponse.md)
+[**ListTokensByAddressR**](ListTokensByAddressR.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 <a name="listtokenstransfersbyaddress"></a>
 # **ListTokensTransfersByAddress**
-> ListTokensTransfersByAddressResponse ListTokensTransfersByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
+> ListTokensTransfersByAddressR ListTokensTransfersByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
 
 List Tokens Transfers By Address
 
@@ -116,9 +116,9 @@ Through this endpoint customers can obtain a list with token transfers by the `a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -144,7 +144,7 @@ namespace Example
             try
             {
                 // List Tokens Transfers By Address
-                ListTokensTransfersByAddressResponse result = apiInstance.ListTokensTransfersByAddress(blockchain, network, address, context, limit, offset);
+                ListTokensTransfersByAddressR result = apiInstance.ListTokensTransfersByAddress(blockchain, network, address, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListTokensTransfersByAddressResponse**](ListTokensTransfersByAddressResponse.md)
+[**ListTokensTransfersByAddressR**](ListTokensTransfersByAddressR.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 <a name="listtokenstransfersbytransactionhash"></a>
 # **ListTokensTransfersByTransactionHash**
-> ListTokensTransfersByTransactionHashResponse ListTokensTransfersByTransactionHash (string blockchain, string network, string transactionHash, string context = null, int? limit = null, int? offset = null)
+> ListTokensTransfersByTransactionHashR ListTokensTransfersByTransactionHash (string blockchain, string network, string transactionHash, string context = null, int? limit = null, int? offset = null)
 
 List Tokens Transfers By Transaction Hash
 
@@ -211,9 +211,9 @@ Through this endpoint customers can obtain a list with token transfers by the `t
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -239,7 +239,7 @@ namespace Example
             try
             {
                 // List Tokens Transfers By Transaction Hash
-                ListTokensTransfersByTransactionHashResponse result = apiInstance.ListTokensTransfersByTransactionHash(blockchain, network, transactionHash, context, limit, offset);
+                ListTokensTransfersByTransactionHashR result = apiInstance.ListTokensTransfersByTransactionHash(blockchain, network, transactionHash, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListTokensTransfersByTransactionHashResponse**](ListTokensTransfersByTransactionHashResponse.md)
+[**ListTokensTransfersByTransactionHashR**](ListTokensTransfersByTransactionHashR.md)
 
 ### Authorization
 

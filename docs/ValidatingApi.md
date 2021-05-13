@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ValidatingApi
+# CryptoAPIs.Api.ValidatingApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="validateaddress"></a>
 # **ValidateAddress**
-> ValidateAddressResponse ValidateAddress (string blockchain, string network, string context = null, ValidateAddressRequestBody validateAddressRequestBody = null)
+> ValidateAddressR ValidateAddress (string blockchain, string network, string context = null, ValidateAddressRB validateAddressRB = null)
 
 Validate Address
 
@@ -19,9 +19,9 @@ This endpoint checks user public addresses whether they are valid or not.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -40,12 +40,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var validateAddressRequestBody = new ValidateAddressRequestBody(); // ValidateAddressRequestBody |  (optional) 
+            var validateAddressRB = new ValidateAddressRB(); // ValidateAddressRB |  (optional) 
 
             try
             {
                 // Validate Address
-                ValidateAddressResponse result = apiInstance.ValidateAddress(blockchain, network, context, validateAddressRequestBody);
+                ValidateAddressR result = apiInstance.ValidateAddress(blockchain, network, context, validateAddressRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,11 +66,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **validateAddressRequestBody** | [**ValidateAddressRequestBody**](ValidateAddressRequestBody.md)|  | [optional] 
+ **validateAddressRB** | [**ValidateAddressRB**](ValidateAddressRB.md)|  | [optional] 
 
 ### Return type
 
-[**ValidateAddressResponse**](ValidateAddressResponse.md)
+[**ValidateAddressR**](ValidateAddressR.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.UTXOBasedApi
+# CryptoAPIs.Api.UTXOBasedApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="gethdwalletxpubypubzpubdetails"></a>
 # **GetHDWalletXPubYPubZPubDetails**
-> GetHDWalletxPubYPubZPubDetailsResponse GetHDWalletXPubYPubZPubDetails (string blockchain, string extendedPublicKey, string network, string context = null, string derivation = null)
+> GetHDWalletXPubYPubZPubDetailsR GetHDWalletXPubYPubZPubDetails (string blockchain, string extendedPublicKey, string network, string context = null, string derivation = null)
 
 Get HD Wallet (xPub, yPub, zPub) Details
 
@@ -21,9 +21,9 @@ HD wallet details is useful endpoint to get the most important data about HD wal
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -48,7 +48,7 @@ namespace Example
             try
             {
                 // Get HD Wallet (xPub, yPub, zPub) Details
-                GetHDWalletxPubYPubZPubDetailsResponse result = apiInstance.GetHDWalletXPubYPubZPubDetails(blockchain, extendedPublicKey, network, context, derivation);
+                GetHDWalletXPubYPubZPubDetailsR result = apiInstance.GetHDWalletXPubYPubZPubDetails(blockchain, extendedPublicKey, network, context, derivation);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHDWalletxPubYPubZPubDetailsResponse**](GetHDWalletxPubYPubZPubDetailsResponse.md)
+[**GetHDWalletXPubYPubZPubDetailsR**](GetHDWalletXPubYPubZPubDetailsR.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 <a name="listhdwalletxpubypubzpubtransactions"></a>
 # **ListHDWalletXPubYPubZPubTransactions**
-> ListHDWalletxPubYPubZPubTransactionsResponse ListHDWalletXPubYPubZPubTransactions (string blockchain, string extendedPublicKey, string network, string context = null, string derivation = null, int? limit = null, int? offset = null)
+> ListHDWalletXPubYPubZPubTransactionsR ListHDWalletXPubYPubZPubTransactions (string blockchain, string extendedPublicKey, string network, string context = null, string derivation = null, int? limit = null, int? offset = null)
 
 List HD Wallet (xPub, yPub, zPub) Transactions
 
@@ -114,9 +114,9 @@ This endpoint will list HD Wallet transactions.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -143,7 +143,7 @@ namespace Example
             try
             {
                 // List HD Wallet (xPub, yPub, zPub) Transactions
-                ListHDWalletxPubYPubZPubTransactionsResponse result = apiInstance.ListHDWalletXPubYPubZPubTransactions(blockchain, extendedPublicKey, network, context, derivation, limit, offset);
+                ListHDWalletXPubYPubZPubTransactionsR result = apiInstance.ListHDWalletXPubYPubZPubTransactions(blockchain, extendedPublicKey, network, context, derivation, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListHDWalletxPubYPubZPubTransactionsResponse**](ListHDWalletxPubYPubZPubTransactionsResponse.md)
+[**ListHDWalletXPubYPubZPubTransactionsR**](ListHDWalletXPubYPubZPubTransactionsR.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 <a name="synchdwalletxpubypubzpub"></a>
 # **SyncHDWalletXPubYPubZPub**
-> SyncHDWalletxPubYPubZPubResponse SyncHDWalletXPubYPubZPub (string blockchain, string network, string context = null, SyncHDWalletxPubYPubZPubRequestBody syncHDWalletxPubYPubZPubRequestBody = null)
+> SyncHDWalletXPubYPubZPubR SyncHDWalletXPubYPubZPub (string blockchain, string network, string context = null, SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = null)
 
 Sync HD Wallet (xPub, yPub, zPub)
 
@@ -211,9 +211,9 @@ HD wallets usually have a lot of addresses and transactions, getting the data on
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -232,12 +232,12 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var syncHDWalletxPubYPubZPubRequestBody = new SyncHDWalletxPubYPubZPubRequestBody(); // SyncHDWalletxPubYPubZPubRequestBody |  (optional) 
+            var syncHDWalletXPubYPubZPubRB = new SyncHDWalletXPubYPubZPubRB(); // SyncHDWalletXPubYPubZPubRB |  (optional) 
 
             try
             {
                 // Sync HD Wallet (xPub, yPub, zPub)
-                SyncHDWalletxPubYPubZPubResponse result = apiInstance.SyncHDWalletXPubYPubZPub(blockchain, network, context, syncHDWalletxPubYPubZPubRequestBody);
+                SyncHDWalletXPubYPubZPubR result = apiInstance.SyncHDWalletXPubYPubZPub(blockchain, network, context, syncHDWalletXPubYPubZPubRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -258,11 +258,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **syncHDWalletxPubYPubZPubRequestBody** | [**SyncHDWalletxPubYPubZPubRequestBody**](SyncHDWalletxPubYPubZPubRequestBody.md)|  | [optional] 
+ **syncHDWalletXPubYPubZPubRB** | [**SyncHDWalletXPubYPubZPubRB**](SyncHDWalletXPubYPubZPubRB.md)|  | [optional] 
 
 ### Return type
 
-[**SyncHDWalletxPubYPubZPubResponse**](SyncHDWalletxPubYPubZPubResponse.md)
+[**SyncHDWalletXPubYPubZPubR**](SyncHDWalletXPubYPubZPubR.md)
 
 ### Authorization
 

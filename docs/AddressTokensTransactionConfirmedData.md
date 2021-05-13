@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressTokensTransactionConfirmedData
+# CryptoAPIs.Model.AddressTokensTransactionConfirmedData
 Specifies all data, as attributes, included into the callback notification, which depends on the `event`.
 
 ## Properties

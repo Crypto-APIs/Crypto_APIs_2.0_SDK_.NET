@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.XpubSyncInProgress
+# CryptoAPIs.Model.XpubSyncInProgress
 
 ## Properties
 

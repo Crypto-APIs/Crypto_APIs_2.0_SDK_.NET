@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BlockchainEventsCallbacksLimitReachedError
+# CryptoAPIs.Model.BlockchainEventsCallbacksLimitReachedError
 
 ## Properties
 

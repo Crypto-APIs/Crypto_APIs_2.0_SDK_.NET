@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.UriNotFound
+# CryptoAPIs.Model.UriNotFound
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InvalidXpubError
+# CryptoAPIs.Model.InvalidXpubError
 
 ## Properties
 

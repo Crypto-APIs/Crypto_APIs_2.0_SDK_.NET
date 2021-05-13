@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.XRPRippleApi
+# CryptoAPIs.Api.XRPRippleApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="getlatestminedxrprippleblock"></a>
 # **GetLatestMinedXRPRippleBlock**
-> GetLatestMinedXRPRippleBlockResponse GetLatestMinedXRPRippleBlock (string network, string context = null)
+> GetLatestMinedXRPRippleBlockR GetLatestMinedXRPRippleBlock (string network, string context = null)
 
 Get Latest Mined XRP (Ripple) Block
 
@@ -25,9 +25,9 @@ Through this endpoint customers can fetch the last mined XRP block in the blockc
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -49,7 +49,7 @@ namespace Example
             try
             {
                 // Get Latest Mined XRP (Ripple) Block
-                GetLatestMinedXRPRippleBlockResponse result = apiInstance.GetLatestMinedXRPRippleBlock(network, context);
+                GetLatestMinedXRPRippleBlockR result = apiInstance.GetLatestMinedXRPRippleBlock(network, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetLatestMinedXRPRippleBlockResponse**](GetLatestMinedXRPRippleBlockResponse.md)
+[**GetLatestMinedXRPRippleBlockR**](GetLatestMinedXRPRippleBlockR.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 <a name="getxrprippleaddressdetails"></a>
 # **GetXRPRippleAddressDetails**
-> GetXRPRippleAddressDetailsResponse GetXRPRippleAddressDetails (string network, string address, string context = null)
+> GetXRPRippleAddressDetailsR GetXRPRippleAddressDetails (string network, string address, string context = null)
 
 Get XRP (Ripple) Address Details
 
@@ -113,9 +113,9 @@ Through this endpoint the customer can receive basic information about a given X
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Get XRP (Ripple) Address Details
-                GetXRPRippleAddressDetailsResponse result = apiInstance.GetXRPRippleAddressDetails(network, address, context);
+                GetXRPRippleAddressDetailsR result = apiInstance.GetXRPRippleAddressDetails(network, address, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetXRPRippleAddressDetailsResponse**](GetXRPRippleAddressDetailsResponse.md)
+[**GetXRPRippleAddressDetailsR**](GetXRPRippleAddressDetailsR.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 <a name="getxrprippleblockdetailsbyblockhash"></a>
 # **GetXRPRippleBlockDetailsByBlockHash**
-> GetXRPRippleBlockDetailsByBlockHashResponse GetXRPRippleBlockDetailsByBlockHash (string network, string blockHash, string context = null)
+> GetXRPRippleBlockDetailsByBlockHashR GetXRPRippleBlockDetailsByBlockHash (string network, string blockHash, string context = null)
 
 Get XRP (Ripple) Block Details By Block Hash
 
@@ -202,9 +202,9 @@ Through this endpoint customers can obtain basic information about a given XRP b
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -227,7 +227,7 @@ namespace Example
             try
             {
                 // Get XRP (Ripple) Block Details By Block Hash
-                GetXRPRippleBlockDetailsByBlockHashResponse result = apiInstance.GetXRPRippleBlockDetailsByBlockHash(network, blockHash, context);
+                GetXRPRippleBlockDetailsByBlockHashR result = apiInstance.GetXRPRippleBlockDetailsByBlockHash(network, blockHash, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetXRPRippleBlockDetailsByBlockHashResponse**](GetXRPRippleBlockDetailsByBlockHashResponse.md)
+[**GetXRPRippleBlockDetailsByBlockHashR**](GetXRPRippleBlockDetailsByBlockHashR.md)
 
 ### Authorization
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 <a name="getxrprippleblockdetailsbyblockheight"></a>
 # **GetXRPRippleBlockDetailsByBlockHeight**
-> GetXRPRippleBlockDetailsByBlockHeightResponse GetXRPRippleBlockDetailsByBlockHeight (string network, string height, string context = null)
+> GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight (string network, string height, string context = null)
 
 Get XRP (Ripple) Block Details By Block Height
 
@@ -292,9 +292,9 @@ Through this endpoint customers can obtain basic information about a given XRP b
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -317,7 +317,7 @@ namespace Example
             try
             {
                 // Get XRP (Ripple) Block Details By Block Height
-                GetXRPRippleBlockDetailsByBlockHeightResponse result = apiInstance.GetXRPRippleBlockDetailsByBlockHeight(network, height, context);
+                GetXRPRippleBlockDetailsByBlockHeightR result = apiInstance.GetXRPRippleBlockDetailsByBlockHeight(network, height, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetXRPRippleBlockDetailsByBlockHeightResponse**](GetXRPRippleBlockDetailsByBlockHeightResponse.md)
+[**GetXRPRippleBlockDetailsByBlockHeightR**](GetXRPRippleBlockDetailsByBlockHeightR.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 <a name="getxrprippletransactiondetailsbytransactionid"></a>
 # **GetXRPRippleTransactionDetailsByTransactionID**
-> GetXRPRippleTransactionDetailsByTransactionIDResponse GetXRPRippleTransactionDetailsByTransactionID (string network, string transactionHash, string context = null)
+> GetXRPRippleTransactionDetailsByTransactionIDR GetXRPRippleTransactionDetailsByTransactionID (string network, string transactionHash, string context = null)
 
 Get XRP (Ripple) Transaction Details By Transaction ID
 
@@ -382,9 +382,9 @@ Through this endpoint customers can obtain details about a XRP transaction by th
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -407,7 +407,7 @@ namespace Example
             try
             {
                 // Get XRP (Ripple) Transaction Details By Transaction ID
-                GetXRPRippleTransactionDetailsByTransactionIDResponse result = apiInstance.GetXRPRippleTransactionDetailsByTransactionID(network, transactionHash, context);
+                GetXRPRippleTransactionDetailsByTransactionIDR result = apiInstance.GetXRPRippleTransactionDetailsByTransactionID(network, transactionHash, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetXRPRippleTransactionDetailsByTransactionIDResponse**](GetXRPRippleTransactionDetailsByTransactionIDResponse.md)
+[**GetXRPRippleTransactionDetailsByTransactionIDR**](GetXRPRippleTransactionDetailsByTransactionIDR.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 
 <a name="listxrprippletransactionsbyaddress"></a>
 # **ListXRPRippleTransactionsByAddress**
-> ListXRPRippleTransactionsByAddressResponse ListXRPRippleTransactionsByAddress (string network, string address, string context = null, int? limit = null, int? offset = null)
+> ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress (string network, string address, string context = null, int? limit = null, int? offset = null)
 
 List XRP (Ripple) Transactions by Address
 
@@ -472,9 +472,9 @@ This endpoint will list XRP transactions by a attribute `address`. The transacti
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -499,7 +499,7 @@ namespace Example
             try
             {
                 // List XRP (Ripple) Transactions by Address
-                ListXRPRippleTransactionsByAddressResponse result = apiInstance.ListXRPRippleTransactionsByAddress(network, address, context, limit, offset);
+                ListXRPRippleTransactionsByAddressR result = apiInstance.ListXRPRippleTransactionsByAddress(network, address, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListXRPRippleTransactionsByAddressResponse**](ListXRPRippleTransactionsByAddressResponse.md)
+[**ListXRPRippleTransactionsByAddressR**](ListXRPRippleTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -555,7 +555,7 @@ Name | Type | Description  | Notes
 
 <a name="listxrprippletransactionsbyblockhash"></a>
 # **ListXRPRippleTransactionsByBlockHash**
-> ListXRPRippleTransactionsByBlockHashResponse ListXRPRippleTransactionsByBlockHash (string network, string blockHash, string context = null, int? limit = null, int? offset = null)
+> ListXRPRippleTransactionsByBlockHashR ListXRPRippleTransactionsByBlockHash (string network, string blockHash, string context = null, int? limit = null, int? offset = null)
 
 List XRP (Ripple) Transactions By Block Hash
 
@@ -565,9 +565,9 @@ This endpoint will list transactions by an attribute `blockHash`. The transactio
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -592,7 +592,7 @@ namespace Example
             try
             {
                 // List XRP (Ripple) Transactions By Block Hash
-                ListXRPRippleTransactionsByBlockHashResponse result = apiInstance.ListXRPRippleTransactionsByBlockHash(network, blockHash, context, limit, offset);
+                ListXRPRippleTransactionsByBlockHashR result = apiInstance.ListXRPRippleTransactionsByBlockHash(network, blockHash, context, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListXRPRippleTransactionsByBlockHashResponse**](ListXRPRippleTransactionsByBlockHashResponse.md)
+[**ListXRPRippleTransactionsByBlockHashR**](ListXRPRippleTransactionsByBlockHashR.md)
 
 ### Authorization
 

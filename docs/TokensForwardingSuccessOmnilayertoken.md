@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingSuccessOmnilayertoken
+# CryptoAPIs.Model.TokensForwardingSuccessOmnilayertoken
 omniLayerToken
 
 ## Properties

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EndpointNotAllowedForPlan
+# CryptoAPIs.Model.EndpointNotAllowedForPlan
 
 ## Properties
 

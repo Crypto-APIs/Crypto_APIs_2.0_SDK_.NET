@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokensForwardingSuccessData
+# CryptoAPIs.Model.TokensForwardingSuccessData
 Specifies all data, as attributes, included into the callback notification, which depends on the `event`.
 
 ## Properties

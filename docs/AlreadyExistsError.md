@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AlreadyExistsError
+# CryptoAPIs.Model.AlreadyExistsError
 
 ## Properties
 

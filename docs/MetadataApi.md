@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.MetadataApi
+# CryptoAPIs.Api.MetadataApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listsupportedassets"></a>
 # **ListSupportedAssets**
-> ListSupportedAssetsResponse ListSupportedAssets (string context = null, string assetType = null, int? limit = null, int? offset = null)
+> ListSupportedAssetsR ListSupportedAssets (string context = null, string assetType = null, int? limit = null, int? offset = null)
 
 List Supported Assets
 
@@ -19,9 +19,9 @@ This endpoint will return a list of supported assets. The asset could be a crypt
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
 
 namespace Example
 {
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // List Supported Assets
-                ListSupportedAssetsResponse result = apiInstance.ListSupportedAssets(context, assetType, limit, offset);
+                ListSupportedAssetsR result = apiInstance.ListSupportedAssets(context, assetType, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListSupportedAssetsResponse**](ListSupportedAssetsResponse.md)
+[**ListSupportedAssetsR**](ListSupportedAssetsR.md)
 
 ### Authorization
 
