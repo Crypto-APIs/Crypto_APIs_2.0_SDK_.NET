@@ -104,9 +104,9 @@ namespace CryptoAPIs.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string network = null;
-            //string height = null;
+            //string blockHeight = null;
             //string context = null;
-            //var response = instance.GetXRPRippleBlockDetailsByBlockHeight(network, height, context);
+            //var response = instance.GetXRPRippleBlockDetailsByBlockHeight(network, blockHeight, context);
             //Assert.IsType<GetXRPRippleBlockDetailsByBlockHeightR>(response);
         }
 
@@ -154,6 +154,22 @@ namespace CryptoAPIs.Test.Api
             //int? offset = null;
             //var response = instance.ListXRPRippleTransactionsByBlockHash(network, blockHash, context, limit, offset);
             //Assert.IsType<ListXRPRippleTransactionsByBlockHashR>(response);
+        }
+
+        /// <summary>
+        /// Test ListXRPRippleTransactionsByBlockHeight
+        /// </summary>
+        [Fact]
+        public void ListXRPRippleTransactionsByBlockHeightTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string network = null;
+            //int blockHeight = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListXRPRippleTransactionsByBlockHeight(network, blockHeight, context, limit, offset);
+            //Assert.IsType<ListXRPRippleTransactionsByBlockHeightR>(response);
         }
     }
 }

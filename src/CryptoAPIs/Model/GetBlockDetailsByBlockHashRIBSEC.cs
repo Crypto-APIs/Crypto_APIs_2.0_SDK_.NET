@@ -50,12 +50,11 @@ namespace CryptoAPIs.Model
         /// <param name="sha3Uncles">Defines the combined hash of all uncles for a given parent. (required).</param>
         /// <param name="totalDifficulty">Defines the total difficulty of the chain until this block, i.e. how difficult it is for a specific miner to mine a new block. (required).</param>
         /// <param name="uncles">uncles (required).</param>
-        public GetBlockDetailsByBlockHashRIBSEC(string difficulty = default(string), string nonce = default(string), int size = default(int), string extraData = default(string), string gasLimit = default(string), string gasUsed = default(string), int minedInSeconds = default(int), string sha3Uncles = default(string), string totalDifficulty = default(string), List<string> uncles = default(List<string>))
+        public GetBlockDetailsByBlockHashRIBSEC(string difficulty = default(string), int nonce = default(int), int size = default(int), string extraData = default(string), string gasLimit = default(string), string gasUsed = default(string), int minedInSeconds = default(int), string sha3Uncles = default(string), string totalDifficulty = default(string), List<string> uncles = default(List<string>))
         {
             // to ensure "difficulty" is required (not null)
             this.Difficulty = difficulty ?? throw new ArgumentNullException("difficulty is a required property for GetBlockDetailsByBlockHashRIBSEC and cannot be null");
-            // to ensure "nonce" is required (not null)
-            this.Nonce = nonce ?? throw new ArgumentNullException("nonce is a required property for GetBlockDetailsByBlockHashRIBSEC and cannot be null");
+            this.Nonce = nonce;
             this.Size = size;
             // to ensure "extraData" is required (not null)
             this.ExtraData = extraData ?? throw new ArgumentNullException("extraData is a required property for GetBlockDetailsByBlockHashRIBSEC and cannot be null");
@@ -84,7 +83,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a random value that can be adjusted to satisfy the Proof of Work.</value>
         [DataMember(Name = "nonce", IsRequired = true, EmitDefaultValue = false)]
-        public string Nonce { get; set; }
+        public int Nonce { get; set; }
 
         /// <summary>
         /// Represents the total size of the block in Bytes.
@@ -200,8 +199,7 @@ namespace CryptoAPIs.Model
                 ) && 
                 (
                     this.Nonce == input.Nonce ||
-                    (this.Nonce != null &&
-                    this.Nonce.Equals(input.Nonce))
+                    this.Nonce.Equals(input.Nonce)
                 ) && 
                 (
                     this.Size == input.Size ||
@@ -255,8 +253,7 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 if (this.Difficulty != null)
                     hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
-                if (this.Nonce != null)
-                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                hashCode = hashCode * 59 + this.Nonce.GetHashCode();
                 hashCode = hashCode * 59 + this.Size.GetHashCode();
                 if (this.ExtraData != null)
                     hashCode = hashCode * 59 + this.ExtraData.GetHashCode();

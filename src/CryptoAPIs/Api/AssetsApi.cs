@@ -31,29 +31,33 @@ namespace CryptoAPIs.Api
         /// List Assets Details
         /// </summary>
         /// <remarks>
-        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <returns>ListAssetsDetailsR</returns>
-        ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?));
 
         /// <summary>
         /// List Assets Details
         /// </summary>
         /// <remarks>
-        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <returns>ApiResponse of ListAssetsDetailsR</returns>
-        ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?));
         #endregion Synchronous Operations
     }
 
@@ -67,31 +71,35 @@ namespace CryptoAPIs.Api
         /// List Assets Details
         /// </summary>
         /// <remarks>
-        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAssetsDetailsR</returns>
-        System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Assets Details
         /// </summary>
         /// <remarks>
-        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAssetsDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -122,7 +130,7 @@ namespace CryptoAPIs.Api
         /// Initializes a new instance of the <see cref="AssetsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public AssetsApi(String basePath)
+        public AssetsApi(string basePath)
         {
             this.Configuration = CryptoAPIs.Client.Configuration.MergeConfigurations(
                 CryptoAPIs.Client.GlobalConfiguration.Instance,
@@ -185,7 +193,7 @@ namespace CryptoAPIs.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -213,38 +221,42 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <returns>ListAssetsDetailsR</returns>
-        public ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?))
         {
-            CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> localVarResponse = ListAssetsDetailsWithHttpInfo(context, assetType, limit, offset);
+            CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> localVarResponse = ListAssetsDetailsWithHttpInfo(context, assetType, cryptoType, limit, offset, waasEnabled);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <returns>ApiResponse of ListAssetsDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?))
         {
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -262,6 +274,10 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "assetType", assetType));
             }
+            if (cryptoType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "cryptoType", cryptoType));
+            }
             if (limit != null)
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
@@ -270,9 +286,13 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+            if (waasEnabled != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "waasEnabled", waasEnabled));
+            }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -290,41 +310,45 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAssetsDetailsR</returns>
-        public async System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> localVarResponse = await ListAssetsDetailsWithHttpInfoAsync(context, assetType, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> localVarResponse = await ListAssetsDetailsWithHttpInfoAsync(context, assetType, cryptoType, limit, offset, waasEnabled, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.
+        /// List Assets Details This endpoint will return details on a requested asset. The asset could be a cryptocurrency or FIAT asset that we support. Each asset has a unique identifier - &#x60;assetId&#x60; and a unique symbol in the form of a string, e.g. \&quot;BTC\&quot;.    The details returned could include information on the latest rate and rate fluctuation of different periods of time - 24 hours, a week, one hour, the encoding of the logo, and more.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (optional)</param>
+        /// <param name="cryptoType">Subtype of the crypto assets. Could be COIN or TOKEN (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAssetsDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -343,6 +367,10 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "assetType", assetType));
             }
+            if (cryptoType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "cryptoType", cryptoType));
+            }
             if (limit != null)
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
@@ -351,9 +379,13 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+            if (waasEnabled != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "waasEnabled", waasEnabled));
+            }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }

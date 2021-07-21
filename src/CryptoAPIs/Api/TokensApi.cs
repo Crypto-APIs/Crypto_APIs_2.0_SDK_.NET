@@ -28,10 +28,37 @@ namespace CryptoAPIs.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get Contract Details by Address
+        /// </summary>
+        /// <remarks>
+        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>GetContractDetailsByAddressR</returns>
+        GetContractDetailsByAddressR GetContractDetailsByAddress(string blockchain, string network, string contractAddress, string context = default(string));
+
+        /// <summary>
+        /// Get Contract Details by Address
+        /// </summary>
+        /// <remarks>
+        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>ApiResponse of GetContractDetailsByAddressR</returns>
+        ApiResponse<GetContractDetailsByAddressR> GetContractDetailsByAddressWithHttpInfo(string blockchain, string network, string contractAddress, string context = default(string));
+        /// <summary>
         /// List Tokens By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -47,7 +74,7 @@ namespace CryptoAPIs.Api
         /// List Tokens By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -62,7 +89,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -78,7 +105,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -93,7 +120,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -109,7 +136,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -130,10 +157,39 @@ namespace CryptoAPIs.Api
     {
         #region Asynchronous Operations
         /// <summary>
+        /// Get Contract Details by Address
+        /// </summary>
+        /// <remarks>
+        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetContractDetailsByAddressR</returns>
+        System.Threading.Tasks.Task<GetContractDetailsByAddressR> GetContractDetailsByAddressAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Contract Details by Address
+        /// </summary>
+        /// <remarks>
+        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetContractDetailsByAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetContractDetailsByAddressR>> GetContractDetailsByAddressWithHttpInfoAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// List Tokens By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -150,7 +206,7 @@ namespace CryptoAPIs.Api
         /// List Tokens By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -166,7 +222,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -183,7 +239,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -199,7 +255,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -216,7 +272,7 @@ namespace CryptoAPIs.Api
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -258,7 +314,7 @@ namespace CryptoAPIs.Api
         /// Initializes a new instance of the <see cref="TokensApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public TokensApi(String basePath)
+        public TokensApi(string basePath)
         {
             this.Configuration = CryptoAPIs.Client.Configuration.MergeConfigurations(
                 CryptoAPIs.Client.GlobalConfiguration.Instance,
@@ -321,7 +377,7 @@ namespace CryptoAPIs.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -349,7 +405,172 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>GetContractDetailsByAddressR</returns>
+        public GetContractDetailsByAddressR GetContractDetailsByAddress(string blockchain, string network, string contractAddress, string context = default(string))
+        {
+            CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR> localVarResponse = GetContractDetailsByAddressWithHttpInfo(blockchain, network, contractAddress, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>ApiResponse of GetContractDetailsByAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR> GetContractDetailsByAddressWithHttpInfo(string blockchain, string network, string contractAddress, string context = default(string))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->GetContractDetailsByAddress");
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->GetContractDetailsByAddress");
+
+            // verify the required parameter 'contractAddress' is set
+            if (contractAddress == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'contractAddress' when calling TokensApi->GetContractDetailsByAddress");
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("contractAddress", CryptoAPIs.Client.ClientUtils.ParameterToString(contractAddress)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<GetContractDetailsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{contractAddress}/contract", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetContractDetailsByAddress", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetContractDetailsByAddressR</returns>
+        public async System.Threading.Tasks.Task<GetContractDetailsByAddressR> GetContractDetailsByAddressAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR> localVarResponse = await GetContractDetailsByAddressWithHttpInfoAsync(blockchain, network, contractAddress, context, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="contractAddress">Defines the specific address of the contract.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetContractDetailsByAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR>> GetContractDetailsByAddressWithHttpInfoAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->GetContractDetailsByAddress");
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->GetContractDetailsByAddress");
+
+            // verify the required parameter 'contractAddress' is set
+            if (contractAddress == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'contractAddress' when calling TokensApi->GetContractDetailsByAddress");
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("contractAddress", CryptoAPIs.Client.ClientUtils.ParameterToString(contractAddress)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetContractDetailsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{contractAddress}/contract", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetContractDetailsByAddress", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -366,7 +587,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -392,11 +613,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -423,7 +644,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -441,7 +662,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -459,7 +680,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.
+        /// List Tokens By Address Through this endpoint customers can obtain token data by providing an attribute - &#x60;address&#x60;.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -487,11 +708,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -519,7 +740,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -538,7 +759,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -555,7 +776,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -581,11 +802,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -612,7 +833,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -630,7 +851,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -648,7 +869,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -676,11 +897,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -708,7 +929,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -727,7 +948,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -744,7 +965,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -770,11 +991,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -801,7 +1022,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -819,7 +1040,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -837,7 +1058,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+        /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
@@ -865,11 +1086,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -897,7 +1118,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }

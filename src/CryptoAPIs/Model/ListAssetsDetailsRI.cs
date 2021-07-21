@@ -75,8 +75,9 @@ namespace CryptoAPIs.Model
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings. (required).</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (required).</param>
         /// <param name="latestRate">latestRate (required).</param>
+        /// <param name="slug">Asset&#x60;s unique slug string in Crypto APIs listings.</param>
         /// <param name="specificData">specificData (required).</param>
-        public ListAssetsDetailsRI(string assetId = default(string), ListAssetsDetailsRIAssetLogo assetLogo = default(ListAssetsDetailsRIAssetLogo), string assetName = default(string), string assetOriginalSymbol = default(string), string assetSymbol = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), ListAssetsDetailsRILatestRate latestRate = default(ListAssetsDetailsRILatestRate), ListAssetsDetailsRISpecificData specificData = default(ListAssetsDetailsRISpecificData))
+        public ListAssetsDetailsRI(string assetId = default(string), ListAssetsDetailsRIAssetLogo assetLogo = default(ListAssetsDetailsRIAssetLogo), string assetName = default(string), string assetOriginalSymbol = default(string), string assetSymbol = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), ListAssetsDetailsRILatestRate latestRate = default(ListAssetsDetailsRILatestRate), string slug = default(string), ListAssetsDetailsRISpecificData specificData = default(ListAssetsDetailsRISpecificData))
         {
             // to ensure "assetId" is required (not null)
             this.AssetId = assetId ?? throw new ArgumentNullException("assetId is a required property for ListAssetsDetailsRI and cannot be null");
@@ -93,6 +94,7 @@ namespace CryptoAPIs.Model
             this.LatestRate = latestRate ?? throw new ArgumentNullException("latestRate is a required property for ListAssetsDetailsRI and cannot be null");
             // to ensure "specificData" is required (not null)
             this.SpecificData = specificData ?? throw new ArgumentNullException("specificData is a required property for ListAssetsDetailsRI and cannot be null");
+            this.Slug = slug;
         }
 
         /// <summary>
@@ -136,6 +138,13 @@ namespace CryptoAPIs.Model
         public ListAssetsDetailsRILatestRate LatestRate { get; set; }
 
         /// <summary>
+        /// Asset&#x60;s unique slug string in Crypto APIs listings
+        /// </summary>
+        /// <value>Asset&#x60;s unique slug string in Crypto APIs listings</value>
+        [DataMember(Name = "slug", EmitDefaultValue = false)]
+        public string Slug { get; set; }
+
+        /// <summary>
         /// Gets or Sets SpecificData
         /// </summary>
         [DataMember(Name = "specificData", IsRequired = true, EmitDefaultValue = false)]
@@ -156,6 +165,7 @@ namespace CryptoAPIs.Model
             sb.Append("  AssetSymbol: ").Append(AssetSymbol).Append("\n");
             sb.Append("  AssetType: ").Append(AssetType).Append("\n");
             sb.Append("  LatestRate: ").Append(LatestRate).Append("\n");
+            sb.Append("  Slug: ").Append(Slug).Append("\n");
             sb.Append("  SpecificData: ").Append(SpecificData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -226,6 +236,11 @@ namespace CryptoAPIs.Model
                     this.LatestRate.Equals(input.LatestRate))
                 ) && 
                 (
+                    this.Slug == input.Slug ||
+                    (this.Slug != null &&
+                    this.Slug.Equals(input.Slug))
+                ) && 
+                (
                     this.SpecificData == input.SpecificData ||
                     (this.SpecificData != null &&
                     this.SpecificData.Equals(input.SpecificData))
@@ -254,6 +269,8 @@ namespace CryptoAPIs.Model
                 hashCode = hashCode * 59 + this.AssetType.GetHashCode();
                 if (this.LatestRate != null)
                     hashCode = hashCode * 59 + this.LatestRate.GetHashCode();
+                if (this.Slug != null)
+                    hashCode = hashCode * 59 + this.Slug.GetHashCode();
                 if (this.SpecificData != null)
                     hashCode = hashCode * 59 + this.SpecificData.GetHashCode();
                 return hashCode;

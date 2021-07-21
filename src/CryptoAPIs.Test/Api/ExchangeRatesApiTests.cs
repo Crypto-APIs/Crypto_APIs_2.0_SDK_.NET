@@ -65,7 +65,8 @@ namespace CryptoAPIs.Test.Api
             //string fromAssetSymbol = null;
             //string toAssetSymbol = null;
             //string context = null;
-            //var response = instance.GetExchangeRateByAssetSymbols(fromAssetSymbol, toAssetSymbol, context);
+            //int? calculationTimestamp = null;
+            //var response = instance.GetExchangeRateByAssetSymbols(fromAssetSymbol, toAssetSymbol, context, calculationTimestamp);
             //Assert.IsType<GetExchangeRateByAssetSymbolsR>(response);
         }
 
@@ -79,7 +80,8 @@ namespace CryptoAPIs.Test.Api
             //string fromAssetId = null;
             //string toAssetId = null;
             //string context = null;
-            //var response = instance.GetExchangeRateByAssetsIDs(fromAssetId, toAssetId, context);
+            //int? calculationTimestamp = null;
+            //var response = instance.GetExchangeRateByAssetsIDs(fromAssetId, toAssetId, context, calculationTimestamp);
             //Assert.IsType<GetExchangeRateByAssetsIDsR>(response);
         }
     }

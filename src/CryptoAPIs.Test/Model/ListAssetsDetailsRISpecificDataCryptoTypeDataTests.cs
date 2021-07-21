@@ -90,6 +90,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property '_24HoursTradingVolume'
         }
         /// <summary>
+        /// Test the property 'AssetType'
+        /// </summary>
+        [Fact]
+        public void AssetTypeTest()
+        {
+            // TODO unit test for the property 'AssetType'
+        }
+        /// <summary>
         /// Test the property 'CirculatingSupply'
         /// </summary>
         [Fact]

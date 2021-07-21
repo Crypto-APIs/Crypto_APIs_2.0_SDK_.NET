@@ -50,12 +50,11 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the version of the specific block on the blockchain. (required).</param>
         /// <param name="versionHex">Is the hexadecimal string representation of the block&#39;s version. (required).</param>
         /// <param name="weight">Represents a measurement to compare the size of different transactions to each other in proportion to the block size limit. (required).</param>
-        public GetLatestMinedBlockRIBSB(string difficulty = default(string), string nonce = default(string), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), int strippedSize = default(int), int version = default(int), string versionHex = default(string), int weight = default(int))
+        public GetLatestMinedBlockRIBSB(string difficulty = default(string), int nonce = default(int), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), int strippedSize = default(int), int version = default(int), string versionHex = default(string), int weight = default(int))
         {
             // to ensure "difficulty" is required (not null)
             this.Difficulty = difficulty ?? throw new ArgumentNullException("difficulty is a required property for GetLatestMinedBlockRIBSB and cannot be null");
-            // to ensure "nonce" is required (not null)
-            this.Nonce = nonce ?? throw new ArgumentNullException("nonce is a required property for GetLatestMinedBlockRIBSB and cannot be null");
+            this.Nonce = nonce;
             this.Size = size;
             // to ensure "bits" is required (not null)
             this.Bits = bits ?? throw new ArgumentNullException("bits is a required property for GetLatestMinedBlockRIBSB and cannot be null");
@@ -82,7 +81,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a random value that can be adjusted to satisfy the proof of work</value>
         [DataMember(Name = "nonce", IsRequired = true, EmitDefaultValue = false)]
-        public string Nonce { get; set; }
+        public int Nonce { get; set; }
 
         /// <summary>
         /// Represents the total size of the block in Bytes.
@@ -199,8 +198,7 @@ namespace CryptoAPIs.Model
                 ) && 
                 (
                     this.Nonce == input.Nonce ||
-                    (this.Nonce != null &&
-                    this.Nonce.Equals(input.Nonce))
+                    this.Nonce.Equals(input.Nonce)
                 ) && 
                 (
                     this.Size == input.Size ||
@@ -251,8 +249,7 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 if (this.Difficulty != null)
                     hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
-                if (this.Nonce != null)
-                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                hashCode = hashCode * 59 + this.Nonce.GetHashCode();
                 hashCode = hashCode * 59 + this.Size.GetHashCode();
                 if (this.Bits != null)
                     hashCode = hashCode * 59 + this.Bits.GetHashCode();

@@ -114,6 +114,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'LatestRate'
         }
         /// <summary>
+        /// Test the property 'Slug'
+        /// </summary>
+        [Fact]
+        public void SlugTest()
+        {
+            // TODO unit test for the property 'Slug'
+        }
+        /// <summary>
         /// Test the property 'SpecificData'
         /// </summary>
         [Fact]

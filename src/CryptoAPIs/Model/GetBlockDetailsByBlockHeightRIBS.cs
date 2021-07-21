@@ -292,7 +292,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSB: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSB: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -312,7 +312,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSBC: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSBC: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -332,7 +332,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSD: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSD: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -352,7 +352,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSD2: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSD2: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -372,7 +372,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSE: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSE: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -392,7 +392,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSEC: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSEC: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -412,7 +412,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSL: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHeightRIBSL: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)
@@ -490,7 +490,7 @@ namespace CryptoAPIs.Model
         /// <param name="serializer">JSON Serializer</param>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            writer.WriteRawValue((String)(typeof(GetBlockDetailsByBlockHeightRIBS).GetMethod("ToJson").Invoke(value, null)));
+            writer.WriteRawValue((string)(typeof(GetBlockDetailsByBlockHeightRIBS).GetMethod("ToJson").Invoke(value, null)));
         }
 
         /// <summary>

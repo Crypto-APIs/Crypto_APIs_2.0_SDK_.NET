@@ -41,7 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRISenders" /> class.
         /// </summary>
         /// <param name="address">Represents the address which sends this transaction. In UTXO-based protocols like Bitcoin there could be several senders while in account-based protocols like Ethereum there is always only one sender. (required).</param>
-        /// <param name="amount">Represents the amount sent by this address. (required).</param>
+        /// <param name="amount">Represents the total amount sent by this address including the fee. (required).</param>
         public GetTransactionDetailsByTransactionIDRISenders(string address = default(string), string amount = default(string))
         {
             // to ensure "address" is required (not null)
@@ -58,9 +58,9 @@ namespace CryptoAPIs.Model
         public string Address { get; set; }
 
         /// <summary>
-        /// Represents the amount sent by this address.
+        /// Represents the total amount sent by this address including the fee.
         /// </summary>
-        /// <value>Represents the amount sent by this address.</value>
+        /// <value>Represents the total amount sent by this address including the fee.</value>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
         public string Amount { get; set; }
 

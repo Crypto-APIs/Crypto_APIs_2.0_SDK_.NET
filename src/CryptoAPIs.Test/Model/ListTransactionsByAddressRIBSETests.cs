@@ -105,6 +105,14 @@ namespace CryptoAPIs.Test.Model
         {
             // TODO unit test for the property 'Nonce'
         }
+        /// <summary>
+        /// Test the property 'TransactionStatus'
+        /// </summary>
+        [Fact]
+        public void TransactionStatusTest()
+        {
+            // TODO unit test for the property 'TransactionStatus'
+        }
 
     }
 

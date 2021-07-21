@@ -85,7 +85,7 @@ namespace CryptoAPIs.Api
         /// List Coins Forwarding Automations
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -100,7 +100,7 @@ namespace CryptoAPIs.Api
         /// List Coins Forwarding Automations
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -181,7 +181,7 @@ namespace CryptoAPIs.Api
         /// List Coins Forwarding Automations
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -197,7 +197,7 @@ namespace CryptoAPIs.Api
         /// List Coins Forwarding Automations
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -238,7 +238,7 @@ namespace CryptoAPIs.Api
         /// Initializes a new instance of the <see cref="AutomaticCoinsForwardingApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public AutomaticCoinsForwardingApi(String basePath)
+        public AutomaticCoinsForwardingApi(string basePath)
         {
             this.Configuration = CryptoAPIs.Client.Configuration.MergeConfigurations(
                 CryptoAPIs.Client.GlobalConfiguration.Instance,
@@ -301,7 +301,7 @@ namespace CryptoAPIs.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -364,12 +364,12 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -388,7 +388,7 @@ namespace CryptoAPIs.Api
             localVarRequestOptions.Data = createAutomaticCoinsForwardingRB;
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -444,12 +444,12 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
                 "application/json"
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -469,7 +469,7 @@ namespace CryptoAPIs.Api
             localVarRequestOptions.Data = createAutomaticCoinsForwardingRB;
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -527,11 +527,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -550,7 +550,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -610,11 +610,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -634,7 +634,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -653,7 +653,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -669,7 +669,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -690,11 +690,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -720,7 +720,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -738,7 +738,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -755,7 +755,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}
+        /// List Coins Forwarding Automations Through this endpoint customers can list all of their **coins** forwarding automations (**not** tokens).    Customers can set up automatic forwarding functions for coins by setting a &#x60;fromAddress&#x60; and a &#x60;toAddress&#x60;, and specifying the amount that can be transferred between addresses.     A &#x60;feePriority&#x60; will be returned which represents the fee priority of the automation whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; OR \&quot;FAST\&quot;.    {warning}The subscription will work for all incoming transactions until it is deleted. There is no need to do that for every transaction.{/warning}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -778,11 +778,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -809,7 +809,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }

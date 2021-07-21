@@ -40,83 +40,55 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetContractDetailsByAddressRI" /> class.
         /// </summary>
-        /// <param name="confirmedBalance">Token balance (required).</param>
-        /// <param name="creatorAddress">Token creator (required).</param>
-        /// <param name="tokenDecimals">Number of decimals.</param>
-        /// <param name="tokenName">Token name.</param>
-        /// <param name="tokenSymbol">Token symbol.</param>
-        /// <param name="tokenType">Token type.</param>
-        /// <param name="tokensBalance">Token balance (required).</param>
-        /// <param name="totalSupply">Token total supply (required).</param>
-        public GetContractDetailsByAddressRI(string confirmedBalance = default(string), string creatorAddress = default(string), string tokenDecimals = default(string), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string tokensBalance = default(string), string totalSupply = default(string))
+        /// <param name="tokenDecimals">Defines the number of decimals that the token possesses. (required).</param>
+        /// <param name="tokenName">Specifies the token&#39;s name..</param>
+        /// <param name="tokenSymbol">Defines the unique symbol of the token..</param>
+        /// <param name="tokenType">Defines the type of the token. (required).</param>
+        /// <param name="totalSupply">Defines the total number of tokens created that exist on the market minus the ones that have been burned. (required).</param>
+        public GetContractDetailsByAddressRI(string tokenDecimals = default(string), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string totalSupply = default(string))
         {
-            // to ensure "confirmedBalance" is required (not null)
-            this.ConfirmedBalance = confirmedBalance ?? throw new ArgumentNullException("confirmedBalance is a required property for GetContractDetailsByAddressRI and cannot be null");
-            // to ensure "creatorAddress" is required (not null)
-            this.CreatorAddress = creatorAddress ?? throw new ArgumentNullException("creatorAddress is a required property for GetContractDetailsByAddressRI and cannot be null");
-            // to ensure "tokensBalance" is required (not null)
-            this.TokensBalance = tokensBalance ?? throw new ArgumentNullException("tokensBalance is a required property for GetContractDetailsByAddressRI and cannot be null");
+            // to ensure "tokenDecimals" is required (not null)
+            this.TokenDecimals = tokenDecimals ?? throw new ArgumentNullException("tokenDecimals is a required property for GetContractDetailsByAddressRI and cannot be null");
+            // to ensure "tokenType" is required (not null)
+            this.TokenType = tokenType ?? throw new ArgumentNullException("tokenType is a required property for GetContractDetailsByAddressRI and cannot be null");
             // to ensure "totalSupply" is required (not null)
             this.TotalSupply = totalSupply ?? throw new ArgumentNullException("totalSupply is a required property for GetContractDetailsByAddressRI and cannot be null");
-            this.TokenDecimals = tokenDecimals;
             this.TokenName = tokenName;
             this.TokenSymbol = tokenSymbol;
-            this.TokenType = tokenType;
         }
 
         /// <summary>
-        /// Token balance
+        /// Defines the number of decimals that the token possesses.
         /// </summary>
-        /// <value>Token balance</value>
-        [DataMember(Name = "confirmedBalance", IsRequired = true, EmitDefaultValue = false)]
-        public string ConfirmedBalance { get; set; }
-
-        /// <summary>
-        /// Token creator
-        /// </summary>
-        /// <value>Token creator</value>
-        [DataMember(Name = "creatorAddress", IsRequired = true, EmitDefaultValue = false)]
-        public string CreatorAddress { get; set; }
-
-        /// <summary>
-        /// Number of decimals
-        /// </summary>
-        /// <value>Number of decimals</value>
-        [DataMember(Name = "tokenDecimals", EmitDefaultValue = false)]
+        /// <value>Defines the number of decimals that the token possesses.</value>
+        [DataMember(Name = "tokenDecimals", IsRequired = true, EmitDefaultValue = false)]
         public string TokenDecimals { get; set; }
 
         /// <summary>
-        /// Token name
+        /// Specifies the token&#39;s name.
         /// </summary>
-        /// <value>Token name</value>
+        /// <value>Specifies the token&#39;s name.</value>
         [DataMember(Name = "tokenName", EmitDefaultValue = false)]
         public string TokenName { get; set; }
 
         /// <summary>
-        /// Token symbol
+        /// Defines the unique symbol of the token.
         /// </summary>
-        /// <value>Token symbol</value>
+        /// <value>Defines the unique symbol of the token.</value>
         [DataMember(Name = "tokenSymbol", EmitDefaultValue = false)]
         public string TokenSymbol { get; set; }
 
         /// <summary>
-        /// Token type
+        /// Defines the type of the token.
         /// </summary>
-        /// <value>Token type</value>
-        [DataMember(Name = "tokenType", EmitDefaultValue = false)]
+        /// <value>Defines the type of the token.</value>
+        [DataMember(Name = "tokenType", IsRequired = true, EmitDefaultValue = false)]
         public string TokenType { get; set; }
 
         /// <summary>
-        /// Token balance
+        /// Defines the total number of tokens created that exist on the market minus the ones that have been burned.
         /// </summary>
-        /// <value>Token balance</value>
-        [DataMember(Name = "tokensBalance", IsRequired = true, EmitDefaultValue = false)]
-        public string TokensBalance { get; set; }
-
-        /// <summary>
-        /// Token total supply
-        /// </summary>
-        /// <value>Token total supply</value>
+        /// <value>Defines the total number of tokens created that exist on the market minus the ones that have been burned.</value>
         [DataMember(Name = "totalSupply", IsRequired = true, EmitDefaultValue = false)]
         public string TotalSupply { get; set; }
 
@@ -128,13 +100,10 @@ namespace CryptoAPIs.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GetContractDetailsByAddressRI {\n");
-            sb.Append("  ConfirmedBalance: ").Append(ConfirmedBalance).Append("\n");
-            sb.Append("  CreatorAddress: ").Append(CreatorAddress).Append("\n");
             sb.Append("  TokenDecimals: ").Append(TokenDecimals).Append("\n");
             sb.Append("  TokenName: ").Append(TokenName).Append("\n");
             sb.Append("  TokenSymbol: ").Append(TokenSymbol).Append("\n");
             sb.Append("  TokenType: ").Append(TokenType).Append("\n");
-            sb.Append("  TokensBalance: ").Append(TokensBalance).Append("\n");
             sb.Append("  TotalSupply: ").Append(TotalSupply).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -171,16 +140,6 @@ namespace CryptoAPIs.Model
 
             return 
                 (
-                    this.ConfirmedBalance == input.ConfirmedBalance ||
-                    (this.ConfirmedBalance != null &&
-                    this.ConfirmedBalance.Equals(input.ConfirmedBalance))
-                ) && 
-                (
-                    this.CreatorAddress == input.CreatorAddress ||
-                    (this.CreatorAddress != null &&
-                    this.CreatorAddress.Equals(input.CreatorAddress))
-                ) && 
-                (
                     this.TokenDecimals == input.TokenDecimals ||
                     (this.TokenDecimals != null &&
                     this.TokenDecimals.Equals(input.TokenDecimals))
@@ -201,11 +160,6 @@ namespace CryptoAPIs.Model
                     this.TokenType.Equals(input.TokenType))
                 ) && 
                 (
-                    this.TokensBalance == input.TokensBalance ||
-                    (this.TokensBalance != null &&
-                    this.TokensBalance.Equals(input.TokensBalance))
-                ) && 
-                (
                     this.TotalSupply == input.TotalSupply ||
                     (this.TotalSupply != null &&
                     this.TotalSupply.Equals(input.TotalSupply))
@@ -221,10 +175,6 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ConfirmedBalance != null)
-                    hashCode = hashCode * 59 + this.ConfirmedBalance.GetHashCode();
-                if (this.CreatorAddress != null)
-                    hashCode = hashCode * 59 + this.CreatorAddress.GetHashCode();
                 if (this.TokenDecimals != null)
                     hashCode = hashCode * 59 + this.TokenDecimals.GetHashCode();
                 if (this.TokenName != null)
@@ -233,8 +183,6 @@ namespace CryptoAPIs.Model
                     hashCode = hashCode * 59 + this.TokenSymbol.GetHashCode();
                 if (this.TokenType != null)
                     hashCode = hashCode * 59 + this.TokenType.GetHashCode();
-                if (this.TokensBalance != null)
-                    hashCode = hashCode * 59 + this.TokensBalance.GetHashCode();
                 if (this.TotalSupply != null)
                     hashCode = hashCode * 59 + this.TotalSupply.GetHashCode();
                 return hashCode;

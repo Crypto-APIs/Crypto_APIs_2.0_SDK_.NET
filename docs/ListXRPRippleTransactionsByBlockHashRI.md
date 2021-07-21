@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdditionalData** | **string** | Represents any additional data that may be needed. | [optional] 
 **Index** | **int** | Represents the index position of the transaction in the specific block. | 
-**MinedInBlockHash** | **string** | Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. | 
 **MinedInBlockHeight** | **int** | Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. | 
 **Recipients** | [**List&lt;ListXRPRippleTransactionsByBlockHashRIRecipients&gt;**](ListXRPRippleTransactionsByBlockHashRIRecipients.md) | Represents an object of addresses that receive the transactions. | 
 **Senders** | [**List&lt;ListXRPRippleTransactionsByBlockHashRISenders&gt;**](ListXRPRippleTransactionsByBlockHashRISenders.md) | Represents an object of addresses that provide the funds. | 

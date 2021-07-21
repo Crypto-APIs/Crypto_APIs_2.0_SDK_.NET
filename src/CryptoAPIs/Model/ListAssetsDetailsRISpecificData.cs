@@ -136,7 +136,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListAssetsDetailsRISpecificDataCryptoTypeData: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListAssetsDetailsRISpecificDataCryptoTypeData: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)
@@ -214,7 +214,7 @@ namespace CryptoAPIs.Model
         /// <param name="serializer">JSON Serializer</param>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            writer.WriteRawValue((String)(typeof(ListAssetsDetailsRISpecificData).GetMethod("ToJson").Invoke(value, null)));
+            writer.WriteRawValue((string)(typeof(ListAssetsDetailsRISpecificData).GetMethod("ToJson").Invoke(value, null)));
         }
 
         /// <summary>

@@ -116,6 +116,36 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test NewConfirmedInternalTransactions
+        /// </summary>
+        [Fact]
+        public void NewConfirmedInternalTransactionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = null;
+            //var response = instance.NewConfirmedInternalTransactions(blockchain, network, context, newConfirmedInternalTransactionsRB);
+            //Assert.IsType<NewConfirmedInternalTransactionsR>(response);
+        }
+
+        /// <summary>
+        /// Test NewConfirmedInternalTransactionsAndEachConfirmation
+        /// </summary>
+        [Fact]
+        public void NewConfirmedInternalTransactionsAndEachConfirmationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = null;
+            //var response = instance.NewConfirmedInternalTransactionsAndEachConfirmation(blockchain, network, context, newConfirmedInternalTransactionsAndEachConfirmationRB);
+            //Assert.IsType<NewConfirmedInternalTransactionsAndEachConfirmationR>(response);
+        }
+
+        /// <summary>
         /// Test NewConfirmedTokensTransactions
         /// </summary>
         [Fact]

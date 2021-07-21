@@ -58,22 +58,6 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
-        /// Test the property 'ConfirmedBalance'
-        /// </summary>
-        [Fact]
-        public void ConfirmedBalanceTest()
-        {
-            // TODO unit test for the property 'ConfirmedBalance'
-        }
-        /// <summary>
-        /// Test the property 'CreatorAddress'
-        /// </summary>
-        [Fact]
-        public void CreatorAddressTest()
-        {
-            // TODO unit test for the property 'CreatorAddress'
-        }
-        /// <summary>
         /// Test the property 'TokenDecimals'
         /// </summary>
         [Fact]
@@ -104,14 +88,6 @@ namespace CryptoAPIs.Test.Model
         public void TokenTypeTest()
         {
             // TODO unit test for the property 'TokenType'
-        }
-        /// <summary>
-        /// Test the property 'TokensBalance'
-        /// </summary>
-        [Fact]
-        public void TokensBalanceTest()
-        {
-            // TODO unit test for the property 'TokensBalance'
         }
         /// <summary>
         /// Test the property 'TotalSupply'

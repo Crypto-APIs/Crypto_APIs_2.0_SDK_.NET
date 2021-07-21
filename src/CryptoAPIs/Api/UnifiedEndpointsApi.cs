@@ -189,7 +189,7 @@ namespace CryptoAPIs.Api
         /// List Transactions By Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -205,7 +205,7 @@ namespace CryptoAPIs.Api
         /// List Transactions By Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -220,7 +220,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -236,7 +236,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -251,7 +251,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Height
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -267,7 +267,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Height
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -461,7 +461,7 @@ namespace CryptoAPIs.Api
         /// List Transactions By Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -478,7 +478,7 @@ namespace CryptoAPIs.Api
         /// List Transactions By Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -494,7 +494,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -511,7 +511,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -527,7 +527,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Height
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -544,7 +544,7 @@ namespace CryptoAPIs.Api
         /// List Transactions by Block Height
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -586,7 +586,7 @@ namespace CryptoAPIs.Api
         /// Initializes a new instance of the <see cref="UnifiedEndpointsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UnifiedEndpointsApi(String basePath)
+        public UnifiedEndpointsApi(string basePath)
         {
             this.Configuration = CryptoAPIs.Client.Configuration.MergeConfigurations(
                 CryptoAPIs.Client.GlobalConfiguration.Instance,
@@ -649,7 +649,7 @@ namespace CryptoAPIs.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -716,11 +716,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -739,7 +739,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -799,11 +799,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -823,7 +823,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -881,11 +881,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -904,7 +904,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -964,11 +964,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -988,7 +988,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1042,11 +1042,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1065,7 +1065,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1121,11 +1121,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1145,7 +1145,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1197,11 +1197,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1219,7 +1219,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1273,11 +1273,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1296,7 +1296,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1348,11 +1348,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1370,7 +1370,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1424,11 +1424,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1447,7 +1447,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1505,11 +1505,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1528,7 +1528,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1588,11 +1588,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1612,7 +1612,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1631,7 +1631,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1648,7 +1648,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1674,11 +1674,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1705,7 +1705,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1723,7 +1723,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1741,7 +1741,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+        /// List Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1769,11 +1769,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1801,7 +1801,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1820,7 +1820,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1837,7 +1837,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1863,11 +1863,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1894,7 +1894,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -1912,7 +1912,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1930,7 +1930,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Hash This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1958,11 +1958,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1990,7 +1990,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -2009,7 +2009,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -2026,7 +2026,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -2048,11 +2048,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -2079,7 +2079,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
@@ -2097,7 +2097,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -2115,7 +2115,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+        /// List Transactions by Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -2139,11 +2139,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -2171,7 +2171,7 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }

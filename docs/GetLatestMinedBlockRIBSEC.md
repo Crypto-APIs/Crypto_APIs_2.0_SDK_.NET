@@ -6,7 +6,7 @@ Ethereum Classic
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Difficulty** | **string** | Represents a mathematical value of how hard it is to find a valid hash for this block. | 
-**Nonce** | **string** | Represents a random value that can be adjusted to satisfy the proof of work | 
+**Nonce** | **int** | Represents a random value that can be adjusted to satisfy the proof of work | 
 **Size** | **int** | Represents the total size of the block in Bytes. | 
 **ExtraData** | **string** | Represents any data that can be included by the miner in the block. | 
 **GasLimit** | **string** | Defines the total gas limit of all transactions in the block. | 

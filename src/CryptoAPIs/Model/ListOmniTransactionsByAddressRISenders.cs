@@ -41,7 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="ListOmniTransactionsByAddressRISenders" /> class.
         /// </summary>
         /// <param name="address">Represents the hash of the address that provides the funds. (required).</param>
-        /// <param name="amount">Defines the amount of the sent funds as a string. (required).</param>
+        /// <param name="amount">Represents the total amount sent by this address including the fee. (required).</param>
         public ListOmniTransactionsByAddressRISenders(string address = default(string), string amount = default(string))
         {
             // to ensure "address" is required (not null)
@@ -58,9 +58,9 @@ namespace CryptoAPIs.Model
         public string Address { get; set; }
 
         /// <summary>
-        /// Defines the amount of the sent funds as a string.
+        /// Represents the total amount sent by this address including the fee.
         /// </summary>
-        /// <value>Defines the amount of the sent funds as a string.</value>
+        /// <value>Represents the total amount sent by this address including the fee.</value>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
         public string Amount { get; set; }
 

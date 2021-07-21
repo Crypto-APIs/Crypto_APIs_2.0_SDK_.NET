@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getexchangeratebyassetsymbols"></a>
 # **GetExchangeRateByAssetSymbols**
-> GetExchangeRateByAssetSymbolsR GetExchangeRateByAssetSymbols (string fromAssetSymbol, string toAssetSymbol, string context = null)
+> GetExchangeRateByAssetSymbolsR GetExchangeRateByAssetSymbols (string fromAssetSymbol, string toAssetSymbol, string context = null, int? calculationTimestamp = null)
 
 Get Exchange Rate By Asset Symbols
 
@@ -41,11 +41,12 @@ namespace Example
             var fromAssetSymbol = btc;  // string | Defines the base asset symbol to get a rate for.
             var toAssetSymbol = usd;  // string | Defines the relation asset symbol in which the base asset rate will be displayed.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var calculationTimestamp = 1618577849;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional) 
 
             try
             {
                 // Get Exchange Rate By Asset Symbols
-                GetExchangeRateByAssetSymbolsR result = apiInstance.GetExchangeRateByAssetSymbols(fromAssetSymbol, toAssetSymbol, context);
+                GetExchangeRateByAssetSymbolsR result = apiInstance.GetExchangeRateByAssetSymbols(fromAssetSymbol, toAssetSymbol, context, calculationTimestamp);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,6 +67,7 @@ Name | Type | Description  | Notes
  **fromAssetSymbol** | **string**| Defines the base asset symbol to get a rate for. | 
  **toAssetSymbol** | **string**| Defines the relation asset symbol in which the base asset rate will be displayed. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+ **calculationTimestamp** | **int?**| Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional] 
 
 ### Return type
 
@@ -99,7 +101,7 @@ Name | Type | Description  | Notes
 
 <a name="getexchangeratebyassetsids"></a>
 # **GetExchangeRateByAssetsIDs**
-> GetExchangeRateByAssetsIDsR GetExchangeRateByAssetsIDs (string fromAssetId, string toAssetId, string context = null)
+> GetExchangeRateByAssetsIDsR GetExchangeRateByAssetsIDs (string fromAssetId, string toAssetId, string context = null, int? calculationTimestamp = null)
 
 Get Exchange Rate By Assets IDs
 
@@ -130,11 +132,12 @@ namespace Example
             var fromAssetId = 5b1ea92e584bf50020130612;  // string | Defines the base asset Reference ID to get a rate for.
             var toAssetId = 5b1ea92e584bf50020130615;  // string | Defines the relation asset Reference ID in which the base asset rate will be displayed.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var calculationTimestamp = 1618577849;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional) 
 
             try
             {
                 // Get Exchange Rate By Assets IDs
-                GetExchangeRateByAssetsIDsR result = apiInstance.GetExchangeRateByAssetsIDs(fromAssetId, toAssetId, context);
+                GetExchangeRateByAssetsIDsR result = apiInstance.GetExchangeRateByAssetsIDs(fromAssetId, toAssetId, context, calculationTimestamp);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -155,6 +158,7 @@ Name | Type | Description  | Notes
  **fromAssetId** | **string**| Defines the base asset Reference ID to get a rate for. | 
  **toAssetId** | **string**| Defines the relation asset Reference ID in which the base asset rate will be displayed. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+ **calculationTimestamp** | **int?**| Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional] 
 
 ### Return type
 

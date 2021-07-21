@@ -32,7 +32,7 @@ namespace CryptoAPIs.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.0.0";
+        public const string Version = "1.1.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -68,7 +68,7 @@ namespace CryptoAPIs.Client
         /// Defines the base path of the target API server.
         /// Example: http://localhost:3000/v1/
         /// </summary>
-        private String _basePath;
+        private string _basePath;
 
         /// <summary>
         /// Gets or sets the API key based on the authentication name.
@@ -102,7 +102,7 @@ namespace CryptoAPIs.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = "OpenAPI-Generator/1.0.0/csharp";
+            UserAgent = "OpenAPI-Generator/1.1.0/csharp";
             BasePath = "https://rest.cryptoapis.io/v2";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -441,13 +441,13 @@ namespace CryptoAPIs.Client
         /// <summary>
         /// Returns a string with essential information for debugging.
         /// </summary>
-        public static String ToDebugReport()
+        public static string ToDebugReport()
         {
-            String report = "C# SDK (CryptoAPIs) Debug Report:\n";
+            string report = "C# SDK (CryptoAPIs) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.0.0\n";
-            report += "    SDK Package Version: 1.0.0\n";
+            report += "    SDK Package Version: 1.1.0\n";
 
             return report;
         }

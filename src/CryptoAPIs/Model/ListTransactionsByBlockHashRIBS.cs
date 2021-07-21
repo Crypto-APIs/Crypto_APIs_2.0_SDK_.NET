@@ -292,7 +292,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSB: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSB: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -312,7 +312,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSBC: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSBC: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -332,7 +332,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSD: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSD: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -352,7 +352,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSD2: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSD2: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -372,7 +372,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSE: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSE: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -392,7 +392,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSEC: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSEC: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -412,7 +412,7 @@ namespace CryptoAPIs.Model
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(String.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSL: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSL: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)
@@ -490,7 +490,7 @@ namespace CryptoAPIs.Model
         /// <param name="serializer">JSON Serializer</param>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            writer.WriteRawValue((String)(typeof(ListTransactionsByBlockHashRIBS).GetMethod("ToJson").Invoke(value, null)));
+            writer.WriteRawValue((string)(typeof(ListTransactionsByBlockHashRIBS).GetMethod("ToJson").Invoke(value, null)));
         }
 
         /// <summary>

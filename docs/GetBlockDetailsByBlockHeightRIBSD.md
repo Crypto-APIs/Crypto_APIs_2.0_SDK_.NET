@@ -6,7 +6,7 @@ Dogecoin
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Difficulty** | **string** | Represents a mathematical value of how hard it is to find a valid hash for this block. | 
-**Nonce** | **string** | Represents a random value that can be adjusted to satisfy the Proof of Work | 
+**Nonce** | **int** | Represents a random value that can be adjusted to satisfy the Proof of Work | 
 **Size** | **int** | Represents the total size of the block in Bytes. | 
 **Bits** | **string** | Represents a specific sub-unit of Doge. Bits have two-decimal precision. | 
 **Chainwork** | **string** | Represents a hexadecimal number of all the hashes necessary to produce the current chain. E.g., when converting 0000000000000000000000000000000000000000000086859f7a841475b236fd to a decimal you get 635262017308958427068157 hashes, or 635262 exahashes. | 

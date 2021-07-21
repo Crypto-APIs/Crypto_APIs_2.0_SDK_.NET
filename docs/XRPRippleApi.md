@@ -4,13 +4,14 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetLatestMinedXRPRippleBlock**](XRPRippleApi.md#getlatestminedxrprippleblock) | **GET** /blockchain-data/xrp/{network}/blocks/last | Get Latest Mined XRP (Ripple) Block
-[**GetXRPRippleAddressDetails**](XRPRippleApi.md#getxrprippleaddressdetails) | **GET** /blockchain-data/xrp/{network}/addresses/{address} | Get XRP (Ripple) Address Details
-[**GetXRPRippleBlockDetailsByBlockHash**](XRPRippleApi.md#getxrprippleblockdetailsbyblockhash) | **GET** /blockchain-data/xrp/{network}/blocks/hash/{blockHash} | Get XRP (Ripple) Block Details By Block Hash
-[**GetXRPRippleBlockDetailsByBlockHeight**](XRPRippleApi.md#getxrprippleblockdetailsbyblockheight) | **GET** /blockchain-data/xrp/{network}/blocks/height/{height} | Get XRP (Ripple) Block Details By Block Height
-[**GetXRPRippleTransactionDetailsByTransactionID**](XRPRippleApi.md#getxrprippletransactiondetailsbytransactionid) | **GET** /blockchain-data/xrp/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID
-[**ListXRPRippleTransactionsByAddress**](XRPRippleApi.md#listxrprippletransactionsbyaddress) | **GET** /blockchain-data/xrp/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address
-[**ListXRPRippleTransactionsByBlockHash**](XRPRippleApi.md#listxrprippletransactionsbyblockhash) | **GET** /blockchain-data/xrp/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash
+[**GetLatestMinedXRPRippleBlock**](XRPRippleApi.md#getlatestminedxrprippleblock) | **GET** /blockchain-data/xrp-specific/{network}/blocks/last | Get Latest Mined XRP (Ripple) Block
+[**GetXRPRippleAddressDetails**](XRPRippleApi.md#getxrprippleaddressdetails) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address} | Get XRP (Ripple) Address Details
+[**GetXRPRippleBlockDetailsByBlockHash**](XRPRippleApi.md#getxrprippleblockdetailsbyblockhash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash} | Get XRP (Ripple) Block Details By Block Hash
+[**GetXRPRippleBlockDetailsByBlockHeight**](XRPRippleApi.md#getxrprippleblockdetailsbyblockheight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight} | Get XRP (Ripple) Block Details By Block Height
+[**GetXRPRippleTransactionDetailsByTransactionID**](XRPRippleApi.md#getxrprippletransactiondetailsbytransactionid) | **GET** /blockchain-data/xrp-specific/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID
+[**ListXRPRippleTransactionsByAddress**](XRPRippleApi.md#listxrprippletransactionsbyaddress) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address
+[**ListXRPRippleTransactionsByBlockHash**](XRPRippleApi.md#listxrprippletransactionsbyblockhash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash
+[**ListXRPRippleTransactionsByBlockHeight**](XRPRippleApi.md#listxrprippletransactionsbyblockheight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions | List XRP (Ripple) Transactions By Block Height
 
 
 <a name="getlatestminedxrprippleblock"></a>
@@ -282,7 +283,7 @@ Name | Type | Description  | Notes
 
 <a name="getxrprippleblockdetailsbyblockheight"></a>
 # **GetXRPRippleBlockDetailsByBlockHeight**
-> GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight (string network, string height, string context = null)
+> GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight (string network, string blockHeight, string context = null)
 
 Get XRP (Ripple) Block Details By Block Height
 
@@ -311,13 +312,13 @@ namespace Example
 
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
-            var height = 15886156;  // string | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
+            var blockHeight = 15886156;  // string | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
                 // Get XRP (Ripple) Block Details By Block Height
-                GetXRPRippleBlockDetailsByBlockHeightR result = apiInstance.GetXRPRippleBlockDetailsByBlockHeight(network, height, context);
+                GetXRPRippleBlockDetailsByBlockHeightR result = apiInstance.GetXRPRippleBlockDetailsByBlockHeight(network, blockHeight, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -336,7 +337,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks. | 
- **height** | **string**| Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. | 
+ **blockHeight** | **string**| Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
 
 ### Return type
@@ -466,7 +467,7 @@ Name | Type | Description  | Notes
 
 List XRP (Ripple) Transactions by Address
 
-This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
+This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 ```csharp
@@ -559,7 +560,7 @@ Name | Type | Description  | Notes
 
 List XRP (Ripple) Transactions By Block Hash
 
-This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
+This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 ```csharp
@@ -619,6 +620,99 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListXRPRippleTransactionsByBlockHashR**](ListXRPRippleTransactionsByBlockHashR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | The request has been successful. |  -  |
+| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
+| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
+| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **409** | Invalid data |  -  |
+| **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
+| **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
+| **429** | The request limit has been reached. There can be maximum {requests} requests per {seconds} second(s) made. Please contact our team via email if you need more or upgrade your plan. |  -  |
+| **500** | An unexpected server error was encountered, we are working on fixing this. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listxrprippletransactionsbyblockheight"></a>
+# **ListXRPRippleTransactionsByBlockHeight**
+> ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight (string network, int blockHeight, string context = null, int? limit = null, int? offset = null)
+
+List XRP (Ripple) Transactions By Block Height
+
+This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
+
+namespace Example
+{
+    public class ListXRPRippleTransactionsByBlockHeightExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://rest.cryptoapis.io/v2";
+            // Configure API key authorization: ApiKey
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new XRPRippleApi(config);
+            var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+            var blockHeight = 15971358;  // int | 
+            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+
+            try
+            {
+                // List XRP (Ripple) Transactions By Block Height
+                ListXRPRippleTransactionsByBlockHeightR result = apiInstance.ListXRPRippleTransactionsByBlockHeight(network, blockHeight, context, limit, offset);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling XRPRippleApi.ListXRPRippleTransactionsByBlockHeight: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
+ **blockHeight** | **int**|  | 
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+ **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+
+### Return type
+
+[**ListXRPRippleTransactionsByBlockHeightR**](ListXRPRippleTransactionsByBlockHeightR.md)
 
 ### Authorization
 

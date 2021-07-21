@@ -56,6 +56,21 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test GetContractDetailsByAddress
+        /// </summary>
+        [Fact]
+        public void GetContractDetailsByAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string contractAddress = null;
+            //string context = null;
+            //var response = instance.GetContractDetailsByAddress(blockchain, network, contractAddress, context);
+            //Assert.IsType<GetContractDetailsByAddressR>(response);
+        }
+
+        /// <summary>
         /// Test ListTokensByAddress
         /// </summary>
         [Fact]

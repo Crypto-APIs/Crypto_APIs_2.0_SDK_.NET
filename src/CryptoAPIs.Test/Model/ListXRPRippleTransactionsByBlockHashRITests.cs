@@ -74,14 +74,6 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Index'
         }
         /// <summary>
-        /// Test the property 'MinedInBlockHash'
-        /// </summary>
-        [Fact]
-        public void MinedInBlockHashTest()
-        {
-            // TODO unit test for the property 'MinedInBlockHash'
-        }
-        /// <summary>
         /// Test the property 'MinedInBlockHeight'
         /// </summary>
         [Fact]

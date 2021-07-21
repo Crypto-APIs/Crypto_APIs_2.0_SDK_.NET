@@ -64,9 +64,11 @@ namespace CryptoAPIs.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string context = null;
             //string assetType = null;
+            //string cryptoType = null;
             //int? limit = null;
             //int? offset = null;
-            //var response = instance.ListAssetsDetails(context, assetType, limit, offset);
+            //bool? waasEnabled = null;
+            //var response = instance.ListAssetsDetails(context, assetType, cryptoType, limit, offset, waasEnabled);
             //Assert.IsType<ListAssetsDetailsR>(response);
         }
     }

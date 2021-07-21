@@ -46,7 +46,8 @@ namespace CryptoAPIs.Model
         /// <param name="gasUsed">Represents the exact unit of gas that was used for the transaction. (required).</param>
         /// <param name="inputData">Represents additional information that is required for the transaction. (required).</param>
         /// <param name="nonce">Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. (required).</param>
-        public ListTransactionsByAddressRIBSE(string contract = default(string), string gasLimit = default(string), ListTransactionsByAddressRIBSEGasPrice gasPrice = default(ListTransactionsByAddressRIBSEGasPrice), string gasUsed = default(string), string inputData = default(string), int nonce = default(int))
+        /// <param name="transactionStatus">String representation of the transaction status (required).</param>
+        public ListTransactionsByAddressRIBSE(string contract = default(string), string gasLimit = default(string), ListTransactionsByAddressRIBSEGasPrice gasPrice = default(ListTransactionsByAddressRIBSEGasPrice), string gasUsed = default(string), string inputData = default(string), int nonce = default(int), string transactionStatus = default(string))
         {
             // to ensure "contract" is required (not null)
             this.Contract = contract ?? throw new ArgumentNullException("contract is a required property for ListTransactionsByAddressRIBSE and cannot be null");
@@ -59,6 +60,8 @@ namespace CryptoAPIs.Model
             // to ensure "inputData" is required (not null)
             this.InputData = inputData ?? throw new ArgumentNullException("inputData is a required property for ListTransactionsByAddressRIBSE and cannot be null");
             this.Nonce = nonce;
+            // to ensure "transactionStatus" is required (not null)
+            this.TransactionStatus = transactionStatus ?? throw new ArgumentNullException("transactionStatus is a required property for ListTransactionsByAddressRIBSE and cannot be null");
         }
 
         /// <summary>
@@ -103,6 +106,13 @@ namespace CryptoAPIs.Model
         public int Nonce { get; set; }
 
         /// <summary>
+        /// String representation of the transaction status
+        /// </summary>
+        /// <value>String representation of the transaction status</value>
+        [DataMember(Name = "transactionStatus", IsRequired = true, EmitDefaultValue = false)]
+        public string TransactionStatus { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -116,6 +126,7 @@ namespace CryptoAPIs.Model
             sb.Append("  GasUsed: ").Append(GasUsed).Append("\n");
             sb.Append("  InputData: ").Append(InputData).Append("\n");
             sb.Append("  Nonce: ").Append(Nonce).Append("\n");
+            sb.Append("  TransactionStatus: ").Append(TransactionStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -178,6 +189,11 @@ namespace CryptoAPIs.Model
                 (
                     this.Nonce == input.Nonce ||
                     this.Nonce.Equals(input.Nonce)
+                ) && 
+                (
+                    this.TransactionStatus == input.TransactionStatus ||
+                    (this.TransactionStatus != null &&
+                    this.TransactionStatus.Equals(input.TransactionStatus))
                 );
         }
 
@@ -201,6 +217,8 @@ namespace CryptoAPIs.Model
                 if (this.InputData != null)
                     hashCode = hashCode * 59 + this.InputData.GetHashCode();
                 hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                if (this.TransactionStatus != null)
+                    hashCode = hashCode * 59 + this.TransactionStatus.GetHashCode();
                 return hashCode;
             }
         }

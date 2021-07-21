@@ -108,10 +108,10 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <returns>GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string height, string context = default(string));
+        GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string blockHeight, string context = default(string));
 
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Height
@@ -121,10 +121,10 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <returns>ApiResponse of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string height, string context = default(string));
+        ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string blockHeight, string context = default(string));
         /// <summary>
         /// Get XRP (Ripple) Transaction Details By Transaction ID
         /// </summary>
@@ -154,7 +154,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions by Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -169,7 +169,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions by Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -183,7 +183,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions By Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -198,7 +198,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions By Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -208,6 +208,35 @@ namespace CryptoAPIs.Api
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <returns>ApiResponse of ListXRPRippleTransactionsByBlockHashR</returns>
         ApiResponse<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ListXRPRippleTransactionsByBlockHeightR</returns>
+        ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ApiResponse of ListXRPRippleTransactionsByBlockHeightR</returns>
+        ApiResponse<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
         #endregion Synchronous Operations
     }
 
@@ -304,11 +333,11 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Height
@@ -318,11 +347,11 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleBlockDetailsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get XRP (Ripple) Transaction Details By Transaction ID
         /// </summary>
@@ -354,7 +383,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions by Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -370,7 +399,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions by Address
         /// </summary>
         /// <remarks>
-        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -385,7 +414,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions By Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -401,7 +430,7 @@ namespace CryptoAPIs.Api
         /// List XRP (Ripple) Transactions By Block Hash
         /// </summary>
         /// <remarks>
-        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -412,6 +441,37 @@ namespace CryptoAPIs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByBlockHashR)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByBlockHashR>> ListXRPRippleTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListXRPRippleTransactionsByBlockHeightR</returns>
+        System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByBlockHeightR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByBlockHeightR>> ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -442,7 +502,7 @@ namespace CryptoAPIs.Api
         /// Initializes a new instance of the <see cref="XRPRippleApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public XRPRippleApi(String basePath)
+        public XRPRippleApi(string basePath)
         {
             this.Configuration = CryptoAPIs.Client.Configuration.MergeConfigurations(
                 CryptoAPIs.Client.GlobalConfiguration.Instance,
@@ -505,7 +565,7 @@ namespace CryptoAPIs.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.BasePath;
         }
@@ -560,11 +620,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -581,13 +641,13 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetLatestMinedXRPRippleBlockR>("/blockchain-data/xrp/{network}/blocks/last", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetLatestMinedXRPRippleBlockR>("/blockchain-data/xrp-specific/{network}/blocks/last", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -629,11 +689,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -651,14 +711,14 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetLatestMinedXRPRippleBlockR>("/blockchain-data/xrp/{network}/blocks/last", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetLatestMinedXRPRippleBlockR>("/blockchain-data/xrp-specific/{network}/blocks/last", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -703,11 +763,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -725,13 +785,13 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetXRPRippleAddressDetailsR>("/blockchain-data/xrp/{network}/addresses/{address}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetXRPRippleAddressDetailsR>("/blockchain-data/xrp-specific/{network}/addresses/{address}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -779,11 +839,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -802,14 +862,14 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleAddressDetailsR>("/blockchain-data/xrp/{network}/addresses/{address}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleAddressDetailsR>("/blockchain-data/xrp-specific/{network}/addresses/{address}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -854,11 +914,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -876,13 +936,13 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetXRPRippleBlockDetailsByBlockHashR>("/blockchain-data/xrp/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetXRPRippleBlockDetailsByBlockHashR>("/blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -930,11 +990,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -953,14 +1013,14 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleBlockDetailsByBlockHashR>("/blockchain-data/xrp/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleBlockDetailsByBlockHashR>("/blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -976,12 +1036,12 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <returns>GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        public GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string height, string context = default(string))
+        public GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string blockHeight, string context = default(string))
         {
-            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> localVarResponse = GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(network, height, context);
+            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> localVarResponse = GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(network, blockHeight, context);
             return localVarResponse.Data;
         }
 
@@ -990,26 +1050,26 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <returns>ApiResponse of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string height, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string blockHeight, string context = default(string))
         {
             // verify the required parameter 'network' is set
             if (network == null)
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling XRPRippleApi->GetXRPRippleBlockDetailsByBlockHeight");
 
-            // verify the required parameter 'height' is set
-            if (height == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'height' when calling XRPRippleApi->GetXRPRippleBlockDetailsByBlockHeight");
+            // verify the required parameter 'blockHeight' is set
+            if (blockHeight == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockHeight' when calling XRPRippleApi->GetXRPRippleBlockDetailsByBlockHeight");
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1020,20 +1080,20 @@ namespace CryptoAPIs.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
-            localVarRequestOptions.PathParameters.Add("height", CryptoAPIs.Client.ClientUtils.ParameterToString(height)); // path parameter
+            localVarRequestOptions.PathParameters.Add("blockHeight", CryptoAPIs.Client.ClientUtils.ParameterToString(blockHeight)); // path parameter
             if (context != null)
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetXRPRippleBlockDetailsByBlockHeightR>("/blockchain-data/xrp/{network}/blocks/height/{height}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetXRPRippleBlockDetailsByBlockHeightR>("/blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1049,13 +1109,13 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> localVarResponse = await GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(network, height, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> localVarResponse = await GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1064,28 +1124,28 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
-        /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
+        /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleBlockDetailsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling XRPRippleApi->GetXRPRippleBlockDetailsByBlockHeight");
 
-            // verify the required parameter 'height' is set
-            if (height == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'height' when calling XRPRippleApi->GetXRPRippleBlockDetailsByBlockHeight");
+            // verify the required parameter 'blockHeight' is set
+            if (blockHeight == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockHeight' when calling XRPRippleApi->GetXRPRippleBlockDetailsByBlockHeight");
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1097,21 +1157,21 @@ namespace CryptoAPIs.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
-            localVarRequestOptions.PathParameters.Add("height", CryptoAPIs.Client.ClientUtils.ParameterToString(height)); // path parameter
+            localVarRequestOptions.PathParameters.Add("blockHeight", CryptoAPIs.Client.ClientUtils.ParameterToString(blockHeight)); // path parameter
             if (context != null)
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleBlockDetailsByBlockHeightR>("/blockchain-data/xrp/{network}/blocks/height/{height}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleBlockDetailsByBlockHeightR>("/blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1156,11 +1216,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1178,13 +1238,13 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetXRPRippleTransactionDetailsByTransactionIDR>("/blockchain-data/xrp/{network}/transactions/{transactionHash}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetXRPRippleTransactionDetailsByTransactionIDR>("/blockchain-data/xrp-specific/{network}/transactions/{transactionHash}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1232,11 +1292,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1255,14 +1315,14 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleTransactionDetailsByTransactionIDR>("/blockchain-data/xrp/{network}/transactions/{transactionHash}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetXRPRippleTransactionDetailsByTransactionIDR>("/blockchain-data/xrp-specific/{network}/transactions/{transactionHash}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1274,7 +1334,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -1290,7 +1350,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -1311,11 +1371,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1341,13 +1401,13 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ListXRPRippleTransactionsByAddressR>("/blockchain-data/xrp/{network}/addresses/{address}/transactions", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ListXRPRippleTransactionsByAddressR>("/blockchain-data/xrp-specific/{network}/addresses/{address}/transactions", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1359,7 +1419,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -1376,7 +1436,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions by Address This endpoint will list XRP transactions by a attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
@@ -1399,11 +1459,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1430,14 +1490,14 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ListXRPRippleTransactionsByAddressR>("/blockchain-data/xrp/{network}/addresses/{address}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListXRPRippleTransactionsByAddressR>("/blockchain-data/xrp-specific/{network}/addresses/{address}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1449,7 +1509,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -1465,7 +1525,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -1486,11 +1546,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1516,13 +1576,13 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ListXRPRippleTransactionsByBlockHashR>("/blockchain-data/xrp/{network}/blocks/hash/{blockHash}/transactions", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ListXRPRippleTransactionsByBlockHashR>("/blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1534,7 +1594,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -1551,7 +1611,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
+        /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
@@ -1574,11 +1634,11 @@ namespace CryptoAPIs.Api
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
-            String[] _contentTypes = new String[] {
+            string[] _contentTypes = new string[] {
             };
 
             // to determine the Accept header
-            String[] _accepts = new String[] {
+            string[] _accepts = new string[] {
                 "application/json"
             };
 
@@ -1605,18 +1665,185 @@ namespace CryptoAPIs.Api
             }
 
             // authentication (ApiKey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
                 localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
             }
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ListXRPRippleTransactionsByBlockHashR>("/blockchain-data/xrp/{network}/blocks/hash/{blockHash}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListXRPRippleTransactionsByBlockHashR>("/blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListXRPRippleTransactionsByBlockHash", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ListXRPRippleTransactionsByBlockHeightR</returns>
+        public ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        {
+            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> localVarResponse = ListXRPRippleTransactionsByBlockHeightWithHttpInfo(network, blockHeight, context, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ApiResponse of ListXRPRippleTransactionsByBlockHeightR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        {
+            // verify the required parameter 'network' is set
+            if (network == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling XRPRippleApi->ListXRPRippleTransactionsByBlockHeight");
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("blockHeight", CryptoAPIs.Client.ClientUtils.ParameterToString(blockHeight)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListXRPRippleTransactionsByBlockHeightR>("/blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListXRPRippleTransactionsByBlockHeight", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListXRPRippleTransactionsByBlockHeightR</returns>
+        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> localVarResponse = await ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Block Height This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="blockHeight"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByBlockHeightR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR>> ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'network' is set
+            if (network == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling XRPRippleApi->ListXRPRippleTransactionsByBlockHeight");
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("blockHeight", CryptoAPIs.Client.ClientUtils.ParameterToString(blockHeight)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListXRPRippleTransactionsByBlockHeightR>("/blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListXRPRippleTransactionsByBlockHeight", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

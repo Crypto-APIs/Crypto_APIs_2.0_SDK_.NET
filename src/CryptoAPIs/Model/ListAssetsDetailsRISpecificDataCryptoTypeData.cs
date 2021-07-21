@@ -33,6 +33,34 @@ namespace CryptoAPIs.Model
     public partial class ListAssetsDetailsRISpecificDataCryptoTypeData : IEquatable<ListAssetsDetailsRISpecificDataCryptoTypeData>, IValidatableObject
     {
         /// <summary>
+        /// Subtype of the crypto assets. Could be COIN or TOKEN
+        /// </summary>
+        /// <value>Subtype of the crypto assets. Could be COIN or TOKEN</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AssetTypeEnum
+        {
+            /// <summary>
+            /// Enum Coin for value: coin
+            /// </summary>
+            [EnumMember(Value = "coin")]
+            Coin = 1,
+
+            /// <summary>
+            /// Enum Token for value: token
+            /// </summary>
+            [EnumMember(Value = "token")]
+            Token = 2
+
+        }
+
+
+        /// <summary>
+        /// Subtype of the crypto assets. Could be COIN or TOKEN
+        /// </summary>
+        /// <value>Subtype of the crypto assets. Could be COIN or TOKEN</value>
+        [DataMember(Name = "assetType", IsRequired = true, EmitDefaultValue = false)]
+        public AssetTypeEnum AssetType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ListAssetsDetailsRISpecificDataCryptoTypeData" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -44,10 +72,11 @@ namespace CryptoAPIs.Model
         /// <param name="_1weekPriceChangeInPercentage">Represents the percentage of the asset&#39;s current price against the its price from 1 week ago. (required).</param>
         /// <param name="_24hoursPriceChangeInPercentage">Represents the percentage of the asset&#39;s current price against the its price from 24 hours ago. (required).</param>
         /// <param name="_24hoursTradingVolume">Represents the trading volume of the asset for the time frame of 24 hours. (required).</param>
+        /// <param name="assetType">Subtype of the crypto assets. Could be COIN or TOKEN (required).</param>
         /// <param name="circulatingSupply">Represents the amount of the asset that is circulating on the market and in public hands. (required).</param>
         /// <param name="marketCapInUSD">Defines the total market value of the asset&#39;s circulating supply in USD. (required).</param>
         /// <param name="maxSupply">Represents the maximum amount of all coins of a specific asset that will ever exist in its lifetime. (required).</param>
-        public ListAssetsDetailsRISpecificDataCryptoTypeData(string _1hourPriceChangeInPercentage = default(string), string _1weekPriceChangeInPercentage = default(string), string _24hoursPriceChangeInPercentage = default(string), string _24hoursTradingVolume = default(string), string circulatingSupply = default(string), string marketCapInUSD = default(string), string maxSupply = default(string))
+        public ListAssetsDetailsRISpecificDataCryptoTypeData(string _1hourPriceChangeInPercentage = default(string), string _1weekPriceChangeInPercentage = default(string), string _24hoursPriceChangeInPercentage = default(string), string _24hoursTradingVolume = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), string circulatingSupply = default(string), string marketCapInUSD = default(string), string maxSupply = default(string))
         {
             // to ensure "_1hourPriceChangeInPercentage" is required (not null)
             this._1HourPriceChangeInPercentage = _1hourPriceChangeInPercentage ?? throw new ArgumentNullException("_1hourPriceChangeInPercentage is a required property for ListAssetsDetailsRISpecificDataCryptoTypeData and cannot be null");
@@ -57,6 +86,7 @@ namespace CryptoAPIs.Model
             this._24HoursPriceChangeInPercentage = _24hoursPriceChangeInPercentage ?? throw new ArgumentNullException("_24hoursPriceChangeInPercentage is a required property for ListAssetsDetailsRISpecificDataCryptoTypeData and cannot be null");
             // to ensure "_24hoursTradingVolume" is required (not null)
             this._24HoursTradingVolume = _24hoursTradingVolume ?? throw new ArgumentNullException("_24hoursTradingVolume is a required property for ListAssetsDetailsRISpecificDataCryptoTypeData and cannot be null");
+            this.AssetType = assetType;
             // to ensure "circulatingSupply" is required (not null)
             this.CirculatingSupply = circulatingSupply ?? throw new ArgumentNullException("circulatingSupply is a required property for ListAssetsDetailsRISpecificDataCryptoTypeData and cannot be null");
             // to ensure "marketCapInUSD" is required (not null)
@@ -126,6 +156,7 @@ namespace CryptoAPIs.Model
             sb.Append("  _1WeekPriceChangeInPercentage: ").Append(_1WeekPriceChangeInPercentage).Append("\n");
             sb.Append("  _24HoursPriceChangeInPercentage: ").Append(_24HoursPriceChangeInPercentage).Append("\n");
             sb.Append("  _24HoursTradingVolume: ").Append(_24HoursTradingVolume).Append("\n");
+            sb.Append("  AssetType: ").Append(AssetType).Append("\n");
             sb.Append("  CirculatingSupply: ").Append(CirculatingSupply).Append("\n");
             sb.Append("  MarketCapInUSD: ").Append(MarketCapInUSD).Append("\n");
             sb.Append("  MaxSupply: ").Append(MaxSupply).Append("\n");
@@ -184,6 +215,10 @@ namespace CryptoAPIs.Model
                     this._24HoursTradingVolume.Equals(input._24HoursTradingVolume))
                 ) && 
                 (
+                    this.AssetType == input.AssetType ||
+                    this.AssetType.Equals(input.AssetType)
+                ) && 
+                (
                     this.CirculatingSupply == input.CirculatingSupply ||
                     (this.CirculatingSupply != null &&
                     this.CirculatingSupply.Equals(input.CirculatingSupply))
@@ -217,6 +252,7 @@ namespace CryptoAPIs.Model
                     hashCode = hashCode * 59 + this._24HoursPriceChangeInPercentage.GetHashCode();
                 if (this._24HoursTradingVolume != null)
                     hashCode = hashCode * 59 + this._24HoursTradingVolume.GetHashCode();
+                hashCode = hashCode * 59 + this.AssetType.GetHashCode();
                 if (this.CirculatingSupply != null)
                     hashCode = hashCode * 59 + this.CirculatingSupply.GetHashCode();
                 if (this.MarketCapInUSD != null)
