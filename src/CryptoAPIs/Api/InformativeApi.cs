@@ -55,37 +55,37 @@ namespace CryptoAPIs.Api
         /// <returns>ApiResponse of GetWalletAssetDetailsR</returns>
         ApiResponse<GetWalletAssetDetailsR> GetWalletAssetDetailsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string));
         /// <summary>
-        /// List Receiving Addresses
+        /// List Deposit Addresses
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>ListReceivingAddressesR</returns>
-        ListReceivingAddressesR ListReceivingAddresses(string blockchain, string network, string walletId, string context = default(string));
+        /// <returns>ListDepositAddressesR</returns>
+        ListDepositAddressesR ListDepositAddresses(string blockchain, string network, string walletId, string context = default(string));
 
         /// <summary>
-        /// List Receiving Addresses
+        /// List Deposit Addresses
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>ApiResponse of ListReceivingAddressesR</returns>
-        ApiResponse<ListReceivingAddressesR> ListReceivingAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string));
+        /// <returns>ApiResponse of ListDepositAddressesR</returns>
+        ApiResponse<ListDepositAddressesR> ListDepositAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string));
         /// <summary>
         /// List Supported Tokens
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can obtain information on multiple tokens at once.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -100,7 +100,7 @@ namespace CryptoAPIs.Api
         /// List Supported Tokens
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can obtain information on multiple tokens at once.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -149,10 +149,10 @@ namespace CryptoAPIs.Api
         /// <returns>Task of ApiResponse (GetWalletAssetDetailsR)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetWalletAssetDetailsR>> GetWalletAssetDetailsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// List Receiving Addresses
+        /// List Deposit Addresses
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -160,14 +160,14 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ListReceivingAddressesR</returns>
-        System.Threading.Tasks.Task<ListReceivingAddressesR> ListReceivingAddressesAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ListDepositAddressesR</returns>
+        System.Threading.Tasks.Task<ListDepositAddressesR> ListDepositAddressesAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// List Receiving Addresses
+        /// List Deposit Addresses
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -175,13 +175,13 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ListReceivingAddressesR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListReceivingAddressesR>> ListReceivingAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ListDepositAddressesR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListDepositAddressesR>> ListDepositAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Supported Tokens
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can obtain information on multiple tokens at once.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -197,7 +197,7 @@ namespace CryptoAPIs.Api
         /// List Supported Tokens
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// Through this endpoint customers can obtain information on multiple tokens at once.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -494,42 +494,42 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Receiving Addresses Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Deposit Addresses Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>ListReceivingAddressesR</returns>
-        public ListReceivingAddressesR ListReceivingAddresses(string blockchain, string network, string walletId, string context = default(string))
+        /// <returns>ListDepositAddressesR</returns>
+        public ListDepositAddressesR ListDepositAddresses(string blockchain, string network, string walletId, string context = default(string))
         {
-            CryptoAPIs.Client.ApiResponse<ListReceivingAddressesR> localVarResponse = ListReceivingAddressesWithHttpInfo(blockchain, network, walletId, context);
+            CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> localVarResponse = ListDepositAddressesWithHttpInfo(blockchain, network, walletId, context);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Receiving Addresses Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Deposit Addresses Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>ApiResponse of ListReceivingAddressesR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListReceivingAddressesR> ListReceivingAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string))
+        /// <returns>ApiResponse of ListDepositAddressesR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> ListDepositAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListReceivingAddresses");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListDepositAddresses");
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListReceivingAddresses");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListDepositAddresses");
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListReceivingAddresses");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListDepositAddresses");
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -562,11 +562,11 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ListReceivingAddressesR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ListDepositAddressesR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListReceivingAddresses", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDepositAddresses", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -574,7 +574,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Receiving Addresses Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Deposit Addresses Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -582,15 +582,15 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ListReceivingAddressesR</returns>
-        public async System.Threading.Tasks.Task<ListReceivingAddressesR> ListReceivingAddressesAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ListDepositAddressesR</returns>
+        public async System.Threading.Tasks.Task<ListDepositAddressesR> ListDepositAddressesAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListReceivingAddressesR> localVarResponse = await ListReceivingAddressesWithHttpInfoAsync(blockchain, network, walletId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> localVarResponse = await ListDepositAddressesWithHttpInfoAsync(blockchain, network, walletId, context, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Receiving Addresses Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Deposit Addresses Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -598,20 +598,20 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ListReceivingAddressesR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListReceivingAddressesR>> ListReceivingAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ListDepositAddressesR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListDepositAddressesR>> ListDepositAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListReceivingAddresses");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListDepositAddresses");
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListReceivingAddresses");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListDepositAddresses");
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListReceivingAddresses");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListDepositAddresses");
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -647,11 +647,11 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ListReceivingAddressesR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListDepositAddressesR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListReceivingAddresses", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDepositAddresses", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -659,7 +659,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -675,7 +675,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -744,7 +744,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -761,7 +761,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List Supported Tokens Through this endpoint customers can obtain information on multiple tokens at once.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>

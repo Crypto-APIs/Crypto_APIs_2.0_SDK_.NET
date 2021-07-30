@@ -150,11 +150,13 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromAddressRI" /> class.
         /// </summary>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs..</param>
+        /// <param name="callbackUrl">Verified URL for sending callbacks.</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
         /// <param name="recipients">Defines the destination for the transaction, i.e. the recipient(s). (required).</param>
         /// <param name="senders">senders (required).</param>
         /// <param name="transactionRequestStatus">Defines the status of the transaction request, e.g. \&quot;created, \&quot;await_approval\&quot;, \&quot;pending\&quot;, \&quot;prepared\&quot;, \&quot;signed\&quot;, \&quot;broadcasted\&quot;, \&quot;success\&quot;, \&quot;failed\&quot;, \&quot;rejected\&quot;, mined\&quot;. (required).</param>
-        public CreateCoinsTransactionRequestFromAddressRI(FeePriorityEnum feePriority = default(FeePriorityEnum), List<CreateCoinsTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateCoinsTransactionRequestFromAddressRIRecipients>), CreateCoinsTransactionRequestFromAddressRISenders senders = default(CreateCoinsTransactionRequestFromAddressRISenders), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum))
+        public CreateCoinsTransactionRequestFromAddressRI(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), List<CreateCoinsTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateCoinsTransactionRequestFromAddressRIRecipients>), CreateCoinsTransactionRequestFromAddressRISenders senders = default(CreateCoinsTransactionRequestFromAddressRISenders), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum))
         {
             this.FeePriority = feePriority;
             // to ensure "recipients" is required (not null)
@@ -162,7 +164,23 @@ namespace CryptoAPIs.Model
             // to ensure "senders" is required (not null)
             this.Senders = senders ?? throw new ArgumentNullException("senders is a required property for CreateCoinsTransactionRequestFromAddressRI and cannot be null");
             this.TransactionRequestStatus = transactionRequestStatus;
+            this.CallbackSecretKey = callbackSecretKey;
+            this.CallbackUrl = callbackUrl;
         }
+
+        /// <summary>
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// </summary>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        [DataMember(Name = "callbackSecretKey", EmitDefaultValue = false)]
+        public string CallbackSecretKey { get; set; }
+
+        /// <summary>
+        /// Verified URL for sending callbacks
+        /// </summary>
+        /// <value>Verified URL for sending callbacks</value>
+        [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
+        public string CallbackUrl { get; set; }
 
         /// <summary>
         /// Defines the destination for the transaction, i.e. the recipient(s).
@@ -185,6 +203,8 @@ namespace CryptoAPIs.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateCoinsTransactionRequestFromAddressRI {\n");
+            sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
+            sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  FeePriority: ").Append(FeePriority).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("  Senders: ").Append(Senders).Append("\n");
@@ -224,6 +244,16 @@ namespace CryptoAPIs.Model
 
             return 
                 (
+                    this.CallbackSecretKey == input.CallbackSecretKey ||
+                    (this.CallbackSecretKey != null &&
+                    this.CallbackSecretKey.Equals(input.CallbackSecretKey))
+                ) && 
+                (
+                    this.CallbackUrl == input.CallbackUrl ||
+                    (this.CallbackUrl != null &&
+                    this.CallbackUrl.Equals(input.CallbackUrl))
+                ) && 
+                (
                     this.FeePriority == input.FeePriority ||
                     this.FeePriority.Equals(input.FeePriority)
                 ) && 
@@ -253,6 +283,10 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.CallbackSecretKey != null)
+                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                if (this.CallbackUrl != null)
+                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
                 if (this.Recipients != null)
                     hashCode = hashCode * 59 + this.Recipients.GetHashCode();

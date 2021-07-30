@@ -44,8 +44,8 @@ namespace CryptoAPIs.Model
         /// <param name="confirmedBalance">confirmedBalance (required).</param>
         /// <param name="totalReceived">totalReceived (required).</param>
         /// <param name="totalSpent">totalSpent (required).</param>
-        /// <param name="incomingTransactionsCount">Defines the count of all confirmed incoming transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum. (required).</param>
-        /// <param name="outgoingTransactionsCount">Defines the count of all confirmed outgoing transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum. (required).</param>
+        /// <param name="incomingTransactionsCount">Numeric representation of the received transaction count of the address (required).</param>
+        /// <param name="outgoingTransactionsCount">Numeric representation of the sent transaction count of the address (required).</param>
         public GetAddressDetailsRI(int transactionsCount = default(int), GetAddressDetailsRIConfirmedBalance confirmedBalance = default(GetAddressDetailsRIConfirmedBalance), GetAddressDetailsRITotalReceived totalReceived = default(GetAddressDetailsRITotalReceived), GetAddressDetailsRITotalSpent totalSpent = default(GetAddressDetailsRITotalSpent), int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int))
         {
             this.TransactionsCount = transactionsCount;
@@ -85,16 +85,16 @@ namespace CryptoAPIs.Model
         public GetAddressDetailsRITotalSpent TotalSpent { get; set; }
 
         /// <summary>
-        /// Defines the count of all confirmed incoming transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum.
+        /// Numeric representation of the received transaction count of the address
         /// </summary>
-        /// <value>Defines the count of all confirmed incoming transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum.</value>
+        /// <value>Numeric representation of the received transaction count of the address</value>
         [DataMember(Name = "incomingTransactionsCount", IsRequired = true, EmitDefaultValue = false)]
         public int IncomingTransactionsCount { get; set; }
 
         /// <summary>
-        /// Defines the count of all confirmed outgoing transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum.
+        /// Numeric representation of the sent transaction count of the address
         /// </summary>
-        /// <value>Defines the count of all confirmed outgoing transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum.</value>
+        /// <value>Numeric representation of the sent transaction count of the address</value>
         [DataMember(Name = "outgoingTransactionsCount", IsRequired = true, EmitDefaultValue = false)]
         public int OutgoingTransactionsCount { get; set; }
 

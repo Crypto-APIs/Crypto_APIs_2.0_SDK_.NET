@@ -75,19 +75,21 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="CreateTokensTransactionRequestFromAddressRBDataItem" /> class.
         /// </summary>
         /// <param name="amount">Represents the specific amount of the transaction. (required).</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at..</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs..</param>
+        /// <param name="callbackUrl">Verified URL for sending callbacks.</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
-        /// <param name="toAddress">Defines the specific recipient address for the transaction. (required).</param>
+        /// <param name="recipientAddress">Defines the specific recipient address for the transaction. (required).</param>
         /// <param name="tokenIdentifier">Defines the specific token identifier. For Bitcoin-based transactions it should be the &#x60;propertyId&#x60; and for Ethereum-based transactions - the &#x60;contract&#x60;. (required).</param>
-        public CreateTokensTransactionRequestFromAddressRBDataItem(string amount = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string toAddress = default(string), string tokenIdentifier = default(string))
+        public CreateTokensTransactionRequestFromAddressRBDataItem(string amount = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string recipientAddress = default(string), string tokenIdentifier = default(string))
         {
             // to ensure "amount" is required (not null)
             this.Amount = amount ?? throw new ArgumentNullException("amount is a required property for CreateTokensTransactionRequestFromAddressRBDataItem and cannot be null");
             this.FeePriority = feePriority;
-            // to ensure "toAddress" is required (not null)
-            this.ToAddress = toAddress ?? throw new ArgumentNullException("toAddress is a required property for CreateTokensTransactionRequestFromAddressRBDataItem and cannot be null");
+            // to ensure "recipientAddress" is required (not null)
+            this.RecipientAddress = recipientAddress ?? throw new ArgumentNullException("recipientAddress is a required property for CreateTokensTransactionRequestFromAddressRBDataItem and cannot be null");
             // to ensure "tokenIdentifier" is required (not null)
             this.TokenIdentifier = tokenIdentifier ?? throw new ArgumentNullException("tokenIdentifier is a required property for CreateTokensTransactionRequestFromAddressRBDataItem and cannot be null");
+            this.CallbackSecretKey = callbackSecretKey;
             this.CallbackUrl = callbackUrl;
         }
 
@@ -99,9 +101,16 @@ namespace CryptoAPIs.Model
         public string Amount { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at.
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at.</value>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        [DataMember(Name = "callbackSecretKey", EmitDefaultValue = false)]
+        public string CallbackSecretKey { get; set; }
+
+        /// <summary>
+        /// Verified URL for sending callbacks
+        /// </summary>
+        /// <value>Verified URL for sending callbacks</value>
         [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 
@@ -109,8 +118,8 @@ namespace CryptoAPIs.Model
         /// Defines the specific recipient address for the transaction.
         /// </summary>
         /// <value>Defines the specific recipient address for the transaction.</value>
-        [DataMember(Name = "toAddress", IsRequired = true, EmitDefaultValue = false)]
-        public string ToAddress { get; set; }
+        [DataMember(Name = "recipientAddress", IsRequired = true, EmitDefaultValue = false)]
+        public string RecipientAddress { get; set; }
 
         /// <summary>
         /// Defines the specific token identifier. For Bitcoin-based transactions it should be the &#x60;propertyId&#x60; and for Ethereum-based transactions - the &#x60;contract&#x60;.
@@ -128,9 +137,10 @@ namespace CryptoAPIs.Model
             var sb = new StringBuilder();
             sb.Append("class CreateTokensTransactionRequestFromAddressRBDataItem {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  FeePriority: ").Append(FeePriority).Append("\n");
-            sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
+            sb.Append("  RecipientAddress: ").Append(RecipientAddress).Append("\n");
             sb.Append("  TokenIdentifier: ").Append(TokenIdentifier).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -172,6 +182,11 @@ namespace CryptoAPIs.Model
                     this.Amount.Equals(input.Amount))
                 ) && 
                 (
+                    this.CallbackSecretKey == input.CallbackSecretKey ||
+                    (this.CallbackSecretKey != null &&
+                    this.CallbackSecretKey.Equals(input.CallbackSecretKey))
+                ) && 
+                (
                     this.CallbackUrl == input.CallbackUrl ||
                     (this.CallbackUrl != null &&
                     this.CallbackUrl.Equals(input.CallbackUrl))
@@ -181,9 +196,9 @@ namespace CryptoAPIs.Model
                     this.FeePriority.Equals(input.FeePriority)
                 ) && 
                 (
-                    this.ToAddress == input.ToAddress ||
-                    (this.ToAddress != null &&
-                    this.ToAddress.Equals(input.ToAddress))
+                    this.RecipientAddress == input.RecipientAddress ||
+                    (this.RecipientAddress != null &&
+                    this.RecipientAddress.Equals(input.RecipientAddress))
                 ) && 
                 (
                     this.TokenIdentifier == input.TokenIdentifier ||
@@ -203,11 +218,13 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 if (this.Amount != null)
                     hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                if (this.CallbackSecretKey != null)
+                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
                 if (this.CallbackUrl != null)
                     hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
-                if (this.ToAddress != null)
-                    hashCode = hashCode * 59 + this.ToAddress.GetHashCode();
+                if (this.RecipientAddress != null)
+                    hashCode = hashCode * 59 + this.RecipientAddress.GetHashCode();
                 if (this.TokenIdentifier != null)
                     hashCode = hashCode * 59 + this.TokenIdentifier.GetHashCode();
                 return hashCode;

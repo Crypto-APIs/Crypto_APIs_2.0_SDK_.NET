@@ -463,11 +463,11 @@ Name | Type | Description  | Notes
 
 <a name="listxrprippletransactionsbyaddress"></a>
 # **ListXRPRippleTransactionsByAddress**
-> ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress (string network, string address, string context = null, int? limit = null, int? offset = null)
+> ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress (string network, string address, string context = null, int? limit = null, int? offset = null, string transactionType = null)
 
 List XRP (Ripple) Transactions by Address
 
-This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
 
 ### Example
 ```csharp
@@ -496,11 +496,12 @@ namespace Example
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
             var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var transactionType = payment;  // string |  (optional) 
 
             try
             {
                 // List XRP (Ripple) Transactions by Address
-                ListXRPRippleTransactionsByAddressR result = apiInstance.ListXRPRippleTransactionsByAddress(network, address, context, limit, offset);
+                ListXRPRippleTransactionsByAddressR result = apiInstance.ListXRPRippleTransactionsByAddress(network, address, context, limit, offset, transactionType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -523,6 +524,7 @@ Name | Type | Description  | Notes
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
  **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
  **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+ **transactionType** | **string**|  | [optional] 
 
 ### Return type
 
@@ -560,7 +562,7 @@ Name | Type | Description  | Notes
 
 List XRP (Ripple) Transactions By Block Hash
 
-This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
 
 ### Example
 ```csharp
@@ -653,7 +655,7 @@ Name | Type | Description  | Notes
 
 List XRP (Ripple) Transactions By Block Height
 
-This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
 
 ### Example
 ```csharp

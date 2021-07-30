@@ -60,7 +60,7 @@ namespace CryptoAPIs.Api
         /// List HD Wallet (xPub, yPub, zPub) Transactions
         /// </summary>
         /// <remarks>
-        /// This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// This endpoint will list HD Wallet transactions.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>
@@ -77,7 +77,7 @@ namespace CryptoAPIs.Api
         /// List HD Wallet (xPub, yPub, zPub) Transactions
         /// </summary>
         /// <remarks>
-        /// This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// This endpoint will list HD Wallet transactions.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>
@@ -160,7 +160,7 @@ namespace CryptoAPIs.Api
         /// List HD Wallet (xPub, yPub, zPub) Transactions
         /// </summary>
         /// <remarks>
-        /// This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// This endpoint will list HD Wallet transactions.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>
@@ -178,7 +178,7 @@ namespace CryptoAPIs.Api
         /// List HD Wallet (xPub, yPub, zPub) Transactions
         /// </summary>
         /// <remarks>
-        /// This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// This endpoint will list HD Wallet transactions.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>
@@ -518,7 +518,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>
@@ -536,7 +536,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>
@@ -616,7 +616,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>
@@ -635,7 +635,7 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+        /// List HD Wallet (xPub, yPub, zPub) Transactions This endpoint will list HD Wallet transactions.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain.</param>

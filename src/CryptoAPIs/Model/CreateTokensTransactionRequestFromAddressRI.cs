@@ -74,12 +74,18 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTokensTransactionRequestFromAddressRI" /> class.
         /// </summary>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. (required).</param>
+        /// <param name="callbackUrl">Verified URL for sending callbacks (required).</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
         /// <param name="recipients">Defines the destination for the transaction, i.e. the recipient(s). (required).</param>
         /// <param name="senders">senders (required).</param>
         /// <param name="tokenTypeSpecificData">tokenTypeSpecificData (required).</param>
-        public CreateTokensTransactionRequestFromAddressRI(FeePriorityEnum feePriority = default(FeePriorityEnum), List<CreateTokensTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateTokensTransactionRequestFromAddressRIRecipients>), CreateTokensTransactionRequestFromAddressRISenders senders = default(CreateTokensTransactionRequestFromAddressRISenders), CreateTokensTransactionRequestFromAddressRITokenTypeSpecificData tokenTypeSpecificData = default(CreateTokensTransactionRequestFromAddressRITokenTypeSpecificData))
+        public CreateTokensTransactionRequestFromAddressRI(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), List<CreateTokensTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateTokensTransactionRequestFromAddressRIRecipients>), CreateTokensTransactionRequestFromAddressRISenders senders = default(CreateTokensTransactionRequestFromAddressRISenders), CreateTokensTransactionRequestFromAddressRIS tokenTypeSpecificData = default(CreateTokensTransactionRequestFromAddressRIS))
         {
+            // to ensure "callbackSecretKey" is required (not null)
+            this.CallbackSecretKey = callbackSecretKey ?? throw new ArgumentNullException("callbackSecretKey is a required property for CreateTokensTransactionRequestFromAddressRI and cannot be null");
+            // to ensure "callbackUrl" is required (not null)
+            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for CreateTokensTransactionRequestFromAddressRI and cannot be null");
             this.FeePriority = feePriority;
             // to ensure "recipients" is required (not null)
             this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for CreateTokensTransactionRequestFromAddressRI and cannot be null");
@@ -88,6 +94,20 @@ namespace CryptoAPIs.Model
             // to ensure "tokenTypeSpecificData" is required (not null)
             this.TokenTypeSpecificData = tokenTypeSpecificData ?? throw new ArgumentNullException("tokenTypeSpecificData is a required property for CreateTokensTransactionRequestFromAddressRI and cannot be null");
         }
+
+        /// <summary>
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// </summary>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        [DataMember(Name = "callbackSecretKey", IsRequired = true, EmitDefaultValue = false)]
+        public string CallbackSecretKey { get; set; }
+
+        /// <summary>
+        /// Verified URL for sending callbacks
+        /// </summary>
+        /// <value>Verified URL for sending callbacks</value>
+        [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
+        public string CallbackUrl { get; set; }
 
         /// <summary>
         /// Defines the destination for the transaction, i.e. the recipient(s).
@@ -106,7 +126,7 @@ namespace CryptoAPIs.Model
         /// Gets or Sets TokenTypeSpecificData
         /// </summary>
         [DataMember(Name = "tokenTypeSpecificData", IsRequired = true, EmitDefaultValue = false)]
-        public CreateTokensTransactionRequestFromAddressRITokenTypeSpecificData TokenTypeSpecificData { get; set; }
+        public CreateTokensTransactionRequestFromAddressRIS TokenTypeSpecificData { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -116,6 +136,8 @@ namespace CryptoAPIs.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateTokensTransactionRequestFromAddressRI {\n");
+            sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
+            sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  FeePriority: ").Append(FeePriority).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("  Senders: ").Append(Senders).Append("\n");
@@ -155,6 +177,16 @@ namespace CryptoAPIs.Model
 
             return 
                 (
+                    this.CallbackSecretKey == input.CallbackSecretKey ||
+                    (this.CallbackSecretKey != null &&
+                    this.CallbackSecretKey.Equals(input.CallbackSecretKey))
+                ) && 
+                (
+                    this.CallbackUrl == input.CallbackUrl ||
+                    (this.CallbackUrl != null &&
+                    this.CallbackUrl.Equals(input.CallbackUrl))
+                ) && 
+                (
                     this.FeePriority == input.FeePriority ||
                     this.FeePriority.Equals(input.FeePriority)
                 ) && 
@@ -185,6 +217,10 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.CallbackSecretKey != null)
+                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                if (this.CallbackUrl != null)
+                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
                 if (this.Recipients != null)
                     hashCode = hashCode * 59 + this.Recipients.GetHashCode();

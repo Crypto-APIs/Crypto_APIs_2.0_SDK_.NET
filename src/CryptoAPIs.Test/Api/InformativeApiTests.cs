@@ -71,18 +71,18 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test ListReceivingAddresses
+        /// Test ListDepositAddresses
         /// </summary>
         [Fact]
-        public void ListReceivingAddressesTest()
+        public void ListDepositAddressesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
             //string network = null;
             //string walletId = null;
             //string context = null;
-            //var response = instance.ListReceivingAddresses(blockchain, network, walletId, context);
-            //Assert.IsType<ListReceivingAddressesR>(response);
+            //var response = instance.ListDepositAddresses(blockchain, network, walletId, context);
+            //Assert.IsType<ListDepositAddressesR>(response);
         }
 
         /// <summary>

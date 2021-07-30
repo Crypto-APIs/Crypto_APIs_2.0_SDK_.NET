@@ -4,14 +4,14 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GenerateReceivingAddress**](GeneratingApi.md#generatereceivingaddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | Generate Receiving Address
+[**GenerateDepositAddress**](GeneratingApi.md#generatedepositaddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | Generate Deposit Address
 
 
-<a name="generatereceivingaddress"></a>
-# **GenerateReceivingAddress**
-> GenerateReceivingAddressR GenerateReceivingAddress (string blockchain, string network, string walletId, string context = null, GenerateReceivingAddressRB generateReceivingAddressRB = null)
+<a name="generatedepositaddress"></a>
+# **GenerateDepositAddress**
+> GenerateDepositAddressR GenerateDepositAddress (string blockchain, string network, string walletId, string context = null, GenerateDepositAddressRB generateDepositAddressRB = null)
 
-Generate Receiving Address
+Generate Deposit Address
 
 Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
 
@@ -25,7 +25,7 @@ using CryptoAPIs.Model;
 
 namespace Example
 {
-    public class GenerateReceivingAddressExample
+    public class GenerateDepositAddressExample
     {
         public static void Main()
         {
@@ -41,17 +41,17 @@ namespace Example
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
             var walletId = 60c9d9921c38030006675ff6;  // string | Represents the unique ID of the specific Wallet.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var generateReceivingAddressRB = new GenerateReceivingAddressRB(); // GenerateReceivingAddressRB |  (optional) 
+            var generateDepositAddressRB = new GenerateDepositAddressRB(); // GenerateDepositAddressRB |  (optional) 
 
             try
             {
-                // Generate Receiving Address
-                GenerateReceivingAddressR result = apiInstance.GenerateReceivingAddress(blockchain, network, walletId, context, generateReceivingAddressRB);
+                // Generate Deposit Address
+                GenerateDepositAddressR result = apiInstance.GenerateDepositAddress(blockchain, network, walletId, context, generateDepositAddressRB);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling GeneratingApi.GenerateReceivingAddress: " + e.Message );
+                Debug.Print("Exception when calling GeneratingApi.GenerateDepositAddress: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | 
  **walletId** | **string**| Represents the unique ID of the specific Wallet. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **generateReceivingAddressRB** | [**GenerateReceivingAddressRB**](GenerateReceivingAddressRB.md)|  | [optional] 
+ **generateDepositAddressRB** | [**GenerateDepositAddressRB**](GenerateDepositAddressRB.md)|  | [optional] 
 
 ### Return type
 
-[**GenerateReceivingAddressR**](GenerateReceivingAddressR.md)
+[**GenerateDepositAddressR**](GenerateDepositAddressR.md)
 
 ### Authorization
 

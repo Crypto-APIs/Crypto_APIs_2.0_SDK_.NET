@@ -41,7 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="ListTransactionsByBlockHashRIFee" /> class.
         /// </summary>
         /// <param name="amount">Represents the fee amount. (required).</param>
-        /// <param name="unit">Defines the unit of the fee amount, e.g. BTC, ETH, XRP. (required).</param>
+        /// <param name="unit">unit (required).</param>
         public ListTransactionsByBlockHashRIFee(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
@@ -58,9 +58,8 @@ namespace CryptoAPIs.Model
         public string Amount { get; set; }
 
         /// <summary>
-        /// Defines the unit of the fee amount, e.g. BTC, ETH, XRP.
+        /// Gets or Sets Unit
         /// </summary>
-        /// <value>Defines the unit of the fee amount, e.g. BTC, ETH, XRP.</value>
         [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
         public string Unit { get; set; }
 

@@ -41,7 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetAddressDetailsRIConfirmedBalance" /> class.
         /// </summary>
         /// <param name="amount">Defines the total balance of the address that is confirmed. It doesn&#39;t include unconfirmed transactions. (required).</param>
-        /// <param name="unit">Defines the unit of the confirmed balance amount, e.g. BTC, ETH, XRP. (required).</param>
+        /// <param name="unit">unit (required).</param>
         public GetAddressDetailsRIConfirmedBalance(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
@@ -58,9 +58,8 @@ namespace CryptoAPIs.Model
         public string Amount { get; set; }
 
         /// <summary>
-        /// Defines the unit of the confirmed balance amount, e.g. BTC, ETH, XRP.
+        /// Gets or Sets Unit
         /// </summary>
-        /// <value>Defines the unit of the confirmed balance amount, e.g. BTC, ETH, XRP.</value>
         [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
         public string Unit { get; set; }
 

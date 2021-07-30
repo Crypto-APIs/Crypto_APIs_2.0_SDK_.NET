@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CryptoAPIs</id>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <authors>CryptoAPIs Team</authors>
     <owners>CryptoAPIs Team</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,13 +10,7 @@
     <projectUrl>https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_.NET</projectUrl>
     <icon>logo.png</icon>
     <description>the C# library for the Crypto APIs</description>
-    <releaseNotes>
-        !New Product: Wallet as a Service!
-        Blockchain Data: XRP Specific endpoints
-        Blockchain Data: ZIL Specific endpoints
-        Blockchain Events: More protocols and more events types
-        Minor Fixes and Improvements
-    </releaseNotes>
+    <releaseNotes>v1.2.0</releaseNotes>
     <copyright>Copyright 2021</copyright>
     <tags>Crypto Blockchain</tags>
     <dependencies>

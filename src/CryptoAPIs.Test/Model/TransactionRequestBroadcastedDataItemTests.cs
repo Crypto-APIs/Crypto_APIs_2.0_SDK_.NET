@@ -74,36 +74,36 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Network'
         }
         /// <summary>
-        /// Test the property 'RequiredApproves'
+        /// Test the property 'RequiredApprovals'
         /// </summary>
         [Fact]
-        public void RequiredApprovesTest()
+        public void RequiredApprovalsTest()
         {
-            // TODO unit test for the property 'RequiredApproves'
+            // TODO unit test for the property 'RequiredApprovals'
         }
         /// <summary>
-        /// Test the property 'RequiredRejects'
+        /// Test the property 'RequiredRejections'
         /// </summary>
         [Fact]
-        public void RequiredRejectsTest()
+        public void RequiredRejectionsTest()
         {
-            // TODO unit test for the property 'RequiredRejects'
+            // TODO unit test for the property 'RequiredRejections'
         }
         /// <summary>
-        /// Test the property 'CurrentApproves'
+        /// Test the property 'CurrentApprovals'
         /// </summary>
         [Fact]
-        public void CurrentApprovesTest()
+        public void CurrentApprovalsTest()
         {
-            // TODO unit test for the property 'CurrentApproves'
+            // TODO unit test for the property 'CurrentApprovals'
         }
         /// <summary>
-        /// Test the property 'CurrentRejects'
+        /// Test the property 'CurrentRejections'
         /// </summary>
         [Fact]
-        public void CurrentRejectsTest()
+        public void CurrentRejectionsTest()
         {
-            // TODO unit test for the property 'CurrentRejects'
+            // TODO unit test for the property 'CurrentRejections'
         }
         /// <summary>
         /// Test the property 'TransactionId'

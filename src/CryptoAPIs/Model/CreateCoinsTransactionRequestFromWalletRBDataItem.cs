@@ -74,21 +74,39 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromWalletRBDataItem" /> class.
         /// </summary>
-        /// <param name="destinations">Defines the destination of the transaction, whether it is incoming or outgoing. (required).</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs..</param>
+        /// <param name="callbackUrl">Verified URL for sending callbacks.</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
-        public CreateCoinsTransactionRequestFromWalletRBDataItem(List<CreateCoinsTransactionRequestFromWalletRBDataItemDestinations> destinations = default(List<CreateCoinsTransactionRequestFromWalletRBDataItemDestinations>), FeePriorityEnum feePriority = default(FeePriorityEnum))
+        /// <param name="recipients">Defines the destination of the transaction, whether it is incoming or outgoing. (required).</param>
+        public CreateCoinsTransactionRequestFromWalletRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients> recipients = default(List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients>))
         {
-            // to ensure "destinations" is required (not null)
-            this.Destinations = destinations ?? throw new ArgumentNullException("destinations is a required property for CreateCoinsTransactionRequestFromWalletRBDataItem and cannot be null");
             this.FeePriority = feePriority;
+            // to ensure "recipients" is required (not null)
+            this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for CreateCoinsTransactionRequestFromWalletRBDataItem and cannot be null");
+            this.CallbackSecretKey = callbackSecretKey;
+            this.CallbackUrl = callbackUrl;
         }
+
+        /// <summary>
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// </summary>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        [DataMember(Name = "callbackSecretKey", EmitDefaultValue = false)]
+        public string CallbackSecretKey { get; set; }
+
+        /// <summary>
+        /// Verified URL for sending callbacks
+        /// </summary>
+        /// <value>Verified URL for sending callbacks</value>
+        [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
+        public string CallbackUrl { get; set; }
 
         /// <summary>
         /// Defines the destination of the transaction, whether it is incoming or outgoing.
         /// </summary>
         /// <value>Defines the destination of the transaction, whether it is incoming or outgoing.</value>
-        [DataMember(Name = "destinations", IsRequired = true, EmitDefaultValue = false)]
-        public List<CreateCoinsTransactionRequestFromWalletRBDataItemDestinations> Destinations { get; set; }
+        [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
+        public List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients> Recipients { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -98,8 +116,10 @@ namespace CryptoAPIs.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateCoinsTransactionRequestFromWalletRBDataItem {\n");
-            sb.Append("  Destinations: ").Append(Destinations).Append("\n");
+            sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
+            sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  FeePriority: ").Append(FeePriority).Append("\n");
+            sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,14 +155,24 @@ namespace CryptoAPIs.Model
 
             return 
                 (
-                    this.Destinations == input.Destinations ||
-                    this.Destinations != null &&
-                    input.Destinations != null &&
-                    this.Destinations.SequenceEqual(input.Destinations)
+                    this.CallbackSecretKey == input.CallbackSecretKey ||
+                    (this.CallbackSecretKey != null &&
+                    this.CallbackSecretKey.Equals(input.CallbackSecretKey))
+                ) && 
+                (
+                    this.CallbackUrl == input.CallbackUrl ||
+                    (this.CallbackUrl != null &&
+                    this.CallbackUrl.Equals(input.CallbackUrl))
                 ) && 
                 (
                     this.FeePriority == input.FeePriority ||
                     this.FeePriority.Equals(input.FeePriority)
+                ) && 
+                (
+                    this.Recipients == input.Recipients ||
+                    this.Recipients != null &&
+                    input.Recipients != null &&
+                    this.Recipients.SequenceEqual(input.Recipients)
                 );
         }
 
@@ -155,9 +185,13 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Destinations != null)
-                    hashCode = hashCode * 59 + this.Destinations.GetHashCode();
+                if (this.CallbackSecretKey != null)
+                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                if (this.CallbackUrl != null)
+                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
+                if (this.Recipients != null)
+                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
                 return hashCode;
             }
         }

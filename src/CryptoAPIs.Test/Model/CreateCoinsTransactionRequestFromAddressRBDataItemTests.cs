@@ -66,6 +66,22 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Amount'
         }
         /// <summary>
+        /// Test the property 'CallbackSecretKey'
+        /// </summary>
+        [Fact]
+        public void CallbackSecretKeyTest()
+        {
+            // TODO unit test for the property 'CallbackSecretKey'
+        }
+        /// <summary>
+        /// Test the property 'CallbackUrl'
+        /// </summary>
+        [Fact]
+        public void CallbackUrlTest()
+        {
+            // TODO unit test for the property 'CallbackUrl'
+        }
+        /// <summary>
         /// Test the property 'FeePriority'
         /// </summary>
         [Fact]
@@ -74,12 +90,12 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'FeePriority'
         }
         /// <summary>
-        /// Test the property 'ToAddress'
+        /// Test the property 'RecipientAddress'
         /// </summary>
         [Fact]
-        public void ToAddressTest()
+        public void RecipientAddressTest()
         {
-            // TODO unit test for the property 'ToAddress'
+            // TODO unit test for the property 'RecipientAddress'
         }
 
     }

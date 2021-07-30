@@ -56,19 +56,19 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test GenerateReceivingAddress
+        /// Test GenerateDepositAddress
         /// </summary>
         [Fact]
-        public void GenerateReceivingAddressTest()
+        public void GenerateDepositAddressTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
             //string network = null;
             //string walletId = null;
             //string context = null;
-            //GenerateReceivingAddressRB generateReceivingAddressRB = null;
-            //var response = instance.GenerateReceivingAddress(blockchain, network, walletId, context, generateReceivingAddressRB);
-            //Assert.IsType<GenerateReceivingAddressR>(response);
+            //GenerateDepositAddressRB generateDepositAddressRB = null;
+            //var response = instance.GenerateDepositAddress(blockchain, network, walletId, context, generateDepositAddressRB);
+            //Assert.IsType<GenerateDepositAddressR>(response);
         }
     }
 }

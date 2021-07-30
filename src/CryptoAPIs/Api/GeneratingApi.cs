@@ -28,7 +28,7 @@ namespace CryptoAPIs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Generate Receiving Address
+        /// Generate Deposit Address
         /// </summary>
         /// <remarks>
         /// Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
@@ -38,12 +38,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
-        /// <returns>GenerateReceivingAddressR</returns>
-        GenerateReceivingAddressR GenerateReceivingAddress(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB));
+        /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <returns>GenerateDepositAddressR</returns>
+        GenerateDepositAddressR GenerateDepositAddress(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB));
 
         /// <summary>
-        /// Generate Receiving Address
+        /// Generate Deposit Address
         /// </summary>
         /// <remarks>
         /// Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
@@ -53,9 +53,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
-        /// <returns>ApiResponse of GenerateReceivingAddressR</returns>
-        ApiResponse<GenerateReceivingAddressR> GenerateReceivingAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB));
+        /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <returns>ApiResponse of GenerateDepositAddressR</returns>
+        ApiResponse<GenerateDepositAddressR> GenerateDepositAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB));
         #endregion Synchronous Operations
     }
 
@@ -66,7 +66,7 @@ namespace CryptoAPIs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Generate Receiving Address
+        /// Generate Deposit Address
         /// </summary>
         /// <remarks>
         /// Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
@@ -76,13 +76,13 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
+        /// <param name="generateDepositAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GenerateReceivingAddressR</returns>
-        System.Threading.Tasks.Task<GenerateReceivingAddressR> GenerateReceivingAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of GenerateDepositAddressR</returns>
+        System.Threading.Tasks.Task<GenerateDepositAddressR> GenerateDepositAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Generate Receiving Address
+        /// Generate Deposit Address
         /// </summary>
         /// <remarks>
         /// Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
@@ -92,10 +92,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
+        /// <param name="generateDepositAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GenerateReceivingAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GenerateReceivingAddressR>> GenerateReceivingAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (GenerateDepositAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GenerateDepositAddressR>> GenerateDepositAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -217,44 +217,44 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// Generate Receiving Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
+        /// Generate Deposit Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
-        /// <returns>GenerateReceivingAddressR</returns>
-        public GenerateReceivingAddressR GenerateReceivingAddress(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB))
+        /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <returns>GenerateDepositAddressR</returns>
+        public GenerateDepositAddressR GenerateDepositAddress(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB))
         {
-            CryptoAPIs.Client.ApiResponse<GenerateReceivingAddressR> localVarResponse = GenerateReceivingAddressWithHttpInfo(blockchain, network, walletId, context, generateReceivingAddressRB);
+            CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> localVarResponse = GenerateDepositAddressWithHttpInfo(blockchain, network, walletId, context, generateDepositAddressRB);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Generate Receiving Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
+        /// Generate Deposit Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
-        /// <returns>ApiResponse of GenerateReceivingAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<GenerateReceivingAddressR> GenerateReceivingAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB))
+        /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <returns>ApiResponse of GenerateDepositAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> GenerateDepositAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling GeneratingApi->GenerateReceivingAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling GeneratingApi->GenerateDepositAddress");
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling GeneratingApi->GenerateReceivingAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling GeneratingApi->GenerateDepositAddress");
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling GeneratingApi->GenerateReceivingAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling GeneratingApi->GenerateDepositAddress");
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -280,7 +280,7 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
-            localVarRequestOptions.Data = generateReceivingAddressRB;
+            localVarRequestOptions.Data = generateDepositAddressRB;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -289,11 +289,11 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<GenerateReceivingAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<GenerateDepositAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GenerateReceivingAddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GenerateDepositAddress", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -301,46 +301,46 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// Generate Receiving Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
+        /// Generate Deposit Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
+        /// <param name="generateDepositAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GenerateReceivingAddressR</returns>
-        public async System.Threading.Tasks.Task<GenerateReceivingAddressR> GenerateReceivingAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of GenerateDepositAddressR</returns>
+        public async System.Threading.Tasks.Task<GenerateDepositAddressR> GenerateDepositAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GenerateReceivingAddressR> localVarResponse = await GenerateReceivingAddressWithHttpInfoAsync(blockchain, network, walletId, context, generateReceivingAddressRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> localVarResponse = await GenerateDepositAddressWithHttpInfoAsync(blockchain, network, walletId, context, generateDepositAddressRB, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Generate Receiving Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
+        /// Generate Deposit Address Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="generateReceivingAddressRB"> (optional)</param>
+        /// <param name="generateDepositAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GenerateReceivingAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GenerateReceivingAddressR>> GenerateReceivingAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateReceivingAddressRB generateReceivingAddressRB = default(GenerateReceivingAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (GenerateDepositAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR>> GenerateDepositAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling GeneratingApi->GenerateReceivingAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling GeneratingApi->GenerateDepositAddress");
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling GeneratingApi->GenerateReceivingAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling GeneratingApi->GenerateDepositAddress");
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling GeneratingApi->GenerateReceivingAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling GeneratingApi->GenerateDepositAddress");
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -368,7 +368,7 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
-            localVarRequestOptions.Data = generateReceivingAddressRB;
+            localVarRequestOptions.Data = generateDepositAddressRB;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -378,11 +378,11 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<GenerateReceivingAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<GenerateDepositAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GenerateReceivingAddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GenerateDepositAddress", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

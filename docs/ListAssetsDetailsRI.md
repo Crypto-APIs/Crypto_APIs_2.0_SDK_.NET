@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **AssetType** | **string** | Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. | 
 **LatestRate** | [**ListAssetsDetailsRILatestRate**](ListAssetsDetailsRILatestRate.md) |  | 
 **Slug** | **string** | Asset&#x60;s unique slug string in Crypto APIs listings | [optional] 
-**SpecificData** | [**ListAssetsDetailsRISpecificData**](ListAssetsDetailsRISpecificData.md) |  | 
+**SpecificData** | [**ListAssetsDetailsRIS**](ListAssetsDetailsRIS.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

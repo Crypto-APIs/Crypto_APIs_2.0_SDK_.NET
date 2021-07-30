@@ -95,13 +95,13 @@ namespace CryptoAPIs.Test.Api
         public void CreateTokensTransactionRequestFromAddressTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string address = null;
             //string blockchain = null;
             //string network = null;
+            //string senderAddress = null;
             //string walletId = null;
             //string context = null;
             //CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = null;
-            //var response = instance.CreateTokensTransactionRequestFromAddress(address, blockchain, network, walletId, context, createTokensTransactionRequestFromAddressRB);
+            //var response = instance.CreateTokensTransactionRequestFromAddress(blockchain, network, senderAddress, walletId, context, createTokensTransactionRequestFromAddressRB);
             //Assert.IsType<CreateTokensTransactionRequestFromAddressR>(response);
         }
     }

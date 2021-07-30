@@ -58,14 +58,6 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
-        /// Test the property 'AdditionalData'
-        /// </summary>
-        [Fact]
-        public void AdditionalDataTest()
-        {
-            // TODO unit test for the property 'AdditionalData'
-        }
-        /// <summary>
         /// Test the property 'Index'
         /// </summary>
         [Fact]

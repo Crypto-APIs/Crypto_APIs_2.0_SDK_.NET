@@ -5,7 +5,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetWalletAssetDetails**](InformativeApi.md#getwalletassetdetails) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network} | Get Wallet Asset Details
-[**ListReceivingAddresses**](InformativeApi.md#listreceivingaddresses) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | List Receiving Addresses
+[**ListDepositAddresses**](InformativeApi.md#listdepositaddresses) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | List Deposit Addresses
 [**ListSupportedTokens**](InformativeApi.md#listsupportedtokens) | **GET** /wallet-as-a-service/info/{blockchain}/{network}/supported-tokens | List Supported Tokens
 
 
@@ -101,13 +101,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listreceivingaddresses"></a>
-# **ListReceivingAddresses**
-> ListReceivingAddressesR ListReceivingAddresses (string blockchain, string network, string walletId, string context = null)
+<a name="listdepositaddresses"></a>
+# **ListDepositAddresses**
+> ListDepositAddressesR ListDepositAddresses (string blockchain, string network, string walletId, string context = null)
 
-List Receiving Addresses
+List Deposit Addresses
 
-Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 ```csharp
@@ -119,7 +119,7 @@ using CryptoAPIs.Model;
 
 namespace Example
 {
-    public class ListReceivingAddressesExample
+    public class ListDepositAddressesExample
     {
         public static void Main()
         {
@@ -138,13 +138,13 @@ namespace Example
 
             try
             {
-                // List Receiving Addresses
-                ListReceivingAddressesR result = apiInstance.ListReceivingAddresses(blockchain, network, walletId, context);
+                // List Deposit Addresses
+                ListDepositAddressesR result = apiInstance.ListDepositAddresses(blockchain, network, walletId, context);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling InformativeApi.ListReceivingAddresses: " + e.Message );
+                Debug.Print("Exception when calling InformativeApi.ListDepositAddresses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListReceivingAddressesR**](ListReceivingAddressesR.md)
+[**ListDepositAddressesR**](ListDepositAddressesR.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 List Supported Tokens
 
-Through this endpoint customers can obtain information on multiple tokens at once.     {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+Through this endpoint customers can obtain information on multiple tokens at once.
 
 ### Example
 ```csharp

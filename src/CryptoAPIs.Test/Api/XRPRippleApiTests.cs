@@ -136,7 +136,8 @@ namespace CryptoAPIs.Test.Api
             //string context = null;
             //int? limit = null;
             //int? offset = null;
-            //var response = instance.ListXRPRippleTransactionsByAddress(network, address, context, limit, offset);
+            //string transactionType = null;
+            //var response = instance.ListXRPRippleTransactionsByAddress(network, address, context, limit, offset, transactionType);
             //Assert.IsType<ListXRPRippleTransactionsByAddressR>(response);
         }
 

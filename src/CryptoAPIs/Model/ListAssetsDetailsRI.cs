@@ -77,7 +77,7 @@ namespace CryptoAPIs.Model
         /// <param name="latestRate">latestRate (required).</param>
         /// <param name="slug">Asset&#x60;s unique slug string in Crypto APIs listings.</param>
         /// <param name="specificData">specificData (required).</param>
-        public ListAssetsDetailsRI(string assetId = default(string), ListAssetsDetailsRIAssetLogo assetLogo = default(ListAssetsDetailsRIAssetLogo), string assetName = default(string), string assetOriginalSymbol = default(string), string assetSymbol = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), ListAssetsDetailsRILatestRate latestRate = default(ListAssetsDetailsRILatestRate), string slug = default(string), ListAssetsDetailsRISpecificData specificData = default(ListAssetsDetailsRISpecificData))
+        public ListAssetsDetailsRI(string assetId = default(string), ListAssetsDetailsRIAssetLogo assetLogo = default(ListAssetsDetailsRIAssetLogo), string assetName = default(string), string assetOriginalSymbol = default(string), string assetSymbol = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), ListAssetsDetailsRILatestRate latestRate = default(ListAssetsDetailsRILatestRate), string slug = default(string), ListAssetsDetailsRIS specificData = default(ListAssetsDetailsRIS))
         {
             // to ensure "assetId" is required (not null)
             this.AssetId = assetId ?? throw new ArgumentNullException("assetId is a required property for ListAssetsDetailsRI and cannot be null");
@@ -148,7 +148,7 @@ namespace CryptoAPIs.Model
         /// Gets or Sets SpecificData
         /// </summary>
         [DataMember(Name = "specificData", IsRequired = true, EmitDefaultValue = false)]
-        public ListAssetsDetailsRISpecificData SpecificData { get; set; }
+        public ListAssetsDetailsRIS SpecificData { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

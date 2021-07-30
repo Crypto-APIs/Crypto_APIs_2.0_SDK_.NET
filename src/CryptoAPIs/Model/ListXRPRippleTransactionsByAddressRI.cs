@@ -40,7 +40,6 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListXRPRippleTransactionsByAddressRI" /> class.
         /// </summary>
-        /// <param name="additionalData">Represents any additional data that may be needed. (required).</param>
         /// <param name="index">Represents the index position of the transaction in the block. (required).</param>
         /// <param name="minedInBlockHash">Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. (required).</param>
         /// <param name="minedInBlockHeight">Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. (required).</param>
@@ -55,10 +54,8 @@ namespace CryptoAPIs.Model
         /// <param name="offer">offer (required).</param>
         /// <param name="receive">receive (required).</param>
         /// <param name="value">value (required).</param>
-        public ListXRPRippleTransactionsByAddressRI(string additionalData = default(string), int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients>), List<GetXRPRippleTransactionDetailsByTransactionIDRISenders> senders = default(List<GetXRPRippleTransactionDetailsByTransactionIDRISenders>), int sequence = default(int), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), ListXRPRippleTransactionsByAddressRIFee fee = default(ListXRPRippleTransactionsByAddressRIFee), ListXRPRippleTransactionsByAddressRIOffer offer = default(ListXRPRippleTransactionsByAddressRIOffer), ListXRPRippleTransactionsByAddressRIReceive receive = default(ListXRPRippleTransactionsByAddressRIReceive), ListXRPRippleTransactionsByAddressRIValue value = default(ListXRPRippleTransactionsByAddressRIValue))
+        public ListXRPRippleTransactionsByAddressRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients>), List<GetXRPRippleTransactionDetailsByTransactionIDRISenders> senders = default(List<GetXRPRippleTransactionDetailsByTransactionIDRISenders>), int sequence = default(int), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), ListXRPRippleTransactionsByAddressRIFee fee = default(ListXRPRippleTransactionsByAddressRIFee), ListXRPRippleTransactionsByAddressRIOffer offer = default(ListXRPRippleTransactionsByAddressRIOffer), ListXRPRippleTransactionsByAddressRIReceive receive = default(ListXRPRippleTransactionsByAddressRIReceive), ListXRPRippleTransactionsByAddressRIValue value = default(ListXRPRippleTransactionsByAddressRIValue))
         {
-            // to ensure "additionalData" is required (not null)
-            this.AdditionalData = additionalData ?? throw new ArgumentNullException("additionalData is a required property for ListXRPRippleTransactionsByAddressRI and cannot be null");
             this.Index = index;
             // to ensure "minedInBlockHash" is required (not null)
             this.MinedInBlockHash = minedInBlockHash ?? throw new ArgumentNullException("minedInBlockHash is a required property for ListXRPRippleTransactionsByAddressRI and cannot be null");
@@ -84,13 +81,6 @@ namespace CryptoAPIs.Model
             // to ensure "value" is required (not null)
             this.Value = value ?? throw new ArgumentNullException("value is a required property for ListXRPRippleTransactionsByAddressRI and cannot be null");
         }
-
-        /// <summary>
-        /// Represents any additional data that may be needed.
-        /// </summary>
-        /// <value>Represents any additional data that may be needed.</value>
-        [DataMember(Name = "additionalData", IsRequired = true, EmitDefaultValue = false)]
-        public string AdditionalData { get; set; }
 
         /// <summary>
         /// Represents the index position of the transaction in the block.
@@ -194,7 +184,6 @@ namespace CryptoAPIs.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ListXRPRippleTransactionsByAddressRI {\n");
-            sb.Append("  AdditionalData: ").Append(AdditionalData).Append("\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  MinedInBlockHash: ").Append(MinedInBlockHash).Append("\n");
             sb.Append("  MinedInBlockHeight: ").Append(MinedInBlockHeight).Append("\n");
@@ -243,11 +232,6 @@ namespace CryptoAPIs.Model
                 return false;
 
             return 
-                (
-                    this.AdditionalData == input.AdditionalData ||
-                    (this.AdditionalData != null &&
-                    this.AdditionalData.Equals(input.AdditionalData))
-                ) && 
                 (
                     this.Index == input.Index ||
                     this.Index.Equals(input.Index)
@@ -327,8 +311,6 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AdditionalData != null)
-                    hashCode = hashCode * 59 + this.AdditionalData.GetHashCode();
                 hashCode = hashCode * 59 + this.Index.GetHashCode();
                 if (this.MinedInBlockHash != null)
                     hashCode = hashCode * 59 + this.MinedInBlockHash.GetHashCode();

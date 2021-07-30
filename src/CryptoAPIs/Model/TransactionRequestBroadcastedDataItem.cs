@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CryptoAPIs.Client.OpenAPIDateConverter;
 namespace CryptoAPIs.Model
 {
     /// <summary>
-    /// TransactionRequestBroadcastedDataItem
+    /// Defines an &#x60;item&#x60; as one result.
     /// </summary>
     [DataContract(Name = "TransactionRequestBroadcasted_data_item")]
     public partial class TransactionRequestBroadcastedDataItem : IEquatable<TransactionRequestBroadcastedDataItem>, IValidatableObject
@@ -40,66 +40,73 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionRequestBroadcastedDataItem" /> class.
         /// </summary>
-        /// <param name="blockchain">blockchain (required).</param>
-        /// <param name="network">network (required).</param>
-        /// <param name="requiredApproves">requiredApproves (required).</param>
-        /// <param name="requiredRejects">requiredRejects (required).</param>
-        /// <param name="currentApproves">currentApproves (required).</param>
-        /// <param name="currentRejects">currentRejects (required).</param>
-        /// <param name="transactionId">transactionId (required).</param>
-        public TransactionRequestBroadcastedDataItem(string blockchain = default(string), string network = default(string), int requiredApproves = default(int), int requiredRejects = default(int), int currentApproves = default(int), int currentRejects = default(int), string transactionId = default(string))
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required).</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required).</param>
+        /// <param name="requiredApprovals">The required number of approvals needed to approve the transaction. (required).</param>
+        /// <param name="requiredRejections">The required number of rejections needed to reject the transaction. (required).</param>
+        /// <param name="currentApprovals">The current number of approvals given for the transaction. (required).</param>
+        /// <param name="currentRejections">The current number of rejections given for the transaction. (required).</param>
+        /// <param name="transactionId">Defines the unique ID of the specific transaction, i.e. its identification number. (required).</param>
+        public TransactionRequestBroadcastedDataItem(string blockchain = default(string), string network = default(string), int requiredApprovals = default(int), int requiredRejections = default(int), int currentApprovals = default(int), int currentRejections = default(int), string transactionId = default(string))
         {
             // to ensure "blockchain" is required (not null)
             this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
             // to ensure "network" is required (not null)
             this.Network = network ?? throw new ArgumentNullException("network is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
-            this.RequiredApproves = requiredApproves;
-            this.RequiredRejects = requiredRejects;
-            this.CurrentApproves = currentApproves;
-            this.CurrentRejects = currentRejects;
+            this.RequiredApprovals = requiredApprovals;
+            this.RequiredRejections = requiredRejections;
+            this.CurrentApprovals = currentApprovals;
+            this.CurrentRejections = currentRejections;
             // to ensure "transactionId" is required (not null)
             this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
         }
 
         /// <summary>
-        /// Gets or Sets Blockchain
+        /// Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
         /// </summary>
+        /// <value>Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</value>
         [DataMember(Name = "blockchain", IsRequired = true, EmitDefaultValue = false)]
         public string Blockchain { get; set; }
 
         /// <summary>
-        /// Gets or Sets Network
+        /// Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
         /// </summary>
+        /// <value>Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</value>
         [DataMember(Name = "network", IsRequired = true, EmitDefaultValue = false)]
         public string Network { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequiredApproves
+        /// The required number of approvals needed to approve the transaction.
         /// </summary>
-        [DataMember(Name = "requiredApproves", IsRequired = true, EmitDefaultValue = false)]
-        public int RequiredApproves { get; set; }
+        /// <value>The required number of approvals needed to approve the transaction.</value>
+        [DataMember(Name = "requiredApprovals", IsRequired = true, EmitDefaultValue = false)]
+        public int RequiredApprovals { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequiredRejects
+        /// The required number of rejections needed to reject the transaction.
         /// </summary>
-        [DataMember(Name = "requiredRejects", IsRequired = true, EmitDefaultValue = false)]
-        public int RequiredRejects { get; set; }
+        /// <value>The required number of rejections needed to reject the transaction.</value>
+        [DataMember(Name = "requiredRejections", IsRequired = true, EmitDefaultValue = false)]
+        public int RequiredRejections { get; set; }
 
         /// <summary>
-        /// Gets or Sets CurrentApproves
+        /// The current number of approvals given for the transaction.
         /// </summary>
-        [DataMember(Name = "currentApproves", IsRequired = true, EmitDefaultValue = false)]
-        public int CurrentApproves { get; set; }
+        /// <value>The current number of approvals given for the transaction.</value>
+        [DataMember(Name = "currentApprovals", IsRequired = true, EmitDefaultValue = false)]
+        public int CurrentApprovals { get; set; }
 
         /// <summary>
-        /// Gets or Sets CurrentRejects
+        /// The current number of rejections given for the transaction.
         /// </summary>
-        [DataMember(Name = "currentRejects", IsRequired = true, EmitDefaultValue = false)]
-        public int CurrentRejects { get; set; }
+        /// <value>The current number of rejections given for the transaction.</value>
+        [DataMember(Name = "currentRejections", IsRequired = true, EmitDefaultValue = false)]
+        public int CurrentRejections { get; set; }
 
         /// <summary>
-        /// Gets or Sets TransactionId
+        /// Defines the unique ID of the specific transaction, i.e. its identification number.
         /// </summary>
+        /// <value>Defines the unique ID of the specific transaction, i.e. its identification number.</value>
         [DataMember(Name = "transactionId", IsRequired = true, EmitDefaultValue = false)]
         public string TransactionId { get; set; }
 
@@ -113,10 +120,10 @@ namespace CryptoAPIs.Model
             sb.Append("class TransactionRequestBroadcastedDataItem {\n");
             sb.Append("  Blockchain: ").Append(Blockchain).Append("\n");
             sb.Append("  Network: ").Append(Network).Append("\n");
-            sb.Append("  RequiredApproves: ").Append(RequiredApproves).Append("\n");
-            sb.Append("  RequiredRejects: ").Append(RequiredRejects).Append("\n");
-            sb.Append("  CurrentApproves: ").Append(CurrentApproves).Append("\n");
-            sb.Append("  CurrentRejects: ").Append(CurrentRejects).Append("\n");
+            sb.Append("  RequiredApprovals: ").Append(RequiredApprovals).Append("\n");
+            sb.Append("  RequiredRejections: ").Append(RequiredRejections).Append("\n");
+            sb.Append("  CurrentApprovals: ").Append(CurrentApprovals).Append("\n");
+            sb.Append("  CurrentRejections: ").Append(CurrentRejections).Append("\n");
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -163,20 +170,20 @@ namespace CryptoAPIs.Model
                     this.Network.Equals(input.Network))
                 ) && 
                 (
-                    this.RequiredApproves == input.RequiredApproves ||
-                    this.RequiredApproves.Equals(input.RequiredApproves)
+                    this.RequiredApprovals == input.RequiredApprovals ||
+                    this.RequiredApprovals.Equals(input.RequiredApprovals)
                 ) && 
                 (
-                    this.RequiredRejects == input.RequiredRejects ||
-                    this.RequiredRejects.Equals(input.RequiredRejects)
+                    this.RequiredRejections == input.RequiredRejections ||
+                    this.RequiredRejections.Equals(input.RequiredRejections)
                 ) && 
                 (
-                    this.CurrentApproves == input.CurrentApproves ||
-                    this.CurrentApproves.Equals(input.CurrentApproves)
+                    this.CurrentApprovals == input.CurrentApprovals ||
+                    this.CurrentApprovals.Equals(input.CurrentApprovals)
                 ) && 
                 (
-                    this.CurrentRejects == input.CurrentRejects ||
-                    this.CurrentRejects.Equals(input.CurrentRejects)
+                    this.CurrentRejections == input.CurrentRejections ||
+                    this.CurrentRejections.Equals(input.CurrentRejections)
                 ) && 
                 (
                     this.TransactionId == input.TransactionId ||
@@ -198,10 +205,10 @@ namespace CryptoAPIs.Model
                     hashCode = hashCode * 59 + this.Blockchain.GetHashCode();
                 if (this.Network != null)
                     hashCode = hashCode * 59 + this.Network.GetHashCode();
-                hashCode = hashCode * 59 + this.RequiredApproves.GetHashCode();
-                hashCode = hashCode * 59 + this.RequiredRejects.GetHashCode();
-                hashCode = hashCode * 59 + this.CurrentApproves.GetHashCode();
-                hashCode = hashCode * 59 + this.CurrentRejects.GetHashCode();
+                hashCode = hashCode * 59 + this.RequiredApprovals.GetHashCode();
+                hashCode = hashCode * 59 + this.RequiredRejections.GetHashCode();
+                hashCode = hashCode * 59 + this.CurrentApprovals.GetHashCode();
+                hashCode = hashCode * 59 + this.CurrentRejections.GetHashCode();
                 if (this.TransactionId != null)
                     hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
                 return hashCode;
