@@ -1,0 +1,17 @@
+# CryptoAPIs.Model.ListLatestMinedBlocksRIBSBSC
+Binance Smart Chain
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ExtraData** | **string** | Represents any data that can be included by the miner in the block. | 
+**GasLimit** | **string** | Defines the total gas limit of all transactions in the block. | 
+**GasUsed** | **string** | Represents the total amount of gas used by all transactions in this block. | 
+**MinedInSeconds** | **int** | Specifies the amount of time required for the block to be mined in second | 
+**Sha3Uncles** | **string** | Defines the combined hash of all uncles for a given parent. | 
+**TotalDifficulty** | **string** | Defines the total difficulty of the chain until this block, i.e. how difficult it is for a specific miner to mine a new block | 
+**Uncles** | **List&lt;string&gt;** |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

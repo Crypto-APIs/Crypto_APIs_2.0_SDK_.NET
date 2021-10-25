@@ -56,20 +56,38 @@ namespace CryptoAPIs.Model
         {
             this.BlockHeight = blockHeight;
             // to ensure "difficulty" is required (not null)
-            this.Difficulty = difficulty ?? throw new ArgumentNullException("difficulty is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            if (difficulty == null) {
+                throw new ArgumentNullException("difficulty is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.Difficulty = difficulty;
             this.DsBlock = dsBlock;
             // to ensure "dsDifficulty" is required (not null)
-            this.DsDifficulty = dsDifficulty ?? throw new ArgumentNullException("dsDifficulty is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            if (dsDifficulty == null) {
+                throw new ArgumentNullException("dsDifficulty is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.DsDifficulty = dsDifficulty;
             // to ensure "dsLeader" is required (not null)
-            this.DsLeader = dsLeader ?? throw new ArgumentNullException("dsLeader is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            if (dsLeader == null) {
+                throw new ArgumentNullException("dsLeader is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.DsLeader = dsLeader;
             this.GasLimit = gasLimit;
             this.GasUsed = gasUsed;
             // to ensure "microBlocks" is required (not null)
-            this.MicroBlocks = microBlocks ?? throw new ArgumentNullException("microBlocks is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            if (microBlocks == null) {
+                throw new ArgumentNullException("microBlocks is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.MicroBlocks = microBlocks;
             // to ensure "nextBlockHash" is required (not null)
-            this.NextBlockHash = nextBlockHash ?? throw new ArgumentNullException("nextBlockHash is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            if (nextBlockHash == null) {
+                throw new ArgumentNullException("nextBlockHash is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.NextBlockHash = nextBlockHash;
             // to ensure "previousBlockHash" is required (not null)
-            this.PreviousBlockHash = previousBlockHash ?? throw new ArgumentNullException("previousBlockHash is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            if (previousBlockHash == null) {
+                throw new ArgumentNullException("previousBlockHash is a required property for GetZilliqaBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             this.TransactionsCount = transactionsCount;
         }
@@ -304,7 +322,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

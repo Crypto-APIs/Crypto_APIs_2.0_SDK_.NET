@@ -40,22 +40,28 @@ namespace CryptoAPIs.Model
         public enum TokenTypeEnum
         {
             /// <summary>
-            /// Enum EthereumERC20Token for value: ethereumERC20Token
+            /// Enum ERC20 for value: ERC-20
             /// </summary>
-            [EnumMember(Value = "ethereumERC20Token")]
-            EthereumERC20Token = 1,
+            [EnumMember(Value = "ERC-20")]
+            ERC20 = 1,
 
             /// <summary>
-            /// Enum EthereumERC721Token for value: ethereumERC721Token
+            /// Enum ERC721 for value: ERC-721
             /// </summary>
-            [EnumMember(Value = "ethereumERC721Token")]
-            EthereumERC721Token = 2,
+            [EnumMember(Value = "ERC-721")]
+            ERC721 = 2,
 
             /// <summary>
-            /// Enum OmniLayerToken for value: omniLayerToken
+            /// Enum OMNI for value: OMNI
             /// </summary>
-            [EnumMember(Value = "omniLayerToken")]
-            OmniLayerToken = 3
+            [EnumMember(Value = "OMNI")]
+            OMNI = 3,
+
+            /// <summary>
+            /// Enum BEP20 for value: BEP-20
+            /// </summary>
+            [EnumMember(Value = "BEP-20")]
+            BEP20 = 4
 
         }
 
@@ -103,7 +109,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedDataItem" /> class.
         /// </summary>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required).</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required).</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;,  are test networks. (required).</param>
         /// <param name="address">Defines the specific address to which the transaction has been sent. (required).</param>
         /// <param name="minedInBlock">minedInBlock (required).</param>
         /// <param name="transactionId">Defines the unique ID of the specific transaction, i.e. its identification number. (required).</param>
@@ -113,18 +119,36 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionConfirmedDataItem(string blockchain = default(string), string network = default(string), string address = default(string), AddressTokensTransactionConfirmedDataItemMinedInBlock minedInBlock = default(AddressTokensTransactionConfirmedDataItemMinedInBlock), string transactionId = default(string), TokenTypeEnum tokenType = default(TokenTypeEnum), AddressTokensTransactionConfirmedToken token = default(AddressTokensTransactionConfirmedToken), DirectionEnum direction = default(DirectionEnum))
         {
             // to ensure "blockchain" is required (not null)
-            this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            if (blockchain == null) {
+                throw new ArgumentNullException("blockchain is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            }
+            this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            this.Network = network ?? throw new ArgumentNullException("network is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            if (network == null) {
+                throw new ArgumentNullException("network is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            }
+            this.Network = network;
             // to ensure "address" is required (not null)
-            this.Address = address ?? throw new ArgumentNullException("address is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            if (address == null) {
+                throw new ArgumentNullException("address is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            }
+            this.Address = address;
             // to ensure "minedInBlock" is required (not null)
-            this.MinedInBlock = minedInBlock ?? throw new ArgumentNullException("minedInBlock is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            if (minedInBlock == null) {
+                throw new ArgumentNullException("minedInBlock is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            }
+            this.MinedInBlock = minedInBlock;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            }
+            this.TransactionId = transactionId;
             this.TokenType = tokenType;
             // to ensure "token" is required (not null)
-            this.Token = token ?? throw new ArgumentNullException("token is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            if (token == null) {
+                throw new ArgumentNullException("token is a required property for AddressTokensTransactionConfirmedDataItem and cannot be null");
+            }
+            this.Token = token;
             this.Direction = direction;
         }
 
@@ -136,9 +160,9 @@ namespace CryptoAPIs.Model
         public string Blockchain { get; set; }
 
         /// <summary>
-        /// Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
+        /// Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;,  are test networks.
         /// </summary>
-        /// <value>Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</value>
+        /// <value>Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;,  are test networks.</value>
         [DataMember(Name = "network", IsRequired = true, EmitDefaultValue = false)]
         public string Network { get; set; }
 
@@ -290,7 +314,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

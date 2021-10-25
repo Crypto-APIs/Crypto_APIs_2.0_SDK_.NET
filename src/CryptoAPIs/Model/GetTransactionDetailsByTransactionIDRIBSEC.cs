@@ -49,17 +49,35 @@ namespace CryptoAPIs.Model
         public GetTransactionDetailsByTransactionIDRIBSEC(string contract = default(string), string gasLimit = default(string), GetTransactionDetailsByTransactionIDRIBSECGasPrice gasPrice = default(GetTransactionDetailsByTransactionIDRIBSECGasPrice), string gasUsed = default(string), string inputData = default(string), string nonce = default(string))
         {
             // to ensure "contract" is required (not null)
-            this.Contract = contract ?? throw new ArgumentNullException("contract is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            if (contract == null) {
+                throw new ArgumentNullException("contract is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            }
+            this.Contract = contract;
             // to ensure "gasLimit" is required (not null)
-            this.GasLimit = gasLimit ?? throw new ArgumentNullException("gasLimit is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            if (gasLimit == null) {
+                throw new ArgumentNullException("gasLimit is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            }
+            this.GasLimit = gasLimit;
             // to ensure "gasPrice" is required (not null)
-            this.GasPrice = gasPrice ?? throw new ArgumentNullException("gasPrice is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            if (gasPrice == null) {
+                throw new ArgumentNullException("gasPrice is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            }
+            this.GasPrice = gasPrice;
             // to ensure "gasUsed" is required (not null)
-            this.GasUsed = gasUsed ?? throw new ArgumentNullException("gasUsed is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            if (gasUsed == null) {
+                throw new ArgumentNullException("gasUsed is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            }
+            this.GasUsed = gasUsed;
             // to ensure "inputData" is required (not null)
-            this.InputData = inputData ?? throw new ArgumentNullException("inputData is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            if (inputData == null) {
+                throw new ArgumentNullException("inputData is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            }
+            this.InputData = inputData;
             // to ensure "nonce" is required (not null)
-            this.Nonce = nonce ?? throw new ArgumentNullException("nonce is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            if (nonce == null) {
+                throw new ArgumentNullException("nonce is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
+            }
+            this.Nonce = nonce;
         }
 
         /// <summary>
@@ -213,7 +231,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

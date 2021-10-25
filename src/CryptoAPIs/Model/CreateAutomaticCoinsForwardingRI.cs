@@ -85,18 +85,33 @@ namespace CryptoAPIs.Model
         public CreateAutomaticCoinsForwardingRI(string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), FeePriorityEnum feePriority = default(FeePriorityEnum), string fromAddress = default(string), string minimumTransferAmount = default(string), string referenceId = default(string), string toAddress = default(string))
         {
             // to ensure "callbackUrl" is required (not null)
-            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            if (callbackUrl == null) {
+                throw new ArgumentNullException("callbackUrl is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.CallbackUrl = callbackUrl;
             this.ConfirmationsCount = confirmationsCount;
             this.CreatedTimestamp = createdTimestamp;
             this.FeePriority = feePriority;
             // to ensure "fromAddress" is required (not null)
-            this.FromAddress = fromAddress ?? throw new ArgumentNullException("fromAddress is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            if (fromAddress == null) {
+                throw new ArgumentNullException("fromAddress is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.FromAddress = fromAddress;
             // to ensure "minimumTransferAmount" is required (not null)
-            this.MinimumTransferAmount = minimumTransferAmount ?? throw new ArgumentNullException("minimumTransferAmount is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            if (minimumTransferAmount == null) {
+                throw new ArgumentNullException("minimumTransferAmount is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.MinimumTransferAmount = minimumTransferAmount;
             // to ensure "referenceId" is required (not null)
-            this.ReferenceId = referenceId ?? throw new ArgumentNullException("referenceId is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            if (referenceId == null) {
+                throw new ArgumentNullException("referenceId is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.ReferenceId = referenceId;
             // to ensure "toAddress" is required (not null)
-            this.ToAddress = toAddress ?? throw new ArgumentNullException("toAddress is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            if (toAddress == null) {
+                throw new ArgumentNullException("toAddress is a required property for CreateAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.ToAddress = toAddress;
         }
 
         /// <summary>
@@ -268,7 +283,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

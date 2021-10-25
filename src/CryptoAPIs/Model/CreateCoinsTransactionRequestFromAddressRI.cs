@@ -150,37 +150,58 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromAddressRI" /> class.
         /// </summary>
-        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs..</param>
-        /// <param name="callbackUrl">Verified URL for sending callbacks.</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security)..</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs..</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
+        /// <param name="note">Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request..</param>
         /// <param name="recipients">Defines the destination for the transaction, i.e. the recipient(s). (required).</param>
         /// <param name="senders">senders (required).</param>
+        /// <param name="transactionRequestId">Represents a unique identifier of the transaction request (the request sent to make a transaction), which helps in identifying which callback and which &#x60;referenceId&#x60; concern that specific transaction request. (required).</param>
         /// <param name="transactionRequestStatus">Defines the status of the transaction request, e.g. \&quot;created, \&quot;await_approval\&quot;, \&quot;pending\&quot;, \&quot;prepared\&quot;, \&quot;signed\&quot;, \&quot;broadcasted\&quot;, \&quot;success\&quot;, \&quot;failed\&quot;, \&quot;rejected\&quot;, mined\&quot;. (required).</param>
-        public CreateCoinsTransactionRequestFromAddressRI(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), List<CreateCoinsTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateCoinsTransactionRequestFromAddressRIRecipients>), CreateCoinsTransactionRequestFromAddressRISenders senders = default(CreateCoinsTransactionRequestFromAddressRISenders), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum))
+        public CreateCoinsTransactionRequestFromAddressRI(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), List<CreateCoinsTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateCoinsTransactionRequestFromAddressRIRecipients>), CreateCoinsTransactionRequestFromAddressRISenders senders = default(CreateCoinsTransactionRequestFromAddressRISenders), string transactionRequestId = default(string), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum))
         {
             this.FeePriority = feePriority;
             // to ensure "recipients" is required (not null)
-            this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for CreateCoinsTransactionRequestFromAddressRI and cannot be null");
+            if (recipients == null) {
+                throw new ArgumentNullException("recipients is a required property for CreateCoinsTransactionRequestFromAddressRI and cannot be null");
+            }
+            this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            this.Senders = senders ?? throw new ArgumentNullException("senders is a required property for CreateCoinsTransactionRequestFromAddressRI and cannot be null");
+            if (senders == null) {
+                throw new ArgumentNullException("senders is a required property for CreateCoinsTransactionRequestFromAddressRI and cannot be null");
+            }
+            this.Senders = senders;
+            // to ensure "transactionRequestId" is required (not null)
+            if (transactionRequestId == null) {
+                throw new ArgumentNullException("transactionRequestId is a required property for CreateCoinsTransactionRequestFromAddressRI and cannot be null");
+            }
+            this.TransactionRequestId = transactionRequestId;
             this.TransactionRequestStatus = transactionRequestStatus;
             this.CallbackSecretKey = callbackSecretKey;
             this.CallbackUrl = callbackUrl;
+            this.Note = note;
         }
 
         /// <summary>
-        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
         /// </summary>
-        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).</value>
         [DataMember(Name = "callbackSecretKey", EmitDefaultValue = false)]
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Verified URL for sending callbacks
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
         /// </summary>
-        /// <value>Verified URL for sending callbacks</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
         [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
+
+        /// <summary>
+        /// Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request.
+        /// </summary>
+        /// <value>Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request.</value>
+        [DataMember(Name = "note", EmitDefaultValue = false)]
+        public string Note { get; set; }
 
         /// <summary>
         /// Defines the destination for the transaction, i.e. the recipient(s).
@@ -196,6 +217,13 @@ namespace CryptoAPIs.Model
         public CreateCoinsTransactionRequestFromAddressRISenders Senders { get; set; }
 
         /// <summary>
+        /// Represents a unique identifier of the transaction request (the request sent to make a transaction), which helps in identifying which callback and which &#x60;referenceId&#x60; concern that specific transaction request.
+        /// </summary>
+        /// <value>Represents a unique identifier of the transaction request (the request sent to make a transaction), which helps in identifying which callback and which &#x60;referenceId&#x60; concern that specific transaction request.</value>
+        [DataMember(Name = "transactionRequestId", IsRequired = true, EmitDefaultValue = false)]
+        public string TransactionRequestId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -206,8 +234,10 @@ namespace CryptoAPIs.Model
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  FeePriority: ").Append(FeePriority).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("  Senders: ").Append(Senders).Append("\n");
+            sb.Append("  TransactionRequestId: ").Append(TransactionRequestId).Append("\n");
             sb.Append("  TransactionRequestStatus: ").Append(TransactionRequestStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -258,6 +288,11 @@ namespace CryptoAPIs.Model
                     this.FeePriority.Equals(input.FeePriority)
                 ) && 
                 (
+                    this.Note == input.Note ||
+                    (this.Note != null &&
+                    this.Note.Equals(input.Note))
+                ) && 
+                (
                     this.Recipients == input.Recipients ||
                     this.Recipients != null &&
                     input.Recipients != null &&
@@ -267,6 +302,11 @@ namespace CryptoAPIs.Model
                     this.Senders == input.Senders ||
                     (this.Senders != null &&
                     this.Senders.Equals(input.Senders))
+                ) && 
+                (
+                    this.TransactionRequestId == input.TransactionRequestId ||
+                    (this.TransactionRequestId != null &&
+                    this.TransactionRequestId.Equals(input.TransactionRequestId))
                 ) && 
                 (
                     this.TransactionRequestStatus == input.TransactionRequestStatus ||
@@ -288,10 +328,14 @@ namespace CryptoAPIs.Model
                 if (this.CallbackUrl != null)
                     hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
+                if (this.Note != null)
+                    hashCode = hashCode * 59 + this.Note.GetHashCode();
                 if (this.Recipients != null)
                     hashCode = hashCode * 59 + this.Recipients.GetHashCode();
                 if (this.Senders != null)
                     hashCode = hashCode * 59 + this.Senders.GetHashCode();
+                if (this.TransactionRequestId != null)
+                    hashCode = hashCode * 59 + this.TransactionRequestId.GetHashCode();
                 hashCode = hashCode * 59 + this.TransactionRequestStatus.GetHashCode();
                 return hashCode;
             }
@@ -302,7 +346,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

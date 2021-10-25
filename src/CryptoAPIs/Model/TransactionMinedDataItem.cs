@@ -47,13 +47,25 @@ namespace CryptoAPIs.Model
         public TransactionMinedDataItem(string blockchain = default(string), string network = default(string), string transactionId = default(string), TransactionMinedDataItemMinedInBlock minedInBlock = default(TransactionMinedDataItemMinedInBlock))
         {
             // to ensure "blockchain" is required (not null)
-            this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for TransactionMinedDataItem and cannot be null");
+            if (blockchain == null) {
+                throw new ArgumentNullException("blockchain is a required property for TransactionMinedDataItem and cannot be null");
+            }
+            this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            this.Network = network ?? throw new ArgumentNullException("network is a required property for TransactionMinedDataItem and cannot be null");
+            if (network == null) {
+                throw new ArgumentNullException("network is a required property for TransactionMinedDataItem and cannot be null");
+            }
+            this.Network = network;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for TransactionMinedDataItem and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for TransactionMinedDataItem and cannot be null");
+            }
+            this.TransactionId = transactionId;
             // to ensure "minedInBlock" is required (not null)
-            this.MinedInBlock = minedInBlock ?? throw new ArgumentNullException("minedInBlock is a required property for TransactionMinedDataItem and cannot be null");
+            if (minedInBlock == null) {
+                throw new ArgumentNullException("minedInBlock is a required property for TransactionMinedDataItem and cannot be null");
+            }
+            this.MinedInBlock = minedInBlock;
         }
 
         /// <summary>
@@ -177,7 +189,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

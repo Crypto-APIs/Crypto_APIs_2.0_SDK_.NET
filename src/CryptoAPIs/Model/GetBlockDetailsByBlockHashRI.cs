@@ -50,16 +50,28 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHashRI(string hash = default(string), int height = default(int), string nextBlockHash = default(string), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), GetBlockDetailsByBlockHashRIBS blockchainSpecific = default(GetBlockDetailsByBlockHashRIBS))
         {
             // to ensure "hash" is required (not null)
-            this.Hash = hash ?? throw new ArgumentNullException("hash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            if (hash == null) {
+                throw new ArgumentNullException("hash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.Hash = hash;
             this.Height = height;
             // to ensure "nextBlockHash" is required (not null)
-            this.NextBlockHash = nextBlockHash ?? throw new ArgumentNullException("nextBlockHash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            if (nextBlockHash == null) {
+                throw new ArgumentNullException("nextBlockHash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.NextBlockHash = nextBlockHash;
             // to ensure "previousBlockHash" is required (not null)
-            this.PreviousBlockHash = previousBlockHash ?? throw new ArgumentNullException("previousBlockHash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            if (previousBlockHash == null) {
+                throw new ArgumentNullException("previousBlockHash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             this.TransactionsCount = transactionsCount;
             // to ensure "blockchainSpecific" is required (not null)
-            this.BlockchainSpecific = blockchainSpecific ?? throw new ArgumentNullException("blockchainSpecific is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            if (blockchainSpecific == null) {
+                throw new ArgumentNullException("blockchainSpecific is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.BlockchainSpecific = blockchainSpecific;
         }
 
         /// <summary>
@@ -222,7 +234,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

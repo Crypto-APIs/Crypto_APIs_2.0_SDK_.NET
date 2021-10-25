@@ -88,7 +88,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `CreateAutomaticTokensForwardingRBTokenDataBitcoinOmniToken`. If the actual instanct is not `CreateAutomaticTokensForwardingRBTokenDataBitcoinOmniToken`,
+        /// Get the actual instance of `CreateAutomaticTokensForwardingRBTokenDataBitcoinOmniToken`. If the actual instance is not `CreateAutomaticTokensForwardingRBTokenDataBitcoinOmniToken`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of CreateAutomaticTokensForwardingRBTokenDataBitcoinOmniToken</returns>
@@ -98,7 +98,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `CreateAutomaticTokensForwardingRBTokenDataEthereumToken`. If the actual instanct is not `CreateAutomaticTokensForwardingRBTokenDataEthereumToken`,
+        /// Get the actual instance of `CreateAutomaticTokensForwardingRBTokenDataEthereumToken`. If the actual instance is not `CreateAutomaticTokensForwardingRBTokenDataEthereumToken`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of CreateAutomaticTokensForwardingRBTokenDataEthereumToken</returns>
@@ -138,7 +138,7 @@ namespace CryptoAPIs.Model
         {
             CreateAutomaticTokensForwardingRBTokenData newCreateAutomaticTokensForwardingRBTokenData = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newCreateAutomaticTokensForwardingRBTokenData;
             }

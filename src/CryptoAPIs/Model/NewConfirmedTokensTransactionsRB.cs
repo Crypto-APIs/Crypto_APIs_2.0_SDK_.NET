@@ -42,10 +42,13 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user..</param>
         /// <param name="data">data (required).</param>
-        public NewConfirmedTokensTransactionsRB(string context = default(string), NewUnconfirmedTokensTransactionsRBData data = default(NewUnconfirmedTokensTransactionsRBData))
+        public NewConfirmedTokensTransactionsRB(string context = default(string), NewConfirmedTokensTransactionsRBData data = default(NewConfirmedTokensTransactionsRBData))
         {
             // to ensure "data" is required (not null)
-            this.Data = data ?? throw new ArgumentNullException("data is a required property for NewConfirmedTokensTransactionsRB and cannot be null");
+            if (data == null) {
+                throw new ArgumentNullException("data is a required property for NewConfirmedTokensTransactionsRB and cannot be null");
+            }
+            this.Data = data;
             this.Context = context;
         }
 
@@ -60,7 +63,7 @@ namespace CryptoAPIs.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name = "data", IsRequired = true, EmitDefaultValue = false)]
-        public NewUnconfirmedTokensTransactionsRBData Data { get; set; }
+        public NewConfirmedTokensTransactionsRBData Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -140,7 +143,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -44,7 +44,10 @@ namespace CryptoAPIs.Model
         public SyncHDWalletXPubYPubZPubRBDataItem(string extendedPublicKey = default(string))
         {
             // to ensure "extendedPublicKey" is required (not null)
-            this.ExtendedPublicKey = extendedPublicKey ?? throw new ArgumentNullException("extendedPublicKey is a required property for SyncHDWalletXPubYPubZPubRBDataItem and cannot be null");
+            if (extendedPublicKey == null) {
+                throw new ArgumentNullException("extendedPublicKey is a required property for SyncHDWalletXPubYPubZPubRBDataItem and cannot be null");
+            }
+            this.ExtendedPublicKey = extendedPublicKey;
         }
 
         /// <summary>
@@ -124,7 +127,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

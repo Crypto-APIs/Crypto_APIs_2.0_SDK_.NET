@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionUnconfirmedToken" /> class
-        /// with the <see cref="AddressTokensTransactionUnconfirmedEthereumerc20token" /> class
+        /// with the <see cref="AddressTokensTransactionUnconfirmedErc20" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionUnconfirmedEthereumerc20token.</param>
-        public AddressTokensTransactionUnconfirmedToken(AddressTokensTransactionUnconfirmedEthereumerc20token actualInstance)
+        /// <param name="actualInstance">An instance of AddressTokensTransactionUnconfirmedErc20.</param>
+        public AddressTokensTransactionUnconfirmedToken(AddressTokensTransactionUnconfirmedErc20 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionUnconfirmedToken" /> class
-        /// with the <see cref="AddressTokensTransactionUnconfirmedEthereumerc721token" /> class
+        /// with the <see cref="AddressTokensTransactionUnconfirmedErc721" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionUnconfirmedEthereumerc721token.</param>
-        public AddressTokensTransactionUnconfirmedToken(AddressTokensTransactionUnconfirmedEthereumerc721token actualInstance)
+        /// <param name="actualInstance">An instance of AddressTokensTransactionUnconfirmedErc721.</param>
+        public AddressTokensTransactionUnconfirmedToken(AddressTokensTransactionUnconfirmedErc721 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionUnconfirmedToken" /> class
-        /// with the <see cref="AddressTokensTransactionUnconfirmedOmnilayertoken" /> class
+        /// with the <see cref="AddressTokensTransactionUnconfirmedOmni" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionUnconfirmedOmnilayertoken.</param>
-        public AddressTokensTransactionUnconfirmedToken(AddressTokensTransactionUnconfirmedOmnilayertoken actualInstance)
+        /// <param name="actualInstance">An instance of AddressTokensTransactionUnconfirmedOmni.</param>
+        public AddressTokensTransactionUnconfirmedToken(AddressTokensTransactionUnconfirmedOmni actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -84,53 +84,53 @@ namespace CryptoAPIs.Model
             }
             set
             {
-                if (value.GetType() == typeof(AddressTokensTransactionUnconfirmedEthereumerc20token))
+                if (value.GetType() == typeof(AddressTokensTransactionUnconfirmedErc20))
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AddressTokensTransactionUnconfirmedEthereumerc721token))
+                else if (value.GetType() == typeof(AddressTokensTransactionUnconfirmedErc721))
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AddressTokensTransactionUnconfirmedOmnilayertoken))
+                else if (value.GetType() == typeof(AddressTokensTransactionUnconfirmedOmni))
                 {
                     this._actualInstance = value;
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: AddressTokensTransactionUnconfirmedEthereumerc20token, AddressTokensTransactionUnconfirmedEthereumerc721token, AddressTokensTransactionUnconfirmedOmnilayertoken");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: AddressTokensTransactionUnconfirmedErc20, AddressTokensTransactionUnconfirmedErc721, AddressTokensTransactionUnconfirmedOmni");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionUnconfirmedEthereumerc20token`. If the actual instanct is not `AddressTokensTransactionUnconfirmedEthereumerc20token`,
+        /// Get the actual instance of `AddressTokensTransactionUnconfirmedErc20`. If the actual instance is not `AddressTokensTransactionUnconfirmedErc20`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddressTokensTransactionUnconfirmedEthereumerc20token</returns>
-        public AddressTokensTransactionUnconfirmedEthereumerc20token GetAddressTokensTransactionUnconfirmedEthereumerc20token()
+        /// <returns>An instance of AddressTokensTransactionUnconfirmedErc20</returns>
+        public AddressTokensTransactionUnconfirmedErc20 GetAddressTokensTransactionUnconfirmedErc20()
         {
-            return (AddressTokensTransactionUnconfirmedEthereumerc20token)this.ActualInstance;
+            return (AddressTokensTransactionUnconfirmedErc20)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionUnconfirmedEthereumerc721token`. If the actual instanct is not `AddressTokensTransactionUnconfirmedEthereumerc721token`,
+        /// Get the actual instance of `AddressTokensTransactionUnconfirmedErc721`. If the actual instance is not `AddressTokensTransactionUnconfirmedErc721`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddressTokensTransactionUnconfirmedEthereumerc721token</returns>
-        public AddressTokensTransactionUnconfirmedEthereumerc721token GetAddressTokensTransactionUnconfirmedEthereumerc721token()
+        /// <returns>An instance of AddressTokensTransactionUnconfirmedErc721</returns>
+        public AddressTokensTransactionUnconfirmedErc721 GetAddressTokensTransactionUnconfirmedErc721()
         {
-            return (AddressTokensTransactionUnconfirmedEthereumerc721token)this.ActualInstance;
+            return (AddressTokensTransactionUnconfirmedErc721)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionUnconfirmedOmnilayertoken`. If the actual instanct is not `AddressTokensTransactionUnconfirmedOmnilayertoken`,
+        /// Get the actual instance of `AddressTokensTransactionUnconfirmedOmni`. If the actual instance is not `AddressTokensTransactionUnconfirmedOmni`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddressTokensTransactionUnconfirmedOmnilayertoken</returns>
-        public AddressTokensTransactionUnconfirmedOmnilayertoken GetAddressTokensTransactionUnconfirmedOmnilayertoken()
+        /// <returns>An instance of AddressTokensTransactionUnconfirmedOmni</returns>
+        public AddressTokensTransactionUnconfirmedOmni GetAddressTokensTransactionUnconfirmedOmni()
         {
-            return (AddressTokensTransactionUnconfirmedOmnilayertoken)this.ActualInstance;
+            return (AddressTokensTransactionUnconfirmedOmni)this.ActualInstance;
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace CryptoAPIs.Model
         {
             AddressTokensTransactionUnconfirmedToken newAddressTokensTransactionUnconfirmedToken = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newAddressTokensTransactionUnconfirmedToken;
             }
@@ -174,61 +174,61 @@ namespace CryptoAPIs.Model
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddressTokensTransactionUnconfirmedEthereumerc20token).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddressTokensTransactionUnconfirmedErc20).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedEthereumerc20token>(jsonString, AddressTokensTransactionUnconfirmedToken.SerializerSettings));
+                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedErc20>(jsonString, AddressTokensTransactionUnconfirmedToken.SerializerSettings));
                 }
                 else
                 {
-                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedEthereumerc20token>(jsonString, AddressTokensTransactionUnconfirmedToken.AdditionalPropertiesSerializerSettings));
+                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedErc20>(jsonString, AddressTokensTransactionUnconfirmedToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddressTokensTransactionUnconfirmedEthereumerc20token");
+                matchedTypes.Add("AddressTokensTransactionUnconfirmedErc20");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionUnconfirmedEthereumerc20token: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionUnconfirmedErc20: {1}", jsonString, exception.ToString()));
             }
 
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddressTokensTransactionUnconfirmedEthereumerc721token).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddressTokensTransactionUnconfirmedErc721).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedEthereumerc721token>(jsonString, AddressTokensTransactionUnconfirmedToken.SerializerSettings));
+                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedErc721>(jsonString, AddressTokensTransactionUnconfirmedToken.SerializerSettings));
                 }
                 else
                 {
-                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedEthereumerc721token>(jsonString, AddressTokensTransactionUnconfirmedToken.AdditionalPropertiesSerializerSettings));
+                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedErc721>(jsonString, AddressTokensTransactionUnconfirmedToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddressTokensTransactionUnconfirmedEthereumerc721token");
+                matchedTypes.Add("AddressTokensTransactionUnconfirmedErc721");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionUnconfirmedEthereumerc721token: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionUnconfirmedErc721: {1}", jsonString, exception.ToString()));
             }
 
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddressTokensTransactionUnconfirmedOmnilayertoken).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddressTokensTransactionUnconfirmedOmni).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedOmnilayertoken>(jsonString, AddressTokensTransactionUnconfirmedToken.SerializerSettings));
+                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedOmni>(jsonString, AddressTokensTransactionUnconfirmedToken.SerializerSettings));
                 }
                 else
                 {
-                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedOmnilayertoken>(jsonString, AddressTokensTransactionUnconfirmedToken.AdditionalPropertiesSerializerSettings));
+                    newAddressTokensTransactionUnconfirmedToken = new AddressTokensTransactionUnconfirmedToken(JsonConvert.DeserializeObject<AddressTokensTransactionUnconfirmedOmni>(jsonString, AddressTokensTransactionUnconfirmedToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddressTokensTransactionUnconfirmedOmnilayertoken");
+                matchedTypes.Add("AddressTokensTransactionUnconfirmedOmni");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionUnconfirmedOmnilayertoken: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionUnconfirmedOmni: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)

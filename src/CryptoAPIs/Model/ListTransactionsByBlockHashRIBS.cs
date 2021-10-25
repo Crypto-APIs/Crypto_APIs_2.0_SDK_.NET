@@ -60,6 +60,18 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListTransactionsByBlockHashRIBS" /> class
+        /// with the <see cref="ListTransactionsByBlockHashRIBSBSC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ListTransactionsByBlockHashRIBSBSC.</param>
+        public ListTransactionsByBlockHashRIBS(ListTransactionsByBlockHashRIBSBSC actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListTransactionsByBlockHashRIBS" /> class
         /// with the <see cref="ListTransactionsByBlockHashRIBSD" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of ListTransactionsByBlockHashRIBSD.</param>
@@ -118,6 +130,18 @@ namespace CryptoAPIs.Model
             this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListTransactionsByBlockHashRIBS" /> class
+        /// with the <see cref="ListTransactionsByBlockHashRIBSZ" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ListTransactionsByBlockHashRIBSZ.</param>
+        public ListTransactionsByBlockHashRIBS(ListTransactionsByBlockHashRIBSZ actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
 
         private Object _actualInstance;
 
@@ -137,6 +161,10 @@ namespace CryptoAPIs.Model
                     this._actualInstance = value;
                 }
                 else if (value.GetType() == typeof(ListTransactionsByBlockHashRIBSBC))
+                {
+                    this._actualInstance = value;
+                }
+                else if (value.GetType() == typeof(ListTransactionsByBlockHashRIBSBSC))
                 {
                     this._actualInstance = value;
                 }
@@ -160,15 +188,19 @@ namespace CryptoAPIs.Model
                 {
                     this._actualInstance = value;
                 }
+                else if (value.GetType() == typeof(ListTransactionsByBlockHashRIBSZ))
+                {
+                    this._actualInstance = value;
+                }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: ListTransactionsByBlockHashRIBSB, ListTransactionsByBlockHashRIBSBC, ListTransactionsByBlockHashRIBSD, ListTransactionsByBlockHashRIBSD2, ListTransactionsByBlockHashRIBSE, ListTransactionsByBlockHashRIBSEC, ListTransactionsByBlockHashRIBSL");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: ListTransactionsByBlockHashRIBSB, ListTransactionsByBlockHashRIBSBC, ListTransactionsByBlockHashRIBSBSC, ListTransactionsByBlockHashRIBSD, ListTransactionsByBlockHashRIBSD2, ListTransactionsByBlockHashRIBSE, ListTransactionsByBlockHashRIBSEC, ListTransactionsByBlockHashRIBSL, ListTransactionsByBlockHashRIBSZ");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHashRIBSB`. If the actual instanct is not `ListTransactionsByBlockHashRIBSB`,
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSB`. If the actual instance is not `ListTransactionsByBlockHashRIBSB`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListTransactionsByBlockHashRIBSB</returns>
@@ -178,7 +210,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHashRIBSBC`. If the actual instanct is not `ListTransactionsByBlockHashRIBSBC`,
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSBC`. If the actual instance is not `ListTransactionsByBlockHashRIBSBC`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListTransactionsByBlockHashRIBSBC</returns>
@@ -188,7 +220,17 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHashRIBSD`. If the actual instanct is not `ListTransactionsByBlockHashRIBSD`,
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSBSC`. If the actual instance is not `ListTransactionsByBlockHashRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListTransactionsByBlockHashRIBSBSC</returns>
+        public ListTransactionsByBlockHashRIBSBSC GetListTransactionsByBlockHashRIBSBSC()
+        {
+            return (ListTransactionsByBlockHashRIBSBSC)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSD`. If the actual instance is not `ListTransactionsByBlockHashRIBSD`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListTransactionsByBlockHashRIBSD</returns>
@@ -198,7 +240,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHashRIBSD2`. If the actual instanct is not `ListTransactionsByBlockHashRIBSD2`,
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSD2`. If the actual instance is not `ListTransactionsByBlockHashRIBSD2`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListTransactionsByBlockHashRIBSD2</returns>
@@ -208,7 +250,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHashRIBSE`. If the actual instanct is not `ListTransactionsByBlockHashRIBSE`,
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSE`. If the actual instance is not `ListTransactionsByBlockHashRIBSE`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListTransactionsByBlockHashRIBSE</returns>
@@ -218,7 +260,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHashRIBSEC`. If the actual instanct is not `ListTransactionsByBlockHashRIBSEC`,
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSEC`. If the actual instance is not `ListTransactionsByBlockHashRIBSEC`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListTransactionsByBlockHashRIBSEC</returns>
@@ -228,13 +270,23 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHashRIBSL`. If the actual instanct is not `ListTransactionsByBlockHashRIBSL`,
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSL`. If the actual instance is not `ListTransactionsByBlockHashRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListTransactionsByBlockHashRIBSL</returns>
         public ListTransactionsByBlockHashRIBSL GetListTransactionsByBlockHashRIBSL()
         {
             return (ListTransactionsByBlockHashRIBSL)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListTransactionsByBlockHashRIBSZ`. If the actual instance is not `ListTransactionsByBlockHashRIBSZ`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListTransactionsByBlockHashRIBSZ</returns>
+        public ListTransactionsByBlockHashRIBSZ GetListTransactionsByBlockHashRIBSZ()
+        {
+            return (ListTransactionsByBlockHashRIBSZ)this.ActualInstance;
         }
 
         /// <summary>
@@ -268,7 +320,7 @@ namespace CryptoAPIs.Model
         {
             ListTransactionsByBlockHashRIBS newListTransactionsByBlockHashRIBS = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newListTransactionsByBlockHashRIBS;
             }
@@ -313,6 +365,26 @@ namespace CryptoAPIs.Model
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSBC: {1}", jsonString, exception.ToString()));
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(ListTransactionsByBlockHashRIBSBSC).GetProperty("AdditionalProperties") == null)
+                {
+                    newListTransactionsByBlockHashRIBS = new ListTransactionsByBlockHashRIBS(JsonConvert.DeserializeObject<ListTransactionsByBlockHashRIBSBSC>(jsonString, ListTransactionsByBlockHashRIBS.SerializerSettings));
+                }
+                else
+                {
+                    newListTransactionsByBlockHashRIBS = new ListTransactionsByBlockHashRIBS(JsonConvert.DeserializeObject<ListTransactionsByBlockHashRIBSBSC>(jsonString, ListTransactionsByBlockHashRIBS.AdditionalPropertiesSerializerSettings));
+                }
+                matchedTypes.Add("ListTransactionsByBlockHashRIBSBSC");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSBSC: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -413,6 +485,26 @@ namespace CryptoAPIs.Model
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSL: {1}", jsonString, exception.ToString()));
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(ListTransactionsByBlockHashRIBSZ).GetProperty("AdditionalProperties") == null)
+                {
+                    newListTransactionsByBlockHashRIBS = new ListTransactionsByBlockHashRIBS(JsonConvert.DeserializeObject<ListTransactionsByBlockHashRIBSZ>(jsonString, ListTransactionsByBlockHashRIBS.SerializerSettings));
+                }
+                else
+                {
+                    newListTransactionsByBlockHashRIBS = new ListTransactionsByBlockHashRIBS(JsonConvert.DeserializeObject<ListTransactionsByBlockHashRIBSZ>(jsonString, ListTransactionsByBlockHashRIBS.AdditionalPropertiesSerializerSettings));
+                }
+                matchedTypes.Add("ListTransactionsByBlockHashRIBSZ");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into ListTransactionsByBlockHashRIBSZ: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)

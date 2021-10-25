@@ -56,6 +56,23 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test CreateCoinsTransactionFromAddressForWholeAmount
+        /// </summary>
+        [Fact]
+        public void CreateCoinsTransactionFromAddressForWholeAmountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string address = null;
+            //string blockchain = null;
+            //string network = null;
+            //string walletId = null;
+            //string context = null;
+            //CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = null;
+            //var response = instance.CreateCoinsTransactionFromAddressForWholeAmount(address, blockchain, network, walletId, context, createCoinsTransactionFromAddressForWholeAmountRB);
+            //Assert.IsType<CreateCoinsTransactionFromAddressForWholeAmountR>(response);
+        }
+
+        /// <summary>
         /// Test CreateCoinsTransactionRequestFromAddress
         /// </summary>
         [Fact]

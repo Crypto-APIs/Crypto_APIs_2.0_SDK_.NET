@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **Type** | **string** | Defines the type of the transaction as a string. | 
 **TypeInt** | **int** | Defines the type of the transaction as a number. | 
 **Valid** | **bool** | Defines whether the transaction is valid or not, as boolean. E.g., if it is \&quot;true\&quot;, the transaction is valid. | 
-**Version** | **int** | Defines the specific version. | 
+**_Version** | **int** | Defines the specific version. | 
 **Fee** | [**ListOmniTransactionsByBlockHeightRIFee**](ListOmniTransactionsByBlockHeightRIFee.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

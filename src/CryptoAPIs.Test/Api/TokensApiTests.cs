@@ -56,18 +56,35 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test GetContractDetailsByAddress
+        /// Test GetTokenDetailsByContractAddress
         /// </summary>
         [Fact]
-        public void GetContractDetailsByAddressTest()
+        public void GetTokenDetailsByContractAddressTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
             //string network = null;
             //string contractAddress = null;
             //string context = null;
-            //var response = instance.GetContractDetailsByAddress(blockchain, network, contractAddress, context);
-            //Assert.IsType<GetContractDetailsByAddressR>(response);
+            //var response = instance.GetTokenDetailsByContractAddress(blockchain, network, contractAddress, context);
+            //Assert.IsType<GetTokenDetailsByContractAddressR>(response);
+        }
+
+        /// <summary>
+        /// Test ListConfirmedTokensTransfersByAddress
+        /// </summary>
+        [Fact]
+        public void ListConfirmedTokensTransfersByAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListConfirmedTokensTransfersByAddress(blockchain, network, address, context, limit, offset);
+            //Assert.IsType<ListConfirmedTokensTransfersByAddressR>(response);
         }
 
         /// <summary>
@@ -85,23 +102,6 @@ namespace CryptoAPIs.Test.Api
             //int? offset = null;
             //var response = instance.ListTokensByAddress(blockchain, network, address, context, limit, offset);
             //Assert.IsType<ListTokensByAddressR>(response);
-        }
-
-        /// <summary>
-        /// Test ListTokensTransfersByAddress
-        /// </summary>
-        [Fact]
-        public void ListTokensTransfersByAddressTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string blockchain = null;
-            //string network = null;
-            //string address = null;
-            //string context = null;
-            //int? limit = null;
-            //int? offset = null;
-            //var response = instance.ListTokensTransfersByAddress(blockchain, network, address, context, limit, offset);
-            //Assert.IsType<ListTokensTransfersByAddressR>(response);
         }
 
         /// <summary>

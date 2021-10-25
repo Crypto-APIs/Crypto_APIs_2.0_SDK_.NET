@@ -87,21 +87,42 @@ namespace CryptoAPIs.Model
         public ListTokensForwardingAutomationsRI(string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), string feeAddress = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string fromAddress = default(string), string minimumTransferAmount = default(string), string referenceId = default(string), string toAddress = default(string), ListTokensForwardingAutomationsRITS tokenData = default(ListTokensForwardingAutomationsRITS))
         {
             // to ensure "callbackUrl" is required (not null)
-            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            if (callbackUrl == null) {
+                throw new ArgumentNullException("callbackUrl is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            }
+            this.CallbackUrl = callbackUrl;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "feeAddress" is required (not null)
-            this.FeeAddress = feeAddress ?? throw new ArgumentNullException("feeAddress is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            if (feeAddress == null) {
+                throw new ArgumentNullException("feeAddress is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            }
+            this.FeeAddress = feeAddress;
             this.FeePriority = feePriority;
             // to ensure "fromAddress" is required (not null)
-            this.FromAddress = fromAddress ?? throw new ArgumentNullException("fromAddress is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            if (fromAddress == null) {
+                throw new ArgumentNullException("fromAddress is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            }
+            this.FromAddress = fromAddress;
             // to ensure "minimumTransferAmount" is required (not null)
-            this.MinimumTransferAmount = minimumTransferAmount ?? throw new ArgumentNullException("minimumTransferAmount is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            if (minimumTransferAmount == null) {
+                throw new ArgumentNullException("minimumTransferAmount is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            }
+            this.MinimumTransferAmount = minimumTransferAmount;
             // to ensure "referenceId" is required (not null)
-            this.ReferenceId = referenceId ?? throw new ArgumentNullException("referenceId is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            if (referenceId == null) {
+                throw new ArgumentNullException("referenceId is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            }
+            this.ReferenceId = referenceId;
             // to ensure "toAddress" is required (not null)
-            this.ToAddress = toAddress ?? throw new ArgumentNullException("toAddress is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            if (toAddress == null) {
+                throw new ArgumentNullException("toAddress is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            }
+            this.ToAddress = toAddress;
             // to ensure "tokenData" is required (not null)
-            this.TokenData = tokenData ?? throw new ArgumentNullException("tokenData is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            if (tokenData == null) {
+                throw new ArgumentNullException("tokenData is a required property for ListTokensForwardingAutomationsRI and cannot be null");
+            }
+            this.TokenData = tokenData;
             this.ConfirmationsCount = confirmationsCount;
         }
 
@@ -303,7 +324,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

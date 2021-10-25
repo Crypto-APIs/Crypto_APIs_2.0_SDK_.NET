@@ -80,20 +80,41 @@ namespace CryptoAPIs.Model
         public ListAssetsDetailsRI(string assetId = default(string), ListAssetsDetailsRIAssetLogo assetLogo = default(ListAssetsDetailsRIAssetLogo), string assetName = default(string), string assetOriginalSymbol = default(string), string assetSymbol = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), ListAssetsDetailsRILatestRate latestRate = default(ListAssetsDetailsRILatestRate), string slug = default(string), ListAssetsDetailsRIS specificData = default(ListAssetsDetailsRIS))
         {
             // to ensure "assetId" is required (not null)
-            this.AssetId = assetId ?? throw new ArgumentNullException("assetId is a required property for ListAssetsDetailsRI and cannot be null");
+            if (assetId == null) {
+                throw new ArgumentNullException("assetId is a required property for ListAssetsDetailsRI and cannot be null");
+            }
+            this.AssetId = assetId;
             // to ensure "assetLogo" is required (not null)
-            this.AssetLogo = assetLogo ?? throw new ArgumentNullException("assetLogo is a required property for ListAssetsDetailsRI and cannot be null");
+            if (assetLogo == null) {
+                throw new ArgumentNullException("assetLogo is a required property for ListAssetsDetailsRI and cannot be null");
+            }
+            this.AssetLogo = assetLogo;
             // to ensure "assetName" is required (not null)
-            this.AssetName = assetName ?? throw new ArgumentNullException("assetName is a required property for ListAssetsDetailsRI and cannot be null");
+            if (assetName == null) {
+                throw new ArgumentNullException("assetName is a required property for ListAssetsDetailsRI and cannot be null");
+            }
+            this.AssetName = assetName;
             // to ensure "assetOriginalSymbol" is required (not null)
-            this.AssetOriginalSymbol = assetOriginalSymbol ?? throw new ArgumentNullException("assetOriginalSymbol is a required property for ListAssetsDetailsRI and cannot be null");
+            if (assetOriginalSymbol == null) {
+                throw new ArgumentNullException("assetOriginalSymbol is a required property for ListAssetsDetailsRI and cannot be null");
+            }
+            this.AssetOriginalSymbol = assetOriginalSymbol;
             // to ensure "assetSymbol" is required (not null)
-            this.AssetSymbol = assetSymbol ?? throw new ArgumentNullException("assetSymbol is a required property for ListAssetsDetailsRI and cannot be null");
+            if (assetSymbol == null) {
+                throw new ArgumentNullException("assetSymbol is a required property for ListAssetsDetailsRI and cannot be null");
+            }
+            this.AssetSymbol = assetSymbol;
             this.AssetType = assetType;
             // to ensure "latestRate" is required (not null)
-            this.LatestRate = latestRate ?? throw new ArgumentNullException("latestRate is a required property for ListAssetsDetailsRI and cannot be null");
+            if (latestRate == null) {
+                throw new ArgumentNullException("latestRate is a required property for ListAssetsDetailsRI and cannot be null");
+            }
+            this.LatestRate = latestRate;
             // to ensure "specificData" is required (not null)
-            this.SpecificData = specificData ?? throw new ArgumentNullException("specificData is a required property for ListAssetsDetailsRI and cannot be null");
+            if (specificData == null) {
+                throw new ArgumentNullException("specificData is a required property for ListAssetsDetailsRI and cannot be null");
+            }
+            this.SpecificData = specificData;
             this.Slug = slug;
         }
 
@@ -282,7 +303,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

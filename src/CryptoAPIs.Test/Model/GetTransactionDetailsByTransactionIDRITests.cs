@@ -66,6 +66,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Index'
         }
         /// <summary>
+        /// Test the property 'IsConfirmed'
+        /// </summary>
+        [Fact]
+        public void IsConfirmedTest()
+        {
+            // TODO unit test for the property 'IsConfirmed'
+        }
+        /// <summary>
         /// Test the property 'MinedInBlockHash'
         /// </summary>
         [Fact]
@@ -128,14 +136,6 @@ namespace CryptoAPIs.Test.Model
         public void FeeTest()
         {
             // TODO unit test for the property 'Fee'
-        }
-        /// <summary>
-        /// Test the property 'IsConfirmed'
-        /// </summary>
-        [Fact]
-        public void IsConfirmedTest()
-        {
-            // TODO unit test for the property 'IsConfirmed'
         }
         /// <summary>
         /// Test the property 'BlockchainSpecific'

@@ -48,14 +48,26 @@ namespace CryptoAPIs.Model
         public ListOmniTokensByAddressRI(string balance = default(string), string frozen = default(string), string name = default(string), int propertyId = default(int), string reserved = default(string))
         {
             // to ensure "balance" is required (not null)
-            this.Balance = balance ?? throw new ArgumentNullException("balance is a required property for ListOmniTokensByAddressRI and cannot be null");
+            if (balance == null) {
+                throw new ArgumentNullException("balance is a required property for ListOmniTokensByAddressRI and cannot be null");
+            }
+            this.Balance = balance;
             // to ensure "frozen" is required (not null)
-            this.Frozen = frozen ?? throw new ArgumentNullException("frozen is a required property for ListOmniTokensByAddressRI and cannot be null");
+            if (frozen == null) {
+                throw new ArgumentNullException("frozen is a required property for ListOmniTokensByAddressRI and cannot be null");
+            }
+            this.Frozen = frozen;
             // to ensure "name" is required (not null)
-            this.Name = name ?? throw new ArgumentNullException("name is a required property for ListOmniTokensByAddressRI and cannot be null");
+            if (name == null) {
+                throw new ArgumentNullException("name is a required property for ListOmniTokensByAddressRI and cannot be null");
+            }
+            this.Name = name;
             this.PropertyId = propertyId;
             // to ensure "reserved" is required (not null)
-            this.Reserved = reserved ?? throw new ArgumentNullException("reserved is a required property for ListOmniTokensByAddressRI and cannot be null");
+            if (reserved == null) {
+                throw new ArgumentNullException("reserved is a required property for ListOmniTokensByAddressRI and cannot be null");
+            }
+            this.Reserved = reserved;
         }
 
         /// <summary>
@@ -193,7 +205,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

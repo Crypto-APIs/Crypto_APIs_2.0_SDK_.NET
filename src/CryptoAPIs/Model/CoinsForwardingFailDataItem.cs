@@ -78,18 +78,36 @@ namespace CryptoAPIs.Model
         public CoinsForwardingFailDataItem(string blockchain = default(string), string network = default(string), string fromAddress = default(string), string toAddress = default(string), string triggerTransactionId = default(string), ErrorCodeEnum errorCode = default(ErrorCodeEnum), string errorMessage = default(string))
         {
             // to ensure "blockchain" is required (not null)
-            this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for CoinsForwardingFailDataItem and cannot be null");
+            if (blockchain == null) {
+                throw new ArgumentNullException("blockchain is a required property for CoinsForwardingFailDataItem and cannot be null");
+            }
+            this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            this.Network = network ?? throw new ArgumentNullException("network is a required property for CoinsForwardingFailDataItem and cannot be null");
+            if (network == null) {
+                throw new ArgumentNullException("network is a required property for CoinsForwardingFailDataItem and cannot be null");
+            }
+            this.Network = network;
             // to ensure "fromAddress" is required (not null)
-            this.FromAddress = fromAddress ?? throw new ArgumentNullException("fromAddress is a required property for CoinsForwardingFailDataItem and cannot be null");
+            if (fromAddress == null) {
+                throw new ArgumentNullException("fromAddress is a required property for CoinsForwardingFailDataItem and cannot be null");
+            }
+            this.FromAddress = fromAddress;
             // to ensure "toAddress" is required (not null)
-            this.ToAddress = toAddress ?? throw new ArgumentNullException("toAddress is a required property for CoinsForwardingFailDataItem and cannot be null");
+            if (toAddress == null) {
+                throw new ArgumentNullException("toAddress is a required property for CoinsForwardingFailDataItem and cannot be null");
+            }
+            this.ToAddress = toAddress;
             // to ensure "triggerTransactionId" is required (not null)
-            this.TriggerTransactionId = triggerTransactionId ?? throw new ArgumentNullException("triggerTransactionId is a required property for CoinsForwardingFailDataItem and cannot be null");
+            if (triggerTransactionId == null) {
+                throw new ArgumentNullException("triggerTransactionId is a required property for CoinsForwardingFailDataItem and cannot be null");
+            }
+            this.TriggerTransactionId = triggerTransactionId;
             this.ErrorCode = errorCode;
             // to ensure "errorMessage" is required (not null)
-            this.ErrorMessage = errorMessage ?? throw new ArgumentNullException("errorMessage is a required property for CoinsForwardingFailDataItem and cannot be null");
+            if (errorMessage == null) {
+                throw new ArgumentNullException("errorMessage is a required property for CoinsForwardingFailDataItem and cannot be null");
+            }
+            this.ErrorMessage = errorMessage;
         }
 
         /// <summary>
@@ -250,7 +268,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

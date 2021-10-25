@@ -41,6 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetXRPRippleTransactionDetailsByTransactionIDRI" /> class.
         /// </summary>
         /// <param name="additionalData">Represents additional data that may be needed. (required).</param>
+        /// <param name="destinationTag">destinationTag.</param>
         /// <param name="index">Defines the index of the transaction, i.e. the consecutive place it takes in the blockchain. (required).</param>
         /// <param name="minedInBlockHash">Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. (required).</param>
         /// <param name="minedInBlockHeight">Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. (required).</param>
@@ -55,34 +56,71 @@ namespace CryptoAPIs.Model
         /// <param name="type">Defines the type of the transaction. (required).</param>
         /// <param name="fee">fee (required).</param>
         /// <param name="value">value (required).</param>
-        public GetXRPRippleTransactionDetailsByTransactionIDRI(string additionalData = default(string), string index = default(string), string minedInBlockHash = default(string), string minedInBlockHeight = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIOffer offer = default(GetXRPRippleTransactionDetailsByTransactionIDRIOffer), GetXRPRippleTransactionDetailsByTransactionIDRIReceive receive = default(GetXRPRippleTransactionDetailsByTransactionIDRIReceive), List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients>), List<GetXRPRippleTransactionDetailsByTransactionIDRISenders> senders = default(List<GetXRPRippleTransactionDetailsByTransactionIDRISenders>), int sequence = default(int), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIFee fee = default(GetXRPRippleTransactionDetailsByTransactionIDRIFee), GetXRPRippleTransactionDetailsByTransactionIDRIValue value = default(GetXRPRippleTransactionDetailsByTransactionIDRIValue))
+        public GetXRPRippleTransactionDetailsByTransactionIDRI(string additionalData = default(string), int destinationTag = default(int), string index = default(string), string minedInBlockHash = default(string), string minedInBlockHeight = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIOffer offer = default(GetXRPRippleTransactionDetailsByTransactionIDRIOffer), GetXRPRippleTransactionDetailsByTransactionIDRIReceive receive = default(GetXRPRippleTransactionDetailsByTransactionIDRIReceive), List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients>), List<GetXRPRippleTransactionDetailsByTransactionIDRISenders> senders = default(List<GetXRPRippleTransactionDetailsByTransactionIDRISenders>), int sequence = default(int), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIFee fee = default(GetXRPRippleTransactionDetailsByTransactionIDRIFee), GetXRPRippleTransactionDetailsByTransactionIDRIValue value = default(GetXRPRippleTransactionDetailsByTransactionIDRIValue))
         {
             // to ensure "additionalData" is required (not null)
-            this.AdditionalData = additionalData ?? throw new ArgumentNullException("additionalData is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (additionalData == null) {
+                throw new ArgumentNullException("additionalData is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.AdditionalData = additionalData;
             // to ensure "index" is required (not null)
-            this.Index = index ?? throw new ArgumentNullException("index is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (index == null) {
+                throw new ArgumentNullException("index is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Index = index;
             // to ensure "minedInBlockHash" is required (not null)
-            this.MinedInBlockHash = minedInBlockHash ?? throw new ArgumentNullException("minedInBlockHash is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (minedInBlockHash == null) {
+                throw new ArgumentNullException("minedInBlockHash is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.MinedInBlockHash = minedInBlockHash;
             // to ensure "minedInBlockHeight" is required (not null)
-            this.MinedInBlockHeight = minedInBlockHeight ?? throw new ArgumentNullException("minedInBlockHeight is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (minedInBlockHeight == null) {
+                throw new ArgumentNullException("minedInBlockHeight is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.MinedInBlockHeight = minedInBlockHeight;
             // to ensure "offer" is required (not null)
-            this.Offer = offer ?? throw new ArgumentNullException("offer is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (offer == null) {
+                throw new ArgumentNullException("offer is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Offer = offer;
             // to ensure "receive" is required (not null)
-            this.Receive = receive ?? throw new ArgumentNullException("receive is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (receive == null) {
+                throw new ArgumentNullException("receive is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Receive = receive;
             // to ensure "recipients" is required (not null)
-            this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (recipients == null) {
+                throw new ArgumentNullException("recipients is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            this.Senders = senders ?? throw new ArgumentNullException("senders is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (senders == null) {
+                throw new ArgumentNullException("senders is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Senders = senders;
             this.Sequence = sequence;
             this.Timestamp = timestamp;
             // to ensure "transactionHash" is required (not null)
-            this.TransactionHash = transactionHash ?? throw new ArgumentNullException("transactionHash is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (transactionHash == null) {
+                throw new ArgumentNullException("transactionHash is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.TransactionHash = transactionHash;
             // to ensure "type" is required (not null)
-            this.Type = type ?? throw new ArgumentNullException("type is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (type == null) {
+                throw new ArgumentNullException("type is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Type = type;
             // to ensure "fee" is required (not null)
-            this.Fee = fee ?? throw new ArgumentNullException("fee is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (fee == null) {
+                throw new ArgumentNullException("fee is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Fee = fee;
             // to ensure "value" is required (not null)
-            this.Value = value ?? throw new ArgumentNullException("value is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            if (value == null) {
+                throw new ArgumentNullException("value is a required property for GetXRPRippleTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Value = value;
+            this.DestinationTag = destinationTag;
             this.Status = status;
         }
 
@@ -92,6 +130,12 @@ namespace CryptoAPIs.Model
         /// <value>Represents additional data that may be needed.</value>
         [DataMember(Name = "additionalData", IsRequired = true, EmitDefaultValue = false)]
         public string AdditionalData { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DestinationTag
+        /// </summary>
+        [DataMember(Name = "destinationTag", EmitDefaultValue = false)]
+        public int DestinationTag { get; set; }
 
         /// <summary>
         /// Defines the index of the transaction, i.e. the consecutive place it takes in the blockchain.
@@ -196,6 +240,7 @@ namespace CryptoAPIs.Model
             var sb = new StringBuilder();
             sb.Append("class GetXRPRippleTransactionDetailsByTransactionIDRI {\n");
             sb.Append("  AdditionalData: ").Append(AdditionalData).Append("\n");
+            sb.Append("  DestinationTag: ").Append(DestinationTag).Append("\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  MinedInBlockHash: ").Append(MinedInBlockHash).Append("\n");
             sb.Append("  MinedInBlockHeight: ").Append(MinedInBlockHeight).Append("\n");
@@ -248,6 +293,10 @@ namespace CryptoAPIs.Model
                     this.AdditionalData == input.AdditionalData ||
                     (this.AdditionalData != null &&
                     this.AdditionalData.Equals(input.AdditionalData))
+                ) && 
+                (
+                    this.DestinationTag == input.DestinationTag ||
+                    this.DestinationTag.Equals(input.DestinationTag)
                 ) && 
                 (
                     this.Index == input.Index ||
@@ -332,6 +381,7 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 if (this.AdditionalData != null)
                     hashCode = hashCode * 59 + this.AdditionalData.GetHashCode();
+                hashCode = hashCode * 59 + this.DestinationTag.GetHashCode();
                 if (this.Index != null)
                     hashCode = hashCode * 59 + this.Index.GetHashCode();
                 if (this.MinedInBlockHash != null)
@@ -367,7 +417,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

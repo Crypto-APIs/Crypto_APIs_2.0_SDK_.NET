@@ -87,5 +87,22 @@ namespace CryptoAPIs.Test.Api
             //var response = instance.ListInternalTransactionDetailsByTransactionHash(blockchain, network, transactionHash, context, limit, offset);
             //Assert.IsType<ListInternalTransactionDetailsByTransactionHashR>(response);
         }
+
+        /// <summary>
+        /// Test ListInternalTransactionsByAddress
+        /// </summary>
+        [Fact]
+        public void ListInternalTransactionsByAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListInternalTransactionsByAddress(blockchain, network, address, context, limit, offset);
+            //Assert.IsType<ListInternalTransactionsByAddressR>(response);
+        }
     }
 }

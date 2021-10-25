@@ -72,7 +72,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListAssetsDetailsRISC`. If the actual instanct is not `ListAssetsDetailsRISC`,
+        /// Get the actual instance of `ListAssetsDetailsRISC`. If the actual instance is not `ListAssetsDetailsRISC`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of ListAssetsDetailsRISC</returns>
@@ -112,7 +112,7 @@ namespace CryptoAPIs.Model
         {
             ListAssetsDetailsRIS newListAssetsDetailsRIS = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newListAssetsDetailsRIS;
             }

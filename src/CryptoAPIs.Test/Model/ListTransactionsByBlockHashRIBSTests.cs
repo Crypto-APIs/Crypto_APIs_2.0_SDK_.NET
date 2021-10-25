@@ -82,12 +82,12 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'VSize'
         }
         /// <summary>
-        /// Test the property 'Version'
+        /// Test the property '_Version'
         /// </summary>
         [Fact]
-        public void VersionTest()
+        public void _VersionTest()
         {
-            // TODO unit test for the property 'Version'
+            // TODO unit test for the property '_Version'
         }
         /// <summary>
         /// Test the property 'Vin'
@@ -104,14 +104,6 @@ namespace CryptoAPIs.Test.Model
         public void VoutTest()
         {
             // TODO unit test for the property 'Vout'
-        }
-        /// <summary>
-        /// Test the property 'Vsize'
-        /// </summary>
-        [Fact]
-        public void VsizeTest()
-        {
-            // TODO unit test for the property 'Vsize'
         }
         /// <summary>
         /// Test the property 'Contract'
@@ -168,6 +160,86 @@ namespace CryptoAPIs.Test.Model
         public void TransactionStatusTest()
         {
             // TODO unit test for the property 'TransactionStatus'
+        }
+        /// <summary>
+        /// Test the property 'BindingSig'
+        /// </summary>
+        [Fact]
+        public void BindingSigTest()
+        {
+            // TODO unit test for the property 'BindingSig'
+        }
+        /// <summary>
+        /// Test the property 'ExpiryHeight'
+        /// </summary>
+        [Fact]
+        public void ExpiryHeightTest()
+        {
+            // TODO unit test for the property 'ExpiryHeight'
+        }
+        /// <summary>
+        /// Test the property 'JoinSplitPubKey'
+        /// </summary>
+        [Fact]
+        public void JoinSplitPubKeyTest()
+        {
+            // TODO unit test for the property 'JoinSplitPubKey'
+        }
+        /// <summary>
+        /// Test the property 'JoinSplitSig'
+        /// </summary>
+        [Fact]
+        public void JoinSplitSigTest()
+        {
+            // TODO unit test for the property 'JoinSplitSig'
+        }
+        /// <summary>
+        /// Test the property 'Overwintered'
+        /// </summary>
+        [Fact]
+        public void OverwinteredTest()
+        {
+            // TODO unit test for the property 'Overwintered'
+        }
+        /// <summary>
+        /// Test the property 'VJoinSplit'
+        /// </summary>
+        [Fact]
+        public void VJoinSplitTest()
+        {
+            // TODO unit test for the property 'VJoinSplit'
+        }
+        /// <summary>
+        /// Test the property 'VShieldedOutput'
+        /// </summary>
+        [Fact]
+        public void VShieldedOutputTest()
+        {
+            // TODO unit test for the property 'VShieldedOutput'
+        }
+        /// <summary>
+        /// Test the property 'VShieldedSpend'
+        /// </summary>
+        [Fact]
+        public void VShieldedSpendTest()
+        {
+            // TODO unit test for the property 'VShieldedSpend'
+        }
+        /// <summary>
+        /// Test the property 'ValueBalance'
+        /// </summary>
+        [Fact]
+        public void ValueBalanceTest()
+        {
+            // TODO unit test for the property 'ValueBalance'
+        }
+        /// <summary>
+        /// Test the property 'VersionGroupId'
+        /// </summary>
+        [Fact]
+        public void VersionGroupIdTest()
+        {
+            // TODO unit test for the property 'VersionGroupId'
         }
 
     }

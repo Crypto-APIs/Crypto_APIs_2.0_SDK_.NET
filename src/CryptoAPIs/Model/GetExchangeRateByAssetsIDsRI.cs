@@ -50,15 +50,30 @@ namespace CryptoAPIs.Model
         {
             this.CalculationTimestamp = calculationTimestamp;
             // to ensure "fromAssetId" is required (not null)
-            this.FromAssetId = fromAssetId ?? throw new ArgumentNullException("fromAssetId is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            if (fromAssetId == null) {
+                throw new ArgumentNullException("fromAssetId is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            }
+            this.FromAssetId = fromAssetId;
             // to ensure "fromAssetSymbol" is required (not null)
-            this.FromAssetSymbol = fromAssetSymbol ?? throw new ArgumentNullException("fromAssetSymbol is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            if (fromAssetSymbol == null) {
+                throw new ArgumentNullException("fromAssetSymbol is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            }
+            this.FromAssetSymbol = fromAssetSymbol;
             // to ensure "rate" is required (not null)
-            this.Rate = rate ?? throw new ArgumentNullException("rate is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            if (rate == null) {
+                throw new ArgumentNullException("rate is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            }
+            this.Rate = rate;
             // to ensure "toAssetId" is required (not null)
-            this.ToAssetId = toAssetId ?? throw new ArgumentNullException("toAssetId is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            if (toAssetId == null) {
+                throw new ArgumentNullException("toAssetId is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            }
+            this.ToAssetId = toAssetId;
             // to ensure "toAssetSymbol" is required (not null)
-            this.ToAssetSymbol = toAssetSymbol ?? throw new ArgumentNullException("toAssetSymbol is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            if (toAssetSymbol == null) {
+                throw new ArgumentNullException("toAssetSymbol is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
+            }
+            this.ToAssetSymbol = toAssetSymbol;
         }
 
         /// <summary>
@@ -211,7 +226,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

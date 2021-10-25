@@ -60,6 +60,18 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRIBS" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDRIBSBSC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDRIBSBSC.</param>
+        public GetTransactionDetailsByTransactionIDRIBS(GetTransactionDetailsByTransactionIDRIBSBSC actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRIBS" /> class
         /// with the <see cref="GetTransactionDetailsByTransactionIDRIBSD" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDRIBSD.</param>
@@ -140,6 +152,10 @@ namespace CryptoAPIs.Model
                 {
                     this._actualInstance = value;
                 }
+                else if (value.GetType() == typeof(GetTransactionDetailsByTransactionIDRIBSBSC))
+                {
+                    this._actualInstance = value;
+                }
                 else if (value.GetType() == typeof(GetTransactionDetailsByTransactionIDRIBSD))
                 {
                     this._actualInstance = value;
@@ -162,13 +178,13 @@ namespace CryptoAPIs.Model
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: GetTransactionDetailsByTransactionIDRIBSB, GetTransactionDetailsByTransactionIDRIBSBC, GetTransactionDetailsByTransactionIDRIBSD, GetTransactionDetailsByTransactionIDRIBSD2, GetTransactionDetailsByTransactionIDRIBSE, GetTransactionDetailsByTransactionIDRIBSEC, GetTransactionDetailsByTransactionIDRIBSL");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: GetTransactionDetailsByTransactionIDRIBSB, GetTransactionDetailsByTransactionIDRIBSBC, GetTransactionDetailsByTransactionIDRIBSBSC, GetTransactionDetailsByTransactionIDRIBSD, GetTransactionDetailsByTransactionIDRIBSD2, GetTransactionDetailsByTransactionIDRIBSE, GetTransactionDetailsByTransactionIDRIBSEC, GetTransactionDetailsByTransactionIDRIBSL");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSB`. If the actual instanct is not `GetTransactionDetailsByTransactionIDRIBSB`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSB`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSB`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSB</returns>
@@ -178,7 +194,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSBC`. If the actual instanct is not `GetTransactionDetailsByTransactionIDRIBSBC`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSBC`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSBC`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSBC</returns>
@@ -188,7 +204,17 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSD`. If the actual instanct is not `GetTransactionDetailsByTransactionIDRIBSD`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSBSC`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSBSC</returns>
+        public GetTransactionDetailsByTransactionIDRIBSBSC GetGetTransactionDetailsByTransactionIDRIBSBSC()
+        {
+            return (GetTransactionDetailsByTransactionIDRIBSBSC)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSD`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSD`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSD</returns>
@@ -198,7 +224,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSD2`. If the actual instanct is not `GetTransactionDetailsByTransactionIDRIBSD2`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSD2`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSD2`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSD2</returns>
@@ -208,7 +234,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSE`. If the actual instanct is not `GetTransactionDetailsByTransactionIDRIBSE`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSE`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSE`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSE</returns>
@@ -218,7 +244,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSEC`. If the actual instanct is not `GetTransactionDetailsByTransactionIDRIBSEC`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSEC`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSEC`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSEC</returns>
@@ -228,7 +254,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSL`. If the actual instanct is not `GetTransactionDetailsByTransactionIDRIBSL`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSL`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSL</returns>
@@ -268,7 +294,7 @@ namespace CryptoAPIs.Model
         {
             GetTransactionDetailsByTransactionIDRIBS newGetTransactionDetailsByTransactionIDRIBS = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newGetTransactionDetailsByTransactionIDRIBS;
             }
@@ -313,6 +339,26 @@ namespace CryptoAPIs.Model
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetTransactionDetailsByTransactionIDRIBSBC: {1}", jsonString, exception.ToString()));
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(GetTransactionDetailsByTransactionIDRIBSBSC).GetProperty("AdditionalProperties") == null)
+                {
+                    newGetTransactionDetailsByTransactionIDRIBS = new GetTransactionDetailsByTransactionIDRIBS(JsonConvert.DeserializeObject<GetTransactionDetailsByTransactionIDRIBSBSC>(jsonString, GetTransactionDetailsByTransactionIDRIBS.SerializerSettings));
+                }
+                else
+                {
+                    newGetTransactionDetailsByTransactionIDRIBS = new GetTransactionDetailsByTransactionIDRIBS(JsonConvert.DeserializeObject<GetTransactionDetailsByTransactionIDRIBSBSC>(jsonString, GetTransactionDetailsByTransactionIDRIBS.AdditionalPropertiesSerializerSettings));
+                }
+                matchedTypes.Add("GetTransactionDetailsByTransactionIDRIBSBSC");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetTransactionDetailsByTransactionIDRIBSBSC: {1}", jsonString, exception.ToString()));
             }
 
             try

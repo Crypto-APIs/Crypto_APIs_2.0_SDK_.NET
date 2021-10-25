@@ -48,14 +48,26 @@ namespace CryptoAPIs.Model
         public GetWalletAssetDetailsRI(GetWalletAssetDetailsRIConfirmedBalance confirmedBalance = default(GetWalletAssetDetailsRIConfirmedBalance), int depositAddressesCount = default(int), string name = default(string), GetWalletAssetDetailsRIRecievedConfirmedAmount recievedConfirmedAmount = default(GetWalletAssetDetailsRIRecievedConfirmedAmount), GetWalletAssetDetailsRISentConfirmedAmount sentConfirmedAmount = default(GetWalletAssetDetailsRISentConfirmedAmount))
         {
             // to ensure "confirmedBalance" is required (not null)
-            this.ConfirmedBalance = confirmedBalance ?? throw new ArgumentNullException("confirmedBalance is a required property for GetWalletAssetDetailsRI and cannot be null");
+            if (confirmedBalance == null) {
+                throw new ArgumentNullException("confirmedBalance is a required property for GetWalletAssetDetailsRI and cannot be null");
+            }
+            this.ConfirmedBalance = confirmedBalance;
             this.DepositAddressesCount = depositAddressesCount;
             // to ensure "name" is required (not null)
-            this.Name = name ?? throw new ArgumentNullException("name is a required property for GetWalletAssetDetailsRI and cannot be null");
+            if (name == null) {
+                throw new ArgumentNullException("name is a required property for GetWalletAssetDetailsRI and cannot be null");
+            }
+            this.Name = name;
             // to ensure "recievedConfirmedAmount" is required (not null)
-            this.RecievedConfirmedAmount = recievedConfirmedAmount ?? throw new ArgumentNullException("recievedConfirmedAmount is a required property for GetWalletAssetDetailsRI and cannot be null");
+            if (recievedConfirmedAmount == null) {
+                throw new ArgumentNullException("recievedConfirmedAmount is a required property for GetWalletAssetDetailsRI and cannot be null");
+            }
+            this.RecievedConfirmedAmount = recievedConfirmedAmount;
             // to ensure "sentConfirmedAmount" is required (not null)
-            this.SentConfirmedAmount = sentConfirmedAmount ?? throw new ArgumentNullException("sentConfirmedAmount is a required property for GetWalletAssetDetailsRI and cannot be null");
+            if (sentConfirmedAmount == null) {
+                throw new ArgumentNullException("sentConfirmedAmount is a required property for GetWalletAssetDetailsRI and cannot be null");
+            }
+            this.SentConfirmedAmount = sentConfirmedAmount;
         }
 
         /// <summary>
@@ -190,7 +202,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

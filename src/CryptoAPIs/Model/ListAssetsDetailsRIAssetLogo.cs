@@ -46,11 +46,20 @@ namespace CryptoAPIs.Model
         public ListAssetsDetailsRIAssetLogo(string encoding = default(string), string imageData = default(string), string mimeType = default(string))
         {
             // to ensure "encoding" is required (not null)
-            this.Encoding = encoding ?? throw new ArgumentNullException("encoding is a required property for ListAssetsDetailsRIAssetLogo and cannot be null");
+            if (encoding == null) {
+                throw new ArgumentNullException("encoding is a required property for ListAssetsDetailsRIAssetLogo and cannot be null");
+            }
+            this.Encoding = encoding;
             // to ensure "imageData" is required (not null)
-            this.ImageData = imageData ?? throw new ArgumentNullException("imageData is a required property for ListAssetsDetailsRIAssetLogo and cannot be null");
+            if (imageData == null) {
+                throw new ArgumentNullException("imageData is a required property for ListAssetsDetailsRIAssetLogo and cannot be null");
+            }
+            this.ImageData = imageData;
             // to ensure "mimeType" is required (not null)
-            this.MimeType = mimeType ?? throw new ArgumentNullException("mimeType is a required property for ListAssetsDetailsRIAssetLogo and cannot be null");
+            if (mimeType == null) {
+                throw new ArgumentNullException("mimeType is a required property for ListAssetsDetailsRIAssetLogo and cannot be null");
+            }
+            this.MimeType = mimeType;
         }
 
         /// <summary>
@@ -160,7 +169,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

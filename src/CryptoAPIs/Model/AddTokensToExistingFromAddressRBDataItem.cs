@@ -74,7 +74,7 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddTokensToExistingFromAddressRBDataItem" /> class.
         /// </summary>
-        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs..</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security)..</param>
         /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
         /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; or \&quot;FAST\&quot;. (required).</param>
@@ -85,24 +85,39 @@ namespace CryptoAPIs.Model
         public AddTokensToExistingFromAddressRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), FeePriorityEnum feePriority = default(FeePriorityEnum), string fromAddress = default(string), string minimumTransferAmount = default(string), string toAddress = default(string), AddTokensToExistingFromAddressRBTokenData tokenData = default(AddTokensToExistingFromAddressRBTokenData))
         {
             // to ensure "callbackUrl" is required (not null)
-            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            if (callbackUrl == null) {
+                throw new ArgumentNullException("callbackUrl is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            }
+            this.CallbackUrl = callbackUrl;
             this.ConfirmationsCount = confirmationsCount;
             this.FeePriority = feePriority;
             // to ensure "fromAddress" is required (not null)
-            this.FromAddress = fromAddress ?? throw new ArgumentNullException("fromAddress is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            if (fromAddress == null) {
+                throw new ArgumentNullException("fromAddress is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            }
+            this.FromAddress = fromAddress;
             // to ensure "minimumTransferAmount" is required (not null)
-            this.MinimumTransferAmount = minimumTransferAmount ?? throw new ArgumentNullException("minimumTransferAmount is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            if (minimumTransferAmount == null) {
+                throw new ArgumentNullException("minimumTransferAmount is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            }
+            this.MinimumTransferAmount = minimumTransferAmount;
             // to ensure "toAddress" is required (not null)
-            this.ToAddress = toAddress ?? throw new ArgumentNullException("toAddress is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            if (toAddress == null) {
+                throw new ArgumentNullException("toAddress is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            }
+            this.ToAddress = toAddress;
             // to ensure "tokenData" is required (not null)
-            this.TokenData = tokenData ?? throw new ArgumentNullException("tokenData is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            if (tokenData == null) {
+                throw new ArgumentNullException("tokenData is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
+            }
+            this.TokenData = tokenData;
             this.CallbackSecretKey = callbackSecretKey;
         }
 
         /// <summary>
-        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
         /// </summary>
-        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).</value>
         [DataMember(Name = "callbackSecretKey", EmitDefaultValue = false)]
         public string CallbackSecretKey { get; set; }
 
@@ -269,7 +284,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

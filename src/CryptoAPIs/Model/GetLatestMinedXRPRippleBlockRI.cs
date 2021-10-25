@@ -50,16 +50,28 @@ namespace CryptoAPIs.Model
         public GetLatestMinedXRPRippleBlockRI(string blockHash = default(string), int blockHeight = default(int), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), GetLatestMinedXRPRippleBlockRITotalCoins totalCoins = default(GetLatestMinedXRPRippleBlockRITotalCoins), GetLatestMinedXRPRippleBlockRITotalFees totalFees = default(GetLatestMinedXRPRippleBlockRITotalFees))
         {
             // to ensure "blockHash" is required (not null)
-            this.BlockHash = blockHash ?? throw new ArgumentNullException("blockHash is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            if (blockHash == null) {
+                throw new ArgumentNullException("blockHash is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            }
+            this.BlockHash = blockHash;
             this.BlockHeight = blockHeight;
             // to ensure "previousBlockHash" is required (not null)
-            this.PreviousBlockHash = previousBlockHash ?? throw new ArgumentNullException("previousBlockHash is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            if (previousBlockHash == null) {
+                throw new ArgumentNullException("previousBlockHash is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            }
+            this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             this.TransactionsCount = transactionsCount;
             // to ensure "totalCoins" is required (not null)
-            this.TotalCoins = totalCoins ?? throw new ArgumentNullException("totalCoins is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            if (totalCoins == null) {
+                throw new ArgumentNullException("totalCoins is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            }
+            this.TotalCoins = totalCoins;
             // to ensure "totalFees" is required (not null)
-            this.TotalFees = totalFees ?? throw new ArgumentNullException("totalFees is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            if (totalFees == null) {
+                throw new ArgumentNullException("totalFees is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
+            }
+            this.TotalFees = totalFees;
         }
 
         /// <summary>
@@ -221,7 +233,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

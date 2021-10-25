@@ -46,9 +46,15 @@ namespace CryptoAPIs.Model
         public InvalidBlockchainError(string code = default(string), string message = default(string), List<BannedIpAddressErrorDetails> details = default(List<BannedIpAddressErrorDetails>))
         {
             // to ensure "code" is required (not null)
-            this.Code = code ?? throw new ArgumentNullException("code is a required property for InvalidBlockchainError and cannot be null");
+            if (code == null) {
+                throw new ArgumentNullException("code is a required property for InvalidBlockchainError and cannot be null");
+            }
+            this.Code = code;
             // to ensure "message" is required (not null)
-            this.Message = message ?? throw new ArgumentNullException("message is a required property for InvalidBlockchainError and cannot be null");
+            if (message == null) {
+                throw new ArgumentNullException("message is a required property for InvalidBlockchainError and cannot be null");
+            }
+            this.Message = message;
             this.Details = details;
         }
 
@@ -159,7 +165,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

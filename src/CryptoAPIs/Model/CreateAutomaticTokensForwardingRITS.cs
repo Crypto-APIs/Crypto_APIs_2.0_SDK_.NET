@@ -88,7 +88,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `CreateAutomaticTokensForwardingRITSBOT`. If the actual instanct is not `CreateAutomaticTokensForwardingRITSBOT`,
+        /// Get the actual instance of `CreateAutomaticTokensForwardingRITSBOT`. If the actual instance is not `CreateAutomaticTokensForwardingRITSBOT`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of CreateAutomaticTokensForwardingRITSBOT</returns>
@@ -98,7 +98,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `CreateAutomaticTokensForwardingRITSET`. If the actual instanct is not `CreateAutomaticTokensForwardingRITSET`,
+        /// Get the actual instance of `CreateAutomaticTokensForwardingRITSET`. If the actual instance is not `CreateAutomaticTokensForwardingRITSET`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of CreateAutomaticTokensForwardingRITSET</returns>
@@ -138,7 +138,7 @@ namespace CryptoAPIs.Model
         {
             CreateAutomaticTokensForwardingRITS newCreateAutomaticTokensForwardingRITS = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newCreateAutomaticTokensForwardingRITS;
             }

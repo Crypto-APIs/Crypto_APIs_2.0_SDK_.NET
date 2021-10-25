@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CryptoAPIs.Client.OpenAPIDateConverter;
 namespace CryptoAPIs.Model
 {
     /// <summary>
-    /// GetWalletAssetDetailsRIConfirmedBalance
+    /// Specifies the confirmed balance.
     /// </summary>
     [DataContract(Name = "GetWalletAssetDetailsRI_confirmedBalance")]
     public partial class GetWalletAssetDetailsRIConfirmedBalance : IEquatable<GetWalletAssetDetailsRIConfirmedBalance>, IValidatableObject
@@ -40,25 +40,33 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWalletAssetDetailsRIConfirmedBalance" /> class.
         /// </summary>
-        /// <param name="amount">amount (required).</param>
-        /// <param name="unit">unit (required).</param>
+        /// <param name="amount">Specifies the amount of the confirmed balance. (required).</param>
+        /// <param name="unit">Specifies the unit of the amount of the confirmed balance. (required).</param>
         public GetWalletAssetDetailsRIConfirmedBalance(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
-            this.Amount = amount ?? throw new ArgumentNullException("amount is a required property for GetWalletAssetDetailsRIConfirmedBalance and cannot be null");
+            if (amount == null) {
+                throw new ArgumentNullException("amount is a required property for GetWalletAssetDetailsRIConfirmedBalance and cannot be null");
+            }
+            this.Amount = amount;
             // to ensure "unit" is required (not null)
-            this.Unit = unit ?? throw new ArgumentNullException("unit is a required property for GetWalletAssetDetailsRIConfirmedBalance and cannot be null");
+            if (unit == null) {
+                throw new ArgumentNullException("unit is a required property for GetWalletAssetDetailsRIConfirmedBalance and cannot be null");
+            }
+            this.Unit = unit;
         }
 
         /// <summary>
-        /// Gets or Sets Amount
+        /// Specifies the amount of the confirmed balance.
         /// </summary>
+        /// <value>Specifies the amount of the confirmed balance.</value>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
         public string Amount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Unit
+        /// Specifies the unit of the amount of the confirmed balance.
         /// </summary>
+        /// <value>Specifies the unit of the amount of the confirmed balance.</value>
         [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
         public string Unit { get; set; }
 
@@ -140,7 +148,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

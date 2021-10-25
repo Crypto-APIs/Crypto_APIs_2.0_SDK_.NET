@@ -56,52 +56,20 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test GetHDWalletXPubYPubZPubDetails
+        /// Test ListUnspentTransactionOutputsByAddress
         /// </summary>
         [Fact]
-        public void GetHDWalletXPubYPubZPubDetailsTest()
+        public void ListUnspentTransactionOutputsByAddressTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
-            //string extendedPublicKey = null;
             //string network = null;
+            //string address = null;
             //string context = null;
-            //string derivation = null;
-            //var response = instance.GetHDWalletXPubYPubZPubDetails(blockchain, extendedPublicKey, network, context, derivation);
-            //Assert.IsType<GetHDWalletXPubYPubZPubDetailsR>(response);
-        }
-
-        /// <summary>
-        /// Test ListHDWalletXPubYPubZPubTransactions
-        /// </summary>
-        [Fact]
-        public void ListHDWalletXPubYPubZPubTransactionsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string blockchain = null;
-            //string extendedPublicKey = null;
-            //string network = null;
-            //string context = null;
-            //string derivation = null;
             //int? limit = null;
             //int? offset = null;
-            //var response = instance.ListHDWalletXPubYPubZPubTransactions(blockchain, extendedPublicKey, network, context, derivation, limit, offset);
-            //Assert.IsType<ListHDWalletXPubYPubZPubTransactionsR>(response);
-        }
-
-        /// <summary>
-        /// Test SyncHDWalletXPubYPubZPub
-        /// </summary>
-        [Fact]
-        public void SyncHDWalletXPubYPubZPubTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string blockchain = null;
-            //string network = null;
-            //string context = null;
-            //SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = null;
-            //var response = instance.SyncHDWalletXPubYPubZPub(blockchain, network, context, syncHDWalletXPubYPubZPubRB);
-            //Assert.IsType<SyncHDWalletXPubYPubZPubR>(response);
+            //var response = instance.ListUnspentTransactionOutputsByAddress(blockchain, network, address, context, limit, offset);
+            //Assert.IsType<ListUnspentTransactionOutputsByAddressR>(response);
         }
     }
 }

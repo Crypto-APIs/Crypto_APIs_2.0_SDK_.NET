@@ -48,15 +48,30 @@ namespace CryptoAPIs.Model
         public ListTokensByAddressRI(string confirmedBalance = default(string), string contractAddress = default(string), string name = default(string), string symbol = default(string), string type = default(string))
         {
             // to ensure "confirmedBalance" is required (not null)
-            this.ConfirmedBalance = confirmedBalance ?? throw new ArgumentNullException("confirmedBalance is a required property for ListTokensByAddressRI and cannot be null");
+            if (confirmedBalance == null) {
+                throw new ArgumentNullException("confirmedBalance is a required property for ListTokensByAddressRI and cannot be null");
+            }
+            this.ConfirmedBalance = confirmedBalance;
             // to ensure "contractAddress" is required (not null)
-            this.ContractAddress = contractAddress ?? throw new ArgumentNullException("contractAddress is a required property for ListTokensByAddressRI and cannot be null");
+            if (contractAddress == null) {
+                throw new ArgumentNullException("contractAddress is a required property for ListTokensByAddressRI and cannot be null");
+            }
+            this.ContractAddress = contractAddress;
             // to ensure "name" is required (not null)
-            this.Name = name ?? throw new ArgumentNullException("name is a required property for ListTokensByAddressRI and cannot be null");
+            if (name == null) {
+                throw new ArgumentNullException("name is a required property for ListTokensByAddressRI and cannot be null");
+            }
+            this.Name = name;
             // to ensure "symbol" is required (not null)
-            this.Symbol = symbol ?? throw new ArgumentNullException("symbol is a required property for ListTokensByAddressRI and cannot be null");
+            if (symbol == null) {
+                throw new ArgumentNullException("symbol is a required property for ListTokensByAddressRI and cannot be null");
+            }
+            this.Symbol = symbol;
             // to ensure "type" is required (not null)
-            this.Type = type ?? throw new ArgumentNullException("type is a required property for ListTokensByAddressRI and cannot be null");
+            if (type == null) {
+                throw new ArgumentNullException("type is a required property for ListTokensByAddressRI and cannot be null");
+            }
+            this.Type = type;
         }
 
         /// <summary>
@@ -196,7 +211,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

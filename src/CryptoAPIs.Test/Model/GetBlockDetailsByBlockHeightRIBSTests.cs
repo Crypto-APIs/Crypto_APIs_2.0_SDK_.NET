@@ -114,12 +114,12 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'StrippedSize'
         }
         /// <summary>
-        /// Test the property 'Version'
+        /// Test the property '_Version'
         /// </summary>
         [Fact]
-        public void VersionTest()
+        public void _VersionTest()
         {
-            // TODO unit test for the property 'Version'
+            // TODO unit test for the property '_Version'
         }
         /// <summary>
         /// Test the property 'VersionHex'
@@ -184,6 +184,14 @@ namespace CryptoAPIs.Test.Model
         public void TotalDifficultyTest()
         {
             // TODO unit test for the property 'TotalDifficulty'
+        }
+        /// <summary>
+        /// Test the property 'Merkleroot'
+        /// </summary>
+        [Fact]
+        public void MerklerootTest()
+        {
+            // TODO unit test for the property 'Merkleroot'
         }
 
     }

@@ -46,11 +46,20 @@ namespace CryptoAPIs.Model
         public GetFeeAddressDetailsRI(string address = default(string), GetFeeAddressDetailsRIBalance balance = default(GetFeeAddressDetailsRIBalance), string minimumTransferAmount = default(string))
         {
             // to ensure "address" is required (not null)
-            this.Address = address ?? throw new ArgumentNullException("address is a required property for GetFeeAddressDetailsRI and cannot be null");
+            if (address == null) {
+                throw new ArgumentNullException("address is a required property for GetFeeAddressDetailsRI and cannot be null");
+            }
+            this.Address = address;
             // to ensure "balance" is required (not null)
-            this.Balance = balance ?? throw new ArgumentNullException("balance is a required property for GetFeeAddressDetailsRI and cannot be null");
+            if (balance == null) {
+                throw new ArgumentNullException("balance is a required property for GetFeeAddressDetailsRI and cannot be null");
+            }
+            this.Balance = balance;
             // to ensure "minimumTransferAmount" is required (not null)
-            this.MinimumTransferAmount = minimumTransferAmount ?? throw new ArgumentNullException("minimumTransferAmount is a required property for GetFeeAddressDetailsRI and cannot be null");
+            if (minimumTransferAmount == null) {
+                throw new ArgumentNullException("minimumTransferAmount is a required property for GetFeeAddressDetailsRI and cannot be null");
+            }
+            this.MinimumTransferAmount = minimumTransferAmount;
         }
 
         /// <summary>
@@ -159,7 +168,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

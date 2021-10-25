@@ -67,6 +67,34 @@ namespace CryptoAPIs.Model
         [DataMember(Name = "feePriority", IsRequired = true, EmitDefaultValue = false)]
         public FeePriorityEnum FeePriority { get; set; }
         /// <summary>
+        /// Refers to a model of a UTXO spending strategy, where customers can choose how to spend their transaction outputs from multiple Bitcoin addresses. Two options available - \&quot;minimize-dust\&quot; (select lower amounts from multiple addresses) or \&quot;optimize-size\&quot; (select higher amounts from less addresses).
+        /// </summary>
+        /// <value>Refers to a model of a UTXO spending strategy, where customers can choose how to spend their transaction outputs from multiple Bitcoin addresses. Two options available - \&quot;minimize-dust\&quot; (select lower amounts from multiple addresses) or \&quot;optimize-size\&quot; (select higher amounts from less addresses).</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PrepareStrategyEnum
+        {
+            /// <summary>
+            /// Enum MinimizeDust for value: minimize-dust
+            /// </summary>
+            [EnumMember(Value = "minimize-dust")]
+            MinimizeDust = 1,
+
+            /// <summary>
+            /// Enum OptimizeSize for value: optimize-size
+            /// </summary>
+            [EnumMember(Value = "optimize-size")]
+            OptimizeSize = 2
+
+        }
+
+
+        /// <summary>
+        /// Refers to a model of a UTXO spending strategy, where customers can choose how to spend their transaction outputs from multiple Bitcoin addresses. Two options available - \&quot;minimize-dust\&quot; (select lower amounts from multiple addresses) or \&quot;optimize-size\&quot; (select higher amounts from less addresses).
+        /// </summary>
+        /// <value>Refers to a model of a UTXO spending strategy, where customers can choose how to spend their transaction outputs from multiple Bitcoin addresses. Two options available - \&quot;minimize-dust\&quot; (select lower amounts from multiple addresses) or \&quot;optimize-size\&quot; (select higher amounts from less addresses).</value>
+        [DataMember(Name = "prepareStrategy", EmitDefaultValue = false)]
+        public PrepareStrategyEnum? PrepareStrategy { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromWalletRBDataItem" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -74,32 +102,46 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromWalletRBDataItem" /> class.
         /// </summary>
-        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs..</param>
-        /// <param name="callbackUrl">Verified URL for sending callbacks.</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security)..</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs..</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
+        /// <param name="note">Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request..</param>
+        /// <param name="prepareStrategy">Refers to a model of a UTXO spending strategy, where customers can choose how to spend their transaction outputs from multiple Bitcoin addresses. Two options available - \&quot;minimize-dust\&quot; (select lower amounts from multiple addresses) or \&quot;optimize-size\&quot; (select higher amounts from less addresses). (default to PrepareStrategyEnum.MinimizeDust).</param>
         /// <param name="recipients">Defines the destination of the transaction, whether it is incoming or outgoing. (required).</param>
-        public CreateCoinsTransactionRequestFromWalletRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients> recipients = default(List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients>))
+        public CreateCoinsTransactionRequestFromWalletRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), PrepareStrategyEnum? prepareStrategy = PrepareStrategyEnum.MinimizeDust, List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients> recipients = default(List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients>))
         {
             this.FeePriority = feePriority;
             // to ensure "recipients" is required (not null)
-            this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for CreateCoinsTransactionRequestFromWalletRBDataItem and cannot be null");
+            if (recipients == null) {
+                throw new ArgumentNullException("recipients is a required property for CreateCoinsTransactionRequestFromWalletRBDataItem and cannot be null");
+            }
+            this.Recipients = recipients;
             this.CallbackSecretKey = callbackSecretKey;
             this.CallbackUrl = callbackUrl;
+            this.Note = note;
+            this.PrepareStrategy = prepareStrategy;
         }
 
         /// <summary>
-        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
         /// </summary>
-        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).</value>
         [DataMember(Name = "callbackSecretKey", EmitDefaultValue = false)]
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Verified URL for sending callbacks
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
         /// </summary>
-        /// <value>Verified URL for sending callbacks</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
         [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
+
+        /// <summary>
+        /// Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request.
+        /// </summary>
+        /// <value>Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request.</value>
+        [DataMember(Name = "note", EmitDefaultValue = false)]
+        public string Note { get; set; }
 
         /// <summary>
         /// Defines the destination of the transaction, whether it is incoming or outgoing.
@@ -119,6 +161,8 @@ namespace CryptoAPIs.Model
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  FeePriority: ").Append(FeePriority).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
+            sb.Append("  PrepareStrategy: ").Append(PrepareStrategy).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -169,6 +213,15 @@ namespace CryptoAPIs.Model
                     this.FeePriority.Equals(input.FeePriority)
                 ) && 
                 (
+                    this.Note == input.Note ||
+                    (this.Note != null &&
+                    this.Note.Equals(input.Note))
+                ) && 
+                (
+                    this.PrepareStrategy == input.PrepareStrategy ||
+                    this.PrepareStrategy.Equals(input.PrepareStrategy)
+                ) && 
+                (
                     this.Recipients == input.Recipients ||
                     this.Recipients != null &&
                     input.Recipients != null &&
@@ -190,6 +243,9 @@ namespace CryptoAPIs.Model
                 if (this.CallbackUrl != null)
                     hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
+                if (this.Note != null)
+                    hashCode = hashCode * 59 + this.Note.GetHashCode();
+                hashCode = hashCode * 59 + this.PrepareStrategy.GetHashCode();
                 if (this.Recipients != null)
                     hashCode = hashCode * 59 + this.Recipients.GetHashCode();
                 return hashCode;
@@ -201,7 +257,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TokensForwardingSuccessToken" /> class
-        /// with the <see cref="TokensForwardingSuccessEthereumerc20token" /> class
+        /// with the <see cref="TokensForwardingSuccessErc20" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of TokensForwardingSuccessEthereumerc20token.</param>
-        public TokensForwardingSuccessToken(TokensForwardingSuccessEthereumerc20token actualInstance)
+        /// <param name="actualInstance">An instance of TokensForwardingSuccessErc20.</param>
+        public TokensForwardingSuccessToken(TokensForwardingSuccessErc20 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TokensForwardingSuccessToken" /> class
-        /// with the <see cref="TokensForwardingSuccessEthereumerc721token" /> class
+        /// with the <see cref="TokensForwardingSuccessErc721" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of TokensForwardingSuccessEthereumerc721token.</param>
-        public TokensForwardingSuccessToken(TokensForwardingSuccessEthereumerc721token actualInstance)
+        /// <param name="actualInstance">An instance of TokensForwardingSuccessErc721.</param>
+        public TokensForwardingSuccessToken(TokensForwardingSuccessErc721 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TokensForwardingSuccessToken" /> class
-        /// with the <see cref="TokensForwardingSuccessOmnilayertoken" /> class
+        /// with the <see cref="TokensForwardingSuccessOmni" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of TokensForwardingSuccessOmnilayertoken.</param>
-        public TokensForwardingSuccessToken(TokensForwardingSuccessOmnilayertoken actualInstance)
+        /// <param name="actualInstance">An instance of TokensForwardingSuccessOmni.</param>
+        public TokensForwardingSuccessToken(TokensForwardingSuccessOmni actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -84,53 +84,53 @@ namespace CryptoAPIs.Model
             }
             set
             {
-                if (value.GetType() == typeof(TokensForwardingSuccessEthereumerc20token))
+                if (value.GetType() == typeof(TokensForwardingSuccessErc20))
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(TokensForwardingSuccessEthereumerc721token))
+                else if (value.GetType() == typeof(TokensForwardingSuccessErc721))
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(TokensForwardingSuccessOmnilayertoken))
+                else if (value.GetType() == typeof(TokensForwardingSuccessOmni))
                 {
                     this._actualInstance = value;
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: TokensForwardingSuccessEthereumerc20token, TokensForwardingSuccessEthereumerc721token, TokensForwardingSuccessOmnilayertoken");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: TokensForwardingSuccessErc20, TokensForwardingSuccessErc721, TokensForwardingSuccessOmni");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `TokensForwardingSuccessEthereumerc20token`. If the actual instanct is not `TokensForwardingSuccessEthereumerc20token`,
+        /// Get the actual instance of `TokensForwardingSuccessErc20`. If the actual instance is not `TokensForwardingSuccessErc20`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of TokensForwardingSuccessEthereumerc20token</returns>
-        public TokensForwardingSuccessEthereumerc20token GetTokensForwardingSuccessEthereumerc20token()
+        /// <returns>An instance of TokensForwardingSuccessErc20</returns>
+        public TokensForwardingSuccessErc20 GetTokensForwardingSuccessErc20()
         {
-            return (TokensForwardingSuccessEthereumerc20token)this.ActualInstance;
+            return (TokensForwardingSuccessErc20)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `TokensForwardingSuccessEthereumerc721token`. If the actual instanct is not `TokensForwardingSuccessEthereumerc721token`,
+        /// Get the actual instance of `TokensForwardingSuccessErc721`. If the actual instance is not `TokensForwardingSuccessErc721`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of TokensForwardingSuccessEthereumerc721token</returns>
-        public TokensForwardingSuccessEthereumerc721token GetTokensForwardingSuccessEthereumerc721token()
+        /// <returns>An instance of TokensForwardingSuccessErc721</returns>
+        public TokensForwardingSuccessErc721 GetTokensForwardingSuccessErc721()
         {
-            return (TokensForwardingSuccessEthereumerc721token)this.ActualInstance;
+            return (TokensForwardingSuccessErc721)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `TokensForwardingSuccessOmnilayertoken`. If the actual instanct is not `TokensForwardingSuccessOmnilayertoken`,
+        /// Get the actual instance of `TokensForwardingSuccessOmni`. If the actual instance is not `TokensForwardingSuccessOmni`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of TokensForwardingSuccessOmnilayertoken</returns>
-        public TokensForwardingSuccessOmnilayertoken GetTokensForwardingSuccessOmnilayertoken()
+        /// <returns>An instance of TokensForwardingSuccessOmni</returns>
+        public TokensForwardingSuccessOmni GetTokensForwardingSuccessOmni()
         {
-            return (TokensForwardingSuccessOmnilayertoken)this.ActualInstance;
+            return (TokensForwardingSuccessOmni)this.ActualInstance;
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace CryptoAPIs.Model
         {
             TokensForwardingSuccessToken newTokensForwardingSuccessToken = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newTokensForwardingSuccessToken;
             }
@@ -174,61 +174,61 @@ namespace CryptoAPIs.Model
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(TokensForwardingSuccessEthereumerc20token).GetProperty("AdditionalProperties") == null)
+                if (typeof(TokensForwardingSuccessErc20).GetProperty("AdditionalProperties") == null)
                 {
-                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessEthereumerc20token>(jsonString, TokensForwardingSuccessToken.SerializerSettings));
+                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessErc20>(jsonString, TokensForwardingSuccessToken.SerializerSettings));
                 }
                 else
                 {
-                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessEthereumerc20token>(jsonString, TokensForwardingSuccessToken.AdditionalPropertiesSerializerSettings));
+                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessErc20>(jsonString, TokensForwardingSuccessToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("TokensForwardingSuccessEthereumerc20token");
+                matchedTypes.Add("TokensForwardingSuccessErc20");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into TokensForwardingSuccessEthereumerc20token: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into TokensForwardingSuccessErc20: {1}", jsonString, exception.ToString()));
             }
 
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(TokensForwardingSuccessEthereumerc721token).GetProperty("AdditionalProperties") == null)
+                if (typeof(TokensForwardingSuccessErc721).GetProperty("AdditionalProperties") == null)
                 {
-                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessEthereumerc721token>(jsonString, TokensForwardingSuccessToken.SerializerSettings));
+                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessErc721>(jsonString, TokensForwardingSuccessToken.SerializerSettings));
                 }
                 else
                 {
-                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessEthereumerc721token>(jsonString, TokensForwardingSuccessToken.AdditionalPropertiesSerializerSettings));
+                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessErc721>(jsonString, TokensForwardingSuccessToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("TokensForwardingSuccessEthereumerc721token");
+                matchedTypes.Add("TokensForwardingSuccessErc721");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into TokensForwardingSuccessEthereumerc721token: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into TokensForwardingSuccessErc721: {1}", jsonString, exception.ToString()));
             }
 
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(TokensForwardingSuccessOmnilayertoken).GetProperty("AdditionalProperties") == null)
+                if (typeof(TokensForwardingSuccessOmni).GetProperty("AdditionalProperties") == null)
                 {
-                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessOmnilayertoken>(jsonString, TokensForwardingSuccessToken.SerializerSettings));
+                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessOmni>(jsonString, TokensForwardingSuccessToken.SerializerSettings));
                 }
                 else
                 {
-                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessOmnilayertoken>(jsonString, TokensForwardingSuccessToken.AdditionalPropertiesSerializerSettings));
+                    newTokensForwardingSuccessToken = new TokensForwardingSuccessToken(JsonConvert.DeserializeObject<TokensForwardingSuccessOmni>(jsonString, TokensForwardingSuccessToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("TokensForwardingSuccessOmnilayertoken");
+                matchedTypes.Add("TokensForwardingSuccessOmni");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into TokensForwardingSuccessOmnilayertoken: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into TokensForwardingSuccessOmni: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)

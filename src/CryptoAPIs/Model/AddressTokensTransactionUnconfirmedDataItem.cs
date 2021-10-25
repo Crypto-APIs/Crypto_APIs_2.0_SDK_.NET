@@ -40,22 +40,22 @@ namespace CryptoAPIs.Model
         public enum TokenTypeEnum
         {
             /// <summary>
-            /// Enum EthereumERC20Token for value: ethereumERC20Token
+            /// Enum ERC20 for value: ERC-20
             /// </summary>
-            [EnumMember(Value = "ethereumERC20Token")]
-            EthereumERC20Token = 1,
+            [EnumMember(Value = "ERC-20")]
+            ERC20 = 1,
 
             /// <summary>
-            /// Enum EthereumERC721Token for value: ethereumERC721Token
+            /// Enum ERC721 for value: ERC-721
             /// </summary>
-            [EnumMember(Value = "ethereumERC721Token")]
-            EthereumERC721Token = 2,
+            [EnumMember(Value = "ERC-721")]
+            ERC721 = 2,
 
             /// <summary>
-            /// Enum OmniLayerToken for value: omniLayerToken
+            /// Enum OMNI for value: OMNI
             /// </summary>
-            [EnumMember(Value = "omniLayerToken")]
-            OmniLayerToken = 3
+            [EnumMember(Value = "OMNI")]
+            OMNI = 3
 
         }
 
@@ -113,16 +113,31 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionUnconfirmedDataItem(string blockchain = default(string), string network = default(string), string address = default(string), string transactionId = default(string), TokenTypeEnum tokenType = default(TokenTypeEnum), AddressTokensTransactionUnconfirmedToken token = default(AddressTokensTransactionUnconfirmedToken), DirectionEnum direction = default(DirectionEnum), int firstSeenInMempoolTimestamp = default(int))
         {
             // to ensure "blockchain" is required (not null)
-            this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            if (blockchain == null) {
+                throw new ArgumentNullException("blockchain is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            }
+            this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            this.Network = network ?? throw new ArgumentNullException("network is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            if (network == null) {
+                throw new ArgumentNullException("network is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            }
+            this.Network = network;
             // to ensure "address" is required (not null)
-            this.Address = address ?? throw new ArgumentNullException("address is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            if (address == null) {
+                throw new ArgumentNullException("address is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            }
+            this.Address = address;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            }
+            this.TransactionId = transactionId;
             this.TokenType = tokenType;
             // to ensure "token" is required (not null)
-            this.Token = token ?? throw new ArgumentNullException("token is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            if (token == null) {
+                throw new ArgumentNullException("token is a required property for AddressTokensTransactionUnconfirmedDataItem and cannot be null");
+            }
+            this.Token = token;
             this.Direction = direction;
             this.FirstSeenInMempoolTimestamp = firstSeenInMempoolTimestamp;
         }
@@ -288,7 +303,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

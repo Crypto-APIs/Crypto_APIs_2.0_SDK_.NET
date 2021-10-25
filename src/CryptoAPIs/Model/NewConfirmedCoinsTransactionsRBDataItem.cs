@@ -42,14 +42,20 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="address">Represents the address of the transaction, per which the result is returned. (required).</param>
         /// <param name="allowDuplicates">Specifies a flag that permits or denies the creation of duplicate addresses. (default to false).</param>
-        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs..</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security)..</param>
         /// <param name="callbackURL">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
         public NewConfirmedCoinsTransactionsRBDataItem(string address = default(string), bool allowDuplicates = false, string callbackSecretKey = default(string), string callbackURL = default(string))
         {
             // to ensure "address" is required (not null)
-            this.Address = address ?? throw new ArgumentNullException("address is a required property for NewConfirmedCoinsTransactionsRBDataItem and cannot be null");
+            if (address == null) {
+                throw new ArgumentNullException("address is a required property for NewConfirmedCoinsTransactionsRBDataItem and cannot be null");
+            }
+            this.Address = address;
             // to ensure "callbackURL" is required (not null)
-            this.CallbackURL = callbackURL ?? throw new ArgumentNullException("callbackURL is a required property for NewConfirmedCoinsTransactionsRBDataItem and cannot be null");
+            if (callbackURL == null) {
+                throw new ArgumentNullException("callbackURL is a required property for NewConfirmedCoinsTransactionsRBDataItem and cannot be null");
+            }
+            this.CallbackURL = callbackURL;
             this.AllowDuplicates = allowDuplicates;
             this.CallbackSecretKey = callbackSecretKey;
         }
@@ -69,9 +75,9 @@ namespace CryptoAPIs.Model
         public bool AllowDuplicates { get; set; }
 
         /// <summary>
-        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
         /// </summary>
-        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).</value>
         [DataMember(Name = "callbackSecretKey", EmitDefaultValue = false)]
         public string CallbackSecretKey { get; set; }
 
@@ -174,7 +180,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

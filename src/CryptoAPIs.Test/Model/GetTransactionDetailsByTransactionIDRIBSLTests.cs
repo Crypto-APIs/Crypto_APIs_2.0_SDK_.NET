@@ -74,12 +74,20 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Size'
         }
         /// <summary>
-        /// Test the property 'Version'
+        /// Test the property 'VSize'
         /// </summary>
         [Fact]
-        public void VersionTest()
+        public void VSizeTest()
         {
-            // TODO unit test for the property 'Version'
+            // TODO unit test for the property 'VSize'
+        }
+        /// <summary>
+        /// Test the property '_Version'
+        /// </summary>
+        [Fact]
+        public void _VersionTest()
+        {
+            // TODO unit test for the property '_Version'
         }
         /// <summary>
         /// Test the property 'Vin'
@@ -96,14 +104,6 @@ namespace CryptoAPIs.Test.Model
         public void VoutTest()
         {
             // TODO unit test for the property 'Vout'
-        }
-        /// <summary>
-        /// Test the property 'Vsize'
-        /// </summary>
-        [Fact]
-        public void VsizeTest()
-        {
-            // TODO unit test for the property 'Vsize'
         }
 
     }

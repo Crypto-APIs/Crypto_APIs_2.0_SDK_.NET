@@ -45,9 +45,15 @@ namespace CryptoAPIs.Model
         public BannedIpAddressErrorDetails(string attribute = default(string), string message = default(string))
         {
             // to ensure "attribute" is required (not null)
-            this.Attribute = attribute ?? throw new ArgumentNullException("attribute is a required property for BannedIpAddressErrorDetails and cannot be null");
+            if (attribute == null) {
+                throw new ArgumentNullException("attribute is a required property for BannedIpAddressErrorDetails and cannot be null");
+            }
+            this.Attribute = attribute;
             // to ensure "message" is required (not null)
-            this.Message = message ?? throw new ArgumentNullException("message is a required property for BannedIpAddressErrorDetails and cannot be null");
+            if (message == null) {
+                throw new ArgumentNullException("message is a required property for BannedIpAddressErrorDetails and cannot be null");
+            }
+            this.Message = message;
         }
 
         /// <summary>
@@ -142,7 +148,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

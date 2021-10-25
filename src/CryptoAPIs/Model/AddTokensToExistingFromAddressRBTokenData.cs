@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddTokensToExistingFromAddressRBTokenData" /> class
-        /// with the <see cref="AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token" /> class
+        /// with the <see cref="AddTokensToExistingFromAddressRBTokenDataEthereumToken" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token.</param>
-        public AddTokensToExistingFromAddressRBTokenData(AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token actualInstance)
+        /// <param name="actualInstance">An instance of AddTokensToExistingFromAddressRBTokenDataEthereumToken.</param>
+        public AddTokensToExistingFromAddressRBTokenData(AddTokensToExistingFromAddressRBTokenDataEthereumToken actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -76,19 +76,19 @@ namespace CryptoAPIs.Model
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token))
+                else if (value.GetType() == typeof(AddTokensToExistingFromAddressRBTokenDataEthereumToken))
                 {
                     this._actualInstance = value;
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken, AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken, AddTokensToExistingFromAddressRBTokenDataEthereumToken");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken`. If the actual instanct is not `AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken`,
+        /// Get the actual instance of `AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken`. If the actual instance is not `AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken</returns>
@@ -98,13 +98,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token`. If the actual instanct is not `AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token`,
+        /// Get the actual instance of `AddTokensToExistingFromAddressRBTokenDataEthereumToken`. If the actual instance is not `AddTokensToExistingFromAddressRBTokenDataEthereumToken`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token</returns>
-        public AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token GetAddTokensToExistingFromAddressRBTokenDataEthereumErc20Token()
+        /// <returns>An instance of AddTokensToExistingFromAddressRBTokenDataEthereumToken</returns>
+        public AddTokensToExistingFromAddressRBTokenDataEthereumToken GetAddTokensToExistingFromAddressRBTokenDataEthereumToken()
         {
-            return (AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token)this.ActualInstance;
+            return (AddTokensToExistingFromAddressRBTokenDataEthereumToken)this.ActualInstance;
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace CryptoAPIs.Model
         {
             AddTokensToExistingFromAddressRBTokenData newAddTokensToExistingFromAddressRBTokenData = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newAddTokensToExistingFromAddressRBTokenData;
             }
@@ -168,21 +168,21 @@ namespace CryptoAPIs.Model
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddTokensToExistingFromAddressRBTokenDataEthereumToken).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddTokensToExistingFromAddressRBTokenData = new AddTokensToExistingFromAddressRBTokenData(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token>(jsonString, AddTokensToExistingFromAddressRBTokenData.SerializerSettings));
+                    newAddTokensToExistingFromAddressRBTokenData = new AddTokensToExistingFromAddressRBTokenData(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRBTokenDataEthereumToken>(jsonString, AddTokensToExistingFromAddressRBTokenData.SerializerSettings));
                 }
                 else
                 {
-                    newAddTokensToExistingFromAddressRBTokenData = new AddTokensToExistingFromAddressRBTokenData(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token>(jsonString, AddTokensToExistingFromAddressRBTokenData.AdditionalPropertiesSerializerSettings));
+                    newAddTokensToExistingFromAddressRBTokenData = new AddTokensToExistingFromAddressRBTokenData(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRBTokenDataEthereumToken>(jsonString, AddTokensToExistingFromAddressRBTokenData.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token");
+                matchedTypes.Add("AddTokensToExistingFromAddressRBTokenDataEthereumToken");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddTokensToExistingFromAddressRBTokenDataEthereumToken: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)

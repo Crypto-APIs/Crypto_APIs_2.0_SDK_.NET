@@ -45,7 +45,10 @@ namespace CryptoAPIs.Model
         public NewConfirmedInternalTransactionsRB(string context = default(string), NewConfirmedInternalTransactionsRBData data = default(NewConfirmedInternalTransactionsRBData))
         {
             // to ensure "data" is required (not null)
-            this.Data = data ?? throw new ArgumentNullException("data is a required property for NewConfirmedInternalTransactionsRB and cannot be null");
+            if (data == null) {
+                throw new ArgumentNullException("data is a required property for NewConfirmedInternalTransactionsRB and cannot be null");
+            }
+            this.Data = data;
             this.Context = context;
         }
 
@@ -140,7 +143,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

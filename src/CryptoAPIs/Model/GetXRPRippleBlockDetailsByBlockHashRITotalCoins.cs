@@ -27,7 +27,7 @@ using OpenAPIDateConverter = CryptoAPIs.Client.OpenAPIDateConverter;
 namespace CryptoAPIs.Model
 {
     /// <summary>
-    /// GetXRPRippleBlockDetailsByBlockHashRITotalCoins
+    /// Defines the total coins.
     /// </summary>
     [DataContract(Name = "GetXRPRippleBlockDetailsByBlockHashRI_totalCoins")]
     public partial class GetXRPRippleBlockDetailsByBlockHashRITotalCoins : IEquatable<GetXRPRippleBlockDetailsByBlockHashRITotalCoins>, IValidatableObject
@@ -40,25 +40,33 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetXRPRippleBlockDetailsByBlockHashRITotalCoins" /> class.
         /// </summary>
-        /// <param name="amount">amount (required).</param>
-        /// <param name="unit">unit (required).</param>
+        /// <param name="amount">Defines the amount of the total coins. (required).</param>
+        /// <param name="unit">Defines the unit of the total coins. (required).</param>
         public GetXRPRippleBlockDetailsByBlockHashRITotalCoins(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
-            this.Amount = amount ?? throw new ArgumentNullException("amount is a required property for GetXRPRippleBlockDetailsByBlockHashRITotalCoins and cannot be null");
+            if (amount == null) {
+                throw new ArgumentNullException("amount is a required property for GetXRPRippleBlockDetailsByBlockHashRITotalCoins and cannot be null");
+            }
+            this.Amount = amount;
             // to ensure "unit" is required (not null)
-            this.Unit = unit ?? throw new ArgumentNullException("unit is a required property for GetXRPRippleBlockDetailsByBlockHashRITotalCoins and cannot be null");
+            if (unit == null) {
+                throw new ArgumentNullException("unit is a required property for GetXRPRippleBlockDetailsByBlockHashRITotalCoins and cannot be null");
+            }
+            this.Unit = unit;
         }
 
         /// <summary>
-        /// Gets or Sets Amount
+        /// Defines the amount of the total coins.
         /// </summary>
+        /// <value>Defines the amount of the total coins.</value>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
         public string Amount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Unit
+        /// Defines the unit of the total coins.
         /// </summary>
+        /// <value>Defines the unit of the total coins.</value>
         [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
         public string Unit { get; set; }
 
@@ -140,7 +148,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

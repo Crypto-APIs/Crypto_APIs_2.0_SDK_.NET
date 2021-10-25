@@ -51,17 +51,32 @@ namespace CryptoAPIs.Model
         public GetXRPRippleBlockDetailsByBlockHashRI(string blockHash = default(string), int blockHeight = default(int), string nextBlockHash = default(string), string previousBlockHash = default(string), int timestamp = default(int), GetXRPRippleBlockDetailsByBlockHashRITotalCoins totalCoins = default(GetXRPRippleBlockDetailsByBlockHashRITotalCoins), GetXRPRippleBlockDetailsByBlockHeightRITotalFees totalFees = default(GetXRPRippleBlockDetailsByBlockHeightRITotalFees), int transactionsCount = default(int))
         {
             // to ensure "blockHash" is required (not null)
-            this.BlockHash = blockHash ?? throw new ArgumentNullException("blockHash is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            if (blockHash == null) {
+                throw new ArgumentNullException("blockHash is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.BlockHash = blockHash;
             this.BlockHeight = blockHeight;
             // to ensure "nextBlockHash" is required (not null)
-            this.NextBlockHash = nextBlockHash ?? throw new ArgumentNullException("nextBlockHash is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            if (nextBlockHash == null) {
+                throw new ArgumentNullException("nextBlockHash is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.NextBlockHash = nextBlockHash;
             // to ensure "previousBlockHash" is required (not null)
-            this.PreviousBlockHash = previousBlockHash ?? throw new ArgumentNullException("previousBlockHash is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            if (previousBlockHash == null) {
+                throw new ArgumentNullException("previousBlockHash is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             // to ensure "totalCoins" is required (not null)
-            this.TotalCoins = totalCoins ?? throw new ArgumentNullException("totalCoins is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            if (totalCoins == null) {
+                throw new ArgumentNullException("totalCoins is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.TotalCoins = totalCoins;
             // to ensure "totalFees" is required (not null)
-            this.TotalFees = totalFees ?? throw new ArgumentNullException("totalFees is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            if (totalFees == null) {
+                throw new ArgumentNullException("totalFees is a required property for GetXRPRippleBlockDetailsByBlockHashRI and cannot be null");
+            }
+            this.TotalFees = totalFees;
             this.TransactionsCount = transactionsCount;
         }
 
@@ -239,7 +254,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

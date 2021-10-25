@@ -46,11 +46,20 @@ namespace CryptoAPIs.Model
         public ListTransactionsByBlockHashRIBSD2ScriptSig(string asm = default(string), string hex = default(string), string type = default(string))
         {
             // to ensure "asm" is required (not null)
-            this.Asm = asm ?? throw new ArgumentNullException("asm is a required property for ListTransactionsByBlockHashRIBSD2ScriptSig and cannot be null");
+            if (asm == null) {
+                throw new ArgumentNullException("asm is a required property for ListTransactionsByBlockHashRIBSD2ScriptSig and cannot be null");
+            }
+            this.Asm = asm;
             // to ensure "hex" is required (not null)
-            this.Hex = hex ?? throw new ArgumentNullException("hex is a required property for ListTransactionsByBlockHashRIBSD2ScriptSig and cannot be null");
+            if (hex == null) {
+                throw new ArgumentNullException("hex is a required property for ListTransactionsByBlockHashRIBSD2ScriptSig and cannot be null");
+            }
+            this.Hex = hex;
             // to ensure "type" is required (not null)
-            this.Type = type ?? throw new ArgumentNullException("type is a required property for ListTransactionsByBlockHashRIBSD2ScriptSig and cannot be null");
+            if (type == null) {
+                throw new ArgumentNullException("type is a required property for ListTransactionsByBlockHashRIBSD2ScriptSig and cannot be null");
+            }
+            this.Type = type;
         }
 
         /// <summary>
@@ -160,7 +169,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

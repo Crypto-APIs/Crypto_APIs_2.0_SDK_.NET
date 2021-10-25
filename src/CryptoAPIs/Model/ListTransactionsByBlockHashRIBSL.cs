@@ -42,20 +42,26 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="locktime">Represents the time at which a particular transaction can be added to the blockchain. (required).</param>
         /// <param name="size">Represents the total size of this transaction. (required).</param>
+        /// <param name="vSize">Represents the virtual size of this transaction. (required).</param>
         /// <param name="version">Represents transaction version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        /// <param name="vsize">Represents the virtual size of this transaction. (required).</param>
-        public ListTransactionsByBlockHashRIBSL(int locktime = default(int), int size = default(int), int version = default(int), List<ListTransactionsByBlockHashRIBSLVin> vin = default(List<ListTransactionsByBlockHashRIBSLVin>), List<ListTransactionsByBlockHashRIBSLVout> vout = default(List<ListTransactionsByBlockHashRIBSLVout>), int vsize = default(int))
+        public ListTransactionsByBlockHashRIBSL(int locktime = default(int), int size = default(int), int vSize = default(int), int version = default(int), List<ListTransactionsByBlockHashRIBSLVin> vin = default(List<ListTransactionsByBlockHashRIBSLVin>), List<ListTransactionsByBlockHashRIBSLVout> vout = default(List<ListTransactionsByBlockHashRIBSLVout>))
         {
             this.Locktime = locktime;
             this.Size = size;
-            this.Version = version;
+            this.VSize = vSize;
+            this._Version = version;
             // to ensure "vin" is required (not null)
-            this.Vin = vin ?? throw new ArgumentNullException("vin is a required property for ListTransactionsByBlockHashRIBSL and cannot be null");
+            if (vin == null) {
+                throw new ArgumentNullException("vin is a required property for ListTransactionsByBlockHashRIBSL and cannot be null");
+            }
+            this.Vin = vin;
             // to ensure "vout" is required (not null)
-            this.Vout = vout ?? throw new ArgumentNullException("vout is a required property for ListTransactionsByBlockHashRIBSL and cannot be null");
-            this.Vsize = vsize;
+            if (vout == null) {
+                throw new ArgumentNullException("vout is a required property for ListTransactionsByBlockHashRIBSL and cannot be null");
+            }
+            this.Vout = vout;
         }
 
         /// <summary>
@@ -73,11 +79,18 @@ namespace CryptoAPIs.Model
         public int Size { get; set; }
 
         /// <summary>
+        /// Represents the virtual size of this transaction.
+        /// </summary>
+        /// <value>Represents the virtual size of this transaction.</value>
+        [DataMember(Name = "vSize", IsRequired = true, EmitDefaultValue = false)]
+        public int VSize { get; set; }
+
+        /// <summary>
         /// Represents transaction version number.
         /// </summary>
         /// <value>Represents transaction version number.</value>
         [DataMember(Name = "version", IsRequired = true, EmitDefaultValue = false)]
-        public int Version { get; set; }
+        public int _Version { get; set; }
 
         /// <summary>
         /// Represents the transaction inputs.
@@ -94,13 +107,6 @@ namespace CryptoAPIs.Model
         public List<ListTransactionsByBlockHashRIBSLVout> Vout { get; set; }
 
         /// <summary>
-        /// Represents the virtual size of this transaction.
-        /// </summary>
-        /// <value>Represents the virtual size of this transaction.</value>
-        [DataMember(Name = "vsize", IsRequired = true, EmitDefaultValue = false)]
-        public int Vsize { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -110,10 +116,10 @@ namespace CryptoAPIs.Model
             sb.Append("class ListTransactionsByBlockHashRIBSL {\n");
             sb.Append("  Locktime: ").Append(Locktime).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  VSize: ").Append(VSize).Append("\n");
+            sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("  Vin: ").Append(Vin).Append("\n");
             sb.Append("  Vout: ").Append(Vout).Append("\n");
-            sb.Append("  Vsize: ").Append(Vsize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,8 +163,12 @@ namespace CryptoAPIs.Model
                     this.Size.Equals(input.Size)
                 ) && 
                 (
-                    this.Version == input.Version ||
-                    this.Version.Equals(input.Version)
+                    this.VSize == input.VSize ||
+                    this.VSize.Equals(input.VSize)
+                ) && 
+                (
+                    this._Version == input._Version ||
+                    this._Version.Equals(input._Version)
                 ) && 
                 (
                     this.Vin == input.Vin ||
@@ -171,10 +181,6 @@ namespace CryptoAPIs.Model
                     this.Vout != null &&
                     input.Vout != null &&
                     this.Vout.SequenceEqual(input.Vout)
-                ) && 
-                (
-                    this.Vsize == input.Vsize ||
-                    this.Vsize.Equals(input.Vsize)
                 );
         }
 
@@ -189,12 +195,12 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.Locktime.GetHashCode();
                 hashCode = hashCode * 59 + this.Size.GetHashCode();
-                hashCode = hashCode * 59 + this.Version.GetHashCode();
+                hashCode = hashCode * 59 + this.VSize.GetHashCode();
+                hashCode = hashCode * 59 + this._Version.GetHashCode();
                 if (this.Vin != null)
                     hashCode = hashCode * 59 + this.Vin.GetHashCode();
                 if (this.Vout != null)
                     hashCode = hashCode * 59 + this.Vout.GetHashCode();
-                hashCode = hashCode * 59 + this.Vsize.GetHashCode();
                 return hashCode;
             }
         }
@@ -204,7 +210,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

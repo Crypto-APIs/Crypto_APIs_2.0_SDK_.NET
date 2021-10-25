@@ -44,7 +44,10 @@ namespace CryptoAPIs.Model
         public CreateAutomaticTokensForwardingRITSET(string contractAddress = default(string))
         {
             // to ensure "contractAddress" is required (not null)
-            this.ContractAddress = contractAddress ?? throw new ArgumentNullException("contractAddress is a required property for CreateAutomaticTokensForwardingRITSET and cannot be null");
+            if (contractAddress == null) {
+                throw new ArgumentNullException("contractAddress is a required property for CreateAutomaticTokensForwardingRITSET and cannot be null");
+            }
+            this.ContractAddress = contractAddress;
         }
 
         /// <summary>
@@ -124,7 +127,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

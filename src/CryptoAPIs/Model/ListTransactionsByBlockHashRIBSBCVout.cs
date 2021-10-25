@@ -47,9 +47,15 @@ namespace CryptoAPIs.Model
         {
             this.IsSpent = isSpent;
             // to ensure "scriptPubKey" is required (not null)
-            this.ScriptPubKey = scriptPubKey ?? throw new ArgumentNullException("scriptPubKey is a required property for ListTransactionsByBlockHashRIBSBCVout and cannot be null");
+            if (scriptPubKey == null) {
+                throw new ArgumentNullException("scriptPubKey is a required property for ListTransactionsByBlockHashRIBSBCVout and cannot be null");
+            }
+            this.ScriptPubKey = scriptPubKey;
             // to ensure "value" is required (not null)
-            this.Value = value ?? throw new ArgumentNullException("value is a required property for ListTransactionsByBlockHashRIBSBCVout and cannot be null");
+            if (value == null) {
+                throw new ArgumentNullException("value is a required property for ListTransactionsByBlockHashRIBSBCVout and cannot be null");
+            }
+            this.Value = value;
         }
 
         /// <summary>
@@ -156,7 +162,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

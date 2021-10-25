@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedEachConfirmationToken" /> class
-        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token" /> class
+        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationBep20" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token.</param>
-        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token actualInstance)
+        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationBep20.</param>
+        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationBep20 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedEachConfirmationToken" /> class
-        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token" /> class
+        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationErc20" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token.</param>
-        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token actualInstance)
+        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationErc20.</param>
+        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationErc20 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -60,10 +60,22 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedEachConfirmationToken" /> class
-        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken" /> class
+        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationErc721" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken.</param>
-        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken actualInstance)
+        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationErc721.</param>
+        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationErc721 actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedEachConfirmationToken" /> class
+        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationOmni" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationOmni.</param>
+        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationOmni actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -84,53 +96,67 @@ namespace CryptoAPIs.Model
             }
             set
             {
-                if (value.GetType() == typeof(AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token))
+                if (value.GetType() == typeof(AddressTokensTransactionConfirmedEachConfirmationBep20))
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token))
+                else if (value.GetType() == typeof(AddressTokensTransactionConfirmedEachConfirmationErc20))
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken))
+                else if (value.GetType() == typeof(AddressTokensTransactionConfirmedEachConfirmationErc721))
+                {
+                    this._actualInstance = value;
+                }
+                else if (value.GetType() == typeof(AddressTokensTransactionConfirmedEachConfirmationOmni))
                 {
                     this._actualInstance = value;
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token, AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token, AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: AddressTokensTransactionConfirmedEachConfirmationBep20, AddressTokensTransactionConfirmedEachConfirmationErc20, AddressTokensTransactionConfirmedEachConfirmationErc721, AddressTokensTransactionConfirmedEachConfirmationOmni");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token`. If the actual instanct is not `AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token`,
+        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationBep20`. If the actual instance is not `AddressTokensTransactionConfirmedEachConfirmationBep20`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token</returns>
-        public AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token GetAddressTokensTransactionConfirmedEachConfirmationEthereumerc20token()
+        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationBep20</returns>
+        public AddressTokensTransactionConfirmedEachConfirmationBep20 GetAddressTokensTransactionConfirmedEachConfirmationBep20()
         {
-            return (AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token)this.ActualInstance;
+            return (AddressTokensTransactionConfirmedEachConfirmationBep20)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token`. If the actual instanct is not `AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token`,
+        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationErc20`. If the actual instance is not `AddressTokensTransactionConfirmedEachConfirmationErc20`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token</returns>
-        public AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token GetAddressTokensTransactionConfirmedEachConfirmationEthereumerc721token()
+        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationErc20</returns>
+        public AddressTokensTransactionConfirmedEachConfirmationErc20 GetAddressTokensTransactionConfirmedEachConfirmationErc20()
         {
-            return (AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token)this.ActualInstance;
+            return (AddressTokensTransactionConfirmedEachConfirmationErc20)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken`. If the actual instanct is not `AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken`,
+        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationErc721`. If the actual instance is not `AddressTokensTransactionConfirmedEachConfirmationErc721`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken</returns>
-        public AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken GetAddressTokensTransactionConfirmedEachConfirmationOmnilayertoken()
+        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationErc721</returns>
+        public AddressTokensTransactionConfirmedEachConfirmationErc721 GetAddressTokensTransactionConfirmedEachConfirmationErc721()
         {
-            return (AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken)this.ActualInstance;
+            return (AddressTokensTransactionConfirmedEachConfirmationErc721)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationOmni`. If the actual instance is not `AddressTokensTransactionConfirmedEachConfirmationOmni`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationOmni</returns>
+        public AddressTokensTransactionConfirmedEachConfirmationOmni GetAddressTokensTransactionConfirmedEachConfirmationOmni()
+        {
+            return (AddressTokensTransactionConfirmedEachConfirmationOmni)this.ActualInstance;
         }
 
         /// <summary>
@@ -164,7 +190,7 @@ namespace CryptoAPIs.Model
         {
             AddressTokensTransactionConfirmedEachConfirmationToken newAddressTokensTransactionConfirmedEachConfirmationToken = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newAddressTokensTransactionConfirmedEachConfirmationToken;
             }
@@ -174,61 +200,81 @@ namespace CryptoAPIs.Model
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddressTokensTransactionConfirmedEachConfirmationBep20).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.SerializerSettings));
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationBep20>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.SerializerSettings));
                 }
                 else
                 {
-                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.AdditionalPropertiesSerializerSettings));
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationBep20>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token");
+                matchedTypes.Add("AddressTokensTransactionConfirmedEachConfirmationBep20");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionConfirmedEachConfirmationBep20: {1}", jsonString, exception.ToString()));
             }
 
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddressTokensTransactionConfirmedEachConfirmationErc20).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.SerializerSettings));
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationErc20>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.SerializerSettings));
                 }
                 else
                 {
-                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.AdditionalPropertiesSerializerSettings));
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationErc20>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token");
+                matchedTypes.Add("AddressTokensTransactionConfirmedEachConfirmationErc20");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionConfirmedEachConfirmationEthereumerc721token: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionConfirmedEachConfirmationErc20: {1}", jsonString, exception.ToString()));
             }
 
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddressTokensTransactionConfirmedEachConfirmationErc721).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.SerializerSettings));
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationErc721>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.SerializerSettings));
                 }
                 else
                 {
-                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.AdditionalPropertiesSerializerSettings));
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationErc721>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken");
+                matchedTypes.Add("AddressTokensTransactionConfirmedEachConfirmationErc721");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionConfirmedEachConfirmationErc721: {1}", jsonString, exception.ToString()));
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(AddressTokensTransactionConfirmedEachConfirmationOmni).GetProperty("AdditionalProperties") == null)
+                {
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationOmni>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.SerializerSettings));
+                }
+                else
+                {
+                    newAddressTokensTransactionConfirmedEachConfirmationToken = new AddressTokensTransactionConfirmedEachConfirmationToken(JsonConvert.DeserializeObject<AddressTokensTransactionConfirmedEachConfirmationOmni>(jsonString, AddressTokensTransactionConfirmedEachConfirmationToken.AdditionalPropertiesSerializerSettings));
+                }
+                matchedTypes.Add("AddressTokensTransactionConfirmedEachConfirmationOmni");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddressTokensTransactionConfirmedEachConfirmationOmni: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)

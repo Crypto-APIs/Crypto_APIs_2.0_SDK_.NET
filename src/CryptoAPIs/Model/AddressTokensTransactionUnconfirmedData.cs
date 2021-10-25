@@ -46,11 +46,20 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionUnconfirmedData(string product = default(string), string _event = default(string), AddressTokensTransactionUnconfirmedDataItem item = default(AddressTokensTransactionUnconfirmedDataItem))
         {
             // to ensure "product" is required (not null)
-            this.Product = product ?? throw new ArgumentNullException("product is a required property for AddressTokensTransactionUnconfirmedData and cannot be null");
+            if (product == null) {
+                throw new ArgumentNullException("product is a required property for AddressTokensTransactionUnconfirmedData and cannot be null");
+            }
+            this.Product = product;
             // to ensure "_event" is required (not null)
-            this.Event = _event ?? throw new ArgumentNullException("_event is a required property for AddressTokensTransactionUnconfirmedData and cannot be null");
+            if (_event == null) {
+                throw new ArgumentNullException("_event is a required property for AddressTokensTransactionUnconfirmedData and cannot be null");
+            }
+            this.Event = _event;
             // to ensure "item" is required (not null)
-            this.Item = item ?? throw new ArgumentNullException("item is a required property for AddressTokensTransactionUnconfirmedData and cannot be null");
+            if (item == null) {
+                throw new ArgumentNullException("item is a required property for AddressTokensTransactionUnconfirmedData and cannot be null");
+            }
+            this.Item = item;
         }
 
         /// <summary>
@@ -159,7 +168,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

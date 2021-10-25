@@ -48,7 +48,10 @@ namespace CryptoAPIs.Model
         public GetXRPRippleAddressDetailsRI(GetXRPRippleAddressDetailsRIBalance balance = default(GetXRPRippleAddressDetailsRIBalance), int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int), int sequence = default(int), int transactionsCount = default(int))
         {
             // to ensure "balance" is required (not null)
-            this.Balance = balance ?? throw new ArgumentNullException("balance is a required property for GetXRPRippleAddressDetailsRI and cannot be null");
+            if (balance == null) {
+                throw new ArgumentNullException("balance is a required property for GetXRPRippleAddressDetailsRI and cannot be null");
+            }
+            this.Balance = balance;
             this.IncomingTransactionsCount = incomingTransactionsCount;
             this.OutgoingTransactionsCount = outgoingTransactionsCount;
             this.Sequence = sequence;
@@ -183,7 +186,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

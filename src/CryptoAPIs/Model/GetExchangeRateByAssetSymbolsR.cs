@@ -47,11 +47,20 @@ namespace CryptoAPIs.Model
         public GetExchangeRateByAssetSymbolsR(string apiVersion = default(string), string requestId = default(string), string context = default(string), GetExchangeRateByAssetSymbolsRData data = default(GetExchangeRateByAssetSymbolsRData))
         {
             // to ensure "apiVersion" is required (not null)
-            this.ApiVersion = apiVersion ?? throw new ArgumentNullException("apiVersion is a required property for GetExchangeRateByAssetSymbolsR and cannot be null");
+            if (apiVersion == null) {
+                throw new ArgumentNullException("apiVersion is a required property for GetExchangeRateByAssetSymbolsR and cannot be null");
+            }
+            this.ApiVersion = apiVersion;
             // to ensure "requestId" is required (not null)
-            this.RequestId = requestId ?? throw new ArgumentNullException("requestId is a required property for GetExchangeRateByAssetSymbolsR and cannot be null");
+            if (requestId == null) {
+                throw new ArgumentNullException("requestId is a required property for GetExchangeRateByAssetSymbolsR and cannot be null");
+            }
+            this.RequestId = requestId;
             // to ensure "data" is required (not null)
-            this.Data = data ?? throw new ArgumentNullException("data is a required property for GetExchangeRateByAssetSymbolsR and cannot be null");
+            if (data == null) {
+                throw new ArgumentNullException("data is a required property for GetExchangeRateByAssetSymbolsR and cannot be null");
+            }
+            this.Data = data;
             this.Context = context;
         }
 
@@ -176,7 +185,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

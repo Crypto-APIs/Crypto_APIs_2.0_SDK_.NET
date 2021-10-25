@@ -50,15 +50,24 @@ namespace CryptoAPIs.Model
         public TransactionRequestBroadcastedDataItem(string blockchain = default(string), string network = default(string), int requiredApprovals = default(int), int requiredRejections = default(int), int currentApprovals = default(int), int currentRejections = default(int), string transactionId = default(string))
         {
             // to ensure "blockchain" is required (not null)
-            this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
+            if (blockchain == null) {
+                throw new ArgumentNullException("blockchain is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
+            }
+            this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            this.Network = network ?? throw new ArgumentNullException("network is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
+            if (network == null) {
+                throw new ArgumentNullException("network is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
+            }
+            this.Network = network;
             this.RequiredApprovals = requiredApprovals;
             this.RequiredRejections = requiredRejections;
             this.CurrentApprovals = currentApprovals;
             this.CurrentRejections = currentRejections;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for TransactionRequestBroadcastedDataItem and cannot be null");
+            }
+            this.TransactionId = transactionId;
         }
 
         /// <summary>
@@ -220,7 +229,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

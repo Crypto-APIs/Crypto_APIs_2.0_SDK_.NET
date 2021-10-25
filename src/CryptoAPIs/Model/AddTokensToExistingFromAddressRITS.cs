@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AddTokensToExistingFromAddressRITS" /> class
-        /// with the <see cref="AddTokensToExistingFromAddressRITSEET" /> class
+        /// with the <see cref="AddTokensToExistingFromAddressRITSET" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AddTokensToExistingFromAddressRITSEET.</param>
-        public AddTokensToExistingFromAddressRITS(AddTokensToExistingFromAddressRITSEET actualInstance)
+        /// <param name="actualInstance">An instance of AddTokensToExistingFromAddressRITSET.</param>
+        public AddTokensToExistingFromAddressRITS(AddTokensToExistingFromAddressRITSET actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -76,19 +76,19 @@ namespace CryptoAPIs.Model
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AddTokensToExistingFromAddressRITSEET))
+                else if (value.GetType() == typeof(AddTokensToExistingFromAddressRITSET))
                 {
                     this._actualInstance = value;
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: AddTokensToExistingFromAddressRITSBOT, AddTokensToExistingFromAddressRITSEET");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: AddTokensToExistingFromAddressRITSBOT, AddTokensToExistingFromAddressRITSET");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `AddTokensToExistingFromAddressRITSBOT`. If the actual instanct is not `AddTokensToExistingFromAddressRITSBOT`,
+        /// Get the actual instance of `AddTokensToExistingFromAddressRITSBOT`. If the actual instance is not `AddTokensToExistingFromAddressRITSBOT`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of AddTokensToExistingFromAddressRITSBOT</returns>
@@ -98,13 +98,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `AddTokensToExistingFromAddressRITSEET`. If the actual instanct is not `AddTokensToExistingFromAddressRITSEET`,
+        /// Get the actual instance of `AddTokensToExistingFromAddressRITSET`. If the actual instance is not `AddTokensToExistingFromAddressRITSET`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of AddTokensToExistingFromAddressRITSEET</returns>
-        public AddTokensToExistingFromAddressRITSEET GetAddTokensToExistingFromAddressRITSEET()
+        /// <returns>An instance of AddTokensToExistingFromAddressRITSET</returns>
+        public AddTokensToExistingFromAddressRITSET GetAddTokensToExistingFromAddressRITSET()
         {
-            return (AddTokensToExistingFromAddressRITSEET)this.ActualInstance;
+            return (AddTokensToExistingFromAddressRITSET)this.ActualInstance;
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace CryptoAPIs.Model
         {
             AddTokensToExistingFromAddressRITS newAddTokensToExistingFromAddressRITS = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newAddTokensToExistingFromAddressRITS;
             }
@@ -168,21 +168,21 @@ namespace CryptoAPIs.Model
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(AddTokensToExistingFromAddressRITSEET).GetProperty("AdditionalProperties") == null)
+                if (typeof(AddTokensToExistingFromAddressRITSET).GetProperty("AdditionalProperties") == null)
                 {
-                    newAddTokensToExistingFromAddressRITS = new AddTokensToExistingFromAddressRITS(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRITSEET>(jsonString, AddTokensToExistingFromAddressRITS.SerializerSettings));
+                    newAddTokensToExistingFromAddressRITS = new AddTokensToExistingFromAddressRITS(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRITSET>(jsonString, AddTokensToExistingFromAddressRITS.SerializerSettings));
                 }
                 else
                 {
-                    newAddTokensToExistingFromAddressRITS = new AddTokensToExistingFromAddressRITS(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRITSEET>(jsonString, AddTokensToExistingFromAddressRITS.AdditionalPropertiesSerializerSettings));
+                    newAddTokensToExistingFromAddressRITS = new AddTokensToExistingFromAddressRITS(JsonConvert.DeserializeObject<AddTokensToExistingFromAddressRITSET>(jsonString, AddTokensToExistingFromAddressRITS.AdditionalPropertiesSerializerSettings));
                 }
-                matchedTypes.Add("AddTokensToExistingFromAddressRITSEET");
+                matchedTypes.Add("AddTokensToExistingFromAddressRITSET");
                 match++;
             }
             catch (Exception exception)
             {
                 // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddTokensToExistingFromAddressRITSEET: {1}", jsonString, exception.ToString()));
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into AddTokensToExistingFromAddressRITSET: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)

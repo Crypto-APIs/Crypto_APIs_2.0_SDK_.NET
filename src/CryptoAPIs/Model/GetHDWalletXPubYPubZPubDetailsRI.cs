@@ -46,11 +46,20 @@ namespace CryptoAPIs.Model
         public GetHDWalletXPubYPubZPubDetailsRI(string confirmedBalance = default(string), string totalReceived = default(string), string totalSpent = default(string))
         {
             // to ensure "confirmedBalance" is required (not null)
-            this.ConfirmedBalance = confirmedBalance ?? throw new ArgumentNullException("confirmedBalance is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
+            if (confirmedBalance == null) {
+                throw new ArgumentNullException("confirmedBalance is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
+            }
+            this.ConfirmedBalance = confirmedBalance;
             // to ensure "totalReceived" is required (not null)
-            this.TotalReceived = totalReceived ?? throw new ArgumentNullException("totalReceived is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
+            if (totalReceived == null) {
+                throw new ArgumentNullException("totalReceived is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
+            }
+            this.TotalReceived = totalReceived;
             // to ensure "totalSpent" is required (not null)
-            this.TotalSpent = totalSpent ?? throw new ArgumentNullException("totalSpent is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
+            if (totalSpent == null) {
+                throw new ArgumentNullException("totalSpent is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
+            }
+            this.TotalSpent = totalSpent;
         }
 
         /// <summary>
@@ -160,7 +169,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

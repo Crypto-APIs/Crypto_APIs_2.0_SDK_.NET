@@ -40,7 +40,7 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NewBlockRI" /> class.
         /// </summary>
-        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. (required).</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
         /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
         /// <param name="createdTimestamp">Defines the specific time/date when the subscription was created in Unix Timestamp. (required).</param>
         /// <param name="isActive">Defines whether the subscription is active or not. Set as boolean. (required).</param>
@@ -48,19 +48,28 @@ namespace CryptoAPIs.Model
         public NewBlockRI(string callbackSecretKey = default(string), string callbackUrl = default(string), int createdTimestamp = default(int), bool isActive = default(bool), string referenceId = default(string))
         {
             // to ensure "callbackSecretKey" is required (not null)
-            this.CallbackSecretKey = callbackSecretKey ?? throw new ArgumentNullException("callbackSecretKey is a required property for NewBlockRI and cannot be null");
+            if (callbackSecretKey == null) {
+                throw new ArgumentNullException("callbackSecretKey is a required property for NewBlockRI and cannot be null");
+            }
+            this.CallbackSecretKey = callbackSecretKey;
             // to ensure "callbackUrl" is required (not null)
-            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for NewBlockRI and cannot be null");
+            if (callbackUrl == null) {
+                throw new ArgumentNullException("callbackUrl is a required property for NewBlockRI and cannot be null");
+            }
+            this.CallbackUrl = callbackUrl;
             this.CreatedTimestamp = createdTimestamp;
             this.IsActive = isActive;
             // to ensure "referenceId" is required (not null)
-            this.ReferenceId = referenceId ?? throw new ArgumentNullException("referenceId is a required property for NewBlockRI and cannot be null");
+            if (referenceId == null) {
+                throw new ArgumentNullException("referenceId is a required property for NewBlockRI and cannot be null");
+            }
+            this.ReferenceId = referenceId;
         }
 
         /// <summary>
-        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
         /// </summary>
-        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.</value>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).</value>
         [DataMember(Name = "callbackSecretKey", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackSecretKey { get; set; }
 
@@ -190,7 +199,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

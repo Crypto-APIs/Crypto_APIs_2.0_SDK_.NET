@@ -47,7 +47,10 @@ namespace CryptoAPIs.Model
         {
             this.Height = height;
             // to ensure "hash" is required (not null)
-            this.Hash = hash ?? throw new ArgumentNullException("hash is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock and cannot be null");
+            if (hash == null) {
+                throw new ArgumentNullException("hash is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock and cannot be null");
+            }
+            this.Hash = hash;
             this.Timestamp = timestamp;
         }
 
@@ -154,7 +157,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

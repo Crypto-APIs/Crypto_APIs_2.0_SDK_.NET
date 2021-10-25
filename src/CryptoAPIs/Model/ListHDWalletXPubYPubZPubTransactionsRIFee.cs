@@ -44,7 +44,10 @@ namespace CryptoAPIs.Model
         public ListHDWalletXPubYPubZPubTransactionsRIFee(string amount = default(string))
         {
             // to ensure "amount" is required (not null)
-            this.Amount = amount ?? throw new ArgumentNullException("amount is a required property for ListHDWalletXPubYPubZPubTransactionsRIFee and cannot be null");
+            if (amount == null) {
+                throw new ArgumentNullException("amount is a required property for ListHDWalletXPubYPubZPubTransactionsRIFee and cannot be null");
+            }
+            this.Amount = amount;
         }
 
         /// <summary>
@@ -124,7 +127,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

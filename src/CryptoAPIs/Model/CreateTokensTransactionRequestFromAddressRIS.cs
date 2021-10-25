@@ -36,18 +36,6 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTokensTransactionRequestFromAddressRIS" /> class
-        /// with the <see cref="CreateTokensTransactionRequestFromAddressRISB" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of CreateTokensTransactionRequestFromAddressRISB.</param>
-        public CreateTokensTransactionRequestFromAddressRIS(CreateTokensTransactionRequestFromAddressRISB actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateTokensTransactionRequestFromAddressRIS" /> class
         /// with the <see cref="CreateTokensTransactionRequestFromAddressRISE" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of CreateTokensTransactionRequestFromAddressRISE.</param>
@@ -72,33 +60,19 @@ namespace CryptoAPIs.Model
             }
             set
             {
-                if (value.GetType() == typeof(CreateTokensTransactionRequestFromAddressRISB))
-                {
-                    this._actualInstance = value;
-                }
-                else if (value.GetType() == typeof(CreateTokensTransactionRequestFromAddressRISE))
+                if (value.GetType() == typeof(CreateTokensTransactionRequestFromAddressRISE))
                 {
                     this._actualInstance = value;
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: CreateTokensTransactionRequestFromAddressRISB, CreateTokensTransactionRequestFromAddressRISE");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: CreateTokensTransactionRequestFromAddressRISE");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `CreateTokensTransactionRequestFromAddressRISB`. If the actual instanct is not `CreateTokensTransactionRequestFromAddressRISB`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of CreateTokensTransactionRequestFromAddressRISB</returns>
-        public CreateTokensTransactionRequestFromAddressRISB GetCreateTokensTransactionRequestFromAddressRISB()
-        {
-            return (CreateTokensTransactionRequestFromAddressRISB)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `CreateTokensTransactionRequestFromAddressRISE`. If the actual instanct is not `CreateTokensTransactionRequestFromAddressRISE`,
+        /// Get the actual instance of `CreateTokensTransactionRequestFromAddressRISE`. If the actual instance is not `CreateTokensTransactionRequestFromAddressRISE`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of CreateTokensTransactionRequestFromAddressRISE</returns>
@@ -138,32 +112,12 @@ namespace CryptoAPIs.Model
         {
             CreateTokensTransactionRequestFromAddressRIS newCreateTokensTransactionRequestFromAddressRIS = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newCreateTokensTransactionRequestFromAddressRIS;
             }
             int match = 0;
             List<string> matchedTypes = new List<string>();
-
-            try
-            {
-                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-                if (typeof(CreateTokensTransactionRequestFromAddressRISB).GetProperty("AdditionalProperties") == null)
-                {
-                    newCreateTokensTransactionRequestFromAddressRIS = new CreateTokensTransactionRequestFromAddressRIS(JsonConvert.DeserializeObject<CreateTokensTransactionRequestFromAddressRISB>(jsonString, CreateTokensTransactionRequestFromAddressRIS.SerializerSettings));
-                }
-                else
-                {
-                    newCreateTokensTransactionRequestFromAddressRIS = new CreateTokensTransactionRequestFromAddressRIS(JsonConvert.DeserializeObject<CreateTokensTransactionRequestFromAddressRISB>(jsonString, CreateTokensTransactionRequestFromAddressRIS.AdditionalPropertiesSerializerSettings));
-                }
-                matchedTypes.Add("CreateTokensTransactionRequestFromAddressRISB");
-                match++;
-            }
-            catch (Exception exception)
-            {
-                // deserialization failed, try the next one
-                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into CreateTokensTransactionRequestFromAddressRISB: {1}", jsonString, exception.ToString()));
-            }
 
             try
             {

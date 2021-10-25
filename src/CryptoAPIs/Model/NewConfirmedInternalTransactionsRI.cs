@@ -41,7 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="NewConfirmedInternalTransactionsRI" /> class.
         /// </summary>
         /// <param name="address">Defines the specific address of the internal transaction. (required).</param>
-        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs 2.0. (required).</param>
+        /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs 2.0. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
         /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
         /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
         /// <param name="createdTimestamp">Defines the specific time/date when the subscription was created in Unix Timestamp. (required).</param>
@@ -52,20 +52,38 @@ namespace CryptoAPIs.Model
         public NewConfirmedInternalTransactionsRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string), string transactionId = default(string))
         {
             // to ensure "address" is required (not null)
-            this.Address = address ?? throw new ArgumentNullException("address is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            if (address == null) {
+                throw new ArgumentNullException("address is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            }
+            this.Address = address;
             // to ensure "callbackSecretKey" is required (not null)
-            this.CallbackSecretKey = callbackSecretKey ?? throw new ArgumentNullException("callbackSecretKey is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            if (callbackSecretKey == null) {
+                throw new ArgumentNullException("callbackSecretKey is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            }
+            this.CallbackSecretKey = callbackSecretKey;
             // to ensure "callbackUrl" is required (not null)
-            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            if (callbackUrl == null) {
+                throw new ArgumentNullException("callbackUrl is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            }
+            this.CallbackUrl = callbackUrl;
             this.ConfirmationsCount = confirmationsCount;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "eventType" is required (not null)
-            this.EventType = eventType ?? throw new ArgumentNullException("eventType is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            if (eventType == null) {
+                throw new ArgumentNullException("eventType is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            }
+            this.EventType = eventType;
             this.IsActive = isActive;
             // to ensure "referenceId" is required (not null)
-            this.ReferenceId = referenceId ?? throw new ArgumentNullException("referenceId is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            if (referenceId == null) {
+                throw new ArgumentNullException("referenceId is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            }
+            this.ReferenceId = referenceId;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for NewConfirmedInternalTransactionsRI and cannot be null");
+            }
+            this.TransactionId = transactionId;
         }
 
         /// <summary>
@@ -76,9 +94,9 @@ namespace CryptoAPIs.Model
         public string Address { get; set; }
 
         /// <summary>
-        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs 2.0.
+        /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs 2.0. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
         /// </summary>
-        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs 2.0.</value>
+        /// <value>Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs 2.0. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).</value>
         [DataMember(Name = "callbackSecretKey", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackSecretKey { get; set; }
 
@@ -259,7 +277,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

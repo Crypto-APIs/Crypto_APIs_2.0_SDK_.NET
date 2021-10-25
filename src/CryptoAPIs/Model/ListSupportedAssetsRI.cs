@@ -76,14 +76,26 @@ namespace CryptoAPIs.Model
         public ListSupportedAssetsRI(string assetId = default(string), string assetName = default(string), string assetSymbol = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), string originalSymbol = default(string))
         {
             // to ensure "assetId" is required (not null)
-            this.AssetId = assetId ?? throw new ArgumentNullException("assetId is a required property for ListSupportedAssetsRI and cannot be null");
+            if (assetId == null) {
+                throw new ArgumentNullException("assetId is a required property for ListSupportedAssetsRI and cannot be null");
+            }
+            this.AssetId = assetId;
             // to ensure "assetName" is required (not null)
-            this.AssetName = assetName ?? throw new ArgumentNullException("assetName is a required property for ListSupportedAssetsRI and cannot be null");
+            if (assetName == null) {
+                throw new ArgumentNullException("assetName is a required property for ListSupportedAssetsRI and cannot be null");
+            }
+            this.AssetName = assetName;
             // to ensure "assetSymbol" is required (not null)
-            this.AssetSymbol = assetSymbol ?? throw new ArgumentNullException("assetSymbol is a required property for ListSupportedAssetsRI and cannot be null");
+            if (assetSymbol == null) {
+                throw new ArgumentNullException("assetSymbol is a required property for ListSupportedAssetsRI and cannot be null");
+            }
+            this.AssetSymbol = assetSymbol;
             this.AssetType = assetType;
             // to ensure "originalSymbol" is required (not null)
-            this.OriginalSymbol = originalSymbol ?? throw new ArgumentNullException("originalSymbol is a required property for ListSupportedAssetsRI and cannot be null");
+            if (originalSymbol == null) {
+                throw new ArgumentNullException("originalSymbol is a required property for ListSupportedAssetsRI and cannot be null");
+            }
+            this.OriginalSymbol = originalSymbol;
         }
 
         /// <summary>
@@ -214,7 +226,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

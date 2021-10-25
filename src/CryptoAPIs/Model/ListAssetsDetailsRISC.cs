@@ -79,20 +79,41 @@ namespace CryptoAPIs.Model
         public ListAssetsDetailsRISC(string _1hourPriceChangeInPercentage = default(string), string _1weekPriceChangeInPercentage = default(string), string _24hoursPriceChangeInPercentage = default(string), string _24hoursTradingVolume = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), string circulatingSupply = default(string), string marketCapInUSD = default(string), string maxSupply = default(string))
         {
             // to ensure "_1hourPriceChangeInPercentage" is required (not null)
-            this._1HourPriceChangeInPercentage = _1hourPriceChangeInPercentage ?? throw new ArgumentNullException("_1hourPriceChangeInPercentage is a required property for ListAssetsDetailsRISC and cannot be null");
+            if (_1hourPriceChangeInPercentage == null) {
+                throw new ArgumentNullException("_1hourPriceChangeInPercentage is a required property for ListAssetsDetailsRISC and cannot be null");
+            }
+            this._1HourPriceChangeInPercentage = _1hourPriceChangeInPercentage;
             // to ensure "_1weekPriceChangeInPercentage" is required (not null)
-            this._1WeekPriceChangeInPercentage = _1weekPriceChangeInPercentage ?? throw new ArgumentNullException("_1weekPriceChangeInPercentage is a required property for ListAssetsDetailsRISC and cannot be null");
+            if (_1weekPriceChangeInPercentage == null) {
+                throw new ArgumentNullException("_1weekPriceChangeInPercentage is a required property for ListAssetsDetailsRISC and cannot be null");
+            }
+            this._1WeekPriceChangeInPercentage = _1weekPriceChangeInPercentage;
             // to ensure "_24hoursPriceChangeInPercentage" is required (not null)
-            this._24HoursPriceChangeInPercentage = _24hoursPriceChangeInPercentage ?? throw new ArgumentNullException("_24hoursPriceChangeInPercentage is a required property for ListAssetsDetailsRISC and cannot be null");
+            if (_24hoursPriceChangeInPercentage == null) {
+                throw new ArgumentNullException("_24hoursPriceChangeInPercentage is a required property for ListAssetsDetailsRISC and cannot be null");
+            }
+            this._24HoursPriceChangeInPercentage = _24hoursPriceChangeInPercentage;
             // to ensure "_24hoursTradingVolume" is required (not null)
-            this._24HoursTradingVolume = _24hoursTradingVolume ?? throw new ArgumentNullException("_24hoursTradingVolume is a required property for ListAssetsDetailsRISC and cannot be null");
+            if (_24hoursTradingVolume == null) {
+                throw new ArgumentNullException("_24hoursTradingVolume is a required property for ListAssetsDetailsRISC and cannot be null");
+            }
+            this._24HoursTradingVolume = _24hoursTradingVolume;
             this.AssetType = assetType;
             // to ensure "circulatingSupply" is required (not null)
-            this.CirculatingSupply = circulatingSupply ?? throw new ArgumentNullException("circulatingSupply is a required property for ListAssetsDetailsRISC and cannot be null");
+            if (circulatingSupply == null) {
+                throw new ArgumentNullException("circulatingSupply is a required property for ListAssetsDetailsRISC and cannot be null");
+            }
+            this.CirculatingSupply = circulatingSupply;
             // to ensure "marketCapInUSD" is required (not null)
-            this.MarketCapInUSD = marketCapInUSD ?? throw new ArgumentNullException("marketCapInUSD is a required property for ListAssetsDetailsRISC and cannot be null");
+            if (marketCapInUSD == null) {
+                throw new ArgumentNullException("marketCapInUSD is a required property for ListAssetsDetailsRISC and cannot be null");
+            }
+            this.MarketCapInUSD = marketCapInUSD;
             // to ensure "maxSupply" is required (not null)
-            this.MaxSupply = maxSupply ?? throw new ArgumentNullException("maxSupply is a required property for ListAssetsDetailsRISC and cannot be null");
+            if (maxSupply == null) {
+                throw new ArgumentNullException("maxSupply is a required property for ListAssetsDetailsRISC and cannot be null");
+            }
+            this.MaxSupply = maxSupply;
         }
 
         /// <summary>
@@ -268,7 +289,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

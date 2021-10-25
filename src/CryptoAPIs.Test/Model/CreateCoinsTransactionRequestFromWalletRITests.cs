@@ -82,6 +82,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'FeePriority'
         }
         /// <summary>
+        /// Test the property 'Note'
+        /// </summary>
+        [Fact]
+        public void NoteTest()
+        {
+            // TODO unit test for the property 'Note'
+        }
+        /// <summary>
         /// Test the property 'Recipients'
         /// </summary>
         [Fact]
@@ -96,6 +104,14 @@ namespace CryptoAPIs.Test.Model
         public void TotalTransactionAmountTest()
         {
             // TODO unit test for the property 'TotalTransactionAmount'
+        }
+        /// <summary>
+        /// Test the property 'TransactionRequestId'
+        /// </summary>
+        [Fact]
+        public void TransactionRequestIdTest()
+        {
+            // TODO unit test for the property 'TransactionRequestId'
         }
         /// <summary>
         /// Test the property 'TransactionRequestStatus'

@@ -56,24 +56,42 @@ namespace CryptoAPIs.Model
         public GetUnconfirmedOmniTransactionByTransactionIDTxidRI(string amount = default(string), bool divisible = default(bool), bool mined = default(bool), int propertyId = default(int), List<GetUnconfirmedOmniTransactionByTransactionIDTxidRIRecipients> recipients = default(List<GetUnconfirmedOmniTransactionByTransactionIDTxidRIRecipients>), List<GetUnconfirmedOmniTransactionByTransactionIDTxidRISenders> senders = default(List<GetUnconfirmedOmniTransactionByTransactionIDTxidRISenders>), bool sent = default(bool), int timestamp = default(int), string transactionId = default(string), string type = default(string), int typeInt = default(int), int version = default(int), ListUnconfirmedOmniTransactionsByAddressRIFee fee = default(ListUnconfirmedOmniTransactionsByAddressRIFee))
         {
             // to ensure "amount" is required (not null)
-            this.Amount = amount ?? throw new ArgumentNullException("amount is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            if (amount == null) {
+                throw new ArgumentNullException("amount is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            }
+            this.Amount = amount;
             this.Divisible = divisible;
             this.Mined = mined;
             this.PropertyId = propertyId;
             // to ensure "recipients" is required (not null)
-            this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            if (recipients == null) {
+                throw new ArgumentNullException("recipients is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            }
+            this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            this.Senders = senders ?? throw new ArgumentNullException("senders is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            if (senders == null) {
+                throw new ArgumentNullException("senders is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            }
+            this.Senders = senders;
             this.Sent = sent;
             this.Timestamp = timestamp;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            }
+            this.TransactionId = transactionId;
             // to ensure "type" is required (not null)
-            this.Type = type ?? throw new ArgumentNullException("type is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            if (type == null) {
+                throw new ArgumentNullException("type is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            }
+            this.Type = type;
             this.TypeInt = typeInt;
-            this.Version = version;
+            this._Version = version;
             // to ensure "fee" is required (not null)
-            this.Fee = fee ?? throw new ArgumentNullException("fee is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            if (fee == null) {
+                throw new ArgumentNullException("fee is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidRI and cannot be null");
+            }
+            this.Fee = fee;
         }
 
         /// <summary>
@@ -158,7 +176,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the specific version.</value>
         [DataMember(Name = "version", IsRequired = true, EmitDefaultValue = false)]
-        public int Version { get; set; }
+        public int _Version { get; set; }
 
         /// <summary>
         /// Gets or Sets Fee
@@ -185,7 +203,7 @@ namespace CryptoAPIs.Model
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  TypeInt: ").Append(TypeInt).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("  Fee: ").Append(Fee).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -273,8 +291,8 @@ namespace CryptoAPIs.Model
                     this.TypeInt.Equals(input.TypeInt)
                 ) && 
                 (
-                    this.Version == input.Version ||
-                    this.Version.Equals(input.Version)
+                    this._Version == input._Version ||
+                    this._Version.Equals(input._Version)
                 ) && 
                 (
                     this.Fee == input.Fee ||
@@ -308,7 +326,7 @@ namespace CryptoAPIs.Model
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 hashCode = hashCode * 59 + this.TypeInt.GetHashCode();
-                hashCode = hashCode * 59 + this.Version.GetHashCode();
+                hashCode = hashCode * 59 + this._Version.GetHashCode();
                 if (this.Fee != null)
                     hashCode = hashCode * 59 + this.Fee.GetHashCode();
                 return hashCode;
@@ -320,7 +338,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

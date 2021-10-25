@@ -41,6 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRI" /> class.
         /// </summary>
         /// <param name="index">Represents the index position of the transaction in the specific block. (required).</param>
+        /// <param name="isConfirmed">Represents the state of the transaction whether it is confirmed or not confirmed. (required).</param>
         /// <param name="minedInBlockHash">Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm..</param>
         /// <param name="minedInBlockHeight">Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block..</param>
         /// <param name="recipients">Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. (required).</param>
@@ -49,25 +50,46 @@ namespace CryptoAPIs.Model
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions. (required).</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="fee">fee (required).</param>
-        /// <param name="isConfirmed">Defines whether the transaction is mined/confirmed or not. If it is \&quot;false\&quot;, it means the transaction is still in the Mempool waiting to be included in a block. Value \&quot;true\&quot; means that this transaction is already confirmed and included in a block. (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public GetTransactionDetailsByTransactionIDRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetTransactionDetailsByTransactionIDRIRecipients>), List<GetTransactionDetailsByTransactionIDRISenders> senders = default(List<GetTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), GetTransactionDetailsByTransactionIDRIFee fee = default(GetTransactionDetailsByTransactionIDRIFee), bool isConfirmed = default(bool), GetTransactionDetailsByTransactionIDRIBS blockchainSpecific = default(GetTransactionDetailsByTransactionIDRIBS))
+        public GetTransactionDetailsByTransactionIDRI(int index = default(int), string isConfirmed = default(string), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetTransactionDetailsByTransactionIDRIRecipients>), List<GetTransactionDetailsByTransactionIDRISenders> senders = default(List<GetTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), GetTransactionDetailsByTransactionIDRIFee fee = default(GetTransactionDetailsByTransactionIDRIFee), GetTransactionDetailsByTransactionIDRIBS blockchainSpecific = default(GetTransactionDetailsByTransactionIDRIBS))
         {
             this.Index = index;
+            // to ensure "isConfirmed" is required (not null)
+            if (isConfirmed == null) {
+                throw new ArgumentNullException("isConfirmed is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.IsConfirmed = isConfirmed;
             // to ensure "recipients" is required (not null)
-            this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            if (recipients == null) {
+                throw new ArgumentNullException("recipients is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            this.Senders = senders ?? throw new ArgumentNullException("senders is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            if (senders == null) {
+                throw new ArgumentNullException("senders is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Senders = senders;
             this.Timestamp = timestamp;
             // to ensure "transactionHash" is required (not null)
-            this.TransactionHash = transactionHash ?? throw new ArgumentNullException("transactionHash is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            if (transactionHash == null) {
+                throw new ArgumentNullException("transactionHash is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.TransactionHash = transactionHash;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.TransactionId = transactionId;
             // to ensure "fee" is required (not null)
-            this.Fee = fee ?? throw new ArgumentNullException("fee is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
-            this.IsConfirmed = isConfirmed;
+            if (fee == null) {
+                throw new ArgumentNullException("fee is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Fee = fee;
             // to ensure "blockchainSpecific" is required (not null)
-            this.BlockchainSpecific = blockchainSpecific ?? throw new ArgumentNullException("blockchainSpecific is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            if (blockchainSpecific == null) {
+                throw new ArgumentNullException("blockchainSpecific is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.BlockchainSpecific = blockchainSpecific;
             this.MinedInBlockHash = minedInBlockHash;
             this.MinedInBlockHeight = minedInBlockHeight;
         }
@@ -78,6 +100,13 @@ namespace CryptoAPIs.Model
         /// <value>Represents the index position of the transaction in the specific block.</value>
         [DataMember(Name = "index", IsRequired = true, EmitDefaultValue = false)]
         public int Index { get; set; }
+
+        /// <summary>
+        /// Represents the state of the transaction whether it is confirmed or not confirmed.
+        /// </summary>
+        /// <value>Represents the state of the transaction whether it is confirmed or not confirmed.</value>
+        [DataMember(Name = "isConfirmed", IsRequired = true, EmitDefaultValue = false)]
+        public string IsConfirmed { get; set; }
 
         /// <summary>
         /// Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -135,13 +164,6 @@ namespace CryptoAPIs.Model
         public GetTransactionDetailsByTransactionIDRIFee Fee { get; set; }
 
         /// <summary>
-        /// Defines whether the transaction is mined/confirmed or not. If it is \&quot;false\&quot;, it means the transaction is still in the Mempool waiting to be included in a block. Value \&quot;true\&quot; means that this transaction is already confirmed and included in a block.
-        /// </summary>
-        /// <value>Defines whether the transaction is mined/confirmed or not. If it is \&quot;false\&quot;, it means the transaction is still in the Mempool waiting to be included in a block. Value \&quot;true\&quot; means that this transaction is already confirmed and included in a block.</value>
-        [DataMember(Name = "isConfirmed", IsRequired = true, EmitDefaultValue = true)]
-        public bool IsConfirmed { get; set; }
-
-        /// <summary>
         /// Gets or Sets BlockchainSpecific
         /// </summary>
         [DataMember(Name = "blockchainSpecific", IsRequired = true, EmitDefaultValue = false)]
@@ -156,6 +178,7 @@ namespace CryptoAPIs.Model
             var sb = new StringBuilder();
             sb.Append("class GetTransactionDetailsByTransactionIDRI {\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
+            sb.Append("  IsConfirmed: ").Append(IsConfirmed).Append("\n");
             sb.Append("  MinedInBlockHash: ").Append(MinedInBlockHash).Append("\n");
             sb.Append("  MinedInBlockHeight: ").Append(MinedInBlockHeight).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
@@ -164,7 +187,6 @@ namespace CryptoAPIs.Model
             sb.Append("  TransactionHash: ").Append(TransactionHash).Append("\n");
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("  Fee: ").Append(Fee).Append("\n");
-            sb.Append("  IsConfirmed: ").Append(IsConfirmed).Append("\n");
             sb.Append("  BlockchainSpecific: ").Append(BlockchainSpecific).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -203,6 +225,11 @@ namespace CryptoAPIs.Model
                 (
                     this.Index == input.Index ||
                     this.Index.Equals(input.Index)
+                ) && 
+                (
+                    this.IsConfirmed == input.IsConfirmed ||
+                    (this.IsConfirmed != null &&
+                    this.IsConfirmed.Equals(input.IsConfirmed))
                 ) && 
                 (
                     this.MinedInBlockHash == input.MinedInBlockHash ||
@@ -245,10 +272,6 @@ namespace CryptoAPIs.Model
                     this.Fee.Equals(input.Fee))
                 ) && 
                 (
-                    this.IsConfirmed == input.IsConfirmed ||
-                    this.IsConfirmed.Equals(input.IsConfirmed)
-                ) && 
-                (
                     this.BlockchainSpecific == input.BlockchainSpecific ||
                     (this.BlockchainSpecific != null &&
                     this.BlockchainSpecific.Equals(input.BlockchainSpecific))
@@ -265,6 +288,8 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.Index.GetHashCode();
+                if (this.IsConfirmed != null)
+                    hashCode = hashCode * 59 + this.IsConfirmed.GetHashCode();
                 if (this.MinedInBlockHash != null)
                     hashCode = hashCode * 59 + this.MinedInBlockHash.GetHashCode();
                 hashCode = hashCode * 59 + this.MinedInBlockHeight.GetHashCode();
@@ -279,7 +304,6 @@ namespace CryptoAPIs.Model
                     hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
                 if (this.Fee != null)
                     hashCode = hashCode * 59 + this.Fee.GetHashCode();
-                hashCode = hashCode * 59 + this.IsConfirmed.GetHashCode();
                 if (this.BlockchainSpecific != null)
                     hashCode = hashCode * 59 + this.BlockchainSpecific.GetHashCode();
                 return hashCode;
@@ -291,7 +315,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -51,13 +51,25 @@ namespace CryptoAPIs.Model
         public GetTransactionDetailsByTransactionIDRIBSBVin(List<string> addresses = default(List<string>), string coinbase = default(string), GetTransactionDetailsByTransactionIDRIBSBScriptSig scriptSig = default(GetTransactionDetailsByTransactionIDRIBSBScriptSig), string sequence = default(string), string txid = default(string), List<string> txinwitness = default(List<string>), string value = default(string), int vout = default(int))
         {
             // to ensure "addresses" is required (not null)
-            this.Addresses = addresses ?? throw new ArgumentNullException("addresses is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            if (addresses == null) {
+                throw new ArgumentNullException("addresses is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            }
+            this.Addresses = addresses;
             // to ensure "scriptSig" is required (not null)
-            this.ScriptSig = scriptSig ?? throw new ArgumentNullException("scriptSig is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            if (scriptSig == null) {
+                throw new ArgumentNullException("scriptSig is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            }
+            this.ScriptSig = scriptSig;
             // to ensure "sequence" is required (not null)
-            this.Sequence = sequence ?? throw new ArgumentNullException("sequence is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            if (sequence == null) {
+                throw new ArgumentNullException("sequence is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            }
+            this.Sequence = sequence;
             // to ensure "txinwitness" is required (not null)
-            this.Txinwitness = txinwitness ?? throw new ArgumentNullException("txinwitness is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            if (txinwitness == null) {
+                throw new ArgumentNullException("txinwitness is a required property for GetTransactionDetailsByTransactionIDRIBSBVin and cannot be null");
+            }
+            this.Txinwitness = txinwitness;
             this.Coinbase = coinbase;
             this.Txid = txid;
             this.Value = value;
@@ -243,7 +255,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

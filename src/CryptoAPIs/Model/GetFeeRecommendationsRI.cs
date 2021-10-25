@@ -41,19 +41,31 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetFeeRecommendationsRI" /> class.
         /// </summary>
         /// <param name="unit">Defines the unit of the fee, e.g. BTC. (required).</param>
-        /// <param name="fast">Defines the fee priority as \&quot;FAST\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool. (required).</param>
-        /// <param name="slow">Defines the fee priority as \&quot;SLOW\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool. (required).</param>
-        /// <param name="standard">Defines the fee priority as \&quot;STANDARD\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool. (required).</param>
+        /// <param name="fast">Fast fee per byte calculated from unconfirmed transactions (required).</param>
+        /// <param name="slow">Slow fee per byte calculated from unconfirmed transactions (required).</param>
+        /// <param name="standard">Standard fee per byte calculated from unconfirmed transactions (required).</param>
         public GetFeeRecommendationsRI(string unit = default(string), string fast = default(string), string slow = default(string), string standard = default(string))
         {
             // to ensure "unit" is required (not null)
-            this.Unit = unit ?? throw new ArgumentNullException("unit is a required property for GetFeeRecommendationsRI and cannot be null");
+            if (unit == null) {
+                throw new ArgumentNullException("unit is a required property for GetFeeRecommendationsRI and cannot be null");
+            }
+            this.Unit = unit;
             // to ensure "fast" is required (not null)
-            this.Fast = fast ?? throw new ArgumentNullException("fast is a required property for GetFeeRecommendationsRI and cannot be null");
+            if (fast == null) {
+                throw new ArgumentNullException("fast is a required property for GetFeeRecommendationsRI and cannot be null");
+            }
+            this.Fast = fast;
             // to ensure "slow" is required (not null)
-            this.Slow = slow ?? throw new ArgumentNullException("slow is a required property for GetFeeRecommendationsRI and cannot be null");
+            if (slow == null) {
+                throw new ArgumentNullException("slow is a required property for GetFeeRecommendationsRI and cannot be null");
+            }
+            this.Slow = slow;
             // to ensure "standard" is required (not null)
-            this.Standard = standard ?? throw new ArgumentNullException("standard is a required property for GetFeeRecommendationsRI and cannot be null");
+            if (standard == null) {
+                throw new ArgumentNullException("standard is a required property for GetFeeRecommendationsRI and cannot be null");
+            }
+            this.Standard = standard;
         }
 
         /// <summary>
@@ -64,23 +76,23 @@ namespace CryptoAPIs.Model
         public string Unit { get; set; }
 
         /// <summary>
-        /// Defines the fee priority as \&quot;FAST\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool.
+        /// Fast fee per byte calculated from unconfirmed transactions
         /// </summary>
-        /// <value>Defines the fee priority as \&quot;FAST\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool.</value>
+        /// <value>Fast fee per byte calculated from unconfirmed transactions</value>
         [DataMember(Name = "fast", IsRequired = true, EmitDefaultValue = false)]
         public string Fast { get; set; }
 
         /// <summary>
-        /// Defines the fee priority as \&quot;SLOW\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool.
+        /// Slow fee per byte calculated from unconfirmed transactions
         /// </summary>
-        /// <value>Defines the fee priority as \&quot;SLOW\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool.</value>
+        /// <value>Slow fee per byte calculated from unconfirmed transactions</value>
         [DataMember(Name = "slow", IsRequired = true, EmitDefaultValue = false)]
         public string Slow { get; set; }
 
         /// <summary>
-        /// Defines the fee priority as \&quot;STANDARD\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool.
+        /// Standard fee per byte calculated from unconfirmed transactions
         /// </summary>
-        /// <value>Defines the fee priority as \&quot;STANDARD\&quot;. It works per byte, for UTXO-based protocols like Bitcoin, or per gas price, for account-based protocols like Ethereum. These are calculated based on Mempool.</value>
+        /// <value>Standard fee per byte calculated from unconfirmed transactions</value>
         [DataMember(Name = "standard", IsRequired = true, EmitDefaultValue = false)]
         public string Standard { get; set; }
 
@@ -178,7 +190,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,22 +40,22 @@ namespace CryptoAPIs.Model
         public enum TokenTypeEnum
         {
             /// <summary>
-            /// Enum EthereumERC20Token for value: ethereumERC20Token
+            /// Enum ERC20 for value: ERC-20
             /// </summary>
-            [EnumMember(Value = "ethereumERC20Token")]
-            EthereumERC20Token = 1,
+            [EnumMember(Value = "ERC-20")]
+            ERC20 = 1,
 
             /// <summary>
-            /// Enum EthereumERC721Token for value: ethereumERC721Token
+            /// Enum ERC721 for value: ERC-721
             /// </summary>
-            [EnumMember(Value = "ethereumERC721Token")]
-            EthereumERC721Token = 2,
+            [EnumMember(Value = "ERC-721")]
+            ERC721 = 2,
 
             /// <summary>
-            /// Enum OmniLayerToken for value: omniLayerToken
+            /// Enum OMNI for value: OMNI
             /// </summary>
-            [EnumMember(Value = "omniLayerToken")]
-            OmniLayerToken = 3
+            [EnumMember(Value = "OMNI")]
+            OMNI = 3
 
         }
 
@@ -75,7 +75,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="TokensForwardingSuccessDataItem" /> class.
         /// </summary>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required).</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required).</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required).</param>
         /// <param name="fromAddress">Represents the hash of the address that provides the tokens. (required).</param>
         /// <param name="toAddress">Represents the hash of the address to forward the tokens to. (required).</param>
         /// <param name="spentFeesAmount">Represents the amount of the fee spent for the tokens to be forwarded. (required).</param>
@@ -87,24 +87,51 @@ namespace CryptoAPIs.Model
         public TokensForwardingSuccessDataItem(string blockchain = default(string), string network = default(string), string fromAddress = default(string), string toAddress = default(string), string spentFeesAmount = default(string), string spentFeesUnit = default(string), string triggerTransactionId = default(string), string forwardingTransactionId = default(string), TokenTypeEnum tokenType = default(TokenTypeEnum), TokensForwardingSuccessToken token = default(TokensForwardingSuccessToken))
         {
             // to ensure "blockchain" is required (not null)
-            this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (blockchain == null) {
+                throw new ArgumentNullException("blockchain is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            this.Network = network ?? throw new ArgumentNullException("network is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (network == null) {
+                throw new ArgumentNullException("network is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.Network = network;
             // to ensure "fromAddress" is required (not null)
-            this.FromAddress = fromAddress ?? throw new ArgumentNullException("fromAddress is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (fromAddress == null) {
+                throw new ArgumentNullException("fromAddress is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.FromAddress = fromAddress;
             // to ensure "toAddress" is required (not null)
-            this.ToAddress = toAddress ?? throw new ArgumentNullException("toAddress is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (toAddress == null) {
+                throw new ArgumentNullException("toAddress is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.ToAddress = toAddress;
             // to ensure "spentFeesAmount" is required (not null)
-            this.SpentFeesAmount = spentFeesAmount ?? throw new ArgumentNullException("spentFeesAmount is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (spentFeesAmount == null) {
+                throw new ArgumentNullException("spentFeesAmount is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.SpentFeesAmount = spentFeesAmount;
             // to ensure "spentFeesUnit" is required (not null)
-            this.SpentFeesUnit = spentFeesUnit ?? throw new ArgumentNullException("spentFeesUnit is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (spentFeesUnit == null) {
+                throw new ArgumentNullException("spentFeesUnit is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.SpentFeesUnit = spentFeesUnit;
             // to ensure "triggerTransactionId" is required (not null)
-            this.TriggerTransactionId = triggerTransactionId ?? throw new ArgumentNullException("triggerTransactionId is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (triggerTransactionId == null) {
+                throw new ArgumentNullException("triggerTransactionId is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.TriggerTransactionId = triggerTransactionId;
             // to ensure "forwardingTransactionId" is required (not null)
-            this.ForwardingTransactionId = forwardingTransactionId ?? throw new ArgumentNullException("forwardingTransactionId is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (forwardingTransactionId == null) {
+                throw new ArgumentNullException("forwardingTransactionId is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.ForwardingTransactionId = forwardingTransactionId;
             this.TokenType = tokenType;
             // to ensure "token" is required (not null)
-            this.Token = token ?? throw new ArgumentNullException("token is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            if (token == null) {
+                throw new ArgumentNullException("token is a required property for TokensForwardingSuccessDataItem and cannot be null");
+            }
+            this.Token = token;
         }
 
         /// <summary>
@@ -115,9 +142,9 @@ namespace CryptoAPIs.Model
         public string Blockchain { get; set; }
 
         /// <summary>
-        /// Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
+        /// Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.
         /// </summary>
-        /// <value>Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</value>
+        /// <value>Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</value>
         [DataMember(Name = "network", IsRequired = true, EmitDefaultValue = false)]
         public string Network { get; set; }
 
@@ -309,7 +336,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

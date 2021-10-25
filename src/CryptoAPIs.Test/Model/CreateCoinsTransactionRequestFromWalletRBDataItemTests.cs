@@ -82,6 +82,22 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'FeePriority'
         }
         /// <summary>
+        /// Test the property 'Note'
+        /// </summary>
+        [Fact]
+        public void NoteTest()
+        {
+            // TODO unit test for the property 'Note'
+        }
+        /// <summary>
+        /// Test the property 'PrepareStrategy'
+        /// </summary>
+        [Fact]
+        public void PrepareStrategyTest()
+        {
+            // TODO unit test for the property 'PrepareStrategy'
+        }
+        /// <summary>
         /// Test the property 'Recipients'
         /// </summary>
         [Fact]

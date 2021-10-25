@@ -55,22 +55,37 @@ namespace CryptoAPIs.Model
         public GetZilliqaTransactionDetailsByTransactionIDRI(GetZilliqaTransactionDetailsByTransactionIDRIFee fee = default(GetZilliqaTransactionDetailsByTransactionIDRIFee), int gasLimit = default(int), int gasPrice = default(int), int gasUsed = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), int nonce = default(int), List<GetZilliqaTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetZilliqaTransactionDetailsByTransactionIDRIRecipients>), List<GetZilliqaTransactionDetailsByTransactionIDRISenders> senders = default(List<GetZilliqaTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), int transactionIndex = default(int), string transactionStatus = default(string))
         {
             // to ensure "fee" is required (not null)
-            this.Fee = fee ?? throw new ArgumentNullException("fee is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            if (fee == null) {
+                throw new ArgumentNullException("fee is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Fee = fee;
             this.GasLimit = gasLimit;
             this.GasPrice = gasPrice;
             this.GasUsed = gasUsed;
             // to ensure "minedInBlockHash" is required (not null)
-            this.MinedInBlockHash = minedInBlockHash ?? throw new ArgumentNullException("minedInBlockHash is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            if (minedInBlockHash == null) {
+                throw new ArgumentNullException("minedInBlockHash is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.MinedInBlockHash = minedInBlockHash;
             this.MinedInBlockHeight = minedInBlockHeight;
             this.Nonce = nonce;
             // to ensure "recipients" is required (not null)
-            this.Recipients = recipients ?? throw new ArgumentNullException("recipients is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            if (recipients == null) {
+                throw new ArgumentNullException("recipients is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            this.Senders = senders ?? throw new ArgumentNullException("senders is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            if (senders == null) {
+                throw new ArgumentNullException("senders is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.Senders = senders;
             this.Timestamp = timestamp;
             this.TransactionIndex = transactionIndex;
             // to ensure "transactionStatus" is required (not null)
-            this.TransactionStatus = transactionStatus ?? throw new ArgumentNullException("transactionStatus is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            if (transactionStatus == null) {
+                throw new ArgumentNullException("transactionStatus is a required property for GetZilliqaTransactionDetailsByTransactionIDRI and cannot be null");
+            }
+            this.TransactionStatus = transactionStatus;
         }
 
         /// <summary>
@@ -302,7 +317,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

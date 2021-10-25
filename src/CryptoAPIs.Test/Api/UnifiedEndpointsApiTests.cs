@@ -115,17 +115,17 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test GetLatestMinedBlock
+        /// Test GetLastMinedBlock
         /// </summary>
         [Fact]
-        public void GetLatestMinedBlockTest()
+        public void GetLastMinedBlockTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
             //string network = null;
             //string context = null;
-            //var response = instance.GetLatestMinedBlock(blockchain, network, context);
-            //Assert.IsType<GetLatestMinedBlockR>(response);
+            //var response = instance.GetLastMinedBlock(blockchain, network, context);
+            //Assert.IsType<GetLastMinedBlockR>(response);
         }
 
         /// <summary>
@@ -144,10 +144,26 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test ListTransactionsByAddress
+        /// Test ListAllUnconfirmedTransactions
         /// </summary>
         [Fact]
-        public void ListTransactionsByAddressTest()
+        public void ListAllUnconfirmedTransactionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListAllUnconfirmedTransactions(blockchain, network, context, limit, offset);
+            //Assert.IsType<ListAllUnconfirmedTransactionsR>(response);
+        }
+
+        /// <summary>
+        /// Test ListConfirmedTransactionsByAddress
+        /// </summary>
+        [Fact]
+        public void ListConfirmedTransactionsByAddressTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
@@ -156,8 +172,23 @@ namespace CryptoAPIs.Test.Api
             //string context = null;
             //int? limit = null;
             //int? offset = null;
-            //var response = instance.ListTransactionsByAddress(blockchain, network, address, context, limit, offset);
-            //Assert.IsType<ListTransactionsByAddressR>(response);
+            //var response = instance.ListConfirmedTransactionsByAddress(blockchain, network, address, context, limit, offset);
+            //Assert.IsType<ListConfirmedTransactionsByAddressR>(response);
+        }
+
+        /// <summary>
+        /// Test ListLatestMinedBlocks
+        /// </summary>
+        [Fact]
+        public void ListLatestMinedBlocksTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string network = null;
+            //string blockchain = null;
+            //int count = null;
+            //string context = null;
+            //var response = instance.ListLatestMinedBlocks(network, blockchain, count, context);
+            //Assert.IsType<ListLatestMinedBlocksR>(response);
         }
 
         /// <summary>
@@ -192,6 +223,23 @@ namespace CryptoAPIs.Test.Api
             //int? offset = null;
             //var response = instance.ListTransactionsByBlockHeight(blockchain, network, height, context, limit, offset);
             //Assert.IsType<ListTransactionsByBlockHeightR>(response);
+        }
+
+        /// <summary>
+        /// Test ListUnconfirmedTransactionsByAddress
+        /// </summary>
+        [Fact]
+        public void ListUnconfirmedTransactionsByAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListUnconfirmedTransactionsByAddress(blockchain, network, address, context, limit, offset);
+            //Assert.IsType<ListUnconfirmedTransactionsByAddressR>(response);
         }
     }
 }

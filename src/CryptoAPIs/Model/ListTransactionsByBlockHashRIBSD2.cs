@@ -49,11 +49,17 @@ namespace CryptoAPIs.Model
         {
             this.Locktime = locktime;
             this.Size = size;
-            this.Version = version;
+            this._Version = version;
             // to ensure "vin" is required (not null)
-            this.Vin = vin ?? throw new ArgumentNullException("vin is a required property for ListTransactionsByBlockHashRIBSD2 and cannot be null");
+            if (vin == null) {
+                throw new ArgumentNullException("vin is a required property for ListTransactionsByBlockHashRIBSD2 and cannot be null");
+            }
+            this.Vin = vin;
             // to ensure "vout" is required (not null)
-            this.Vout = vout ?? throw new ArgumentNullException("vout is a required property for ListTransactionsByBlockHashRIBSD2 and cannot be null");
+            if (vout == null) {
+                throw new ArgumentNullException("vout is a required property for ListTransactionsByBlockHashRIBSD2 and cannot be null");
+            }
+            this.Vout = vout;
         }
 
         /// <summary>
@@ -75,7 +81,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents transaction version number.</value>
         [DataMember(Name = "version", IsRequired = true, EmitDefaultValue = false)]
-        public int Version { get; set; }
+        public int _Version { get; set; }
 
         /// <summary>
         /// Represents the transaction inputs.
@@ -101,7 +107,7 @@ namespace CryptoAPIs.Model
             sb.Append("class ListTransactionsByBlockHashRIBSD2 {\n");
             sb.Append("  Locktime: ").Append(Locktime).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("  Vin: ").Append(Vin).Append("\n");
             sb.Append("  Vout: ").Append(Vout).Append("\n");
             sb.Append("}\n");
@@ -147,8 +153,8 @@ namespace CryptoAPIs.Model
                     this.Size.Equals(input.Size)
                 ) && 
                 (
-                    this.Version == input.Version ||
-                    this.Version.Equals(input.Version)
+                    this._Version == input._Version ||
+                    this._Version.Equals(input._Version)
                 ) && 
                 (
                     this.Vin == input.Vin ||
@@ -175,7 +181,7 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.Locktime.GetHashCode();
                 hashCode = hashCode * 59 + this.Size.GetHashCode();
-                hashCode = hashCode * 59 + this.Version.GetHashCode();
+                hashCode = hashCode * 59 + this._Version.GetHashCode();
                 if (this.Vin != null)
                     hashCode = hashCode * 59 + this.Vin.GetHashCode();
                 if (this.Vout != null)
@@ -189,7 +195,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

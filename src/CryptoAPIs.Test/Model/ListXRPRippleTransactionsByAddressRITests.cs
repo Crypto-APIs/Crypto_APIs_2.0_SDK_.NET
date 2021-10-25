@@ -58,6 +58,14 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
+        /// Test the property 'DestinationTag'
+        /// </summary>
+        [Fact]
+        public void DestinationTagTest()
+        {
+            // TODO unit test for the property 'DestinationTag'
+        }
+        /// <summary>
         /// Test the property 'Index'
         /// </summary>
         [Fact]

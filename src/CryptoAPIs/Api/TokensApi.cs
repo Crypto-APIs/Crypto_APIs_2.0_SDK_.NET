@@ -28,32 +28,63 @@ namespace CryptoAPIs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get Contract Details by Address
+        /// Get Token Details by Contract Address
         /// </summary>
         /// <remarks>
-        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>GetContractDetailsByAddressR</returns>
-        GetContractDetailsByAddressR GetContractDetailsByAddress(string blockchain, string network, string contractAddress, string context = default(string));
+        /// <returns>GetTokenDetailsByContractAddressR</returns>
+        GetTokenDetailsByContractAddressR GetTokenDetailsByContractAddress(string blockchain, string network, string contractAddress, string context = default(string));
 
         /// <summary>
-        /// Get Contract Details by Address
+        /// Get Token Details by Contract Address
         /// </summary>
         /// <remarks>
-        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>ApiResponse of GetContractDetailsByAddressR</returns>
-        ApiResponse<GetContractDetailsByAddressR> GetContractDetailsByAddressWithHttpInfo(string blockchain, string network, string contractAddress, string context = default(string));
+        /// <returns>ApiResponse of GetTokenDetailsByContractAddressR</returns>
+        ApiResponse<GetTokenDetailsByContractAddressR> GetTokenDetailsByContractAddressWithHttpInfo(string blockchain, string network, string contractAddress, string context = default(string));
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ListConfirmedTokensTransfersByAddressR</returns>
+        ListConfirmedTokensTransfersByAddressR ListConfirmedTokensTransfersByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ApiResponse of ListConfirmedTokensTransfersByAddressR</returns>
+        ApiResponse<ListConfirmedTokensTransfersByAddressR> ListConfirmedTokensTransfersByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
         /// <summary>
         /// List Tokens By Address
         /// </summary>
@@ -62,7 +93,7 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -78,44 +109,13 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <returns>ApiResponse of ListTokensByAddressR</returns>
         ApiResponse<ListTokensByAddressR> ListTokensByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
-        /// <summary>
-        /// List Tokens Transfers By Address
-        /// </summary>
-        /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </remarks>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <returns>ListTokensTransfersByAddressR</returns>
-        ListTokensTransfersByAddressR ListTokensTransfersByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
-
-        /// <summary>
-        /// List Tokens Transfers By Address
-        /// </summary>
-        /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </remarks>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <returns>ApiResponse of ListTokensTransfersByAddressR</returns>
-        ApiResponse<ListTokensTransfersByAddressR> ListTokensTransfersByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
         /// <summary>
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
@@ -124,7 +124,7 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -140,7 +140,7 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -157,34 +157,67 @@ namespace CryptoAPIs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Get Contract Details by Address
+        /// Get Token Details by Contract Address
         /// </summary>
         /// <remarks>
-        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetContractDetailsByAddressR</returns>
-        System.Threading.Tasks.Task<GetContractDetailsByAddressR> GetContractDetailsByAddressAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of GetTokenDetailsByContractAddressR</returns>
+        System.Threading.Tasks.Task<GetTokenDetailsByContractAddressR> GetTokenDetailsByContractAddressAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Get Contract Details by Address
+        /// Get Token Details by Contract Address
         /// </summary>
         /// <remarks>
-        /// Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetContractDetailsByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetContractDetailsByAddressR>> GetContractDetailsByAddressWithHttpInfoAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (GetTokenDetailsByContractAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetTokenDetailsByContractAddressR>> GetTokenDetailsByContractAddressWithHttpInfoAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListConfirmedTokensTransfersByAddressR</returns>
+        System.Threading.Tasks.Task<ListConfirmedTokensTransfersByAddressR> ListConfirmedTokensTransfersByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListConfirmedTokensTransfersByAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListConfirmedTokensTransfersByAddressR>> ListConfirmedTokensTransfersByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Tokens By Address
         /// </summary>
@@ -193,7 +226,7 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -210,7 +243,7 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -219,39 +252,6 @@ namespace CryptoAPIs.Api
         /// <returns>Task of ApiResponse (ListTokensByAddressR)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListTokensByAddressR>> ListTokensByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// List Tokens Transfers By Address
-        /// </summary>
-        /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </remarks>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ListTokensTransfersByAddressR</returns>
-        System.Threading.Tasks.Task<ListTokensTransfersByAddressR> ListTokensTransfersByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// List Tokens Transfers By Address
-        /// </summary>
-        /// <remarks>
-        /// Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </remarks>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ListTokensTransfersByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListTokensTransfersByAddressR>> ListTokensTransfersByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
         /// <remarks>
@@ -259,7 +259,7 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -276,7 +276,7 @@ namespace CryptoAPIs.Api
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -405,42 +405,42 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Get Token Details by Contract Address Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>GetContractDetailsByAddressR</returns>
-        public GetContractDetailsByAddressR GetContractDetailsByAddress(string blockchain, string network, string contractAddress, string context = default(string))
+        /// <returns>GetTokenDetailsByContractAddressR</returns>
+        public GetTokenDetailsByContractAddressR GetTokenDetailsByContractAddress(string blockchain, string network, string contractAddress, string context = default(string))
         {
-            CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR> localVarResponse = GetContractDetailsByAddressWithHttpInfo(blockchain, network, contractAddress, context);
+            CryptoAPIs.Client.ApiResponse<GetTokenDetailsByContractAddressR> localVarResponse = GetTokenDetailsByContractAddressWithHttpInfo(blockchain, network, contractAddress, context);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Get Token Details by Contract Address Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <returns>ApiResponse of GetContractDetailsByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR> GetContractDetailsByAddressWithHttpInfo(string blockchain, string network, string contractAddress, string context = default(string))
+        /// <returns>ApiResponse of GetTokenDetailsByContractAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<GetTokenDetailsByContractAddressR> GetTokenDetailsByContractAddressWithHttpInfo(string blockchain, string network, string contractAddress, string context = default(string))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->GetContractDetailsByAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->GetTokenDetailsByContractAddress");
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->GetContractDetailsByAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->GetTokenDetailsByContractAddress");
 
             // verify the required parameter 'contractAddress' is set
             if (contractAddress == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'contractAddress' when calling TokensApi->GetContractDetailsByAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'contractAddress' when calling TokensApi->GetTokenDetailsByContractAddress");
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -473,11 +473,11 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetContractDetailsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{contractAddress}/contract", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetTokenDetailsByContractAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{contractAddress}/contract", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetContractDetailsByAddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTokenDetailsByContractAddress", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -485,44 +485,44 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Get Token Details by Contract Address Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GetContractDetailsByAddressR</returns>
-        public async System.Threading.Tasks.Task<GetContractDetailsByAddressR> GetContractDetailsByAddressAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of GetTokenDetailsByContractAddressR</returns>
+        public async System.Threading.Tasks.Task<GetTokenDetailsByContractAddressR> GetTokenDetailsByContractAddressAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR> localVarResponse = await GetContractDetailsByAddressWithHttpInfoAsync(blockchain, network, contractAddress, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetTokenDetailsByContractAddressR> localVarResponse = await GetTokenDetailsByContractAddressWithHttpInfoAsync(blockchain, network, contractAddress, context, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Contract Details by Address Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the &#x60;address&#x60; parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+        /// Get Token Details by Contract Address Though this endpoint customers can obtain information about token details. This can be done by providing the &#x60;contact address&#x60; parameter.    {note}This address is **not** the same as the smart contract creator address.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="contractAddress">Defines the specific address of the contract.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GetContractDetailsByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetContractDetailsByAddressR>> GetContractDetailsByAddressWithHttpInfoAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (GetTokenDetailsByContractAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetTokenDetailsByContractAddressR>> GetTokenDetailsByContractAddressWithHttpInfoAsync(string blockchain, string network, string contractAddress, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->GetContractDetailsByAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->GetTokenDetailsByContractAddress");
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->GetContractDetailsByAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->GetTokenDetailsByContractAddress");
 
             // verify the required parameter 'contractAddress' is set
             if (contractAddress == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'contractAddress' when calling TokensApi->GetContractDetailsByAddress");
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'contractAddress' when calling TokensApi->GetTokenDetailsByContractAddress");
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -558,11 +558,200 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetContractDetailsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{contractAddress}/contract", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetTokenDetailsByContractAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{contractAddress}/contract", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetContractDetailsByAddress", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTokenDetailsByContractAddress", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ListConfirmedTokensTransfersByAddressR</returns>
+        public ListConfirmedTokensTransfersByAddressR ListConfirmedTokensTransfersByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        {
+            CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressR> localVarResponse = ListConfirmedTokensTransfersByAddressWithHttpInfo(blockchain, network, address, context, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <returns>ApiResponse of ListConfirmedTokensTransfersByAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressR> ListConfirmedTokensTransfersByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->ListConfirmedTokensTransfersByAddress");
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->ListConfirmedTokensTransfersByAddress");
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TokensApi->ListConfirmedTokensTransfersByAddress");
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListConfirmedTokensTransfersByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListConfirmedTokensTransfersByAddress", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListConfirmedTokensTransfersByAddressR</returns>
+        public async System.Threading.Tasks.Task<ListConfirmedTokensTransfersByAddressR> ListConfirmedTokensTransfersByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressR> localVarResponse = await ListConfirmedTokensTransfersByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListConfirmedTokensTransfersByAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressR>> ListConfirmedTokensTransfersByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->ListConfirmedTokensTransfersByAddress");
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->ListConfirmedTokensTransfersByAddress");
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TokensApi->ListConfirmedTokensTransfersByAddress");
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListConfirmedTokensTransfersByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListConfirmedTokensTransfersByAddress", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -574,7 +763,7 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -591,7 +780,7 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -666,7 +855,7 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -684,7 +873,7 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -759,200 +948,11 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </summary>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <returns>ListTokensTransfersByAddressR</returns>
-        public ListTokensTransfersByAddressR ListTokensTransfersByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
-        {
-            CryptoAPIs.Client.ApiResponse<ListTokensTransfersByAddressR> localVarResponse = ListTokensTransfersByAddressWithHttpInfo(blockchain, network, address, context, limit, offset);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </summary>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <returns>ApiResponse of ListTokensTransfersByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListTokensTransfersByAddressR> ListTokensTransfersByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
-        {
-            // verify the required parameter 'blockchain' is set
-            if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->ListTokensTransfersByAddress");
-
-            // verify the required parameter 'network' is set
-            if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->ListTokensTransfersByAddress");
-
-            // verify the required parameter 'address' is set
-            if (address == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TokensApi->ListTokensTransfersByAddress");
-
-            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
-            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
-            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
-            if (context != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (offset != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
-            }
-
-            // authentication (ApiKey) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Get<ListTokensTransfersByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers", localVarRequestOptions, this.Configuration);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ListTokensTransfersByAddress", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </summary>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ListTokensTransfersByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListTokensTransfersByAddressR> ListTokensTransfersByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            CryptoAPIs.Client.ApiResponse<ListTokensTransfersByAddressR> localVarResponse = await ListTokensTransfersByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// List Tokens Transfers By Address Through this endpoint customers can obtain a list with token transfers by the &#x60;address&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
-        /// </summary>
-        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
-        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
-        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ListTokensTransfersByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTokensTransfersByAddressR>> ListTokensTransfersByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'blockchain' is set
-            if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TokensApi->ListTokensTransfersByAddress");
-
-            // verify the required parameter 'network' is set
-            if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TokensApi->ListTokensTransfersByAddress");
-
-            // verify the required parameter 'address' is set
-            if (address == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TokensApi->ListTokensTransfersByAddress");
-
-
-            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-
-            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
-            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
-            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
-            if (context != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (offset != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
-            }
-
-            // authentication (ApiKey) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
-            }
-
-            // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ListTokensTransfersByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ListTokensTransfersByAddress", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
         /// List Tokens Transfers By Transaction Hash Through this endpoint customers can obtain a list with token transfers by the &#x60;transactionHash&#x60; attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -969,7 +969,7 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -1044,7 +1044,7 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -1062,7 +1062,7 @@ namespace CryptoAPIs.Api
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>

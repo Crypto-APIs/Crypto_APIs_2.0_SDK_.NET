@@ -47,13 +47,25 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionConfirmed(string apiVersion = default(string), string referenceId = default(string), string idempotencyKey = default(string), AddressTokensTransactionConfirmedData data = default(AddressTokensTransactionConfirmedData))
         {
             // to ensure "apiVersion" is required (not null)
-            this.ApiVersion = apiVersion ?? throw new ArgumentNullException("apiVersion is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            if (apiVersion == null) {
+                throw new ArgumentNullException("apiVersion is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            }
+            this.ApiVersion = apiVersion;
             // to ensure "referenceId" is required (not null)
-            this.ReferenceId = referenceId ?? throw new ArgumentNullException("referenceId is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            if (referenceId == null) {
+                throw new ArgumentNullException("referenceId is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            }
+            this.ReferenceId = referenceId;
             // to ensure "idempotencyKey" is required (not null)
-            this.IdempotencyKey = idempotencyKey ?? throw new ArgumentNullException("idempotencyKey is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            if (idempotencyKey == null) {
+                throw new ArgumentNullException("idempotencyKey is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            }
+            this.IdempotencyKey = idempotencyKey;
             // to ensure "data" is required (not null)
-            this.Data = data ?? throw new ArgumentNullException("data is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            if (data == null) {
+                throw new ArgumentNullException("data is a required property for AddressTokensTransactionConfirmed and cannot be null");
+            }
+            this.Data = data;
         }
 
         /// <summary>
@@ -177,7 +189,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

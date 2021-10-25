@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **TransactionId** | **string** | Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. | 
 **Type** | **string** | Defines the type of the transaction as a string. | 
 **TypeInt** | **int** | Defines the type of the transaction as a number. | 
-**Version** | **int** | Defines the specific version. | 
+**_Version** | **int** | Defines the specific version. | 
 **Fee** | [**ListUnconfirmedOmniTransactionsByAddressRIFee**](ListUnconfirmedOmniTransactionsByAddressRIFee.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -56,6 +56,19 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test GetTransactionRequestDetails
+        /// </summary>
+        [Fact]
+        public void GetTransactionRequestDetailsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string transactionRequestId = null;
+            //string context = null;
+            //var response = instance.GetTransactionRequestDetails(transactionRequestId, context);
+            //Assert.IsType<GetTransactionRequestDetailsR>(response);
+        }
+
+        /// <summary>
         /// Test GetWalletAssetDetails
         /// </summary>
         [Fact]
@@ -99,6 +112,23 @@ namespace CryptoAPIs.Test.Api
             //int? offset = null;
             //var response = instance.ListSupportedTokens(blockchain, network, context, limit, offset);
             //Assert.IsType<ListSupportedTokensR>(response);
+        }
+
+        /// <summary>
+        /// Test ListWalletTransactions
+        /// </summary>
+        [Fact]
+        public void ListWalletTransactionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string walletId = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListWalletTransactions(blockchain, network, walletId, context, limit, offset);
+            //Assert.IsType<ListWalletTransactionsR>(response);
         }
     }
 }

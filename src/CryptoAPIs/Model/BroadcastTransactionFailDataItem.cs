@@ -47,13 +47,25 @@ namespace CryptoAPIs.Model
         public BroadcastTransactionFailDataItem(string blockchain = default(string), string network = default(string), string transactionId = default(string), string errorMessage = default(string))
         {
             // to ensure "blockchain" is required (not null)
-            this.Blockchain = blockchain ?? throw new ArgumentNullException("blockchain is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            if (blockchain == null) {
+                throw new ArgumentNullException("blockchain is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            }
+            this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            this.Network = network ?? throw new ArgumentNullException("network is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            if (network == null) {
+                throw new ArgumentNullException("network is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            }
+            this.Network = network;
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            }
+            this.TransactionId = transactionId;
             // to ensure "errorMessage" is required (not null)
-            this.ErrorMessage = errorMessage ?? throw new ArgumentNullException("errorMessage is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            if (errorMessage == null) {
+                throw new ArgumentNullException("errorMessage is a required property for BroadcastTransactionFailDataItem and cannot be null");
+            }
+            this.ErrorMessage = errorMessage;
         }
 
         /// <summary>
@@ -178,7 +190,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

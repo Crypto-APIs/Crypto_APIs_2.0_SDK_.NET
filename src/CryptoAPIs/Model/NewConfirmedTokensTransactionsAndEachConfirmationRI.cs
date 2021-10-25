@@ -48,14 +48,26 @@ namespace CryptoAPIs.Model
         public NewConfirmedTokensTransactionsAndEachConfirmationRI(string address = default(string), string callbackUrl = default(string), int createdTimestamp = default(int), string eventType = default(string), string referenceId = default(string))
         {
             // to ensure "address" is required (not null)
-            this.Address = address ?? throw new ArgumentNullException("address is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            if (address == null) {
+                throw new ArgumentNullException("address is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            }
+            this.Address = address;
             // to ensure "callbackUrl" is required (not null)
-            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            if (callbackUrl == null) {
+                throw new ArgumentNullException("callbackUrl is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            }
+            this.CallbackUrl = callbackUrl;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "eventType" is required (not null)
-            this.EventType = eventType ?? throw new ArgumentNullException("eventType is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            if (eventType == null) {
+                throw new ArgumentNullException("eventType is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            }
+            this.EventType = eventType;
             // to ensure "referenceId" is required (not null)
-            this.ReferenceId = referenceId ?? throw new ArgumentNullException("referenceId is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            if (referenceId == null) {
+                throw new ArgumentNullException("referenceId is a required property for NewConfirmedTokensTransactionsAndEachConfirmationRI and cannot be null");
+            }
+            this.ReferenceId = referenceId;
         }
 
         /// <summary>
@@ -193,7 +205,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

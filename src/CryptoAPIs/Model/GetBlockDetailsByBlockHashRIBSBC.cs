@@ -48,21 +48,40 @@ namespace CryptoAPIs.Model
         /// <param name="merkleroot">Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. (required).</param>
         /// <param name="version">Represents the version of the specific block on the blockchain. (required).</param>
         /// <param name="versionHex">Is the hexadecimal string representation of the block&#39;s version. (required).</param>
-        public GetBlockDetailsByBlockHashRIBSBC(string difficulty = default(string), int nonce = default(int), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleroot = default(string), int version = default(int), string versionHex = default(string))
+        public GetBlockDetailsByBlockHashRIBSBC(string difficulty = default(string), string nonce = default(string), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleroot = default(string), int version = default(int), string versionHex = default(string))
         {
             // to ensure "difficulty" is required (not null)
-            this.Difficulty = difficulty ?? throw new ArgumentNullException("difficulty is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            if (difficulty == null) {
+                throw new ArgumentNullException("difficulty is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            }
+            this.Difficulty = difficulty;
+            // to ensure "nonce" is required (not null)
+            if (nonce == null) {
+                throw new ArgumentNullException("nonce is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            }
             this.Nonce = nonce;
             this.Size = size;
             // to ensure "bits" is required (not null)
-            this.Bits = bits ?? throw new ArgumentNullException("bits is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            if (bits == null) {
+                throw new ArgumentNullException("bits is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            }
+            this.Bits = bits;
             // to ensure "chainwork" is required (not null)
-            this.Chainwork = chainwork ?? throw new ArgumentNullException("chainwork is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            if (chainwork == null) {
+                throw new ArgumentNullException("chainwork is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            }
+            this.Chainwork = chainwork;
             // to ensure "merkleroot" is required (not null)
-            this.Merkleroot = merkleroot ?? throw new ArgumentNullException("merkleroot is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
-            this.Version = version;
+            if (merkleroot == null) {
+                throw new ArgumentNullException("merkleroot is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            }
+            this.Merkleroot = merkleroot;
+            this._Version = version;
             // to ensure "versionHex" is required (not null)
-            this.VersionHex = versionHex ?? throw new ArgumentNullException("versionHex is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            if (versionHex == null) {
+                throw new ArgumentNullException("versionHex is a required property for GetBlockDetailsByBlockHashRIBSBC and cannot be null");
+            }
+            this.VersionHex = versionHex;
         }
 
         /// <summary>
@@ -77,7 +96,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a random value that can be adjusted to satisfy the Proof of Work.</value>
         [DataMember(Name = "nonce", IsRequired = true, EmitDefaultValue = false)]
-        public int Nonce { get; set; }
+        public string Nonce { get; set; }
 
         /// <summary>
         /// Represents the total size of the block in Bytes.
@@ -112,7 +131,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the version of the specific block on the blockchain.</value>
         [DataMember(Name = "version", IsRequired = true, EmitDefaultValue = false)]
-        public int Version { get; set; }
+        public int _Version { get; set; }
 
         /// <summary>
         /// Is the hexadecimal string representation of the block&#39;s version.
@@ -135,7 +154,7 @@ namespace CryptoAPIs.Model
             sb.Append("  Bits: ").Append(Bits).Append("\n");
             sb.Append("  Chainwork: ").Append(Chainwork).Append("\n");
             sb.Append("  Merkleroot: ").Append(Merkleroot).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("  VersionHex: ").Append(VersionHex).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -178,7 +197,8 @@ namespace CryptoAPIs.Model
                 ) && 
                 (
                     this.Nonce == input.Nonce ||
-                    this.Nonce.Equals(input.Nonce)
+                    (this.Nonce != null &&
+                    this.Nonce.Equals(input.Nonce))
                 ) && 
                 (
                     this.Size == input.Size ||
@@ -200,8 +220,8 @@ namespace CryptoAPIs.Model
                     this.Merkleroot.Equals(input.Merkleroot))
                 ) && 
                 (
-                    this.Version == input.Version ||
-                    this.Version.Equals(input.Version)
+                    this._Version == input._Version ||
+                    this._Version.Equals(input._Version)
                 ) && 
                 (
                     this.VersionHex == input.VersionHex ||
@@ -221,7 +241,8 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 if (this.Difficulty != null)
                     hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
-                hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                if (this.Nonce != null)
+                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
                 hashCode = hashCode * 59 + this.Size.GetHashCode();
                 if (this.Bits != null)
                     hashCode = hashCode * 59 + this.Bits.GetHashCode();
@@ -229,7 +250,7 @@ namespace CryptoAPIs.Model
                     hashCode = hashCode * 59 + this.Chainwork.GetHashCode();
                 if (this.Merkleroot != null)
                     hashCode = hashCode * 59 + this.Merkleroot.GetHashCode();
-                hashCode = hashCode * 59 + this.Version.GetHashCode();
+                hashCode = hashCode * 59 + this._Version.GetHashCode();
                 if (this.VersionHex != null)
                     hashCode = hashCode * 59 + this.VersionHex.GetHashCode();
                 return hashCode;
@@ -241,7 +262,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

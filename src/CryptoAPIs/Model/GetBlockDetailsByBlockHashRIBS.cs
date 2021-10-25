@@ -60,6 +60,18 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHashRIBS" /> class
+        /// with the <see cref="GetBlockDetailsByBlockHashRIBSBSC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHashRIBSBSC.</param>
+        public GetBlockDetailsByBlockHashRIBS(GetBlockDetailsByBlockHashRIBSBSC actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHashRIBS" /> class
         /// with the <see cref="GetBlockDetailsByBlockHashRIBSD" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHashRIBSD.</param>
@@ -118,6 +130,18 @@ namespace CryptoAPIs.Model
             this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHashRIBS" /> class
+        /// with the <see cref="GetBlockDetailsByBlockHashRIBSZ" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHashRIBSZ.</param>
+        public GetBlockDetailsByBlockHashRIBS(GetBlockDetailsByBlockHashRIBSZ actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
 
         private Object _actualInstance;
 
@@ -137,6 +161,10 @@ namespace CryptoAPIs.Model
                     this._actualInstance = value;
                 }
                 else if (value.GetType() == typeof(GetBlockDetailsByBlockHashRIBSBC))
+                {
+                    this._actualInstance = value;
+                }
+                else if (value.GetType() == typeof(GetBlockDetailsByBlockHashRIBSBSC))
                 {
                     this._actualInstance = value;
                 }
@@ -160,15 +188,19 @@ namespace CryptoAPIs.Model
                 {
                     this._actualInstance = value;
                 }
+                else if (value.GetType() == typeof(GetBlockDetailsByBlockHashRIBSZ))
+                {
+                    this._actualInstance = value;
+                }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: GetBlockDetailsByBlockHashRIBSB, GetBlockDetailsByBlockHashRIBSBC, GetBlockDetailsByBlockHashRIBSD, GetBlockDetailsByBlockHashRIBSD2, GetBlockDetailsByBlockHashRIBSE, GetBlockDetailsByBlockHashRIBSEC, GetBlockDetailsByBlockHashRIBSL");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: GetBlockDetailsByBlockHashRIBSB, GetBlockDetailsByBlockHashRIBSBC, GetBlockDetailsByBlockHashRIBSBSC, GetBlockDetailsByBlockHashRIBSD, GetBlockDetailsByBlockHashRIBSD2, GetBlockDetailsByBlockHashRIBSE, GetBlockDetailsByBlockHashRIBSEC, GetBlockDetailsByBlockHashRIBSL, GetBlockDetailsByBlockHashRIBSZ");
                 }
             }
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSB`. If the actual instanct is not `GetBlockDetailsByBlockHashRIBSB`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSB`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSB`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetBlockDetailsByBlockHashRIBSB</returns>
@@ -178,7 +210,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSBC`. If the actual instanct is not `GetBlockDetailsByBlockHashRIBSBC`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSBC`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSBC`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetBlockDetailsByBlockHashRIBSBC</returns>
@@ -188,7 +220,17 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSD`. If the actual instanct is not `GetBlockDetailsByBlockHashRIBSD`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSBSC`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetBlockDetailsByBlockHashRIBSBSC</returns>
+        public GetBlockDetailsByBlockHashRIBSBSC GetGetBlockDetailsByBlockHashRIBSBSC()
+        {
+            return (GetBlockDetailsByBlockHashRIBSBSC)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSD`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSD`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetBlockDetailsByBlockHashRIBSD</returns>
@@ -198,7 +240,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSD2`. If the actual instanct is not `GetBlockDetailsByBlockHashRIBSD2`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSD2`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSD2`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetBlockDetailsByBlockHashRIBSD2</returns>
@@ -208,7 +250,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSE`. If the actual instanct is not `GetBlockDetailsByBlockHashRIBSE`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSE`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSE`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetBlockDetailsByBlockHashRIBSE</returns>
@@ -218,7 +260,7 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSEC`. If the actual instanct is not `GetBlockDetailsByBlockHashRIBSEC`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSEC`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSEC`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetBlockDetailsByBlockHashRIBSEC</returns>
@@ -228,13 +270,23 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSL`. If the actual instanct is not `GetBlockDetailsByBlockHashRIBSL`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSL`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of GetBlockDetailsByBlockHashRIBSL</returns>
         public GetBlockDetailsByBlockHashRIBSL GetGetBlockDetailsByBlockHashRIBSL()
         {
             return (GetBlockDetailsByBlockHashRIBSL)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `GetBlockDetailsByBlockHashRIBSZ`. If the actual instance is not `GetBlockDetailsByBlockHashRIBSZ`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetBlockDetailsByBlockHashRIBSZ</returns>
+        public GetBlockDetailsByBlockHashRIBSZ GetGetBlockDetailsByBlockHashRIBSZ()
+        {
+            return (GetBlockDetailsByBlockHashRIBSZ)this.ActualInstance;
         }
 
         /// <summary>
@@ -268,7 +320,7 @@ namespace CryptoAPIs.Model
         {
             GetBlockDetailsByBlockHashRIBS newGetBlockDetailsByBlockHashRIBS = null;
 
-            if (jsonString == null)
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return newGetBlockDetailsByBlockHashRIBS;
             }
@@ -313,6 +365,26 @@ namespace CryptoAPIs.Model
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHashRIBSBC: {1}", jsonString, exception.ToString()));
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(GetBlockDetailsByBlockHashRIBSBSC).GetProperty("AdditionalProperties") == null)
+                {
+                    newGetBlockDetailsByBlockHashRIBS = new GetBlockDetailsByBlockHashRIBS(JsonConvert.DeserializeObject<GetBlockDetailsByBlockHashRIBSBSC>(jsonString, GetBlockDetailsByBlockHashRIBS.SerializerSettings));
+                }
+                else
+                {
+                    newGetBlockDetailsByBlockHashRIBS = new GetBlockDetailsByBlockHashRIBS(JsonConvert.DeserializeObject<GetBlockDetailsByBlockHashRIBSBSC>(jsonString, GetBlockDetailsByBlockHashRIBS.AdditionalPropertiesSerializerSettings));
+                }
+                matchedTypes.Add("GetBlockDetailsByBlockHashRIBSBSC");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHashRIBSBSC: {1}", jsonString, exception.ToString()));
             }
 
             try
@@ -413,6 +485,26 @@ namespace CryptoAPIs.Model
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHashRIBSL: {1}", jsonString, exception.ToString()));
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(GetBlockDetailsByBlockHashRIBSZ).GetProperty("AdditionalProperties") == null)
+                {
+                    newGetBlockDetailsByBlockHashRIBS = new GetBlockDetailsByBlockHashRIBS(JsonConvert.DeserializeObject<GetBlockDetailsByBlockHashRIBSZ>(jsonString, GetBlockDetailsByBlockHashRIBS.SerializerSettings));
+                }
+                else
+                {
+                    newGetBlockDetailsByBlockHashRIBS = new GetBlockDetailsByBlockHashRIBS(JsonConvert.DeserializeObject<GetBlockDetailsByBlockHashRIBSZ>(jsonString, GetBlockDetailsByBlockHashRIBS.AdditionalPropertiesSerializerSettings));
+                }
+                matchedTypes.Add("GetBlockDetailsByBlockHashRIBSZ");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into GetBlockDetailsByBlockHashRIBSZ: {1}", jsonString, exception.ToString()));
             }
 
             if (match == 0)

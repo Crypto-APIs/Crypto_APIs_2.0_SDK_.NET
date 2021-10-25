@@ -54,23 +54,47 @@ namespace CryptoAPIs.Model
         public ListTokensTransfersByTransactionHashRI(string contractAddress = default(string), int minedInBlockHeight = default(int), string recipientAddress = default(string), string senderAddress = default(string), int tokenDecimals = default(int), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string tokensAmount = default(string), string transactionHash = default(string), int transactionTimestamp = default(int))
         {
             // to ensure "contractAddress" is required (not null)
-            this.ContractAddress = contractAddress ?? throw new ArgumentNullException("contractAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (contractAddress == null) {
+                throw new ArgumentNullException("contractAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.ContractAddress = contractAddress;
             this.MinedInBlockHeight = minedInBlockHeight;
             // to ensure "recipientAddress" is required (not null)
-            this.RecipientAddress = recipientAddress ?? throw new ArgumentNullException("recipientAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (recipientAddress == null) {
+                throw new ArgumentNullException("recipientAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.RecipientAddress = recipientAddress;
             // to ensure "senderAddress" is required (not null)
-            this.SenderAddress = senderAddress ?? throw new ArgumentNullException("senderAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (senderAddress == null) {
+                throw new ArgumentNullException("senderAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.SenderAddress = senderAddress;
             this.TokenDecimals = tokenDecimals;
             // to ensure "tokenName" is required (not null)
-            this.TokenName = tokenName ?? throw new ArgumentNullException("tokenName is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (tokenName == null) {
+                throw new ArgumentNullException("tokenName is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.TokenName = tokenName;
             // to ensure "tokenSymbol" is required (not null)
-            this.TokenSymbol = tokenSymbol ?? throw new ArgumentNullException("tokenSymbol is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (tokenSymbol == null) {
+                throw new ArgumentNullException("tokenSymbol is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.TokenSymbol = tokenSymbol;
             // to ensure "tokenType" is required (not null)
-            this.TokenType = tokenType ?? throw new ArgumentNullException("tokenType is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (tokenType == null) {
+                throw new ArgumentNullException("tokenType is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.TokenType = tokenType;
             // to ensure "tokensAmount" is required (not null)
-            this.TokensAmount = tokensAmount ?? throw new ArgumentNullException("tokensAmount is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (tokensAmount == null) {
+                throw new ArgumentNullException("tokensAmount is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.TokensAmount = tokensAmount;
             // to ensure "transactionHash" is required (not null)
-            this.TransactionHash = transactionHash ?? throw new ArgumentNullException("transactionHash is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            if (transactionHash == null) {
+                throw new ArgumentNullException("transactionHash is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.TransactionHash = transactionHash;
             this.TransactionTimestamp = transactionTimestamp;
         }
 
@@ -295,7 +319,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -47,11 +47,20 @@ namespace CryptoAPIs.Model
         public InvalidApiKey(string apiVersion = default(string), string requestId = default(string), string context = default(string), InvalidApiKeyError error = default(InvalidApiKeyError))
         {
             // to ensure "apiVersion" is required (not null)
-            this.ApiVersion = apiVersion ?? throw new ArgumentNullException("apiVersion is a required property for InvalidApiKey and cannot be null");
+            if (apiVersion == null) {
+                throw new ArgumentNullException("apiVersion is a required property for InvalidApiKey and cannot be null");
+            }
+            this.ApiVersion = apiVersion;
             // to ensure "requestId" is required (not null)
-            this.RequestId = requestId ?? throw new ArgumentNullException("requestId is a required property for InvalidApiKey and cannot be null");
+            if (requestId == null) {
+                throw new ArgumentNullException("requestId is a required property for InvalidApiKey and cannot be null");
+            }
+            this.RequestId = requestId;
             // to ensure "error" is required (not null)
-            this.Error = error ?? throw new ArgumentNullException("error is a required property for InvalidApiKey and cannot be null");
+            if (error == null) {
+                throw new ArgumentNullException("error is a required property for InvalidApiKey and cannot be null");
+            }
+            this.Error = error;
             this.Context = context;
         }
 
@@ -176,7 +185,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -41,13 +41,19 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetAddressDetailsRIConfirmedBalance" /> class.
         /// </summary>
         /// <param name="amount">Defines the total balance of the address that is confirmed. It doesn&#39;t include unconfirmed transactions. (required).</param>
-        /// <param name="unit">unit (required).</param>
+        /// <param name="unit">Represents the unit of the confirmed balance. (required).</param>
         public GetAddressDetailsRIConfirmedBalance(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
-            this.Amount = amount ?? throw new ArgumentNullException("amount is a required property for GetAddressDetailsRIConfirmedBalance and cannot be null");
+            if (amount == null) {
+                throw new ArgumentNullException("amount is a required property for GetAddressDetailsRIConfirmedBalance and cannot be null");
+            }
+            this.Amount = amount;
             // to ensure "unit" is required (not null)
-            this.Unit = unit ?? throw new ArgumentNullException("unit is a required property for GetAddressDetailsRIConfirmedBalance and cannot be null");
+            if (unit == null) {
+                throw new ArgumentNullException("unit is a required property for GetAddressDetailsRIConfirmedBalance and cannot be null");
+            }
+            this.Unit = unit;
         }
 
         /// <summary>
@@ -58,8 +64,9 @@ namespace CryptoAPIs.Model
         public string Amount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Unit
+        /// Represents the unit of the confirmed balance.
         /// </summary>
+        /// <value>Represents the unit of the confirmed balance.</value>
         [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
         public string Unit { get; set; }
 
@@ -141,7 +148,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

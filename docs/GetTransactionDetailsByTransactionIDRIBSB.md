@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Locktime** | **int** | Represents the time at which a particular transaction can be added to the blockchain. | 
 **Size** | **int** | Represents the total size of this transaction. | 
 **VSize** | **int** | Represents the virtual size of this transaction. | 
-**Version** | **int** | Represents the transaction version number. | 
+**_Version** | **int** | Represents the transaction version number. | 
 **Vin** | [**List&lt;GetTransactionDetailsByTransactionIDRIBSBVin&gt;**](GetTransactionDetailsByTransactionIDRIBSBVin.md) | Represents the transaction inputs. | 
 **Vout** | [**List&lt;GetTransactionDetailsByTransactionIDRIBSBVout&gt;**](GetTransactionDetailsByTransactionIDRIBSBVout.md) | Represents the transaction outputs. | 
 

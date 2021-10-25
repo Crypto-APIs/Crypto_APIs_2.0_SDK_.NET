@@ -44,7 +44,10 @@ namespace CryptoAPIs.Model
         public BroadcastLocallySignedTransactionRI(string transactionId = default(string))
         {
             // to ensure "transactionId" is required (not null)
-            this.TransactionId = transactionId ?? throw new ArgumentNullException("transactionId is a required property for BroadcastLocallySignedTransactionRI and cannot be null");
+            if (transactionId == null) {
+                throw new ArgumentNullException("transactionId is a required property for BroadcastLocallySignedTransactionRI and cannot be null");
+            }
+            this.TransactionId = transactionId;
         }
 
         /// <summary>
@@ -124,7 +127,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

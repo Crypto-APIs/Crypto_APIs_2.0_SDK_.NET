@@ -44,7 +44,10 @@ namespace CryptoAPIs.Model
         public DeleteAutomaticTokensForwardingRData(DeleteAutomaticTokensForwardingRI item = default(DeleteAutomaticTokensForwardingRI))
         {
             // to ensure "item" is required (not null)
-            this.Item = item ?? throw new ArgumentNullException("item is a required property for DeleteAutomaticTokensForwardingRData and cannot be null");
+            if (item == null) {
+                throw new ArgumentNullException("item is a required property for DeleteAutomaticTokensForwardingRData and cannot be null");
+            }
+            this.Item = item;
         }
 
         /// <summary>
@@ -123,7 +126,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

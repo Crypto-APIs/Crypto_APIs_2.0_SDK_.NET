@@ -82,23 +82,36 @@ namespace CryptoAPIs.Model
         /// <param name="minimumTransferAmount">Represents the minimum transfer amount of the currency in the &#x60;fromAddress&#x60; that can be allowed for an automatic forwarding. (required).</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription. (required).</param>
         /// <param name="toAddress">Represents the hash of the address the currency is forwarded to. (required).</param>
-        public DeleteAutomaticCoinsForwardingRI(string callbackUrl = default(string), string confirmationsCount = default(string), string createdTimestamp = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string fromAddress = default(string), string minimumTransferAmount = default(string), string referenceId = default(string), string toAddress = default(string))
+        public DeleteAutomaticCoinsForwardingRI(string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), FeePriorityEnum feePriority = default(FeePriorityEnum), string fromAddress = default(string), string minimumTransferAmount = default(string), string referenceId = default(string), string toAddress = default(string))
         {
             // to ensure "callbackUrl" is required (not null)
-            this.CallbackUrl = callbackUrl ?? throw new ArgumentNullException("callbackUrl is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
-            // to ensure "confirmationsCount" is required (not null)
-            this.ConfirmationsCount = confirmationsCount ?? throw new ArgumentNullException("confirmationsCount is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
-            // to ensure "createdTimestamp" is required (not null)
-            this.CreatedTimestamp = createdTimestamp ?? throw new ArgumentNullException("createdTimestamp is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            if (callbackUrl == null) {
+                throw new ArgumentNullException("callbackUrl is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.CallbackUrl = callbackUrl;
+            this.ConfirmationsCount = confirmationsCount;
+            this.CreatedTimestamp = createdTimestamp;
             this.FeePriority = feePriority;
             // to ensure "fromAddress" is required (not null)
-            this.FromAddress = fromAddress ?? throw new ArgumentNullException("fromAddress is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            if (fromAddress == null) {
+                throw new ArgumentNullException("fromAddress is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.FromAddress = fromAddress;
             // to ensure "minimumTransferAmount" is required (not null)
-            this.MinimumTransferAmount = minimumTransferAmount ?? throw new ArgumentNullException("minimumTransferAmount is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            if (minimumTransferAmount == null) {
+                throw new ArgumentNullException("minimumTransferAmount is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.MinimumTransferAmount = minimumTransferAmount;
             // to ensure "referenceId" is required (not null)
-            this.ReferenceId = referenceId ?? throw new ArgumentNullException("referenceId is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            if (referenceId == null) {
+                throw new ArgumentNullException("referenceId is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.ReferenceId = referenceId;
             // to ensure "toAddress" is required (not null)
-            this.ToAddress = toAddress ?? throw new ArgumentNullException("toAddress is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            if (toAddress == null) {
+                throw new ArgumentNullException("toAddress is a required property for DeleteAutomaticCoinsForwardingRI and cannot be null");
+            }
+            this.ToAddress = toAddress;
         }
 
         /// <summary>
@@ -113,14 +126,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.</value>
         [DataMember(Name = "confirmationsCount", IsRequired = true, EmitDefaultValue = false)]
-        public string ConfirmationsCount { get; set; }
+        public int ConfirmationsCount { get; set; }
 
         /// <summary>
         /// Defines the specific time/date when the automatic forwarding was created in Unix Timestamp.
         /// </summary>
         /// <value>Defines the specific time/date when the automatic forwarding was created in Unix Timestamp.</value>
         [DataMember(Name = "createdTimestamp", IsRequired = true, EmitDefaultValue = false)]
-        public string CreatedTimestamp { get; set; }
+        public int CreatedTimestamp { get; set; }
 
         /// <summary>
         /// Represents the hash of the address that forwards the currency.
@@ -207,13 +220,11 @@ namespace CryptoAPIs.Model
                 ) && 
                 (
                     this.ConfirmationsCount == input.ConfirmationsCount ||
-                    (this.ConfirmationsCount != null &&
-                    this.ConfirmationsCount.Equals(input.ConfirmationsCount))
+                    this.ConfirmationsCount.Equals(input.ConfirmationsCount)
                 ) && 
                 (
                     this.CreatedTimestamp == input.CreatedTimestamp ||
-                    (this.CreatedTimestamp != null &&
-                    this.CreatedTimestamp.Equals(input.CreatedTimestamp))
+                    this.CreatedTimestamp.Equals(input.CreatedTimestamp)
                 ) && 
                 (
                     this.FeePriority == input.FeePriority ||
@@ -252,10 +263,8 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 if (this.CallbackUrl != null)
                     hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
-                if (this.ConfirmationsCount != null)
-                    hashCode = hashCode * 59 + this.ConfirmationsCount.GetHashCode();
-                if (this.CreatedTimestamp != null)
-                    hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
+                hashCode = hashCode * 59 + this.ConfirmationsCount.GetHashCode();
+                hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
                 hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
                 if (this.FromAddress != null)
                     hashCode = hashCode * 59 + this.FromAddress.GetHashCode();
@@ -274,7 +283,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

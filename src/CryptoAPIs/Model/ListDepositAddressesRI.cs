@@ -46,10 +46,16 @@ namespace CryptoAPIs.Model
         public ListDepositAddressesRI(string address = default(string), int createdTimestamp = default(int), string label = default(string))
         {
             // to ensure "address" is required (not null)
-            this.Address = address ?? throw new ArgumentNullException("address is a required property for ListDepositAddressesRI and cannot be null");
+            if (address == null) {
+                throw new ArgumentNullException("address is a required property for ListDepositAddressesRI and cannot be null");
+            }
+            this.Address = address;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "label" is required (not null)
-            this.Label = label ?? throw new ArgumentNullException("label is a required property for ListDepositAddressesRI and cannot be null");
+            if (label == null) {
+                throw new ArgumentNullException("label is a required property for ListDepositAddressesRI and cannot be null");
+            }
+            this.Label = label;
         }
 
         /// <summary>
@@ -157,7 +163,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

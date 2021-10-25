@@ -50,7 +50,10 @@ namespace CryptoAPIs.Model
             this.Limit = limit;
             this.Total = total;
             // to ensure "items" is required (not null)
-            this.Items = items ?? throw new ArgumentNullException("items is a required property for ListXRPRippleTransactionsByAddressRData and cannot be null");
+            if (items == null) {
+                throw new ArgumentNullException("items is a required property for ListXRPRippleTransactionsByAddressRData and cannot be null");
+            }
+            this.Items = items;
         }
 
         /// <summary>
@@ -169,7 +172,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

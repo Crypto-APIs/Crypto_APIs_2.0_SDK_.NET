@@ -44,17 +44,26 @@ namespace CryptoAPIs.Model
         /// <param name="confirmedBalance">confirmedBalance (required).</param>
         /// <param name="totalReceived">totalReceived (required).</param>
         /// <param name="totalSpent">totalSpent (required).</param>
-        /// <param name="incomingTransactionsCount">Numeric representation of the received transaction count of the address (required).</param>
-        /// <param name="outgoingTransactionsCount">Numeric representation of the sent transaction count of the address (required).</param>
+        /// <param name="incomingTransactionsCount">Defines the count of the incoming transactions. (required).</param>
+        /// <param name="outgoingTransactionsCount">Defines the count of the outgoing transactions. (required).</param>
         public GetAddressDetailsRI(int transactionsCount = default(int), GetAddressDetailsRIConfirmedBalance confirmedBalance = default(GetAddressDetailsRIConfirmedBalance), GetAddressDetailsRITotalReceived totalReceived = default(GetAddressDetailsRITotalReceived), GetAddressDetailsRITotalSpent totalSpent = default(GetAddressDetailsRITotalSpent), int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int))
         {
             this.TransactionsCount = transactionsCount;
             // to ensure "confirmedBalance" is required (not null)
-            this.ConfirmedBalance = confirmedBalance ?? throw new ArgumentNullException("confirmedBalance is a required property for GetAddressDetailsRI and cannot be null");
+            if (confirmedBalance == null) {
+                throw new ArgumentNullException("confirmedBalance is a required property for GetAddressDetailsRI and cannot be null");
+            }
+            this.ConfirmedBalance = confirmedBalance;
             // to ensure "totalReceived" is required (not null)
-            this.TotalReceived = totalReceived ?? throw new ArgumentNullException("totalReceived is a required property for GetAddressDetailsRI and cannot be null");
+            if (totalReceived == null) {
+                throw new ArgumentNullException("totalReceived is a required property for GetAddressDetailsRI and cannot be null");
+            }
+            this.TotalReceived = totalReceived;
             // to ensure "totalSpent" is required (not null)
-            this.TotalSpent = totalSpent ?? throw new ArgumentNullException("totalSpent is a required property for GetAddressDetailsRI and cannot be null");
+            if (totalSpent == null) {
+                throw new ArgumentNullException("totalSpent is a required property for GetAddressDetailsRI and cannot be null");
+            }
+            this.TotalSpent = totalSpent;
             this.IncomingTransactionsCount = incomingTransactionsCount;
             this.OutgoingTransactionsCount = outgoingTransactionsCount;
         }
@@ -85,16 +94,16 @@ namespace CryptoAPIs.Model
         public GetAddressDetailsRITotalSpent TotalSpent { get; set; }
 
         /// <summary>
-        /// Numeric representation of the received transaction count of the address
+        /// Defines the count of the incoming transactions.
         /// </summary>
-        /// <value>Numeric representation of the received transaction count of the address</value>
+        /// <value>Defines the count of the incoming transactions.</value>
         [DataMember(Name = "incomingTransactionsCount", IsRequired = true, EmitDefaultValue = false)]
         public int IncomingTransactionsCount { get; set; }
 
         /// <summary>
-        /// Numeric representation of the sent transaction count of the address
+        /// Defines the count of the outgoing transactions.
         /// </summary>
-        /// <value>Numeric representation of the sent transaction count of the address</value>
+        /// <value>Defines the count of the outgoing transactions.</value>
         [DataMember(Name = "outgoingTransactionsCount", IsRequired = true, EmitDefaultValue = false)]
         public int OutgoingTransactionsCount { get; set; }
 
@@ -202,7 +211,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

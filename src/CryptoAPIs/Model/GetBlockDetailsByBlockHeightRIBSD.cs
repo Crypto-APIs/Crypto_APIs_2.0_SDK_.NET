@@ -41,28 +41,44 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHeightRIBSD" /> class.
         /// </summary>
         /// <param name="difficulty">Represents a mathematical value of how hard it is to find a valid hash for this block. (required).</param>
-        /// <param name="nonce">Represents a random value that can be adjusted to satisfy the Proof of Work (required).</param>
+        /// <param name="nonce">Represents a random value that can be adjusted to satisfy the Proof of Work. (required).</param>
         /// <param name="size">Represents the total size of the block in Bytes. (required).</param>
         /// <param name="bits">Represents a specific sub-unit of Doge. Bits have two-decimal precision. (required).</param>
         /// <param name="chainwork">Represents a hexadecimal number of all the hashes necessary to produce the current chain. E.g., when converting 0000000000000000000000000000000000000000000086859f7a841475b236fd to a decimal you get 635262017308958427068157 hashes, or 635262 exahashes. (required).</param>
         /// <param name="merkleRoot">Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. (required).</param>
         /// <param name="strippedSize">Defines the numeric representation of the block size excluding the witness data. (required).</param>
         /// <param name="version">Represents the version of the specific block on the blockchain. (required).</param>
-        /// <param name="weight">Represents a measurement to compare the size of different transactions to each other in proportion to the block size limit. (required).</param>
-        public GetBlockDetailsByBlockHeightRIBSD(string difficulty = default(string), int nonce = default(int), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), int strippedSize = default(int), int version = default(int), int weight = default(int))
+        /// <param name="weight">Represents a measurement to compare the size of different transactions to each other in proportion to the block size limi (required).</param>
+        public GetBlockDetailsByBlockHeightRIBSD(string difficulty = default(string), string nonce = default(string), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), int strippedSize = default(int), int version = default(int), int weight = default(int))
         {
             // to ensure "difficulty" is required (not null)
-            this.Difficulty = difficulty ?? throw new ArgumentNullException("difficulty is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            if (difficulty == null) {
+                throw new ArgumentNullException("difficulty is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            }
+            this.Difficulty = difficulty;
+            // to ensure "nonce" is required (not null)
+            if (nonce == null) {
+                throw new ArgumentNullException("nonce is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            }
             this.Nonce = nonce;
             this.Size = size;
             // to ensure "bits" is required (not null)
-            this.Bits = bits ?? throw new ArgumentNullException("bits is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            if (bits == null) {
+                throw new ArgumentNullException("bits is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            }
+            this.Bits = bits;
             // to ensure "chainwork" is required (not null)
-            this.Chainwork = chainwork ?? throw new ArgumentNullException("chainwork is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            if (chainwork == null) {
+                throw new ArgumentNullException("chainwork is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            }
+            this.Chainwork = chainwork;
             // to ensure "merkleRoot" is required (not null)
-            this.MerkleRoot = merkleRoot ?? throw new ArgumentNullException("merkleRoot is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            if (merkleRoot == null) {
+                throw new ArgumentNullException("merkleRoot is a required property for GetBlockDetailsByBlockHeightRIBSD and cannot be null");
+            }
+            this.MerkleRoot = merkleRoot;
             this.StrippedSize = strippedSize;
-            this.Version = version;
+            this._Version = version;
             this.Weight = weight;
         }
 
@@ -74,11 +90,11 @@ namespace CryptoAPIs.Model
         public string Difficulty { get; set; }
 
         /// <summary>
-        /// Represents a random value that can be adjusted to satisfy the Proof of Work
+        /// Represents a random value that can be adjusted to satisfy the Proof of Work.
         /// </summary>
-        /// <value>Represents a random value that can be adjusted to satisfy the Proof of Work</value>
+        /// <value>Represents a random value that can be adjusted to satisfy the Proof of Work.</value>
         [DataMember(Name = "nonce", IsRequired = true, EmitDefaultValue = false)]
-        public int Nonce { get; set; }
+        public string Nonce { get; set; }
 
         /// <summary>
         /// Represents the total size of the block in Bytes.
@@ -120,12 +136,12 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the version of the specific block on the blockchain.</value>
         [DataMember(Name = "version", IsRequired = true, EmitDefaultValue = false)]
-        public int Version { get; set; }
+        public int _Version { get; set; }
 
         /// <summary>
-        /// Represents a measurement to compare the size of different transactions to each other in proportion to the block size limit.
+        /// Represents a measurement to compare the size of different transactions to each other in proportion to the block size limi
         /// </summary>
-        /// <value>Represents a measurement to compare the size of different transactions to each other in proportion to the block size limit.</value>
+        /// <value>Represents a measurement to compare the size of different transactions to each other in proportion to the block size limi</value>
         [DataMember(Name = "weight", IsRequired = true, EmitDefaultValue = false)]
         public int Weight { get; set; }
 
@@ -144,7 +160,7 @@ namespace CryptoAPIs.Model
             sb.Append("  Chainwork: ").Append(Chainwork).Append("\n");
             sb.Append("  MerkleRoot: ").Append(MerkleRoot).Append("\n");
             sb.Append("  StrippedSize: ").Append(StrippedSize).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -187,7 +203,8 @@ namespace CryptoAPIs.Model
                 ) && 
                 (
                     this.Nonce == input.Nonce ||
-                    this.Nonce.Equals(input.Nonce)
+                    (this.Nonce != null &&
+                    this.Nonce.Equals(input.Nonce))
                 ) && 
                 (
                     this.Size == input.Size ||
@@ -213,8 +230,8 @@ namespace CryptoAPIs.Model
                     this.StrippedSize.Equals(input.StrippedSize)
                 ) && 
                 (
-                    this.Version == input.Version ||
-                    this.Version.Equals(input.Version)
+                    this._Version == input._Version ||
+                    this._Version.Equals(input._Version)
                 ) && 
                 (
                     this.Weight == input.Weight ||
@@ -233,7 +250,8 @@ namespace CryptoAPIs.Model
                 int hashCode = 41;
                 if (this.Difficulty != null)
                     hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
-                hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                if (this.Nonce != null)
+                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
                 hashCode = hashCode * 59 + this.Size.GetHashCode();
                 if (this.Bits != null)
                     hashCode = hashCode * 59 + this.Bits.GetHashCode();
@@ -242,7 +260,7 @@ namespace CryptoAPIs.Model
                 if (this.MerkleRoot != null)
                     hashCode = hashCode * 59 + this.MerkleRoot.GetHashCode();
                 hashCode = hashCode * 59 + this.StrippedSize.GetHashCode();
-                hashCode = hashCode * 59 + this.Version.GetHashCode();
+                hashCode = hashCode * 59 + this._Version.GetHashCode();
                 hashCode = hashCode * 59 + this.Weight.GetHashCode();
                 return hashCode;
             }
@@ -253,7 +271,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

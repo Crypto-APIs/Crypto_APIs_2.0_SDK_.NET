@@ -58,14 +58,6 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
-        /// Test the property 'PropertyId'
-        /// </summary>
-        [Fact]
-        public void PropertyIdTest()
-        {
-            // TODO unit test for the property 'PropertyId'
-        }
-        /// <summary>
         /// Test the property 'ContractAddress'
         /// </summary>
         [Fact]
