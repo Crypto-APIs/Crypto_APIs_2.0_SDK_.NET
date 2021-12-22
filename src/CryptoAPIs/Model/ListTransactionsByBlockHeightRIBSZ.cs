@@ -55,7 +55,7 @@ namespace CryptoAPIs.Model
         /// <param name="versionGroupId">Represents the transaction version group ID. (required).</param>
         /// <param name="vin">Object Array representation of transaction inputs (required).</param>
         /// <param name="vout">Object Array representation of transaction outputs (required).</param>
-        public ListTransactionsByBlockHeightRIBSZ(string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), int locktime = default(int), bool overwintered = default(bool), int size = default(int), List<ListTransactionsByBlockHeightRIBSZVJoinSplit> vJoinSplit = default(List<ListTransactionsByBlockHeightRIBSZVJoinSplit>), List<ListTransactionsByBlockHeightRIBSZVShieldedOutput> vShieldedOutput = default(List<ListTransactionsByBlockHeightRIBSZVShieldedOutput>), List<ListConfirmedTransactionsByAddressRIBSZVShieldedSpend> vShieldedSpend = default(List<ListConfirmedTransactionsByAddressRIBSZVShieldedSpend>), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<ListTransactionsByBlockHeightRIBSZVin> vin = default(List<ListTransactionsByBlockHeightRIBSZVin>), List<ListTransactionsByBlockHeightRIBSZVout> vout = default(List<ListTransactionsByBlockHeightRIBSZVout>))
+        public ListTransactionsByBlockHeightRIBSZ(string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), int locktime = default(int), bool overwintered = default(bool), int size = default(int), List<ListTransactionsByBlockHeightRIBSZVJoinSplit> vJoinSplit = default(List<ListTransactionsByBlockHeightRIBSZVJoinSplit>), List<ListTransactionsByBlockHeightRIBSZVShieldedOutput> vShieldedOutput = default(List<ListTransactionsByBlockHeightRIBSZVShieldedOutput>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend> vShieldedSpend = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend>), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<ListTransactionsByBlockHeightRIBSZVin> vin = default(List<ListTransactionsByBlockHeightRIBSZVin>), List<ListTransactionsByBlockHeightRIBSZVout> vout = default(List<ListTransactionsByBlockHeightRIBSZVout>))
         {
             // to ensure "bindingSig" is required (not null)
             if (bindingSig == null) {
@@ -182,7 +182,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Object Array representation of transaction spend descriptions</value>
         [DataMember(Name = "vShieldedSpend", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListConfirmedTransactionsByAddressRIBSZVShieldedSpend> VShieldedSpend { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend> VShieldedSpend { get; set; }
 
         /// <summary>
         /// Defines the transaction value balance.
@@ -225,7 +225,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTransactionsByBlockHeightRIBSZ {\n");
             sb.Append("  BindingSig: ").Append(BindingSig).Append("\n");
             sb.Append("  ExpiryHeight: ").Append(ExpiryHeight).Append("\n");
@@ -273,8 +273,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTransactionsByBlockHeightRIBSZ input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.BindingSig == input.BindingSig ||
@@ -363,30 +364,50 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.BindingSig != null)
-                    hashCode = hashCode * 59 + this.BindingSig.GetHashCode();
-                hashCode = hashCode * 59 + this.ExpiryHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BindingSig.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ExpiryHeight.GetHashCode();
                 if (this.JoinSplitPubKey != null)
-                    hashCode = hashCode * 59 + this.JoinSplitPubKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.JoinSplitPubKey.GetHashCode();
+                }
                 if (this.JoinSplitSig != null)
-                    hashCode = hashCode * 59 + this.JoinSplitSig.GetHashCode();
-                hashCode = hashCode * 59 + this.Locktime.GetHashCode();
-                hashCode = hashCode * 59 + this.Overwintered.GetHashCode();
-                hashCode = hashCode * 59 + this.Size.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.JoinSplitSig.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Locktime.GetHashCode();
+                hashCode = (hashCode * 59) + this.Overwintered.GetHashCode();
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
                 if (this.VJoinSplit != null)
-                    hashCode = hashCode * 59 + this.VJoinSplit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VJoinSplit.GetHashCode();
+                }
                 if (this.VShieldedOutput != null)
-                    hashCode = hashCode * 59 + this.VShieldedOutput.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VShieldedOutput.GetHashCode();
+                }
                 if (this.VShieldedSpend != null)
-                    hashCode = hashCode * 59 + this.VShieldedSpend.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VShieldedSpend.GetHashCode();
+                }
                 if (this.ValueBalance != null)
-                    hashCode = hashCode * 59 + this.ValueBalance.GetHashCode();
-                hashCode = hashCode * 59 + this._Version.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ValueBalance.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 if (this.VersionGroupId != null)
-                    hashCode = hashCode * 59 + this.VersionGroupId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VersionGroupId.GetHashCode();
+                }
                 if (this.Vin != null)
-                    hashCode = hashCode * 59 + this.Vin.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Vin.GetHashCode();
+                }
                 if (this.Vout != null)
-                    hashCode = hashCode * 59 + this.Vout.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Vout.GetHashCode();
+                }
                 return hashCode;
             }
         }

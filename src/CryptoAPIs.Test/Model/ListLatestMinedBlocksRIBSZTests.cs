@@ -58,6 +58,14 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Difficulty'
+        /// </summary>
+        [Fact]
+        public void DifficultyTest()
+        {
+            // TODO unit test for the property 'Difficulty'
+        }
+        /// <summary>
         /// Test the property 'DsBlock'
         /// </summary>
         [Fact]

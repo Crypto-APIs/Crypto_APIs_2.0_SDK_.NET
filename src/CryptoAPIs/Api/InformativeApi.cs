@@ -78,6 +78,33 @@ namespace CryptoAPIs.Api
         /// <returns>ApiResponse of GetWalletAssetDetailsR</returns>
         ApiResponse<GetWalletAssetDetailsR> GetWalletAssetDetailsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string));
         /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>GetWalletTransactionDetailsByTransactionIDR</returns>
+        GetWalletTransactionDetailsByTransactionIDR GetWalletTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string));
+
+        /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>ApiResponse of GetWalletTransactionDetailsByTransactionIDR</returns>
+        ApiResponse<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string));
+        /// <summary>
         /// List Deposit Addresses
         /// </summary>
         /// <remarks>
@@ -227,6 +254,35 @@ namespace CryptoAPIs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetWalletAssetDetailsR)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetWalletAssetDetailsR>> GetWalletAssetDetailsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetWalletTransactionDetailsByTransactionIDR</returns>
+        System.Threading.Tasks.Task<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetWalletTransactionDetailsByTransactionIDR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetWalletTransactionDetailsByTransactionIDR>> GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Deposit Addresses
         /// </summary>
@@ -464,7 +520,9 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'transactionRequestId' is set
             if (transactionRequestId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionRequestId' when calling InformativeApi->GetTransactionRequestDetails");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -477,10 +535,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transactionRequestId", CryptoAPIs.Client.ClientUtils.ParameterToString(transactionRequestId)); // path parameter
             if (context != null)
@@ -496,11 +560,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<GetTransactionRequestDetailsR>("/wallet-as-a-service/transactionRequests/{transactionRequestId}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetTransactionRequestDetails", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -532,7 +598,9 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'transactionRequestId' is set
             if (transactionRequestId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionRequestId' when calling InformativeApi->GetTransactionRequestDetails");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -545,12 +613,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transactionRequestId", CryptoAPIs.Client.ClientUtils.ParameterToString(transactionRequestId)); // path parameter
             if (context != null)
@@ -565,13 +638,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<GetTransactionRequestDetailsR>("/wallet-as-a-service/transactionRequests/{transactionRequestId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetTransactionRequestDetails", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -605,15 +680,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->GetWalletAssetDetails");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->GetWalletAssetDetails");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->GetWalletAssetDetails");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -626,10 +707,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -647,11 +734,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<GetWalletAssetDetailsR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetWalletAssetDetails", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -687,15 +776,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->GetWalletAssetDetails");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->GetWalletAssetDetails");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->GetWalletAssetDetails");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -708,12 +803,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -730,13 +830,207 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<GetWalletAssetDetailsR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetWalletAssetDetails", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>GetWalletTransactionDetailsByTransactionIDR</returns>
+        public GetWalletTransactionDetailsByTransactionIDR GetWalletTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string))
+        {
+            CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> localVarResponse = GetWalletTransactionDetailsByTransactionIDWithHttpInfo(blockchain, network, transactionId, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <returns>ApiResponse of GetWalletTransactionDetailsByTransactionIDR</returns>
+        public CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->GetWalletTransactionDetailsByTransactionID");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->GetWalletTransactionDetailsByTransactionID");
+            }
+
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionId' when calling InformativeApi->GetWalletTransactionDetailsByTransactionID");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("transactionId", CryptoAPIs.Client.ClientUtils.ParameterToString(transactionId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<GetWalletTransactionDetailsByTransactionIDR>("/wallet-as-a-service/wallets/{blockchain}/{network}/transactions/{transactionId}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetWalletTransactionDetailsByTransactionID", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetWalletTransactionDetailsByTransactionIDR</returns>
+        public async System.Threading.Tasks.Task<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> localVarResponse = await GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(blockchain, network, transactionId, context, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Wallet Transaction Details By Transaction ID Through this endpoint users can obtain Wallet transaction information by providing a &#x60;transactionId&#x60;. Customers can receive information only for a transaction that has been made from their own wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetWalletTransactionDetailsByTransactionIDR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR>> GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->GetWalletTransactionDetailsByTransactionID");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->GetWalletTransactionDetailsByTransactionID");
+            }
+
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionId' when calling InformativeApi->GetWalletTransactionDetailsByTransactionID");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("transactionId", CryptoAPIs.Client.ClientUtils.ParameterToString(transactionId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetWalletTransactionDetailsByTransactionIDR>("/wallet-as-a-service/wallets/{blockchain}/{network}/transactions/{transactionId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetWalletTransactionDetailsByTransactionID", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -770,15 +1064,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListDepositAddresses");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListDepositAddresses");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListDepositAddresses");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -791,10 +1091,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -812,11 +1118,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ListDepositAddressesR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListDepositAddresses", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -852,15 +1160,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListDepositAddresses");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListDepositAddresses");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListDepositAddresses");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -873,12 +1187,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -895,13 +1214,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ListDepositAddressesR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListDepositAddresses", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -937,11 +1258,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListSupportedTokens");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListSupportedTokens");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -954,10 +1279,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -982,11 +1313,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ListSupportedTokensR>("/wallet-as-a-service/info/{blockchain}/{network}/supported-tokens", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListSupportedTokens", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1024,11 +1357,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListSupportedTokens");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListSupportedTokens");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1041,12 +1378,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1070,13 +1412,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ListSupportedTokensR>("/wallet-as-a-service/info/{blockchain}/{network}/supported-tokens", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListSupportedTokens", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1114,15 +1458,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListWalletTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListWalletTransactions");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListWalletTransactions");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1135,10 +1485,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1164,11 +1520,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ListWalletTransactionsR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transactions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListWalletTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1208,15 +1566,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InformativeApi->ListWalletTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InformativeApi->ListWalletTransactions");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListWalletTransactions");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1229,12 +1593,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1259,13 +1628,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ListWalletTransactionsR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListWalletTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

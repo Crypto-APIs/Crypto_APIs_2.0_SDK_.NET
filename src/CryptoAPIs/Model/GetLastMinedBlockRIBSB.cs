@@ -164,7 +164,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetLastMinedBlockRIBSB {\n");
             sb.Append("  Difficulty: ").Append(Difficulty).Append("\n");
             sb.Append("  Nonce: ").Append(Nonce).Append("\n");
@@ -207,8 +207,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetLastMinedBlockRIBSB input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Difficulty == input.Difficulty ||
@@ -268,21 +269,33 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Difficulty != null)
-                    hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Difficulty.GetHashCode();
+                }
                 if (this.Nonce != null)
-                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
-                hashCode = hashCode * 59 + this.Size.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
                 if (this.Bits != null)
-                    hashCode = hashCode * 59 + this.Bits.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Bits.GetHashCode();
+                }
                 if (this.Chainwork != null)
-                    hashCode = hashCode * 59 + this.Chainwork.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Chainwork.GetHashCode();
+                }
                 if (this.MerkleRoot != null)
-                    hashCode = hashCode * 59 + this.MerkleRoot.GetHashCode();
-                hashCode = hashCode * 59 + this.StrippedSize.GetHashCode();
-                hashCode = hashCode * 59 + this._Version.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MerkleRoot.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.StrippedSize.GetHashCode();
+                hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 if (this.VersionHex != null)
-                    hashCode = hashCode * 59 + this.VersionHex.GetHashCode();
-                hashCode = hashCode * 59 + this.Weight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VersionHex.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Weight.GetHashCode();
                 return hashCode;
             }
         }

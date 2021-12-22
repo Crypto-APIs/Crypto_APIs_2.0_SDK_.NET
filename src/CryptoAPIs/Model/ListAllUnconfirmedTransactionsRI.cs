@@ -43,9 +43,10 @@ namespace CryptoAPIs.Model
         /// <param name="recipients">Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. (required).</param>
         /// <param name="senders">Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. (required).</param>
         /// <param name="timestamp">Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. (required).</param>
+        /// <param name="transactionHash">String representation of the transaction hash (required).</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public ListAllUnconfirmedTransactionsRI(List<ListUnconfirmedTransactionsByAddressRIRecipients> recipients = default(List<ListUnconfirmedTransactionsByAddressRIRecipients>), List<ListUnconfirmedTransactionsByAddressRISenders> senders = default(List<ListUnconfirmedTransactionsByAddressRISenders>), int timestamp = default(int), string transactionId = default(string), ListAllUnconfirmedTransactionsRIBS blockchainSpecific = default(ListAllUnconfirmedTransactionsRIBS))
+        public ListAllUnconfirmedTransactionsRI(List<ListUnconfirmedTransactionsByAddressRIRecipients> recipients = default(List<ListUnconfirmedTransactionsByAddressRIRecipients>), List<ListUnconfirmedTransactionsByAddressRISenders> senders = default(List<ListUnconfirmedTransactionsByAddressRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListAllUnconfirmedTransactionsRIBS blockchainSpecific = default(ListAllUnconfirmedTransactionsRIBS))
         {
             // to ensure "recipients" is required (not null)
             if (recipients == null) {
@@ -58,6 +59,11 @@ namespace CryptoAPIs.Model
             }
             this.Senders = senders;
             this.Timestamp = timestamp;
+            // to ensure "transactionHash" is required (not null)
+            if (transactionHash == null) {
+                throw new ArgumentNullException("transactionHash is a required property for ListAllUnconfirmedTransactionsRI and cannot be null");
+            }
+            this.TransactionHash = transactionHash;
             // to ensure "transactionId" is required (not null)
             if (transactionId == null) {
                 throw new ArgumentNullException("transactionId is a required property for ListAllUnconfirmedTransactionsRI and cannot be null");
@@ -92,6 +98,13 @@ namespace CryptoAPIs.Model
         public int Timestamp { get; set; }
 
         /// <summary>
+        /// String representation of the transaction hash
+        /// </summary>
+        /// <value>String representation of the transaction hash</value>
+        [DataMember(Name = "transactionHash", IsRequired = true, EmitDefaultValue = false)]
+        public string TransactionHash { get; set; }
+
+        /// <summary>
         /// Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
         /// </summary>
         /// <value>Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</value>
@@ -110,11 +123,12 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListAllUnconfirmedTransactionsRI {\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("  Senders: ").Append(Senders).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
+            sb.Append("  TransactionHash: ").Append(TransactionHash).Append("\n");
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("  BlockchainSpecific: ").Append(BlockchainSpecific).Append("\n");
             sb.Append("}\n");
@@ -148,8 +162,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListAllUnconfirmedTransactionsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Recipients == input.Recipients ||
@@ -166,6 +181,11 @@ namespace CryptoAPIs.Model
                 (
                     this.Timestamp == input.Timestamp ||
                     this.Timestamp.Equals(input.Timestamp)
+                ) && 
+                (
+                    this.TransactionHash == input.TransactionHash ||
+                    (this.TransactionHash != null &&
+                    this.TransactionHash.Equals(input.TransactionHash))
                 ) && 
                 (
                     this.TransactionId == input.TransactionId ||
@@ -189,14 +209,26 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Recipients != null)
-                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Recipients.GetHashCode();
+                }
                 if (this.Senders != null)
-                    hashCode = hashCode * 59 + this.Senders.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Senders.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
+                if (this.TransactionHash != null)
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 if (this.BlockchainSpecific != null)
-                    hashCode = hashCode * 59 + this.BlockchainSpecific.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockchainSpecific.GetHashCode();
+                }
                 return hashCode;
             }
         }

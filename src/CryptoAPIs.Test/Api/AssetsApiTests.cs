@@ -56,6 +56,32 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test GetAssetDetailsByAssetID
+        /// </summary>
+        [Fact]
+        public void GetAssetDetailsByAssetIDTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string assetId = null;
+            //string context = null;
+            //var response = instance.GetAssetDetailsByAssetID(assetId, context);
+            //Assert.IsType<GetAssetDetailsByAssetIDR>(response);
+        }
+
+        /// <summary>
+        /// Test GetAssetDetailsByAssetSymbol
+        /// </summary>
+        [Fact]
+        public void GetAssetDetailsByAssetSymbolTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string assetSymbol = null;
+            //string context = null;
+            //var response = instance.GetAssetDetailsByAssetSymbol(assetSymbol, context);
+            //Assert.IsType<GetAssetDetailsByAssetSymbolR>(response);
+        }
+
+        /// <summary>
         /// Test ListAssetsDetails
         /// </summary>
         [Fact]

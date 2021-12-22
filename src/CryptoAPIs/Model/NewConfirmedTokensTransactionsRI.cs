@@ -43,13 +43,11 @@ namespace CryptoAPIs.Model
         /// <param name="address">Represents the address of the transaction, per which the result is returned. (required).</param>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
         /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
-        /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
         /// <param name="createdTimestamp">Defines the specific time/date when the subscription was created in Unix Timestamp. (required).</param>
         /// <param name="eventType">Defines the type of the specific event available for the customer to subscribe to for callback notification. (required).</param>
         /// <param name="isActive">Defines whether the subscription is active or not. Set as boolean. (required).</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription. (required).</param>
-        /// <param name="transactionId">Represents the unique identification string that defines the transaction. (required).</param>
-        public NewConfirmedTokensTransactionsRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), string confirmationsCount = default(string), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string), string transactionId = default(string))
+        public NewConfirmedTokensTransactionsRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string))
         {
             // to ensure "address" is required (not null)
             if (address == null) {
@@ -66,11 +64,6 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("callbackUrl is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
-            // to ensure "confirmationsCount" is required (not null)
-            if (confirmationsCount == null) {
-                throw new ArgumentNullException("confirmationsCount is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
-            }
-            this.ConfirmationsCount = confirmationsCount;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "eventType" is required (not null)
             if (eventType == null) {
@@ -83,11 +76,6 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("referenceId is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
             }
             this.ReferenceId = referenceId;
-            // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
-                throw new ArgumentNullException("transactionId is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
-            }
-            this.TransactionId = transactionId;
         }
 
         /// <summary>
@@ -110,13 +98,6 @@ namespace CryptoAPIs.Model
         /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
-
-        /// <summary>
-        /// Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.
-        /// </summary>
-        /// <value>Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.</value>
-        [DataMember(Name = "confirmationsCount", IsRequired = true, EmitDefaultValue = false)]
-        public string ConfirmationsCount { get; set; }
 
         /// <summary>
         /// Defines the specific time/date when the subscription was created in Unix Timestamp.
@@ -147,29 +128,20 @@ namespace CryptoAPIs.Model
         public string ReferenceId { get; set; }
 
         /// <summary>
-        /// Represents the unique identification string that defines the transaction.
-        /// </summary>
-        /// <value>Represents the unique identification string that defines the transaction.</value>
-        [DataMember(Name = "transactionId", IsRequired = true, EmitDefaultValue = false)]
-        public string TransactionId { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class NewConfirmedTokensTransactionsRI {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
-            sb.Append("  ConfirmationsCount: ").Append(ConfirmationsCount).Append("\n");
             sb.Append("  CreatedTimestamp: ").Append(CreatedTimestamp).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  ReferenceId: ").Append(ReferenceId).Append("\n");
-            sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,8 +173,9 @@ namespace CryptoAPIs.Model
         public bool Equals(NewConfirmedTokensTransactionsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Address == input.Address ||
@@ -218,11 +191,6 @@ namespace CryptoAPIs.Model
                     this.CallbackUrl == input.CallbackUrl ||
                     (this.CallbackUrl != null &&
                     this.CallbackUrl.Equals(input.CallbackUrl))
-                ) && 
-                (
-                    this.ConfirmationsCount == input.ConfirmationsCount ||
-                    (this.ConfirmationsCount != null &&
-                    this.ConfirmationsCount.Equals(input.ConfirmationsCount))
                 ) && 
                 (
                     this.CreatedTimestamp == input.CreatedTimestamp ||
@@ -241,11 +209,6 @@ namespace CryptoAPIs.Model
                     this.ReferenceId == input.ReferenceId ||
                     (this.ReferenceId != null &&
                     this.ReferenceId.Equals(input.ReferenceId))
-                ) && 
-                (
-                    this.TransactionId == input.TransactionId ||
-                    (this.TransactionId != null &&
-                    this.TransactionId.Equals(input.TransactionId))
                 );
         }
 
@@ -259,21 +222,27 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
                 if (this.CallbackSecretKey != null)
-                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
+                }
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
-                if (this.ConfirmationsCount != null)
-                    hashCode = hashCode * 59 + this.ConfirmationsCount.GetHashCode();
-                hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.CreatedTimestamp.GetHashCode();
                 if (this.EventType != null)
-                    hashCode = hashCode * 59 + this.EventType.GetHashCode();
-                hashCode = hashCode * 59 + this.IsActive.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EventType.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IsActive.GetHashCode();
                 if (this.ReferenceId != null)
-                    hashCode = hashCode * 59 + this.ReferenceId.GetHashCode();
-                if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ReferenceId.GetHashCode();
+                }
                 return hashCode;
             }
         }

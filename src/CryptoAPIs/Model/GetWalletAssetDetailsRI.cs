@@ -42,10 +42,12 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="confirmedBalance">confirmedBalance (required).</param>
         /// <param name="depositAddressesCount">Specifies the count of deposit addresses in the Wallet. (required).</param>
+        /// <param name="fungibleTokens">Represents fungible tokens&#39;es detailed information (required).</param>
         /// <param name="name">Defines the name of the Wallet given to it by the user. (required).</param>
+        /// <param name="nonFungibleTokens">Represents non-fungible tokens&#39;es detailed information. (required).</param>
         /// <param name="recievedConfirmedAmount">recievedConfirmedAmount (required).</param>
         /// <param name="sentConfirmedAmount">sentConfirmedAmount (required).</param>
-        public GetWalletAssetDetailsRI(GetWalletAssetDetailsRIConfirmedBalance confirmedBalance = default(GetWalletAssetDetailsRIConfirmedBalance), int depositAddressesCount = default(int), string name = default(string), GetWalletAssetDetailsRIRecievedConfirmedAmount recievedConfirmedAmount = default(GetWalletAssetDetailsRIRecievedConfirmedAmount), GetWalletAssetDetailsRISentConfirmedAmount sentConfirmedAmount = default(GetWalletAssetDetailsRISentConfirmedAmount))
+        public GetWalletAssetDetailsRI(GetWalletAssetDetailsRIConfirmedBalance confirmedBalance = default(GetWalletAssetDetailsRIConfirmedBalance), int depositAddressesCount = default(int), List<GetWalletAssetDetailsRIFungibleTokens> fungibleTokens = default(List<GetWalletAssetDetailsRIFungibleTokens>), string name = default(string), List<GetWalletAssetDetailsRINonFungibleTokens> nonFungibleTokens = default(List<GetWalletAssetDetailsRINonFungibleTokens>), GetWalletAssetDetailsRIRecievedConfirmedAmount recievedConfirmedAmount = default(GetWalletAssetDetailsRIRecievedConfirmedAmount), GetWalletAssetDetailsRISentConfirmedAmount sentConfirmedAmount = default(GetWalletAssetDetailsRISentConfirmedAmount))
         {
             // to ensure "confirmedBalance" is required (not null)
             if (confirmedBalance == null) {
@@ -53,11 +55,21 @@ namespace CryptoAPIs.Model
             }
             this.ConfirmedBalance = confirmedBalance;
             this.DepositAddressesCount = depositAddressesCount;
+            // to ensure "fungibleTokens" is required (not null)
+            if (fungibleTokens == null) {
+                throw new ArgumentNullException("fungibleTokens is a required property for GetWalletAssetDetailsRI and cannot be null");
+            }
+            this.FungibleTokens = fungibleTokens;
             // to ensure "name" is required (not null)
             if (name == null) {
                 throw new ArgumentNullException("name is a required property for GetWalletAssetDetailsRI and cannot be null");
             }
             this.Name = name;
+            // to ensure "nonFungibleTokens" is required (not null)
+            if (nonFungibleTokens == null) {
+                throw new ArgumentNullException("nonFungibleTokens is a required property for GetWalletAssetDetailsRI and cannot be null");
+            }
+            this.NonFungibleTokens = nonFungibleTokens;
             // to ensure "recievedConfirmedAmount" is required (not null)
             if (recievedConfirmedAmount == null) {
                 throw new ArgumentNullException("recievedConfirmedAmount is a required property for GetWalletAssetDetailsRI and cannot be null");
@@ -84,11 +96,25 @@ namespace CryptoAPIs.Model
         public int DepositAddressesCount { get; set; }
 
         /// <summary>
+        /// Represents fungible tokens&#39;es detailed information
+        /// </summary>
+        /// <value>Represents fungible tokens&#39;es detailed information</value>
+        [DataMember(Name = "fungibleTokens", IsRequired = true, EmitDefaultValue = false)]
+        public List<GetWalletAssetDetailsRIFungibleTokens> FungibleTokens { get; set; }
+
+        /// <summary>
         /// Defines the name of the Wallet given to it by the user.
         /// </summary>
         /// <value>Defines the name of the Wallet given to it by the user.</value>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Represents non-fungible tokens&#39;es detailed information.
+        /// </summary>
+        /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
+        [DataMember(Name = "nonFungibleTokens", IsRequired = true, EmitDefaultValue = false)]
+        public List<GetWalletAssetDetailsRINonFungibleTokens> NonFungibleTokens { get; set; }
 
         /// <summary>
         /// Gets or Sets RecievedConfirmedAmount
@@ -108,11 +134,13 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetWalletAssetDetailsRI {\n");
             sb.Append("  ConfirmedBalance: ").Append(ConfirmedBalance).Append("\n");
             sb.Append("  DepositAddressesCount: ").Append(DepositAddressesCount).Append("\n");
+            sb.Append("  FungibleTokens: ").Append(FungibleTokens).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  NonFungibleTokens: ").Append(NonFungibleTokens).Append("\n");
             sb.Append("  RecievedConfirmedAmount: ").Append(RecievedConfirmedAmount).Append("\n");
             sb.Append("  SentConfirmedAmount: ").Append(SentConfirmedAmount).Append("\n");
             sb.Append("}\n");
@@ -146,8 +174,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetWalletAssetDetailsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ConfirmedBalance == input.ConfirmedBalance ||
@@ -159,9 +188,21 @@ namespace CryptoAPIs.Model
                     this.DepositAddressesCount.Equals(input.DepositAddressesCount)
                 ) && 
                 (
+                    this.FungibleTokens == input.FungibleTokens ||
+                    this.FungibleTokens != null &&
+                    input.FungibleTokens != null &&
+                    this.FungibleTokens.SequenceEqual(input.FungibleTokens)
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.NonFungibleTokens == input.NonFungibleTokens ||
+                    this.NonFungibleTokens != null &&
+                    input.NonFungibleTokens != null &&
+                    this.NonFungibleTokens.SequenceEqual(input.NonFungibleTokens)
                 ) && 
                 (
                     this.RecievedConfirmedAmount == input.RecievedConfirmedAmount ||
@@ -185,14 +226,30 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.ConfirmedBalance != null)
-                    hashCode = hashCode * 59 + this.ConfirmedBalance.GetHashCode();
-                hashCode = hashCode * 59 + this.DepositAddressesCount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConfirmedBalance.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.DepositAddressesCount.GetHashCode();
+                if (this.FungibleTokens != null)
+                {
+                    hashCode = (hashCode * 59) + this.FungibleTokens.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
+                if (this.NonFungibleTokens != null)
+                {
+                    hashCode = (hashCode * 59) + this.NonFungibleTokens.GetHashCode();
+                }
                 if (this.RecievedConfirmedAmount != null)
-                    hashCode = hashCode * 59 + this.RecievedConfirmedAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.RecievedConfirmedAmount.GetHashCode();
+                }
                 if (this.SentConfirmedAmount != null)
-                    hashCode = hashCode * 59 + this.SentConfirmedAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SentConfirmedAmount.GetHashCode();
+                }
                 return hashCode;
             }
         }

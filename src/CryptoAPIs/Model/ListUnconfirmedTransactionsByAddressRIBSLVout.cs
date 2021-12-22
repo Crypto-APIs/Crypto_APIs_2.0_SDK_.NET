@@ -84,7 +84,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListUnconfirmedTransactionsByAddressRIBSLVout {\n");
             sb.Append("  IsSpent: ").Append(IsSpent).Append("\n");
             sb.Append("  ScriptPubKey: ").Append(ScriptPubKey).Append("\n");
@@ -120,8 +120,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListUnconfirmedTransactionsByAddressRIBSLVout input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.IsSpent == input.IsSpent ||
@@ -148,11 +149,15 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.IsSpent.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsSpent.GetHashCode();
                 if (this.ScriptPubKey != null)
-                    hashCode = hashCode * 59 + this.ScriptPubKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ScriptPubKey.GetHashCode();
+                }
                 if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                }
                 return hashCode;
             }
         }

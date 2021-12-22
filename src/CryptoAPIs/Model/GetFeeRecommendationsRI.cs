@@ -102,7 +102,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetFeeRecommendationsRI {\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("  Fast: ").Append(Fast).Append("\n");
@@ -139,8 +139,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetFeeRecommendationsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Unit == input.Unit ||
@@ -174,13 +175,21 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Unit != null)
-                    hashCode = hashCode * 59 + this.Unit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Unit.GetHashCode();
+                }
                 if (this.Fast != null)
-                    hashCode = hashCode * 59 + this.Fast.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Fast.GetHashCode();
+                }
                 if (this.Slow != null)
-                    hashCode = hashCode * 59 + this.Slow.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Slow.GetHashCode();
+                }
                 if (this.Standard != null)
-                    hashCode = hashCode * 59 + this.Standard.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Standard.GetHashCode();
+                }
                 return hashCode;
             }
         }

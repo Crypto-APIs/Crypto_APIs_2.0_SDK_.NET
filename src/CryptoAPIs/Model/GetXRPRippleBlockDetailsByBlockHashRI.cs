@@ -140,7 +140,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetXRPRippleBlockDetailsByBlockHashRI {\n");
             sb.Append("  BlockHash: ").Append(BlockHash).Append("\n");
             sb.Append("  BlockHeight: ").Append(BlockHeight).Append("\n");
@@ -181,8 +181,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetXRPRippleBlockDetailsByBlockHashRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.BlockHash == input.BlockHash ||
@@ -233,18 +234,28 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.BlockHash != null)
-                    hashCode = hashCode * 59 + this.BlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.BlockHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.BlockHeight.GetHashCode();
                 if (this.NextBlockHash != null)
-                    hashCode = hashCode * 59 + this.NextBlockHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.NextBlockHash.GetHashCode();
+                }
                 if (this.PreviousBlockHash != null)
-                    hashCode = hashCode * 59 + this.PreviousBlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PreviousBlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
                 if (this.TotalCoins != null)
-                    hashCode = hashCode * 59 + this.TotalCoins.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalCoins.GetHashCode();
+                }
                 if (this.TotalFees != null)
-                    hashCode = hashCode * 59 + this.TotalFees.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionsCount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalFees.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TransactionsCount.GetHashCode();
                 return hashCode;
             }
         }

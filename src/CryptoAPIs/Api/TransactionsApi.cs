@@ -119,10 +119,10 @@ namespace CryptoAPIs.Api
         /// <returns>ApiResponse of CreateCoinsTransactionRequestFromWalletR</returns>
         ApiResponse<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB));
         /// <summary>
-        /// Create Tokens Transaction Request from Address
+        /// Create Fungible Tokens Transaction Request from Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -130,15 +130,15 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
-        /// <returns>CreateTokensTransactionRequestFromAddressR</returns>
-        CreateTokensTransactionRequestFromAddressR CreateTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB));
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <returns>CreateFungibleTokensTransactionRequestFromAddressR</returns>
+        CreateFungibleTokensTransactionRequestFromAddressR CreateFungibleTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB));
 
         /// <summary>
-        /// Create Tokens Transaction Request from Address
+        /// Create Fungible Tokens Transaction Request from Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -146,9 +146,9 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
-        /// <returns>ApiResponse of CreateTokensTransactionRequestFromAddressR</returns>
-        ApiResponse<CreateTokensTransactionRequestFromAddressR> CreateTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB));
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <returns>ApiResponse of CreateFungibleTokensTransactionRequestFromAddressR</returns>
+        ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB));
         #endregion Synchronous Operations
     }
 
@@ -256,10 +256,10 @@ namespace CryptoAPIs.Api
         /// <returns>Task of ApiResponse (CreateCoinsTransactionRequestFromWalletR)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateCoinsTransactionRequestFromWalletR>> CreateCoinsTransactionRequestFromWalletWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Create Tokens Transaction Request from Address
+        /// Create Fungible Tokens Transaction Request from Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -267,16 +267,16 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreateTokensTransactionRequestFromAddressR</returns>
-        System.Threading.Tasks.Task<CreateTokensTransactionRequestFromAddressR> CreateTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CreateFungibleTokensTransactionRequestFromAddressR</returns>
+        System.Threading.Tasks.Task<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Create Tokens Transaction Request from Address
+        /// Create Fungible Tokens Transaction Request from Address
         /// </summary>
         /// <remarks>
-        /// Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -284,10 +284,10 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreateTokensTransactionRequestFromAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateTokensTransactionRequestFromAddressR>> CreateTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CreateFungibleTokensTransactionRequestFromAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR>> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -440,19 +440,27 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'address' is set
             if (address == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -466,10 +474,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
@@ -489,11 +503,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CreateCoinsTransactionFromAddressForWholeAmountR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/all-transaction-requests", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCoinsTransactionFromAddressForWholeAmount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -533,19 +549,27 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'address' is set
             if (address == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateCoinsTransactionFromAddressForWholeAmount");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -559,12 +583,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
@@ -583,13 +612,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<CreateCoinsTransactionFromAddressForWholeAmountR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/all-transaction-requests", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCoinsTransactionFromAddressForWholeAmount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -627,19 +658,27 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'address' is set
             if (address == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -653,10 +692,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
@@ -676,11 +721,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CreateCoinsTransactionRequestFromAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/transaction-requests", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCoinsTransactionRequestFromAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -720,19 +767,27 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'address' is set
             if (address == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateCoinsTransactionRequestFromAddress");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -746,12 +801,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
@@ -770,13 +830,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<CreateCoinsTransactionRequestFromAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/transaction-requests", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCoinsTransactionRequestFromAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -812,15 +874,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateCoinsTransactionRequestFromWallet");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateCoinsTransactionRequestFromWallet");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateCoinsTransactionRequestFromWallet");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -834,10 +902,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -856,11 +930,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CreateCoinsTransactionRequestFromWalletR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transaction-requests", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCoinsTransactionRequestFromWallet", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -898,15 +974,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateCoinsTransactionRequestFromWallet");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateCoinsTransactionRequestFromWallet");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateCoinsTransactionRequestFromWallet");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -920,12 +1002,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -943,20 +1030,22 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<CreateCoinsTransactionRequestFromWalletR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transaction-requests", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCoinsTransactionRequestFromWallet", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
         }
 
         /// <summary>
-        /// Create Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Create Fungible Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -964,16 +1053,16 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
-        /// <returns>CreateTokensTransactionRequestFromAddressR</returns>
-        public CreateTokensTransactionRequestFromAddressR CreateTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB))
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <returns>CreateFungibleTokensTransactionRequestFromAddressR</returns>
+        public CreateFungibleTokensTransactionRequestFromAddressR CreateFungibleTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB))
         {
-            CryptoAPIs.Client.ApiResponse<CreateTokensTransactionRequestFromAddressR> localVarResponse = CreateTokensTransactionRequestFromAddressWithHttpInfo(blockchain, network, senderAddress, walletId, context, createTokensTransactionRequestFromAddressRB);
+            CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> localVarResponse = CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(blockchain, network, senderAddress, walletId, context, createFungibleTokensTransactionRequestFromAddressRB);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Create Fungible Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -981,25 +1070,33 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
-        /// <returns>ApiResponse of CreateTokensTransactionRequestFromAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<CreateTokensTransactionRequestFromAddressR> CreateTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB))
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <returns>ApiResponse of CreateFungibleTokensTransactionRequestFromAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'senderAddress' is set
             if (senderAddress == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'senderAddress' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'senderAddress' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1013,10 +1110,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1026,7 +1129,7 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
-            localVarRequestOptions.Data = createTokensTransactionRequestFromAddressRB;
+            localVarRequestOptions.Data = createFungibleTokensTransactionRequestFromAddressRB;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1035,19 +1138,21 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CreateTokensTransactionRequestFromAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests", localVarRequestOptions, this.Configuration);
-
+            var localVarResponse = this.Client.Post<CreateFungibleTokensTransactionRequestFromAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTokensTransactionRequestFromAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                Exception _exception = this.ExceptionFactory("CreateFungibleTokensTransactionRequestFromAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
         }
 
         /// <summary>
-        /// Create Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Create Fungible Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1055,17 +1160,17 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreateTokensTransactionRequestFromAddressR</returns>
-        public async System.Threading.Tasks.Task<CreateTokensTransactionRequestFromAddressR> CreateTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CreateFungibleTokensTransactionRequestFromAddressR</returns>
+        public async System.Threading.Tasks.Task<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<CreateTokensTransactionRequestFromAddressR> localVarResponse = await CreateTokensTransactionRequestFromAddressWithHttpInfoAsync(blockchain, network, senderAddress, walletId, context, createTokensTransactionRequestFromAddressRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> localVarResponse = await CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(blockchain, network, senderAddress, walletId, context, createFungibleTokensTransactionRequestFromAddressRB, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
+        /// Create Fungible Tokens Transaction Request from Address Through this endpoint users can make a single token transaction.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
@@ -1073,26 +1178,34 @@ namespace CryptoAPIs.Api
         /// <param name="senderAddress">Defines the specific source address for the transaction.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
-        /// <param name="createTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreateTokensTransactionRequestFromAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateTokensTransactionRequestFromAddressR>> CreateTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = default(CreateTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CreateFungibleTokensTransactionRequestFromAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR>> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'senderAddress' is set
             if (senderAddress == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'senderAddress' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'senderAddress' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
-                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateTokensTransactionRequestFromAddress");
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling TransactionsApi->CreateFungibleTokensTransactionRequestFromAddress");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1106,12 +1219,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1121,7 +1239,7 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
-            localVarRequestOptions.Data = createTokensTransactionRequestFromAddressRB;
+            localVarRequestOptions.Data = createFungibleTokensTransactionRequestFromAddressRB;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1130,13 +1248,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CreateTokensTransactionRequestFromAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CreateFungibleTokensTransactionRequestFromAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTokensTransactionRequestFromAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                Exception _exception = this.ExceptionFactory("CreateFungibleTokensTransactionRequestFromAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

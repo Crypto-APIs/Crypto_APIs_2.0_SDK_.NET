@@ -85,7 +85,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListUnconfirmedTransactionsByAddressRIBSBScriptSig {\n");
             sb.Append("  Asm: ").Append(Asm).Append("\n");
             sb.Append("  Hex: ").Append(Hex).Append("\n");
@@ -121,8 +121,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListUnconfirmedTransactionsByAddressRIBSBScriptSig input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Asm == input.Asm ||
@@ -151,11 +152,17 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Asm != null)
-                    hashCode = hashCode * 59 + this.Asm.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Asm.GetHashCode();
+                }
                 if (this.Hex != null)
-                    hashCode = hashCode * 59 + this.Hex.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Hex.GetHashCode();
+                }
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 return hashCode;
             }
         }

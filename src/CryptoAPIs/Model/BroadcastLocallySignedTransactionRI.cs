@@ -63,7 +63,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class BroadcastLocallySignedTransactionRI {\n");
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("}\n");
@@ -97,8 +97,9 @@ namespace CryptoAPIs.Model
         public bool Equals(BroadcastLocallySignedTransactionRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.TransactionId == input.TransactionId ||
@@ -117,7 +118,9 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -127,7 +127,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTransactionsByBlockHeightRIBSEC {\n");
             sb.Append("  Contract: ").Append(Contract).Append("\n");
             sb.Append("  GasLimit: ").Append(GasLimit).Append("\n");
@@ -166,8 +166,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTransactionsByBlockHeightRIBSEC input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Contract == input.Contract ||
@@ -211,17 +212,29 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Contract != null)
-                    hashCode = hashCode * 59 + this.Contract.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Contract.GetHashCode();
+                }
                 if (this.GasLimit != null)
-                    hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
                 if (this.GasPrice != null)
-                    hashCode = hashCode * 59 + this.GasPrice.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
+                }
                 if (this.GasUsed != null)
-                    hashCode = hashCode * 59 + this.GasUsed.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasUsed.GetHashCode();
+                }
                 if (this.InputData != null)
-                    hashCode = hashCode * 59 + this.InputData.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InputData.GetHashCode();
+                }
                 if (this.Nonce != null)
-                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                }
                 return hashCode;
             }
         }

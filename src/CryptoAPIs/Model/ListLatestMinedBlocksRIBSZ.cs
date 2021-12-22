@@ -40,14 +40,20 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListLatestMinedBlocksRIBSZ" /> class.
         /// </summary>
+        /// <param name="difficulty">Represents a mathematical value of how hard it is to find a valid hash for this block. (required).</param>
         /// <param name="dsBlock">Represents the Directory Service block which contains metadata about the miners who participate in the consensus protocol. (required).</param>
         /// <param name="dsDifficulty">Defines how difficult it is to mine the dsBlocks. (required).</param>
         /// <param name="dsLeader">Represents a part of the DS Committee which leads the consensus protocol for the epoch. (required).</param>
         /// <param name="gasLimit">Represents the maximum amount of gas allowed in the block in order to determine how many transactions it can fit. (required).</param>
         /// <param name="gasUsed">Defines how much of the gas for the block has been used. (required).</param>
         /// <param name="microBlocks">microBlocks (required).</param>
-        public ListLatestMinedBlocksRIBSZ(int dsBlock = default(int), string dsDifficulty = default(string), string dsLeader = default(string), int gasLimit = default(int), int gasUsed = default(int), List<string> microBlocks = default(List<string>))
+        public ListLatestMinedBlocksRIBSZ(string difficulty = default(string), int dsBlock = default(int), string dsDifficulty = default(string), string dsLeader = default(string), int gasLimit = default(int), int gasUsed = default(int), List<string> microBlocks = default(List<string>))
         {
+            // to ensure "difficulty" is required (not null)
+            if (difficulty == null) {
+                throw new ArgumentNullException("difficulty is a required property for ListLatestMinedBlocksRIBSZ and cannot be null");
+            }
+            this.Difficulty = difficulty;
             this.DsBlock = dsBlock;
             // to ensure "dsDifficulty" is required (not null)
             if (dsDifficulty == null) {
@@ -67,6 +73,13 @@ namespace CryptoAPIs.Model
             }
             this.MicroBlocks = microBlocks;
         }
+
+        /// <summary>
+        /// Represents a mathematical value of how hard it is to find a valid hash for this block.
+        /// </summary>
+        /// <value>Represents a mathematical value of how hard it is to find a valid hash for this block.</value>
+        [DataMember(Name = "difficulty", IsRequired = true, EmitDefaultValue = false)]
+        public string Difficulty { get; set; }
 
         /// <summary>
         /// Represents the Directory Service block which contains metadata about the miners who participate in the consensus protocol.
@@ -115,8 +128,9 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListLatestMinedBlocksRIBSZ {\n");
+            sb.Append("  Difficulty: ").Append(Difficulty).Append("\n");
             sb.Append("  DsBlock: ").Append(DsBlock).Append("\n");
             sb.Append("  DsDifficulty: ").Append(DsDifficulty).Append("\n");
             sb.Append("  DsLeader: ").Append(DsLeader).Append("\n");
@@ -154,9 +168,15 @@ namespace CryptoAPIs.Model
         public bool Equals(ListLatestMinedBlocksRIBSZ input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
+                (
+                    this.Difficulty == input.Difficulty ||
+                    (this.Difficulty != null &&
+                    this.Difficulty.Equals(input.Difficulty))
+                ) && 
                 (
                     this.DsBlock == input.DsBlock ||
                     this.DsBlock.Equals(input.DsBlock)
@@ -196,15 +216,25 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.DsBlock.GetHashCode();
+                if (this.Difficulty != null)
+                {
+                    hashCode = (hashCode * 59) + this.Difficulty.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.DsBlock.GetHashCode();
                 if (this.DsDifficulty != null)
-                    hashCode = hashCode * 59 + this.DsDifficulty.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DsDifficulty.GetHashCode();
+                }
                 if (this.DsLeader != null)
-                    hashCode = hashCode * 59 + this.DsLeader.GetHashCode();
-                hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
-                hashCode = hashCode * 59 + this.GasUsed.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DsLeader.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                hashCode = (hashCode * 59) + this.GasUsed.GetHashCode();
                 if (this.MicroBlocks != null)
-                    hashCode = hashCode * 59 + this.MicroBlocks.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MicroBlocks.GetHashCode();
+                }
                 return hashCode;
             }
         }

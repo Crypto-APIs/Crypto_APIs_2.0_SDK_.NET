@@ -113,7 +113,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetAddressDetailsRI {\n");
             sb.Append("  TransactionsCount: ").Append(TransactionsCount).Append("\n");
             sb.Append("  ConfirmedBalance: ").Append(ConfirmedBalance).Append("\n");
@@ -152,8 +152,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetAddressDetailsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.TransactionsCount == input.TransactionsCount ||
@@ -193,15 +194,21 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.TransactionsCount.GetHashCode();
+                hashCode = (hashCode * 59) + this.TransactionsCount.GetHashCode();
                 if (this.ConfirmedBalance != null)
-                    hashCode = hashCode * 59 + this.ConfirmedBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConfirmedBalance.GetHashCode();
+                }
                 if (this.TotalReceived != null)
-                    hashCode = hashCode * 59 + this.TotalReceived.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalReceived.GetHashCode();
+                }
                 if (this.TotalSpent != null)
-                    hashCode = hashCode * 59 + this.TotalSpent.GetHashCode();
-                hashCode = hashCode * 59 + this.IncomingTransactionsCount.GetHashCode();
-                hashCode = hashCode * 59 + this.OutgoingTransactionsCount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalSpent.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IncomingTransactionsCount.GetHashCode();
+                hashCode = (hashCode * 59) + this.OutgoingTransactionsCount.GetHashCode();
                 return hashCode;
             }
         }

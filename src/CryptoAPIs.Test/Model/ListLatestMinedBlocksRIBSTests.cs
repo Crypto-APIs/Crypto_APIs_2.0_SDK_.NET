@@ -74,12 +74,36 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Chainwork'
         }
         /// <summary>
+        /// Test the property 'Difficulty'
+        /// </summary>
+        [Fact]
+        public void DifficultyTest()
+        {
+            // TODO unit test for the property 'Difficulty'
+        }
+        /// <summary>
         /// Test the property 'MerkleRoot'
         /// </summary>
         [Fact]
         public void MerkleRootTest()
         {
             // TODO unit test for the property 'MerkleRoot'
+        }
+        /// <summary>
+        /// Test the property 'Nonce'
+        /// </summary>
+        [Fact]
+        public void NonceTest()
+        {
+            // TODO unit test for the property 'Nonce'
+        }
+        /// <summary>
+        /// Test the property 'Size'
+        /// </summary>
+        [Fact]
+        public void SizeTest()
+        {
+            // TODO unit test for the property 'Size'
         }
         /// <summary>
         /// Test the property 'StrippedSize'
@@ -170,14 +194,6 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Uncles'
         }
         /// <summary>
-        /// Test the property 'Difficulty'
-        /// </summary>
-        [Fact]
-        public void DifficultyTest()
-        {
-            // TODO unit test for the property 'Difficulty'
-        }
-        /// <summary>
         /// Test the property 'DsBlock'
         /// </summary>
         [Fact]
@@ -208,30 +224,6 @@ namespace CryptoAPIs.Test.Model
         public void MicroBlocksTest()
         {
             // TODO unit test for the property 'MicroBlocks'
-        }
-        /// <summary>
-        /// Test the property 'Merkleroot'
-        /// </summary>
-        [Fact]
-        public void MerklerootTest()
-        {
-            // TODO unit test for the property 'Merkleroot'
-        }
-        /// <summary>
-        /// Test the property 'Nonce'
-        /// </summary>
-        [Fact]
-        public void NonceTest()
-        {
-            // TODO unit test for the property 'Nonce'
-        }
-        /// <summary>
-        /// Test the property 'Size'
-        /// </summary>
-        [Fact]
-        public void SizeTest()
-        {
-            // TODO unit test for the property 'Size'
         }
 
     }

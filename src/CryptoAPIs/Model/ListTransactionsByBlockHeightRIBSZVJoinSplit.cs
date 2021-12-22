@@ -176,7 +176,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTransactionsByBlockHeightRIBSZVJoinSplit {\n");
             sb.Append("  Anchor: ").Append(Anchor).Append("\n");
             sb.Append("  CipherTexts: ").Append(CipherTexts).Append("\n");
@@ -219,8 +219,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTransactionsByBlockHeightRIBSZVJoinSplit input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Anchor == input.Anchor ||
@@ -288,25 +289,45 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Anchor != null)
-                    hashCode = hashCode * 59 + this.Anchor.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Anchor.GetHashCode();
+                }
                 if (this.CipherTexts != null)
-                    hashCode = hashCode * 59 + this.CipherTexts.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CipherTexts.GetHashCode();
+                }
                 if (this.Commitments != null)
-                    hashCode = hashCode * 59 + this.Commitments.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Commitments.GetHashCode();
+                }
                 if (this.Macs != null)
-                    hashCode = hashCode * 59 + this.Macs.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Macs.GetHashCode();
+                }
                 if (this.Nullifiers != null)
-                    hashCode = hashCode * 59 + this.Nullifiers.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Nullifiers.GetHashCode();
+                }
                 if (this.OneTimePubKey != null)
-                    hashCode = hashCode * 59 + this.OneTimePubKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OneTimePubKey.GetHashCode();
+                }
                 if (this.Proof != null)
-                    hashCode = hashCode * 59 + this.Proof.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Proof.GetHashCode();
+                }
                 if (this.RandomSeed != null)
-                    hashCode = hashCode * 59 + this.RandomSeed.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.RandomSeed.GetHashCode();
+                }
                 if (this.VPubNew != null)
-                    hashCode = hashCode * 59 + this.VPubNew.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VPubNew.GetHashCode();
+                }
                 if (this.VPubOld != null)
-                    hashCode = hashCode * 59 + this.VPubOld.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VPubOld.GetHashCode();
+                }
                 return hashCode;
             }
         }

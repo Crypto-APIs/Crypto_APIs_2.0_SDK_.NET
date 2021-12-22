@@ -155,7 +155,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListBlockchainEventsSubscriptionsRI {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
@@ -197,8 +197,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListBlockchainEventsSubscriptionsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Address == input.Address ||
@@ -254,20 +255,32 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
                 if (this.CallbackSecretKey != null)
-                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
+                }
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
-                hashCode = hashCode * 59 + this.ConfirmationsCount.GetHashCode();
-                hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ConfirmationsCount.GetHashCode();
+                hashCode = (hashCode * 59) + this.CreatedTimestamp.GetHashCode();
                 if (this.EventType != null)
-                    hashCode = hashCode * 59 + this.EventType.GetHashCode();
-                hashCode = hashCode * 59 + this.IsActive.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EventType.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IsActive.GetHashCode();
                 if (this.ReferenceId != null)
-                    hashCode = hashCode * 59 + this.ReferenceId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ReferenceId.GetHashCode();
+                }
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 return hashCode;
             }
         }

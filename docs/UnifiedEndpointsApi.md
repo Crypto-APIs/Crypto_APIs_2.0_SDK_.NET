@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 Get Address Details
 
-Through this endpoint the customer can receive basic information about a given address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing **unconfirmed** transactions for the specific address, they **will not** be counted or calculated here.
+Through this endpoint the customer can receive basic information about a given address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing **unconfirmed** transactions for the specific address, they **will not** be counted or calculated here. Applies only for coins.
 
 ### Example
 ```csharp
@@ -97,10 +97,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
 | **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
@@ -188,10 +188,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified block has not been found on the specific blockchain. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -280,10 +280,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified block has not been found on the specific blockchain. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -370,10 +370,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified resource has not been found. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -460,10 +460,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified block has not been found on the specific blockchain. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -552,10 +552,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified transaction has not been found on the specific blockchain. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -599,7 +599,7 @@ namespace Example
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 
             try
             {
@@ -646,10 +646,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
 | **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
@@ -741,10 +741,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
 | **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
@@ -759,7 +759,7 @@ Name | Type | Description  | Notes
 
 List Latest Mined Blocks
 
-Through this endpoint customers can list the latest 50 blocks that were mined.
+Through this endpoint customers can list **up to 50** from the latest blocks that were mined.
 
 ### Example
 ```csharp
@@ -832,10 +832,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified resource has not been found. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -928,10 +928,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
 | **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
@@ -1023,10 +1023,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified block has not been found on the specific blockchain. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -1068,7 +1068,7 @@ namespace Example
             var apiInstance = new UnifiedEndpointsApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var address = mzYijhgmzZrmuB7wBDazRKirnChKyow4M3;  // string | Represents the public address, which is a compressed and shortened form of a public key.
+            var address = 2NDt6eztswLiVgVYaGUhkTPmugUGovVypAe;  // string | Represents the public address, which is a compressed and shortened form of a public key.
             var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
             var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
@@ -1119,10 +1119,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
 | **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |

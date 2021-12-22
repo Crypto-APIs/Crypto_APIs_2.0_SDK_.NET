@@ -166,7 +166,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTransactionsByBlockHeightRI {\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  MinedInBlockHash: ").Append(MinedInBlockHash).Append("\n");
@@ -209,8 +209,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTransactionsByBlockHeightRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Index == input.Index ||
@@ -272,23 +273,37 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Index.GetHashCode();
+                hashCode = (hashCode * 59) + this.Index.GetHashCode();
                 if (this.MinedInBlockHash != null)
-                    hashCode = hashCode * 59 + this.MinedInBlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.MinedInBlockHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MinedInBlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MinedInBlockHeight.GetHashCode();
                 if (this.Recipients != null)
-                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Recipients.GetHashCode();
+                }
                 if (this.Senders != null)
-                    hashCode = hashCode * 59 + this.Senders.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Senders.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
                 if (this.TransactionHash != null)
-                    hashCode = hashCode * 59 + this.TransactionHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 if (this.Fee != null)
-                    hashCode = hashCode * 59 + this.Fee.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Fee.GetHashCode();
+                }
                 if (this.BlockchainSpecific != null)
-                    hashCode = hashCode * 59 + this.BlockchainSpecific.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockchainSpecific.GetHashCode();
+                }
                 return hashCode;
             }
         }

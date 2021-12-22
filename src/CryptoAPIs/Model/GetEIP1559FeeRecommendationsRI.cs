@@ -86,7 +86,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetEIP1559FeeRecommendationsRI {\n");
             sb.Append("  BaseFeePerGas: ").Append(BaseFeePerGas).Append("\n");
             sb.Append("  MaxFeePerGas: ").Append(MaxFeePerGas).Append("\n");
@@ -122,8 +122,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetEIP1559FeeRecommendationsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.BaseFeePerGas == input.BaseFeePerGas ||
@@ -152,11 +153,17 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.BaseFeePerGas != null)
-                    hashCode = hashCode * 59 + this.BaseFeePerGas.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BaseFeePerGas.GetHashCode();
+                }
                 if (this.MaxFeePerGas != null)
-                    hashCode = hashCode * 59 + this.MaxFeePerGas.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MaxFeePerGas.GetHashCode();
+                }
                 if (this.MaxPriorityFeePerGas != null)
-                    hashCode = hashCode * 59 + this.MaxPriorityFeePerGas.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MaxPriorityFeePerGas.GetHashCode();
+                }
                 return hashCode;
             }
         }

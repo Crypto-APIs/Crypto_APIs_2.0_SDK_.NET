@@ -33,9 +33,9 @@ namespace CryptoAPIs.Model
     public partial class ListAssetsDetailsRISC : IEquatable<ListAssetsDetailsRISC>, IValidatableObject
     {
         /// <summary>
-        /// Subtype of the crypto assets. Could be COIN or TOKEN
+        /// Represent a subtype of the crypto assets. Could be COIN or TOKEN.
         /// </summary>
-        /// <value>Subtype of the crypto assets. Could be COIN or TOKEN</value>
+        /// <value>Represent a subtype of the crypto assets. Could be COIN or TOKEN.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AssetTypeEnum
         {
@@ -55,9 +55,9 @@ namespace CryptoAPIs.Model
 
 
         /// <summary>
-        /// Subtype of the crypto assets. Could be COIN or TOKEN
+        /// Represent a subtype of the crypto assets. Could be COIN or TOKEN.
         /// </summary>
-        /// <value>Subtype of the crypto assets. Could be COIN or TOKEN</value>
+        /// <value>Represent a subtype of the crypto assets. Could be COIN or TOKEN.</value>
         [DataMember(Name = "assetType", IsRequired = true, EmitDefaultValue = false)]
         public AssetTypeEnum AssetType { get; set; }
         /// <summary>
@@ -72,7 +72,7 @@ namespace CryptoAPIs.Model
         /// <param name="_1weekPriceChangeInPercentage">Represents the percentage of the asset&#39;s current price against the its price from 1 week ago. (required).</param>
         /// <param name="_24hoursPriceChangeInPercentage">Represents the percentage of the asset&#39;s current price against the its price from 24 hours ago. (required).</param>
         /// <param name="_24hoursTradingVolume">Represents the trading volume of the asset for the time frame of 24 hours. (required).</param>
-        /// <param name="assetType">Subtype of the crypto assets. Could be COIN or TOKEN (required).</param>
+        /// <param name="assetType">Represent a subtype of the crypto assets. Could be COIN or TOKEN. (required).</param>
         /// <param name="circulatingSupply">Represents the amount of the asset that is circulating on the market and in public hands. (required).</param>
         /// <param name="marketCapInUSD">Defines the total market value of the asset&#39;s circulating supply in USD. (required).</param>
         /// <param name="maxSupply">Represents the maximum amount of all coins of a specific asset that will ever exist in its lifetime. (required).</param>
@@ -171,7 +171,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListAssetsDetailsRISC {\n");
             sb.Append("  _1HourPriceChangeInPercentage: ").Append(_1HourPriceChangeInPercentage).Append("\n");
             sb.Append("  _1WeekPriceChangeInPercentage: ").Append(_1WeekPriceChangeInPercentage).Append("\n");
@@ -212,8 +212,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListAssetsDetailsRISC input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this._1HourPriceChangeInPercentage == input._1HourPriceChangeInPercentage ||
@@ -266,20 +267,34 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this._1HourPriceChangeInPercentage != null)
-                    hashCode = hashCode * 59 + this._1HourPriceChangeInPercentage.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this._1HourPriceChangeInPercentage.GetHashCode();
+                }
                 if (this._1WeekPriceChangeInPercentage != null)
-                    hashCode = hashCode * 59 + this._1WeekPriceChangeInPercentage.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this._1WeekPriceChangeInPercentage.GetHashCode();
+                }
                 if (this._24HoursPriceChangeInPercentage != null)
-                    hashCode = hashCode * 59 + this._24HoursPriceChangeInPercentage.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this._24HoursPriceChangeInPercentage.GetHashCode();
+                }
                 if (this._24HoursTradingVolume != null)
-                    hashCode = hashCode * 59 + this._24HoursTradingVolume.GetHashCode();
-                hashCode = hashCode * 59 + this.AssetType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this._24HoursTradingVolume.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.AssetType.GetHashCode();
                 if (this.CirculatingSupply != null)
-                    hashCode = hashCode * 59 + this.CirculatingSupply.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CirculatingSupply.GetHashCode();
+                }
                 if (this.MarketCapInUSD != null)
-                    hashCode = hashCode * 59 + this.MarketCapInUSD.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MarketCapInUSD.GetHashCode();
+                }
                 if (this.MaxSupply != null)
-                    hashCode = hashCode * 59 + this.MaxSupply.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MaxSupply.GetHashCode();
+                }
                 return hashCode;
             }
         }

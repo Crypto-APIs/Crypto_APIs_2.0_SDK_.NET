@@ -76,7 +76,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetEIP1559FeeRecommendationsRIBaseFeePerGas {\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -111,8 +111,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetEIP1559FeeRecommendationsRIBaseFeePerGas input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Unit == input.Unit ||
@@ -136,9 +137,13 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Unit != null)
-                    hashCode = hashCode * 59 + this.Unit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Unit.GetHashCode();
+                }
                 if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                }
                 return hashCode;
             }
         }

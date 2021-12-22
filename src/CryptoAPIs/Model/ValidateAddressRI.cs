@@ -72,7 +72,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ValidateAddressRI {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
@@ -107,8 +107,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ValidateAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Address == input.Address ||
@@ -131,8 +132,10 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
-                hashCode = hashCode * 59 + this.IsValid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IsValid.GetHashCode();
                 return hashCode;
             }
         }

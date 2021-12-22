@@ -111,7 +111,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListOmniTokensByAddressRI {\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  Frozen: ").Append(Frozen).Append("\n");
@@ -149,8 +149,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListOmniTokensByAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Balance == input.Balance ||
@@ -188,14 +189,22 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Balance != null)
-                    hashCode = hashCode * 59 + this.Balance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Balance.GetHashCode();
+                }
                 if (this.Frozen != null)
-                    hashCode = hashCode * 59 + this.Frozen.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Frozen.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                hashCode = hashCode * 59 + this.PropertyId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.PropertyId.GetHashCode();
                 if (this.Reserved != null)
-                    hashCode = hashCode * 59 + this.Reserved.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Reserved.GetHashCode();
+                }
                 return hashCode;
             }
         }

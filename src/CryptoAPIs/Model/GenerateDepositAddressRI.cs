@@ -85,7 +85,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GenerateDepositAddressRI {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  CreatedTimestamp: ").Append(CreatedTimestamp).Append("\n");
@@ -121,8 +121,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GenerateDepositAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Address == input.Address ||
@@ -150,10 +151,14 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
-                hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.CreatedTimestamp.GetHashCode();
                 if (this.Label != null)
-                    hashCode = hashCode * 59 + this.Label.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Label.GetHashCode();
+                }
                 return hashCode;
             }
         }

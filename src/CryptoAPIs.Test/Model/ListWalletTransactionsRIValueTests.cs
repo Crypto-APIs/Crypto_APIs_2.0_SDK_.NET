@@ -89,14 +89,6 @@ namespace CryptoAPIs.Test.Model
         {
             // TODO unit test for the property 'Symbol'
         }
-        /// <summary>
-        /// Test the property 'TokenIdentifier'
-        /// </summary>
-        [Fact]
-        public void TokenIdentifierTest()
-        {
-            // TODO unit test for the property 'TokenIdentifier'
-        }
 
     }
 

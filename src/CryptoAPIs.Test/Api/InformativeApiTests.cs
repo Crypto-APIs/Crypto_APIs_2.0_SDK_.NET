@@ -84,6 +84,21 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test GetWalletTransactionDetailsByTransactionID
+        /// </summary>
+        [Fact]
+        public void GetWalletTransactionDetailsByTransactionIDTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string transactionId = null;
+            //string context = null;
+            //var response = instance.GetWalletTransactionDetailsByTransactionID(blockchain, network, transactionId, context);
+            //Assert.IsType<GetWalletTransactionDetailsByTransactionIDR>(response);
+        }
+
+        /// <summary>
         /// Test ListDepositAddresses
         /// </summary>
         [Fact]

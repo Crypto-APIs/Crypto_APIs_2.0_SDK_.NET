@@ -1,0 +1,11 @@
+# CryptoAPIs.Model.GetAddressDetailsFromCallbackRITotalReceived
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Amount** | **string** | Defines the total amount of all coins received to the address, based on confirmed transactions. | [optional] 
+**Unit** | **string** | Represents the unit of the total received amount. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

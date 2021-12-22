@@ -128,7 +128,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetBlockDetailsByBlockHeightRI {\n");
             sb.Append("  Hash: ").Append(Hash).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
@@ -168,8 +168,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetBlockDetailsByBlockHeightRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Hash == input.Hash ||
@@ -215,16 +216,24 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Hash != null)
-                    hashCode = hashCode * 59 + this.Hash.GetHashCode();
-                hashCode = hashCode * 59 + this.Height.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Hash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Height.GetHashCode();
                 if (this.NextBlockHash != null)
-                    hashCode = hashCode * 59 + this.NextBlockHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.NextBlockHash.GetHashCode();
+                }
                 if (this.PreviousBlockHash != null)
-                    hashCode = hashCode * 59 + this.PreviousBlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionsCount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PreviousBlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
+                hashCode = (hashCode * 59) + this.TransactionsCount.GetHashCode();
                 if (this.BlockchainSpecific != null)
-                    hashCode = hashCode * 59 + this.BlockchainSpecific.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockchainSpecific.GetHashCode();
+                }
                 return hashCode;
             }
         }

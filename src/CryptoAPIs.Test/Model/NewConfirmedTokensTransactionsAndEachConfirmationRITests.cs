@@ -74,6 +74,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'CallbackUrl'
         }
         /// <summary>
+        /// Test the property 'ConfirmationsCount'
+        /// </summary>
+        [Fact]
+        public void ConfirmationsCountTest()
+        {
+            // TODO unit test for the property 'ConfirmationsCount'
+        }
+        /// <summary>
         /// Test the property 'CreatedTimestamp'
         /// </summary>
         [Fact]

@@ -45,9 +45,9 @@ namespace CryptoAPIs.Model
         /// <param name="size">Represents the total size of the block in Bytes. (required).</param>
         /// <param name="bits">Represents a specific sub-unit of Zcash. Bits have two-decimal precision (required).</param>
         /// <param name="chainwork">Represents a hexadecimal number of all the hashes necessary to produce the current chain. E.g., when converting 0000000000000000000000000000000000000000000086859f7a841475b236fd to a decimal you get 635262017308958427068157 hashes, or 635262 exahashes. (required).</param>
-        /// <param name="merkleroot">Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. (required).</param>
+        /// <param name="merkleRoot">Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. (required).</param>
         /// <param name="version">Represents the transaction version number. (required).</param>
-        public GetLastMinedBlockRIBSZ(string difficulty = default(string), string nonce = default(string), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleroot = default(string), int version = default(int))
+        public GetLastMinedBlockRIBSZ(string difficulty = default(string), string nonce = default(string), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), int version = default(int))
         {
             // to ensure "difficulty" is required (not null)
             if (difficulty == null) {
@@ -70,11 +70,11 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("chainwork is a required property for GetLastMinedBlockRIBSZ and cannot be null");
             }
             this.Chainwork = chainwork;
-            // to ensure "merkleroot" is required (not null)
-            if (merkleroot == null) {
-                throw new ArgumentNullException("merkleroot is a required property for GetLastMinedBlockRIBSZ and cannot be null");
+            // to ensure "merkleRoot" is required (not null)
+            if (merkleRoot == null) {
+                throw new ArgumentNullException("merkleRoot is a required property for GetLastMinedBlockRIBSZ and cannot be null");
             }
-            this.Merkleroot = merkleroot;
+            this.MerkleRoot = merkleRoot;
             this._Version = version;
         }
 
@@ -117,8 +117,8 @@ namespace CryptoAPIs.Model
         /// Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block.
         /// </summary>
         /// <value>Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block.</value>
-        [DataMember(Name = "merkleroot", IsRequired = true, EmitDefaultValue = false)]
-        public string Merkleroot { get; set; }
+        [DataMember(Name = "merkleRoot", IsRequired = true, EmitDefaultValue = false)]
+        public string MerkleRoot { get; set; }
 
         /// <summary>
         /// Represents the transaction version number.
@@ -133,14 +133,14 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetLastMinedBlockRIBSZ {\n");
             sb.Append("  Difficulty: ").Append(Difficulty).Append("\n");
             sb.Append("  Nonce: ").Append(Nonce).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  Bits: ").Append(Bits).Append("\n");
             sb.Append("  Chainwork: ").Append(Chainwork).Append("\n");
-            sb.Append("  Merkleroot: ").Append(Merkleroot).Append("\n");
+            sb.Append("  MerkleRoot: ").Append(MerkleRoot).Append("\n");
             sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -173,8 +173,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetLastMinedBlockRIBSZ input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Difficulty == input.Difficulty ||
@@ -201,9 +202,9 @@ namespace CryptoAPIs.Model
                     this.Chainwork.Equals(input.Chainwork))
                 ) && 
                 (
-                    this.Merkleroot == input.Merkleroot ||
-                    (this.Merkleroot != null &&
-                    this.Merkleroot.Equals(input.Merkleroot))
+                    this.MerkleRoot == input.MerkleRoot ||
+                    (this.MerkleRoot != null &&
+                    this.MerkleRoot.Equals(input.MerkleRoot))
                 ) && 
                 (
                     this._Version == input._Version ||
@@ -221,17 +222,27 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Difficulty != null)
-                    hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Difficulty.GetHashCode();
+                }
                 if (this.Nonce != null)
-                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
-                hashCode = hashCode * 59 + this.Size.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
                 if (this.Bits != null)
-                    hashCode = hashCode * 59 + this.Bits.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Bits.GetHashCode();
+                }
                 if (this.Chainwork != null)
-                    hashCode = hashCode * 59 + this.Chainwork.GetHashCode();
-                if (this.Merkleroot != null)
-                    hashCode = hashCode * 59 + this.Merkleroot.GetHashCode();
-                hashCode = hashCode * 59 + this._Version.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Chainwork.GetHashCode();
+                }
+                if (this.MerkleRoot != null)
+                {
+                    hashCode = (hashCode * 59) + this.MerkleRoot.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 return hashCode;
             }
         }

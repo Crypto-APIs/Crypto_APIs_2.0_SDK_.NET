@@ -101,7 +101,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class CoinsForwardingSuccess {\n");
             sb.Append("  ApiVersion: ").Append(ApiVersion).Append("\n");
             sb.Append("  ReferenceId: ").Append(ReferenceId).Append("\n");
@@ -138,8 +138,9 @@ namespace CryptoAPIs.Model
         public bool Equals(CoinsForwardingSuccess input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ApiVersion == input.ApiVersion ||
@@ -173,13 +174,21 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.ApiVersion != null)
-                    hashCode = hashCode * 59 + this.ApiVersion.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ApiVersion.GetHashCode();
+                }
                 if (this.ReferenceId != null)
-                    hashCode = hashCode * 59 + this.ReferenceId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ReferenceId.GetHashCode();
+                }
                 if (this.IdempotencyKey != null)
-                    hashCode = hashCode * 59 + this.IdempotencyKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IdempotencyKey.GetHashCode();
+                }
                 if (this.Data != null)
-                    hashCode = hashCode * 59 + this.Data.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
                 return hashCode;
             }
         }

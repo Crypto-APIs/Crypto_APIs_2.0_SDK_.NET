@@ -130,7 +130,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListUnconfirmedTransactionsByAddressRIBSD2Vin {\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  ScriptSig: ").Append(ScriptSig).Append("\n");
@@ -170,8 +170,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListUnconfirmedTransactionsByAddressRIBSD2Vin input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Addresses == input.Addresses ||
@@ -221,18 +222,30 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Addresses != null)
-                    hashCode = hashCode * 59 + this.Addresses.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Addresses.GetHashCode();
+                }
                 if (this.ScriptSig != null)
-                    hashCode = hashCode * 59 + this.ScriptSig.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ScriptSig.GetHashCode();
+                }
                 if (this.Sequence != null)
-                    hashCode = hashCode * 59 + this.Sequence.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Sequence.GetHashCode();
+                }
                 if (this.Txid != null)
-                    hashCode = hashCode * 59 + this.Txid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Txid.GetHashCode();
+                }
                 if (this.Txinwitness != null)
-                    hashCode = hashCode * 59 + this.Txinwitness.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Txinwitness.GetHashCode();
+                }
                 if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
-                hashCode = hashCode * 59 + this.Vout.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Vout.GetHashCode();
                 return hashCode;
             }
         }

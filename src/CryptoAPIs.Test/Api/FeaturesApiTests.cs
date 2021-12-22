@@ -71,21 +71,6 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test GenerateAddress
-        /// </summary>
-        [Fact]
-        public void GenerateAddressTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string blockchain = null;
-            //string network = null;
-            //string context = null;
-            //GenerateAddressRB generateAddressRB = null;
-            //var response = instance.GenerateAddress(blockchain, network, context, generateAddressRB);
-            //Assert.IsType<GenerateAddressR>(response);
-        }
-
-        /// <summary>
         /// Test GetEIP1559FeeRecommendations
         /// </summary>
         [Fact]

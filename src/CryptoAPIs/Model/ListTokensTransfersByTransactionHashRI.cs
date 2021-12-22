@@ -181,7 +181,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTokensTransfersByTransactionHashRI {\n");
             sb.Append("  ContractAddress: ").Append(ContractAddress).Append("\n");
             sb.Append("  MinedInBlockHeight: ").Append(MinedInBlockHeight).Append("\n");
@@ -225,8 +225,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTokensTransfersByTransactionHashRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ContractAddress == input.ContractAddress ||
@@ -292,24 +293,40 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.ContractAddress != null)
-                    hashCode = hashCode * 59 + this.ContractAddress.GetHashCode();
-                hashCode = hashCode * 59 + this.MinedInBlockHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ContractAddress.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MinedInBlockHeight.GetHashCode();
                 if (this.RecipientAddress != null)
-                    hashCode = hashCode * 59 + this.RecipientAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.RecipientAddress.GetHashCode();
+                }
                 if (this.SenderAddress != null)
-                    hashCode = hashCode * 59 + this.SenderAddress.GetHashCode();
-                hashCode = hashCode * 59 + this.TokenDecimals.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SenderAddress.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TokenDecimals.GetHashCode();
                 if (this.TokenName != null)
-                    hashCode = hashCode * 59 + this.TokenName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenName.GetHashCode();
+                }
                 if (this.TokenSymbol != null)
-                    hashCode = hashCode * 59 + this.TokenSymbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenSymbol.GetHashCode();
+                }
                 if (this.TokenType != null)
-                    hashCode = hashCode * 59 + this.TokenType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
+                }
                 if (this.TokensAmount != null)
-                    hashCode = hashCode * 59 + this.TokensAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokensAmount.GetHashCode();
+                }
                 if (this.TransactionHash != null)
-                    hashCode = hashCode * 59 + this.TransactionHash.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TransactionTimestamp.GetHashCode();
                 return hashCode;
             }
         }

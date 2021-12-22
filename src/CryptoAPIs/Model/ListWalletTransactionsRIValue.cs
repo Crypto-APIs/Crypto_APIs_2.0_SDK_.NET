@@ -44,8 +44,7 @@ namespace CryptoAPIs.Model
         /// <param name="convertedAmount">Defines the converted amount of the transaction as a string. (required).</param>
         /// <param name="exchangeRateUnit">Defines the exchange rate&#39;s unit. (required).</param>
         /// <param name="symbol">Defines the unit of the transaction&#39;s amount. (required).</param>
-        /// <param name="tokenIdentifier">Defines the token&#39;s identifier of the transaction&#39;s amount..</param>
-        public ListWalletTransactionsRIValue(string amount = default(string), string convertedAmount = default(string), string exchangeRateUnit = default(string), string symbol = default(string), string tokenIdentifier = default(string))
+        public ListWalletTransactionsRIValue(string amount = default(string), string convertedAmount = default(string), string exchangeRateUnit = default(string), string symbol = default(string))
         {
             // to ensure "amount" is required (not null)
             if (amount == null) {
@@ -67,7 +66,6 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("symbol is a required property for ListWalletTransactionsRIValue and cannot be null");
             }
             this.Symbol = symbol;
-            this.TokenIdentifier = tokenIdentifier;
         }
 
         /// <summary>
@@ -99,25 +97,17 @@ namespace CryptoAPIs.Model
         public string Symbol { get; set; }
 
         /// <summary>
-        /// Defines the token&#39;s identifier of the transaction&#39;s amount.
-        /// </summary>
-        /// <value>Defines the token&#39;s identifier of the transaction&#39;s amount.</value>
-        [DataMember(Name = "tokenIdentifier", EmitDefaultValue = false)]
-        public string TokenIdentifier { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListWalletTransactionsRIValue {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  ConvertedAmount: ").Append(ConvertedAmount).Append("\n");
             sb.Append("  ExchangeRateUnit: ").Append(ExchangeRateUnit).Append("\n");
             sb.Append("  Symbol: ").Append(Symbol).Append("\n");
-            sb.Append("  TokenIdentifier: ").Append(TokenIdentifier).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,8 +139,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListWalletTransactionsRIValue input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Amount == input.Amount ||
@@ -171,11 +162,6 @@ namespace CryptoAPIs.Model
                     this.Symbol == input.Symbol ||
                     (this.Symbol != null &&
                     this.Symbol.Equals(input.Symbol))
-                ) && 
-                (
-                    this.TokenIdentifier == input.TokenIdentifier ||
-                    (this.TokenIdentifier != null &&
-                    this.TokenIdentifier.Equals(input.TokenIdentifier))
                 );
         }
 
@@ -189,15 +175,21 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 if (this.ConvertedAmount != null)
-                    hashCode = hashCode * 59 + this.ConvertedAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConvertedAmount.GetHashCode();
+                }
                 if (this.ExchangeRateUnit != null)
-                    hashCode = hashCode * 59 + this.ExchangeRateUnit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ExchangeRateUnit.GetHashCode();
+                }
                 if (this.Symbol != null)
-                    hashCode = hashCode * 59 + this.Symbol.GetHashCode();
-                if (this.TokenIdentifier != null)
-                    hashCode = hashCode * 59 + this.TokenIdentifier.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Symbol.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -124,7 +124,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetExchangeRateByAssetsIDsRI {\n");
             sb.Append("  CalculationTimestamp: ").Append(CalculationTimestamp).Append("\n");
             sb.Append("  FromAssetId: ").Append(FromAssetId).Append("\n");
@@ -163,8 +163,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetExchangeRateByAssetsIDsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CalculationTimestamp == input.CalculationTimestamp ||
@@ -206,17 +207,27 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.CalculationTimestamp.GetHashCode();
+                hashCode = (hashCode * 59) + this.CalculationTimestamp.GetHashCode();
                 if (this.FromAssetId != null)
-                    hashCode = hashCode * 59 + this.FromAssetId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.FromAssetId.GetHashCode();
+                }
                 if (this.FromAssetSymbol != null)
-                    hashCode = hashCode * 59 + this.FromAssetSymbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.FromAssetSymbol.GetHashCode();
+                }
                 if (this.Rate != null)
-                    hashCode = hashCode * 59 + this.Rate.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Rate.GetHashCode();
+                }
                 if (this.ToAssetId != null)
-                    hashCode = hashCode * 59 + this.ToAssetId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ToAssetId.GetHashCode();
+                }
                 if (this.ToAssetSymbol != null)
-                    hashCode = hashCode * 59 + this.ToAssetSymbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ToAssetSymbol.GetHashCode();
+                }
                 return hashCode;
             }
         }

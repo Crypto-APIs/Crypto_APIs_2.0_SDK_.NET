@@ -76,7 +76,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetXRPRippleTransactionDetailsByTransactionIDRIValue {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
@@ -111,8 +111,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetXRPRippleTransactionDetailsByTransactionIDRIValue input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Amount == input.Amount ||
@@ -136,9 +137,13 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 if (this.Unit != null)
-                    hashCode = hashCode * 59 + this.Unit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Unit.GetHashCode();
+                }
                 return hashCode;
             }
         }

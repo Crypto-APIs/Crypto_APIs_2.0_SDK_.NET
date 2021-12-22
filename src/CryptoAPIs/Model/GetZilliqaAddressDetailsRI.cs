@@ -89,7 +89,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetZilliqaAddressDetailsRI {\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  IncomingTransactionsCount: ").Append(IncomingTransactionsCount).Append("\n");
@@ -126,8 +126,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetZilliqaAddressDetailsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Balance == input.Balance ||
@@ -158,10 +159,12 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Balance != null)
-                    hashCode = hashCode * 59 + this.Balance.GetHashCode();
-                hashCode = hashCode * 59 + this.IncomingTransactionsCount.GetHashCode();
-                hashCode = hashCode * 59 + this.OutgoingTransactionsCount.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionsCount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Balance.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IncomingTransactionsCount.GetHashCode();
+                hashCode = (hashCode * 59) + this.OutgoingTransactionsCount.GetHashCode();
+                hashCode = (hashCode * 59) + this.TransactionsCount.GetHashCode();
                 return hashCode;
             }
         }

@@ -90,9 +90,12 @@ namespace CryptoAPIs.Api
         /// <summary>
         /// List Internal Transactions By Address
         /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
+        /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -104,11 +107,11 @@ namespace CryptoAPIs.Api
         /// List Internal Transactions By Address
         /// </summary>
         /// <remarks>
-        /// 
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -192,11 +195,11 @@ namespace CryptoAPIs.Api
         /// List Internal Transactions By Address
         /// </summary>
         /// <remarks>
-        /// 
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -209,11 +212,11 @@ namespace CryptoAPIs.Api
         /// List Internal Transactions By Address
         /// </summary>
         /// <remarks>
-        /// 
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -371,19 +374,27 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
             // verify the required parameter 'operationId' is set
             if (operationId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'operationId' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
             // verify the required parameter 'transactionHash' is set
             if (transactionHash == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionHash' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -396,10 +407,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -418,11 +435,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<GetInternalTransactionByTransactionHashAndOperationIdR>("/blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/internal/{operationId}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetInternalTransactionByTransactionHashAndOperationId", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -460,19 +479,27 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
             // verify the required parameter 'operationId' is set
             if (operationId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'operationId' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
             // verify the required parameter 'transactionHash' is set
             if (transactionHash == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionHash' when calling InternalApi->GetInternalTransactionByTransactionHashAndOperationId");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -485,12 +512,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -508,13 +540,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<GetInternalTransactionByTransactionHashAndOperationIdR>("/blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/internal/{operationId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetInternalTransactionByTransactionHashAndOperationId", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -552,15 +586,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InternalApi->ListInternalTransactionDetailsByTransactionHash");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InternalApi->ListInternalTransactionDetailsByTransactionHash");
+            }
 
             // verify the required parameter 'transactionHash' is set
             if (transactionHash == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionHash' when calling InternalApi->ListInternalTransactionDetailsByTransactionHash");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -573,10 +613,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -602,11 +648,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ListInternalTransactionDetailsByTransactionHashR>("/blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/internal", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInternalTransactionDetailsByTransactionHash", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -646,15 +694,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InternalApi->ListInternalTransactionDetailsByTransactionHash");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InternalApi->ListInternalTransactionDetailsByTransactionHash");
+            }
 
             // verify the required parameter 'transactionHash' is set
             if (transactionHash == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionHash' when calling InternalApi->ListInternalTransactionDetailsByTransactionHash");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -667,12 +721,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -697,24 +756,26 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ListInternalTransactionDetailsByTransactionHashR>("/blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/internal", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInternalTransactionDetailsByTransactionHash", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
         }
 
         /// <summary>
-        /// List Internal Transactions By Address 
+        /// List Internal Transactions By Address Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -727,11 +788,11 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Internal Transactions By Address 
+        /// List Internal Transactions By Address Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -741,15 +802,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InternalApi->ListInternalTransactionsByAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InternalApi->ListInternalTransactionsByAddress");
+            }
 
             // verify the required parameter 'address' is set
             if (address == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling InternalApi->ListInternalTransactionsByAddress");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -762,10 +829,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -791,22 +864,24 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ListInternalTransactionsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/internal", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInternalTransactionsByAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
         }
 
         /// <summary>
-        /// List Internal Transactions By Address 
+        /// List Internal Transactions By Address Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -820,11 +895,11 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// List Internal Transactions By Address 
+        /// List Internal Transactions By Address Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
-        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
@@ -835,15 +910,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling InternalApi->ListInternalTransactionsByAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling InternalApi->ListInternalTransactionsByAddress");
+            }
 
             // verify the required parameter 'address' is set
             if (address == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling InternalApi->ListInternalTransactionsByAddress");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -856,12 +937,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -886,13 +972,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ListInternalTransactionsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/internal", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInternalTransactionsByAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

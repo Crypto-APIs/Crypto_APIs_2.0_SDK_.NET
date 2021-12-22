@@ -40,7 +40,7 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRIBSBSC" /> class.
         /// </summary>
-        /// <param name="contract">Represents the specific transaction contract.</param>
+        /// <param name="contract">Represents the specific transaction contract (required).</param>
         /// <param name="gasLimit">Represents the amount of gas used by this specific transaction alone. (required).</param>
         /// <param name="gasPrice">gasPrice (required).</param>
         /// <param name="gasUsed">Defines the unit of the gas price amount, e.g. BTC, ETH, XRP. (required).</param>
@@ -48,6 +48,11 @@ namespace CryptoAPIs.Model
         /// <param name="nonce">Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. (required).</param>
         public GetTransactionDetailsByTransactionIDRIBSBSC(string contract = default(string), string gasLimit = default(string), GetTransactionDetailsByTransactionIDRIBSBSCGasPrice gasPrice = default(GetTransactionDetailsByTransactionIDRIBSBSCGasPrice), string gasUsed = default(string), string inputData = default(string), int nonce = default(int))
         {
+            // to ensure "contract" is required (not null)
+            if (contract == null) {
+                throw new ArgumentNullException("contract is a required property for GetTransactionDetailsByTransactionIDRIBSBSC and cannot be null");
+            }
+            this.Contract = contract;
             // to ensure "gasLimit" is required (not null)
             if (gasLimit == null) {
                 throw new ArgumentNullException("gasLimit is a required property for GetTransactionDetailsByTransactionIDRIBSBSC and cannot be null");
@@ -69,14 +74,13 @@ namespace CryptoAPIs.Model
             }
             this.InputData = inputData;
             this.Nonce = nonce;
-            this.Contract = contract;
         }
 
         /// <summary>
         /// Represents the specific transaction contract
         /// </summary>
         /// <value>Represents the specific transaction contract</value>
-        [DataMember(Name = "contract", EmitDefaultValue = false)]
+        [DataMember(Name = "contract", IsRequired = true, EmitDefaultValue = false)]
         public string Contract { get; set; }
 
         /// <summary>
@@ -119,7 +123,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionDetailsByTransactionIDRIBSBSC {\n");
             sb.Append("  Contract: ").Append(Contract).Append("\n");
             sb.Append("  GasLimit: ").Append(GasLimit).Append("\n");
@@ -158,8 +162,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTransactionDetailsByTransactionIDRIBSBSC input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Contract == input.Contract ||
@@ -202,16 +207,26 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Contract != null)
-                    hashCode = hashCode * 59 + this.Contract.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Contract.GetHashCode();
+                }
                 if (this.GasLimit != null)
-                    hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
                 if (this.GasPrice != null)
-                    hashCode = hashCode * 59 + this.GasPrice.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
+                }
                 if (this.GasUsed != null)
-                    hashCode = hashCode * 59 + this.GasUsed.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasUsed.GetHashCode();
+                }
                 if (this.InputData != null)
-                    hashCode = hashCode * 59 + this.InputData.GetHashCode();
-                hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InputData.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
                 return hashCode;
             }
         }

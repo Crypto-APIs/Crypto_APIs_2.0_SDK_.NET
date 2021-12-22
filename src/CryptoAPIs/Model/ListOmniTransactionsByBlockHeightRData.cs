@@ -89,7 +89,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListOmniTransactionsByBlockHeightRData {\n");
             sb.Append("  Offset: ").Append(Offset).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
@@ -126,8 +126,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListOmniTransactionsByBlockHeightRData input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Offset == input.Offset ||
@@ -158,11 +159,13 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Offset.GetHashCode();
-                hashCode = hashCode * 59 + this.Limit.GetHashCode();
-                hashCode = hashCode * 59 + this.Total.GetHashCode();
+                hashCode = (hashCode * 59) + this.Offset.GetHashCode();
+                hashCode = (hashCode * 59) + this.Limit.GetHashCode();
+                hashCode = (hashCode * 59) + this.Total.GetHashCode();
                 if (this.Items != null)
-                    hashCode = hashCode * 59 + this.Items.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Items.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -76,10 +76,16 @@ namespace CryptoAPIs.Model
             Ethereum = 6,
 
             /// <summary>
+            /// Enum EthereumClassic for value: ethereum-classic
+            /// </summary>
+            [EnumMember(Value = "ethereum-classic")]
+            EthereumClassic = 7,
+
+            /// <summary>
             /// Enum Zcash for value: zcash
             /// </summary>
             [EnumMember(Value = "zcash")]
-            Zcash = 7
+            Zcash = 8
 
         }
 
@@ -147,7 +153,13 @@ namespace CryptoAPIs.Model
             /// Enum Ropsten for value: ropsten
             /// </summary>
             [EnumMember(Value = "ropsten")]
-            Ropsten = 3
+            Ropsten = 3,
+
+            /// <summary>
+            /// Enum Mordor for value: mordor
+            /// </summary>
+            [EnumMember(Value = "mordor")]
+            Mordor = 4
 
         }
 
@@ -355,7 +367,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionRequestDetailsRI {\n");
             sb.Append("  AdditionalDetails: ").Append(AdditionalDetails).Append("\n");
             sb.Append("  Blockchain: ").Append(Blockchain).Append("\n");
@@ -398,8 +410,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTransactionRequestDetailsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AdditionalDetails == input.AdditionalDetails ||
@@ -459,20 +472,30 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.AdditionalDetails != null)
-                    hashCode = hashCode * 59 + this.AdditionalDetails.GetHashCode();
-                hashCode = hashCode * 59 + this.Blockchain.GetHashCode();
-                hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
-                hashCode = hashCode * 59 + this.Network.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AdditionalDetails.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Blockchain.GetHashCode();
+                hashCode = (hashCode * 59) + this.FeePriority.GetHashCode();
+                hashCode = (hashCode * 59) + this.Network.GetHashCode();
                 if (this.Recipients != null)
-                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Recipients.GetHashCode();
+                }
                 if (this.TotalTransactionAmount != null)
-                    hashCode = hashCode * 59 + this.TotalTransactionAmount.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionRequestStatus.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalTransactionAmount.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TransactionRequestStatus.GetHashCode();
+                hashCode = (hashCode * 59) + this.TransactionType.GetHashCode();
                 if (this.Unit != null)
-                    hashCode = hashCode * 59 + this.Unit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Unit.GetHashCode();
+                }
                 if (this.WalletId != null)
-                    hashCode = hashCode * 59 + this.WalletId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.WalletId.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CryptoAPIs</id>
-    <version>1.3.0</version>
+    <version>1.4.0</version>
     <authors>CryptoAPIs Team</authors>
     <owners>CryptoAPIs Team</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,25 +11,7 @@
     <icon>logo.png</icon>
     <description>the C# library for the Crypto APIs</description>
     <releaseNotes>
-        Zcash support for mainnet and testnet has been added.
-        Rinkeby is no longer available in our system.
-        List Transactions By Address endpoint has been renamed to List Confirmed Transactions By Address.
-        List Tokens Transfers By Address endpoint has been renamed to List Confirmed Tokens Transfers By Address.
-        Get Latest Mined Block has been renamed to Get Last Mined Block.
-        The property *destinationTag* in XRP transaction endpoints has been made optional.
-        NEW endpoints added:
-         - Create Coins Transaction From Address For Whole Amount.
-         - List Unconfirmed Transactions by Address.
-         - List Latest Mined Blocks
-        BSC testnet and ETC mordor have been added to all Internal Transaction endpoints.
-        BSC testnet has been added to Blockchain data endpoints.
-        ETC mainnet and BSC testnet have been added to the following endpoints:
-         - List Internal Transaction Details by Transaction Hash
-         - Get Internal Transaction by Transaction Hash and Operation Id
-         - List Tokens Transfers By Transaction Hash
-         - List Tokens Transfers By Address
-         - List Tokens By Address
-         - Get Contract Details by Address
+        v1.4.0
    </releaseNotes>
     <copyright>Copyright 2021</copyright>
     <tags>Crypto Blockchain</tags>

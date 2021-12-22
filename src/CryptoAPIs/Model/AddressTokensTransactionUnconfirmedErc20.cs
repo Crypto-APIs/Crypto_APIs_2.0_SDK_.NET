@@ -111,7 +111,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AddressTokensTransactionUnconfirmedErc20 {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Symbol: ").Append(Symbol).Append("\n");
@@ -149,8 +149,9 @@ namespace CryptoAPIs.Model
         public bool Equals(AddressTokensTransactionUnconfirmedErc20 input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Name == input.Name ||
@@ -189,15 +190,25 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.Symbol != null)
-                    hashCode = hashCode * 59 + this.Symbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Symbol.GetHashCode();
+                }
                 if (this.Decimals != null)
-                    hashCode = hashCode * 59 + this.Decimals.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Decimals.GetHashCode();
+                }
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 if (this.ContractAddress != null)
-                    hashCode = hashCode * 59 + this.ContractAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ContractAddress.GetHashCode();
+                }
                 return hashCode;
             }
         }

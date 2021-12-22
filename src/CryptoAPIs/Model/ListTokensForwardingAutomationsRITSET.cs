@@ -63,7 +63,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTokensForwardingAutomationsRITSET {\n");
             sb.Append("  ContractAddress: ").Append(ContractAddress).Append("\n");
             sb.Append("}\n");
@@ -97,8 +97,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTokensForwardingAutomationsRITSET input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ContractAddress == input.ContractAddress ||
@@ -117,7 +118,9 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.ContractAddress != null)
-                    hashCode = hashCode * 59 + this.ContractAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ContractAddress.GetHashCode();
+                }
                 return hashCode;
             }
         }

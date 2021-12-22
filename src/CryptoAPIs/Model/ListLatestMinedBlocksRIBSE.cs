@@ -45,9 +45,12 @@ namespace CryptoAPIs.Model
         /// <param name="gasLimit">Defines the total gas limit of all transactions in the block. (required).</param>
         /// <param name="gasUsed">Represents the total amount of gas used by all transactions in this block. (required).</param>
         /// <param name="minedInSeconds">Specifies the amount of time required for the block to be mined in seconds. (required).</param>
+        /// <param name="nonce">Represents a random value that can be adjusted to satisfy the proof of work (required).</param>
         /// <param name="sha3Uncles">Defines the combined hash of all uncles for a given parent. (required).</param>
+        /// <param name="size">Represents the total size of the block in Bytes. (required).</param>
+        /// <param name="totalDifficulty">Defines the total difficulty of the chain until this block, i.e. how difficult it is for a specific miner to mine a new block. (required).</param>
         /// <param name="uncles">uncles (required).</param>
-        public ListLatestMinedBlocksRIBSE(string difficulty = default(string), string extraData = default(string), string gasLimit = default(string), string gasUsed = default(string), int minedInSeconds = default(int), string sha3Uncles = default(string), List<string> uncles = default(List<string>))
+        public ListLatestMinedBlocksRIBSE(string difficulty = default(string), string extraData = default(string), string gasLimit = default(string), string gasUsed = default(string), int minedInSeconds = default(int), string nonce = default(string), string sha3Uncles = default(string), int size = default(int), string totalDifficulty = default(string), List<string> uncles = default(List<string>))
         {
             // to ensure "difficulty" is required (not null)
             if (difficulty == null) {
@@ -70,11 +73,22 @@ namespace CryptoAPIs.Model
             }
             this.GasUsed = gasUsed;
             this.MinedInSeconds = minedInSeconds;
+            // to ensure "nonce" is required (not null)
+            if (nonce == null) {
+                throw new ArgumentNullException("nonce is a required property for ListLatestMinedBlocksRIBSE and cannot be null");
+            }
+            this.Nonce = nonce;
             // to ensure "sha3Uncles" is required (not null)
             if (sha3Uncles == null) {
                 throw new ArgumentNullException("sha3Uncles is a required property for ListLatestMinedBlocksRIBSE and cannot be null");
             }
             this.Sha3Uncles = sha3Uncles;
+            this.Size = size;
+            // to ensure "totalDifficulty" is required (not null)
+            if (totalDifficulty == null) {
+                throw new ArgumentNullException("totalDifficulty is a required property for ListLatestMinedBlocksRIBSE and cannot be null");
+            }
+            this.TotalDifficulty = totalDifficulty;
             // to ensure "uncles" is required (not null)
             if (uncles == null) {
                 throw new ArgumentNullException("uncles is a required property for ListLatestMinedBlocksRIBSE and cannot be null");
@@ -118,11 +132,32 @@ namespace CryptoAPIs.Model
         public int MinedInSeconds { get; set; }
 
         /// <summary>
+        /// Represents a random value that can be adjusted to satisfy the proof of work
+        /// </summary>
+        /// <value>Represents a random value that can be adjusted to satisfy the proof of work</value>
+        [DataMember(Name = "nonce", IsRequired = true, EmitDefaultValue = false)]
+        public string Nonce { get; set; }
+
+        /// <summary>
         /// Defines the combined hash of all uncles for a given parent.
         /// </summary>
         /// <value>Defines the combined hash of all uncles for a given parent.</value>
         [DataMember(Name = "sha3Uncles", IsRequired = true, EmitDefaultValue = false)]
         public string Sha3Uncles { get; set; }
+
+        /// <summary>
+        /// Represents the total size of the block in Bytes.
+        /// </summary>
+        /// <value>Represents the total size of the block in Bytes.</value>
+        [DataMember(Name = "size", IsRequired = true, EmitDefaultValue = false)]
+        public int Size { get; set; }
+
+        /// <summary>
+        /// Defines the total difficulty of the chain until this block, i.e. how difficult it is for a specific miner to mine a new block.
+        /// </summary>
+        /// <value>Defines the total difficulty of the chain until this block, i.e. how difficult it is for a specific miner to mine a new block.</value>
+        [DataMember(Name = "totalDifficulty", IsRequired = true, EmitDefaultValue = false)]
+        public string TotalDifficulty { get; set; }
 
         /// <summary>
         /// Gets or Sets Uncles
@@ -136,14 +171,17 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListLatestMinedBlocksRIBSE {\n");
             sb.Append("  Difficulty: ").Append(Difficulty).Append("\n");
             sb.Append("  ExtraData: ").Append(ExtraData).Append("\n");
             sb.Append("  GasLimit: ").Append(GasLimit).Append("\n");
             sb.Append("  GasUsed: ").Append(GasUsed).Append("\n");
             sb.Append("  MinedInSeconds: ").Append(MinedInSeconds).Append("\n");
+            sb.Append("  Nonce: ").Append(Nonce).Append("\n");
             sb.Append("  Sha3Uncles: ").Append(Sha3Uncles).Append("\n");
+            sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  TotalDifficulty: ").Append(TotalDifficulty).Append("\n");
             sb.Append("  Uncles: ").Append(Uncles).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -176,8 +214,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListLatestMinedBlocksRIBSE input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Difficulty == input.Difficulty ||
@@ -204,9 +243,23 @@ namespace CryptoAPIs.Model
                     this.MinedInSeconds.Equals(input.MinedInSeconds)
                 ) && 
                 (
+                    this.Nonce == input.Nonce ||
+                    (this.Nonce != null &&
+                    this.Nonce.Equals(input.Nonce))
+                ) && 
+                (
                     this.Sha3Uncles == input.Sha3Uncles ||
                     (this.Sha3Uncles != null &&
                     this.Sha3Uncles.Equals(input.Sha3Uncles))
+                ) && 
+                (
+                    this.Size == input.Size ||
+                    this.Size.Equals(input.Size)
+                ) && 
+                (
+                    this.TotalDifficulty == input.TotalDifficulty ||
+                    (this.TotalDifficulty != null &&
+                    this.TotalDifficulty.Equals(input.TotalDifficulty))
                 ) && 
                 (
                     this.Uncles == input.Uncles ||
@@ -226,18 +279,39 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Difficulty != null)
-                    hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Difficulty.GetHashCode();
+                }
                 if (this.ExtraData != null)
-                    hashCode = hashCode * 59 + this.ExtraData.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ExtraData.GetHashCode();
+                }
                 if (this.GasLimit != null)
-                    hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
                 if (this.GasUsed != null)
-                    hashCode = hashCode * 59 + this.GasUsed.GetHashCode();
-                hashCode = hashCode * 59 + this.MinedInSeconds.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasUsed.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MinedInSeconds.GetHashCode();
+                if (this.Nonce != null)
+                {
+                    hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                }
                 if (this.Sha3Uncles != null)
-                    hashCode = hashCode * 59 + this.Sha3Uncles.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Sha3Uncles.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
+                if (this.TotalDifficulty != null)
+                {
+                    hashCode = (hashCode * 59) + this.TotalDifficulty.GetHashCode();
+                }
                 if (this.Uncles != null)
-                    hashCode = hashCode * 59 + this.Uncles.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Uncles.GetHashCode();
+                }
                 return hashCode;
             }
         }

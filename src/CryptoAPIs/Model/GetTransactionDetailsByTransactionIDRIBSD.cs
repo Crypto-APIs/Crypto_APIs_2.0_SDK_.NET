@@ -103,7 +103,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionDetailsByTransactionIDRIBSD {\n");
             sb.Append("  Locktime: ").Append(Locktime).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
@@ -141,8 +141,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTransactionDetailsByTransactionIDRIBSD input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Locktime == input.Locktime ||
@@ -179,13 +180,17 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Locktime.GetHashCode();
-                hashCode = hashCode * 59 + this.Size.GetHashCode();
-                hashCode = hashCode * 59 + this._Version.GetHashCode();
+                hashCode = (hashCode * 59) + this.Locktime.GetHashCode();
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
+                hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 if (this.Vin != null)
-                    hashCode = hashCode * 59 + this.Vin.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Vin.GetHashCode();
+                }
                 if (this.Vout != null)
-                    hashCode = hashCode * 59 + this.Vout.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Vout.GetHashCode();
+                }
                 return hashCode;
             }
         }

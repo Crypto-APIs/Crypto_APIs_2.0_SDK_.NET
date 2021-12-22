@@ -41,21 +41,17 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="BroadcastLocallySignedTransactionRBDataItem" /> class.
         /// </summary>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security)..</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs..</param>
         /// <param name="signedTransactionHex">Represents the signed transaction&#39;s specific hex. (required).</param>
         public BroadcastLocallySignedTransactionRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), string signedTransactionHex = default(string))
         {
-            // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
-                throw new ArgumentNullException("callbackUrl is a required property for BroadcastLocallySignedTransactionRBDataItem and cannot be null");
-            }
-            this.CallbackUrl = callbackUrl;
             // to ensure "signedTransactionHex" is required (not null)
             if (signedTransactionHex == null) {
                 throw new ArgumentNullException("signedTransactionHex is a required property for BroadcastLocallySignedTransactionRBDataItem and cannot be null");
             }
             this.SignedTransactionHex = signedTransactionHex;
             this.CallbackSecretKey = callbackSecretKey;
+            this.CallbackUrl = callbackUrl;
         }
 
         /// <summary>
@@ -69,7 +65,7 @@ namespace CryptoAPIs.Model
         /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
         /// </summary>
         /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
-        [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 
         /// <summary>
@@ -85,7 +81,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class BroadcastLocallySignedTransactionRBDataItem {\n");
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
@@ -121,8 +117,9 @@ namespace CryptoAPIs.Model
         public bool Equals(BroadcastLocallySignedTransactionRBDataItem input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CallbackSecretKey == input.CallbackSecretKey ||
@@ -151,11 +148,17 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.CallbackSecretKey != null)
-                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
+                }
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
                 if (this.SignedTransactionHex != null)
-                    hashCode = hashCode * 59 + this.SignedTransactionHex.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SignedTransactionHex.GetHashCode();
+                }
                 return hashCode;
             }
         }

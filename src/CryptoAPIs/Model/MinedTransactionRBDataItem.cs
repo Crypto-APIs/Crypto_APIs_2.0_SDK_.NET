@@ -94,7 +94,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MinedTransactionRBDataItem {\n");
             sb.Append("  AllowDuplicates: ").Append(AllowDuplicates).Append("\n");
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
@@ -131,8 +131,9 @@ namespace CryptoAPIs.Model
         public bool Equals(MinedTransactionRBDataItem input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AllowDuplicates == input.AllowDuplicates ||
@@ -164,13 +165,19 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.AllowDuplicates.GetHashCode();
+                hashCode = (hashCode * 59) + this.AllowDuplicates.GetHashCode();
                 if (this.CallbackSecretKey != null)
-                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
+                }
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 return hashCode;
             }
         }

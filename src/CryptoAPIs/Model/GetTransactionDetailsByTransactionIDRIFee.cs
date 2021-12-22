@@ -40,8 +40,8 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRIFee" /> class.
         /// </summary>
-        /// <param name="amount">Defines the amount of the transaction fee. (required).</param>
-        /// <param name="unit">Defines the unit of the fee amount, e.g. BTC, ETH, XRP. (required).</param>
+        /// <param name="amount">When isConfirmed is True - Defines the amount of the transaction fee  When isConfirmed is False - For ETH-based blockchains this attribute represents the max fee value. (required).</param>
+        /// <param name="unit">Defines the fee unit. (required).</param>
         public GetTransactionDetailsByTransactionIDRIFee(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
@@ -57,16 +57,16 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Defines the amount of the transaction fee.
+        /// When isConfirmed is True - Defines the amount of the transaction fee  When isConfirmed is False - For ETH-based blockchains this attribute represents the max fee value.
         /// </summary>
-        /// <value>Defines the amount of the transaction fee.</value>
+        /// <value>When isConfirmed is True - Defines the amount of the transaction fee  When isConfirmed is False - For ETH-based blockchains this attribute represents the max fee value.</value>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
         public string Amount { get; set; }
 
         /// <summary>
-        /// Defines the unit of the fee amount, e.g. BTC, ETH, XRP.
+        /// Defines the fee unit.
         /// </summary>
-        /// <value>Defines the unit of the fee amount, e.g. BTC, ETH, XRP.</value>
+        /// <value>Defines the fee unit.</value>
         [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
         public string Unit { get; set; }
 
@@ -76,7 +76,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionDetailsByTransactionIDRIFee {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
@@ -111,8 +111,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTransactionDetailsByTransactionIDRIFee input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Amount == input.Amount ||
@@ -136,9 +137,13 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 if (this.Unit != null)
-                    hashCode = hashCode * 59 + this.Unit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Unit.GetHashCode();
+                }
                 return hashCode;
             }
         }

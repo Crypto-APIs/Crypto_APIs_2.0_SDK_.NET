@@ -744,11 +744,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->MinedTransaction");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->MinedTransaction");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -762,10 +766,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -783,11 +793,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MinedTransactionR>("/blockchain-events/{blockchain}/{network}/subscriptions/transaction-mined", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("MinedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -823,11 +835,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->MinedTransaction");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->MinedTransaction");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -841,12 +857,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -863,13 +884,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MinedTransactionR>("/blockchain-events/{blockchain}/{network}/subscriptions/transaction-mined", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("MinedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -903,11 +926,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewBlock");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewBlock");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -921,10 +948,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -942,11 +975,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewBlockR>("/blockchain-events/{blockchain}/{network}/subscriptions/block-mined", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewBlock", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -982,11 +1017,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewBlock");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewBlock");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1000,12 +1039,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1022,13 +1066,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewBlockR>("/blockchain-events/{blockchain}/{network}/subscriptions/block-mined", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewBlock", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1062,11 +1108,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactions");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1080,10 +1130,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1101,11 +1157,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewConfirmedCoinsTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedCoinsTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1141,11 +1199,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactions");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1159,12 +1221,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1181,13 +1248,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedCoinsTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedCoinsTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1221,11 +1290,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsAndEachConfirmation");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsAndEachConfirmation");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1239,10 +1312,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1260,11 +1339,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewConfirmedCoinsTransactionsAndEachConfirmationR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed-each-confirmation", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedCoinsTransactionsAndEachConfirmation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1300,11 +1381,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsAndEachConfirmation");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsAndEachConfirmation");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1318,12 +1403,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1340,13 +1430,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedCoinsTransactionsAndEachConfirmationR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed-each-confirmation", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedCoinsTransactionsAndEachConfirmation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1380,11 +1472,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactions");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1398,10 +1494,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1419,11 +1521,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewConfirmedInternalTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedInternalTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1459,11 +1563,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactions");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1477,12 +1585,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1499,13 +1612,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedInternalTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedInternalTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1539,11 +1654,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsAndEachConfirmation");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsAndEachConfirmation");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1557,10 +1676,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1578,11 +1703,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewConfirmedInternalTransactionsAndEachConfirmationR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed-each-confirmation", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedInternalTransactionsAndEachConfirmation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1618,11 +1745,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsAndEachConfirmation");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsAndEachConfirmation");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1636,12 +1767,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1658,13 +1794,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedInternalTransactionsAndEachConfirmationR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed-each-confirmation", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedInternalTransactionsAndEachConfirmation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1698,11 +1836,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactions");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1716,10 +1858,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1737,11 +1885,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewConfirmedTokensTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedTokensTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1777,11 +1927,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactions");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1795,12 +1949,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1817,13 +1976,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedTokensTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedTokensTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1857,11 +2018,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactionsAndEachConfirmation");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactionsAndEachConfirmation");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -1875,10 +2040,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1896,11 +2067,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewConfirmedTokensTransactionsAndEachConfirmationR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed-each-confirmation", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedTokensTransactionsAndEachConfirmation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -1936,11 +2109,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactionsAndEachConfirmation");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedTokensTransactionsAndEachConfirmation");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -1954,12 +2131,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -1976,13 +2158,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedTokensTransactionsAndEachConfirmationR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed-each-confirmation", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedTokensTransactionsAndEachConfirmation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2016,11 +2200,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewUnconfirmedCoinsTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewUnconfirmedCoinsTransactions");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -2034,10 +2222,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -2055,11 +2249,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewUnconfirmedCoinsTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-unconfirmed", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewUnconfirmedCoinsTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2095,11 +2291,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewUnconfirmedCoinsTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewUnconfirmedCoinsTransactions");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -2113,12 +2313,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -2135,13 +2340,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewUnconfirmedCoinsTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-unconfirmed", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewUnconfirmedCoinsTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2175,11 +2382,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewUnconfirmedTokensTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewUnconfirmedTokensTransactions");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -2193,10 +2404,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -2214,11 +2431,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<NewUnconfirmedTokensTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-unconfirmed", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewUnconfirmedTokensTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -2254,11 +2473,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewUnconfirmedTokensTransactions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewUnconfirmedTokensTransactions");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -2272,12 +2495,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -2294,13 +2522,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<NewUnconfirmedTokensTransactionsR>("/blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-unconfirmed", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewUnconfirmedTokensTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

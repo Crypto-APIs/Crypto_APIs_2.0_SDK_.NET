@@ -42,11 +42,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="bits">Represents a specific sub-unit of Doge. Bits have two-decimal precision. (required).</param>
         /// <param name="chainwork">Represents a hexadecimal number of all the hashes necessary to produce the current chain. E.g., when converting 0000000000000000000000000000000000000000000086859f7a841475b236fd to a decimal you get 635262017308958427068157 hashes, or 635262 exahash (required).</param>
+        /// <param name="difficulty">Represents a mathematical value of how hard it is to find a valid hash for this block. (required).</param>
         /// <param name="merkleRoot">Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. (required).</param>
+        /// <param name="nonce">Represents a random value that can be adjusted to satisfy the proof of work (required).</param>
+        /// <param name="size">Represents the total size of the block in Bytes. (required).</param>
         /// <param name="strippedSize">Defines the numeric representation of the block size excluding the witness data. (required).</param>
         /// <param name="version">Represents the version of the specific block on the blockchain. (required).</param>
         /// <param name="weight">Represents a measurement to compare the size of different transactions to each other in proportion to the block size limit. (required).</param>
-        public ListLatestMinedBlocksRIBSD2(string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), int strippedSize = default(int), int version = default(int), int weight = default(int))
+        public ListLatestMinedBlocksRIBSD2(string bits = default(string), string chainwork = default(string), string difficulty = default(string), string merkleRoot = default(string), int nonce = default(int), int size = default(int), int strippedSize = default(int), int version = default(int), int weight = default(int))
         {
             // to ensure "bits" is required (not null)
             if (bits == null) {
@@ -58,11 +61,18 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("chainwork is a required property for ListLatestMinedBlocksRIBSD2 and cannot be null");
             }
             this.Chainwork = chainwork;
+            // to ensure "difficulty" is required (not null)
+            if (difficulty == null) {
+                throw new ArgumentNullException("difficulty is a required property for ListLatestMinedBlocksRIBSD2 and cannot be null");
+            }
+            this.Difficulty = difficulty;
             // to ensure "merkleRoot" is required (not null)
             if (merkleRoot == null) {
                 throw new ArgumentNullException("merkleRoot is a required property for ListLatestMinedBlocksRIBSD2 and cannot be null");
             }
             this.MerkleRoot = merkleRoot;
+            this.Nonce = nonce;
+            this.Size = size;
             this.StrippedSize = strippedSize;
             this._Version = version;
             this.Weight = weight;
@@ -83,11 +93,32 @@ namespace CryptoAPIs.Model
         public string Chainwork { get; set; }
 
         /// <summary>
+        /// Represents a mathematical value of how hard it is to find a valid hash for this block.
+        /// </summary>
+        /// <value>Represents a mathematical value of how hard it is to find a valid hash for this block.</value>
+        [DataMember(Name = "difficulty", IsRequired = true, EmitDefaultValue = false)]
+        public string Difficulty { get; set; }
+
+        /// <summary>
         /// Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block.
         /// </summary>
         /// <value>Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block.</value>
         [DataMember(Name = "merkleRoot", IsRequired = true, EmitDefaultValue = false)]
         public string MerkleRoot { get; set; }
+
+        /// <summary>
+        /// Represents a random value that can be adjusted to satisfy the proof of work
+        /// </summary>
+        /// <value>Represents a random value that can be adjusted to satisfy the proof of work</value>
+        [DataMember(Name = "nonce", IsRequired = true, EmitDefaultValue = false)]
+        public int Nonce { get; set; }
+
+        /// <summary>
+        /// Represents the total size of the block in Bytes.
+        /// </summary>
+        /// <value>Represents the total size of the block in Bytes.</value>
+        [DataMember(Name = "size", IsRequired = true, EmitDefaultValue = false)]
+        public int Size { get; set; }
 
         /// <summary>
         /// Defines the numeric representation of the block size excluding the witness data.
@@ -116,11 +147,14 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListLatestMinedBlocksRIBSD2 {\n");
             sb.Append("  Bits: ").Append(Bits).Append("\n");
             sb.Append("  Chainwork: ").Append(Chainwork).Append("\n");
+            sb.Append("  Difficulty: ").Append(Difficulty).Append("\n");
             sb.Append("  MerkleRoot: ").Append(MerkleRoot).Append("\n");
+            sb.Append("  Nonce: ").Append(Nonce).Append("\n");
+            sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  StrippedSize: ").Append(StrippedSize).Append("\n");
             sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("  Weight: ").Append(Weight).Append("\n");
@@ -155,8 +189,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListLatestMinedBlocksRIBSD2 input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Bits == input.Bits ||
@@ -169,9 +204,22 @@ namespace CryptoAPIs.Model
                     this.Chainwork.Equals(input.Chainwork))
                 ) && 
                 (
+                    this.Difficulty == input.Difficulty ||
+                    (this.Difficulty != null &&
+                    this.Difficulty.Equals(input.Difficulty))
+                ) && 
+                (
                     this.MerkleRoot == input.MerkleRoot ||
                     (this.MerkleRoot != null &&
                     this.MerkleRoot.Equals(input.MerkleRoot))
+                ) && 
+                (
+                    this.Nonce == input.Nonce ||
+                    this.Nonce.Equals(input.Nonce)
+                ) && 
+                (
+                    this.Size == input.Size ||
+                    this.Size.Equals(input.Size)
                 ) && 
                 (
                     this.StrippedSize == input.StrippedSize ||
@@ -197,14 +245,26 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Bits != null)
-                    hashCode = hashCode * 59 + this.Bits.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Bits.GetHashCode();
+                }
                 if (this.Chainwork != null)
-                    hashCode = hashCode * 59 + this.Chainwork.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Chainwork.GetHashCode();
+                }
+                if (this.Difficulty != null)
+                {
+                    hashCode = (hashCode * 59) + this.Difficulty.GetHashCode();
+                }
                 if (this.MerkleRoot != null)
-                    hashCode = hashCode * 59 + this.MerkleRoot.GetHashCode();
-                hashCode = hashCode * 59 + this.StrippedSize.GetHashCode();
-                hashCode = hashCode * 59 + this._Version.GetHashCode();
-                hashCode = hashCode * 59 + this.Weight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MerkleRoot.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
+                hashCode = (hashCode * 59) + this.StrippedSize.GetHashCode();
+                hashCode = (hashCode * 59) + this._Version.GetHashCode();
+                hashCode = (hashCode * 59) + this.Weight.GetHashCode();
                 return hashCode;
             }
         }

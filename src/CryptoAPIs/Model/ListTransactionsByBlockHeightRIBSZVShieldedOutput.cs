@@ -128,7 +128,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTransactionsByBlockHeightRIBSZVShieldedOutput {\n");
             sb.Append("  Cmu: ").Append(Cmu).Append("\n");
             sb.Append("  Cv: ").Append(Cv).Append("\n");
@@ -167,8 +167,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTransactionsByBlockHeightRIBSZVShieldedOutput input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Cmu == input.Cmu ||
@@ -212,17 +213,29 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Cmu != null)
-                    hashCode = hashCode * 59 + this.Cmu.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Cmu.GetHashCode();
+                }
                 if (this.Cv != null)
-                    hashCode = hashCode * 59 + this.Cv.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Cv.GetHashCode();
+                }
                 if (this.EncCipherText != null)
-                    hashCode = hashCode * 59 + this.EncCipherText.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EncCipherText.GetHashCode();
+                }
                 if (this.EphemeralKey != null)
-                    hashCode = hashCode * 59 + this.EphemeralKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EphemeralKey.GetHashCode();
+                }
                 if (this.OutCipherText != null)
-                    hashCode = hashCode * 59 + this.OutCipherText.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OutCipherText.GetHashCode();
+                }
                 if (this.Proof != null)
-                    hashCode = hashCode * 59 + this.Proof.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Proof.GetHashCode();
+                }
                 return hashCode;
             }
         }

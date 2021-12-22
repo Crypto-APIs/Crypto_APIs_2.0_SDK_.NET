@@ -128,7 +128,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend {\n");
             sb.Append("  Anchor: ").Append(Anchor).Append("\n");
             sb.Append("  Cv: ").Append(Cv).Append("\n");
@@ -167,8 +167,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Anchor == input.Anchor ||
@@ -212,17 +213,29 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Anchor != null)
-                    hashCode = hashCode * 59 + this.Anchor.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Anchor.GetHashCode();
+                }
                 if (this.Cv != null)
-                    hashCode = hashCode * 59 + this.Cv.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Cv.GetHashCode();
+                }
                 if (this.Nullifier != null)
-                    hashCode = hashCode * 59 + this.Nullifier.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Nullifier.GetHashCode();
+                }
                 if (this.Proof != null)
-                    hashCode = hashCode * 59 + this.Proof.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Proof.GetHashCode();
+                }
                 if (this.Rk != null)
-                    hashCode = hashCode * 59 + this.Rk.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Rk.GetHashCode();
+                }
                 if (this.SpendAuthSig != null)
-                    hashCode = hashCode * 59 + this.SpendAuthSig.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SpendAuthSig.GetHashCode();
+                }
                 return hashCode;
             }
         }

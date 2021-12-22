@@ -48,8 +48,7 @@ namespace CryptoAPIs.Model
         /// <param name="eventType">Defines the type of the specific event available for the customer to subscribe to for callback notification. (required).</param>
         /// <param name="isActive">Defines whether the subscription is active or not. Set as boolean. (required).</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription. (required).</param>
-        /// <param name="transactionId">Represents the unique identification string that defines the transaction. (required).</param>
-        public NewConfirmedInternalTransactionsAndEachConfirmationRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string), string transactionId = default(string))
+        public NewConfirmedInternalTransactionsAndEachConfirmationRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string))
         {
             // to ensure "address" is required (not null)
             if (address == null) {
@@ -79,11 +78,6 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("referenceId is a required property for NewConfirmedInternalTransactionsAndEachConfirmationRI and cannot be null");
             }
             this.ReferenceId = referenceId;
-            // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
-                throw new ArgumentNullException("transactionId is a required property for NewConfirmedInternalTransactionsAndEachConfirmationRI and cannot be null");
-            }
-            this.TransactionId = transactionId;
         }
 
         /// <summary>
@@ -143,19 +137,12 @@ namespace CryptoAPIs.Model
         public string ReferenceId { get; set; }
 
         /// <summary>
-        /// Represents the unique identification string that defines the transaction.
-        /// </summary>
-        /// <value>Represents the unique identification string that defines the transaction.</value>
-        [DataMember(Name = "transactionId", IsRequired = true, EmitDefaultValue = false)]
-        public string TransactionId { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class NewConfirmedInternalTransactionsAndEachConfirmationRI {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
@@ -165,7 +152,6 @@ namespace CryptoAPIs.Model
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  ReferenceId: ").Append(ReferenceId).Append("\n");
-            sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -197,8 +183,9 @@ namespace CryptoAPIs.Model
         public bool Equals(NewConfirmedInternalTransactionsAndEachConfirmationRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Address == input.Address ||
@@ -236,11 +223,6 @@ namespace CryptoAPIs.Model
                     this.ReferenceId == input.ReferenceId ||
                     (this.ReferenceId != null &&
                     this.ReferenceId.Equals(input.ReferenceId))
-                ) && 
-                (
-                    this.TransactionId == input.TransactionId ||
-                    (this.TransactionId != null &&
-                    this.TransactionId.Equals(input.TransactionId))
                 );
         }
 
@@ -254,20 +236,28 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
                 if (this.CallbackSecretKey != null)
-                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
+                }
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
-                hashCode = hashCode * 59 + this.ConfirmationsCount.GetHashCode();
-                hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ConfirmationsCount.GetHashCode();
+                hashCode = (hashCode * 59) + this.CreatedTimestamp.GetHashCode();
                 if (this.EventType != null)
-                    hashCode = hashCode * 59 + this.EventType.GetHashCode();
-                hashCode = hashCode * 59 + this.IsActive.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.EventType.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IsActive.GetHashCode();
                 if (this.ReferenceId != null)
-                    hashCode = hashCode * 59 + this.ReferenceId.GetHashCode();
-                if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ReferenceId.GetHashCode();
+                }
                 return hashCode;
             }
         }

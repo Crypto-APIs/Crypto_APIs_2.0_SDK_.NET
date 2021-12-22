@@ -41,13 +41,19 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="ListAllUnconfirmedTransactionsRIBSECFee" /> class.
         /// </summary>
         /// <param name="amount">String representation of the fee value (required).</param>
-        public ListAllUnconfirmedTransactionsRIBSECFee(string amount = default(string))
+        /// <param name="unit">Represents the fee unit. (required).</param>
+        public ListAllUnconfirmedTransactionsRIBSECFee(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
             if (amount == null) {
                 throw new ArgumentNullException("amount is a required property for ListAllUnconfirmedTransactionsRIBSECFee and cannot be null");
             }
             this.Amount = amount;
+            // to ensure "unit" is required (not null)
+            if (unit == null) {
+                throw new ArgumentNullException("unit is a required property for ListAllUnconfirmedTransactionsRIBSECFee and cannot be null");
+            }
+            this.Unit = unit;
         }
 
         /// <summary>
@@ -58,14 +64,22 @@ namespace CryptoAPIs.Model
         public string Amount { get; set; }
 
         /// <summary>
+        /// Represents the fee unit.
+        /// </summary>
+        /// <value>Represents the fee unit.</value>
+        [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
+        public string Unit { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListAllUnconfirmedTransactionsRIBSECFee {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,13 +111,19 @@ namespace CryptoAPIs.Model
         public bool Equals(ListAllUnconfirmedTransactionsRIBSECFee input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Amount == input.Amount ||
                     (this.Amount != null &&
                     this.Amount.Equals(input.Amount))
+                ) && 
+                (
+                    this.Unit == input.Unit ||
+                    (this.Unit != null &&
+                    this.Unit.Equals(input.Unit))
                 );
         }
 
@@ -117,7 +137,13 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
+                if (this.Unit != null)
+                {
+                    hashCode = (hashCode * 59) + this.Unit.GetHashCode();
+                }
                 return hashCode;
             }
         }

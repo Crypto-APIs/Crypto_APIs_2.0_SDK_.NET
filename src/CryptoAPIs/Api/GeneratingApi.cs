@@ -246,15 +246,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling GeneratingApi->GenerateDepositAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling GeneratingApi->GenerateDepositAddress");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling GeneratingApi->GenerateDepositAddress");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -268,10 +274,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -290,11 +302,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<GenerateDepositAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GenerateDepositAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -332,15 +346,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling GeneratingApi->GenerateDepositAddress");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling GeneratingApi->GenerateDepositAddress");
+            }
 
             // verify the required parameter 'walletId' is set
             if (walletId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling GeneratingApi->GenerateDepositAddress");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -354,12 +374,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -377,13 +402,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<GenerateDepositAddressR>("/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GenerateDepositAddress", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

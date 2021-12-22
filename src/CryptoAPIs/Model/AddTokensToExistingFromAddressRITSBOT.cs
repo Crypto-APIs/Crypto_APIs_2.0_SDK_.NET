@@ -59,7 +59,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AddTokensToExistingFromAddressRITSBOT {\n");
             sb.Append("  PropertyId: ").Append(PropertyId).Append("\n");
             sb.Append("}\n");
@@ -93,8 +93,9 @@ namespace CryptoAPIs.Model
         public bool Equals(AddTokensToExistingFromAddressRITSBOT input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.PropertyId == input.PropertyId ||
@@ -111,7 +112,7 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.PropertyId.GetHashCode();
+                hashCode = (hashCode * 59) + this.PropertyId.GetHashCode();
                 return hashCode;
             }
         }

@@ -46,7 +46,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction&#39;s version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public ListAllUnconfirmedTransactionsRIBSL(int locktime = default(int), int size = default(int), int vSize = default(int), int version = default(int), List<ListAllUnconfirmedTransactionsRIBSLVin> vin = default(List<ListAllUnconfirmedTransactionsRIBSLVin>), List<ListAllUnconfirmedTransactionsRIBSLVout> vout = default(List<ListAllUnconfirmedTransactionsRIBSLVout>))
+        public ListAllUnconfirmedTransactionsRIBSL(int locktime = default(int), int size = default(int), int vSize = default(int), int version = default(int), List<ListAllUnconfirmedTransactionsRIBSLVin> vin = default(List<ListAllUnconfirmedTransactionsRIBSLVin>), List<GetTransactionDetailsByTransactionIDRIBSLVout> vout = default(List<GetTransactionDetailsByTransactionIDRIBSLVout>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -104,7 +104,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListAllUnconfirmedTransactionsRIBSLVout> Vout { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSLVout> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -112,7 +112,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListAllUnconfirmedTransactionsRIBSL {\n");
             sb.Append("  Locktime: ").Append(Locktime).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
@@ -151,8 +151,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListAllUnconfirmedTransactionsRIBSL input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Locktime == input.Locktime ||
@@ -193,14 +194,18 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Locktime.GetHashCode();
-                hashCode = hashCode * 59 + this.Size.GetHashCode();
-                hashCode = hashCode * 59 + this.VSize.GetHashCode();
-                hashCode = hashCode * 59 + this._Version.GetHashCode();
+                hashCode = (hashCode * 59) + this.Locktime.GetHashCode();
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
+                hashCode = (hashCode * 59) + this.VSize.GetHashCode();
+                hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 if (this.Vin != null)
-                    hashCode = hashCode * 59 + this.Vin.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Vin.GetHashCode();
+                }
                 if (this.Vout != null)
-                    hashCode = hashCode * 59 + this.Vout.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Vout.GetHashCode();
+                }
                 return hashCode;
             }
         }

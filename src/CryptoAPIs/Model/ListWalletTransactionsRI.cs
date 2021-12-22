@@ -42,13 +42,16 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="direction">Defines the direction of the transaction, e.g. incoming. (required).</param>
         /// <param name="fee">fee (required).</param>
+        /// <param name="fungibleTokens">Represents fungible tokens&#39;es detailed information.</param>
+        /// <param name="internalTransactions">internalTransactions.</param>
+        /// <param name="nonFungibleTokens">Represents non-fungible tokens&#39;es detailed information..</param>
         /// <param name="recipients">Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. (required).</param>
         /// <param name="senders">Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. (required).</param>
         /// <param name="status">Defines the status of the transaction, if it is confirmed or unconfirmed. (required).</param>
         /// <param name="timestamp">Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. (required).</param>
         /// <param name="transactionId">Represents the unique TD of the transaction. (required).</param>
         /// <param name="value">value (required).</param>
-        public ListWalletTransactionsRI(string direction = default(string), ListWalletTransactionsRIFee fee = default(ListWalletTransactionsRIFee), List<ListWalletTransactionsRIRecipients> recipients = default(List<ListWalletTransactionsRIRecipients>), List<ListWalletTransactionsRISenders> senders = default(List<ListWalletTransactionsRISenders>), string status = default(string), int timestamp = default(int), string transactionId = default(string), ListWalletTransactionsRIValue value = default(ListWalletTransactionsRIValue))
+        public ListWalletTransactionsRI(string direction = default(string), ListWalletTransactionsRIFee fee = default(ListWalletTransactionsRIFee), List<ListWalletTransactionsRIFungibleTokens> fungibleTokens = default(List<ListWalletTransactionsRIFungibleTokens>), List<ListWalletTransactionsRIInternalTransactions> internalTransactions = default(List<ListWalletTransactionsRIInternalTransactions>), List<ListWalletTransactionsRINonFungibleTokens> nonFungibleTokens = default(List<ListWalletTransactionsRINonFungibleTokens>), List<ListWalletTransactionsRIRecipients> recipients = default(List<ListWalletTransactionsRIRecipients>), List<ListWalletTransactionsRISenders> senders = default(List<ListWalletTransactionsRISenders>), string status = default(string), int timestamp = default(int), string transactionId = default(string), ListWalletTransactionsRIValue value = default(ListWalletTransactionsRIValue))
         {
             // to ensure "direction" is required (not null)
             if (direction == null) {
@@ -86,6 +89,9 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("value is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.Value = value;
+            this.FungibleTokens = fungibleTokens;
+            this.InternalTransactions = internalTransactions;
+            this.NonFungibleTokens = nonFungibleTokens;
         }
 
         /// <summary>
@@ -100,6 +106,26 @@ namespace CryptoAPIs.Model
         /// </summary>
         [DataMember(Name = "fee", IsRequired = true, EmitDefaultValue = false)]
         public ListWalletTransactionsRIFee Fee { get; set; }
+
+        /// <summary>
+        /// Represents fungible tokens&#39;es detailed information
+        /// </summary>
+        /// <value>Represents fungible tokens&#39;es detailed information</value>
+        [DataMember(Name = "fungibleTokens", EmitDefaultValue = false)]
+        public List<ListWalletTransactionsRIFungibleTokens> FungibleTokens { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InternalTransactions
+        /// </summary>
+        [DataMember(Name = "internalTransactions", EmitDefaultValue = false)]
+        public List<ListWalletTransactionsRIInternalTransactions> InternalTransactions { get; set; }
+
+        /// <summary>
+        /// Represents non-fungible tokens&#39;es detailed information.
+        /// </summary>
+        /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
+        [DataMember(Name = "nonFungibleTokens", EmitDefaultValue = false)]
+        public List<ListWalletTransactionsRINonFungibleTokens> NonFungibleTokens { get; set; }
 
         /// <summary>
         /// Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
@@ -148,10 +174,13 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListWalletTransactionsRI {\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Fee: ").Append(Fee).Append("\n");
+            sb.Append("  FungibleTokens: ").Append(FungibleTokens).Append("\n");
+            sb.Append("  InternalTransactions: ").Append(InternalTransactions).Append("\n");
+            sb.Append("  NonFungibleTokens: ").Append(NonFungibleTokens).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("  Senders: ").Append(Senders).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -189,8 +218,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListWalletTransactionsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Direction == input.Direction ||
@@ -201,6 +231,24 @@ namespace CryptoAPIs.Model
                     this.Fee == input.Fee ||
                     (this.Fee != null &&
                     this.Fee.Equals(input.Fee))
+                ) && 
+                (
+                    this.FungibleTokens == input.FungibleTokens ||
+                    this.FungibleTokens != null &&
+                    input.FungibleTokens != null &&
+                    this.FungibleTokens.SequenceEqual(input.FungibleTokens)
+                ) && 
+                (
+                    this.InternalTransactions == input.InternalTransactions ||
+                    this.InternalTransactions != null &&
+                    input.InternalTransactions != null &&
+                    this.InternalTransactions.SequenceEqual(input.InternalTransactions)
+                ) && 
+                (
+                    this.NonFungibleTokens == input.NonFungibleTokens ||
+                    this.NonFungibleTokens != null &&
+                    input.NonFungibleTokens != null &&
+                    this.NonFungibleTokens.SequenceEqual(input.NonFungibleTokens)
                 ) && 
                 (
                     this.Recipients == input.Recipients ||
@@ -245,20 +293,46 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Direction != null)
-                    hashCode = hashCode * 59 + this.Direction.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Direction.GetHashCode();
+                }
                 if (this.Fee != null)
-                    hashCode = hashCode * 59 + this.Fee.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Fee.GetHashCode();
+                }
+                if (this.FungibleTokens != null)
+                {
+                    hashCode = (hashCode * 59) + this.FungibleTokens.GetHashCode();
+                }
+                if (this.InternalTransactions != null)
+                {
+                    hashCode = (hashCode * 59) + this.InternalTransactions.GetHashCode();
+                }
+                if (this.NonFungibleTokens != null)
+                {
+                    hashCode = (hashCode * 59) + this.NonFungibleTokens.GetHashCode();
+                }
                 if (this.Recipients != null)
-                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Recipients.GetHashCode();
+                }
                 if (this.Senders != null)
-                    hashCode = hashCode * 59 + this.Senders.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Senders.GetHashCode();
+                }
                 if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Status.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                }
                 return hashCode;
             }
         }

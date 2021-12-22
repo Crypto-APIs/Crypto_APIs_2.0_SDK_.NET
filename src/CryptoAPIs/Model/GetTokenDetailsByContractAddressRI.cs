@@ -107,7 +107,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTokenDetailsByContractAddressRI {\n");
             sb.Append("  TokenDecimals: ").Append(TokenDecimals).Append("\n");
             sb.Append("  TokenName: ").Append(TokenName).Append("\n");
@@ -145,8 +145,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTokenDetailsByContractAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.TokenDecimals == input.TokenDecimals ||
@@ -185,15 +186,25 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.TokenDecimals != null)
-                    hashCode = hashCode * 59 + this.TokenDecimals.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenDecimals.GetHashCode();
+                }
                 if (this.TokenName != null)
-                    hashCode = hashCode * 59 + this.TokenName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenName.GetHashCode();
+                }
                 if (this.TokenSymbol != null)
-                    hashCode = hashCode * 59 + this.TokenSymbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenSymbol.GetHashCode();
+                }
                 if (this.TokenType != null)
-                    hashCode = hashCode * 59 + this.TokenType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
+                }
                 if (this.TotalSupply != null)
-                    hashCode = hashCode * 59 + this.TotalSupply.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalSupply.GetHashCode();
+                }
                 return hashCode;
             }
         }

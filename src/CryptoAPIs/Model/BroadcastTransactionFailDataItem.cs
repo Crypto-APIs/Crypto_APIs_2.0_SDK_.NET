@@ -102,7 +102,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class BroadcastTransactionFailDataItem {\n");
             sb.Append("  Blockchain: ").Append(Blockchain).Append("\n");
             sb.Append("  Network: ").Append(Network).Append("\n");
@@ -139,8 +139,9 @@ namespace CryptoAPIs.Model
         public bool Equals(BroadcastTransactionFailDataItem input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Blockchain == input.Blockchain ||
@@ -174,13 +175,21 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Blockchain != null)
-                    hashCode = hashCode * 59 + this.Blockchain.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Blockchain.GetHashCode();
+                }
                 if (this.Network != null)
-                    hashCode = hashCode * 59 + this.Network.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
+                }
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ErrorMessage.GetHashCode();
+                }
                 return hashCode;
             }
         }

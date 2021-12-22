@@ -112,7 +112,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TransactionRequestRejectionDataItem {\n");
             sb.Append("  Blockchain: ").Append(Blockchain).Append("\n");
             sb.Append("  Network: ").Append(Network).Append("\n");
@@ -151,8 +151,9 @@ namespace CryptoAPIs.Model
         public bool Equals(TransactionRequestRejectionDataItem input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Blockchain == input.Blockchain ||
@@ -192,13 +193,17 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Blockchain != null)
-                    hashCode = hashCode * 59 + this.Blockchain.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Blockchain.GetHashCode();
+                }
                 if (this.Network != null)
-                    hashCode = hashCode * 59 + this.Network.GetHashCode();
-                hashCode = hashCode * 59 + this.RequiredApprovals.GetHashCode();
-                hashCode = hashCode * 59 + this.RequiredRejections.GetHashCode();
-                hashCode = hashCode * 59 + this.CurrentApprovals.GetHashCode();
-                hashCode = hashCode * 59 + this.CurrentRejections.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.RequiredApprovals.GetHashCode();
+                hashCode = (hashCode * 59) + this.RequiredRejections.GetHashCode();
+                hashCode = (hashCode * 59) + this.CurrentApprovals.GetHashCode();
+                hashCode = (hashCode * 59) + this.CurrentRejections.GetHashCode();
                 return hashCode;
             }
         }

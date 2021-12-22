@@ -89,7 +89,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListAssetsDetailsRIAssetLogo {\n");
             sb.Append("  Encoding: ").Append(Encoding).Append("\n");
             sb.Append("  ImageData: ").Append(ImageData).Append("\n");
@@ -125,8 +125,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListAssetsDetailsRIAssetLogo input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Encoding == input.Encoding ||
@@ -155,11 +156,17 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Encoding != null)
-                    hashCode = hashCode * 59 + this.Encoding.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Encoding.GetHashCode();
+                }
                 if (this.ImageData != null)
-                    hashCode = hashCode * 59 + this.ImageData.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ImageData.GetHashCode();
+                }
                 if (this.MimeType != null)
-                    hashCode = hashCode * 59 + this.MimeType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MimeType.GetHashCode();
+                }
                 return hashCode;
             }
         }

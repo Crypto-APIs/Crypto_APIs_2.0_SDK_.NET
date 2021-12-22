@@ -106,10 +106,10 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
-        /// Test CreateTokensTransactionRequestFromAddress
+        /// Test CreateFungibleTokensTransactionRequestFromAddress
         /// </summary>
         [Fact]
-        public void CreateTokensTransactionRequestFromAddressTest()
+        public void CreateFungibleTokensTransactionRequestFromAddressTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
@@ -117,9 +117,9 @@ namespace CryptoAPIs.Test.Api
             //string senderAddress = null;
             //string walletId = null;
             //string context = null;
-            //CreateTokensTransactionRequestFromAddressRB createTokensTransactionRequestFromAddressRB = null;
-            //var response = instance.CreateTokensTransactionRequestFromAddress(blockchain, network, senderAddress, walletId, context, createTokensTransactionRequestFromAddressRB);
-            //Assert.IsType<CreateTokensTransactionRequestFromAddressR>(response);
+            //CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = null;
+            //var response = instance.CreateFungibleTokensTransactionRequestFromAddress(blockchain, network, senderAddress, walletId, context, createFungibleTokensTransactionRequestFromAddressRB);
+            //Assert.IsType<CreateFungibleTokensTransactionRequestFromAddressR>(response);
         }
     }
 }

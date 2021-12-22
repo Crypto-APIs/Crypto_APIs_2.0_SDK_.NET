@@ -66,6 +66,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Address'
         }
         /// <summary>
+        /// Test the property 'ConfirmedBalance'
+        /// </summary>
+        [Fact]
+        public void ConfirmedBalanceTest()
+        {
+            // TODO unit test for the property 'ConfirmedBalance'
+        }
+        /// <summary>
         /// Test the property 'CreatedTimestamp'
         /// </summary>
         [Fact]
@@ -74,12 +82,36 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'CreatedTimestamp'
         }
         /// <summary>
+        /// Test the property 'FungibleTokens'
+        /// </summary>
+        [Fact]
+        public void FungibleTokensTest()
+        {
+            // TODO unit test for the property 'FungibleTokens'
+        }
+        /// <summary>
+        /// Test the property 'Index'
+        /// </summary>
+        [Fact]
+        public void IndexTest()
+        {
+            // TODO unit test for the property 'Index'
+        }
+        /// <summary>
         /// Test the property 'Label'
         /// </summary>
         [Fact]
         public void LabelTest()
         {
             // TODO unit test for the property 'Label'
+        }
+        /// <summary>
+        /// Test the property 'NonFungibleTokens'
+        /// </summary>
+        [Fact]
+        public void NonFungibleTokensTest()
+        {
+            // TODO unit test for the property 'NonFungibleTokens'
         }
 
     }

@@ -62,7 +62,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetWalletAssetDetailsRData {\n");
             sb.Append("  Item: ").Append(Item).Append("\n");
             sb.Append("}\n");
@@ -96,8 +96,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetWalletAssetDetailsRData input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Item == input.Item ||
@@ -116,7 +117,9 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Item != null)
-                    hashCode = hashCode * 59 + this.Item.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Item.GetHashCode();
+                }
                 return hashCode;
             }
         }

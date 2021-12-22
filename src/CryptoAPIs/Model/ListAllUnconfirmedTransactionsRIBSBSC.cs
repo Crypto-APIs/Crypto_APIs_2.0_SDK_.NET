@@ -110,7 +110,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListAllUnconfirmedTransactionsRIBSBSC {\n");
             sb.Append("  GasLimit: ").Append(GasLimit).Append("\n");
             sb.Append("  GasPrice: ").Append(GasPrice).Append("\n");
@@ -148,8 +148,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListAllUnconfirmedTransactionsRIBSBSC input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.GasLimit == input.GasLimit ||
@@ -187,14 +188,22 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.GasLimit != null)
-                    hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
                 if (this.GasPrice != null)
-                    hashCode = hashCode * 59 + this.GasPrice.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
+                }
                 if (this.InputData != null)
-                    hashCode = hashCode * 59 + this.InputData.GetHashCode();
-                hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InputData.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
                 if (this.TransactionStatus != null)
-                    hashCode = hashCode * 59 + this.TransactionStatus.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionStatus.GetHashCode();
+                }
                 return hashCode;
             }
         }

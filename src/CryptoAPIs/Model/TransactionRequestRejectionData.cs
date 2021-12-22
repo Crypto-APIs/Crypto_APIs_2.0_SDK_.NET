@@ -88,7 +88,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TransactionRequestRejectionData {\n");
             sb.Append("  Product: ").Append(Product).Append("\n");
             sb.Append("  Event: ").Append(Event).Append("\n");
@@ -124,8 +124,9 @@ namespace CryptoAPIs.Model
         public bool Equals(TransactionRequestRejectionData input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Product == input.Product ||
@@ -154,11 +155,17 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Product != null)
-                    hashCode = hashCode * 59 + this.Product.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Product.GetHashCode();
+                }
                 if (this.Event != null)
-                    hashCode = hashCode * 59 + this.Event.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Event.GetHashCode();
+                }
                 if (this.Item != null)
-                    hashCode = hashCode * 59 + this.Item.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Item.GetHashCode();
+                }
                 return hashCode;
             }
         }

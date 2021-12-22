@@ -41,21 +41,45 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="ListDepositAddressesRI" /> class.
         /// </summary>
         /// <param name="address">Specifies the specific address&#39;s unique string value. (required).</param>
+        /// <param name="confirmedBalance">confirmedBalance (required).</param>
         /// <param name="createdTimestamp">Defines the specific UNIX time when the deposit address was created. (required).</param>
+        /// <param name="fungibleTokens">Represents fungible tokens&#39;es detailed information (required).</param>
+        /// <param name="index">Represents the index of the address in the wallet. (required).</param>
         /// <param name="label">Represents a custom tag that customers can set up for their Wallets and addresses. E.g. custom label named \&quot;Special addresses\&quot;. (required).</param>
-        public ListDepositAddressesRI(string address = default(string), int createdTimestamp = default(int), string label = default(string))
+        /// <param name="nonFungibleTokens">Represents non-fungible tokens&#39;es detailed information. (required).</param>
+        public ListDepositAddressesRI(string address = default(string), ListDepositAddressesRIConfirmedBalance confirmedBalance = default(ListDepositAddressesRIConfirmedBalance), int createdTimestamp = default(int), List<ListDepositAddressesRIFungibleTokens> fungibleTokens = default(List<ListDepositAddressesRIFungibleTokens>), string index = default(string), string label = default(string), List<ListDepositAddressesRINonFungibleTokens> nonFungibleTokens = default(List<ListDepositAddressesRINonFungibleTokens>))
         {
             // to ensure "address" is required (not null)
             if (address == null) {
                 throw new ArgumentNullException("address is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.Address = address;
+            // to ensure "confirmedBalance" is required (not null)
+            if (confirmedBalance == null) {
+                throw new ArgumentNullException("confirmedBalance is a required property for ListDepositAddressesRI and cannot be null");
+            }
+            this.ConfirmedBalance = confirmedBalance;
             this.CreatedTimestamp = createdTimestamp;
+            // to ensure "fungibleTokens" is required (not null)
+            if (fungibleTokens == null) {
+                throw new ArgumentNullException("fungibleTokens is a required property for ListDepositAddressesRI and cannot be null");
+            }
+            this.FungibleTokens = fungibleTokens;
+            // to ensure "index" is required (not null)
+            if (index == null) {
+                throw new ArgumentNullException("index is a required property for ListDepositAddressesRI and cannot be null");
+            }
+            this.Index = index;
             // to ensure "label" is required (not null)
             if (label == null) {
                 throw new ArgumentNullException("label is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.Label = label;
+            // to ensure "nonFungibleTokens" is required (not null)
+            if (nonFungibleTokens == null) {
+                throw new ArgumentNullException("nonFungibleTokens is a required property for ListDepositAddressesRI and cannot be null");
+            }
+            this.NonFungibleTokens = nonFungibleTokens;
         }
 
         /// <summary>
@@ -66,11 +90,31 @@ namespace CryptoAPIs.Model
         public string Address { get; set; }
 
         /// <summary>
+        /// Gets or Sets ConfirmedBalance
+        /// </summary>
+        [DataMember(Name = "confirmedBalance", IsRequired = true, EmitDefaultValue = false)]
+        public ListDepositAddressesRIConfirmedBalance ConfirmedBalance { get; set; }
+
+        /// <summary>
         /// Defines the specific UNIX time when the deposit address was created.
         /// </summary>
         /// <value>Defines the specific UNIX time when the deposit address was created.</value>
         [DataMember(Name = "createdTimestamp", IsRequired = true, EmitDefaultValue = false)]
         public int CreatedTimestamp { get; set; }
+
+        /// <summary>
+        /// Represents fungible tokens&#39;es detailed information
+        /// </summary>
+        /// <value>Represents fungible tokens&#39;es detailed information</value>
+        [DataMember(Name = "fungibleTokens", IsRequired = true, EmitDefaultValue = false)]
+        public List<ListDepositAddressesRIFungibleTokens> FungibleTokens { get; set; }
+
+        /// <summary>
+        /// Represents the index of the address in the wallet.
+        /// </summary>
+        /// <value>Represents the index of the address in the wallet.</value>
+        [DataMember(Name = "index", IsRequired = true, EmitDefaultValue = false)]
+        public string Index { get; set; }
 
         /// <summary>
         /// Represents a custom tag that customers can set up for their Wallets and addresses. E.g. custom label named \&quot;Special addresses\&quot;.
@@ -80,16 +124,27 @@ namespace CryptoAPIs.Model
         public string Label { get; set; }
 
         /// <summary>
+        /// Represents non-fungible tokens&#39;es detailed information.
+        /// </summary>
+        /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
+        [DataMember(Name = "nonFungibleTokens", IsRequired = true, EmitDefaultValue = false)]
+        public List<ListDepositAddressesRINonFungibleTokens> NonFungibleTokens { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListDepositAddressesRI {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  ConfirmedBalance: ").Append(ConfirmedBalance).Append("\n");
             sb.Append("  CreatedTimestamp: ").Append(CreatedTimestamp).Append("\n");
+            sb.Append("  FungibleTokens: ").Append(FungibleTokens).Append("\n");
+            sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
+            sb.Append("  NonFungibleTokens: ").Append(NonFungibleTokens).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,8 +176,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListDepositAddressesRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Address == input.Address ||
@@ -130,13 +186,35 @@ namespace CryptoAPIs.Model
                     this.Address.Equals(input.Address))
                 ) && 
                 (
+                    this.ConfirmedBalance == input.ConfirmedBalance ||
+                    (this.ConfirmedBalance != null &&
+                    this.ConfirmedBalance.Equals(input.ConfirmedBalance))
+                ) && 
+                (
                     this.CreatedTimestamp == input.CreatedTimestamp ||
                     this.CreatedTimestamp.Equals(input.CreatedTimestamp)
+                ) && 
+                (
+                    this.FungibleTokens == input.FungibleTokens ||
+                    this.FungibleTokens != null &&
+                    input.FungibleTokens != null &&
+                    this.FungibleTokens.SequenceEqual(input.FungibleTokens)
+                ) && 
+                (
+                    this.Index == input.Index ||
+                    (this.Index != null &&
+                    this.Index.Equals(input.Index))
                 ) && 
                 (
                     this.Label == input.Label ||
                     (this.Label != null &&
                     this.Label.Equals(input.Label))
+                ) && 
+                (
+                    this.NonFungibleTokens == input.NonFungibleTokens ||
+                    this.NonFungibleTokens != null &&
+                    input.NonFungibleTokens != null &&
+                    this.NonFungibleTokens.SequenceEqual(input.NonFungibleTokens)
                 );
         }
 
@@ -150,10 +228,30 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
-                hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                if (this.ConfirmedBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.ConfirmedBalance.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.CreatedTimestamp.GetHashCode();
+                if (this.FungibleTokens != null)
+                {
+                    hashCode = (hashCode * 59) + this.FungibleTokens.GetHashCode();
+                }
+                if (this.Index != null)
+                {
+                    hashCode = (hashCode * 59) + this.Index.GetHashCode();
+                }
                 if (this.Label != null)
-                    hashCode = hashCode * 59 + this.Label.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Label.GetHashCode();
+                }
+                if (this.NonFungibleTokens != null)
+                {
+                    hashCode = (hashCode * 59) + this.NonFungibleTokens.GetHashCode();
+                }
                 return hashCode;
             }
         }

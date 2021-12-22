@@ -46,7 +46,7 @@ namespace CryptoAPIs.Model
         /// <param name="gasUsed">Represents the exact unit of gas that was used for the transaction. (required).</param>
         /// <param name="inputData">Represents additional information that is required for the transaction. (required).</param>
         /// <param name="nonce">Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. (required).</param>
-        public GetTransactionDetailsByTransactionIDRIBSEC(string contract = default(string), string gasLimit = default(string), GetTransactionDetailsByTransactionIDRIBSECGasPrice gasPrice = default(GetTransactionDetailsByTransactionIDRIBSECGasPrice), string gasUsed = default(string), string inputData = default(string), string nonce = default(string))
+        public GetTransactionDetailsByTransactionIDRIBSEC(string contract = default(string), string gasLimit = default(string), GetTransactionDetailsByTransactionIDRIBSECGasPrice gasPrice = default(GetTransactionDetailsByTransactionIDRIBSECGasPrice), string gasUsed = default(string), string inputData = default(string), int nonce = default(int))
         {
             // to ensure "contract" is required (not null)
             if (contract == null) {
@@ -73,10 +73,6 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("inputData is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
             }
             this.InputData = inputData;
-            // to ensure "nonce" is required (not null)
-            if (nonce == null) {
-                throw new ArgumentNullException("nonce is a required property for GetTransactionDetailsByTransactionIDRIBSEC and cannot be null");
-            }
             this.Nonce = nonce;
         }
 
@@ -119,7 +115,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address.</value>
         [DataMember(Name = "nonce", IsRequired = true, EmitDefaultValue = false)]
-        public string Nonce { get; set; }
+        public int Nonce { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -127,7 +123,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionDetailsByTransactionIDRIBSEC {\n");
             sb.Append("  Contract: ").Append(Contract).Append("\n");
             sb.Append("  GasLimit: ").Append(GasLimit).Append("\n");
@@ -166,8 +162,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTransactionDetailsByTransactionIDRIBSEC input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Contract == input.Contract ||
@@ -196,8 +193,7 @@ namespace CryptoAPIs.Model
                 ) && 
                 (
                     this.Nonce == input.Nonce ||
-                    (this.Nonce != null &&
-                    this.Nonce.Equals(input.Nonce))
+                    this.Nonce.Equals(input.Nonce)
                 );
         }
 
@@ -211,17 +207,26 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Contract != null)
-                    hashCode = hashCode * 59 + this.Contract.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Contract.GetHashCode();
+                }
                 if (this.GasLimit != null)
-                    hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
                 if (this.GasPrice != null)
-                    hashCode = hashCode * 59 + this.GasPrice.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
+                }
                 if (this.GasUsed != null)
-                    hashCode = hashCode * 59 + this.GasUsed.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasUsed.GetHashCode();
+                }
                 if (this.InputData != null)
-                    hashCode = hashCode * 59 + this.InputData.GetHashCode();
-                if (this.Nonce != null)
-                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InputData.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
                 return hashCode;
             }
         }

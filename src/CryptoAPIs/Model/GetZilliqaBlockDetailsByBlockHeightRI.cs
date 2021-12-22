@@ -185,7 +185,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetZilliqaBlockDetailsByBlockHeightRI {\n");
             sb.Append("  BlockHash: ").Append(BlockHash).Append("\n");
             sb.Append("  Difficulty: ").Append(Difficulty).Append("\n");
@@ -230,8 +230,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetZilliqaBlockDetailsByBlockHeightRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.BlockHash == input.BlockHash ||
@@ -301,24 +302,38 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.BlockHash != null)
-                    hashCode = hashCode * 59 + this.BlockHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockHash.GetHashCode();
+                }
                 if (this.Difficulty != null)
-                    hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
-                hashCode = hashCode * 59 + this.DsBlock.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Difficulty.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.DsBlock.GetHashCode();
                 if (this.DsDifficulty != null)
-                    hashCode = hashCode * 59 + this.DsDifficulty.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DsDifficulty.GetHashCode();
+                }
                 if (this.DsLeader != null)
-                    hashCode = hashCode * 59 + this.DsLeader.GetHashCode();
-                hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
-                hashCode = hashCode * 59 + this.GasUsed.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DsLeader.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                hashCode = (hashCode * 59) + this.GasUsed.GetHashCode();
                 if (this.MicroBlocks != null)
-                    hashCode = hashCode * 59 + this.MicroBlocks.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MicroBlocks.GetHashCode();
+                }
                 if (this.NextBlockHash != null)
-                    hashCode = hashCode * 59 + this.NextBlockHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.NextBlockHash.GetHashCode();
+                }
                 if (this.PreviousBlockHash != null)
-                    hashCode = hashCode * 59 + this.PreviousBlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionsCount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PreviousBlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
+                hashCode = (hashCode * 59) + this.TransactionsCount.GetHashCode();
                 return hashCode;
             }
         }

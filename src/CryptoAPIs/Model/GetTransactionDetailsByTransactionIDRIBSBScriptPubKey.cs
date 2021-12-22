@@ -110,7 +110,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionDetailsByTransactionIDRIBSBScriptPubKey {\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  Asm: ").Append(Asm).Append("\n");
@@ -148,8 +148,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTransactionDetailsByTransactionIDRIBSBScriptPubKey input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Addresses == input.Addresses ||
@@ -188,14 +189,22 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Addresses != null)
-                    hashCode = hashCode * 59 + this.Addresses.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Addresses.GetHashCode();
+                }
                 if (this.Asm != null)
-                    hashCode = hashCode * 59 + this.Asm.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Asm.GetHashCode();
+                }
                 if (this.Hex != null)
-                    hashCode = hashCode * 59 + this.Hex.GetHashCode();
-                hashCode = hashCode * 59 + this.ReqSigs.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Hex.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ReqSigs.GetHashCode();
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 return hashCode;
             }
         }

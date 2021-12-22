@@ -198,7 +198,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AddressTokensTransactionConfirmedDataItem {\n");
             sb.Append("  Blockchain: ").Append(Blockchain).Append("\n");
             sb.Append("  Network: ").Append(Network).Append("\n");
@@ -239,8 +239,9 @@ namespace CryptoAPIs.Model
         public bool Equals(AddressTokensTransactionConfirmedDataItem input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Blockchain == input.Blockchain ||
@@ -292,19 +293,31 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Blockchain != null)
-                    hashCode = hashCode * 59 + this.Blockchain.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Blockchain.GetHashCode();
+                }
                 if (this.Network != null)
-                    hashCode = hashCode * 59 + this.Network.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
+                }
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
                 if (this.MinedInBlock != null)
-                    hashCode = hashCode * 59 + this.MinedInBlock.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MinedInBlock.GetHashCode();
+                }
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
-                hashCode = hashCode * 59 + this.TokenType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 if (this.Token != null)
-                    hashCode = hashCode * 59 + this.Token.GetHashCode();
-                hashCode = hashCode * 59 + this.Direction.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Token.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Direction.GetHashCode();
                 return hashCode;
             }
         }

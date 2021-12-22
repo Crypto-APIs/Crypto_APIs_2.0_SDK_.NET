@@ -51,7 +51,7 @@ namespace CryptoAPIs.Model
         /// <param name="vShieldedSpend">Object Array representation of transaction spend descriptions (required).</param>
         /// <param name="valueBalance">Defines the transaction value balance. (required).</param>
         /// <param name="versionGroupId">Represents the transaction version group ID. (required).</param>
-        public ListUnspentTransactionOutputsByAddressRIBlockchainSpecific(int vSize = default(int), string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), bool overwintered = default(bool), List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVJoinSplit> vJoinSplit = default(List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVJoinSplit>), List<ListConfirmedTransactionsByAddressRIBSZVShieldedOutput> vShieldedOutput = default(List<ListConfirmedTransactionsByAddressRIBSZVShieldedOutput>), List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend> vShieldedSpend = default(List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend>), string valueBalance = default(string), string versionGroupId = default(string))
+        public ListUnspentTransactionOutputsByAddressRIBlockchainSpecific(int vSize = default(int), string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), bool overwintered = default(bool), List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVJoinSplit> vJoinSplit = default(List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVJoinSplit>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput> vShieldedOutput = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput>), List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend> vShieldedSpend = default(List<ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend>), string valueBalance = default(string), string versionGroupId = default(string))
         {
             this.VSize = vSize;
             // to ensure "bindingSig" is required (not null)
@@ -144,7 +144,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Object Array representation of transaction output descriptions</value>
         [DataMember(Name = "vShieldedOutput", EmitDefaultValue = false)]
-        public List<ListConfirmedTransactionsByAddressRIBSZVShieldedOutput> VShieldedOutput { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput> VShieldedOutput { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction spend descriptions
@@ -173,7 +173,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListUnspentTransactionOutputsByAddressRIBlockchainSpecific {\n");
             sb.Append("  VSize: ").Append(VSize).Append("\n");
             sb.Append("  BindingSig: ").Append(BindingSig).Append("\n");
@@ -217,8 +217,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListUnspentTransactionOutputsByAddressRIBlockchainSpecific input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.VSize == input.VSize ||
@@ -286,25 +287,41 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.VSize.GetHashCode();
+                hashCode = (hashCode * 59) + this.VSize.GetHashCode();
                 if (this.BindingSig != null)
-                    hashCode = hashCode * 59 + this.BindingSig.GetHashCode();
-                hashCode = hashCode * 59 + this.ExpiryHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BindingSig.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ExpiryHeight.GetHashCode();
                 if (this.JoinSplitPubKey != null)
-                    hashCode = hashCode * 59 + this.JoinSplitPubKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.JoinSplitPubKey.GetHashCode();
+                }
                 if (this.JoinSplitSig != null)
-                    hashCode = hashCode * 59 + this.JoinSplitSig.GetHashCode();
-                hashCode = hashCode * 59 + this.Overwintered.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.JoinSplitSig.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Overwintered.GetHashCode();
                 if (this.VJoinSplit != null)
-                    hashCode = hashCode * 59 + this.VJoinSplit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VJoinSplit.GetHashCode();
+                }
                 if (this.VShieldedOutput != null)
-                    hashCode = hashCode * 59 + this.VShieldedOutput.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VShieldedOutput.GetHashCode();
+                }
                 if (this.VShieldedSpend != null)
-                    hashCode = hashCode * 59 + this.VShieldedSpend.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VShieldedSpend.GetHashCode();
+                }
                 if (this.ValueBalance != null)
-                    hashCode = hashCode * 59 + this.ValueBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ValueBalance.GetHashCode();
+                }
                 if (this.VersionGroupId != null)
-                    hashCode = hashCode * 59 + this.VersionGroupId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.VersionGroupId.GetHashCode();
+                }
                 return hashCode;
             }
         }

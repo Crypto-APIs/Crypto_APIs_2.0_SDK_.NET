@@ -98,12 +98,12 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Chainwork'
         }
         /// <summary>
-        /// Test the property 'Merkleroot'
+        /// Test the property 'MerkleRoot'
         /// </summary>
         [Fact]
-        public void MerklerootTest()
+        public void MerkleRootTest()
         {
-            // TODO unit test for the property 'Merkleroot'
+            // TODO unit test for the property 'MerkleRoot'
         }
         /// <summary>
         /// Test the property '_Version'

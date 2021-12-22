@@ -109,7 +109,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListUnconfirmedTransactionsByAddressRIBSEC {\n");
             sb.Append("  Fee: ").Append(Fee).Append("\n");
             sb.Append("  GasLimit: ").Append(GasLimit).Append("\n");
@@ -147,8 +147,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListUnconfirmedTransactionsByAddressRIBSEC input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Fee == input.Fee ||
@@ -186,14 +187,22 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Fee != null)
-                    hashCode = hashCode * 59 + this.Fee.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Fee.GetHashCode();
+                }
                 if (this.GasLimit != null)
-                    hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
                 if (this.GasPrice != null)
-                    hashCode = hashCode * 59 + this.GasPrice.GetHashCode();
-                hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasPrice.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
                 if (this.TransactionStatus != null)
-                    hashCode = hashCode * 59 + this.TransactionStatus.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionStatus.GetHashCode();
+                }
                 return hashCode;
             }
         }

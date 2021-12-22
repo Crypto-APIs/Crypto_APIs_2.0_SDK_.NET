@@ -115,7 +115,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AddressTokensTransactionUnconfirmedOmni {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PropertyId: ").Append(PropertyId).Append("\n");
@@ -153,8 +153,9 @@ namespace CryptoAPIs.Model
         public bool Equals(AddressTokensTransactionUnconfirmedOmni input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Name == input.Name ||
@@ -193,15 +194,25 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.PropertyId != null)
-                    hashCode = hashCode * 59 + this.PropertyId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PropertyId.GetHashCode();
+                }
                 if (this.TransactionType != null)
-                    hashCode = hashCode * 59 + this.TransactionType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionType.GetHashCode();
+                }
                 if (this.CreatedByTransactionId != null)
-                    hashCode = hashCode * 59 + this.CreatedByTransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreatedByTransactionId.GetHashCode();
+                }
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 return hashCode;
             }
         }

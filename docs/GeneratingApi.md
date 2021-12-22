@@ -88,10 +88,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **201** | The resource has been successfully created. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | You have reached the maximum Deposit Addresses count which is currently {depositAddressesCount}. Please, upgrade your plan in order to have a higher Deposit Address count. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified resource has not been found. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |

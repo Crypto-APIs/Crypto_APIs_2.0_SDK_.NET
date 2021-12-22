@@ -229,7 +229,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class CreateCoinsTransactionRequestFromAddressRI {\n");
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
@@ -270,8 +270,9 @@ namespace CryptoAPIs.Model
         public bool Equals(CreateCoinsTransactionRequestFromAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CallbackSecretKey == input.CallbackSecretKey ||
@@ -324,19 +325,31 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.CallbackSecretKey != null)
-                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
+                }
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
-                hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.FeePriority.GetHashCode();
                 if (this.Note != null)
-                    hashCode = hashCode * 59 + this.Note.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Note.GetHashCode();
+                }
                 if (this.Recipients != null)
-                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Recipients.GetHashCode();
+                }
                 if (this.Senders != null)
-                    hashCode = hashCode * 59 + this.Senders.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Senders.GetHashCode();
+                }
                 if (this.TransactionRequestId != null)
-                    hashCode = hashCode * 59 + this.TransactionRequestId.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionRequestStatus.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionRequestId.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TransactionRequestStatus.GetHashCode();
                 return hashCode;
             }
         }

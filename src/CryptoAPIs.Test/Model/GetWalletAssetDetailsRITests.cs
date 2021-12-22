@@ -74,12 +74,28 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'DepositAddressesCount'
         }
         /// <summary>
+        /// Test the property 'FungibleTokens'
+        /// </summary>
+        [Fact]
+        public void FungibleTokensTest()
+        {
+            // TODO unit test for the property 'FungibleTokens'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Fact]
         public void NameTest()
         {
             // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'NonFungibleTokens'
+        /// </summary>
+        [Fact]
+        public void NonFungibleTokensTest()
+        {
+            // TODO unit test for the property 'NonFungibleTokens'
         }
         /// <summary>
         /// Test the property 'RecievedConfirmedAmount'

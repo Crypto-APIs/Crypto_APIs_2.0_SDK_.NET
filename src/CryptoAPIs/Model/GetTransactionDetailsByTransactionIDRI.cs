@@ -51,13 +51,9 @@ namespace CryptoAPIs.Model
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="fee">fee (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public GetTransactionDetailsByTransactionIDRI(int index = default(int), string isConfirmed = default(string), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetTransactionDetailsByTransactionIDRIRecipients>), List<GetTransactionDetailsByTransactionIDRISenders> senders = default(List<GetTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), GetTransactionDetailsByTransactionIDRIFee fee = default(GetTransactionDetailsByTransactionIDRIFee), GetTransactionDetailsByTransactionIDRIBS blockchainSpecific = default(GetTransactionDetailsByTransactionIDRIBS))
+        public GetTransactionDetailsByTransactionIDRI(int index = default(int), bool isConfirmed = default(bool), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetTransactionDetailsByTransactionIDRIRecipients>), List<GetTransactionDetailsByTransactionIDRISenders> senders = default(List<GetTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), GetTransactionDetailsByTransactionIDRIFee fee = default(GetTransactionDetailsByTransactionIDRIFee), GetTransactionDetailsByTransactionIDRIBS blockchainSpecific = default(GetTransactionDetailsByTransactionIDRIBS))
         {
             this.Index = index;
-            // to ensure "isConfirmed" is required (not null)
-            if (isConfirmed == null) {
-                throw new ArgumentNullException("isConfirmed is a required property for GetTransactionDetailsByTransactionIDRI and cannot be null");
-            }
             this.IsConfirmed = isConfirmed;
             // to ensure "recipients" is required (not null)
             if (recipients == null) {
@@ -105,8 +101,8 @@ namespace CryptoAPIs.Model
         /// Represents the state of the transaction whether it is confirmed or not confirmed.
         /// </summary>
         /// <value>Represents the state of the transaction whether it is confirmed or not confirmed.</value>
-        [DataMember(Name = "isConfirmed", IsRequired = true, EmitDefaultValue = false)]
-        public string IsConfirmed { get; set; }
+        [DataMember(Name = "isConfirmed", IsRequired = true, EmitDefaultValue = true)]
+        public bool IsConfirmed { get; set; }
 
         /// <summary>
         /// Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -175,7 +171,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionDetailsByTransactionIDRI {\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  IsConfirmed: ").Append(IsConfirmed).Append("\n");
@@ -219,8 +215,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetTransactionDetailsByTransactionIDRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Index == input.Index ||
@@ -228,8 +225,7 @@ namespace CryptoAPIs.Model
                 ) && 
                 (
                     this.IsConfirmed == input.IsConfirmed ||
-                    (this.IsConfirmed != null &&
-                    this.IsConfirmed.Equals(input.IsConfirmed))
+                    this.IsConfirmed.Equals(input.IsConfirmed)
                 ) && 
                 (
                     this.MinedInBlockHash == input.MinedInBlockHash ||
@@ -287,25 +283,38 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Index.GetHashCode();
-                if (this.IsConfirmed != null)
-                    hashCode = hashCode * 59 + this.IsConfirmed.GetHashCode();
+                hashCode = (hashCode * 59) + this.Index.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsConfirmed.GetHashCode();
                 if (this.MinedInBlockHash != null)
-                    hashCode = hashCode * 59 + this.MinedInBlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.MinedInBlockHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MinedInBlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MinedInBlockHeight.GetHashCode();
                 if (this.Recipients != null)
-                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Recipients.GetHashCode();
+                }
                 if (this.Senders != null)
-                    hashCode = hashCode * 59 + this.Senders.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Senders.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
                 if (this.TransactionHash != null)
-                    hashCode = hashCode * 59 + this.TransactionHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
                 if (this.TransactionId != null)
-                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
+                }
                 if (this.Fee != null)
-                    hashCode = hashCode * 59 + this.Fee.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Fee.GetHashCode();
+                }
                 if (this.BlockchainSpecific != null)
-                    hashCode = hashCode * 59 + this.BlockchainSpecific.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockchainSpecific.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -194,7 +194,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AddTokensToExistingFromAddressRI {\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  ConfirmationsCount: ").Append(ConfirmationsCount).Append("\n");
@@ -237,8 +237,9 @@ namespace CryptoAPIs.Model
         public bool Equals(AddTokensToExistingFromAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CallbackUrl == input.CallbackUrl ||
@@ -299,22 +300,36 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
-                hashCode = hashCode * 59 + this.ConfirmationsCount.GetHashCode();
-                hashCode = hashCode * 59 + this.CreatedTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ConfirmationsCount.GetHashCode();
+                hashCode = (hashCode * 59) + this.CreatedTimestamp.GetHashCode();
                 if (this.FeeAddress != null)
-                    hashCode = hashCode * 59 + this.FeeAddress.GetHashCode();
-                hashCode = hashCode * 59 + this.FeePriority.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.FeeAddress.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.FeePriority.GetHashCode();
                 if (this.FromAddress != null)
-                    hashCode = hashCode * 59 + this.FromAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.FromAddress.GetHashCode();
+                }
                 if (this.MinimumTransferAmount != null)
-                    hashCode = hashCode * 59 + this.MinimumTransferAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MinimumTransferAmount.GetHashCode();
+                }
                 if (this.ReferenceId != null)
-                    hashCode = hashCode * 59 + this.ReferenceId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ReferenceId.GetHashCode();
+                }
                 if (this.ToAddress != null)
-                    hashCode = hashCode * 59 + this.ToAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ToAddress.GetHashCode();
+                }
                 if (this.TokenData != null)
-                    hashCode = hashCode * 59 + this.TokenData.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenData.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -193,14 +193,6 @@ namespace CryptoAPIs.Test.Model
         {
             // TODO unit test for the property 'Uncles'
         }
-        /// <summary>
-        /// Test the property 'Merkleroot'
-        /// </summary>
-        [Fact]
-        public void MerklerootTest()
-        {
-            // TODO unit test for the property 'Merkleroot'
-        }
 
     }
 

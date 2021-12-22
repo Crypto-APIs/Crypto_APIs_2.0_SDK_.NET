@@ -159,7 +159,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetBlockDetailsByBlockHeightRIBSE {\n");
             sb.Append("  Difficulty: ").Append(Difficulty).Append("\n");
             sb.Append("  Nonce: ").Append(Nonce).Append("\n");
@@ -201,8 +201,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetBlockDetailsByBlockHeightRIBSE input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Difficulty == input.Difficulty ||
@@ -259,21 +260,35 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Difficulty != null)
-                    hashCode = hashCode * 59 + this.Difficulty.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Difficulty.GetHashCode();
+                }
                 if (this.Nonce != null)
-                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
-                hashCode = hashCode * 59 + this.Size.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Size.GetHashCode();
                 if (this.ExtraData != null)
-                    hashCode = hashCode * 59 + this.ExtraData.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ExtraData.GetHashCode();
+                }
                 if (this.GasLimit != null)
-                    hashCode = hashCode * 59 + this.GasLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasLimit.GetHashCode();
+                }
                 if (this.GasUsed != null)
-                    hashCode = hashCode * 59 + this.GasUsed.GetHashCode();
-                hashCode = hashCode * 59 + this.MinedInSeconds.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.GasUsed.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MinedInSeconds.GetHashCode();
                 if (this.Sha3Uncles != null)
-                    hashCode = hashCode * 59 + this.Sha3Uncles.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Sha3Uncles.GetHashCode();
+                }
                 if (this.TotalDifficulty != null)
-                    hashCode = hashCode * 59 + this.TotalDifficulty.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalDifficulty.GetHashCode();
+                }
                 return hashCode;
             }
         }

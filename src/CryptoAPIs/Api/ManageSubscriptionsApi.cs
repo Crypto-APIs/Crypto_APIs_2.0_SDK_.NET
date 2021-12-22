@@ -28,6 +28,31 @@ namespace CryptoAPIs.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Activate Blockchain Event Subscription
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <returns>ActivateBlockchainEventSubscriptionR</returns>
+        ActivateBlockchainEventSubscriptionR ActivateBlockchainEventSubscription(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB));
+
+        /// <summary>
+        /// Activate Blockchain Event Subscription
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <returns>ApiResponse of ActivateBlockchainEventSubscriptionR</returns>
+        ApiResponse<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionWithHttpInfo(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB));
+        /// <summary>
         /// Delete Blockchain Event Subscription
         /// </summary>
         /// <remarks>
@@ -92,6 +117,33 @@ namespace CryptoAPIs.Api
     public interface IManageSubscriptionsApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Activate Blockchain Event Subscription
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ActivateBlockchainEventSubscriptionR</returns>
+        System.Threading.Tasks.Task<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Activate Blockchain Event Subscription
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ActivateBlockchainEventSubscriptionR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ActivateBlockchainEventSubscriptionR>> ActivateBlockchainEventSubscriptionWithHttpInfoAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Blockchain Event Subscription
         /// </summary>
@@ -273,6 +325,170 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// Activate Blockchain Event Subscription Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <returns>ActivateBlockchainEventSubscriptionR</returns>
+        public ActivateBlockchainEventSubscriptionR ActivateBlockchainEventSubscription(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB))
+        {
+            CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> localVarResponse = ActivateBlockchainEventSubscriptionWithHttpInfo(referenceId, context, activateBlockchainEventSubscriptionRB);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Activate Blockchain Event Subscription Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <returns>ApiResponse of ActivateBlockchainEventSubscriptionR</returns>
+        public CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionWithHttpInfo(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB))
+        {
+            // verify the required parameter 'referenceId' is set
+            if (referenceId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'referenceId' when calling ManageSubscriptionsApi->ActivateBlockchainEventSubscription");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("referenceId", CryptoAPIs.Client.ClientUtils.ParameterToString(referenceId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = activateBlockchainEventSubscriptionRB;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ActivateBlockchainEventSubscriptionR>("/blockchain-events/subscriptions/{referenceId}/activate", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ActivateBlockchainEventSubscription", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Activate Blockchain Event Subscription Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ActivateBlockchainEventSubscriptionR</returns>
+        public async System.Threading.Tasks.Task<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> localVarResponse = await ActivateBlockchainEventSubscriptionWithHttpInfoAsync(referenceId, context, activateBlockchainEventSubscriptionRB, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Activate Blockchain Event Subscription Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \&quot;maximum retry attempts reached\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ActivateBlockchainEventSubscriptionR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR>> ActivateBlockchainEventSubscriptionWithHttpInfoAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'referenceId' is set
+            if (referenceId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'referenceId' when calling ManageSubscriptionsApi->ActivateBlockchainEventSubscription");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("referenceId", CryptoAPIs.Client.ClientUtils.ParameterToString(referenceId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = activateBlockchainEventSubscriptionRB;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ActivateBlockchainEventSubscriptionR>("/blockchain-events/subscriptions/{referenceId}/activate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ActivateBlockchainEventSubscription", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Delete Blockchain Event Subscription Through this endpoint the customer can delete blockchain event subscriptions they have by attributes &#x60;referenceId&#x60; and &#x60;network&#x60;.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -300,15 +516,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling ManageSubscriptionsApi->DeleteBlockchainEventSubscription");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling ManageSubscriptionsApi->DeleteBlockchainEventSubscription");
+            }
 
             // verify the required parameter 'referenceId' is set
             if (referenceId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'referenceId' when calling ManageSubscriptionsApi->DeleteBlockchainEventSubscription");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -321,10 +543,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -342,11 +570,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<DeleteBlockchainEventSubscriptionR>("/blockchain-events/{blockchain}/{network}/subscriptions/{referenceId}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteBlockchainEventSubscription", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -382,15 +612,21 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling ManageSubscriptionsApi->DeleteBlockchainEventSubscription");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling ManageSubscriptionsApi->DeleteBlockchainEventSubscription");
+            }
 
             // verify the required parameter 'referenceId' is set
             if (referenceId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'referenceId' when calling ManageSubscriptionsApi->DeleteBlockchainEventSubscription");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -403,12 +639,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -425,13 +666,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<DeleteBlockchainEventSubscriptionR>("/blockchain-events/{blockchain}/{network}/subscriptions/{referenceId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteBlockchainEventSubscription", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -467,11 +710,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling ManageSubscriptionsApi->ListBlockchainEventsSubscriptions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling ManageSubscriptionsApi->ListBlockchainEventsSubscriptions");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -484,10 +731,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -512,11 +765,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ListBlockchainEventsSubscriptionsR>("/blockchain-events/{blockchain}/{network}/subscriptions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListBlockchainEventsSubscriptions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -554,11 +809,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling ManageSubscriptionsApi->ListBlockchainEventsSubscriptions");
+            }
 
             // verify the required parameter 'network' is set
             if (network == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling ManageSubscriptionsApi->ListBlockchainEventsSubscriptions");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -571,12 +830,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
             localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
@@ -600,13 +864,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ListBlockchainEventsSubscriptionsR>("/blockchain-events/{blockchain}/{network}/subscriptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListBlockchainEventsSubscriptions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

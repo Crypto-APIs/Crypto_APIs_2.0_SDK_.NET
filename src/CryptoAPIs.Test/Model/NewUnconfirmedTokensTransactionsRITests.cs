@@ -113,14 +113,6 @@ namespace CryptoAPIs.Test.Model
         {
             // TODO unit test for the property 'ReferenceId'
         }
-        /// <summary>
-        /// Test the property 'TransactionId'
-        /// </summary>
-        [Fact]
-        public void TransactionIdTest()
-        {
-            // TODO unit test for the property 'TransactionId'
-        }
 
     }
 

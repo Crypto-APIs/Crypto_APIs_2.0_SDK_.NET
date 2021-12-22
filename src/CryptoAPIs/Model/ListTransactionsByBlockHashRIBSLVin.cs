@@ -48,7 +48,7 @@ namespace CryptoAPIs.Model
         /// <param name="txinwitness">txinwitness (required).</param>
         /// <param name="value">Represents the sent/received amount. (required).</param>
         /// <param name="vout">It refers to the index of the output address of this transaction. The index starts from 0. (required).</param>
-        public ListTransactionsByBlockHashRIBSLVin(List<string> addresses = default(List<string>), string coinbase = default(string), GetTransactionDetailsByTransactionIDRIBSLScriptSig scriptSig = default(GetTransactionDetailsByTransactionIDRIBSLScriptSig), string sequence = default(string), string txid = default(string), List<string> txinwitness = default(List<string>), string value = default(string), int vout = default(int))
+        public ListTransactionsByBlockHashRIBSLVin(List<string> addresses = default(List<string>), string coinbase = default(string), ListTransactionsByBlockHashRIBSLScriptSig scriptSig = default(ListTransactionsByBlockHashRIBSLScriptSig), string sequence = default(string), string txid = default(string), List<string> txinwitness = default(List<string>), string value = default(string), int vout = default(int))
         {
             // to ensure "addresses" is required (not null)
             if (addresses == null) {
@@ -101,7 +101,7 @@ namespace CryptoAPIs.Model
         /// Gets or Sets ScriptSig
         /// </summary>
         [DataMember(Name = "scriptSig", IsRequired = true, EmitDefaultValue = false)]
-        public GetTransactionDetailsByTransactionIDRIBSLScriptSig ScriptSig { get; set; }
+        public ListTransactionsByBlockHashRIBSLScriptSig ScriptSig { get; set; }
 
         /// <summary>
         /// Represents the script sequence number.
@@ -143,7 +143,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTransactionsByBlockHashRIBSLVin {\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  Coinbase: ").Append(Coinbase).Append("\n");
@@ -184,8 +184,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTransactionsByBlockHashRIBSLVin input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Addresses == input.Addresses ||
@@ -240,20 +241,34 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Addresses != null)
-                    hashCode = hashCode * 59 + this.Addresses.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Addresses.GetHashCode();
+                }
                 if (this.Coinbase != null)
-                    hashCode = hashCode * 59 + this.Coinbase.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Coinbase.GetHashCode();
+                }
                 if (this.ScriptSig != null)
-                    hashCode = hashCode * 59 + this.ScriptSig.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ScriptSig.GetHashCode();
+                }
                 if (this.Sequence != null)
-                    hashCode = hashCode * 59 + this.Sequence.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Sequence.GetHashCode();
+                }
                 if (this.Txid != null)
-                    hashCode = hashCode * 59 + this.Txid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Txid.GetHashCode();
+                }
                 if (this.Txinwitness != null)
-                    hashCode = hashCode * 59 + this.Txinwitness.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Txinwitness.GetHashCode();
+                }
                 if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
-                hashCode = hashCode * 59 + this.Vout.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Vout.GetHashCode();
                 return hashCode;
             }
         }

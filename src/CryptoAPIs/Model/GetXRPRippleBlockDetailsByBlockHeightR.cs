@@ -97,7 +97,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetXRPRippleBlockDetailsByBlockHeightR {\n");
             sb.Append("  ApiVersion: ").Append(ApiVersion).Append("\n");
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
@@ -134,8 +134,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetXRPRippleBlockDetailsByBlockHeightR input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ApiVersion == input.ApiVersion ||
@@ -169,13 +170,21 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.ApiVersion != null)
-                    hashCode = hashCode * 59 + this.ApiVersion.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ApiVersion.GetHashCode();
+                }
                 if (this.RequestId != null)
-                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.RequestId.GetHashCode();
+                }
                 if (this.Context != null)
-                    hashCode = hashCode * 59 + this.Context.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Context.GetHashCode();
+                }
                 if (this.Data != null)
-                    hashCode = hashCode * 59 + this.Data.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
+                }
                 return hashCode;
             }
         }

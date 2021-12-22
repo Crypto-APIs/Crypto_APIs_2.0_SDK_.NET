@@ -81,7 +81,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock {\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
             sb.Append("  Hash: ").Append(Hash).Append("\n");
@@ -117,8 +117,9 @@ namespace CryptoAPIs.Model
         public bool Equals(AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Height == input.Height ||
@@ -144,10 +145,12 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Height.GetHashCode();
+                hashCode = (hashCode * 59) + this.Height.GetHashCode();
                 if (this.Hash != null)
-                    hashCode = hashCode * 59 + this.Hash.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Hash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
                 return hashCode;
             }
         }

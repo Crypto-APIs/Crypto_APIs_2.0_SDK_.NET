@@ -107,7 +107,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class BlockMinedDataItem {\n");
             sb.Append("  Blockchain: ").Append(Blockchain).Append("\n");
             sb.Append("  Network: ").Append(Network).Append("\n");
@@ -145,8 +145,9 @@ namespace CryptoAPIs.Model
         public bool Equals(BlockMinedDataItem input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Blockchain == input.Blockchain ||
@@ -183,13 +184,19 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Blockchain != null)
-                    hashCode = hashCode * 59 + this.Blockchain.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Blockchain.GetHashCode();
+                }
                 if (this.Network != null)
-                    hashCode = hashCode * 59 + this.Network.GetHashCode();
-                hashCode = hashCode * 59 + this.Height.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Network.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Height.GetHashCode();
                 if (this.Hash != null)
-                    hashCode = hashCode * 59 + this.Hash.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Hash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
                 return hashCode;
             }
         }

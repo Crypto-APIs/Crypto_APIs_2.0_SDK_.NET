@@ -146,7 +146,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class GetInternalTransactionByTransactionHashAndOperationIdRI {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  BlockHash: ").Append(BlockHash).Append("\n");
@@ -187,8 +187,9 @@ namespace CryptoAPIs.Model
         public bool Equals(GetInternalTransactionByTransactionHashAndOperationIdRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Amount == input.Amount ||
@@ -240,19 +241,31 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 if (this.BlockHash != null)
-                    hashCode = hashCode * 59 + this.BlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.BlockHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.BlockHeight.GetHashCode();
                 if (this.OperationType != null)
-                    hashCode = hashCode * 59 + this.OperationType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OperationType.GetHashCode();
+                }
                 if (this.ParentHash != null)
-                    hashCode = hashCode * 59 + this.ParentHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ParentHash.GetHashCode();
+                }
                 if (this.Recipient != null)
-                    hashCode = hashCode * 59 + this.Recipient.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Recipient.GetHashCode();
+                }
                 if (this.Sender != null)
-                    hashCode = hashCode * 59 + this.Sender.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Sender.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
                 return hashCode;
             }
         }

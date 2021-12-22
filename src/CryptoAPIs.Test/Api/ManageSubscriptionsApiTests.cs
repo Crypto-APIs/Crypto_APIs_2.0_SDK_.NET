@@ -56,6 +56,20 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test ActivateBlockchainEventSubscription
+        /// </summary>
+        [Fact]
+        public void ActivateBlockchainEventSubscriptionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string referenceId = null;
+            //string context = null;
+            //ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = null;
+            //var response = instance.ActivateBlockchainEventSubscription(referenceId, context, activateBlockchainEventSubscriptionRB);
+            //Assert.IsType<ActivateBlockchainEventSubscriptionR>(response);
+        }
+
+        /// <summary>
         /// Test DeleteBlockchainEventSubscription
         /// </summary>
         [Fact]

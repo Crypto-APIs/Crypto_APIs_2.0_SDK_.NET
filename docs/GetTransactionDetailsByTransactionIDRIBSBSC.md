@@ -5,7 +5,7 @@ Binance Smart Chain
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Contract** | **string** | Represents the specific transaction contract | [optional] 
+**Contract** | **string** | Represents the specific transaction contract | 
 **GasLimit** | **string** | Represents the amount of gas used by this specific transaction alone. | 
 **GasPrice** | [**GetTransactionDetailsByTransactionIDRIBSBSCGasPrice**](GetTransactionDetailsByTransactionIDRIBSBSCGasPrice.md) |  | 
 **GasUsed** | **string** | Defines the unit of the gas price amount, e.g. BTC, ETH, XRP. | 

@@ -48,7 +48,7 @@ namespace CryptoAPIs.Model
         /// <param name="totalCoins">totalCoins (required).</param>
         /// <param name="totalFees">totalFees (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public ListLatestMinedBlocksRI(string hash = default(string), int height = default(int), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), GetLatestMinedXRPRippleBlockRITotalCoins totalCoins = default(GetLatestMinedXRPRippleBlockRITotalCoins), GetLatestMinedXRPRippleBlockRITotalFees totalFees = default(GetLatestMinedXRPRippleBlockRITotalFees), ListLatestMinedBlocksRIBS blockchainSpecific = default(ListLatestMinedBlocksRIBS))
+        public ListLatestMinedBlocksRI(string hash = default(string), int height = default(int), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), ListLatestMinedBlocksRITotalCoins totalCoins = default(ListLatestMinedBlocksRITotalCoins), ListLatestMinedBlocksRITotalFees totalFees = default(ListLatestMinedBlocksRITotalFees), ListLatestMinedBlocksRIBS blockchainSpecific = default(ListLatestMinedBlocksRIBS))
         {
             // to ensure "hash" is required (not null)
             if (hash == null) {
@@ -119,13 +119,13 @@ namespace CryptoAPIs.Model
         /// Gets or Sets TotalCoins
         /// </summary>
         [DataMember(Name = "totalCoins", IsRequired = true, EmitDefaultValue = false)]
-        public GetLatestMinedXRPRippleBlockRITotalCoins TotalCoins { get; set; }
+        public ListLatestMinedBlocksRITotalCoins TotalCoins { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalFees
         /// </summary>
         [DataMember(Name = "totalFees", IsRequired = true, EmitDefaultValue = false)]
-        public GetLatestMinedXRPRippleBlockRITotalFees TotalFees { get; set; }
+        public ListLatestMinedBlocksRITotalFees TotalFees { get; set; }
 
         /// <summary>
         /// Gets or Sets BlockchainSpecific
@@ -139,7 +139,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListLatestMinedBlocksRI {\n");
             sb.Append("  Hash: ").Append(Hash).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
@@ -180,8 +180,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListLatestMinedBlocksRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Hash == input.Hash ||
@@ -232,18 +233,28 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Hash != null)
-                    hashCode = hashCode * 59 + this.Hash.GetHashCode();
-                hashCode = hashCode * 59 + this.Height.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Hash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Height.GetHashCode();
                 if (this.PreviousBlockHash != null)
-                    hashCode = hashCode * 59 + this.PreviousBlockHash.GetHashCode();
-                hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionsCount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PreviousBlockHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
+                hashCode = (hashCode * 59) + this.TransactionsCount.GetHashCode();
                 if (this.TotalCoins != null)
-                    hashCode = hashCode * 59 + this.TotalCoins.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalCoins.GetHashCode();
+                }
                 if (this.TotalFees != null)
-                    hashCode = hashCode * 59 + this.TotalFees.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalFees.GetHashCode();
+                }
                 if (this.BlockchainSpecific != null)
-                    hashCode = hashCode * 59 + this.BlockchainSpecific.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.BlockchainSpecific.GetHashCode();
+                }
                 return hashCode;
             }
         }

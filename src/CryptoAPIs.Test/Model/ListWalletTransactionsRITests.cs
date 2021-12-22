@@ -74,6 +74,30 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Fee'
         }
         /// <summary>
+        /// Test the property 'FungibleTokens'
+        /// </summary>
+        [Fact]
+        public void FungibleTokensTest()
+        {
+            // TODO unit test for the property 'FungibleTokens'
+        }
+        /// <summary>
+        /// Test the property 'InternalTransactions'
+        /// </summary>
+        [Fact]
+        public void InternalTransactionsTest()
+        {
+            // TODO unit test for the property 'InternalTransactions'
+        }
+        /// <summary>
+        /// Test the property 'NonFungibleTokens'
+        /// </summary>
+        [Fact]
+        public void NonFungibleTokensTest()
+        {
+            // TODO unit test for the property 'NonFungibleTokens'
+        }
+        /// <summary>
         /// Test the property 'Recipients'
         /// </summary>
         [Fact]

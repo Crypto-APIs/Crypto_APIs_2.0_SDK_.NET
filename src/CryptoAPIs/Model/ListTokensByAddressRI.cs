@@ -115,7 +115,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListTokensByAddressRI {\n");
             sb.Append("  ConfirmedBalance: ").Append(ConfirmedBalance).Append("\n");
             sb.Append("  ContractAddress: ").Append(ContractAddress).Append("\n");
@@ -153,8 +153,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListTokensByAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ConfirmedBalance == input.ConfirmedBalance ||
@@ -193,15 +194,25 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.ConfirmedBalance != null)
-                    hashCode = hashCode * 59 + this.ConfirmedBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConfirmedBalance.GetHashCode();
+                }
                 if (this.ContractAddress != null)
-                    hashCode = hashCode * 59 + this.ContractAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ContractAddress.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.Symbol != null)
-                    hashCode = hashCode * 59 + this.Symbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Symbol.GetHashCode();
+                }
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 return hashCode;
             }
         }

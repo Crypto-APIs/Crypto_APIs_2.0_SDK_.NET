@@ -58,36 +58,28 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
-        /// Test the property 'ApiVersion'
+        /// Test the property 'Code'
         /// </summary>
         [Fact]
-        public void ApiVersionTest()
+        public void CodeTest()
         {
-            // TODO unit test for the property 'ApiVersion'
+            // TODO unit test for the property 'Code'
         }
         /// <summary>
-        /// Test the property 'RequestId'
+        /// Test the property 'Message'
         /// </summary>
         [Fact]
-        public void RequestIdTest()
+        public void MessageTest()
         {
-            // TODO unit test for the property 'RequestId'
+            // TODO unit test for the property 'Message'
         }
         /// <summary>
-        /// Test the property 'Context'
+        /// Test the property 'Details'
         /// </summary>
         [Fact]
-        public void ContextTest()
+        public void DetailsTest()
         {
-            // TODO unit test for the property 'Context'
-        }
-        /// <summary>
-        /// Test the property 'Error'
-        /// </summary>
-        [Fact]
-        public void ErrorTest()
-        {
-            // TODO unit test for the property 'Error'
+            // TODO unit test for the property 'Details'
         }
 
     }

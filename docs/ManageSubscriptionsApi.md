@@ -4,9 +4,100 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ActivateBlockchainEventSubscription**](ManageSubscriptionsApi.md#activateblockchaineventsubscription) | **POST** /blockchain-events/subscriptions/{referenceId}/activate | Activate Blockchain Event Subscription
 [**DeleteBlockchainEventSubscription**](ManageSubscriptionsApi.md#deleteblockchaineventsubscription) | **DELETE** /blockchain-events/{blockchain}/{network}/subscriptions/{referenceId} | Delete Blockchain Event Subscription
 [**ListBlockchainEventsSubscriptions**](ManageSubscriptionsApi.md#listblockchaineventssubscriptions) | **GET** /blockchain-events/{blockchain}/{network}/subscriptions | List Blockchain Events Subscriptions
 
+
+<a name="activateblockchaineventsubscription"></a>
+# **ActivateBlockchainEventSubscription**
+> ActivateBlockchainEventSubscriptionR ActivateBlockchainEventSubscription (string referenceId, string context = null, ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = null)
+
+Activate Blockchain Event Subscription
+
+Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \"maximum retry attempts reached\".
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
+
+namespace Example
+{
+    public class ActivateBlockchainEventSubscriptionExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://rest.cryptoapis.io/v2";
+            // Configure API key authorization: ApiKey
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new ManageSubscriptionsApi(config);
+            var referenceId = bc243c86-0902-4386-b30d-e6b30fa1f2aa;  // string | Represents a unique ID used to reference the specific callback subscription.
+            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var activateBlockchainEventSubscriptionRB = new ActivateBlockchainEventSubscriptionRB(); // ActivateBlockchainEventSubscriptionRB |  (optional) 
+
+            try
+            {
+                // Activate Blockchain Event Subscription
+                ActivateBlockchainEventSubscriptionR result = apiInstance.ActivateBlockchainEventSubscription(referenceId, context, activateBlockchainEventSubscriptionRB);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ManageSubscriptionsApi.ActivateBlockchainEventSubscription: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **referenceId** | **string**| Represents a unique ID used to reference the specific callback subscription. | 
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+ **activateBlockchainEventSubscriptionRB** | [**ActivateBlockchainEventSubscriptionRB**](ActivateBlockchainEventSubscriptionRB.md)|  | [optional] 
+
+### Return type
+
+[**ActivateBlockchainEventSubscriptionR**](ActivateBlockchainEventSubscriptionR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | The resource has been successfully created. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
+| **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
+| **403** | 403 |  -  |
+| **404** | The specified resource has not been found. |  -  |
+| **409** | The data provided seems to be invalid. |  -  |
+| **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
+| **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
+| **429** | The request limit has been reached. There can be maximum {requests} requests per {seconds} second(s) made. Please contact our team via email if you need more or upgrade your plan. |  -  |
+| **500** | An unexpected server error has occurred, we are working to fix this. Please try again later and in case it occurs again please report it to our team via email. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="deleteblockchaineventsubscription"></a>
 # **DeleteBlockchainEventSubscription**
@@ -87,10 +178,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The delete request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **404** | The specified resource has not been found. |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
@@ -181,10 +272,10 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | The request has been successful. |  -  |
-| **400** | The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination. |  -  |
-| **401** | The provided API key is invalid. Please, generate a new one from your Dashboard. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
 | **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
-| **403** | Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it. |  -  |
+| **403** | 403 |  -  |
 | **409** | The data provided seems to be invalid. |  -  |
 | **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
 | **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |

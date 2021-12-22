@@ -98,7 +98,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class NewConfirmedInternalTransactionsRBDataItem {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  AllowDuplicates: ").Append(AllowDuplicates).Append("\n");
@@ -135,8 +135,9 @@ namespace CryptoAPIs.Model
         public bool Equals(NewConfirmedInternalTransactionsRBDataItem input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Address == input.Address ||
@@ -169,12 +170,18 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
-                hashCode = hashCode * 59 + this.AllowDuplicates.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.AllowDuplicates.GetHashCode();
                 if (this.CallbackSecretKey != null)
-                    hashCode = hashCode * 59 + this.CallbackSecretKey.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
+                }
                 if (this.CallbackUrl != null)
-                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
+                }
                 return hashCode;
             }
         }

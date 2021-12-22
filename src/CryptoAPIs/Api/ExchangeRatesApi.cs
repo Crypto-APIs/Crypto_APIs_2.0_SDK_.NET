@@ -296,11 +296,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'fromAssetSymbol' is set
             if (fromAssetSymbol == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'fromAssetSymbol' when calling ExchangeRatesApi->GetExchangeRateByAssetSymbols");
+            }
 
             // verify the required parameter 'toAssetSymbol' is set
             if (toAssetSymbol == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'toAssetSymbol' when calling ExchangeRatesApi->GetExchangeRateByAssetSymbols");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -313,10 +317,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("fromAssetSymbol", CryptoAPIs.Client.ClientUtils.ParameterToString(fromAssetSymbol)); // path parameter
             localVarRequestOptions.PathParameters.Add("toAssetSymbol", CryptoAPIs.Client.ClientUtils.ParameterToString(toAssetSymbol)); // path parameter
@@ -337,11 +347,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<GetExchangeRateByAssetSymbolsR>("/market-data/exchange-rates/by-symbols/{fromAssetSymbol}/{toAssetSymbol}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetExchangeRateByAssetSymbols", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -377,11 +389,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'fromAssetSymbol' is set
             if (fromAssetSymbol == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'fromAssetSymbol' when calling ExchangeRatesApi->GetExchangeRateByAssetSymbols");
+            }
 
             // verify the required parameter 'toAssetSymbol' is set
             if (toAssetSymbol == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'toAssetSymbol' when calling ExchangeRatesApi->GetExchangeRateByAssetSymbols");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -394,12 +410,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("fromAssetSymbol", CryptoAPIs.Client.ClientUtils.ParameterToString(fromAssetSymbol)); // path parameter
             localVarRequestOptions.PathParameters.Add("toAssetSymbol", CryptoAPIs.Client.ClientUtils.ParameterToString(toAssetSymbol)); // path parameter
@@ -419,13 +440,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<GetExchangeRateByAssetSymbolsR>("/market-data/exchange-rates/by-symbols/{fromAssetSymbol}/{toAssetSymbol}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetExchangeRateByAssetSymbols", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -459,11 +482,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'fromAssetId' is set
             if (fromAssetId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'fromAssetId' when calling ExchangeRatesApi->GetExchangeRateByAssetsIDs");
+            }
 
             // verify the required parameter 'toAssetId' is set
             if (toAssetId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'toAssetId' when calling ExchangeRatesApi->GetExchangeRateByAssetsIDs");
+            }
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -476,10 +503,16 @@ namespace CryptoAPIs.Api
             };
 
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("fromAssetId", CryptoAPIs.Client.ClientUtils.ParameterToString(fromAssetId)); // path parameter
             localVarRequestOptions.PathParameters.Add("toAssetId", CryptoAPIs.Client.ClientUtils.ParameterToString(toAssetId)); // path parameter
@@ -500,11 +533,13 @@ namespace CryptoAPIs.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<GetExchangeRateByAssetsIDsR>("/market-data/exchange-rates/by-asset-ids/{fromAssetId}/{toAssetId}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetExchangeRateByAssetsIDs", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -540,11 +575,15 @@ namespace CryptoAPIs.Api
         {
             // verify the required parameter 'fromAssetId' is set
             if (fromAssetId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'fromAssetId' when calling ExchangeRatesApi->GetExchangeRateByAssetsIDs");
+            }
 
             // verify the required parameter 'toAssetId' is set
             if (toAssetId == null)
+            {
                 throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'toAssetId' when calling ExchangeRatesApi->GetExchangeRateByAssetsIDs");
+            }
 
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -557,12 +596,17 @@ namespace CryptoAPIs.Api
                 "application/json"
             };
 
-
             var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("fromAssetId", CryptoAPIs.Client.ClientUtils.ParameterToString(fromAssetId)); // path parameter
             localVarRequestOptions.PathParameters.Add("toAssetId", CryptoAPIs.Client.ClientUtils.ParameterToString(toAssetId)); // path parameter
@@ -582,13 +626,15 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<GetExchangeRateByAssetsIDsR>("/market-data/exchange-rates/by-asset-ids/{fromAssetId}/{toAssetId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetExchangeRateByAssetsIDs", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

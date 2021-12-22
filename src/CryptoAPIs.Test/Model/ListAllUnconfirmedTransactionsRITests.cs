@@ -82,6 +82,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Timestamp'
         }
         /// <summary>
+        /// Test the property 'TransactionHash'
+        /// </summary>
+        [Fact]
+        public void TransactionHashTest()
+        {
+            // TODO unit test for the property 'TransactionHash'
+        }
+        /// <summary>
         /// Test the property 'TransactionId'
         /// </summary>
         [Fact]

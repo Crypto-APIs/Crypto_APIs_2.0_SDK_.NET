@@ -98,12 +98,36 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'MinedInSeconds'
         }
         /// <summary>
+        /// Test the property 'Nonce'
+        /// </summary>
+        [Fact]
+        public void NonceTest()
+        {
+            // TODO unit test for the property 'Nonce'
+        }
+        /// <summary>
         /// Test the property 'Sha3Uncles'
         /// </summary>
         [Fact]
         public void Sha3UnclesTest()
         {
             // TODO unit test for the property 'Sha3Uncles'
+        }
+        /// <summary>
+        /// Test the property 'Size'
+        /// </summary>
+        [Fact]
+        public void SizeTest()
+        {
+            // TODO unit test for the property 'Size'
+        }
+        /// <summary>
+        /// Test the property 'TotalDifficulty'
+        /// </summary>
+        [Fact]
+        public void TotalDifficultyTest()
+        {
+            // TODO unit test for the property 'TotalDifficulty'
         }
         /// <summary>
         /// Test the property 'Uncles'

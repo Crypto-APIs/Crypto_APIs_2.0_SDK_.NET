@@ -45,13 +45,14 @@ namespace CryptoAPIs.Model
         /// <param name="recipientAddress">Defines the address to which the recipient receives the transferred tokens. (required).</param>
         /// <param name="senderAddress">Defines the address from which the sender transfers tokens. (required).</param>
         /// <param name="tokenDecimals">Defines the decimals of the token, i.e. the number of digits that come after the decimal coma of the token. (required).</param>
+        /// <param name="tokenId">Represents the unique token identifier..</param>
         /// <param name="tokenName">Defines the token&#39;s name as a string. (required).</param>
         /// <param name="tokenSymbol">Defines the token symbol by which the token contract is known. It is usually 3-4 characters in length. (required).</param>
         /// <param name="tokenType">Defines the specific token type. (required).</param>
-        /// <param name="tokensAmount">Defines the token amount of the transfer. (required).</param>
+        /// <param name="tokensAmount">Defines the token amount of the transfer..</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. (required).</param>
         /// <param name="transactionTimestamp">Defines the specific time/date when the transaction was created in Unix Timestamp. (required).</param>
-        public ListConfirmedTokensTransfersByAddressRI(string contractAddress = default(string), int minedInBlockHeight = default(int), string recipientAddress = default(string), string senderAddress = default(string), int tokenDecimals = default(int), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string tokensAmount = default(string), string transactionHash = default(string), int transactionTimestamp = default(int))
+        public ListConfirmedTokensTransfersByAddressRI(string contractAddress = default(string), int minedInBlockHeight = default(int), string recipientAddress = default(string), string senderAddress = default(string), int tokenDecimals = default(int), string tokenId = default(string), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string tokensAmount = default(string), string transactionHash = default(string), int transactionTimestamp = default(int))
         {
             // to ensure "contractAddress" is required (not null)
             if (contractAddress == null) {
@@ -85,17 +86,14 @@ namespace CryptoAPIs.Model
                 throw new ArgumentNullException("tokenType is a required property for ListConfirmedTokensTransfersByAddressRI and cannot be null");
             }
             this.TokenType = tokenType;
-            // to ensure "tokensAmount" is required (not null)
-            if (tokensAmount == null) {
-                throw new ArgumentNullException("tokensAmount is a required property for ListConfirmedTokensTransfersByAddressRI and cannot be null");
-            }
-            this.TokensAmount = tokensAmount;
             // to ensure "transactionHash" is required (not null)
             if (transactionHash == null) {
                 throw new ArgumentNullException("transactionHash is a required property for ListConfirmedTokensTransfersByAddressRI and cannot be null");
             }
             this.TransactionHash = transactionHash;
             this.TransactionTimestamp = transactionTimestamp;
+            this.TokenId = tokenId;
+            this.TokensAmount = tokensAmount;
         }
 
         /// <summary>
@@ -134,6 +132,13 @@ namespace CryptoAPIs.Model
         public int TokenDecimals { get; set; }
 
         /// <summary>
+        /// Represents the unique token identifier.
+        /// </summary>
+        /// <value>Represents the unique token identifier.</value>
+        [DataMember(Name = "tokenId", EmitDefaultValue = false)]
+        public string TokenId { get; set; }
+
+        /// <summary>
         /// Defines the token&#39;s name as a string.
         /// </summary>
         /// <value>Defines the token&#39;s name as a string.</value>
@@ -158,7 +163,7 @@ namespace CryptoAPIs.Model
         /// Defines the token amount of the transfer.
         /// </summary>
         /// <value>Defines the token amount of the transfer.</value>
-        [DataMember(Name = "tokensAmount", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "tokensAmount", EmitDefaultValue = false)]
         public string TokensAmount { get; set; }
 
         /// <summary>
@@ -181,13 +186,14 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListConfirmedTokensTransfersByAddressRI {\n");
             sb.Append("  ContractAddress: ").Append(ContractAddress).Append("\n");
             sb.Append("  MinedInBlockHeight: ").Append(MinedInBlockHeight).Append("\n");
             sb.Append("  RecipientAddress: ").Append(RecipientAddress).Append("\n");
             sb.Append("  SenderAddress: ").Append(SenderAddress).Append("\n");
             sb.Append("  TokenDecimals: ").Append(TokenDecimals).Append("\n");
+            sb.Append("  TokenId: ").Append(TokenId).Append("\n");
             sb.Append("  TokenName: ").Append(TokenName).Append("\n");
             sb.Append("  TokenSymbol: ").Append(TokenSymbol).Append("\n");
             sb.Append("  TokenType: ").Append(TokenType).Append("\n");
@@ -225,8 +231,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListConfirmedTokensTransfersByAddressRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ContractAddress == input.ContractAddress ||
@@ -250,6 +257,11 @@ namespace CryptoAPIs.Model
                 (
                     this.TokenDecimals == input.TokenDecimals ||
                     this.TokenDecimals.Equals(input.TokenDecimals)
+                ) && 
+                (
+                    this.TokenId == input.TokenId ||
+                    (this.TokenId != null &&
+                    this.TokenId.Equals(input.TokenId))
                 ) && 
                 (
                     this.TokenName == input.TokenName ||
@@ -292,24 +304,44 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.ContractAddress != null)
-                    hashCode = hashCode * 59 + this.ContractAddress.GetHashCode();
-                hashCode = hashCode * 59 + this.MinedInBlockHeight.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ContractAddress.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MinedInBlockHeight.GetHashCode();
                 if (this.RecipientAddress != null)
-                    hashCode = hashCode * 59 + this.RecipientAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.RecipientAddress.GetHashCode();
+                }
                 if (this.SenderAddress != null)
-                    hashCode = hashCode * 59 + this.SenderAddress.GetHashCode();
-                hashCode = hashCode * 59 + this.TokenDecimals.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SenderAddress.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TokenDecimals.GetHashCode();
+                if (this.TokenId != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenId.GetHashCode();
+                }
                 if (this.TokenName != null)
-                    hashCode = hashCode * 59 + this.TokenName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenName.GetHashCode();
+                }
                 if (this.TokenSymbol != null)
-                    hashCode = hashCode * 59 + this.TokenSymbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenSymbol.GetHashCode();
+                }
                 if (this.TokenType != null)
-                    hashCode = hashCode * 59 + this.TokenType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
+                }
                 if (this.TokensAmount != null)
-                    hashCode = hashCode * 59 + this.TokensAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TokensAmount.GetHashCode();
+                }
                 if (this.TransactionHash != null)
-                    hashCode = hashCode * 59 + this.TransactionHash.GetHashCode();
-                hashCode = hashCode * 59 + this.TransactionTimestamp.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.TransactionTimestamp.GetHashCode();
                 return hashCode;
             }
         }

@@ -102,7 +102,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListWalletTransactionsRIFee {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  ConvertedAmount: ").Append(ConvertedAmount).Append("\n");
@@ -139,8 +139,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListWalletTransactionsRIFee input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Amount == input.Amount ||
@@ -174,13 +175,21 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 if (this.ConvertedAmount != null)
-                    hashCode = hashCode * 59 + this.ConvertedAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConvertedAmount.GetHashCode();
+                }
                 if (this.ExchangeRateUnit != null)
-                    hashCode = hashCode * 59 + this.ExchangeRateUnit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ExchangeRateUnit.GetHashCode();
+                }
                 if (this.Symbol != null)
-                    hashCode = hashCode * 59 + this.Symbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Symbol.GetHashCode();
+                }
                 return hashCode;
             }
         }

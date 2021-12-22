@@ -75,7 +75,7 @@ namespace CryptoAPIs.Model
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings. (required).</param>
         /// <param name="assetType">Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. (required).</param>
         /// <param name="latestRate">latestRate (required).</param>
-        /// <param name="slug">Asset&#x60;s unique slug string in Crypto APIs listings.</param>
+        /// <param name="slug">Represents the asset&#x60;s unique slug string in Crypto APIs listings..</param>
         /// <param name="specificData">specificData (required).</param>
         public ListAssetsDetailsRI(string assetId = default(string), ListAssetsDetailsRIAssetLogo assetLogo = default(ListAssetsDetailsRIAssetLogo), string assetName = default(string), string assetOriginalSymbol = default(string), string assetSymbol = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), ListAssetsDetailsRILatestRate latestRate = default(ListAssetsDetailsRILatestRate), string slug = default(string), ListAssetsDetailsRIS specificData = default(ListAssetsDetailsRIS))
         {
@@ -159,9 +159,9 @@ namespace CryptoAPIs.Model
         public ListAssetsDetailsRILatestRate LatestRate { get; set; }
 
         /// <summary>
-        /// Asset&#x60;s unique slug string in Crypto APIs listings
+        /// Represents the asset&#x60;s unique slug string in Crypto APIs listings.
         /// </summary>
-        /// <value>Asset&#x60;s unique slug string in Crypto APIs listings</value>
+        /// <value>Represents the asset&#x60;s unique slug string in Crypto APIs listings.</value>
         [DataMember(Name = "slug", EmitDefaultValue = false)]
         public string Slug { get; set; }
 
@@ -177,7 +177,7 @@ namespace CryptoAPIs.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ListAssetsDetailsRI {\n");
             sb.Append("  AssetId: ").Append(AssetId).Append("\n");
             sb.Append("  AssetLogo: ").Append(AssetLogo).Append("\n");
@@ -219,8 +219,9 @@ namespace CryptoAPIs.Model
         public bool Equals(ListAssetsDetailsRI input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AssetId == input.AssetId ||
@@ -278,22 +279,38 @@ namespace CryptoAPIs.Model
             {
                 int hashCode = 41;
                 if (this.AssetId != null)
-                    hashCode = hashCode * 59 + this.AssetId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AssetId.GetHashCode();
+                }
                 if (this.AssetLogo != null)
-                    hashCode = hashCode * 59 + this.AssetLogo.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AssetLogo.GetHashCode();
+                }
                 if (this.AssetName != null)
-                    hashCode = hashCode * 59 + this.AssetName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AssetName.GetHashCode();
+                }
                 if (this.AssetOriginalSymbol != null)
-                    hashCode = hashCode * 59 + this.AssetOriginalSymbol.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AssetOriginalSymbol.GetHashCode();
+                }
                 if (this.AssetSymbol != null)
-                    hashCode = hashCode * 59 + this.AssetSymbol.GetHashCode();
-                hashCode = hashCode * 59 + this.AssetType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AssetSymbol.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.AssetType.GetHashCode();
                 if (this.LatestRate != null)
-                    hashCode = hashCode * 59 + this.LatestRate.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LatestRate.GetHashCode();
+                }
                 if (this.Slug != null)
-                    hashCode = hashCode * 59 + this.Slug.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Slug.GetHashCode();
+                }
                 if (this.SpecificData != null)
-                    hashCode = hashCode * 59 + this.SpecificData.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SpecificData.GetHashCode();
+                }
                 return hashCode;
             }
         }
