@@ -47,17 +47,20 @@ namespace CryptoAPIs.Model
         public GetUnconfirmedOmniTransactionByTransactionIDTxidR(string apiVersion = default(string), string requestId = default(string), string context = default(string), GetUnconfirmedOmniTransactionByTransactionIDTxidRData data = default(GetUnconfirmedOmniTransactionByTransactionIDTxidRData))
         {
             // to ensure "apiVersion" is required (not null)
-            if (apiVersion == null) {
+            if (apiVersion == null)
+            {
                 throw new ArgumentNullException("apiVersion is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidR and cannot be null");
             }
             this.ApiVersion = apiVersion;
             // to ensure "requestId" is required (not null)
-            if (requestId == null) {
+            if (requestId == null)
+            {
                 throw new ArgumentNullException("requestId is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidR and cannot be null");
             }
             this.RequestId = requestId;
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for GetUnconfirmedOmniTransactionByTransactionIDTxidR and cannot be null");
             }
             this.Data = data;

@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public DeleteAutomaticCoinsForwardingRData(DeleteAutomaticCoinsForwardingRI item = default(DeleteAutomaticCoinsForwardingRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for DeleteAutomaticCoinsForwardingRData and cannot be null");
             }
             this.Item = item;

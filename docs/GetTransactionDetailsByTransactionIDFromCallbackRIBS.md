@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Locktime** | **int** | Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid. | 
+**Locktime** | **long** | Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid. | 
 **Size** | **int** | Represents the total size of this transaction. | 
 **VSize** | **int** | Represents the virtual size of this transaction. | 
 **_Version** | **int** | Defines the version of the transaction. | 
@@ -28,10 +28,10 @@ Name | Type | Description | Notes
 **ValueBalance** | **string** | String representation of the transaction value balance | 
 **VersionGroupId** | **string** | Represents the transaction version group ID | 
 **AdditionalData** | **string** | Represents additional data that may be needed. | 
-**DestinationTag** | **int** | Defines the destination tag value. | [optional] 
+**DestinationTag** | **long** | Defines the destination tag value. | [optional] 
 **Offer** | [**GetXRPRippleTransactionDetailsByTransactionIDRIOffer**](GetXRPRippleTransactionDetailsByTransactionIDRIOffer.md) |  | 
 **Receive** | [**GetXRPRippleTransactionDetailsByTransactionIDRIReceive**](GetXRPRippleTransactionDetailsByTransactionIDRIReceive.md) |  | 
-**Sequence** | **int** | Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime. | 
+**Sequence** | **long** | Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime. | 
 **Status** | **string** | Defines the status of the transaction. | 
 **Type** | **string** | Defines the type of the transaction. | 
 **Value** | [**GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue**](GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue.md) |  | 

@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public BroadcastLocallySignedTransactionRI(string transactionId = default(string))
         {
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for BroadcastLocallySignedTransactionRI and cannot be null");
             }
             this.TransactionId = transactionId;

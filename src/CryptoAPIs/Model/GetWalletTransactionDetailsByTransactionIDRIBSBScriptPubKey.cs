@@ -48,23 +48,27 @@ namespace CryptoAPIs.Model
         public GetWalletTransactionDetailsByTransactionIDRIBSBScriptPubKey(List<string> addresses = default(List<string>), string asm = default(string), string hex = default(string), int reqSigs = default(int), string type = default(string))
         {
             // to ensure "addresses" is required (not null)
-            if (addresses == null) {
+            if (addresses == null)
+            {
                 throw new ArgumentNullException("addresses is a required property for GetWalletTransactionDetailsByTransactionIDRIBSBScriptPubKey and cannot be null");
             }
             this.Addresses = addresses;
             // to ensure "asm" is required (not null)
-            if (asm == null) {
+            if (asm == null)
+            {
                 throw new ArgumentNullException("asm is a required property for GetWalletTransactionDetailsByTransactionIDRIBSBScriptPubKey and cannot be null");
             }
             this.Asm = asm;
             // to ensure "hex" is required (not null)
-            if (hex == null) {
+            if (hex == null)
+            {
                 throw new ArgumentNullException("hex is a required property for GetWalletTransactionDetailsByTransactionIDRIBSBScriptPubKey and cannot be null");
             }
             this.Hex = hex;
             this.ReqSigs = reqSigs;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for GetWalletTransactionDetailsByTransactionIDRIBSBScriptPubKey and cannot be null");
             }
             this.Type = type;

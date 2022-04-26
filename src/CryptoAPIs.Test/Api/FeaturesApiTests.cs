@@ -71,6 +71,101 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test DecodeRawTransactionHex
+        /// </summary>
+        [Fact]
+        public void DecodeRawTransactionHexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //DecodeRawTransactionHexRB decodeRawTransactionHexRB = null;
+            //var response = instance.DecodeRawTransactionHex(blockchain, network, context, decodeRawTransactionHexRB);
+            //Assert.IsType<DecodeRawTransactionHexR>(response);
+        }
+
+        /// <summary>
+        /// Test DecodeXAddress
+        /// </summary>
+        [Fact]
+        public void DecodeXAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string xAddress = null;
+            //string context = null;
+            //var response = instance.DecodeXAddress(blockchain, network, xAddress, context);
+            //Assert.IsType<DecodeXAddressR>(response);
+        }
+
+        /// <summary>
+        /// Test DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses
+        /// </summary>
+        [Fact]
+        public void DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string extendedPublicKey = null;
+            //string network = null;
+            //string context = null;
+            //string addressFormat = null;
+            //int? addressesCount = null;
+            //bool? isChange = null;
+            //int? startIndex = null;
+            //var response = instance.DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses(blockchain, extendedPublicKey, network, context, addressFormat, addressesCount, isChange, startIndex);
+            //Assert.IsType<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR>(response);
+        }
+
+        /// <summary>
+        /// Test EncodeXAddress
+        /// </summary>
+        [Fact]
+        public void EncodeXAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int addressTag = null;
+            //string blockchain = null;
+            //string classicAddress = null;
+            //string network = null;
+            //string context = null;
+            //var response = instance.EncodeXAddress(addressTag, blockchain, classicAddress, network, context);
+            //Assert.IsType<EncodeXAddressR>(response);
+        }
+
+        /// <summary>
+        /// Test EstimateGasLimit
+        /// </summary>
+        [Fact]
+        public void EstimateGasLimitTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //EstimateGasLimitRB estimateGasLimitRB = null;
+            //var response = instance.EstimateGasLimit(blockchain, network, context, estimateGasLimitRB);
+            //Assert.IsType<EstimateGasLimitR>(response);
+        }
+
+        /// <summary>
+        /// Test EstimateTokenGasLimit
+        /// </summary>
+        [Fact]
+        public void EstimateTokenGasLimitTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //EstimateTokenGasLimitRB estimateTokenGasLimitRB = null;
+            //var response = instance.EstimateTokenGasLimit(blockchain, network, context, estimateTokenGasLimitRB);
+            //Assert.IsType<EstimateTokenGasLimitR>(response);
+        }
+
+        /// <summary>
         /// Test GetEIP1559FeeRecommendations
         /// </summary>
         [Fact]

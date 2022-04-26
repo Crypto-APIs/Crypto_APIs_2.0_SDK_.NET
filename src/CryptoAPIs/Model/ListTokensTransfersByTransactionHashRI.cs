@@ -51,51 +51,66 @@ namespace CryptoAPIs.Model
         /// <param name="tokensAmount">Defines the token amount of the transfer. (required).</param>
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. (required).</param>
         /// <param name="transactionTimestamp">Defines the specific time/date when the transaction was created in Unix Timestamp. (required).</param>
-        public ListTokensTransfersByTransactionHashRI(string contractAddress = default(string), int minedInBlockHeight = default(int), string recipientAddress = default(string), string senderAddress = default(string), int tokenDecimals = default(int), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string tokensAmount = default(string), string transactionHash = default(string), int transactionTimestamp = default(int))
+        /// <param name="transactionFee">transactionFee (required).</param>
+        public ListTokensTransfersByTransactionHashRI(string contractAddress = default(string), int minedInBlockHeight = default(int), string recipientAddress = default(string), string senderAddress = default(string), int tokenDecimals = default(int), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string tokensAmount = default(string), string transactionHash = default(string), int transactionTimestamp = default(int), ListTokensTransfersByTransactionHashRITransactionFee transactionFee = default(ListTokensTransfersByTransactionHashRITransactionFee))
         {
             // to ensure "contractAddress" is required (not null)
-            if (contractAddress == null) {
+            if (contractAddress == null)
+            {
                 throw new ArgumentNullException("contractAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.ContractAddress = contractAddress;
             this.MinedInBlockHeight = minedInBlockHeight;
             // to ensure "recipientAddress" is required (not null)
-            if (recipientAddress == null) {
+            if (recipientAddress == null)
+            {
                 throw new ArgumentNullException("recipientAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.RecipientAddress = recipientAddress;
             // to ensure "senderAddress" is required (not null)
-            if (senderAddress == null) {
+            if (senderAddress == null)
+            {
                 throw new ArgumentNullException("senderAddress is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.SenderAddress = senderAddress;
             this.TokenDecimals = tokenDecimals;
             // to ensure "tokenName" is required (not null)
-            if (tokenName == null) {
+            if (tokenName == null)
+            {
                 throw new ArgumentNullException("tokenName is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.TokenName = tokenName;
             // to ensure "tokenSymbol" is required (not null)
-            if (tokenSymbol == null) {
+            if (tokenSymbol == null)
+            {
                 throw new ArgumentNullException("tokenSymbol is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.TokenSymbol = tokenSymbol;
             // to ensure "tokenType" is required (not null)
-            if (tokenType == null) {
+            if (tokenType == null)
+            {
                 throw new ArgumentNullException("tokenType is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.TokenType = tokenType;
             // to ensure "tokensAmount" is required (not null)
-            if (tokensAmount == null) {
+            if (tokensAmount == null)
+            {
                 throw new ArgumentNullException("tokensAmount is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.TokensAmount = tokensAmount;
             // to ensure "transactionHash" is required (not null)
-            if (transactionHash == null) {
+            if (transactionHash == null)
+            {
                 throw new ArgumentNullException("transactionHash is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
             }
             this.TransactionHash = transactionHash;
             this.TransactionTimestamp = transactionTimestamp;
+            // to ensure "transactionFee" is required (not null)
+            if (transactionFee == null)
+            {
+                throw new ArgumentNullException("transactionFee is a required property for ListTokensTransfersByTransactionHashRI and cannot be null");
+            }
+            this.TransactionFee = transactionFee;
         }
 
         /// <summary>
@@ -176,6 +191,12 @@ namespace CryptoAPIs.Model
         public int TransactionTimestamp { get; set; }
 
         /// <summary>
+        /// Gets or Sets TransactionFee
+        /// </summary>
+        [DataMember(Name = "transactionFee", IsRequired = true, EmitDefaultValue = false)]
+        public ListTokensTransfersByTransactionHashRITransactionFee TransactionFee { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -194,6 +215,7 @@ namespace CryptoAPIs.Model
             sb.Append("  TokensAmount: ").Append(TokensAmount).Append("\n");
             sb.Append("  TransactionHash: ").Append(TransactionHash).Append("\n");
             sb.Append("  TransactionTimestamp: ").Append(TransactionTimestamp).Append("\n");
+            sb.Append("  TransactionFee: ").Append(TransactionFee).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -280,6 +302,11 @@ namespace CryptoAPIs.Model
                 (
                     this.TransactionTimestamp == input.TransactionTimestamp ||
                     this.TransactionTimestamp.Equals(input.TransactionTimestamp)
+                ) && 
+                (
+                    this.TransactionFee == input.TransactionFee ||
+                    (this.TransactionFee != null &&
+                    this.TransactionFee.Equals(input.TransactionFee))
                 );
         }
 
@@ -327,6 +354,10 @@ namespace CryptoAPIs.Model
                     hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.TransactionTimestamp.GetHashCode();
+                if (this.TransactionFee != null)
+                {
+                    hashCode = (hashCode * 59) + this.TransactionFee.GetHashCode();
+                }
                 return hashCode;
             }
         }

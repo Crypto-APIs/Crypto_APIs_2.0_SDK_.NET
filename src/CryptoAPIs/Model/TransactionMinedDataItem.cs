@@ -47,22 +47,26 @@ namespace CryptoAPIs.Model
         public TransactionMinedDataItem(string blockchain = default(string), string network = default(string), string transactionId = default(string), TransactionMinedDataItemMinedInBlock minedInBlock = default(TransactionMinedDataItemMinedInBlock))
         {
             // to ensure "blockchain" is required (not null)
-            if (blockchain == null) {
+            if (blockchain == null)
+            {
                 throw new ArgumentNullException("blockchain is a required property for TransactionMinedDataItem and cannot be null");
             }
             this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            if (network == null) {
+            if (network == null)
+            {
                 throw new ArgumentNullException("network is a required property for TransactionMinedDataItem and cannot be null");
             }
             this.Network = network;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for TransactionMinedDataItem and cannot be null");
             }
             this.TransactionId = transactionId;
             // to ensure "minedInBlock" is required (not null)
-            if (minedInBlock == null) {
+            if (minedInBlock == null)
+            {
                 throw new ArgumentNullException("minedInBlock is a required property for TransactionMinedDataItem and cannot be null");
             }
             this.MinedInBlock = minedInBlock;

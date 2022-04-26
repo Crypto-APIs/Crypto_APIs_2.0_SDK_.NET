@@ -44,7 +44,7 @@ namespace Example
             var blockchain = ethereum;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var walletId = 609e221675d04500068718dc;  // string | Represents the sender's specific and unique Wallet ID of the sender.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var createCoinsTransactionFromAddressForWholeAmountRB = new CreateCoinsTransactionFromAddressForWholeAmountRB(); // CreateCoinsTransactionFromAddressForWholeAmountRB |  (optional) 
 
             try
@@ -135,11 +135,11 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new TransactionsApi(config);
-            var address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5;  // string | Defines the specific source address for the transaction.
+            var address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5;  // string | Defines the specific source address for the transaction. For XRP we also support the X-address format.
             var blockchain = ethereum;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var walletId = 609e221675d04500068718dc;  // string | Represents the sender's specific and unique Wallet ID of the sender.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var createCoinsTransactionRequestFromAddressRB = new CreateCoinsTransactionRequestFromAddressRB(); // CreateCoinsTransactionRequestFromAddressRB |  (optional) 
 
             try
@@ -163,7 +163,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **string**| Defines the specific source address for the transaction. | 
+ **address** | **string**| Defines the specific source address for the transaction. For XRP we also support the X-address format. | 
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | 
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. | 
  **walletId** | **string**| Represents the sender&#39;s specific and unique Wallet ID of the sender. | 
@@ -233,7 +233,7 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks. (default to testnet)
             var walletId = 609e221675d04500068718dc;  // string | Represents the sender's specific and unique Wallet ID of the sender.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var createCoinsTransactionRequestFromWalletRB = new CreateCoinsTransactionRequestFromWalletRB(); // CreateCoinsTransactionRequestFromWalletRB |  (optional) 
 
             try
@@ -327,7 +327,7 @@ namespace Example
             var network = mainnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks. (default to mainnet)
             var senderAddress = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5;  // string | Defines the specific source address for the transaction.
             var walletId = 609e221675d04500068718dc;  // string | Defines the unique ID of the Wallet.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var createFungibleTokensTransactionRequestFromAddressRB = new CreateFungibleTokensTransactionRequestFromAddressRB(); // CreateFungibleTokensTransactionRequestFromAddressRB |  (optional) 
 
             try

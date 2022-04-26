@@ -48,36 +48,42 @@ namespace CryptoAPIs.Model
         /// <param name="status">Defines the status of the transaction. (required).</param>
         /// <param name="type">Defines the type of the transaction. (required).</param>
         /// <param name="value">value (required).</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSX(string additionalData = default(string), int destinationTag = default(int), GetXRPRippleTransactionDetailsByTransactionIDRIOffer offer = default(GetXRPRippleTransactionDetailsByTransactionIDRIOffer), GetXRPRippleTransactionDetailsByTransactionIDRIReceive receive = default(GetXRPRippleTransactionDetailsByTransactionIDRIReceive), int sequence = default(int), string status = default(string), string type = default(string), GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue value = default(GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue))
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSX(string additionalData = default(string), long destinationTag = default(long), GetXRPRippleTransactionDetailsByTransactionIDRIOffer offer = default(GetXRPRippleTransactionDetailsByTransactionIDRIOffer), GetXRPRippleTransactionDetailsByTransactionIDRIReceive receive = default(GetXRPRippleTransactionDetailsByTransactionIDRIReceive), long sequence = default(long), string status = default(string), string type = default(string), GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue value = default(GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue))
         {
             // to ensure "additionalData" is required (not null)
-            if (additionalData == null) {
+            if (additionalData == null)
+            {
                 throw new ArgumentNullException("additionalData is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSX and cannot be null");
             }
             this.AdditionalData = additionalData;
             // to ensure "offer" is required (not null)
-            if (offer == null) {
+            if (offer == null)
+            {
                 throw new ArgumentNullException("offer is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSX and cannot be null");
             }
             this.Offer = offer;
             // to ensure "receive" is required (not null)
-            if (receive == null) {
+            if (receive == null)
+            {
                 throw new ArgumentNullException("receive is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSX and cannot be null");
             }
             this.Receive = receive;
             this.Sequence = sequence;
             // to ensure "status" is required (not null)
-            if (status == null) {
+            if (status == null)
+            {
                 throw new ArgumentNullException("status is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSX and cannot be null");
             }
             this.Status = status;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSX and cannot be null");
             }
             this.Type = type;
             // to ensure "value" is required (not null)
-            if (value == null) {
+            if (value == null)
+            {
                 throw new ArgumentNullException("value is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSX and cannot be null");
             }
             this.Value = value;
@@ -96,7 +102,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the destination tag value.</value>
         [DataMember(Name = "destinationTag", EmitDefaultValue = false)]
-        public int DestinationTag { get; set; }
+        public long DestinationTag { get; set; }
 
         /// <summary>
         /// Gets or Sets Offer
@@ -115,7 +121,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime.</value>
         [DataMember(Name = "sequence", IsRequired = true, EmitDefaultValue = false)]
-        public int Sequence { get; set; }
+        public long Sequence { get; set; }
 
         /// <summary>
         /// Defines the status of the transaction.

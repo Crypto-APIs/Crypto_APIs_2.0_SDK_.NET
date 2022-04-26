@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. | 
 **Recipients** | [**List&lt;GetTransactionRequestDetailsRIRecipients&gt;**](GetTransactionRequestDetailsRIRecipients.md) | Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. | 
 **TotalTransactionAmount** | **string** | Defines the total transaction amount. | 
+**TransactionId** | **string** | Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain. | [optional] 
 **TransactionRequestStatus** | **string** | Defines the status of the transaction request, e.g. pending. | 
 **TransactionType** | **string** | Defines the transaction type, if it is for coins or tokens. | 
 **Unit** | **string** | Defines the unit of the amount. | 

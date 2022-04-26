@@ -50,25 +50,29 @@ namespace CryptoAPIs.Model
         public ListLatestMinedBlocksRIBSZ(string difficulty = default(string), int dsBlock = default(int), string dsDifficulty = default(string), string dsLeader = default(string), int gasLimit = default(int), int gasUsed = default(int), List<string> microBlocks = default(List<string>))
         {
             // to ensure "difficulty" is required (not null)
-            if (difficulty == null) {
+            if (difficulty == null)
+            {
                 throw new ArgumentNullException("difficulty is a required property for ListLatestMinedBlocksRIBSZ and cannot be null");
             }
             this.Difficulty = difficulty;
             this.DsBlock = dsBlock;
             // to ensure "dsDifficulty" is required (not null)
-            if (dsDifficulty == null) {
+            if (dsDifficulty == null)
+            {
                 throw new ArgumentNullException("dsDifficulty is a required property for ListLatestMinedBlocksRIBSZ and cannot be null");
             }
             this.DsDifficulty = dsDifficulty;
             // to ensure "dsLeader" is required (not null)
-            if (dsLeader == null) {
+            if (dsLeader == null)
+            {
                 throw new ArgumentNullException("dsLeader is a required property for ListLatestMinedBlocksRIBSZ and cannot be null");
             }
             this.DsLeader = dsLeader;
             this.GasLimit = gasLimit;
             this.GasUsed = gasUsed;
             // to ensure "microBlocks" is required (not null)
-            if (microBlocks == null) {
+            if (microBlocks == null)
+            {
                 throw new ArgumentNullException("microBlocks is a required property for ListLatestMinedBlocksRIBSZ and cannot be null");
             }
             this.MicroBlocks = microBlocks;

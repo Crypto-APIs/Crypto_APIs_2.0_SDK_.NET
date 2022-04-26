@@ -46,17 +46,20 @@ namespace CryptoAPIs.Model
         public GetAssetDetailsByAssetIDRIAssetLogo(string encoding = default(string), string imageData = default(string), string mimeType = default(string))
         {
             // to ensure "encoding" is required (not null)
-            if (encoding == null) {
+            if (encoding == null)
+            {
                 throw new ArgumentNullException("encoding is a required property for GetAssetDetailsByAssetIDRIAssetLogo and cannot be null");
             }
             this.Encoding = encoding;
             // to ensure "imageData" is required (not null)
-            if (imageData == null) {
+            if (imageData == null)
+            {
                 throw new ArgumentNullException("imageData is a required property for GetAssetDetailsByAssetIDRIAssetLogo and cannot be null");
             }
             this.ImageData = imageData;
             // to ensure "mimeType" is required (not null)
-            if (mimeType == null) {
+            if (mimeType == null)
+            {
                 throw new ArgumentNullException("mimeType is a required property for GetAssetDetailsByAssetIDRIAssetLogo and cannot be null");
             }
             this.MimeType = mimeType;

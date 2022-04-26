@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetXRPRippleBlockDetailsByBlockHashRData(GetXRPRippleBlockDetailsByBlockHashRI item = default(GetXRPRippleBlockDetailsByBlockHashRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetXRPRippleBlockDetailsByBlockHashRData and cannot be null");
             }
             this.Item = item;

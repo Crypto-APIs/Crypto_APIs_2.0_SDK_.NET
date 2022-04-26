@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Addresses** | **List&lt;string&gt;** |  | 
 **ScriptSig** | [**GetTransactionDetailsByTransactionIDRIBSZScriptSig**](GetTransactionDetailsByTransactionIDRIBSZScriptSig.md) |  | 
-**Sequence** | **int** | Represents the script sequence number. | 
+**Sequence** | **long** | Represents the script sequence number. | 
 **Txid** | **string** | Represents the reference transaction identifier. | 
 **Txinwitness** | **List&lt;string&gt;** |  | 
 **Value** | **string** | Defines the specific amount. | 

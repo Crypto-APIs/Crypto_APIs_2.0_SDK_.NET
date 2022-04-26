@@ -48,22 +48,26 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionUnconfirmedErc20(string name = default(string), string symbol = default(string), string decimals = default(string), string amount = default(string), string contractAddress = default(string))
         {
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for AddressTokensTransactionUnconfirmedErc20 and cannot be null");
             }
             this.Name = name;
             // to ensure "symbol" is required (not null)
-            if (symbol == null) {
+            if (symbol == null)
+            {
                 throw new ArgumentNullException("symbol is a required property for AddressTokensTransactionUnconfirmedErc20 and cannot be null");
             }
             this.Symbol = symbol;
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for AddressTokensTransactionUnconfirmedErc20 and cannot be null");
             }
             this.Amount = amount;
             // to ensure "contractAddress" is required (not null)
-            if (contractAddress == null) {
+            if (contractAddress == null)
+            {
                 throw new ArgumentNullException("contractAddress is a required property for AddressTokensTransactionUnconfirmedErc20 and cannot be null");
             }
             this.ContractAddress = contractAddress;

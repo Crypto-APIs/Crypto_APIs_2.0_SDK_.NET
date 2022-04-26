@@ -47,22 +47,26 @@ namespace CryptoAPIs.Model
         public BroadcastTransactionSuccess(string apiVersion = default(string), string referenceId = default(string), string idempotencyKey = default(string), BroadcastTransactionSuccessData data = default(BroadcastTransactionSuccessData))
         {
             // to ensure "apiVersion" is required (not null)
-            if (apiVersion == null) {
+            if (apiVersion == null)
+            {
                 throw new ArgumentNullException("apiVersion is a required property for BroadcastTransactionSuccess and cannot be null");
             }
             this.ApiVersion = apiVersion;
             // to ensure "referenceId" is required (not null)
-            if (referenceId == null) {
+            if (referenceId == null)
+            {
                 throw new ArgumentNullException("referenceId is a required property for BroadcastTransactionSuccess and cannot be null");
             }
             this.ReferenceId = referenceId;
             // to ensure "idempotencyKey" is required (not null)
-            if (idempotencyKey == null) {
+            if (idempotencyKey == null)
+            {
                 throw new ArgumentNullException("idempotencyKey is a required property for BroadcastTransactionSuccess and cannot be null");
             }
             this.IdempotencyKey = idempotencyKey;
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for BroadcastTransactionSuccess and cannot be null");
             }
             this.Data = data;

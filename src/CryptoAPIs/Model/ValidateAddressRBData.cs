@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public ValidateAddressRBData(ValidateAddressRBDataItem item = default(ValidateAddressRBDataItem))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for ValidateAddressRBData and cannot be null");
             }
             this.Item = item;

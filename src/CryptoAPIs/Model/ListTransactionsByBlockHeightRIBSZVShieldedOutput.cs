@@ -49,32 +49,38 @@ namespace CryptoAPIs.Model
         public ListTransactionsByBlockHeightRIBSZVShieldedOutput(string cmu = default(string), string cv = default(string), string encCipherText = default(string), string ephemeralKey = default(string), string outCipherText = default(string), string proof = default(string))
         {
             // to ensure "cmu" is required (not null)
-            if (cmu == null) {
+            if (cmu == null)
+            {
                 throw new ArgumentNullException("cmu is a required property for ListTransactionsByBlockHeightRIBSZVShieldedOutput and cannot be null");
             }
             this.Cmu = cmu;
             // to ensure "cv" is required (not null)
-            if (cv == null) {
+            if (cv == null)
+            {
                 throw new ArgumentNullException("cv is a required property for ListTransactionsByBlockHeightRIBSZVShieldedOutput and cannot be null");
             }
             this.Cv = cv;
             // to ensure "encCipherText" is required (not null)
-            if (encCipherText == null) {
+            if (encCipherText == null)
+            {
                 throw new ArgumentNullException("encCipherText is a required property for ListTransactionsByBlockHeightRIBSZVShieldedOutput and cannot be null");
             }
             this.EncCipherText = encCipherText;
             // to ensure "ephemeralKey" is required (not null)
-            if (ephemeralKey == null) {
+            if (ephemeralKey == null)
+            {
                 throw new ArgumentNullException("ephemeralKey is a required property for ListTransactionsByBlockHeightRIBSZVShieldedOutput and cannot be null");
             }
             this.EphemeralKey = ephemeralKey;
             // to ensure "outCipherText" is required (not null)
-            if (outCipherText == null) {
+            if (outCipherText == null)
+            {
                 throw new ArgumentNullException("outCipherText is a required property for ListTransactionsByBlockHeightRIBSZVShieldedOutput and cannot be null");
             }
             this.OutCipherText = outCipherText;
             // to ensure "proof" is required (not null)
-            if (proof == null) {
+            if (proof == null)
+            {
                 throw new ArgumentNullException("proof is a required property for ListTransactionsByBlockHeightRIBSZVShieldedOutput and cannot be null");
             }
             this.Proof = proof;

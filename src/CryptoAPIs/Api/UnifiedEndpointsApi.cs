@@ -28,6 +28,37 @@ namespace CryptoAPIs.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Estimate Transaction Smart Fee
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EstimateTransactionSmartFeeR</returns>
+        EstimateTransactionSmartFeeR EstimateTransactionSmartFee(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Estimate Transaction Smart Fee
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EstimateTransactionSmartFeeR</returns>
+        ApiResponse<EstimateTransactionSmartFeeR> EstimateTransactionSmartFeeWithHttpInfo(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0);
+        /// <summary>
         /// Get Address Details
         /// </summary>
         /// <remarks>
@@ -38,8 +69,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAddressDetailsR</returns>
-        GetAddressDetailsR GetAddressDetails(string blockchain, string network, string address, string context = default(string));
+        GetAddressDetailsR GetAddressDetails(string blockchain, string network, string address, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Address Details
@@ -52,8 +84,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAddressDetailsR</returns>
-        ApiResponse<GetAddressDetailsR> GetAddressDetailsWithHttpInfo(string blockchain, string network, string address, string context = default(string));
+        ApiResponse<GetAddressDetailsR> GetAddressDetailsWithHttpInfo(string blockchain, string network, string address, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Block Details By Block Hash
         /// </summary>
@@ -65,8 +98,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHashR</returns>
-        GetBlockDetailsByBlockHashR GetBlockDetailsByBlockHash(string blockchain, string network, string blockHash, string context = default(string));
+        GetBlockDetailsByBlockHashR GetBlockDetailsByBlockHash(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Block Details By Block Hash
@@ -79,8 +113,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHashR</returns>
-        ApiResponse<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string));
+        ApiResponse<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Block Details By Block Height
         /// </summary>
@@ -92,8 +127,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHeightR</returns>
-        GetBlockDetailsByBlockHeightR GetBlockDetailsByBlockHeight(string blockchain, string network, int height, string context = default(string));
+        GetBlockDetailsByBlockHeightR GetBlockDetailsByBlockHeight(string blockchain, string network, int height, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Block Details By Block Height
@@ -106,8 +142,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHeightR</returns>
-        ApiResponse<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightWithHttpInfo(string blockchain, string network, int height, string context = default(string));
+        ApiResponse<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightWithHttpInfo(string blockchain, string network, int height, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Fee Recommendations
         /// </summary>
@@ -118,8 +155,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetFeeRecommendationsR</returns>
-        GetFeeRecommendationsR GetFeeRecommendations(string blockchain, string network, string context = default(string));
+        GetFeeRecommendationsR GetFeeRecommendations(string blockchain, string network, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Fee Recommendations
@@ -131,8 +169,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetFeeRecommendationsR</returns>
-        ApiResponse<GetFeeRecommendationsR> GetFeeRecommendationsWithHttpInfo(string blockchain, string network, string context = default(string));
+        ApiResponse<GetFeeRecommendationsR> GetFeeRecommendationsWithHttpInfo(string blockchain, string network, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Last Mined Block
         /// </summary>
@@ -143,8 +182,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetLastMinedBlockR</returns>
-        GetLastMinedBlockR GetLastMinedBlock(string blockchain, string network, string context = default(string));
+        GetLastMinedBlockR GetLastMinedBlock(string blockchain, string network, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Last Mined Block
@@ -156,8 +196,67 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetLastMinedBlockR</returns>
-        ApiResponse<GetLastMinedBlockR> GetLastMinedBlockWithHttpInfo(string blockchain, string network, string context = default(string));
+        ApiResponse<GetLastMinedBlockR> GetLastMinedBlockWithHttpInfo(string blockchain, string network, string context = default(string), int operationIndex = 0);
+        /// <summary>
+        /// Get Next Available Nonce
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetNextAvailableNonceR</returns>
+        GetNextAvailableNonceR GetNextAvailableNonce(string blockchain, string network, string address, string context = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Get Next Available Nonce
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetNextAvailableNonceR</returns>
+        ApiResponse<GetNextAvailableNonceR> GetNextAvailableNonceWithHttpInfo(string blockchain, string network, string address, string context = default(string), int operationIndex = 0);
+        /// <summary>
+        /// Get Raw Transaction Data
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetRawTransactionDataR</returns>
+        GetRawTransactionDataR GetRawTransactionData(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Get Raw Transaction Data
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetRawTransactionDataR</returns>
+        ApiResponse<GetRawTransactionDataR> GetRawTransactionDataWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Transaction Details By Transaction ID
         /// </summary>
@@ -169,8 +268,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTransactionDetailsByTransactionIDR</returns>
-        GetTransactionDetailsByTransactionIDR GetTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string));
+        GetTransactionDetailsByTransactionIDR GetTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Transaction Details By Transaction ID
@@ -183,8 +283,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTransactionDetailsByTransactionIDR</returns>
-        ApiResponse<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string));
+        ApiResponse<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List All Unconfirmed Transactions
         /// </summary>
@@ -197,8 +298,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAllUnconfirmedTransactionsR</returns>
-        ListAllUnconfirmedTransactionsR ListAllUnconfirmedTransactions(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListAllUnconfirmedTransactionsR ListAllUnconfirmedTransactions(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List All Unconfirmed Transactions
@@ -212,8 +314,46 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAllUnconfirmedTransactionsR</returns>
-        ApiResponse<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListConfirmedTokensTransfersByAddressAndTimeRangeR</returns>
+        ListConfirmedTokensTransfersByAddressAndTimeRangeR ListConfirmedTokensTransfersByAddressAndTimeRange(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListConfirmedTokensTransfersByAddressAndTimeRangeR</returns>
+        ApiResponse<ListConfirmedTokensTransfersByAddressAndTimeRangeR> ListConfirmedTokensTransfersByAddressAndTimeRangeWithHttpInfo(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Confirmed Transactions By Address
         /// </summary>
@@ -227,8 +367,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListConfirmedTransactionsByAddressR</returns>
-        ListConfirmedTransactionsByAddressR ListConfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListConfirmedTransactionsByAddressR ListConfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List Confirmed Transactions By Address
@@ -243,8 +384,83 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListConfirmedTransactionsByAddressR</returns>
-        ApiResponse<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
+        /// <summary>
+        /// List Confirmed Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListConfirmedTransactionsByAddressAndTimeRangeR</returns>
+        ListConfirmedTransactionsByAddressAndTimeRangeR ListConfirmedTransactionsByAddressAndTimeRange(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
+
+        /// <summary>
+        /// List Confirmed Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListConfirmedTransactionsByAddressAndTimeRangeR</returns>
+        ApiResponse<ListConfirmedTransactionsByAddressAndTimeRangeR> ListConfirmedTransactionsByAddressAndTimeRangeWithHttpInfo(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListInternalTransactionsByAddressAndTimeRangeR</returns>
+        ListInternalTransactionsByAddressAndTimeRangeR ListInternalTransactionsByAddressAndTimeRange(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListInternalTransactionsByAddressAndTimeRangeR</returns>
+        ApiResponse<ListInternalTransactionsByAddressAndTimeRangeR> ListInternalTransactionsByAddressAndTimeRangeWithHttpInfo(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Latest Mined Blocks
         /// </summary>
@@ -256,8 +472,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListLatestMinedBlocksR</returns>
-        ListLatestMinedBlocksR ListLatestMinedBlocks(string network, string blockchain, int count, string context = default(string));
+        ListLatestMinedBlocksR ListLatestMinedBlocks(string network, string blockchain, int count, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// List Latest Mined Blocks
@@ -270,8 +487,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListLatestMinedBlocksR</returns>
-        ApiResponse<ListLatestMinedBlocksR> ListLatestMinedBlocksWithHttpInfo(string network, string blockchain, int count, string context = default(string));
+        ApiResponse<ListLatestMinedBlocksR> ListLatestMinedBlocksWithHttpInfo(string network, string blockchain, int count, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Transactions by Block Hash
         /// </summary>
@@ -285,8 +503,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTransactionsByBlockHashR</returns>
-        ListTransactionsByBlockHashR ListTransactionsByBlockHash(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListTransactionsByBlockHashR ListTransactionsByBlockHash(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List Transactions by Block Hash
@@ -301,8 +520,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTransactionsByBlockHashR</returns>
-        ApiResponse<ListTransactionsByBlockHashR> ListTransactionsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListTransactionsByBlockHashR> ListTransactionsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
         /// <summary>
         /// List Transactions by Block Height
         /// </summary>
@@ -316,8 +536,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTransactionsByBlockHeightR</returns>
-        ListTransactionsByBlockHeightR ListTransactionsByBlockHeight(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListTransactionsByBlockHeightR ListTransactionsByBlockHeight(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List Transactions by Block Height
@@ -332,8 +553,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTransactionsByBlockHeightR</returns>
-        ApiResponse<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightWithHttpInfo(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightWithHttpInfo(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
         /// <summary>
         /// List Unconfirmed Transactions by Address
         /// </summary>
@@ -347,8 +569,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUnconfirmedTransactionsByAddressR</returns>
-        ListUnconfirmedTransactionsByAddressR ListUnconfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListUnconfirmedTransactionsByAddressR ListUnconfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List Unconfirmed Transactions by Address
@@ -363,8 +586,42 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUnconfirmedTransactionsByAddressR</returns>
-        ApiResponse<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListUnspentTransactionOutputsByAddressR</returns>
+        ListUnspentTransactionOutputsByAddressR ListUnspentTransactionOutputsByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListUnspentTransactionOutputsByAddressR</returns>
+        ApiResponse<ListUnspentTransactionOutputsByAddressR> ListUnspentTransactionOutputsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -375,6 +632,39 @@ namespace CryptoAPIs.Api
     {
         #region Asynchronous Operations
         /// <summary>
+        /// Estimate Transaction Smart Fee
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EstimateTransactionSmartFeeR</returns>
+        System.Threading.Tasks.Task<EstimateTransactionSmartFeeR> EstimateTransactionSmartFeeAsync(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Estimate Transaction Smart Fee
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EstimateTransactionSmartFeeR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EstimateTransactionSmartFeeR>> EstimateTransactionSmartFeeWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Get Address Details
         /// </summary>
         /// <remarks>
@@ -385,9 +675,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAddressDetailsR</returns>
-        System.Threading.Tasks.Task<GetAddressDetailsR> GetAddressDetailsAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetAddressDetailsR> GetAddressDetailsAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Address Details
@@ -400,9 +691,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAddressDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAddressDetailsR>> GetAddressDetailsWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetAddressDetailsR>> GetAddressDetailsWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Block Details By Block Hash
         /// </summary>
@@ -414,9 +706,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHashR</returns>
-        System.Threading.Tasks.Task<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Block Details By Block Hash
@@ -429,9 +722,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHashR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHashR>> GetBlockDetailsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHashR>> GetBlockDetailsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Block Details By Block Height
         /// </summary>
@@ -443,9 +737,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightAsync(string blockchain, string network, int height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightAsync(string blockchain, string network, int height, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Block Details By Block Height
@@ -458,9 +753,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHeightR>> GetBlockDetailsByBlockHeightWithHttpInfoAsync(string blockchain, string network, int height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHeightR>> GetBlockDetailsByBlockHeightWithHttpInfoAsync(string blockchain, string network, int height, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Fee Recommendations
         /// </summary>
@@ -471,9 +767,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetFeeRecommendationsR</returns>
-        System.Threading.Tasks.Task<GetFeeRecommendationsR> GetFeeRecommendationsAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetFeeRecommendationsR> GetFeeRecommendationsAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Fee Recommendations
@@ -485,9 +782,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetFeeRecommendationsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetFeeRecommendationsR>> GetFeeRecommendationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetFeeRecommendationsR>> GetFeeRecommendationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Last Mined Block
         /// </summary>
@@ -498,9 +796,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetLastMinedBlockR</returns>
-        System.Threading.Tasks.Task<GetLastMinedBlockR> GetLastMinedBlockAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetLastMinedBlockR> GetLastMinedBlockAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Last Mined Block
@@ -512,9 +811,72 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetLastMinedBlockR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetLastMinedBlockR>> GetLastMinedBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetLastMinedBlockR>> GetLastMinedBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Next Available Nonce
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetNextAvailableNonceR</returns>
+        System.Threading.Tasks.Task<GetNextAvailableNonceR> GetNextAvailableNonceAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Next Available Nonce
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetNextAvailableNonceR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetNextAvailableNonceR>> GetNextAvailableNonceWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Raw Transaction Data
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetRawTransactionDataR</returns>
+        System.Threading.Tasks.Task<GetRawTransactionDataR> GetRawTransactionDataAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Raw Transaction Data
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetRawTransactionDataR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetRawTransactionDataR>> GetRawTransactionDataWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Transaction Details By Transaction ID
         /// </summary>
@@ -526,9 +888,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTransactionDetailsByTransactionIDR</returns>
-        System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Transaction Details By Transaction ID
@@ -541,9 +904,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTransactionDetailsByTransactionIDR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetTransactionDetailsByTransactionIDR>> GetTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetTransactionDetailsByTransactionIDR>> GetTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List All Unconfirmed Transactions
         /// </summary>
@@ -556,9 +920,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAllUnconfirmedTransactionsR</returns>
-        System.Threading.Tasks.Task<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsAsync(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List All Unconfirmed Transactions
@@ -572,9 +937,49 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAllUnconfirmedTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListAllUnconfirmedTransactionsR>> ListAllUnconfirmedTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListAllUnconfirmedTransactionsR>> ListAllUnconfirmedTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListConfirmedTokensTransfersByAddressAndTimeRangeR</returns>
+        System.Threading.Tasks.Task<ListConfirmedTokensTransfersByAddressAndTimeRangeR> ListConfirmedTokensTransfersByAddressAndTimeRangeAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListConfirmedTokensTransfersByAddressAndTimeRangeR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListConfirmedTokensTransfersByAddressAndTimeRangeR>> ListConfirmedTokensTransfersByAddressAndTimeRangeWithHttpInfoAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Confirmed Transactions By Address
         /// </summary>
@@ -588,9 +993,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListConfirmedTransactionsByAddressR</returns>
-        System.Threading.Tasks.Task<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Confirmed Transactions By Address
@@ -605,9 +1011,88 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListConfirmedTransactionsByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListConfirmedTransactionsByAddressR>> ListConfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListConfirmedTransactionsByAddressR>> ListConfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Confirmed Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListConfirmedTransactionsByAddressAndTimeRangeR</returns>
+        System.Threading.Tasks.Task<ListConfirmedTransactionsByAddressAndTimeRangeR> ListConfirmedTransactionsByAddressAndTimeRangeAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Confirmed Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListConfirmedTransactionsByAddressAndTimeRangeR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListConfirmedTransactionsByAddressAndTimeRangeR>> ListConfirmedTransactionsByAddressAndTimeRangeWithHttpInfoAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListInternalTransactionsByAddressAndTimeRangeR</returns>
+        System.Threading.Tasks.Task<ListInternalTransactionsByAddressAndTimeRangeR> ListInternalTransactionsByAddressAndTimeRangeAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListInternalTransactionsByAddressAndTimeRangeR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListInternalTransactionsByAddressAndTimeRangeR>> ListInternalTransactionsByAddressAndTimeRangeWithHttpInfoAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Latest Mined Blocks
         /// </summary>
@@ -619,9 +1104,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListLatestMinedBlocksR</returns>
-        System.Threading.Tasks.Task<ListLatestMinedBlocksR> ListLatestMinedBlocksAsync(string network, string blockchain, int count, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListLatestMinedBlocksR> ListLatestMinedBlocksAsync(string network, string blockchain, int count, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Latest Mined Blocks
@@ -634,9 +1120,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListLatestMinedBlocksR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListLatestMinedBlocksR>> ListLatestMinedBlocksWithHttpInfoAsync(string network, string blockchain, int count, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListLatestMinedBlocksR>> ListLatestMinedBlocksWithHttpInfoAsync(string network, string blockchain, int count, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Transactions by Block Hash
         /// </summary>
@@ -650,9 +1137,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTransactionsByBlockHashR</returns>
-        System.Threading.Tasks.Task<ListTransactionsByBlockHashR> ListTransactionsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListTransactionsByBlockHashR> ListTransactionsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Transactions by Block Hash
@@ -667,9 +1155,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTransactionsByBlockHashR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListTransactionsByBlockHashR>> ListTransactionsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListTransactionsByBlockHashR>> ListTransactionsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Transactions by Block Height
         /// </summary>
@@ -683,9 +1172,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTransactionsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightAsync(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightAsync(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Transactions by Block Height
@@ -700,9 +1190,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTransactionsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListTransactionsByBlockHeightR>> ListTransactionsByBlockHeightWithHttpInfoAsync(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListTransactionsByBlockHeightR>> ListTransactionsByBlockHeightWithHttpInfoAsync(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Unconfirmed Transactions by Address
         /// </summary>
@@ -716,9 +1207,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUnconfirmedTransactionsByAddressR</returns>
-        System.Threading.Tasks.Task<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Unconfirmed Transactions by Address
@@ -733,9 +1225,45 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUnconfirmedTransactionsByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListUnconfirmedTransactionsByAddressR>> ListUnconfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListUnconfirmedTransactionsByAddressR>> ListUnconfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListUnspentTransactionOutputsByAddressR</returns>
+        System.Threading.Tasks.Task<ListUnspentTransactionOutputsByAddressR> ListUnspentTransactionOutputsByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListUnspentTransactionOutputsByAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListUnspentTransactionOutputsByAddressR>> ListUnspentTransactionOutputsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -857,6 +1385,214 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// Estimate Transaction Smart Fee Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EstimateTransactionSmartFeeR</returns>
+        public EstimateTransactionSmartFeeR EstimateTransactionSmartFee(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<EstimateTransactionSmartFeeR> localVarResponse = EstimateTransactionSmartFeeWithHttpInfo(blockchain, network, context, confirmationTarget, estimateMode);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Estimate Transaction Smart Fee Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EstimateTransactionSmartFeeR</returns>
+        public CryptoAPIs.Client.ApiResponse<EstimateTransactionSmartFeeR> EstimateTransactionSmartFeeWithHttpInfo(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->EstimateTransactionSmartFee");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->EstimateTransactionSmartFee");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (confirmationTarget != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "confirmationTarget", confirmationTarget));
+            }
+            if (estimateMode != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "estimateMode", estimateMode));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.EstimateTransactionSmartFee";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EstimateTransactionSmartFeeR>("/blockchain-data/{blockchain}/{network}/estimate-transaction-smart-fee", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EstimateTransactionSmartFee", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Estimate Transaction Smart Fee Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EstimateTransactionSmartFeeR</returns>
+        public async System.Threading.Tasks.Task<EstimateTransactionSmartFeeR> EstimateTransactionSmartFeeAsync(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<EstimateTransactionSmartFeeR> localVarResponse = await EstimateTransactionSmartFeeWithHttpInfoAsync(blockchain, network, context, confirmationTarget, estimateMode, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Estimate Transaction Smart Fee Through this endpoint, customers can estimate the approximate fee per kilobyte needed for a transaction to begin confirmation within the &#x60;confirmationTarget&#x60; blocks when possible. After which it will return the number of blocks for which the estimate is valid.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain"></param>
+        /// <param name="network"></param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="confirmationTarget">Integer representation of confirmation target in blocks that estimation will be valid for (optional)</param>
+        /// <param name="estimateMode">String representation of the address (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EstimateTransactionSmartFeeR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<EstimateTransactionSmartFeeR>> EstimateTransactionSmartFeeWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? confirmationTarget = default(int?), string estimateMode = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->EstimateTransactionSmartFee");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->EstimateTransactionSmartFee");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (confirmationTarget != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "confirmationTarget", confirmationTarget));
+            }
+            if (estimateMode != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "estimateMode", estimateMode));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.EstimateTransactionSmartFee";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EstimateTransactionSmartFeeR>("/blockchain-data/{blockchain}/{network}/estimate-transaction-smart-fee", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EstimateTransactionSmartFee", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Get Address Details Through this endpoint the customer can receive basic information about a given address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing **unconfirmed** transactions for the specific address, they **will not** be counted or calculated here. Applies only for coins.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -864,8 +1600,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAddressDetailsR</returns>
-        public GetAddressDetailsR GetAddressDetails(string blockchain, string network, string address, string context = default(string))
+        public GetAddressDetailsR GetAddressDetails(string blockchain, string network, string address, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetAddressDetailsR> localVarResponse = GetAddressDetailsWithHttpInfo(blockchain, network, address, context);
             return localVarResponse.Data;
@@ -879,8 +1616,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAddressDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetAddressDetailsR> GetAddressDetailsWithHttpInfo(string blockchain, string network, string address, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetAddressDetailsR> GetAddressDetailsWithHttpInfo(string blockchain, string network, string address, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -929,6 +1667,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -958,11 +1699,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAddressDetailsR</returns>
-        public async System.Threading.Tasks.Task<GetAddressDetailsR> GetAddressDetailsAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetAddressDetailsR> GetAddressDetailsAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetAddressDetailsR> localVarResponse = await GetAddressDetailsWithHttpInfoAsync(blockchain, network, address, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetAddressDetailsR> localVarResponse = await GetAddressDetailsWithHttpInfoAsync(blockchain, network, address, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -974,9 +1716,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAddressDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAddressDetailsR>> GetAddressDetailsWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAddressDetailsR>> GetAddressDetailsWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1026,6 +1769,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1056,8 +1802,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHashR</returns>
-        public GetBlockDetailsByBlockHashR GetBlockDetailsByBlockHash(string blockchain, string network, string blockHash, string context = default(string))
+        public GetBlockDetailsByBlockHashR GetBlockDetailsByBlockHash(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashR> localVarResponse = GetBlockDetailsByBlockHashWithHttpInfo(blockchain, network, blockHash, context);
             return localVarResponse.Data;
@@ -1071,8 +1818,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHashR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1121,6 +1869,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetBlockDetailsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1150,11 +1901,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHashR</returns>
-        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHashR> GetBlockDetailsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashR> localVarResponse = await GetBlockDetailsByBlockHashWithHttpInfoAsync(blockchain, network, blockHash, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashR> localVarResponse = await GetBlockDetailsByBlockHashWithHttpInfoAsync(blockchain, network, blockHash, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1166,9 +1918,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHashR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashR>> GetBlockDetailsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashR>> GetBlockDetailsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1218,6 +1971,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetBlockDetailsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1248,8 +2004,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHeightR</returns>
-        public GetBlockDetailsByBlockHeightR GetBlockDetailsByBlockHeight(string blockchain, string network, int height, string context = default(string))
+        public GetBlockDetailsByBlockHeightR GetBlockDetailsByBlockHeight(string blockchain, string network, int height, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightR> localVarResponse = GetBlockDetailsByBlockHeightWithHttpInfo(blockchain, network, height, context);
             return localVarResponse.Data;
@@ -1263,8 +2020,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightWithHttpInfo(string blockchain, string network, int height, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightWithHttpInfo(string blockchain, string network, int height, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1307,6 +2065,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetBlockDetailsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1336,11 +2097,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightAsync(string blockchain, string network, int height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightR> GetBlockDetailsByBlockHeightAsync(string blockchain, string network, int height, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightR> localVarResponse = await GetBlockDetailsByBlockHeightWithHttpInfoAsync(blockchain, network, height, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightR> localVarResponse = await GetBlockDetailsByBlockHeightWithHttpInfoAsync(blockchain, network, height, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1352,9 +2114,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="height">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightR>> GetBlockDetailsByBlockHeightWithHttpInfoAsync(string blockchain, string network, int height, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightR>> GetBlockDetailsByBlockHeightWithHttpInfoAsync(string blockchain, string network, int height, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1399,6 +2162,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetBlockDetailsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -1427,8 +2193,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetFeeRecommendationsR</returns>
-        public GetFeeRecommendationsR GetFeeRecommendations(string blockchain, string network, string context = default(string))
+        public GetFeeRecommendationsR GetFeeRecommendations(string blockchain, string network, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetFeeRecommendationsR> localVarResponse = GetFeeRecommendationsWithHttpInfo(blockchain, network, context);
             return localVarResponse.Data;
@@ -1441,8 +2208,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetFeeRecommendationsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetFeeRecommendationsR> GetFeeRecommendationsWithHttpInfo(string blockchain, string network, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetFeeRecommendationsR> GetFeeRecommendationsWithHttpInfo(string blockchain, string network, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1484,6 +2252,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetFeeRecommendations";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1512,11 +2283,12 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetFeeRecommendationsR</returns>
-        public async System.Threading.Tasks.Task<GetFeeRecommendationsR> GetFeeRecommendationsAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetFeeRecommendationsR> GetFeeRecommendationsAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetFeeRecommendationsR> localVarResponse = await GetFeeRecommendationsWithHttpInfoAsync(blockchain, network, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetFeeRecommendationsR> localVarResponse = await GetFeeRecommendationsWithHttpInfoAsync(blockchain, network, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1527,9 +2299,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetFeeRecommendationsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetFeeRecommendationsR>> GetFeeRecommendationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetFeeRecommendationsR>> GetFeeRecommendationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1572,6 +2345,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetFeeRecommendations";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1601,8 +2377,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetLastMinedBlockR</returns>
-        public GetLastMinedBlockR GetLastMinedBlock(string blockchain, string network, string context = default(string))
+        public GetLastMinedBlockR GetLastMinedBlock(string blockchain, string network, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetLastMinedBlockR> localVarResponse = GetLastMinedBlockWithHttpInfo(blockchain, network, context);
             return localVarResponse.Data;
@@ -1615,8 +2392,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetLastMinedBlockR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetLastMinedBlockR> GetLastMinedBlockWithHttpInfo(string blockchain, string network, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetLastMinedBlockR> GetLastMinedBlockWithHttpInfo(string blockchain, string network, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1658,6 +2436,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetLastMinedBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1686,11 +2467,12 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetLastMinedBlockR</returns>
-        public async System.Threading.Tasks.Task<GetLastMinedBlockR> GetLastMinedBlockAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetLastMinedBlockR> GetLastMinedBlockAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetLastMinedBlockR> localVarResponse = await GetLastMinedBlockWithHttpInfoAsync(blockchain, network, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetLastMinedBlockR> localVarResponse = await GetLastMinedBlockWithHttpInfoAsync(blockchain, network, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1701,9 +2483,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetLastMinedBlockR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetLastMinedBlockR>> GetLastMinedBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetLastMinedBlockR>> GetLastMinedBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1747,6 +2530,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetLastMinedBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -1769,6 +2555,410 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// Get Next Available Nonce Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetNextAvailableNonceR</returns>
+        public GetNextAvailableNonceR GetNextAvailableNonce(string blockchain, string network, string address, string context = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<GetNextAvailableNonceR> localVarResponse = GetNextAvailableNonceWithHttpInfo(blockchain, network, address, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Next Available Nonce Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetNextAvailableNonceR</returns>
+        public CryptoAPIs.Client.ApiResponse<GetNextAvailableNonceR> GetNextAvailableNonceWithHttpInfo(string blockchain, string network, string address, string context = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->GetNextAvailableNonce");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->GetNextAvailableNonce");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->GetNextAvailableNonce");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetNextAvailableNonce";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<GetNextAvailableNonceR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/next-available-nonce", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetNextAvailableNonce", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Next Available Nonce Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetNextAvailableNonceR</returns>
+        public async System.Threading.Tasks.Task<GetNextAvailableNonceR> GetNextAvailableNonceAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<GetNextAvailableNonceR> localVarResponse = await GetNextAvailableNonceWithHttpInfoAsync(blockchain, network, address, context, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Next Available Nonce Through this endpoint customers can get information about the next available nonce by providing the specific blockchain, network and address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetNextAvailableNonceR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetNextAvailableNonceR>> GetNextAvailableNonceWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->GetNextAvailableNonce");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->GetNextAvailableNonce");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->GetNextAvailableNonce");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetNextAvailableNonce";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetNextAvailableNonceR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/next-available-nonce", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetNextAvailableNonce", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Raw Transaction Data Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetRawTransactionDataR</returns>
+        public GetRawTransactionDataR GetRawTransactionData(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<GetRawTransactionDataR> localVarResponse = GetRawTransactionDataWithHttpInfo(blockchain, network, transactionId, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Raw Transaction Data Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetRawTransactionDataR</returns>
+        public CryptoAPIs.Client.ApiResponse<GetRawTransactionDataR> GetRawTransactionDataWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->GetRawTransactionData");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->GetRawTransactionData");
+            }
+
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionId' when calling UnifiedEndpointsApi->GetRawTransactionData");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("transactionId", CryptoAPIs.Client.ClientUtils.ParameterToString(transactionId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetRawTransactionData";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<GetRawTransactionDataR>("/blockchain-data/{blockchain}/{network}/transactions/{transactionId}/raw-data", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetRawTransactionData", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Raw Transaction Data Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetRawTransactionDataR</returns>
+        public async System.Threading.Tasks.Task<GetRawTransactionDataR> GetRawTransactionDataAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<GetRawTransactionDataR> localVarResponse = await GetRawTransactionDataWithHttpInfoAsync(blockchain, network, transactionId, context, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Raw Transaction Data Through this endpoint customers can get information on a transaction in its raw format by providing its &#x60;transactionId&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetRawTransactionDataR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetRawTransactionDataR>> GetRawTransactionDataWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->GetRawTransactionData");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->GetRawTransactionData");
+            }
+
+            // verify the required parameter 'transactionId' is set
+            if (transactionId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'transactionId' when calling UnifiedEndpointsApi->GetRawTransactionData");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("transactionId", CryptoAPIs.Client.ClientUtils.ParameterToString(transactionId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetRawTransactionData";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetRawTransactionDataR>("/blockchain-data/{blockchain}/{network}/transactions/{transactionId}/raw-data", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetRawTransactionData", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Get Transaction Details By Transaction ID Through this endpoint customers can obtain details about a transaction by the transaction&#39;s unique identifier. In UTXO-based protocols like BTC there are attributes such as &#x60;transactionId&#x60; and transaction &#x60;hash&#x60;. They still could be different. In protocols like Ethereum there is only one unique value and it&#39;s &#x60;hash&#x60;.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1776,8 +2966,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTransactionDetailsByTransactionIDR</returns>
-        public GetTransactionDetailsByTransactionIDR GetTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string))
+        public GetTransactionDetailsByTransactionIDR GetTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDR> localVarResponse = GetTransactionDetailsByTransactionIDWithHttpInfo(blockchain, network, transactionId, context);
             return localVarResponse.Data;
@@ -1791,8 +2982,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTransactionDetailsByTransactionIDR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1841,6 +3033,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1870,11 +3065,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTransactionDetailsByTransactionIDR</returns>
-        public async System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDR> GetTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDR> localVarResponse = await GetTransactionDetailsByTransactionIDWithHttpInfoAsync(blockchain, network, transactionId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDR> localVarResponse = await GetTransactionDetailsByTransactionIDWithHttpInfoAsync(blockchain, network, transactionId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1886,9 +3082,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTransactionDetailsByTransactionIDR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDR>> GetTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDR>> GetTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1938,6 +3135,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.GetTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1969,8 +3169,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAllUnconfirmedTransactionsR</returns>
-        public ListAllUnconfirmedTransactionsR ListAllUnconfirmedTransactions(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListAllUnconfirmedTransactionsR ListAllUnconfirmedTransactions(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListAllUnconfirmedTransactionsR> localVarResponse = ListAllUnconfirmedTransactionsWithHttpInfo(blockchain, network, context, limit, offset);
             return localVarResponse.Data;
@@ -1985,8 +3186,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAllUnconfirmedTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2036,6 +3238,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListAllUnconfirmedTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2066,11 +3271,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAllUnconfirmedTransactionsR</returns>
-        public async System.Threading.Tasks.Task<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListAllUnconfirmedTransactionsR> ListAllUnconfirmedTransactionsAsync(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListAllUnconfirmedTransactionsR> localVarResponse = await ListAllUnconfirmedTransactionsWithHttpInfoAsync(blockchain, network, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListAllUnconfirmedTransactionsR> localVarResponse = await ListAllUnconfirmedTransactionsWithHttpInfoAsync(blockchain, network, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2083,9 +3289,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAllUnconfirmedTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAllUnconfirmedTransactionsR>> ListAllUnconfirmedTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAllUnconfirmedTransactionsR>> ListAllUnconfirmedTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2137,6 +3344,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
 
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListAllUnconfirmedTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -2159,6 +3369,244 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListConfirmedTokensTransfersByAddressAndTimeRangeR</returns>
+        public ListConfirmedTokensTransfersByAddressAndTimeRangeR ListConfirmedTokensTransfersByAddressAndTimeRange(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressAndTimeRangeR> localVarResponse = ListConfirmedTokensTransfersByAddressAndTimeRangeWithHttpInfo(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListConfirmedTokensTransfersByAddressAndTimeRangeR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressAndTimeRangeR> ListConfirmedTokensTransfersByAddressAndTimeRangeWithHttpInfo(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListConfirmedTokensTransfersByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListConfirmedTokensTransfersByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListConfirmedTokensTransfersByAddressAndTimeRange");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListConfirmedTokensTransfersByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListConfirmedTokensTransfersByAddressAndTimeRangeR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers-by-time-range", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListConfirmedTokensTransfersByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListConfirmedTokensTransfersByAddressAndTimeRangeR</returns>
+        public async System.Threading.Tasks.Task<ListConfirmedTokensTransfersByAddressAndTimeRangeR> ListConfirmedTokensTransfersByAddressAndTimeRangeAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressAndTimeRangeR> localVarResponse = await ListConfirmedTokensTransfersByAddressAndTimeRangeWithHttpInfoAsync(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Confirmed Tokens Transfers By Address And Time Range Through this endpoint customers can obtain a list with **confirmed** token transfers by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.    {note}This refers only to transfers done for **confirmed tokens** not coins.{/note}
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListConfirmedTokensTransfersByAddressAndTimeRangeR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListConfirmedTokensTransfersByAddressAndTimeRangeR>> ListConfirmedTokensTransfersByAddressAndTimeRangeWithHttpInfoAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListConfirmedTokensTransfersByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListConfirmedTokensTransfersByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListConfirmedTokensTransfersByAddressAndTimeRange");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListConfirmedTokensTransfersByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListConfirmedTokensTransfersByAddressAndTimeRangeR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers-by-time-range", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListConfirmedTokensTransfersByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List Confirmed Transactions By Address This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2168,8 +3616,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListConfirmedTransactionsByAddressR</returns>
-        public ListConfirmedTransactionsByAddressR ListConfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListConfirmedTransactionsByAddressR ListConfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressR> localVarResponse = ListConfirmedTransactionsByAddressWithHttpInfo(blockchain, network, address, context, limit, offset);
             return localVarResponse.Data;
@@ -2185,8 +3634,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListConfirmedTransactionsByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2243,6 +3693,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListConfirmedTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2274,11 +3727,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListConfirmedTransactionsByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListConfirmedTransactionsByAddressR> ListConfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressR> localVarResponse = await ListConfirmedTransactionsByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressR> localVarResponse = await ListConfirmedTransactionsByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2292,9 +3746,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListConfirmedTransactionsByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressR>> ListConfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressR>> ListConfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2353,6 +3808,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
 
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListConfirmedTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -2375,6 +3833,482 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// List Confirmed Transactions By Address And Time Range This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListConfirmedTransactionsByAddressAndTimeRangeR</returns>
+        public ListConfirmedTransactionsByAddressAndTimeRangeR ListConfirmedTransactionsByAddressAndTimeRange(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressAndTimeRangeR> localVarResponse = ListConfirmedTransactionsByAddressAndTimeRangeWithHttpInfo(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Confirmed Transactions By Address And Time Range This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListConfirmedTransactionsByAddressAndTimeRangeR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressAndTimeRangeR> ListConfirmedTransactionsByAddressAndTimeRangeWithHttpInfo(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListConfirmedTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListConfirmedTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListConfirmedTransactionsByAddressAndTimeRange");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListConfirmedTransactionsByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListConfirmedTransactionsByAddressAndTimeRangeR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/transactions-by-time-range", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListConfirmedTransactionsByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Confirmed Transactions By Address And Time Range This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListConfirmedTransactionsByAddressAndTimeRangeR</returns>
+        public async System.Threading.Tasks.Task<ListConfirmedTransactionsByAddressAndTimeRangeR> ListConfirmedTransactionsByAddressAndTimeRangeAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressAndTimeRangeR> localVarResponse = await ListConfirmedTransactionsByAddressAndTimeRangeWithHttpInfoAsync(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Confirmed Transactions By Address And Time Range This endpoint will list confirmed transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60; which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListConfirmedTransactionsByAddressAndTimeRangeR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListConfirmedTransactionsByAddressAndTimeRangeR>> ListConfirmedTransactionsByAddressAndTimeRangeWithHttpInfoAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListConfirmedTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListConfirmedTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListConfirmedTransactionsByAddressAndTimeRange");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListConfirmedTransactionsByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListConfirmedTransactionsByAddressAndTimeRangeR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/transactions-by-time-range", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListConfirmedTransactionsByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListInternalTransactionsByAddressAndTimeRangeR</returns>
+        public ListInternalTransactionsByAddressAndTimeRangeR ListInternalTransactionsByAddressAndTimeRange(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListInternalTransactionsByAddressAndTimeRangeR> localVarResponse = ListInternalTransactionsByAddressAndTimeRangeWithHttpInfo(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListInternalTransactionsByAddressAndTimeRangeR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListInternalTransactionsByAddressAndTimeRangeR> ListInternalTransactionsByAddressAndTimeRangeWithHttpInfo(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListInternalTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListInternalTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListInternalTransactionsByAddressAndTimeRange");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListInternalTransactionsByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListInternalTransactionsByAddressAndTimeRangeR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/internal-by-time-range", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListInternalTransactionsByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListInternalTransactionsByAddressAndTimeRangeR</returns>
+        public async System.Threading.Tasks.Task<ListInternalTransactionsByAddressAndTimeRangeR> ListInternalTransactionsByAddressAndTimeRangeAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListInternalTransactionsByAddressAndTimeRangeR> localVarResponse = await ListInternalTransactionsByAddressAndTimeRangeWithHttpInfoAsync(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Internal Transactions By Address And Time Range Through this endpoint customers can list internal transactions by the &#x60;address&#x60; attribute and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">String identifier of the address document represented in CryptoAPIs</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListInternalTransactionsByAddressAndTimeRangeR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListInternalTransactionsByAddressAndTimeRangeR>> ListInternalTransactionsByAddressAndTimeRangeWithHttpInfoAsync(string blockchain, string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListInternalTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListInternalTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListInternalTransactionsByAddressAndTimeRange");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListInternalTransactionsByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListInternalTransactionsByAddressAndTimeRangeR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/internal-by-time-range", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListInternalTransactionsByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List Latest Mined Blocks Through this endpoint customers can list **up to 50** from the latest blocks that were mined.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2382,8 +4316,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListLatestMinedBlocksR</returns>
-        public ListLatestMinedBlocksR ListLatestMinedBlocks(string network, string blockchain, int count, string context = default(string))
+        public ListLatestMinedBlocksR ListLatestMinedBlocks(string network, string blockchain, int count, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListLatestMinedBlocksR> localVarResponse = ListLatestMinedBlocksWithHttpInfo(network, blockchain, count, context);
             return localVarResponse.Data;
@@ -2397,8 +4332,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListLatestMinedBlocksR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListLatestMinedBlocksR> ListLatestMinedBlocksWithHttpInfo(string network, string blockchain, int count, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<ListLatestMinedBlocksR> ListLatestMinedBlocksWithHttpInfo(string network, string blockchain, int count, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -2441,6 +4377,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListLatestMinedBlocks";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2470,11 +4409,12 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListLatestMinedBlocksR</returns>
-        public async System.Threading.Tasks.Task<ListLatestMinedBlocksR> ListLatestMinedBlocksAsync(string network, string blockchain, int count, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListLatestMinedBlocksR> ListLatestMinedBlocksAsync(string network, string blockchain, int count, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListLatestMinedBlocksR> localVarResponse = await ListLatestMinedBlocksWithHttpInfoAsync(network, blockchain, count, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListLatestMinedBlocksR> localVarResponse = await ListLatestMinedBlocksWithHttpInfoAsync(network, blockchain, count, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2486,9 +4426,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="count">Specifies how many records were requested.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListLatestMinedBlocksR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListLatestMinedBlocksR>> ListLatestMinedBlocksWithHttpInfoAsync(string network, string blockchain, int count, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListLatestMinedBlocksR>> ListLatestMinedBlocksWithHttpInfoAsync(string network, string blockchain, int count, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -2532,6 +4473,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListLatestMinedBlocks";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2564,8 +4508,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTransactionsByBlockHashR</returns>
-        public ListTransactionsByBlockHashR ListTransactionsByBlockHash(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListTransactionsByBlockHashR ListTransactionsByBlockHash(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHashR> localVarResponse = ListTransactionsByBlockHashWithHttpInfo(blockchain, network, blockHash, context, limit, offset);
             return localVarResponse.Data;
@@ -2581,8 +4526,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTransactionsByBlockHashR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHashR> ListTransactionsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHashR> ListTransactionsByBlockHashWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2639,6 +4585,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2670,11 +4619,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTransactionsByBlockHashR</returns>
-        public async System.Threading.Tasks.Task<ListTransactionsByBlockHashR> ListTransactionsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListTransactionsByBlockHashR> ListTransactionsByBlockHashAsync(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHashR> localVarResponse = await ListTransactionsByBlockHashWithHttpInfoAsync(blockchain, network, blockHash, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHashR> localVarResponse = await ListTransactionsByBlockHashWithHttpInfoAsync(blockchain, network, blockHash, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2688,9 +4638,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTransactionsByBlockHashR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHashR>> ListTransactionsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHashR>> ListTransactionsByBlockHashWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2748,6 +4699,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2780,8 +4734,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTransactionsByBlockHeightR</returns>
-        public ListTransactionsByBlockHeightR ListTransactionsByBlockHeight(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListTransactionsByBlockHeightR ListTransactionsByBlockHeight(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHeightR> localVarResponse = ListTransactionsByBlockHeightWithHttpInfo(blockchain, network, height, context, limit, offset);
             return localVarResponse.Data;
@@ -2797,8 +4752,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTransactionsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightWithHttpInfo(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightWithHttpInfo(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2849,6 +4805,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2880,11 +4839,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTransactionsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightAsync(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListTransactionsByBlockHeightR> ListTransactionsByBlockHeightAsync(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHeightR> localVarResponse = await ListTransactionsByBlockHeightWithHttpInfoAsync(blockchain, network, height, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHeightR> localVarResponse = await ListTransactionsByBlockHeightWithHttpInfoAsync(blockchain, network, height, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2898,9 +4858,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTransactionsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHeightR>> ListTransactionsByBlockHeightWithHttpInfoAsync(string blockchain, string network, int height, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTransactionsByBlockHeightR>> ListTransactionsByBlockHeightWithHttpInfoAsync(string blockchain, string network, long height, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2952,6 +4913,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2984,8 +4948,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUnconfirmedTransactionsByAddressR</returns>
-        public ListUnconfirmedTransactionsByAddressR ListUnconfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListUnconfirmedTransactionsByAddressR ListUnconfirmedTransactionsByAddress(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListUnconfirmedTransactionsByAddressR> localVarResponse = ListUnconfirmedTransactionsByAddressWithHttpInfo(blockchain, network, address, context, limit, offset);
             return localVarResponse.Data;
@@ -3001,8 +4966,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUnconfirmedTransactionsByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -3059,6 +5025,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListUnconfirmedTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -3090,11 +5059,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUnconfirmedTransactionsByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListUnconfirmedTransactionsByAddressR> ListUnconfirmedTransactionsByAddressAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListUnconfirmedTransactionsByAddressR> localVarResponse = await ListUnconfirmedTransactionsByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListUnconfirmedTransactionsByAddressR> localVarResponse = await ListUnconfirmedTransactionsByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3108,9 +5078,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUnconfirmedTransactionsByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListUnconfirmedTransactionsByAddressR>> ListUnconfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListUnconfirmedTransactionsByAddressR>> ListUnconfirmedTransactionsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -3169,6 +5140,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
 
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListUnconfirmedTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -3181,6 +5155,232 @@ namespace CryptoAPIs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListUnconfirmedTransactionsByAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListUnspentTransactionOutputsByAddressR</returns>
+        public ListUnspentTransactionOutputsByAddressR ListUnspentTransactionOutputsByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListUnspentTransactionOutputsByAddressR> localVarResponse = ListUnspentTransactionOutputsByAddressWithHttpInfo(blockchain, network, address, context, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListUnspentTransactionOutputsByAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListUnspentTransactionOutputsByAddressR> ListUnspentTransactionOutputsByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListUnspentTransactionOutputsByAddress");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListUnspentTransactionOutputsByAddress");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListUnspentTransactionOutputsByAddress");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListUnspentTransactionOutputsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListUnspentTransactionOutputsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/unspent-outputs", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUnspentTransactionOutputsByAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListUnspentTransactionOutputsByAddressR</returns>
+        public async System.Threading.Tasks.Task<ListUnspentTransactionOutputsByAddressR> ListUnspentTransactionOutputsByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListUnspentTransactionOutputsByAddressR> localVarResponse = await ListUnspentTransactionOutputsByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Unspent Transaction Outputs By Address Through this endpoint customers can list their transactions&#39; unspent outputs by &#x60;address&#x60;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListUnspentTransactionOutputsByAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListUnspentTransactionOutputsByAddressR>> ListUnspentTransactionOutputsByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling UnifiedEndpointsApi->ListUnspentTransactionOutputsByAddress");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling UnifiedEndpointsApi->ListUnspentTransactionOutputsByAddress");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling UnifiedEndpointsApi->ListUnspentTransactionOutputsByAddress");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            localVarRequestOptions.Operation = "UnifiedEndpointsApi.ListUnspentTransactionOutputsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListUnspentTransactionOutputsByAddressR>("/blockchain-data/{blockchain}/{network}/addresses/{address}/unspent-outputs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUnspentTransactionOutputsByAddress", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

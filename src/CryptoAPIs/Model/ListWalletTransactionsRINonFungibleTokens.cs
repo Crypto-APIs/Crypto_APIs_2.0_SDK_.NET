@@ -51,42 +51,50 @@ namespace CryptoAPIs.Model
         public ListWalletTransactionsRINonFungibleTokens(string convertedAmount = default(string), string exchangeRateUnit = default(string), string name = default(string), string recipient = default(string), string sender = default(string), string symbol = default(string), string tokenId = default(string), string type = default(string))
         {
             // to ensure "convertedAmount" is required (not null)
-            if (convertedAmount == null) {
+            if (convertedAmount == null)
+            {
                 throw new ArgumentNullException("convertedAmount is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.ConvertedAmount = convertedAmount;
             // to ensure "exchangeRateUnit" is required (not null)
-            if (exchangeRateUnit == null) {
+            if (exchangeRateUnit == null)
+            {
                 throw new ArgumentNullException("exchangeRateUnit is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.ExchangeRateUnit = exchangeRateUnit;
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.Name = name;
             // to ensure "recipient" is required (not null)
-            if (recipient == null) {
+            if (recipient == null)
+            {
                 throw new ArgumentNullException("recipient is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.Recipient = recipient;
             // to ensure "sender" is required (not null)
-            if (sender == null) {
+            if (sender == null)
+            {
                 throw new ArgumentNullException("sender is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.Sender = sender;
             // to ensure "symbol" is required (not null)
-            if (symbol == null) {
+            if (symbol == null)
+            {
                 throw new ArgumentNullException("symbol is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.Symbol = symbol;
             // to ensure "tokenId" is required (not null)
-            if (tokenId == null) {
+            if (tokenId == null)
+            {
                 throw new ArgumentNullException("tokenId is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.TokenId = tokenId;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ListWalletTransactionsRINonFungibleTokens and cannot be null");
             }
             this.Type = type;

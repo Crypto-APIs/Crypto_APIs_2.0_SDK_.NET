@@ -41,26 +41,29 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="NewBlockRI" /> class.
         /// </summary>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. (required).</param>
         /// <param name="createdTimestamp">Defines the specific time/date when the subscription was created in Unix Timestamp. (required).</param>
         /// <param name="isActive">Defines whether the subscription is active or not. Set as boolean. (required).</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription. (required).</param>
         public NewBlockRI(string callbackSecretKey = default(string), string callbackUrl = default(string), int createdTimestamp = default(int), bool isActive = default(bool), string referenceId = default(string))
         {
             // to ensure "callbackSecretKey" is required (not null)
-            if (callbackSecretKey == null) {
+            if (callbackSecretKey == null)
+            {
                 throw new ArgumentNullException("callbackSecretKey is a required property for NewBlockRI and cannot be null");
             }
             this.CallbackSecretKey = callbackSecretKey;
             // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
+            if (callbackUrl == null)
+            {
                 throw new ArgumentNullException("callbackUrl is a required property for NewBlockRI and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
             this.CreatedTimestamp = createdTimestamp;
             this.IsActive = isActive;
             // to ensure "referenceId" is required (not null)
-            if (referenceId == null) {
+            if (referenceId == null)
+            {
                 throw new ArgumentNullException("referenceId is a required property for NewBlockRI and cannot be null");
             }
             this.ReferenceId = referenceId;
@@ -74,9 +77,9 @@ namespace CryptoAPIs.Model
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 

@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackE400" /> class
-        /// with the <see cref="InvalidPagination" /> class
+        /// with the <see cref="UriNotFound" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of InvalidPagination.</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackE400(InvalidPagination actualInstance)
+        /// <param name="actualInstance">An instance of UriNotFound.</param>
+        public GetTransactionDetailsByTransactionIDFromCallbackE400(UriNotFound actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackE400" /> class
-        /// with the <see cref="UriNotFound" /> class
+        /// with the <see cref="InvalidPagination" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of UriNotFound.</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackE400(UriNotFound actualInstance)
+        /// <param name="actualInstance">An instance of InvalidPagination.</param>
+        public GetTransactionDetailsByTransactionIDFromCallbackE400(InvalidPagination actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -104,13 +104,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `InvalidPagination`. If the actual instance is not `InvalidPagination`,
+        /// Get the actual instance of `UriNotFound`. If the actual instance is not `UriNotFound`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of InvalidPagination</returns>
-        public InvalidPagination GetInvalidPagination()
+        /// <returns>An instance of UriNotFound</returns>
+        public UriNotFound GetUriNotFound()
         {
-            return (InvalidPagination)this.ActualInstance;
+            return (UriNotFound)this.ActualInstance;
         }
 
         /// <summary>
@@ -124,13 +124,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `UriNotFound`. If the actual instance is not `UriNotFound`,
+        /// Get the actual instance of `InvalidPagination`. If the actual instance is not `InvalidPagination`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of UriNotFound</returns>
-        public UriNotFound GetUriNotFound()
+        /// <returns>An instance of InvalidPagination</returns>
+        public InvalidPagination GetInvalidPagination()
         {
-            return (UriNotFound)this.ActualInstance;
+            return (InvalidPagination)this.ActualInstance;
         }
 
         /// <summary>

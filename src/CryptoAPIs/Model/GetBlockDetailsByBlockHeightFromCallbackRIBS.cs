@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBS" /> class
-        /// with the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBSBSC" /> class
+        /// with the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSBSC.</param>
-        public GetBlockDetailsByBlockHeightFromCallbackRIBS(GetBlockDetailsByBlockHeightFromCallbackRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSL.</param>
+        public GetBlockDetailsByBlockHeightFromCallbackRIBS(GetBlockDetailsByBlockHeightFromCallbackRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -108,6 +108,18 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBS" /> class
+        /// with the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBSBSC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSBSC.</param>
+        public GetBlockDetailsByBlockHeightFromCallbackRIBS(GetBlockDetailsByBlockHeightFromCallbackRIBSBSC actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBS" /> class
         /// with the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBSEC" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSEC.</param>
@@ -120,10 +132,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBS" /> class
-        /// with the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBSL" /> class
+        /// with the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBSZ" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSL.</param>
-        public GetBlockDetailsByBlockHeightFromCallbackRIBS(GetBlockDetailsByBlockHeightFromCallbackRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSZ.</param>
+        public GetBlockDetailsByBlockHeightFromCallbackRIBS(GetBlockDetailsByBlockHeightFromCallbackRIBSZ actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -136,18 +148,6 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSX.</param>
         public GetBlockDetailsByBlockHeightFromCallbackRIBS(GetBlockDetailsByBlockHeightFromCallbackRIBSX actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBS" /> class
-        /// with the <see cref="GetBlockDetailsByBlockHeightFromCallbackRIBSZ" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSZ.</param>
-        public GetBlockDetailsByBlockHeightFromCallbackRIBS(GetBlockDetailsByBlockHeightFromCallbackRIBSZ actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -252,13 +252,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHeightFromCallbackRIBSBSC`. If the actual instance is not `GetBlockDetailsByBlockHeightFromCallbackRIBSBSC`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHeightFromCallbackRIBSL`. If the actual instance is not `GetBlockDetailsByBlockHeightFromCallbackRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSBSC</returns>
-        public GetBlockDetailsByBlockHeightFromCallbackRIBSBSC GetGetBlockDetailsByBlockHeightFromCallbackRIBSBSC()
+        /// <returns>An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSL</returns>
+        public GetBlockDetailsByBlockHeightFromCallbackRIBSL GetGetBlockDetailsByBlockHeightFromCallbackRIBSL()
         {
-            return (GetBlockDetailsByBlockHeightFromCallbackRIBSBSC)this.ActualInstance;
+            return (GetBlockDetailsByBlockHeightFromCallbackRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -292,6 +292,16 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
+        /// Get the actual instance of `GetBlockDetailsByBlockHeightFromCallbackRIBSBSC`. If the actual instance is not `GetBlockDetailsByBlockHeightFromCallbackRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSBSC</returns>
+        public GetBlockDetailsByBlockHeightFromCallbackRIBSBSC GetGetBlockDetailsByBlockHeightFromCallbackRIBSBSC()
+        {
+            return (GetBlockDetailsByBlockHeightFromCallbackRIBSBSC)this.ActualInstance;
+        }
+
+        /// <summary>
         /// Get the actual instance of `GetBlockDetailsByBlockHeightFromCallbackRIBSEC`. If the actual instance is not `GetBlockDetailsByBlockHeightFromCallbackRIBSEC`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -302,13 +312,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHeightFromCallbackRIBSL`. If the actual instance is not `GetBlockDetailsByBlockHeightFromCallbackRIBSL`,
+        /// Get the actual instance of `GetBlockDetailsByBlockHeightFromCallbackRIBSZ`. If the actual instance is not `GetBlockDetailsByBlockHeightFromCallbackRIBSZ`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSL</returns>
-        public GetBlockDetailsByBlockHeightFromCallbackRIBSL GetGetBlockDetailsByBlockHeightFromCallbackRIBSL()
+        /// <returns>An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSZ</returns>
+        public GetBlockDetailsByBlockHeightFromCallbackRIBSZ GetGetBlockDetailsByBlockHeightFromCallbackRIBSZ()
         {
-            return (GetBlockDetailsByBlockHeightFromCallbackRIBSL)this.ActualInstance;
+            return (GetBlockDetailsByBlockHeightFromCallbackRIBSZ)this.ActualInstance;
         }
 
         /// <summary>
@@ -319,16 +329,6 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHeightFromCallbackRIBSX GetGetBlockDetailsByBlockHeightFromCallbackRIBSX()
         {
             return (GetBlockDetailsByBlockHeightFromCallbackRIBSX)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `GetBlockDetailsByBlockHeightFromCallbackRIBSZ`. If the actual instance is not `GetBlockDetailsByBlockHeightFromCallbackRIBSZ`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetBlockDetailsByBlockHeightFromCallbackRIBSZ</returns>
-        public GetBlockDetailsByBlockHeightFromCallbackRIBSZ GetGetBlockDetailsByBlockHeightFromCallbackRIBSZ()
-        {
-            return (GetBlockDetailsByBlockHeightFromCallbackRIBSZ)this.ActualInstance;
         }
 
         /// <summary>

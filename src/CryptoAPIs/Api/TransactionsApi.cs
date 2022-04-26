@@ -40,8 +40,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCoinsTransactionFromAddressForWholeAmountR</returns>
-        CreateCoinsTransactionFromAddressForWholeAmountR CreateCoinsTransactionFromAddressForWholeAmount(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB));
+        CreateCoinsTransactionFromAddressForWholeAmountR CreateCoinsTransactionFromAddressForWholeAmount(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0);
 
         /// <summary>
         /// Create Coins Transaction From Address For Whole Amount
@@ -56,8 +57,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCoinsTransactionFromAddressForWholeAmountR</returns>
-        ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB));
+        ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0);
         /// <summary>
         /// Create Coins Transaction Request from Address
         /// </summary>
@@ -65,14 +67,15 @@ namespace CryptoAPIs.Api
         /// Through this endpoint users can create a new single transaction request from one address to another.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCoinsTransactionRequestFromAddressR</returns>
-        CreateCoinsTransactionRequestFromAddressR CreateCoinsTransactionRequestFromAddress(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB));
+        CreateCoinsTransactionRequestFromAddressR CreateCoinsTransactionRequestFromAddress(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0);
 
         /// <summary>
         /// Create Coins Transaction Request from Address
@@ -81,14 +84,15 @@ namespace CryptoAPIs.Api
         /// Through this endpoint users can create a new single transaction request from one address to another.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCoinsTransactionRequestFromAddressR</returns>
-        ApiResponse<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB));
+        ApiResponse<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0);
         /// <summary>
         /// Create Coins Transaction Request from Wallet
         /// </summary>
@@ -101,8 +105,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCoinsTransactionRequestFromWalletR</returns>
-        CreateCoinsTransactionRequestFromWalletR CreateCoinsTransactionRequestFromWallet(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB));
+        CreateCoinsTransactionRequestFromWalletR CreateCoinsTransactionRequestFromWallet(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0);
 
         /// <summary>
         /// Create Coins Transaction Request from Wallet
@@ -116,8 +121,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCoinsTransactionRequestFromWalletR</returns>
-        ApiResponse<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB));
+        ApiResponse<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0);
         /// <summary>
         /// Create Fungible Tokens Transaction Request from Address
         /// </summary>
@@ -131,8 +137,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateFungibleTokensTransactionRequestFromAddressR</returns>
-        CreateFungibleTokensTransactionRequestFromAddressR CreateFungibleTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB));
+        CreateFungibleTokensTransactionRequestFromAddressR CreateFungibleTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0);
 
         /// <summary>
         /// Create Fungible Tokens Transaction Request from Address
@@ -147,8 +154,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateFungibleTokensTransactionRequestFromAddressR</returns>
-        ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB));
+        ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -171,9 +179,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCoinsTransactionFromAddressForWholeAmountR</returns>
-        System.Threading.Tasks.Task<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Coins Transaction From Address For Whole Amount
@@ -188,9 +197,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCoinsTransactionFromAddressForWholeAmountR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR>> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR>> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Coins Transaction Request from Address
         /// </summary>
@@ -198,15 +208,16 @@ namespace CryptoAPIs.Api
         /// Through this endpoint users can create a new single transaction request from one address to another.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCoinsTransactionRequestFromAddressR</returns>
-        System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Coins Transaction Request from Address
@@ -215,15 +226,16 @@ namespace CryptoAPIs.Api
         /// Through this endpoint users can create a new single transaction request from one address to another.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCoinsTransactionRequestFromAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateCoinsTransactionRequestFromAddressR>> CreateCoinsTransactionRequestFromAddressWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateCoinsTransactionRequestFromAddressR>> CreateCoinsTransactionRequestFromAddressWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Coins Transaction Request from Wallet
         /// </summary>
@@ -236,9 +248,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCoinsTransactionRequestFromWalletR</returns>
-        System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Coins Transaction Request from Wallet
@@ -252,9 +265,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCoinsTransactionRequestFromWalletR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateCoinsTransactionRequestFromWalletR>> CreateCoinsTransactionRequestFromWalletWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateCoinsTransactionRequestFromWalletR>> CreateCoinsTransactionRequestFromWalletWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Fungible Tokens Transaction Request from Address
         /// </summary>
@@ -268,9 +282,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateFungibleTokensTransactionRequestFromAddressR</returns>
-        System.Threading.Tasks.Task<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Fungible Tokens Transaction Request from Address
@@ -285,9 +300,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateFungibleTokensTransactionRequestFromAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR>> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR>> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -418,8 +434,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCoinsTransactionFromAddressForWholeAmountR</returns>
-        public CreateCoinsTransactionFromAddressForWholeAmountR CreateCoinsTransactionFromAddressForWholeAmount(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB))
+        public CreateCoinsTransactionFromAddressForWholeAmountR CreateCoinsTransactionFromAddressForWholeAmount(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR> localVarResponse = CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfo(address, blockchain, network, walletId, context, createCoinsTransactionFromAddressForWholeAmountRB);
             return localVarResponse.Data;
@@ -435,8 +452,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCoinsTransactionFromAddressForWholeAmountR</returns>
-        public CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB))
+        public CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0)
         {
             // verify the required parameter 'address' is set
             if (address == null)
@@ -494,6 +512,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createCoinsTransactionFromAddressForWholeAmountRB;
+
+            localVarRequestOptions.Operation = "TransactionsApi.CreateCoinsTransactionFromAddressForWholeAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -525,11 +546,12 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCoinsTransactionFromAddressForWholeAmountR</returns>
-        public async System.Threading.Tasks.Task<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateCoinsTransactionFromAddressForWholeAmountR> CreateCoinsTransactionFromAddressForWholeAmountAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR> localVarResponse = await CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfoAsync(address, blockchain, network, walletId, context, createCoinsTransactionFromAddressForWholeAmountRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR> localVarResponse = await CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfoAsync(address, blockchain, network, walletId, context, createCoinsTransactionFromAddressForWholeAmountRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -543,9 +565,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionFromAddressForWholeAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCoinsTransactionFromAddressForWholeAmountR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR>> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionFromAddressForWholeAmountR>> CreateCoinsTransactionFromAddressForWholeAmountWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionFromAddressForWholeAmountRB createCoinsTransactionFromAddressForWholeAmountRB = default(CreateCoinsTransactionFromAddressForWholeAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'address' is set
             if (address == null)
@@ -605,6 +628,9 @@ namespace CryptoAPIs.Api
             }
             localVarRequestOptions.Data = createCoinsTransactionFromAddressForWholeAmountRB;
 
+            localVarRequestOptions.Operation = "TransactionsApi.CreateCoinsTransactionFromAddressForWholeAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -630,14 +656,15 @@ namespace CryptoAPIs.Api
         /// Create Coins Transaction Request from Address Through this endpoint users can create a new single transaction request from one address to another.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCoinsTransactionRequestFromAddressR</returns>
-        public CreateCoinsTransactionRequestFromAddressR CreateCoinsTransactionRequestFromAddress(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB))
+        public CreateCoinsTransactionRequestFromAddressR CreateCoinsTransactionRequestFromAddress(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromAddressR> localVarResponse = CreateCoinsTransactionRequestFromAddressWithHttpInfo(address, blockchain, network, walletId, context, createCoinsTransactionRequestFromAddressRB);
             return localVarResponse.Data;
@@ -647,14 +674,15 @@ namespace CryptoAPIs.Api
         /// Create Coins Transaction Request from Address Through this endpoint users can create a new single transaction request from one address to another.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCoinsTransactionRequestFromAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB))
+        public CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressWithHttpInfo(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0)
         {
             // verify the required parameter 'address' is set
             if (address == null)
@@ -712,6 +740,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createCoinsTransactionRequestFromAddressRB;
+
+            localVarRequestOptions.Operation = "TransactionsApi.CreateCoinsTransactionRequestFromAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -737,17 +768,18 @@ namespace CryptoAPIs.Api
         /// Create Coins Transaction Request from Address Through this endpoint users can create a new single transaction request from one address to another.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCoinsTransactionRequestFromAddressR</returns>
-        public async System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromAddressR> CreateCoinsTransactionRequestFromAddressAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromAddressR> localVarResponse = await CreateCoinsTransactionRequestFromAddressWithHttpInfoAsync(address, blockchain, network, walletId, context, createCoinsTransactionRequestFromAddressRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromAddressR> localVarResponse = await CreateCoinsTransactionRequestFromAddressWithHttpInfoAsync(address, blockchain, network, walletId, context, createCoinsTransactionRequestFromAddressRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -755,15 +787,16 @@ namespace CryptoAPIs.Api
         /// Create Coins Transaction Request from Address Through this endpoint users can create a new single transaction request from one address to another.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="address">Defines the specific source address for the transaction.</param>
+        /// <param name="address">Defines the specific source address for the transaction. For XRP we also support the X-address format.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCoinsTransactionRequestFromAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromAddressR>> CreateCoinsTransactionRequestFromAddressWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromAddressR>> CreateCoinsTransactionRequestFromAddressWithHttpInfoAsync(string address, string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromAddressRB createCoinsTransactionRequestFromAddressRB = default(CreateCoinsTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'address' is set
             if (address == null)
@@ -822,6 +855,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createCoinsTransactionRequestFromAddressRB;
+
+            localVarRequestOptions.Operation = "TransactionsApi.CreateCoinsTransactionRequestFromAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -853,8 +889,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateCoinsTransactionRequestFromWalletR</returns>
-        public CreateCoinsTransactionRequestFromWalletR CreateCoinsTransactionRequestFromWallet(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB))
+        public CreateCoinsTransactionRequestFromWalletR CreateCoinsTransactionRequestFromWallet(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromWalletR> localVarResponse = CreateCoinsTransactionRequestFromWalletWithHttpInfo(blockchain, network, walletId, context, createCoinsTransactionRequestFromWalletRB);
             return localVarResponse.Data;
@@ -869,8 +906,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateCoinsTransactionRequestFromWalletR</returns>
-        public CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB))
+        public CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -921,6 +959,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createCoinsTransactionRequestFromWalletRB;
+
+            localVarRequestOptions.Operation = "TransactionsApi.CreateCoinsTransactionRequestFromWallet";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -951,11 +992,12 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateCoinsTransactionRequestFromWalletR</returns>
-        public async System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateCoinsTransactionRequestFromWalletR> CreateCoinsTransactionRequestFromWalletAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromWalletR> localVarResponse = await CreateCoinsTransactionRequestFromWalletWithHttpInfoAsync(blockchain, network, walletId, context, createCoinsTransactionRequestFromWalletRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromWalletR> localVarResponse = await CreateCoinsTransactionRequestFromWalletWithHttpInfoAsync(blockchain, network, walletId, context, createCoinsTransactionRequestFromWalletRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -968,9 +1010,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the sender&#39;s specific and unique Wallet ID of the sender.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createCoinsTransactionRequestFromWalletRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateCoinsTransactionRequestFromWalletR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromWalletR>> CreateCoinsTransactionRequestFromWalletWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateCoinsTransactionRequestFromWalletR>> CreateCoinsTransactionRequestFromWalletWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), CreateCoinsTransactionRequestFromWalletRB createCoinsTransactionRequestFromWalletRB = default(CreateCoinsTransactionRequestFromWalletRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1022,6 +1065,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createCoinsTransactionRequestFromWalletRB;
+
+            localVarRequestOptions.Operation = "TransactionsApi.CreateCoinsTransactionRequestFromWallet";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1054,8 +1100,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateFungibleTokensTransactionRequestFromAddressR</returns>
-        public CreateFungibleTokensTransactionRequestFromAddressR CreateFungibleTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB))
+        public CreateFungibleTokensTransactionRequestFromAddressR CreateFungibleTokensTransactionRequestFromAddress(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> localVarResponse = CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(blockchain, network, senderAddress, walletId, context, createFungibleTokensTransactionRequestFromAddressRB);
             return localVarResponse.Data;
@@ -1071,8 +1118,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateFungibleTokensTransactionRequestFromAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB))
+        public CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfo(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1130,6 +1178,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createFungibleTokensTransactionRequestFromAddressRB;
+
+            localVarRequestOptions.Operation = "TransactionsApi.CreateFungibleTokensTransactionRequestFromAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1161,11 +1212,12 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateFungibleTokensTransactionRequestFromAddressR</returns>
-        public async System.Threading.Tasks.Task<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateFungibleTokensTransactionRequestFromAddressR> CreateFungibleTokensTransactionRequestFromAddressAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> localVarResponse = await CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(blockchain, network, senderAddress, walletId, context, createFungibleTokensTransactionRequestFromAddressRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR> localVarResponse = await CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(blockchain, network, senderAddress, walletId, context, createFungibleTokensTransactionRequestFromAddressRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1179,9 +1231,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createFungibleTokensTransactionRequestFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateFungibleTokensTransactionRequestFromAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR>> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateFungibleTokensTransactionRequestFromAddressR>> CreateFungibleTokensTransactionRequestFromAddressWithHttpInfoAsync(string blockchain, string network, string senderAddress, string walletId, string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRB createFungibleTokensTransactionRequestFromAddressRB = default(CreateFungibleTokensTransactionRequestFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1240,6 +1293,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createFungibleTokensTransactionRequestFromAddressRB;
+
+            localVarRequestOptions.Operation = "TransactionsApi.CreateFungibleTokensTransactionRequestFromAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

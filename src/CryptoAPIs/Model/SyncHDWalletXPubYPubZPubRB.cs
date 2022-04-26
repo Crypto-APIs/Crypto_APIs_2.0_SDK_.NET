@@ -45,7 +45,8 @@ namespace CryptoAPIs.Model
         public SyncHDWalletXPubYPubZPubRB(string context = default(string), SyncHDWalletXPubYPubZPubRBData data = default(SyncHDWalletXPubYPubZPubRBData))
         {
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for SyncHDWalletXPubYPubZPubRB and cannot be null");
             }
             this.Data = data;

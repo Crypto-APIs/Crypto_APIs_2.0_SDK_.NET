@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public SyncHDWalletXPubYPubZPubRI(string extendedPublicKey = default(string))
         {
             // to ensure "extendedPublicKey" is required (not null)
-            if (extendedPublicKey == null) {
+            if (extendedPublicKey == null)
+            {
                 throw new ArgumentNullException("extendedPublicKey is a required property for SyncHDWalletXPubYPubZPubRI and cannot be null");
             }
             this.ExtendedPublicKey = extendedPublicKey;

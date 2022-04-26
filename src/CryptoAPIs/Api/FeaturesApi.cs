@@ -38,8 +38,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BroadcastLocallySignedTransactionR</returns>
-        BroadcastLocallySignedTransactionR BroadcastLocallySignedTransaction(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB));
+        BroadcastLocallySignedTransactionR BroadcastLocallySignedTransaction(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0);
 
         /// <summary>
         /// Broadcast Locally Signed Transaction
@@ -52,8 +53,193 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BroadcastLocallySignedTransactionR</returns>
-        ApiResponse<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB));
+        ApiResponse<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0);
+        /// <summary>
+        /// Decode Raw Transaction Hex
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DecodeRawTransactionHexR</returns>
+        DecodeRawTransactionHexR DecodeRawTransactionHex(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0);
+
+        /// <summary>
+        /// Decode Raw Transaction Hex
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DecodeRawTransactionHexR</returns>
+        ApiResponse<DecodeRawTransactionHexR> DecodeRawTransactionHexWithHttpInfo(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0);
+        /// <summary>
+        /// Decode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DecodeXAddressR</returns>
+        DecodeXAddressR DecodeXAddress(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Decode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DecodeXAddressR</returns>
+        ApiResponse<DecodeXAddressR> DecodeXAddressWithHttpInfo(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0);
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR</returns>
+        DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0);
+
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR</returns>
+        ApiResponse<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0);
+        /// <summary>
+        /// Encode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EncodeXAddressR</returns>
+        EncodeXAddressR EncodeXAddress(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Encode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EncodeXAddressR</returns>
+        ApiResponse<EncodeXAddressR> EncodeXAddressWithHttpInfo(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0);
+        /// <summary>
+        /// Estimate Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EstimateGasLimitR</returns>
+        EstimateGasLimitR EstimateGasLimit(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0);
+
+        /// <summary>
+        /// Estimate Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EstimateGasLimitR</returns>
+        ApiResponse<EstimateGasLimitR> EstimateGasLimitWithHttpInfo(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0);
+        /// <summary>
+        /// Estimate Token Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EstimateTokenGasLimitR</returns>
+        EstimateTokenGasLimitR EstimateTokenGasLimit(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0);
+
+        /// <summary>
+        /// Estimate Token Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EstimateTokenGasLimitR</returns>
+        ApiResponse<EstimateTokenGasLimitR> EstimateTokenGasLimitWithHttpInfo(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0);
         /// <summary>
         /// Get EIP 1559 Fee Recommendations
         /// </summary>
@@ -64,8 +250,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEIP1559FeeRecommendationsR</returns>
-        GetEIP1559FeeRecommendationsR GetEIP1559FeeRecommendations(string network, string blockchain, string context = default(string));
+        GetEIP1559FeeRecommendationsR GetEIP1559FeeRecommendations(string network, string blockchain, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get EIP 1559 Fee Recommendations
@@ -77,8 +264,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEIP1559FeeRecommendationsR</returns>
-        ApiResponse<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsWithHttpInfo(string network, string blockchain, string context = default(string));
+        ApiResponse<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsWithHttpInfo(string network, string blockchain, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Validate Address
         /// </summary>
@@ -90,8 +278,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ValidateAddressR</returns>
-        ValidateAddressR ValidateAddress(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB));
+        ValidateAddressR ValidateAddress(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0);
 
         /// <summary>
         /// Validate Address
@@ -104,8 +293,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ValidateAddressR</returns>
-        ApiResponse<ValidateAddressR> ValidateAddressWithHttpInfo(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB));
+        ApiResponse<ValidateAddressR> ValidateAddressWithHttpInfo(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -126,9 +316,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BroadcastLocallySignedTransactionR</returns>
-        System.Threading.Tasks.Task<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Broadcast Locally Signed Transaction
@@ -141,9 +332,206 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BroadcastLocallySignedTransactionR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BroadcastLocallySignedTransactionR>> BroadcastLocallySignedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BroadcastLocallySignedTransactionR>> BroadcastLocallySignedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Decode Raw Transaction Hex
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DecodeRawTransactionHexR</returns>
+        System.Threading.Tasks.Task<DecodeRawTransactionHexR> DecodeRawTransactionHexAsync(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Decode Raw Transaction Hex
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DecodeRawTransactionHexR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DecodeRawTransactionHexR>> DecodeRawTransactionHexWithHttpInfoAsync(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Decode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DecodeXAddressR</returns>
+        System.Threading.Tasks.Task<DecodeXAddressR> DecodeXAddressAsync(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Decode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DecodeXAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DecodeXAddressR>> DecodeXAddressWithHttpInfoAsync(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR</returns>
+        System.Threading.Tasks.Task<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR>> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Encode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EncodeXAddressR</returns>
+        System.Threading.Tasks.Task<EncodeXAddressR> EncodeXAddressAsync(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Encode X-Address
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EncodeXAddressR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EncodeXAddressR>> EncodeXAddressWithHttpInfoAsync(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Estimate Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EstimateGasLimitR</returns>
+        System.Threading.Tasks.Task<EstimateGasLimitR> EstimateGasLimitAsync(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Estimate Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EstimateGasLimitR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EstimateGasLimitR>> EstimateGasLimitWithHttpInfoAsync(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Estimate Token Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EstimateTokenGasLimitR</returns>
+        System.Threading.Tasks.Task<EstimateTokenGasLimitR> EstimateTokenGasLimitAsync(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Estimate Token Gas Limit
+        /// </summary>
+        /// <remarks>
+        /// This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EstimateTokenGasLimitR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EstimateTokenGasLimitR>> EstimateTokenGasLimitWithHttpInfoAsync(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get EIP 1559 Fee Recommendations
         /// </summary>
@@ -154,9 +542,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEIP1559FeeRecommendationsR</returns>
-        System.Threading.Tasks.Task<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsAsync(string network, string blockchain, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsAsync(string network, string blockchain, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get EIP 1559 Fee Recommendations
@@ -168,9 +557,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEIP1559FeeRecommendationsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetEIP1559FeeRecommendationsR>> GetEIP1559FeeRecommendationsWithHttpInfoAsync(string network, string blockchain, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetEIP1559FeeRecommendationsR>> GetEIP1559FeeRecommendationsWithHttpInfoAsync(string network, string blockchain, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Validate Address
         /// </summary>
@@ -182,9 +572,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ValidateAddressR</returns>
-        System.Threading.Tasks.Task<ValidateAddressR> ValidateAddressAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ValidateAddressR> ValidateAddressAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Validate Address
@@ -197,9 +588,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ValidateAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidateAddressR>> ValidateAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ValidateAddressR>> ValidateAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -328,8 +720,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BroadcastLocallySignedTransactionR</returns>
-        public BroadcastLocallySignedTransactionR BroadcastLocallySignedTransaction(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB))
+        public BroadcastLocallySignedTransactionR BroadcastLocallySignedTransaction(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<BroadcastLocallySignedTransactionR> localVarResponse = BroadcastLocallySignedTransactionWithHttpInfo(blockchain, network, context, broadcastLocallySignedTransactionRB);
             return localVarResponse.Data;
@@ -343,8 +736,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BroadcastLocallySignedTransactionR</returns>
-        public CryptoAPIs.Client.ApiResponse<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB))
+        public CryptoAPIs.Client.ApiResponse<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -388,6 +782,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = broadcastLocallySignedTransactionRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.BroadcastLocallySignedTransaction";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -417,11 +814,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BroadcastLocallySignedTransactionR</returns>
-        public async System.Threading.Tasks.Task<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BroadcastLocallySignedTransactionR> BroadcastLocallySignedTransactionAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<BroadcastLocallySignedTransactionR> localVarResponse = await BroadcastLocallySignedTransactionWithHttpInfoAsync(blockchain, network, context, broadcastLocallySignedTransactionRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<BroadcastLocallySignedTransactionR> localVarResponse = await BroadcastLocallySignedTransactionWithHttpInfoAsync(blockchain, network, context, broadcastLocallySignedTransactionRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -433,9 +831,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="broadcastLocallySignedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BroadcastLocallySignedTransactionR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<BroadcastLocallySignedTransactionR>> BroadcastLocallySignedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<BroadcastLocallySignedTransactionR>> BroadcastLocallySignedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), BroadcastLocallySignedTransactionRB broadcastLocallySignedTransactionRB = default(BroadcastLocallySignedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -481,6 +880,9 @@ namespace CryptoAPIs.Api
             }
             localVarRequestOptions.Data = broadcastLocallySignedTransactionRB;
 
+            localVarRequestOptions.Operation = "FeaturesApi.BroadcastLocallySignedTransaction";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -503,14 +905,1251 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// Decode Raw Transaction Hex Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DecodeRawTransactionHexR</returns>
+        public DecodeRawTransactionHexR DecodeRawTransactionHex(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<DecodeRawTransactionHexR> localVarResponse = DecodeRawTransactionHexWithHttpInfo(blockchain, network, context, decodeRawTransactionHexRB);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Decode Raw Transaction Hex Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DecodeRawTransactionHexR</returns>
+        public CryptoAPIs.Client.ApiResponse<DecodeRawTransactionHexR> DecodeRawTransactionHexWithHttpInfo(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->DecodeRawTransactionHex");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->DecodeRawTransactionHex");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = decodeRawTransactionHexRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.DecodeRawTransactionHex";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<DecodeRawTransactionHexR>("/blockchain-tools/{blockchain}/{network}/decode-raw-transaction", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DecodeRawTransactionHex", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Decode Raw Transaction Hex Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DecodeRawTransactionHexR</returns>
+        public async System.Threading.Tasks.Task<DecodeRawTransactionHexR> DecodeRawTransactionHexAsync(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<DecodeRawTransactionHexR> localVarResponse = await DecodeRawTransactionHexWithHttpInfoAsync(blockchain, network, context, decodeRawTransactionHexRB, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Decode Raw Transaction Hex Through this endpoint customers can decode a raw transaction hex and see the decoded transactions&#39; details.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="decodeRawTransactionHexRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DecodeRawTransactionHexR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<DecodeRawTransactionHexR>> DecodeRawTransactionHexWithHttpInfoAsync(string blockchain, string network, string context = default(string), DecodeRawTransactionHexRB decodeRawTransactionHexRB = default(DecodeRawTransactionHexRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->DecodeRawTransactionHex");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->DecodeRawTransactionHex");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = decodeRawTransactionHexRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.DecodeRawTransactionHex";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<DecodeRawTransactionHexR>("/blockchain-tools/{blockchain}/{network}/decode-raw-transaction", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DecodeRawTransactionHex", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Decode X-Address Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DecodeXAddressR</returns>
+        public DecodeXAddressR DecodeXAddress(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<DecodeXAddressR> localVarResponse = DecodeXAddressWithHttpInfo(blockchain, network, xAddress, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Decode X-Address Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DecodeXAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<DecodeXAddressR> DecodeXAddressWithHttpInfo(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->DecodeXAddress");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->DecodeXAddress");
+            }
+
+            // verify the required parameter 'xAddress' is set
+            if (xAddress == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'xAddress' when calling FeaturesApi->DecodeXAddress");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("xAddress", CryptoAPIs.Client.ClientUtils.ParameterToString(xAddress)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "FeaturesApi.DecodeXAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DecodeXAddressR>("/blockchain-tools/{blockchain}/{network}/decode-x-address/{xAddress}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DecodeXAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Decode X-Address Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DecodeXAddressR</returns>
+        public async System.Threading.Tasks.Task<DecodeXAddressR> DecodeXAddressAsync(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<DecodeXAddressR> localVarResponse = await DecodeXAddressWithHttpInfoAsync(blockchain, network, xAddress, context, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Decode X-Address Through this endpoint, customers can decode an encoded XRP address with tag, by providing the specific x-address. The response includes the decoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="xAddress">Represents the encoded classic address with its destination tag.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DecodeXAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<DecodeXAddressR>> DecodeXAddressWithHttpInfoAsync(string blockchain, string network, string xAddress, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->DecodeXAddress");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->DecodeXAddress");
+            }
+
+            // verify the required parameter 'xAddress' is set
+            if (xAddress == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'xAddress' when calling FeaturesApi->DecodeXAddress");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("xAddress", CryptoAPIs.Client.ClientUtils.ParameterToString(xAddress)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "FeaturesApi.DecodeXAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DecodeXAddressR>("/blockchain-tools/{blockchain}/{network}/decode-x-address/{xAddress}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DecodeXAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR</returns>
+        public DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR> localVarResponse = DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesWithHttpInfo(blockchain, extendedPublicKey, network, context, addressFormat, addressesCount, isChange, startIndex);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR</returns>
+        public CryptoAPIs.Client.ApiResponse<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses");
+            }
+
+            // verify the required parameter 'extendedPublicKey' is set
+            if (extendedPublicKey == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'extendedPublicKey' when calling FeaturesApi->DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("extendedPublicKey", CryptoAPIs.Client.ClientUtils.ParameterToString(extendedPublicKey)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (addressFormat != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "addressFormat", addressFormat));
+            }
+            if (addressesCount != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "addressesCount", addressesCount));
+            }
+            if (isChange != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "isChange", isChange));
+            }
+            if (startIndex != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "startIndex", startIndex));
+            }
+
+            localVarRequestOptions.Operation = "FeaturesApi.DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR>("/blockchain-tools/{blockchain}/{network}/hd/{extendedPublicKey}/addresses/derive-address", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR</returns>
+        public async System.Threading.Tasks.Task<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR> localVarResponse = await DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesWithHttpInfoAsync(blockchain, extendedPublicKey, network, context, addressFormat, addressesCount, isChange, startIndex, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses Through this endpoint, customers can derive up to 10 addresses - both change and receive, from a certain HD Wallet (xPub, yPub, zPub), by providing an extended public key. By default the system creates a receiving/deposit address, unless the isChange attribute is set to &#39;true&#39;. In that case the system derives a &#39;change&#39; address. The change address can be derived only for UTXO based blockchains, for all the rest, this endpoint always creates a deposit/receiving address.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="addressFormat">Represents the format of the address. (optional)</param>
+        /// <param name="addressesCount">Represents the addresses count. (optional)</param>
+        /// <param name="isChange">Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional)</param>
+        /// <param name="startIndex">The starting index of the response items, i.e. where the response should start listing the returned items. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR>> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string addressFormat = default(string), int? addressesCount = default(int?), bool? isChange = default(bool?), int? startIndex = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses");
+            }
+
+            // verify the required parameter 'extendedPublicKey' is set
+            if (extendedPublicKey == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'extendedPublicKey' when calling FeaturesApi->DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("extendedPublicKey", CryptoAPIs.Client.ClientUtils.ParameterToString(extendedPublicKey)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (addressFormat != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "addressFormat", addressFormat));
+            }
+            if (addressesCount != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "addressesCount", addressesCount));
+            }
+            if (isChange != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "isChange", isChange));
+            }
+            if (startIndex != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "startIndex", startIndex));
+            }
+
+            localVarRequestOptions.Operation = "FeaturesApi.DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR>("/blockchain-tools/{blockchain}/{network}/hd/{extendedPublicKey}/addresses/derive-address", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Encode X-Address Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EncodeXAddressR</returns>
+        public EncodeXAddressR EncodeXAddress(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<EncodeXAddressR> localVarResponse = EncodeXAddressWithHttpInfo(addressTag, blockchain, classicAddress, network, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Encode X-Address Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EncodeXAddressR</returns>
+        public CryptoAPIs.Client.ApiResponse<EncodeXAddressR> EncodeXAddressWithHttpInfo(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->EncodeXAddress");
+            }
+
+            // verify the required parameter 'classicAddress' is set
+            if (classicAddress == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'classicAddress' when calling FeaturesApi->EncodeXAddress");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->EncodeXAddress");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("addressTag", CryptoAPIs.Client.ClientUtils.ParameterToString(addressTag)); // path parameter
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("classicAddress", CryptoAPIs.Client.ClientUtils.ParameterToString(classicAddress)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "FeaturesApi.EncodeXAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EncodeXAddressR>("/blockchain-tools/{blockchain}/{network}/encode-x-address/{classicAddress}/{addressTag}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EncodeXAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Encode X-Address Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EncodeXAddressR</returns>
+        public async System.Threading.Tasks.Task<EncodeXAddressR> EncodeXAddressAsync(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<EncodeXAddressR> localVarResponse = await EncodeXAddressWithHttpInfoAsync(addressTag, blockchain, classicAddress, network, context, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Encode X-Address Through this endpoint, customers can encode an encoded XRP address with tag, by providing the specific x-address. The response includes the encoded classic address and the tag.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identifying a transaction recipient beyond a wallet address.</param>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EncodeXAddressR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<EncodeXAddressR>> EncodeXAddressWithHttpInfoAsync(int addressTag, string blockchain, string classicAddress, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->EncodeXAddress");
+            }
+
+            // verify the required parameter 'classicAddress' is set
+            if (classicAddress == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'classicAddress' when calling FeaturesApi->EncodeXAddress");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->EncodeXAddress");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("addressTag", CryptoAPIs.Client.ClientUtils.ParameterToString(addressTag)); // path parameter
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("classicAddress", CryptoAPIs.Client.ClientUtils.ParameterToString(classicAddress)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "FeaturesApi.EncodeXAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EncodeXAddressR>("/blockchain-tools/{blockchain}/{network}/encode-x-address/{classicAddress}/{addressTag}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EncodeXAddress", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Estimate Gas Limit This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EstimateGasLimitR</returns>
+        public EstimateGasLimitR EstimateGasLimit(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<EstimateGasLimitR> localVarResponse = EstimateGasLimitWithHttpInfo(blockchain, network, context, estimateGasLimitRB);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Estimate Gas Limit This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EstimateGasLimitR</returns>
+        public CryptoAPIs.Client.ApiResponse<EstimateGasLimitR> EstimateGasLimitWithHttpInfo(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->EstimateGasLimit");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->EstimateGasLimit");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = estimateGasLimitRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.EstimateGasLimit";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EstimateGasLimitR>("/blockchain-tools/{blockchain}/{network}/gas-limit", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EstimateGasLimit", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Estimate Gas Limit This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EstimateGasLimitR</returns>
+        public async System.Threading.Tasks.Task<EstimateGasLimitR> EstimateGasLimitAsync(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<EstimateGasLimitR> localVarResponse = await EstimateGasLimitWithHttpInfoAsync(blockchain, network, context, estimateGasLimitRB, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Estimate Gas Limit This endpoint helps customer in estimating the gas limit needed for a transaction. It gives information for gas expenses when sending ether to contracts or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EstimateGasLimitR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<EstimateGasLimitR>> EstimateGasLimitWithHttpInfoAsync(string blockchain, string network, string context = default(string), EstimateGasLimitRB estimateGasLimitRB = default(EstimateGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->EstimateGasLimit");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->EstimateGasLimit");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = estimateGasLimitRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.EstimateGasLimit";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EstimateGasLimitR>("/blockchain-tools/{blockchain}/{network}/gas-limit", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EstimateGasLimit", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Estimate Token Gas Limit This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EstimateTokenGasLimitR</returns>
+        public EstimateTokenGasLimitR EstimateTokenGasLimit(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<EstimateTokenGasLimitR> localVarResponse = EstimateTokenGasLimitWithHttpInfo(blockchain, network, context, estimateTokenGasLimitRB);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Estimate Token Gas Limit This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EstimateTokenGasLimitR</returns>
+        public CryptoAPIs.Client.ApiResponse<EstimateTokenGasLimitR> EstimateTokenGasLimitWithHttpInfo(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->EstimateTokenGasLimit");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->EstimateTokenGasLimit");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = estimateTokenGasLimitRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.EstimateTokenGasLimit";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EstimateTokenGasLimitR>("/blockchain-tools/{blockchain}/{network}/gas-limit/contract", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EstimateTokenGasLimit", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Estimate Token Gas Limit This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EstimateTokenGasLimitR</returns>
+        public async System.Threading.Tasks.Task<EstimateTokenGasLimitR> EstimateTokenGasLimitAsync(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<EstimateTokenGasLimitR> localVarResponse = await EstimateTokenGasLimitWithHttpInfoAsync(blockchain, network, context, estimateTokenGasLimitRB, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Estimate Token Gas Limit This endpoint helps customer in estimating the Contract Gas Limit needed for a transaction. It gives information for gas expenses for a specific contract when sending ethers or making a transaction with additional data in it.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="estimateTokenGasLimitRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EstimateTokenGasLimitR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<EstimateTokenGasLimitR>> EstimateTokenGasLimitWithHttpInfoAsync(string blockchain, string network, string context = default(string), EstimateTokenGasLimitRB estimateTokenGasLimitRB = default(EstimateTokenGasLimitRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling FeaturesApi->EstimateTokenGasLimit");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling FeaturesApi->EstimateTokenGasLimit");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = estimateTokenGasLimitRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.EstimateTokenGasLimit";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EstimateTokenGasLimitR>("/blockchain-tools/{blockchain}/{network}/gas-limit/contract", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EstimateTokenGasLimit", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Get EIP 1559 Fee Recommendations Through this endpoint customers can obtain fee recommendations specifically for EIP 1559.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEIP1559FeeRecommendationsR</returns>
-        public GetEIP1559FeeRecommendationsR GetEIP1559FeeRecommendations(string network, string blockchain, string context = default(string))
+        public GetEIP1559FeeRecommendationsR GetEIP1559FeeRecommendations(string network, string blockchain, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetEIP1559FeeRecommendationsR> localVarResponse = GetEIP1559FeeRecommendationsWithHttpInfo(network, blockchain, context);
             return localVarResponse.Data;
@@ -523,8 +2162,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEIP1559FeeRecommendationsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsWithHttpInfo(string network, string blockchain, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsWithHttpInfo(string network, string blockchain, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -566,6 +2206,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "FeaturesApi.GetEIP1559FeeRecommendations";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -594,11 +2237,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEIP1559FeeRecommendationsR</returns>
-        public async System.Threading.Tasks.Task<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsAsync(string network, string blockchain, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetEIP1559FeeRecommendationsR> GetEIP1559FeeRecommendationsAsync(string network, string blockchain, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetEIP1559FeeRecommendationsR> localVarResponse = await GetEIP1559FeeRecommendationsWithHttpInfoAsync(network, blockchain, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetEIP1559FeeRecommendationsR> localVarResponse = await GetEIP1559FeeRecommendationsWithHttpInfoAsync(network, blockchain, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -609,9 +2253,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEIP1559FeeRecommendationsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetEIP1559FeeRecommendationsR>> GetEIP1559FeeRecommendationsWithHttpInfoAsync(string network, string blockchain, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetEIP1559FeeRecommendationsR>> GetEIP1559FeeRecommendationsWithHttpInfoAsync(string network, string blockchain, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -654,6 +2299,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "FeaturesApi.GetEIP1559FeeRecommendations";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -684,8 +2332,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ValidateAddressR</returns>
-        public ValidateAddressR ValidateAddress(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB))
+        public ValidateAddressR ValidateAddress(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ValidateAddressR> localVarResponse = ValidateAddressWithHttpInfo(blockchain, network, context, validateAddressRB);
             return localVarResponse.Data;
@@ -699,8 +2348,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ValidateAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ValidateAddressR> ValidateAddressWithHttpInfo(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB))
+        public CryptoAPIs.Client.ApiResponse<ValidateAddressR> ValidateAddressWithHttpInfo(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -744,6 +2394,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = validateAddressRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.ValidateAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -773,11 +2426,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ValidateAddressR</returns>
-        public async System.Threading.Tasks.Task<ValidateAddressR> ValidateAddressAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ValidateAddressR> ValidateAddressAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ValidateAddressR> localVarResponse = await ValidateAddressWithHttpInfoAsync(blockchain, network, context, validateAddressRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ValidateAddressR> localVarResponse = await ValidateAddressWithHttpInfoAsync(blockchain, network, context, validateAddressRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -789,9 +2443,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="validateAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ValidateAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ValidateAddressR>> ValidateAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ValidateAddressR>> ValidateAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), ValidateAddressRB validateAddressRB = default(ValidateAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -836,6 +2491,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = validateAddressRB;
+
+            localVarRequestOptions.Operation = "FeaturesApi.ValidateAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

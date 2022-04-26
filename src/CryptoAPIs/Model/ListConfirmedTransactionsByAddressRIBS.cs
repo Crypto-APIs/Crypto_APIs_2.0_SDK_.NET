@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListConfirmedTransactionsByAddressRIBS" /> class
-        /// with the <see cref="ListConfirmedTransactionsByAddressRIBSBSC" /> class
+        /// with the <see cref="ListConfirmedTransactionsByAddressRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListConfirmedTransactionsByAddressRIBSBSC.</param>
-        public ListConfirmedTransactionsByAddressRIBS(ListConfirmedTransactionsByAddressRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of ListConfirmedTransactionsByAddressRIBSL.</param>
+        public ListConfirmedTransactionsByAddressRIBS(ListConfirmedTransactionsByAddressRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -96,18 +96,6 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListConfirmedTransactionsByAddressRIBS" /> class
-        /// with the <see cref="ListConfirmedTransactionsByAddressRIBSE" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of ListConfirmedTransactionsByAddressRIBSE.</param>
-        public ListConfirmedTransactionsByAddressRIBS(ListConfirmedTransactionsByAddressRIBSE actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ListConfirmedTransactionsByAddressRIBS" /> class
         /// with the <see cref="ListConfirmedTransactionsByAddressRIBSEC" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of ListConfirmedTransactionsByAddressRIBSEC.</param>
@@ -120,10 +108,22 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListConfirmedTransactionsByAddressRIBS" /> class
-        /// with the <see cref="ListConfirmedTransactionsByAddressRIBSL" /> class
+        /// with the <see cref="ListConfirmedTransactionsByAddressRIBSE" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListConfirmedTransactionsByAddressRIBSL.</param>
-        public ListConfirmedTransactionsByAddressRIBS(ListConfirmedTransactionsByAddressRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of ListConfirmedTransactionsByAddressRIBSE.</param>
+        public ListConfirmedTransactionsByAddressRIBS(ListConfirmedTransactionsByAddressRIBSE actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListConfirmedTransactionsByAddressRIBS" /> class
+        /// with the <see cref="ListConfirmedTransactionsByAddressRIBSBSC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ListConfirmedTransactionsByAddressRIBSBSC.</param>
+        public ListConfirmedTransactionsByAddressRIBS(ListConfirmedTransactionsByAddressRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -220,13 +220,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListConfirmedTransactionsByAddressRIBSBSC`. If the actual instance is not `ListConfirmedTransactionsByAddressRIBSBSC`,
+        /// Get the actual instance of `ListConfirmedTransactionsByAddressRIBSL`. If the actual instance is not `ListConfirmedTransactionsByAddressRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListConfirmedTransactionsByAddressRIBSBSC</returns>
-        public ListConfirmedTransactionsByAddressRIBSBSC GetListConfirmedTransactionsByAddressRIBSBSC()
+        /// <returns>An instance of ListConfirmedTransactionsByAddressRIBSL</returns>
+        public ListConfirmedTransactionsByAddressRIBSL GetListConfirmedTransactionsByAddressRIBSL()
         {
-            return (ListConfirmedTransactionsByAddressRIBSBSC)this.ActualInstance;
+            return (ListConfirmedTransactionsByAddressRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -250,16 +250,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListConfirmedTransactionsByAddressRIBSE`. If the actual instance is not `ListConfirmedTransactionsByAddressRIBSE`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of ListConfirmedTransactionsByAddressRIBSE</returns>
-        public ListConfirmedTransactionsByAddressRIBSE GetListConfirmedTransactionsByAddressRIBSE()
-        {
-            return (ListConfirmedTransactionsByAddressRIBSE)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `ListConfirmedTransactionsByAddressRIBSEC`. If the actual instance is not `ListConfirmedTransactionsByAddressRIBSEC`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -270,13 +260,23 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListConfirmedTransactionsByAddressRIBSL`. If the actual instance is not `ListConfirmedTransactionsByAddressRIBSL`,
+        /// Get the actual instance of `ListConfirmedTransactionsByAddressRIBSE`. If the actual instance is not `ListConfirmedTransactionsByAddressRIBSE`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListConfirmedTransactionsByAddressRIBSL</returns>
-        public ListConfirmedTransactionsByAddressRIBSL GetListConfirmedTransactionsByAddressRIBSL()
+        /// <returns>An instance of ListConfirmedTransactionsByAddressRIBSE</returns>
+        public ListConfirmedTransactionsByAddressRIBSE GetListConfirmedTransactionsByAddressRIBSE()
         {
-            return (ListConfirmedTransactionsByAddressRIBSL)this.ActualInstance;
+            return (ListConfirmedTransactionsByAddressRIBSE)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListConfirmedTransactionsByAddressRIBSBSC`. If the actual instance is not `ListConfirmedTransactionsByAddressRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListConfirmedTransactionsByAddressRIBSBSC</returns>
+        public ListConfirmedTransactionsByAddressRIBSBSC GetListConfirmedTransactionsByAddressRIBSBSC()
+        {
+            return (ListConfirmedTransactionsByAddressRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

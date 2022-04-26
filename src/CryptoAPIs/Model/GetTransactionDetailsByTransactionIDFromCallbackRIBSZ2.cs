@@ -49,14 +49,16 @@ namespace CryptoAPIs.Model
         {
             this.GasLimit = gasLimit;
             // to ensure "gasPrice" is required (not null)
-            if (gasPrice == null) {
+            if (gasPrice == null)
+            {
                 throw new ArgumentNullException("gasPrice is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2 and cannot be null");
             }
             this.GasPrice = gasPrice;
             this.GasUsed = gasUsed;
             this.Nonce = nonce;
             // to ensure "transactionStatus" is required (not null)
-            if (transactionStatus == null) {
+            if (transactionStatus == null)
+            {
                 throw new ArgumentNullException("transactionStatus is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2 and cannot be null");
             }
             this.TransactionStatus = transactionStatus;

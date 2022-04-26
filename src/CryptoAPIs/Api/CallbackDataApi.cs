@@ -38,8 +38,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAddressDetailsFromCallbackR</returns>
-        GetAddressDetailsFromCallbackR GetAddressDetailsFromCallback(string blockchain, string network, string address, string context = default(string));
+        GetAddressDetailsFromCallbackR GetAddressDetailsFromCallback(string blockchain, string network, string address, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Address Details From Callback
@@ -52,8 +53,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAddressDetailsFromCallbackR</returns>
-        ApiResponse<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackWithHttpInfo(string blockchain, string network, string address, string context = default(string));
+        ApiResponse<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackWithHttpInfo(string blockchain, string network, string address, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Block Details By Block Hash From Callback
         /// </summary>
@@ -65,8 +67,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHashFromCallbackR</returns>
-        GetBlockDetailsByBlockHashFromCallbackR GetBlockDetailsByBlockHashFromCallback(string blockchain, string network, string blockHash, string context = default(string));
+        GetBlockDetailsByBlockHashFromCallbackR GetBlockDetailsByBlockHashFromCallback(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Block Details By Block Hash From Callback
@@ -79,8 +82,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHashFromCallbackR</returns>
-        ApiResponse<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string));
+        ApiResponse<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Block Details By Block Height From Callback
         /// </summary>
@@ -92,8 +96,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHeightFromCallbackR</returns>
-        GetBlockDetailsByBlockHeightFromCallbackR GetBlockDetailsByBlockHeightFromCallback(string blockchain, string network, string blockHeight, string context = default(string));
+        GetBlockDetailsByBlockHeightFromCallbackR GetBlockDetailsByBlockHeightFromCallback(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Block Details By Block Height From Callback
@@ -106,8 +111,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHeightFromCallbackR</returns>
-        ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfo(string blockchain, string network, string blockHeight, string context = default(string));
+        ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfo(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Transaction Details By Transaction ID From Callback
         /// </summary>
@@ -119,8 +125,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTransactionDetailsByTransactionIDFromCallbackR</returns>
-        GetTransactionDetailsByTransactionIDFromCallbackR GetTransactionDetailsByTransactionIDFromCallback(string blockchain, string network, string transactionId, string context = default(string));
+        GetTransactionDetailsByTransactionIDFromCallbackR GetTransactionDetailsByTransactionIDFromCallback(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Transaction Details By Transaction ID From Callback
@@ -133,8 +140,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTransactionDetailsByTransactionIDFromCallbackR</returns>
-        ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string));
+        ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -155,9 +163,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAddressDetailsFromCallbackR</returns>
-        System.Threading.Tasks.Task<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Address Details From Callback
@@ -170,9 +179,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAddressDetailsFromCallbackR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAddressDetailsFromCallbackR>> GetAddressDetailsFromCallbackWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetAddressDetailsFromCallbackR>> GetAddressDetailsFromCallbackWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Block Details By Block Hash From Callback
         /// </summary>
@@ -184,9 +194,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHashFromCallbackR</returns>
-        System.Threading.Tasks.Task<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Block Details By Block Hash From Callback
@@ -199,9 +210,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHashFromCallbackR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHashFromCallbackR>> GetBlockDetailsByBlockHashFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHashFromCallbackR>> GetBlockDetailsByBlockHashFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Block Details By Block Height From Callback
         /// </summary>
@@ -213,9 +225,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHeightFromCallbackR</returns>
-        System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackAsync(string blockchain, string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackAsync(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Block Details By Block Height From Callback
@@ -228,9 +241,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHeightFromCallbackR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR>> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR>> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Transaction Details By Transaction ID From Callback
         /// </summary>
@@ -242,9 +256,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTransactionDetailsByTransactionIDFromCallbackR</returns>
-        System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Transaction Details By Transaction ID From Callback
@@ -257,9 +272,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTransactionDetailsByTransactionIDFromCallbackR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR>> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR>> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -388,8 +404,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAddressDetailsFromCallbackR</returns>
-        public GetAddressDetailsFromCallbackR GetAddressDetailsFromCallback(string blockchain, string network, string address, string context = default(string))
+        public GetAddressDetailsFromCallbackR GetAddressDetailsFromCallback(string blockchain, string network, string address, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetAddressDetailsFromCallbackR> localVarResponse = GetAddressDetailsFromCallbackWithHttpInfo(blockchain, network, address, context);
             return localVarResponse.Data;
@@ -403,8 +420,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAddressDetailsFromCallbackR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackWithHttpInfo(string blockchain, string network, string address, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackWithHttpInfo(string blockchain, string network, string address, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -453,6 +471,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetAddressDetailsFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -482,11 +503,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAddressDetailsFromCallbackR</returns>
-        public async System.Threading.Tasks.Task<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetAddressDetailsFromCallbackR> GetAddressDetailsFromCallbackAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetAddressDetailsFromCallbackR> localVarResponse = await GetAddressDetailsFromCallbackWithHttpInfoAsync(blockchain, network, address, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetAddressDetailsFromCallbackR> localVarResponse = await GetAddressDetailsFromCallbackWithHttpInfoAsync(blockchain, network, address, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -498,9 +520,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAddressDetailsFromCallbackR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAddressDetailsFromCallbackR>> GetAddressDetailsFromCallbackWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAddressDetailsFromCallbackR>> GetAddressDetailsFromCallbackWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -550,6 +573,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetAddressDetailsFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -580,8 +606,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHashFromCallbackR</returns>
-        public GetBlockDetailsByBlockHashFromCallbackR GetBlockDetailsByBlockHashFromCallback(string blockchain, string network, string blockHash, string context = default(string))
+        public GetBlockDetailsByBlockHashFromCallbackR GetBlockDetailsByBlockHashFromCallback(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashFromCallbackR> localVarResponse = GetBlockDetailsByBlockHashFromCallbackWithHttpInfo(blockchain, network, blockHash, context);
             return localVarResponse.Data;
@@ -595,8 +622,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHashFromCallbackR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackWithHttpInfo(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -645,6 +673,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetBlockDetailsByBlockHashFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -674,11 +705,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHashFromCallbackR</returns>
-        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHashFromCallbackR> GetBlockDetailsByBlockHashFromCallbackAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashFromCallbackR> localVarResponse = await GetBlockDetailsByBlockHashFromCallbackWithHttpInfoAsync(blockchain, network, blockHash, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashFromCallbackR> localVarResponse = await GetBlockDetailsByBlockHashFromCallbackWithHttpInfoAsync(blockchain, network, blockHash, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -690,9 +722,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHashFromCallbackR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashFromCallbackR>> GetBlockDetailsByBlockHashFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHashFromCallbackR>> GetBlockDetailsByBlockHashFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -742,6 +775,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetBlockDetailsByBlockHashFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -772,8 +808,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetBlockDetailsByBlockHeightFromCallbackR</returns>
-        public GetBlockDetailsByBlockHeightFromCallbackR GetBlockDetailsByBlockHeightFromCallback(string blockchain, string network, string blockHeight, string context = default(string))
+        public GetBlockDetailsByBlockHeightFromCallbackR GetBlockDetailsByBlockHeightFromCallback(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR> localVarResponse = GetBlockDetailsByBlockHeightFromCallbackWithHttpInfo(blockchain, network, blockHeight, context);
             return localVarResponse.Data;
@@ -787,8 +824,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetBlockDetailsByBlockHeightFromCallbackR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfo(string blockchain, string network, string blockHeight, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfo(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -837,6 +875,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetBlockDetailsByBlockHeightFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -866,11 +907,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetBlockDetailsByBlockHeightFromCallbackR</returns>
-        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackAsync(string blockchain, string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetBlockDetailsByBlockHeightFromCallbackR> GetBlockDetailsByBlockHeightFromCallbackAsync(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR> localVarResponse = await GetBlockDetailsByBlockHeightFromCallbackWithHttpInfoAsync(blockchain, network, blockHeight, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR> localVarResponse = await GetBlockDetailsByBlockHeightFromCallbackWithHttpInfoAsync(blockchain, network, blockHeight, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -882,9 +924,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Numeric representation of the block height</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetBlockDetailsByBlockHeightFromCallbackR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR>> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockDetailsByBlockHeightFromCallbackR>> GetBlockDetailsByBlockHeightFromCallbackWithHttpInfoAsync(string blockchain, string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -934,6 +977,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetBlockDetailsByBlockHeightFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -964,8 +1010,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTransactionDetailsByTransactionIDFromCallbackR</returns>
-        public GetTransactionDetailsByTransactionIDFromCallbackR GetTransactionDetailsByTransactionIDFromCallback(string blockchain, string network, string transactionId, string context = default(string))
+        public GetTransactionDetailsByTransactionIDFromCallbackR GetTransactionDetailsByTransactionIDFromCallback(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR> localVarResponse = GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfo(blockchain, network, transactionId, context);
             return localVarResponse.Data;
@@ -979,8 +1026,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTransactionDetailsByTransactionIDFromCallbackR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1029,6 +1077,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetTransactionDetailsByTransactionIDFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1058,11 +1109,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTransactionDetailsByTransactionIDFromCallbackR</returns>
-        public async System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetTransactionDetailsByTransactionIDFromCallbackR> GetTransactionDetailsByTransactionIDFromCallbackAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR> localVarResponse = await GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfoAsync(blockchain, network, transactionId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR> localVarResponse = await GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfoAsync(blockchain, network, transactionId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1074,9 +1126,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTransactionDetailsByTransactionIDFromCallbackR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR>> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetTransactionDetailsByTransactionIDFromCallbackR>> GetTransactionDetailsByTransactionIDFromCallbackWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1126,6 +1179,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "CallbackDataApi.GetTransactionDetailsByTransactionIDFromCallback";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

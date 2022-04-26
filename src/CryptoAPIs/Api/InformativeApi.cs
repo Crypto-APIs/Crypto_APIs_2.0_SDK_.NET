@@ -36,8 +36,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTransactionRequestDetailsR</returns>
-        GetTransactionRequestDetailsR GetTransactionRequestDetails(string transactionRequestId, string context = default(string));
+        GetTransactionRequestDetailsR GetTransactionRequestDetails(string transactionRequestId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Transaction Request Details
@@ -48,35 +49,38 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTransactionRequestDetailsR</returns>
-        ApiResponse<GetTransactionRequestDetailsR> GetTransactionRequestDetailsWithHttpInfo(string transactionRequestId, string context = default(string));
+        ApiResponse<GetTransactionRequestDetailsR> GetTransactionRequestDetailsWithHttpInfo(string transactionRequestId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Wallet Asset Details
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetWalletAssetDetailsR</returns>
-        GetWalletAssetDetailsR GetWalletAssetDetails(string blockchain, string network, string walletId, string context = default(string));
+        GetWalletAssetDetailsR GetWalletAssetDetails(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Wallet Asset Details
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetWalletAssetDetailsR</returns>
-        ApiResponse<GetWalletAssetDetailsR> GetWalletAssetDetailsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string));
+        ApiResponse<GetWalletAssetDetailsR> GetWalletAssetDetailsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Wallet Transaction Details By Transaction ID
         /// </summary>
@@ -88,8 +92,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetWalletTransactionDetailsByTransactionIDR</returns>
-        GetWalletTransactionDetailsByTransactionIDR GetWalletTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string));
+        GetWalletTransactionDetailsByTransactionIDR GetWalletTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Wallet Transaction Details By Transaction ID
@@ -102,8 +107,61 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetWalletTransactionDetailsByTransactionIDR</returns>
-        ApiResponse<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string));
+        ApiResponse<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0);
+        /// <summary>
+        /// List All Assets By Wallet ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListAllAssetsByWalletIDR</returns>
+        ListAllAssetsByWalletIDR ListAllAssetsByWalletID(string walletId, string context = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// List All Assets By Wallet ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListAllAssetsByWalletIDR</returns>
+        ApiResponse<ListAllAssetsByWalletIDR> ListAllAssetsByWalletIDWithHttpInfo(string walletId, string context = default(string), int operationIndex = 0);
+        /// <summary>
+        /// List All Assets From All Wallets
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListAllAssetsFromAllWalletsR</returns>
+        ListAllAssetsFromAllWalletsR ListAllAssetsFromAllWallets(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+
+        /// <summary>
+        /// List All Assets From All Wallets
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListAllAssetsFromAllWalletsR</returns>
+        ApiResponse<ListAllAssetsFromAllWalletsR> ListAllAssetsFromAllWalletsWithHttpInfo(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Deposit Addresses
         /// </summary>
@@ -115,8 +173,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListDepositAddressesR</returns>
-        ListDepositAddressesR ListDepositAddresses(string blockchain, string network, string walletId, string context = default(string));
+        ListDepositAddressesR ListDepositAddresses(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// List Deposit Addresses
@@ -129,8 +188,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListDepositAddressesR</returns>
-        ApiResponse<ListDepositAddressesR> ListDepositAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string));
+        ApiResponse<ListDepositAddressesR> ListDepositAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Supported Tokens
         /// </summary>
@@ -143,8 +203,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListSupportedTokensR</returns>
-        ListSupportedTokensR ListSupportedTokens(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListSupportedTokensR ListSupportedTokens(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Supported Tokens
@@ -158,8 +219,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListSupportedTokensR</returns>
-        ApiResponse<ListSupportedTokensR> ListSupportedTokensWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListSupportedTokensR> ListSupportedTokensWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Wallet Transactions
         /// </summary>
@@ -173,8 +235,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListWalletTransactionsR</returns>
-        ListWalletTransactionsR ListWalletTransactions(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListWalletTransactionsR ListWalletTransactions(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Wallet Transactions
@@ -189,8 +252,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListWalletTransactionsR</returns>
-        ApiResponse<ListWalletTransactionsR> ListWalletTransactionsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListWalletTransactionsR> ListWalletTransactionsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -209,9 +273,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTransactionRequestDetailsR</returns>
-        System.Threading.Tasks.Task<GetTransactionRequestDetailsR> GetTransactionRequestDetailsAsync(string transactionRequestId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetTransactionRequestDetailsR> GetTransactionRequestDetailsAsync(string transactionRequestId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Transaction Request Details
@@ -222,38 +287,41 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTransactionRequestDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetTransactionRequestDetailsR>> GetTransactionRequestDetailsWithHttpInfoAsync(string transactionRequestId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetTransactionRequestDetailsR>> GetTransactionRequestDetailsWithHttpInfoAsync(string transactionRequestId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Wallet Asset Details
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetWalletAssetDetailsR</returns>
-        System.Threading.Tasks.Task<GetWalletAssetDetailsR> GetWalletAssetDetailsAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetWalletAssetDetailsR> GetWalletAssetDetailsAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Wallet Asset Details
         /// </summary>
         /// <remarks>
-        /// Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </remarks>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetWalletAssetDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetWalletAssetDetailsR>> GetWalletAssetDetailsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetWalletAssetDetailsR>> GetWalletAssetDetailsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Wallet Transaction Details By Transaction ID
         /// </summary>
@@ -265,9 +333,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetWalletTransactionDetailsByTransactionIDR</returns>
-        System.Threading.Tasks.Task<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Wallet Transaction Details By Transaction ID
@@ -280,9 +349,66 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetWalletTransactionDetailsByTransactionIDR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetWalletTransactionDetailsByTransactionIDR>> GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetWalletTransactionDetailsByTransactionIDR>> GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List All Assets By Wallet ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListAllAssetsByWalletIDR</returns>
+        System.Threading.Tasks.Task<ListAllAssetsByWalletIDR> ListAllAssetsByWalletIDAsync(string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List All Assets By Wallet ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListAllAssetsByWalletIDR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListAllAssetsByWalletIDR>> ListAllAssetsByWalletIDWithHttpInfoAsync(string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List All Assets From All Wallets
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListAllAssetsFromAllWalletsR</returns>
+        System.Threading.Tasks.Task<ListAllAssetsFromAllWalletsR> ListAllAssetsFromAllWalletsAsync(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List All Assets From All Wallets
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListAllAssetsFromAllWalletsR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListAllAssetsFromAllWalletsR>> ListAllAssetsFromAllWalletsWithHttpInfoAsync(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Deposit Addresses
         /// </summary>
@@ -294,9 +420,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListDepositAddressesR</returns>
-        System.Threading.Tasks.Task<ListDepositAddressesR> ListDepositAddressesAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListDepositAddressesR> ListDepositAddressesAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Deposit Addresses
@@ -309,9 +436,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListDepositAddressesR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListDepositAddressesR>> ListDepositAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListDepositAddressesR>> ListDepositAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Supported Tokens
         /// </summary>
@@ -324,9 +452,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListSupportedTokensR</returns>
-        System.Threading.Tasks.Task<ListSupportedTokensR> ListSupportedTokensAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListSupportedTokensR> ListSupportedTokensAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Supported Tokens
@@ -340,9 +469,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListSupportedTokensR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListSupportedTokensR>> ListSupportedTokensWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListSupportedTokensR>> ListSupportedTokensWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Wallet Transactions
         /// </summary>
@@ -356,9 +486,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListWalletTransactionsR</returns>
-        System.Threading.Tasks.Task<ListWalletTransactionsR> ListWalletTransactionsAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListWalletTransactionsR> ListWalletTransactionsAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Wallet Transactions
@@ -373,9 +504,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListWalletTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListWalletTransactionsR>> ListWalletTransactionsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListWalletTransactionsR>> ListWalletTransactionsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -502,8 +634,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTransactionRequestDetailsR</returns>
-        public GetTransactionRequestDetailsR GetTransactionRequestDetails(string transactionRequestId, string context = default(string))
+        public GetTransactionRequestDetailsR GetTransactionRequestDetails(string transactionRequestId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetTransactionRequestDetailsR> localVarResponse = GetTransactionRequestDetailsWithHttpInfo(transactionRequestId, context);
             return localVarResponse.Data;
@@ -515,8 +648,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTransactionRequestDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetTransactionRequestDetailsR> GetTransactionRequestDetailsWithHttpInfo(string transactionRequestId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetTransactionRequestDetailsR> GetTransactionRequestDetailsWithHttpInfo(string transactionRequestId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'transactionRequestId' is set
             if (transactionRequestId == null)
@@ -551,6 +685,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.GetTransactionRequestDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -578,11 +715,12 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTransactionRequestDetailsR</returns>
-        public async System.Threading.Tasks.Task<GetTransactionRequestDetailsR> GetTransactionRequestDetailsAsync(string transactionRequestId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetTransactionRequestDetailsR> GetTransactionRequestDetailsAsync(string transactionRequestId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetTransactionRequestDetailsR> localVarResponse = await GetTransactionRequestDetailsWithHttpInfoAsync(transactionRequestId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetTransactionRequestDetailsR> localVarResponse = await GetTransactionRequestDetailsWithHttpInfoAsync(transactionRequestId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -592,9 +730,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionRequestId">Represents the unique ID of the transaction request.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTransactionRequestDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetTransactionRequestDetailsR>> GetTransactionRequestDetailsWithHttpInfoAsync(string transactionRequestId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetTransactionRequestDetailsR>> GetTransactionRequestDetailsWithHttpInfoAsync(string transactionRequestId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'transactionRequestId' is set
             if (transactionRequestId == null)
@@ -631,6 +770,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
+            localVarRequestOptions.Operation = "InformativeApi.GetTransactionRequestDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -653,30 +795,32 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// Get Wallet Asset Details Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Get Wallet Asset Details Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetWalletAssetDetailsR</returns>
-        public GetWalletAssetDetailsR GetWalletAssetDetails(string blockchain, string network, string walletId, string context = default(string))
+        public GetWalletAssetDetailsR GetWalletAssetDetails(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetWalletAssetDetailsR> localVarResponse = GetWalletAssetDetailsWithHttpInfo(blockchain, network, walletId, context);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Wallet Asset Details Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Get Wallet Asset Details Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetWalletAssetDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetWalletAssetDetailsR> GetWalletAssetDetailsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetWalletAssetDetailsR> GetWalletAssetDetailsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -725,6 +869,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.GetWalletAssetDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -747,32 +894,34 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
-        /// Get Wallet Asset Details Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Get Wallet Asset Details Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetWalletAssetDetailsR</returns>
-        public async System.Threading.Tasks.Task<GetWalletAssetDetailsR> GetWalletAssetDetailsAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetWalletAssetDetailsR> GetWalletAssetDetailsAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetWalletAssetDetailsR> localVarResponse = await GetWalletAssetDetailsWithHttpInfoAsync(blockchain, network, walletId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetWalletAssetDetailsR> localVarResponse = await GetWalletAssetDetailsWithHttpInfoAsync(blockchain, network, walletId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Wallet Asset Details Through this endpoint customers can obtain details about a specific Wallet/Vault.
+        /// Get Wallet Asset Details Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Defines the unique ID of the Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetWalletAssetDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetWalletAssetDetailsR>> GetWalletAssetDetailsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetWalletAssetDetailsR>> GetWalletAssetDetailsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -822,6 +971,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.GetWalletAssetDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -852,8 +1004,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetWalletTransactionDetailsByTransactionIDR</returns>
-        public GetWalletTransactionDetailsByTransactionIDR GetWalletTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string))
+        public GetWalletTransactionDetailsByTransactionIDR GetWalletTransactionDetailsByTransactionID(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> localVarResponse = GetWalletTransactionDetailsByTransactionIDWithHttpInfo(blockchain, network, transactionId, context);
             return localVarResponse.Data;
@@ -867,8 +1020,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetWalletTransactionDetailsByTransactionIDR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDWithHttpInfo(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -917,6 +1071,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.GetWalletTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -946,11 +1103,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetWalletTransactionDetailsByTransactionIDR</returns>
-        public async System.Threading.Tasks.Task<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetWalletTransactionDetailsByTransactionIDR> GetWalletTransactionDetailsByTransactionIDAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> localVarResponse = await GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(blockchain, network, transactionId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR> localVarResponse = await GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(blockchain, network, transactionId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -962,9 +1120,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetWalletTransactionDetailsByTransactionIDR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR>> GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetWalletTransactionDetailsByTransactionIDR>> GetWalletTransactionDetailsByTransactionIDWithHttpInfoAsync(string blockchain, string network, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1015,6 +1174,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
+            localVarRequestOptions.Operation = "InformativeApi.GetWalletTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -1037,6 +1199,344 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// List All Assets By Wallet ID Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListAllAssetsByWalletIDR</returns>
+        public ListAllAssetsByWalletIDR ListAllAssetsByWalletID(string walletId, string context = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListAllAssetsByWalletIDR> localVarResponse = ListAllAssetsByWalletIDWithHttpInfo(walletId, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List All Assets By Wallet ID Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListAllAssetsByWalletIDR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListAllAssetsByWalletIDR> ListAllAssetsByWalletIDWithHttpInfo(string walletId, string context = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'walletId' is set
+            if (walletId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListAllAssetsByWalletID");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("walletId", CryptoAPIs.Client.ClientUtils.ParameterToString(walletId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListAllAssetsByWalletID";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListAllAssetsByWalletIDR>("/wallet-as-a-service/wallets/{walletId}/assets", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListAllAssetsByWalletID", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List All Assets By Wallet ID Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListAllAssetsByWalletIDR</returns>
+        public async System.Threading.Tasks.Task<ListAllAssetsByWalletIDR> ListAllAssetsByWalletIDAsync(string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListAllAssetsByWalletIDR> localVarResponse = await ListAllAssetsByWalletIDWithHttpInfoAsync(walletId, context, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List All Assets By Wallet ID Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="walletId">Defines the unique ID of the Wallet.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListAllAssetsByWalletIDR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAllAssetsByWalletIDR>> ListAllAssetsByWalletIDWithHttpInfoAsync(string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'walletId' is set
+            if (walletId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'walletId' when calling InformativeApi->ListAllAssetsByWalletID");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("walletId", CryptoAPIs.Client.ClientUtils.ParameterToString(walletId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListAllAssetsByWalletID";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListAllAssetsByWalletIDR>("/wallet-as-a-service/wallets/{walletId}/assets", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListAllAssetsByWalletID", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List All Assets From All Wallets Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListAllAssetsFromAllWalletsR</returns>
+        public ListAllAssetsFromAllWalletsR ListAllAssetsFromAllWallets(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListAllAssetsFromAllWalletsR> localVarResponse = ListAllAssetsFromAllWalletsWithHttpInfo(context, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List All Assets From All Wallets Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListAllAssetsFromAllWalletsR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListAllAssetsFromAllWalletsR> ListAllAssetsFromAllWalletsWithHttpInfo(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListAllAssetsFromAllWallets";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListAllAssetsFromAllWalletsR>("/wallet-as-a-service/wallets/all-assets", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListAllAssetsFromAllWallets", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List All Assets From All Wallets Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListAllAssetsFromAllWalletsR</returns>
+        public async System.Threading.Tasks.Task<ListAllAssetsFromAllWalletsR> ListAllAssetsFromAllWalletsAsync(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListAllAssetsFromAllWalletsR> localVarResponse = await ListAllAssetsFromAllWalletsWithHttpInfoAsync(context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List All Assets From All Wallets Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListAllAssetsFromAllWalletsR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAllAssetsFromAllWalletsR>> ListAllAssetsFromAllWalletsWithHttpInfoAsync(string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListAllAssetsFromAllWallets";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListAllAssetsFromAllWalletsR>("/wallet-as-a-service/wallets/all-assets", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListAllAssetsFromAllWallets", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List Deposit Addresses Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1044,8 +1544,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListDepositAddressesR</returns>
-        public ListDepositAddressesR ListDepositAddresses(string blockchain, string network, string walletId, string context = default(string))
+        public ListDepositAddressesR ListDepositAddresses(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> localVarResponse = ListDepositAddressesWithHttpInfo(blockchain, network, walletId, context);
             return localVarResponse.Data;
@@ -1059,8 +1560,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListDepositAddressesR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> ListDepositAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> ListDepositAddressesWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1109,6 +1611,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListDepositAddresses";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1138,11 +1643,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListDepositAddressesR</returns>
-        public async System.Threading.Tasks.Task<ListDepositAddressesR> ListDepositAddressesAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListDepositAddressesR> ListDepositAddressesAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> localVarResponse = await ListDepositAddressesWithHttpInfoAsync(blockchain, network, walletId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListDepositAddressesR> localVarResponse = await ListDepositAddressesWithHttpInfoAsync(blockchain, network, walletId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1154,9 +1660,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListDepositAddressesR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListDepositAddressesR>> ListDepositAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListDepositAddressesR>> ListDepositAddressesWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1206,6 +1713,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListDepositAddresses";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1237,8 +1747,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListSupportedTokensR</returns>
-        public ListSupportedTokensR ListSupportedTokens(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListSupportedTokensR ListSupportedTokens(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListSupportedTokensR> localVarResponse = ListSupportedTokensWithHttpInfo(blockchain, network, context, limit, offset);
             return localVarResponse.Data;
@@ -1253,8 +1764,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListSupportedTokensR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListSupportedTokensR> ListSupportedTokensWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListSupportedTokensR> ListSupportedTokensWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1304,6 +1816,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListSupportedTokens";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1334,11 +1849,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListSupportedTokensR</returns>
-        public async System.Threading.Tasks.Task<ListSupportedTokensR> ListSupportedTokensAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListSupportedTokensR> ListSupportedTokensAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListSupportedTokensR> localVarResponse = await ListSupportedTokensWithHttpInfoAsync(blockchain, network, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListSupportedTokensR> localVarResponse = await ListSupportedTokensWithHttpInfoAsync(blockchain, network, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1351,9 +1867,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListSupportedTokensR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListSupportedTokensR>> ListSupportedTokensWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListSupportedTokensR>> ListSupportedTokensWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1404,6 +1921,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListSupportedTokens";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1436,8 +1956,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListWalletTransactionsR</returns>
-        public ListWalletTransactionsR ListWalletTransactions(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListWalletTransactionsR ListWalletTransactions(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListWalletTransactionsR> localVarResponse = ListWalletTransactionsWithHttpInfo(blockchain, network, walletId, context, limit, offset);
             return localVarResponse.Data;
@@ -1453,8 +1974,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListWalletTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListWalletTransactionsR> ListWalletTransactionsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListWalletTransactionsR> ListWalletTransactionsWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1511,6 +2033,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListWalletTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1542,11 +2067,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListWalletTransactionsR</returns>
-        public async System.Threading.Tasks.Task<ListWalletTransactionsR> ListWalletTransactionsAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListWalletTransactionsR> ListWalletTransactionsAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListWalletTransactionsR> localVarResponse = await ListWalletTransactionsWithHttpInfoAsync(blockchain, network, walletId, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListWalletTransactionsR> localVarResponse = await ListWalletTransactionsWithHttpInfoAsync(blockchain, network, walletId, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1560,9 +2086,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListWalletTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListWalletTransactionsR>> ListWalletTransactionsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListWalletTransactionsR>> ListWalletTransactionsWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1620,6 +2147,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "InformativeApi.ListWalletTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

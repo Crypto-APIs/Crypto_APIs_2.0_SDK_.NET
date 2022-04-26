@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Addresses** | **List&lt;string&gt;** |  | 
 **Coinbase** | **string** | Represents the coinbase hex. | [optional] 
 **ScriptSig** | [**GetWalletTransactionDetailsByTransactionIDRIBSBCScriptSig**](GetWalletTransactionDetailsByTransactionIDRIBSBCScriptSig.md) |  | 
-**Sequence** | **int** | Represents the script sequence number. | 
+**Sequence** | **long** | Represents the script sequence number. | 
 **Txid** | **string** | Represents the reference transaction identifier. | 
 **Txinwitness** | **List&lt;string&gt;** |  | [optional] 
 **Value** | **string** | Represents the sent/received amount. | [optional] 

@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListUnconfirmedTransactionsByAddressRIBS" /> class
-        /// with the <see cref="ListUnconfirmedTransactionsByAddressRIBSBSC" /> class
+        /// with the <see cref="ListUnconfirmedTransactionsByAddressRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListUnconfirmedTransactionsByAddressRIBSBSC.</param>
-        public ListUnconfirmedTransactionsByAddressRIBS(ListUnconfirmedTransactionsByAddressRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of ListUnconfirmedTransactionsByAddressRIBSL.</param>
+        public ListUnconfirmedTransactionsByAddressRIBS(ListUnconfirmedTransactionsByAddressRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -120,10 +120,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListUnconfirmedTransactionsByAddressRIBS" /> class
-        /// with the <see cref="ListUnconfirmedTransactionsByAddressRIBSL" /> class
+        /// with the <see cref="ListUnconfirmedTransactionsByAddressRIBSZ" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListUnconfirmedTransactionsByAddressRIBSL.</param>
-        public ListUnconfirmedTransactionsByAddressRIBS(ListUnconfirmedTransactionsByAddressRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of ListUnconfirmedTransactionsByAddressRIBSZ.</param>
+        public ListUnconfirmedTransactionsByAddressRIBS(ListUnconfirmedTransactionsByAddressRIBSZ actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -132,10 +132,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListUnconfirmedTransactionsByAddressRIBS" /> class
-        /// with the <see cref="ListUnconfirmedTransactionsByAddressRIBSZ" /> class
+        /// with the <see cref="ListUnconfirmedTransactionsByAddressRIBSBSC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListUnconfirmedTransactionsByAddressRIBSZ.</param>
-        public ListUnconfirmedTransactionsByAddressRIBS(ListUnconfirmedTransactionsByAddressRIBSZ actualInstance)
+        /// <param name="actualInstance">An instance of ListUnconfirmedTransactionsByAddressRIBSBSC.</param>
+        public ListUnconfirmedTransactionsByAddressRIBS(ListUnconfirmedTransactionsByAddressRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -220,13 +220,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListUnconfirmedTransactionsByAddressRIBSBSC`. If the actual instance is not `ListUnconfirmedTransactionsByAddressRIBSBSC`,
+        /// Get the actual instance of `ListUnconfirmedTransactionsByAddressRIBSL`. If the actual instance is not `ListUnconfirmedTransactionsByAddressRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListUnconfirmedTransactionsByAddressRIBSBSC</returns>
-        public ListUnconfirmedTransactionsByAddressRIBSBSC GetListUnconfirmedTransactionsByAddressRIBSBSC()
+        /// <returns>An instance of ListUnconfirmedTransactionsByAddressRIBSL</returns>
+        public ListUnconfirmedTransactionsByAddressRIBSL GetListUnconfirmedTransactionsByAddressRIBSL()
         {
-            return (ListUnconfirmedTransactionsByAddressRIBSBSC)this.ActualInstance;
+            return (ListUnconfirmedTransactionsByAddressRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -270,16 +270,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListUnconfirmedTransactionsByAddressRIBSL`. If the actual instance is not `ListUnconfirmedTransactionsByAddressRIBSL`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of ListUnconfirmedTransactionsByAddressRIBSL</returns>
-        public ListUnconfirmedTransactionsByAddressRIBSL GetListUnconfirmedTransactionsByAddressRIBSL()
-        {
-            return (ListUnconfirmedTransactionsByAddressRIBSL)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `ListUnconfirmedTransactionsByAddressRIBSZ`. If the actual instance is not `ListUnconfirmedTransactionsByAddressRIBSZ`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -287,6 +277,16 @@ namespace CryptoAPIs.Model
         public ListUnconfirmedTransactionsByAddressRIBSZ GetListUnconfirmedTransactionsByAddressRIBSZ()
         {
             return (ListUnconfirmedTransactionsByAddressRIBSZ)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListUnconfirmedTransactionsByAddressRIBSBSC`. If the actual instance is not `ListUnconfirmedTransactionsByAddressRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListUnconfirmedTransactionsByAddressRIBSBSC</returns>
+        public ListUnconfirmedTransactionsByAddressRIBSBSC GetListUnconfirmedTransactionsByAddressRIBSBSC()
+        {
+            return (ListUnconfirmedTransactionsByAddressRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

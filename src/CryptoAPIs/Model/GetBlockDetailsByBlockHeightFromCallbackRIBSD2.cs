@@ -52,22 +52,26 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHeightFromCallbackRIBSD2(string bits = default(string), string chainwork = default(string), string difficulty = default(string), string merkleRoot = default(string), int nonce = default(int), int size = default(int), int strippedSize = default(int), int version = default(int), int weight = default(int))
         {
             // to ensure "bits" is required (not null)
-            if (bits == null) {
+            if (bits == null)
+            {
                 throw new ArgumentNullException("bits is a required property for GetBlockDetailsByBlockHeightFromCallbackRIBSD2 and cannot be null");
             }
             this.Bits = bits;
             // to ensure "chainwork" is required (not null)
-            if (chainwork == null) {
+            if (chainwork == null)
+            {
                 throw new ArgumentNullException("chainwork is a required property for GetBlockDetailsByBlockHeightFromCallbackRIBSD2 and cannot be null");
             }
             this.Chainwork = chainwork;
             // to ensure "difficulty" is required (not null)
-            if (difficulty == null) {
+            if (difficulty == null)
+            {
                 throw new ArgumentNullException("difficulty is a required property for GetBlockDetailsByBlockHeightFromCallbackRIBSD2 and cannot be null");
             }
             this.Difficulty = difficulty;
             // to ensure "merkleRoot" is required (not null)
-            if (merkleRoot == null) {
+            if (merkleRoot == null)
+            {
                 throw new ArgumentNullException("merkleRoot is a required property for GetBlockDetailsByBlockHeightFromCallbackRIBSD2 and cannot be null");
             }
             this.MerkleRoot = merkleRoot;

@@ -40,28 +40,22 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListSupportedTokensRData" /> class.
         /// </summary>
-        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (required).</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (required).</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (required).</param>
         /// <param name="total">Defines the total number of items returned in the response. (required).</param>
         /// <param name="items">items (required).</param>
-        public ListSupportedTokensRData(int offset = default(int), int limit = default(int), int total = default(int), List<ListSupportedTokensRI> items = default(List<ListSupportedTokensRI>))
+        public ListSupportedTokensRData(int limit = default(int), int offset = default(int), int total = default(int), List<ListSupportedTokensRI> items = default(List<ListSupportedTokensRI>))
         {
-            this.Offset = offset;
             this.Limit = limit;
+            this.Offset = offset;
             this.Total = total;
             // to ensure "items" is required (not null)
-            if (items == null) {
+            if (items == null)
+            {
                 throw new ArgumentNullException("items is a required property for ListSupportedTokensRData and cannot be null");
             }
             this.Items = items;
         }
-
-        /// <summary>
-        /// The starting index of the response items, i.e. where the response should start listing the returned items.
-        /// </summary>
-        /// <value>The starting index of the response items, i.e. where the response should start listing the returned items.</value>
-        [DataMember(Name = "offset", IsRequired = true, EmitDefaultValue = false)]
-        public int Offset { get; set; }
 
         /// <summary>
         /// Defines how many items should be returned in the response per page basis.
@@ -69,6 +63,13 @@ namespace CryptoAPIs.Model
         /// <value>Defines how many items should be returned in the response per page basis.</value>
         [DataMember(Name = "limit", IsRequired = true, EmitDefaultValue = false)]
         public int Limit { get; set; }
+
+        /// <summary>
+        /// The starting index of the response items, i.e. where the response should start listing the returned items.
+        /// </summary>
+        /// <value>The starting index of the response items, i.e. where the response should start listing the returned items.</value>
+        [DataMember(Name = "offset", IsRequired = true, EmitDefaultValue = false)]
+        public int Offset { get; set; }
 
         /// <summary>
         /// Defines the total number of items returned in the response.
@@ -91,8 +92,8 @@ namespace CryptoAPIs.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ListSupportedTokensRData {\n");
-            sb.Append("  Offset: ").Append(Offset).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
+            sb.Append("  Offset: ").Append(Offset).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("}\n");
@@ -131,12 +132,12 @@ namespace CryptoAPIs.Model
             }
             return 
                 (
-                    this.Offset == input.Offset ||
-                    this.Offset.Equals(input.Offset)
-                ) && 
-                (
                     this.Limit == input.Limit ||
                     this.Limit.Equals(input.Limit)
+                ) && 
+                (
+                    this.Offset == input.Offset ||
+                    this.Offset.Equals(input.Offset)
                 ) && 
                 (
                     this.Total == input.Total ||
@@ -159,8 +160,8 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Offset.GetHashCode();
                 hashCode = (hashCode * 59) + this.Limit.GetHashCode();
+                hashCode = (hashCode * 59) + this.Offset.GetHashCode();
                 hashCode = (hashCode * 59) + this.Total.GetHashCode();
                 if (this.Items != null)
                 {

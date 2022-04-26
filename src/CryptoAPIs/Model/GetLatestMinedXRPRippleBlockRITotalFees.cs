@@ -45,12 +45,14 @@ namespace CryptoAPIs.Model
         public GetLatestMinedXRPRippleBlockRITotalFees(string amount = default(string), string unit = default(string))
         {
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for GetLatestMinedXRPRippleBlockRITotalFees and cannot be null");
             }
             this.Amount = amount;
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for GetLatestMinedXRPRippleBlockRITotalFees and cannot be null");
             }
             this.Unit = unit;

@@ -54,35 +54,41 @@ namespace CryptoAPIs.Model
         {
             this.Index = index;
             // to ensure "minedInBlockHash" is required (not null)
-            if (minedInBlockHash == null) {
+            if (minedInBlockHash == null)
+            {
                 throw new ArgumentNullException("minedInBlockHash is a required property for GetTransactionDetailsByTransactionIDFromCallbackRI and cannot be null");
             }
             this.MinedInBlockHash = minedInBlockHash;
             this.MinedInBlockHeight = minedInBlockHeight;
             // to ensure "recipients" is required (not null)
-            if (recipients == null) {
+            if (recipients == null)
+            {
                 throw new ArgumentNullException("recipients is a required property for GetTransactionDetailsByTransactionIDFromCallbackRI and cannot be null");
             }
             this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            if (senders == null) {
+            if (senders == null)
+            {
                 throw new ArgumentNullException("senders is a required property for GetTransactionDetailsByTransactionIDFromCallbackRI and cannot be null");
             }
             this.Senders = senders;
             this.Timestamp = timestamp;
             // to ensure "transactionHash" is required (not null)
-            if (transactionHash == null) {
+            if (transactionHash == null)
+            {
                 throw new ArgumentNullException("transactionHash is a required property for GetTransactionDetailsByTransactionIDFromCallbackRI and cannot be null");
             }
             this.TransactionHash = transactionHash;
             // to ensure "fee" is required (not null)
-            if (fee == null) {
+            if (fee == null)
+            {
                 throw new ArgumentNullException("fee is a required property for GetTransactionDetailsByTransactionIDFromCallbackRI and cannot be null");
             }
             this.Fee = fee;
             this.IsConfirmed = isConfirmed;
             // to ensure "blockchainSpecific" is required (not null)
-            if (blockchainSpecific == null) {
+            if (blockchainSpecific == null)
+            {
                 throw new ArgumentNullException("blockchainSpecific is a required property for GetTransactionDetailsByTransactionIDFromCallbackRI and cannot be null");
             }
             this.BlockchainSpecific = blockchainSpecific;

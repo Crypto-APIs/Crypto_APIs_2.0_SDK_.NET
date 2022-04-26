@@ -50,25 +50,29 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHashRI(string hash = default(string), int height = default(int), string nextBlockHash = default(string), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), GetBlockDetailsByBlockHashRIBS blockchainSpecific = default(GetBlockDetailsByBlockHashRIBS))
         {
             // to ensure "hash" is required (not null)
-            if (hash == null) {
+            if (hash == null)
+            {
                 throw new ArgumentNullException("hash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
             }
             this.Hash = hash;
             this.Height = height;
             // to ensure "nextBlockHash" is required (not null)
-            if (nextBlockHash == null) {
+            if (nextBlockHash == null)
+            {
                 throw new ArgumentNullException("nextBlockHash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
             }
             this.NextBlockHash = nextBlockHash;
             // to ensure "previousBlockHash" is required (not null)
-            if (previousBlockHash == null) {
+            if (previousBlockHash == null)
+            {
                 throw new ArgumentNullException("previousBlockHash is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
             }
             this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             this.TransactionsCount = transactionsCount;
             // to ensure "blockchainSpecific" is required (not null)
-            if (blockchainSpecific == null) {
+            if (blockchainSpecific == null)
+            {
                 throw new ArgumentNullException("blockchainSpecific is a required property for GetBlockDetailsByBlockHashRI and cannot be null");
             }
             this.BlockchainSpecific = blockchainSpecific;

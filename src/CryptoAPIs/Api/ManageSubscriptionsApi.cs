@@ -37,8 +37,9 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ActivateBlockchainEventSubscriptionR</returns>
-        ActivateBlockchainEventSubscriptionR ActivateBlockchainEventSubscription(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB));
+        ActivateBlockchainEventSubscriptionR ActivateBlockchainEventSubscription(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0);
 
         /// <summary>
         /// Activate Blockchain Event Subscription
@@ -50,8 +51,9 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ActivateBlockchainEventSubscriptionR</returns>
-        ApiResponse<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionWithHttpInfo(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB));
+        ApiResponse<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionWithHttpInfo(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0);
         /// <summary>
         /// Delete Blockchain Event Subscription
         /// </summary>
@@ -63,8 +65,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteBlockchainEventSubscriptionR</returns>
-        DeleteBlockchainEventSubscriptionR DeleteBlockchainEventSubscription(string blockchain, string network, string referenceId, string context = default(string));
+        DeleteBlockchainEventSubscriptionR DeleteBlockchainEventSubscription(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Delete Blockchain Event Subscription
@@ -77,8 +80,34 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteBlockchainEventSubscriptionR</returns>
-        ApiResponse<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string));
+        ApiResponse<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0);
+        /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetBlockchainEventSubscriptionDetailsByReferenceIDR</returns>
+        GetBlockchainEventSubscriptionDetailsByReferenceIDR GetBlockchainEventSubscriptionDetailsByReferenceID(string referenceId, string context = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetBlockchainEventSubscriptionDetailsByReferenceIDR</returns>
+        ApiResponse<GetBlockchainEventSubscriptionDetailsByReferenceIDR> GetBlockchainEventSubscriptionDetailsByReferenceIDWithHttpInfo(string referenceId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Blockchain Events Subscriptions
         /// </summary>
@@ -91,8 +120,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListBlockchainEventsSubscriptionsR</returns>
-        ListBlockchainEventsSubscriptionsR ListBlockchainEventsSubscriptions(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListBlockchainEventsSubscriptionsR ListBlockchainEventsSubscriptions(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Blockchain Events Subscriptions
@@ -106,8 +136,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListBlockchainEventsSubscriptionsR</returns>
-        ApiResponse<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -127,9 +158,10 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateBlockchainEventSubscriptionR</returns>
-        System.Threading.Tasks.Task<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Activate Blockchain Event Subscription
@@ -141,9 +173,10 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateBlockchainEventSubscriptionR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivateBlockchainEventSubscriptionR>> ActivateBlockchainEventSubscriptionWithHttpInfoAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ActivateBlockchainEventSubscriptionR>> ActivateBlockchainEventSubscriptionWithHttpInfoAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Blockchain Event Subscription
         /// </summary>
@@ -155,9 +188,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteBlockchainEventSubscriptionR</returns>
-        System.Threading.Tasks.Task<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Blockchain Event Subscription
@@ -170,9 +204,37 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteBlockchainEventSubscriptionR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteBlockchainEventSubscriptionR>> DeleteBlockchainEventSubscriptionWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeleteBlockchainEventSubscriptionR>> DeleteBlockchainEventSubscriptionWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetBlockchainEventSubscriptionDetailsByReferenceIDR</returns>
+        System.Threading.Tasks.Task<GetBlockchainEventSubscriptionDetailsByReferenceIDR> GetBlockchainEventSubscriptionDetailsByReferenceIDAsync(string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetBlockchainEventSubscriptionDetailsByReferenceIDR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetBlockchainEventSubscriptionDetailsByReferenceIDR>> GetBlockchainEventSubscriptionDetailsByReferenceIDWithHttpInfoAsync(string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Blockchain Events Subscriptions
         /// </summary>
@@ -185,9 +247,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListBlockchainEventsSubscriptionsR</returns>
-        System.Threading.Tasks.Task<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Blockchain Events Subscriptions
@@ -201,9 +264,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListBlockchainEventsSubscriptionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListBlockchainEventsSubscriptionsR>> ListBlockchainEventsSubscriptionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListBlockchainEventsSubscriptionsR>> ListBlockchainEventsSubscriptionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -331,8 +395,9 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ActivateBlockchainEventSubscriptionR</returns>
-        public ActivateBlockchainEventSubscriptionR ActivateBlockchainEventSubscription(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB))
+        public ActivateBlockchainEventSubscriptionR ActivateBlockchainEventSubscription(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> localVarResponse = ActivateBlockchainEventSubscriptionWithHttpInfo(referenceId, context, activateBlockchainEventSubscriptionRB);
             return localVarResponse.Data;
@@ -345,8 +410,9 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ActivateBlockchainEventSubscriptionR</returns>
-        public CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionWithHttpInfo(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB))
+        public CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionWithHttpInfo(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0)
         {
             // verify the required parameter 'referenceId' is set
             if (referenceId == null)
@@ -383,6 +449,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = activateBlockchainEventSubscriptionRB;
+
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.ActivateBlockchainEventSubscription";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -411,11 +480,12 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateBlockchainEventSubscriptionR</returns>
-        public async System.Threading.Tasks.Task<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ActivateBlockchainEventSubscriptionR> ActivateBlockchainEventSubscriptionAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> localVarResponse = await ActivateBlockchainEventSubscriptionWithHttpInfoAsync(referenceId, context, activateBlockchainEventSubscriptionRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR> localVarResponse = await ActivateBlockchainEventSubscriptionWithHttpInfoAsync(referenceId, context, activateBlockchainEventSubscriptionRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -426,9 +496,10 @@ namespace CryptoAPIs.Api
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="activateBlockchainEventSubscriptionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateBlockchainEventSubscriptionR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR>> ActivateBlockchainEventSubscriptionWithHttpInfoAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ActivateBlockchainEventSubscriptionR>> ActivateBlockchainEventSubscriptionWithHttpInfoAsync(string referenceId, string context = default(string), ActivateBlockchainEventSubscriptionRB activateBlockchainEventSubscriptionRB = default(ActivateBlockchainEventSubscriptionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'referenceId' is set
             if (referenceId == null)
@@ -466,6 +537,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = activateBlockchainEventSubscriptionRB;
+
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.ActivateBlockchainEventSubscription";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -496,8 +570,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteBlockchainEventSubscriptionR</returns>
-        public DeleteBlockchainEventSubscriptionR DeleteBlockchainEventSubscription(string blockchain, string network, string referenceId, string context = default(string))
+        public DeleteBlockchainEventSubscriptionR DeleteBlockchainEventSubscription(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<DeleteBlockchainEventSubscriptionR> localVarResponse = DeleteBlockchainEventSubscriptionWithHttpInfo(blockchain, network, referenceId, context);
             return localVarResponse.Data;
@@ -511,8 +586,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteBlockchainEventSubscriptionR</returns>
-        public CryptoAPIs.Client.ApiResponse<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -561,6 +637,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.DeleteBlockchainEventSubscription";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -590,11 +669,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteBlockchainEventSubscriptionR</returns>
-        public async System.Threading.Tasks.Task<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeleteBlockchainEventSubscriptionR> DeleteBlockchainEventSubscriptionAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<DeleteBlockchainEventSubscriptionR> localVarResponse = await DeleteBlockchainEventSubscriptionWithHttpInfoAsync(blockchain, network, referenceId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<DeleteBlockchainEventSubscriptionR> localVarResponse = await DeleteBlockchainEventSubscriptionWithHttpInfoAsync(blockchain, network, referenceId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -606,9 +686,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteBlockchainEventSubscriptionR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<DeleteBlockchainEventSubscriptionR>> DeleteBlockchainEventSubscriptionWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<DeleteBlockchainEventSubscriptionR>> DeleteBlockchainEventSubscriptionWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -659,6 +740,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.DeleteBlockchainEventSubscription";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -681,6 +765,172 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetBlockchainEventSubscriptionDetailsByReferenceIDR</returns>
+        public GetBlockchainEventSubscriptionDetailsByReferenceIDR GetBlockchainEventSubscriptionDetailsByReferenceID(string referenceId, string context = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<GetBlockchainEventSubscriptionDetailsByReferenceIDR> localVarResponse = GetBlockchainEventSubscriptionDetailsByReferenceIDWithHttpInfo(referenceId, context);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetBlockchainEventSubscriptionDetailsByReferenceIDR</returns>
+        public CryptoAPIs.Client.ApiResponse<GetBlockchainEventSubscriptionDetailsByReferenceIDR> GetBlockchainEventSubscriptionDetailsByReferenceIDWithHttpInfo(string referenceId, string context = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'referenceId' is set
+            if (referenceId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'referenceId' when calling ManageSubscriptionsApi->GetBlockchainEventSubscriptionDetailsByReferenceID");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("referenceId", CryptoAPIs.Client.ClientUtils.ParameterToString(referenceId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.GetBlockchainEventSubscriptionDetailsByReferenceID";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<GetBlockchainEventSubscriptionDetailsByReferenceIDR>("/blockchain-events/subscriptions/{referenceId}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetBlockchainEventSubscriptionDetailsByReferenceID", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetBlockchainEventSubscriptionDetailsByReferenceIDR</returns>
+        public async System.Threading.Tasks.Task<GetBlockchainEventSubscriptionDetailsByReferenceIDR> GetBlockchainEventSubscriptionDetailsByReferenceIDAsync(string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<GetBlockchainEventSubscriptionDetailsByReferenceIDR> localVarResponse = await GetBlockchainEventSubscriptionDetailsByReferenceIDWithHttpInfoAsync(referenceId, context, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Blockchain Event Subscription Details By Reference ID Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetBlockchainEventSubscriptionDetailsByReferenceIDR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetBlockchainEventSubscriptionDetailsByReferenceIDR>> GetBlockchainEventSubscriptionDetailsByReferenceIDWithHttpInfoAsync(string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'referenceId' is set
+            if (referenceId == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'referenceId' when calling ManageSubscriptionsApi->GetBlockchainEventSubscriptionDetailsByReferenceID");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("referenceId", CryptoAPIs.Client.ClientUtils.ParameterToString(referenceId)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.GetBlockchainEventSubscriptionDetailsByReferenceID";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetBlockchainEventSubscriptionDetailsByReferenceIDR>("/blockchain-events/subscriptions/{referenceId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetBlockchainEventSubscriptionDetailsByReferenceID", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List Blockchain Events Subscriptions Through this endpoint the customer can obtain a list of their callback subscriptions for the available Blockchain events.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -689,8 +939,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListBlockchainEventsSubscriptionsR</returns>
-        public ListBlockchainEventsSubscriptionsR ListBlockchainEventsSubscriptions(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListBlockchainEventsSubscriptionsR ListBlockchainEventsSubscriptions(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListBlockchainEventsSubscriptionsR> localVarResponse = ListBlockchainEventsSubscriptionsWithHttpInfo(blockchain, network, context, limit, offset);
             return localVarResponse.Data;
@@ -705,8 +956,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListBlockchainEventsSubscriptionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -756,6 +1008,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.ListBlockchainEventsSubscriptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -786,11 +1041,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListBlockchainEventsSubscriptionsR</returns>
-        public async System.Threading.Tasks.Task<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListBlockchainEventsSubscriptionsR> ListBlockchainEventsSubscriptionsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListBlockchainEventsSubscriptionsR> localVarResponse = await ListBlockchainEventsSubscriptionsWithHttpInfoAsync(blockchain, network, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListBlockchainEventsSubscriptionsR> localVarResponse = await ListBlockchainEventsSubscriptionsWithHttpInfoAsync(blockchain, network, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -803,9 +1059,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListBlockchainEventsSubscriptionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListBlockchainEventsSubscriptionsR>> ListBlockchainEventsSubscriptionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListBlockchainEventsSubscriptionsR>> ListBlockchainEventsSubscriptionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -856,6 +1113,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ManageSubscriptionsApi.ListBlockchainEventsSubscriptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

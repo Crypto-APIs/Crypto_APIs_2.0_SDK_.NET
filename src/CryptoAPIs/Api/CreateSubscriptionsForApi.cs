@@ -38,8 +38,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MinedTransactionR</returns>
-        MinedTransactionR MinedTransaction(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB));
+        MinedTransactionR MinedTransaction(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0);
 
         /// <summary>
         /// Mined transaction
@@ -52,8 +53,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MinedTransactionR</returns>
-        ApiResponse<MinedTransactionR> MinedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB));
+        ApiResponse<MinedTransactionR> MinedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0);
         /// <summary>
         /// New Block
         /// </summary>
@@ -65,8 +67,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewBlockR</returns>
-        NewBlockR NewBlock(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB));
+        NewBlockR NewBlock(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0);
 
         /// <summary>
         /// New Block
@@ -79,8 +82,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewBlockR</returns>
-        ApiResponse<NewBlockR> NewBlockWithHttpInfo(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB));
+        ApiResponse<NewBlockR> NewBlockWithHttpInfo(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0);
         /// <summary>
         /// New confirmed coins transactions
         /// </summary>
@@ -92,8 +96,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedCoinsTransactionsR</returns>
-        NewConfirmedCoinsTransactionsR NewConfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB));
+        NewConfirmedCoinsTransactionsR NewConfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0);
 
         /// <summary>
         /// New confirmed coins transactions
@@ -106,8 +111,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedCoinsTransactionsR</returns>
-        ApiResponse<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB));
+        ApiResponse<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0);
         /// <summary>
         /// New confirmed coins transactions and each confirmation
         /// </summary>
@@ -119,8 +125,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedCoinsTransactionsAndEachConfirmationR</returns>
-        NewConfirmedCoinsTransactionsAndEachConfirmationR NewConfirmedCoinsTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB));
+        NewConfirmedCoinsTransactionsAndEachConfirmationR NewConfirmedCoinsTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0);
 
         /// <summary>
         /// New confirmed coins transactions and each confirmation
@@ -133,8 +140,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedCoinsTransactionsAndEachConfirmationR</returns>
-        ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB));
+        ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0);
         /// <summary>
         /// New confirmed internal transactions
         /// </summary>
@@ -146,8 +154,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedInternalTransactionsR</returns>
-        NewConfirmedInternalTransactionsR NewConfirmedInternalTransactions(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB));
+        NewConfirmedInternalTransactionsR NewConfirmedInternalTransactions(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0);
 
         /// <summary>
         /// New confirmed internal transactions
@@ -160,8 +169,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedInternalTransactionsR</returns>
-        ApiResponse<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB));
+        ApiResponse<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0);
         /// <summary>
         /// New confirmed internal transactions and each confirmation
         /// </summary>
@@ -173,8 +183,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedInternalTransactionsAndEachConfirmationR</returns>
-        NewConfirmedInternalTransactionsAndEachConfirmationR NewConfirmedInternalTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB));
+        NewConfirmedInternalTransactionsAndEachConfirmationR NewConfirmedInternalTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0);
 
         /// <summary>
         /// New confirmed internal transactions and each confirmation
@@ -187,8 +198,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedInternalTransactionsAndEachConfirmationR</returns>
-        ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB));
+        ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0);
         /// <summary>
         /// New confirmed tokens transactions
         /// </summary>
@@ -200,8 +212,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedTokensTransactionsR</returns>
-        NewConfirmedTokensTransactionsR NewConfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB));
+        NewConfirmedTokensTransactionsR NewConfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0);
 
         /// <summary>
         /// New confirmed tokens transactions
@@ -214,8 +227,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedTokensTransactionsR</returns>
-        ApiResponse<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB));
+        ApiResponse<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0);
         /// <summary>
         /// New confirmed tokens transactions and each confirmation
         /// </summary>
@@ -227,8 +241,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedTokensTransactionsAndEachConfirmationR</returns>
-        NewConfirmedTokensTransactionsAndEachConfirmationR NewConfirmedTokensTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB));
+        NewConfirmedTokensTransactionsAndEachConfirmationR NewConfirmedTokensTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0);
 
         /// <summary>
         /// New confirmed tokens transactions and each confirmation
@@ -241,8 +256,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedTokensTransactionsAndEachConfirmationR</returns>
-        ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB));
+        ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0);
         /// <summary>
         /// New unconfirmed coins transactions
         /// </summary>
@@ -254,8 +270,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewUnconfirmedCoinsTransactionsR</returns>
-        NewUnconfirmedCoinsTransactionsR NewUnconfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB));
+        NewUnconfirmedCoinsTransactionsR NewUnconfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0);
 
         /// <summary>
         /// New unconfirmed coins transactions
@@ -268,8 +285,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewUnconfirmedCoinsTransactionsR</returns>
-        ApiResponse<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB));
+        ApiResponse<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0);
         /// <summary>
         /// New unconfirmed tokens transactions
         /// </summary>
@@ -281,8 +299,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewUnconfirmedTokensTransactionsR</returns>
-        NewUnconfirmedTokensTransactionsR NewUnconfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB));
+        NewUnconfirmedTokensTransactionsR NewUnconfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0);
 
         /// <summary>
         /// New unconfirmed tokens transactions
@@ -295,8 +314,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewUnconfirmedTokensTransactionsR</returns>
-        ApiResponse<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB));
+        ApiResponse<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -317,9 +337,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MinedTransactionR</returns>
-        System.Threading.Tasks.Task<MinedTransactionR> MinedTransactionAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MinedTransactionR> MinedTransactionAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Mined transaction
@@ -332,9 +353,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MinedTransactionR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MinedTransactionR>> MinedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<MinedTransactionR>> MinedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New Block
         /// </summary>
@@ -346,9 +368,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewBlockR</returns>
-        System.Threading.Tasks.Task<NewBlockR> NewBlockAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewBlockR> NewBlockAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New Block
@@ -361,9 +384,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewBlockR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewBlockR>> NewBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewBlockR>> NewBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New confirmed coins transactions
         /// </summary>
@@ -375,9 +399,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedCoinsTransactionsR</returns>
-        System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New confirmed coins transactions
@@ -390,9 +415,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedCoinsTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewConfirmedCoinsTransactionsR>> NewConfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedCoinsTransactionsR>> NewConfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New confirmed coins transactions and each confirmation
         /// </summary>
@@ -404,9 +430,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedCoinsTransactionsAndEachConfirmationR</returns>
-        System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New confirmed coins transactions and each confirmation
@@ -419,9 +446,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedCoinsTransactionsAndEachConfirmationR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR>> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR>> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New confirmed internal transactions
         /// </summary>
@@ -433,9 +461,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedInternalTransactionsR</returns>
-        System.Threading.Tasks.Task<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New confirmed internal transactions
@@ -448,9 +477,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedInternalTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewConfirmedInternalTransactionsR>> NewConfirmedInternalTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedInternalTransactionsR>> NewConfirmedInternalTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New confirmed internal transactions and each confirmation
         /// </summary>
@@ -462,9 +492,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedInternalTransactionsAndEachConfirmationR</returns>
-        System.Threading.Tasks.Task<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New confirmed internal transactions and each confirmation
@@ -477,9 +508,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedInternalTransactionsAndEachConfirmationR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR>> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR>> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New confirmed tokens transactions
         /// </summary>
@@ -491,9 +523,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedTokensTransactionsR</returns>
-        System.Threading.Tasks.Task<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New confirmed tokens transactions
@@ -506,9 +539,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedTokensTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewConfirmedTokensTransactionsR>> NewConfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedTokensTransactionsR>> NewConfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New confirmed tokens transactions and each confirmation
         /// </summary>
@@ -520,9 +554,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedTokensTransactionsAndEachConfirmationR</returns>
-        System.Threading.Tasks.Task<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New confirmed tokens transactions and each confirmation
@@ -535,9 +570,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedTokensTransactionsAndEachConfirmationR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR>> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR>> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New unconfirmed coins transactions
         /// </summary>
@@ -549,9 +585,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewUnconfirmedCoinsTransactionsR</returns>
-        System.Threading.Tasks.Task<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New unconfirmed coins transactions
@@ -564,9 +601,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewUnconfirmedCoinsTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewUnconfirmedCoinsTransactionsR>> NewUnconfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewUnconfirmedCoinsTransactionsR>> NewUnconfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New unconfirmed tokens transactions
         /// </summary>
@@ -578,9 +616,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewUnconfirmedTokensTransactionsR</returns>
-        System.Threading.Tasks.Task<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// New unconfirmed tokens transactions
@@ -593,9 +632,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewUnconfirmedTokensTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NewUnconfirmedTokensTransactionsR>> NewUnconfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NewUnconfirmedTokensTransactionsR>> NewUnconfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -724,8 +764,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MinedTransactionR</returns>
-        public MinedTransactionR MinedTransaction(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB))
+        public MinedTransactionR MinedTransaction(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<MinedTransactionR> localVarResponse = MinedTransactionWithHttpInfo(blockchain, network, context, minedTransactionRB);
             return localVarResponse.Data;
@@ -739,8 +780,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MinedTransactionR</returns>
-        public CryptoAPIs.Client.ApiResponse<MinedTransactionR> MinedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB))
+        public CryptoAPIs.Client.ApiResponse<MinedTransactionR> MinedTransactionWithHttpInfo(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -784,6 +826,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = minedTransactionRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.MinedTransaction";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -813,11 +858,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MinedTransactionR</returns>
-        public async System.Threading.Tasks.Task<MinedTransactionR> MinedTransactionAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MinedTransactionR> MinedTransactionAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<MinedTransactionR> localVarResponse = await MinedTransactionWithHttpInfoAsync(blockchain, network, context, minedTransactionRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<MinedTransactionR> localVarResponse = await MinedTransactionWithHttpInfoAsync(blockchain, network, context, minedTransactionRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -829,9 +875,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="minedTransactionRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MinedTransactionR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<MinedTransactionR>> MinedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<MinedTransactionR>> MinedTransactionWithHttpInfoAsync(string blockchain, string network, string context = default(string), MinedTransactionRB minedTransactionRB = default(MinedTransactionRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -876,6 +923,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = minedTransactionRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.MinedTransaction";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -906,8 +956,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewBlockR</returns>
-        public NewBlockR NewBlock(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB))
+        public NewBlockR NewBlock(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewBlockR> localVarResponse = NewBlockWithHttpInfo(blockchain, network, context, newBlockRB);
             return localVarResponse.Data;
@@ -921,8 +972,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewBlockR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewBlockR> NewBlockWithHttpInfo(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB))
+        public CryptoAPIs.Client.ApiResponse<NewBlockR> NewBlockWithHttpInfo(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -966,6 +1018,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newBlockRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -995,11 +1050,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewBlockR</returns>
-        public async System.Threading.Tasks.Task<NewBlockR> NewBlockAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewBlockR> NewBlockAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewBlockR> localVarResponse = await NewBlockWithHttpInfoAsync(blockchain, network, context, newBlockRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewBlockR> localVarResponse = await NewBlockWithHttpInfoAsync(blockchain, network, context, newBlockRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1011,9 +1067,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newBlockRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewBlockR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewBlockR>> NewBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewBlockR>> NewBlockWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewBlockRB newBlockRB = default(NewBlockRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1058,6 +1115,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newBlockRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1088,8 +1148,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedCoinsTransactionsR</returns>
-        public NewConfirmedCoinsTransactionsR NewConfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB))
+        public NewConfirmedCoinsTransactionsR NewConfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsR> localVarResponse = NewConfirmedCoinsTransactionsWithHttpInfo(blockchain, network, context, newConfirmedCoinsTransactionsRB);
             return localVarResponse.Data;
@@ -1103,8 +1164,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedCoinsTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB))
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1148,6 +1210,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedCoinsTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedCoinsTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1177,11 +1242,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedCoinsTransactionsR</returns>
-        public async System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsR> NewConfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsR> localVarResponse = await NewConfirmedCoinsTransactionsWithHttpInfoAsync(blockchain, network, context, newConfirmedCoinsTransactionsRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsR> localVarResponse = await NewConfirmedCoinsTransactionsWithHttpInfoAsync(blockchain, network, context, newConfirmedCoinsTransactionsRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1193,9 +1259,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedCoinsTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsR>> NewConfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsR>> NewConfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsRB newConfirmedCoinsTransactionsRB = default(NewConfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1240,6 +1307,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedCoinsTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedCoinsTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1270,8 +1340,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedCoinsTransactionsAndEachConfirmationR</returns>
-        public NewConfirmedCoinsTransactionsAndEachConfirmationR NewConfirmedCoinsTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB))
+        public NewConfirmedCoinsTransactionsAndEachConfirmationR NewConfirmedCoinsTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> localVarResponse = NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfo(blockchain, network, context, newConfirmedCoinsTransactionsAndEachConfirmationRB);
             return localVarResponse.Data;
@@ -1285,8 +1356,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedCoinsTransactionsAndEachConfirmationR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB))
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1330,6 +1402,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedCoinsTransactionsAndEachConfirmationRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedCoinsTransactionsAndEachConfirmation";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1359,11 +1434,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedCoinsTransactionsAndEachConfirmationR</returns>
-        public async System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> localVarResponse = await NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfoAsync(blockchain, network, context, newConfirmedCoinsTransactionsAndEachConfirmationRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> localVarResponse = await NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfoAsync(blockchain, network, context, newConfirmedCoinsTransactionsAndEachConfirmationRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1375,9 +1451,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedCoinsTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedCoinsTransactionsAndEachConfirmationR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR>> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR>> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1422,6 +1499,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedCoinsTransactionsAndEachConfirmationRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedCoinsTransactionsAndEachConfirmation";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1452,8 +1532,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedInternalTransactionsR</returns>
-        public NewConfirmedInternalTransactionsR NewConfirmedInternalTransactions(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB))
+        public NewConfirmedInternalTransactionsR NewConfirmedInternalTransactions(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsR> localVarResponse = NewConfirmedInternalTransactionsWithHttpInfo(blockchain, network, context, newConfirmedInternalTransactionsRB);
             return localVarResponse.Data;
@@ -1467,8 +1548,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedInternalTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB))
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1512,6 +1594,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedInternalTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedInternalTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1541,11 +1626,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedInternalTransactionsR</returns>
-        public async System.Threading.Tasks.Task<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewConfirmedInternalTransactionsR> NewConfirmedInternalTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsR> localVarResponse = await NewConfirmedInternalTransactionsWithHttpInfoAsync(blockchain, network, context, newConfirmedInternalTransactionsRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsR> localVarResponse = await NewConfirmedInternalTransactionsWithHttpInfoAsync(blockchain, network, context, newConfirmedInternalTransactionsRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1557,9 +1643,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedInternalTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsR>> NewConfirmedInternalTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsR>> NewConfirmedInternalTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsRB newConfirmedInternalTransactionsRB = default(NewConfirmedInternalTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1604,6 +1691,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedInternalTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedInternalTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1634,8 +1724,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedInternalTransactionsAndEachConfirmationR</returns>
-        public NewConfirmedInternalTransactionsAndEachConfirmationR NewConfirmedInternalTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB))
+        public NewConfirmedInternalTransactionsAndEachConfirmationR NewConfirmedInternalTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> localVarResponse = NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfo(blockchain, network, context, newConfirmedInternalTransactionsAndEachConfirmationRB);
             return localVarResponse.Data;
@@ -1649,8 +1740,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedInternalTransactionsAndEachConfirmationR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB))
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1694,6 +1786,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedInternalTransactionsAndEachConfirmationRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedInternalTransactionsAndEachConfirmation";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1723,11 +1818,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedInternalTransactionsAndEachConfirmationR</returns>
-        public async System.Threading.Tasks.Task<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> localVarResponse = await NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfoAsync(blockchain, network, context, newConfirmedInternalTransactionsAndEachConfirmationRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> localVarResponse = await NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfoAsync(blockchain, network, context, newConfirmedInternalTransactionsAndEachConfirmationRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1739,9 +1835,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedInternalTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedInternalTransactionsAndEachConfirmationR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR>> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR>> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1786,6 +1883,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedInternalTransactionsAndEachConfirmationRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedInternalTransactionsAndEachConfirmation";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1816,8 +1916,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedTokensTransactionsR</returns>
-        public NewConfirmedTokensTransactionsR NewConfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB))
+        public NewConfirmedTokensTransactionsR NewConfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsR> localVarResponse = NewConfirmedTokensTransactionsWithHttpInfo(blockchain, network, context, newConfirmedTokensTransactionsRB);
             return localVarResponse.Data;
@@ -1831,8 +1932,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedTokensTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB))
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1876,6 +1978,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedTokensTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedTokensTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1905,11 +2010,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedTokensTransactionsR</returns>
-        public async System.Threading.Tasks.Task<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewConfirmedTokensTransactionsR> NewConfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsR> localVarResponse = await NewConfirmedTokensTransactionsWithHttpInfoAsync(blockchain, network, context, newConfirmedTokensTransactionsRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsR> localVarResponse = await NewConfirmedTokensTransactionsWithHttpInfoAsync(blockchain, network, context, newConfirmedTokensTransactionsRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1921,9 +2027,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedTokensTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsR>> NewConfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsR>> NewConfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsRB newConfirmedTokensTransactionsRB = default(NewConfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1968,6 +2075,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedTokensTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedTokensTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1998,8 +2108,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewConfirmedTokensTransactionsAndEachConfirmationR</returns>
-        public NewConfirmedTokensTransactionsAndEachConfirmationR NewConfirmedTokensTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB))
+        public NewConfirmedTokensTransactionsAndEachConfirmationR NewConfirmedTokensTransactionsAndEachConfirmation(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR> localVarResponse = NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfo(blockchain, network, context, newConfirmedTokensTransactionsAndEachConfirmationRB);
             return localVarResponse.Data;
@@ -2013,8 +2124,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedTokensTransactionsAndEachConfirmationR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB))
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2058,6 +2170,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedTokensTransactionsAndEachConfirmationRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedTokensTransactionsAndEachConfirmation";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2087,11 +2202,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewConfirmedTokensTransactionsAndEachConfirmationR</returns>
-        public async System.Threading.Tasks.Task<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewConfirmedTokensTransactionsAndEachConfirmationR> NewConfirmedTokensTransactionsAndEachConfirmationAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR> localVarResponse = await NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfoAsync(blockchain, network, context, newConfirmedTokensTransactionsAndEachConfirmationRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR> localVarResponse = await NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfoAsync(blockchain, network, context, newConfirmedTokensTransactionsAndEachConfirmationRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2103,9 +2219,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newConfirmedTokensTransactionsAndEachConfirmationRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedTokensTransactionsAndEachConfirmationR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR>> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedTokensTransactionsAndEachConfirmationR>> NewConfirmedTokensTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokensTransactionsAndEachConfirmationRB newConfirmedTokensTransactionsAndEachConfirmationRB = default(NewConfirmedTokensTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2150,6 +2267,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newConfirmedTokensTransactionsAndEachConfirmationRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedTokensTransactionsAndEachConfirmation";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2180,8 +2300,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewUnconfirmedCoinsTransactionsR</returns>
-        public NewUnconfirmedCoinsTransactionsR NewUnconfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB))
+        public NewUnconfirmedCoinsTransactionsR NewUnconfirmedCoinsTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewUnconfirmedCoinsTransactionsR> localVarResponse = NewUnconfirmedCoinsTransactionsWithHttpInfo(blockchain, network, context, newUnconfirmedCoinsTransactionsRB);
             return localVarResponse.Data;
@@ -2195,8 +2316,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewUnconfirmedCoinsTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB))
+        public CryptoAPIs.Client.ApiResponse<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2240,6 +2362,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newUnconfirmedCoinsTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewUnconfirmedCoinsTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2269,11 +2394,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewUnconfirmedCoinsTransactionsR</returns>
-        public async System.Threading.Tasks.Task<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewUnconfirmedCoinsTransactionsR> NewUnconfirmedCoinsTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewUnconfirmedCoinsTransactionsR> localVarResponse = await NewUnconfirmedCoinsTransactionsWithHttpInfoAsync(blockchain, network, context, newUnconfirmedCoinsTransactionsRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewUnconfirmedCoinsTransactionsR> localVarResponse = await NewUnconfirmedCoinsTransactionsWithHttpInfoAsync(blockchain, network, context, newUnconfirmedCoinsTransactionsRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2285,9 +2411,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedCoinsTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewUnconfirmedCoinsTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewUnconfirmedCoinsTransactionsR>> NewUnconfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewUnconfirmedCoinsTransactionsR>> NewUnconfirmedCoinsTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedCoinsTransactionsRB newUnconfirmedCoinsTransactionsRB = default(NewUnconfirmedCoinsTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2332,6 +2459,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newUnconfirmedCoinsTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewUnconfirmedCoinsTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2362,8 +2492,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NewUnconfirmedTokensTransactionsR</returns>
-        public NewUnconfirmedTokensTransactionsR NewUnconfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB))
+        public NewUnconfirmedTokensTransactionsR NewUnconfirmedTokensTransactions(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<NewUnconfirmedTokensTransactionsR> localVarResponse = NewUnconfirmedTokensTransactionsWithHttpInfo(blockchain, network, context, newUnconfirmedTokensTransactionsRB);
             return localVarResponse.Data;
@@ -2377,8 +2508,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewUnconfirmedTokensTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB))
+        public CryptoAPIs.Client.ApiResponse<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsWithHttpInfo(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2422,6 +2554,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newUnconfirmedTokensTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewUnconfirmedTokensTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2451,11 +2586,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NewUnconfirmedTokensTransactionsR</returns>
-        public async System.Threading.Tasks.Task<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NewUnconfirmedTokensTransactionsR> NewUnconfirmedTokensTransactionsAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<NewUnconfirmedTokensTransactionsR> localVarResponse = await NewUnconfirmedTokensTransactionsWithHttpInfoAsync(blockchain, network, context, newUnconfirmedTokensTransactionsRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<NewUnconfirmedTokensTransactionsR> localVarResponse = await NewUnconfirmedTokensTransactionsWithHttpInfoAsync(blockchain, network, context, newUnconfirmedTokensTransactionsRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2467,9 +2603,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="newUnconfirmedTokensTransactionsRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewUnconfirmedTokensTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewUnconfirmedTokensTransactionsR>> NewUnconfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewUnconfirmedTokensTransactionsR>> NewUnconfirmedTokensTransactionsWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewUnconfirmedTokensTransactionsRB newUnconfirmedTokensTransactionsRB = default(NewUnconfirmedTokensTransactionsRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -2514,6 +2651,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = newUnconfirmedTokensTransactionsRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewUnconfirmedTokensTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

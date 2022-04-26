@@ -50,33 +50,39 @@ namespace CryptoAPIs.Model
         public GetWalletAssetDetailsRI(GetWalletAssetDetailsRIConfirmedBalance confirmedBalance = default(GetWalletAssetDetailsRIConfirmedBalance), int depositAddressesCount = default(int), List<GetWalletAssetDetailsRIFungibleTokens> fungibleTokens = default(List<GetWalletAssetDetailsRIFungibleTokens>), string name = default(string), List<GetWalletAssetDetailsRINonFungibleTokens> nonFungibleTokens = default(List<GetWalletAssetDetailsRINonFungibleTokens>), GetWalletAssetDetailsRIRecievedConfirmedAmount recievedConfirmedAmount = default(GetWalletAssetDetailsRIRecievedConfirmedAmount), GetWalletAssetDetailsRISentConfirmedAmount sentConfirmedAmount = default(GetWalletAssetDetailsRISentConfirmedAmount))
         {
             // to ensure "confirmedBalance" is required (not null)
-            if (confirmedBalance == null) {
+            if (confirmedBalance == null)
+            {
                 throw new ArgumentNullException("confirmedBalance is a required property for GetWalletAssetDetailsRI and cannot be null");
             }
             this.ConfirmedBalance = confirmedBalance;
             this.DepositAddressesCount = depositAddressesCount;
             // to ensure "fungibleTokens" is required (not null)
-            if (fungibleTokens == null) {
+            if (fungibleTokens == null)
+            {
                 throw new ArgumentNullException("fungibleTokens is a required property for GetWalletAssetDetailsRI and cannot be null");
             }
             this.FungibleTokens = fungibleTokens;
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for GetWalletAssetDetailsRI and cannot be null");
             }
             this.Name = name;
             // to ensure "nonFungibleTokens" is required (not null)
-            if (nonFungibleTokens == null) {
+            if (nonFungibleTokens == null)
+            {
                 throw new ArgumentNullException("nonFungibleTokens is a required property for GetWalletAssetDetailsRI and cannot be null");
             }
             this.NonFungibleTokens = nonFungibleTokens;
             // to ensure "recievedConfirmedAmount" is required (not null)
-            if (recievedConfirmedAmount == null) {
+            if (recievedConfirmedAmount == null)
+            {
                 throw new ArgumentNullException("recievedConfirmedAmount is a required property for GetWalletAssetDetailsRI and cannot be null");
             }
             this.RecievedConfirmedAmount = recievedConfirmedAmount;
             // to ensure "sentConfirmedAmount" is required (not null)
-            if (sentConfirmedAmount == null) {
+            if (sentConfirmedAmount == null)
+            {
                 throw new ArgumentNullException("sentConfirmedAmount is a required property for GetWalletAssetDetailsRI and cannot be null");
             }
             this.SentConfirmedAmount = sentConfirmedAmount;

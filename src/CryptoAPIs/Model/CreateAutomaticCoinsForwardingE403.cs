@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAutomaticCoinsForwardingE403" /> class
-        /// with the <see cref="CoinsForwardingAutomationsLimitReached" /> class
+        /// with the <see cref="EndpointNotAllowedForPlan" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of CoinsForwardingAutomationsLimitReached.</param>
-        public CreateAutomaticCoinsForwardingE403(CoinsForwardingAutomationsLimitReached actualInstance)
+        /// <param name="actualInstance">An instance of EndpointNotAllowedForPlan.</param>
+        public CreateAutomaticCoinsForwardingE403(EndpointNotAllowedForPlan actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -72,10 +72,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAutomaticCoinsForwardingE403" /> class
-        /// with the <see cref="EndpointNotAllowedForPlan" /> class
+        /// with the <see cref="FeatureMainnetsNotAllowedForPlan" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of EndpointNotAllowedForPlan.</param>
-        public CreateAutomaticCoinsForwardingE403(EndpointNotAllowedForPlan actualInstance)
+        /// <param name="actualInstance">An instance of FeatureMainnetsNotAllowedForPlan.</param>
+        public CreateAutomaticCoinsForwardingE403(FeatureMainnetsNotAllowedForPlan actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -84,10 +84,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAutomaticCoinsForwardingE403" /> class
-        /// with the <see cref="FeatureMainnetsNotAllowedForPlan" /> class
+        /// with the <see cref="CoinsForwardingAutomationsLimitReached" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of FeatureMainnetsNotAllowedForPlan.</param>
-        public CreateAutomaticCoinsForwardingE403(FeatureMainnetsNotAllowedForPlan actualInstance)
+        /// <param name="actualInstance">An instance of CoinsForwardingAutomationsLimitReached.</param>
+        public CreateAutomaticCoinsForwardingE403(CoinsForwardingAutomationsLimitReached actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -146,13 +146,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `CoinsForwardingAutomationsLimitReached`. If the actual instance is not `CoinsForwardingAutomationsLimitReached`,
+        /// Get the actual instance of `EndpointNotAllowedForPlan`. If the actual instance is not `EndpointNotAllowedForPlan`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of CoinsForwardingAutomationsLimitReached</returns>
-        public CoinsForwardingAutomationsLimitReached GetCoinsForwardingAutomationsLimitReached()
+        /// <returns>An instance of EndpointNotAllowedForPlan</returns>
+        public EndpointNotAllowedForPlan GetEndpointNotAllowedForPlan()
         {
-            return (CoinsForwardingAutomationsLimitReached)this.ActualInstance;
+            return (EndpointNotAllowedForPlan)this.ActualInstance;
         }
 
         /// <summary>
@@ -166,16 +166,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `EndpointNotAllowedForPlan`. If the actual instance is not `EndpointNotAllowedForPlan`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of EndpointNotAllowedForPlan</returns>
-        public EndpointNotAllowedForPlan GetEndpointNotAllowedForPlan()
-        {
-            return (EndpointNotAllowedForPlan)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `FeatureMainnetsNotAllowedForPlan`. If the actual instance is not `FeatureMainnetsNotAllowedForPlan`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -183,6 +173,16 @@ namespace CryptoAPIs.Model
         public FeatureMainnetsNotAllowedForPlan GetFeatureMainnetsNotAllowedForPlan()
         {
             return (FeatureMainnetsNotAllowedForPlan)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `CoinsForwardingAutomationsLimitReached`. If the actual instance is not `CoinsForwardingAutomationsLimitReached`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of CoinsForwardingAutomationsLimitReached</returns>
+        public CoinsForwardingAutomationsLimitReached GetCoinsForwardingAutomationsLimitReached()
+        {
+            return (CoinsForwardingAutomationsLimitReached)this.ActualInstance;
         }
 
         /// <summary>

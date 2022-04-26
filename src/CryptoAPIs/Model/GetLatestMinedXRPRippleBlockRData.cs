@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetLatestMinedXRPRippleBlockRData(GetLatestMinedXRPRippleBlockRI item = default(GetLatestMinedXRPRippleBlockRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetLatestMinedXRPRippleBlockRData and cannot be null");
             }
             this.Item = item;

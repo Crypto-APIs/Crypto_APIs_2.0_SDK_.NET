@@ -47,7 +47,8 @@ namespace CryptoAPIs.Model
         {
             this.Height = height;
             // to ensure "hash" is required (not null)
-            if (hash == null) {
+            if (hash == null)
+            {
                 throw new ArgumentNullException("hash is a required property for TransactionMinedDataItemMinedInBlock and cannot be null");
             }
             this.Hash = hash;

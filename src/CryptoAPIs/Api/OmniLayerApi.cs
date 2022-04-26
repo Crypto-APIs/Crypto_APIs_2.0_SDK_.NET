@@ -38,8 +38,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetOmniTransactionDetailsByTransactionIDTxidR</returns>
-        GetOmniTransactionDetailsByTransactionIDTxidR GetOmniTransactionDetailsByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string));
+        GetOmniTransactionDetailsByTransactionIDTxidR GetOmniTransactionDetailsByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Omni Transaction Details By Transaction ID (Txid)
@@ -52,8 +53,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetOmniTransactionDetailsByTransactionIDTxidR</returns>
-        ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string));
+        ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Unconfirmed Omni Transaction By Transaction ID (Txid)
         /// </summary>
@@ -65,8 +67,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetUnconfirmedOmniTransactionByTransactionIDTxidR</returns>
-        GetUnconfirmedOmniTransactionByTransactionIDTxidR GetUnconfirmedOmniTransactionByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string));
+        GetUnconfirmedOmniTransactionByTransactionIDTxidR GetUnconfirmedOmniTransactionByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Unconfirmed Omni Transaction By Transaction ID (Txid)
@@ -79,8 +82,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetUnconfirmedOmniTransactionByTransactionIDTxidR</returns>
-        ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string));
+        ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Omni Tokens By Address
         /// </summary>
@@ -92,8 +96,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTokensByAddressR</returns>
-        ListOmniTokensByAddressR ListOmniTokensByAddress(string network, string blockchain, string address, string context = default(string));
+        ListOmniTokensByAddressR ListOmniTokensByAddress(string network, string blockchain, string address, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// List Omni Tokens By Address
@@ -106,8 +111,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTokensByAddressR</returns>
-        ApiResponse<ListOmniTokensByAddressR> ListOmniTokensByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string));
+        ApiResponse<ListOmniTokensByAddressR> ListOmniTokensByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Omni Transactions By Address
         /// </summary>
@@ -121,8 +127,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTransactionsByAddressR</returns>
-        ListOmniTransactionsByAddressR ListOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListOmniTransactionsByAddressR ListOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Omni Transactions By Address
@@ -137,8 +144,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTransactionsByAddressR</returns>
-        ApiResponse<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Omni Transactions By Block Hash
         /// </summary>
@@ -152,8 +160,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTransactionsByBlockHashR</returns>
-        ListOmniTransactionsByBlockHashR ListOmniTransactionsByBlockHash(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListOmniTransactionsByBlockHashR ListOmniTransactionsByBlockHash(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Omni Transactions By Block Hash
@@ -168,8 +177,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTransactionsByBlockHashR</returns>
-        ApiResponse<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashWithHttpInfo(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashWithHttpInfo(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Omni Transactions By Block Height
         /// </summary>
@@ -183,8 +193,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTransactionsByBlockHeightR</returns>
-        ListOmniTransactionsByBlockHeightR ListOmniTransactionsByBlockHeight(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListOmniTransactionsByBlockHeightR ListOmniTransactionsByBlockHeight(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Omni Transactions By Block Height
@@ -199,8 +210,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTransactionsByBlockHeightR</returns>
-        ApiResponse<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightWithHttpInfo(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightWithHttpInfo(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Unconfirmed Omni Transactions By Address
         /// </summary>
@@ -214,8 +226,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUnconfirmedOmniTransactionsByAddressR</returns>
-        ListUnconfirmedOmniTransactionsByAddressR ListUnconfirmedOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListUnconfirmedOmniTransactionsByAddressR ListUnconfirmedOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Unconfirmed Omni Transactions By Address
@@ -230,8 +243,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUnconfirmedOmniTransactionsByAddressR</returns>
-        ApiResponse<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Unconfirmed Omni Transactions By Property ID
         /// </summary>
@@ -245,8 +259,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUnconfirmedOmniTransactionsByPropertyIDR</returns>
-        ListUnconfirmedOmniTransactionsByPropertyIDR ListUnconfirmedOmniTransactionsByPropertyID(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListUnconfirmedOmniTransactionsByPropertyIDR ListUnconfirmedOmniTransactionsByPropertyID(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Unconfirmed Omni Transactions By Property ID
@@ -261,8 +276,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUnconfirmedOmniTransactionsByPropertyIDR</returns>
-        ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfo(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfo(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -283,9 +299,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetOmniTransactionDetailsByTransactionIDTxidR</returns>
-        System.Threading.Tasks.Task<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Omni Transaction Details By Transaction ID (Txid)
@@ -298,9 +315,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetOmniTransactionDetailsByTransactionIDTxidR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR>> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR>> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Unconfirmed Omni Transaction By Transaction ID (Txid)
         /// </summary>
@@ -312,9 +330,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUnconfirmedOmniTransactionByTransactionIDTxidR</returns>
-        System.Threading.Tasks.Task<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Unconfirmed Omni Transaction By Transaction ID (Txid)
@@ -327,9 +346,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUnconfirmedOmniTransactionByTransactionIDTxidR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR>> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR>> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Omni Tokens By Address
         /// </summary>
@@ -341,9 +361,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTokensByAddressR</returns>
-        System.Threading.Tasks.Task<ListOmniTokensByAddressR> ListOmniTokensByAddressAsync(string network, string blockchain, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListOmniTokensByAddressR> ListOmniTokensByAddressAsync(string network, string blockchain, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Omni Tokens By Address
@@ -356,9 +377,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTokensByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListOmniTokensByAddressR>> ListOmniTokensByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListOmniTokensByAddressR>> ListOmniTokensByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Omni Transactions By Address
         /// </summary>
@@ -372,9 +394,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTransactionsByAddressR</returns>
-        System.Threading.Tasks.Task<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Omni Transactions By Address
@@ -389,9 +412,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTransactionsByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListOmniTransactionsByAddressR>> ListOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListOmniTransactionsByAddressR>> ListOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Omni Transactions By Block Hash
         /// </summary>
@@ -405,9 +429,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTransactionsByBlockHashR</returns>
-        System.Threading.Tasks.Task<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Omni Transactions By Block Hash
@@ -422,9 +447,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTransactionsByBlockHashR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListOmniTransactionsByBlockHashR>> ListOmniTransactionsByBlockHashWithHttpInfoAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListOmniTransactionsByBlockHashR>> ListOmniTransactionsByBlockHashWithHttpInfoAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Omni Transactions By Block Height
         /// </summary>
@@ -438,9 +464,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTransactionsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Omni Transactions By Block Height
@@ -455,9 +482,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTransactionsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListOmniTransactionsByBlockHeightR>> ListOmniTransactionsByBlockHeightWithHttpInfoAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListOmniTransactionsByBlockHeightR>> ListOmniTransactionsByBlockHeightWithHttpInfoAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Unconfirmed Omni Transactions By Address
         /// </summary>
@@ -471,9 +499,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUnconfirmedOmniTransactionsByAddressR</returns>
-        System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Unconfirmed Omni Transactions By Address
@@ -488,9 +517,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUnconfirmedOmniTransactionsByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListUnconfirmedOmniTransactionsByAddressR>> ListUnconfirmedOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListUnconfirmedOmniTransactionsByAddressR>> ListUnconfirmedOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Unconfirmed Omni Transactions By Property ID
         /// </summary>
@@ -504,9 +534,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUnconfirmedOmniTransactionsByPropertyIDR</returns>
-        System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Unconfirmed Omni Transactions By Property ID
@@ -521,9 +552,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUnconfirmedOmniTransactionsByPropertyIDR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR>> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfoAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR>> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfoAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -652,8 +684,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetOmniTransactionDetailsByTransactionIDTxidR</returns>
-        public GetOmniTransactionDetailsByTransactionIDTxidR GetOmniTransactionDetailsByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string))
+        public GetOmniTransactionDetailsByTransactionIDTxidR GetOmniTransactionDetailsByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR> localVarResponse = GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfo(network, blockchain, transactionId, context);
             return localVarResponse.Data;
@@ -667,8 +700,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetOmniTransactionDetailsByTransactionIDTxidR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -717,6 +751,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.GetOmniTransactionDetailsByTransactionIDTxid";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -746,11 +783,12 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetOmniTransactionDetailsByTransactionIDTxidR</returns>
-        public async System.Threading.Tasks.Task<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetOmniTransactionDetailsByTransactionIDTxidR> GetOmniTransactionDetailsByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR> localVarResponse = await GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfoAsync(network, blockchain, transactionId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR> localVarResponse = await GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfoAsync(network, blockchain, transactionId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -762,9 +800,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetOmniTransactionDetailsByTransactionIDTxidR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR>> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetOmniTransactionDetailsByTransactionIDTxidR>> GetOmniTransactionDetailsByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -814,6 +853,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.GetOmniTransactionDetailsByTransactionIDTxid";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -844,8 +886,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetUnconfirmedOmniTransactionByTransactionIDTxidR</returns>
-        public GetUnconfirmedOmniTransactionByTransactionIDTxidR GetUnconfirmedOmniTransactionByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string))
+        public GetUnconfirmedOmniTransactionByTransactionIDTxidR GetUnconfirmedOmniTransactionByTransactionIDTxid(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR> localVarResponse = GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfo(network, blockchain, transactionId, context);
             return localVarResponse.Data;
@@ -859,8 +902,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetUnconfirmedOmniTransactionByTransactionIDTxidR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfo(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -909,6 +953,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.GetUnconfirmedOmniTransactionByTransactionIDTxid";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -938,11 +985,12 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetUnconfirmedOmniTransactionByTransactionIDTxidR</returns>
-        public async System.Threading.Tasks.Task<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetUnconfirmedOmniTransactionByTransactionIDTxidR> GetUnconfirmedOmniTransactionByTransactionIDTxidAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR> localVarResponse = await GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfoAsync(network, blockchain, transactionId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR> localVarResponse = await GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfoAsync(network, blockchain, transactionId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -954,9 +1002,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetUnconfirmedOmniTransactionByTransactionIDTxidR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR>> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetUnconfirmedOmniTransactionByTransactionIDTxidR>> GetUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfoAsync(string network, string blockchain, string transactionId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1006,6 +1055,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.GetUnconfirmedOmniTransactionByTransactionIDTxid";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1036,8 +1088,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTokensByAddressR</returns>
-        public ListOmniTokensByAddressR ListOmniTokensByAddress(string network, string blockchain, string address, string context = default(string))
+        public ListOmniTokensByAddressR ListOmniTokensByAddress(string network, string blockchain, string address, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListOmniTokensByAddressR> localVarResponse = ListOmniTokensByAddressWithHttpInfo(network, blockchain, address, context);
             return localVarResponse.Data;
@@ -1051,8 +1104,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTokensByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListOmniTokensByAddressR> ListOmniTokensByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<ListOmniTokensByAddressR> ListOmniTokensByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1101,6 +1155,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTokensByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1130,11 +1187,12 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTokensByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListOmniTokensByAddressR> ListOmniTokensByAddressAsync(string network, string blockchain, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListOmniTokensByAddressR> ListOmniTokensByAddressAsync(string network, string blockchain, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListOmniTokensByAddressR> localVarResponse = await ListOmniTokensByAddressWithHttpInfoAsync(network, blockchain, address, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListOmniTokensByAddressR> localVarResponse = await ListOmniTokensByAddressWithHttpInfoAsync(network, blockchain, address, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1146,9 +1204,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTokensByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTokensByAddressR>> ListOmniTokensByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTokensByAddressR>> ListOmniTokensByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1198,6 +1257,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTokensByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1230,8 +1292,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTransactionsByAddressR</returns>
-        public ListOmniTransactionsByAddressR ListOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListOmniTransactionsByAddressR ListOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByAddressR> localVarResponse = ListOmniTransactionsByAddressWithHttpInfo(network, blockchain, address, context, limit, offset);
             return localVarResponse.Data;
@@ -1247,8 +1310,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTransactionsByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1305,6 +1369,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1336,11 +1403,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTransactionsByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListOmniTransactionsByAddressR> ListOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByAddressR> localVarResponse = await ListOmniTransactionsByAddressWithHttpInfoAsync(network, blockchain, address, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByAddressR> localVarResponse = await ListOmniTransactionsByAddressWithHttpInfoAsync(network, blockchain, address, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1354,9 +1422,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTransactionsByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByAddressR>> ListOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByAddressR>> ListOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1414,6 +1483,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1446,8 +1518,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTransactionsByBlockHashR</returns>
-        public ListOmniTransactionsByBlockHashR ListOmniTransactionsByBlockHash(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListOmniTransactionsByBlockHashR ListOmniTransactionsByBlockHash(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHashR> localVarResponse = ListOmniTransactionsByBlockHashWithHttpInfo(network, blockchain, blockHash, context, limit, offset);
             return localVarResponse.Data;
@@ -1463,8 +1536,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTransactionsByBlockHashR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashWithHttpInfo(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashWithHttpInfo(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1521,6 +1595,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1552,11 +1629,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTransactionsByBlockHashR</returns>
-        public async System.Threading.Tasks.Task<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListOmniTransactionsByBlockHashR> ListOmniTransactionsByBlockHashAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHashR> localVarResponse = await ListOmniTransactionsByBlockHashWithHttpInfoAsync(network, blockchain, blockHash, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHashR> localVarResponse = await ListOmniTransactionsByBlockHashWithHttpInfoAsync(network, blockchain, blockHash, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1570,9 +1648,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTransactionsByBlockHashR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHashR>> ListOmniTransactionsByBlockHashWithHttpInfoAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHashR>> ListOmniTransactionsByBlockHashWithHttpInfoAsync(string network, string blockchain, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1630,6 +1709,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1662,8 +1744,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListOmniTransactionsByBlockHeightR</returns>
-        public ListOmniTransactionsByBlockHeightR ListOmniTransactionsByBlockHeight(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListOmniTransactionsByBlockHeightR ListOmniTransactionsByBlockHeight(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHeightR> localVarResponse = ListOmniTransactionsByBlockHeightWithHttpInfo(network, blockchain, blockHeight, context, limit, offset);
             return localVarResponse.Data;
@@ -1679,8 +1762,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListOmniTransactionsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightWithHttpInfo(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightWithHttpInfo(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1737,6 +1821,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1768,11 +1855,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListOmniTransactionsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListOmniTransactionsByBlockHeightR> ListOmniTransactionsByBlockHeightAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHeightR> localVarResponse = await ListOmniTransactionsByBlockHeightWithHttpInfoAsync(network, blockchain, blockHeight, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHeightR> localVarResponse = await ListOmniTransactionsByBlockHeightWithHttpInfoAsync(network, blockchain, blockHeight, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1786,9 +1874,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListOmniTransactionsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHeightR>> ListOmniTransactionsByBlockHeightWithHttpInfoAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListOmniTransactionsByBlockHeightR>> ListOmniTransactionsByBlockHeightWithHttpInfoAsync(string network, string blockchain, string blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1846,6 +1935,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListOmniTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1878,8 +1970,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUnconfirmedOmniTransactionsByAddressR</returns>
-        public ListUnconfirmedOmniTransactionsByAddressR ListUnconfirmedOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListUnconfirmedOmniTransactionsByAddressR ListUnconfirmedOmniTransactionsByAddress(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByAddressR> localVarResponse = ListUnconfirmedOmniTransactionsByAddressWithHttpInfo(network, blockchain, address, context, limit, offset);
             return localVarResponse.Data;
@@ -1895,8 +1988,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUnconfirmedOmniTransactionsByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressWithHttpInfo(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1953,6 +2047,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListUnconfirmedOmniTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1984,11 +2081,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUnconfirmedOmniTransactionsByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByAddressR> ListUnconfirmedOmniTransactionsByAddressAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByAddressR> localVarResponse = await ListUnconfirmedOmniTransactionsByAddressWithHttpInfoAsync(network, blockchain, address, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByAddressR> localVarResponse = await ListUnconfirmedOmniTransactionsByAddressWithHttpInfoAsync(network, blockchain, address, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2002,9 +2100,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUnconfirmedOmniTransactionsByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByAddressR>> ListUnconfirmedOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByAddressR>> ListUnconfirmedOmniTransactionsByAddressWithHttpInfoAsync(string network, string blockchain, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -2062,6 +2161,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListUnconfirmedOmniTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2094,8 +2196,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListUnconfirmedOmniTransactionsByPropertyIDR</returns>
-        public ListUnconfirmedOmniTransactionsByPropertyIDR ListUnconfirmedOmniTransactionsByPropertyID(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListUnconfirmedOmniTransactionsByPropertyIDR ListUnconfirmedOmniTransactionsByPropertyID(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR> localVarResponse = ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfo(network, blockchain, propertyId, context, limit, offset);
             return localVarResponse.Data;
@@ -2111,8 +2214,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListUnconfirmedOmniTransactionsByPropertyIDR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfo(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfo(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -2169,6 +2273,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListUnconfirmedOmniTransactionsByPropertyID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -2200,11 +2307,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListUnconfirmedOmniTransactionsByPropertyIDR</returns>
-        public async System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListUnconfirmedOmniTransactionsByPropertyIDR> ListUnconfirmedOmniTransactionsByPropertyIDAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR> localVarResponse = await ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfoAsync(network, blockchain, propertyId, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR> localVarResponse = await ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfoAsync(network, blockchain, propertyId, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2218,9 +2326,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListUnconfirmedOmniTransactionsByPropertyIDR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR>> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfoAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListUnconfirmedOmniTransactionsByPropertyIDR>> ListUnconfirmedOmniTransactionsByPropertyIDWithHttpInfoAsync(string network, string blockchain, string propertyId, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -2278,6 +2387,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "OmniLayerApi.ListUnconfirmedOmniTransactionsByPropertyID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

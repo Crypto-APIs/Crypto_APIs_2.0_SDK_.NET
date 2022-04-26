@@ -45,12 +45,14 @@ namespace CryptoAPIs.Model
         public GetEIP1559FeeRecommendationsRIBaseFeePerGas(string unit = default(string), string value = default(string))
         {
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for GetEIP1559FeeRecommendationsRIBaseFeePerGas and cannot be null");
             }
             this.Unit = unit;
             // to ensure "value" is required (not null)
-            if (value == null) {
+            if (value == null)
+            {
                 throw new ArgumentNullException("value is a required property for GetEIP1559FeeRecommendationsRIBaseFeePerGas and cannot be null");
             }
             this.Value = value;

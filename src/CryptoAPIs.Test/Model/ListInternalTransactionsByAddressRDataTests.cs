@@ -58,20 +58,20 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Offset'
-        /// </summary>
-        [Fact]
-        public void OffsetTest()
-        {
-            // TODO unit test for the property 'Offset'
-        }
-        /// <summary>
         /// Test the property 'Limit'
         /// </summary>
         [Fact]
         public void LimitTest()
         {
             // TODO unit test for the property 'Limit'
+        }
+        /// <summary>
+        /// Test the property 'Offset'
+        /// </summary>
+        [Fact]
+        public void OffsetTest()
+        {
+            // TODO unit test for the property 'Offset'
         }
         /// <summary>
         /// Test the property 'Total'

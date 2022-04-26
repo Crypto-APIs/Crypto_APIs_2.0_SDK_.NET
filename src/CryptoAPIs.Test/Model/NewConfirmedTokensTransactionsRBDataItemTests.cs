@@ -89,6 +89,14 @@ namespace CryptoAPIs.Test.Model
         {
             // TODO unit test for the property 'CallbackUrl'
         }
+        /// <summary>
+        /// Test the property 'ReceiveCallbackOn'
+        /// </summary>
+        [Fact]
+        public void ReceiveCallbackOnTest()
+        {
+            // TODO unit test for the property 'ReceiveCallbackOn'
+        }
 
     }
 

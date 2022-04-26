@@ -36,6 +36,42 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
+        /// with the <see cref="UriNotFound" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of UriNotFound.</param>
+        public SyncHDWalletXPubYPubZPubE400(UriNotFound actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
+        /// with the <see cref="LimitGreaterThanAllowed" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of LimitGreaterThanAllowed.</param>
+        public SyncHDWalletXPubYPubZPubE400(LimitGreaterThanAllowed actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
+        /// with the <see cref="InvalidPagination" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of InvalidPagination.</param>
+        public SyncHDWalletXPubYPubZPubE400(InvalidPagination actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
         /// with the <see cref="InvalidBlockchain" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of InvalidBlockchain.</param>
@@ -60,10 +96,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
-        /// with the <see cref="InvalidPagination" /> class
+        /// with the <see cref="XpubNotSynced" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of InvalidPagination.</param>
-        public SyncHDWalletXPubYPubZPubE400(InvalidPagination actualInstance)
+        /// <param name="actualInstance">An instance of XpubNotSynced.</param>
+        public SyncHDWalletXPubYPubZPubE400(XpubNotSynced actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -76,42 +112,6 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="actualInstance">An instance of InvalidXpub.</param>
         public SyncHDWalletXPubYPubZPubE400(InvalidXpub actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
-        /// with the <see cref="LimitGreaterThanAllowed" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of LimitGreaterThanAllowed.</param>
-        public SyncHDWalletXPubYPubZPubE400(LimitGreaterThanAllowed actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
-        /// with the <see cref="UriNotFound" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of UriNotFound.</param>
-        public SyncHDWalletXPubYPubZPubE400(UriNotFound actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SyncHDWalletXPubYPubZPubE400" /> class
-        /// with the <see cref="XpubNotSynced" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of XpubNotSynced.</param>
-        public SyncHDWalletXPubYPubZPubE400(XpubNotSynced actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -168,6 +168,36 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
+        /// Get the actual instance of `UriNotFound`. If the actual instance is not `UriNotFound`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of UriNotFound</returns>
+        public UriNotFound GetUriNotFound()
+        {
+            return (UriNotFound)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `LimitGreaterThanAllowed`. If the actual instance is not `LimitGreaterThanAllowed`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of LimitGreaterThanAllowed</returns>
+        public LimitGreaterThanAllowed GetLimitGreaterThanAllowed()
+        {
+            return (LimitGreaterThanAllowed)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `InvalidPagination`. If the actual instance is not `InvalidPagination`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of InvalidPagination</returns>
+        public InvalidPagination GetInvalidPagination()
+        {
+            return (InvalidPagination)this.ActualInstance;
+        }
+
+        /// <summary>
         /// Get the actual instance of `InvalidBlockchain`. If the actual instance is not `InvalidBlockchain`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -188,13 +218,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `InvalidPagination`. If the actual instance is not `InvalidPagination`,
+        /// Get the actual instance of `XpubNotSynced`. If the actual instance is not `XpubNotSynced`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of InvalidPagination</returns>
-        public InvalidPagination GetInvalidPagination()
+        /// <returns>An instance of XpubNotSynced</returns>
+        public XpubNotSynced GetXpubNotSynced()
         {
-            return (InvalidPagination)this.ActualInstance;
+            return (XpubNotSynced)this.ActualInstance;
         }
 
         /// <summary>
@@ -205,36 +235,6 @@ namespace CryptoAPIs.Model
         public InvalidXpub GetInvalidXpub()
         {
             return (InvalidXpub)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `LimitGreaterThanAllowed`. If the actual instance is not `LimitGreaterThanAllowed`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of LimitGreaterThanAllowed</returns>
-        public LimitGreaterThanAllowed GetLimitGreaterThanAllowed()
-        {
-            return (LimitGreaterThanAllowed)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `UriNotFound`. If the actual instance is not `UriNotFound`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of UriNotFound</returns>
-        public UriNotFound GetUriNotFound()
-        {
-            return (UriNotFound)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `XpubNotSynced`. If the actual instance is not `XpubNotSynced`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of XpubNotSynced</returns>
-        public XpubNotSynced GetXpubNotSynced()
-        {
-            return (XpubNotSynced)this.ActualInstance;
         }
 
         /// <summary>

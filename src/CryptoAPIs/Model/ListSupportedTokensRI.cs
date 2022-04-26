@@ -49,22 +49,26 @@ namespace CryptoAPIs.Model
         {
             this.Decimals = decimals;
             // to ensure "identifier" is required (not null)
-            if (identifier == null) {
+            if (identifier == null)
+            {
                 throw new ArgumentNullException("identifier is a required property for ListSupportedTokensRI and cannot be null");
             }
             this.Identifier = identifier;
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for ListSupportedTokensRI and cannot be null");
             }
             this.Name = name;
             // to ensure "symbol" is required (not null)
-            if (symbol == null) {
+            if (symbol == null)
+            {
                 throw new ArgumentNullException("symbol is a required property for ListSupportedTokensRI and cannot be null");
             }
             this.Symbol = symbol;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ListSupportedTokensRI and cannot be null");
             }
             this.Type = type;

@@ -46,12 +46,14 @@ namespace CryptoAPIs.Model
         public ListUnconfirmedTransactionsByAddressRIBSBScriptSig(string asm = default(string), string hex = default(string), string type = default(string))
         {
             // to ensure "asm" is required (not null)
-            if (asm == null) {
+            if (asm == null)
+            {
                 throw new ArgumentNullException("asm is a required property for ListUnconfirmedTransactionsByAddressRIBSBScriptSig and cannot be null");
             }
             this.Asm = asm;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ListUnconfirmedTransactionsByAddressRIBSBScriptSig and cannot be null");
             }
             this.Type = type;

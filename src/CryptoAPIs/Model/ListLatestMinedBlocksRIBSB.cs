@@ -53,24 +53,28 @@ namespace CryptoAPIs.Model
         public ListLatestMinedBlocksRIBSB(string bits = default(string), string chainwork = default(string), string difficulty = default(string), string merkleRoot = default(string), int nonce = default(int), int size = default(int), int strippedSize = default(int), int version = default(int), string versionHex = default(string), int weight = default(int))
         {
             // to ensure "bits" is required (not null)
-            if (bits == null) {
+            if (bits == null)
+            {
                 throw new ArgumentNullException("bits is a required property for ListLatestMinedBlocksRIBSB and cannot be null");
             }
             this.Bits = bits;
             // to ensure "chainwork" is required (not null)
-            if (chainwork == null) {
+            if (chainwork == null)
+            {
                 throw new ArgumentNullException("chainwork is a required property for ListLatestMinedBlocksRIBSB and cannot be null");
             }
             this.Chainwork = chainwork;
             // to ensure "merkleRoot" is required (not null)
-            if (merkleRoot == null) {
+            if (merkleRoot == null)
+            {
                 throw new ArgumentNullException("merkleRoot is a required property for ListLatestMinedBlocksRIBSB and cannot be null");
             }
             this.MerkleRoot = merkleRoot;
             this.StrippedSize = strippedSize;
             this._Version = version;
             // to ensure "versionHex" is required (not null)
-            if (versionHex == null) {
+            if (versionHex == null)
+            {
                 throw new ArgumentNullException("versionHex is a required property for ListLatestMinedBlocksRIBSB and cannot be null");
             }
             this.VersionHex = versionHex;

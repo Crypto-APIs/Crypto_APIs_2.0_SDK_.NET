@@ -6,10 +6,10 @@ XRP
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdditionalData** | **string** | Represents additional data that may be needed. | 
-**DestinationTag** | **int** | Defines the destination tag value. | [optional] 
+**DestinationTag** | **long** | Defines the destination tag value. | [optional] 
 **Offer** | [**GetXRPRippleTransactionDetailsByTransactionIDRIOffer**](GetXRPRippleTransactionDetailsByTransactionIDRIOffer.md) |  | 
 **Receive** | [**GetXRPRippleTransactionDetailsByTransactionIDRIReceive**](GetXRPRippleTransactionDetailsByTransactionIDRIReceive.md) |  | 
-**Sequence** | **int** | Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime. | 
+**Sequence** | **long** | Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime. | 
 **Status** | **string** | Defines the status of the transaction. | 
 **Type** | **string** | Defines the type of the transaction. | 
 **Value** | [**GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue**](GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue.md) |  | 

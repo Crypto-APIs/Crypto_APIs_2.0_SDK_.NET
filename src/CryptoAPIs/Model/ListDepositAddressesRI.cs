@@ -50,33 +50,39 @@ namespace CryptoAPIs.Model
         public ListDepositAddressesRI(string address = default(string), ListDepositAddressesRIConfirmedBalance confirmedBalance = default(ListDepositAddressesRIConfirmedBalance), int createdTimestamp = default(int), List<ListDepositAddressesRIFungibleTokens> fungibleTokens = default(List<ListDepositAddressesRIFungibleTokens>), string index = default(string), string label = default(string), List<ListDepositAddressesRINonFungibleTokens> nonFungibleTokens = default(List<ListDepositAddressesRINonFungibleTokens>))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.Address = address;
             // to ensure "confirmedBalance" is required (not null)
-            if (confirmedBalance == null) {
+            if (confirmedBalance == null)
+            {
                 throw new ArgumentNullException("confirmedBalance is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.ConfirmedBalance = confirmedBalance;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "fungibleTokens" is required (not null)
-            if (fungibleTokens == null) {
+            if (fungibleTokens == null)
+            {
                 throw new ArgumentNullException("fungibleTokens is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.FungibleTokens = fungibleTokens;
             // to ensure "index" is required (not null)
-            if (index == null) {
+            if (index == null)
+            {
                 throw new ArgumentNullException("index is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.Index = index;
             // to ensure "label" is required (not null)
-            if (label == null) {
+            if (label == null)
+            {
                 throw new ArgumentNullException("label is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.Label = label;
             // to ensure "nonFungibleTokens" is required (not null)
-            if (nonFungibleTokens == null) {
+            if (nonFungibleTokens == null)
+            {
                 throw new ArgumentNullException("nonFungibleTokens is a required property for ListDepositAddressesRI and cannot be null");
             }
             this.NonFungibleTokens = nonFungibleTokens;

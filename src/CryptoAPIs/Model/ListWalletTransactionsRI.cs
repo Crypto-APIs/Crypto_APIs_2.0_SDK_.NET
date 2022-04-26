@@ -54,38 +54,45 @@ namespace CryptoAPIs.Model
         public ListWalletTransactionsRI(string direction = default(string), ListWalletTransactionsRIFee fee = default(ListWalletTransactionsRIFee), List<ListWalletTransactionsRIFungibleTokens> fungibleTokens = default(List<ListWalletTransactionsRIFungibleTokens>), List<ListWalletTransactionsRIInternalTransactions> internalTransactions = default(List<ListWalletTransactionsRIInternalTransactions>), List<ListWalletTransactionsRINonFungibleTokens> nonFungibleTokens = default(List<ListWalletTransactionsRINonFungibleTokens>), List<ListWalletTransactionsRIRecipients> recipients = default(List<ListWalletTransactionsRIRecipients>), List<ListWalletTransactionsRISenders> senders = default(List<ListWalletTransactionsRISenders>), string status = default(string), int timestamp = default(int), string transactionId = default(string), ListWalletTransactionsRIValue value = default(ListWalletTransactionsRIValue))
         {
             // to ensure "direction" is required (not null)
-            if (direction == null) {
+            if (direction == null)
+            {
                 throw new ArgumentNullException("direction is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.Direction = direction;
             // to ensure "fee" is required (not null)
-            if (fee == null) {
+            if (fee == null)
+            {
                 throw new ArgumentNullException("fee is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.Fee = fee;
             // to ensure "recipients" is required (not null)
-            if (recipients == null) {
+            if (recipients == null)
+            {
                 throw new ArgumentNullException("recipients is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            if (senders == null) {
+            if (senders == null)
+            {
                 throw new ArgumentNullException("senders is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.Senders = senders;
             // to ensure "status" is required (not null)
-            if (status == null) {
+            if (status == null)
+            {
                 throw new ArgumentNullException("status is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.Status = status;
             this.Timestamp = timestamp;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.TransactionId = transactionId;
             // to ensure "value" is required (not null)
-            if (value == null) {
+            if (value == null)
+            {
                 throw new ArgumentNullException("value is a required property for ListWalletTransactionsRI and cannot be null");
             }
             this.Value = value;

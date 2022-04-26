@@ -79,38 +79,45 @@ namespace CryptoAPIs.Model
         public GetAssetDetailsByAssetIDRISC(string _1hourPriceChangeInPercentage = default(string), string _1weekPriceChangeInPercentage = default(string), string _24hoursPriceChangeInPercentage = default(string), string _24hoursTradingVolume = default(string), AssetTypeEnum assetType = default(AssetTypeEnum), string circulatingSupply = default(string), string marketCapInUSD = default(string), string maxSupply = default(string))
         {
             // to ensure "_1hourPriceChangeInPercentage" is required (not null)
-            if (_1hourPriceChangeInPercentage == null) {
+            if (_1hourPriceChangeInPercentage == null)
+            {
                 throw new ArgumentNullException("_1hourPriceChangeInPercentage is a required property for GetAssetDetailsByAssetIDRISC and cannot be null");
             }
             this._1HourPriceChangeInPercentage = _1hourPriceChangeInPercentage;
             // to ensure "_1weekPriceChangeInPercentage" is required (not null)
-            if (_1weekPriceChangeInPercentage == null) {
+            if (_1weekPriceChangeInPercentage == null)
+            {
                 throw new ArgumentNullException("_1weekPriceChangeInPercentage is a required property for GetAssetDetailsByAssetIDRISC and cannot be null");
             }
             this._1WeekPriceChangeInPercentage = _1weekPriceChangeInPercentage;
             // to ensure "_24hoursPriceChangeInPercentage" is required (not null)
-            if (_24hoursPriceChangeInPercentage == null) {
+            if (_24hoursPriceChangeInPercentage == null)
+            {
                 throw new ArgumentNullException("_24hoursPriceChangeInPercentage is a required property for GetAssetDetailsByAssetIDRISC and cannot be null");
             }
             this._24HoursPriceChangeInPercentage = _24hoursPriceChangeInPercentage;
             // to ensure "_24hoursTradingVolume" is required (not null)
-            if (_24hoursTradingVolume == null) {
+            if (_24hoursTradingVolume == null)
+            {
                 throw new ArgumentNullException("_24hoursTradingVolume is a required property for GetAssetDetailsByAssetIDRISC and cannot be null");
             }
             this._24HoursTradingVolume = _24hoursTradingVolume;
             this.AssetType = assetType;
             // to ensure "circulatingSupply" is required (not null)
-            if (circulatingSupply == null) {
+            if (circulatingSupply == null)
+            {
                 throw new ArgumentNullException("circulatingSupply is a required property for GetAssetDetailsByAssetIDRISC and cannot be null");
             }
             this.CirculatingSupply = circulatingSupply;
             // to ensure "marketCapInUSD" is required (not null)
-            if (marketCapInUSD == null) {
+            if (marketCapInUSD == null)
+            {
                 throw new ArgumentNullException("marketCapInUSD is a required property for GetAssetDetailsByAssetIDRISC and cannot be null");
             }
             this.MarketCapInUSD = marketCapInUSD;
             // to ensure "maxSupply" is required (not null)
-            if (maxSupply == null) {
+            if (maxSupply == null)
+            {
                 throw new ArgumentNullException("maxSupply is a required property for GetAssetDetailsByAssetIDRISC and cannot be null");
             }
             this.MaxSupply = maxSupply;

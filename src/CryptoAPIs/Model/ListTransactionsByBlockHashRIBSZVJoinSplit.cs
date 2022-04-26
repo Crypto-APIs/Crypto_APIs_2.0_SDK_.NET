@@ -53,52 +53,62 @@ namespace CryptoAPIs.Model
         public ListTransactionsByBlockHashRIBSZVJoinSplit(string anchor = default(string), List<string> cipherTexts = default(List<string>), List<string> commitments = default(List<string>), List<string> macs = default(List<string>), List<string> nullifiers = default(List<string>), string oneTimePubKey = default(string), string proof = default(string), string randomSeed = default(string), string vPubNew = default(string), string vPubOld = default(string))
         {
             // to ensure "anchor" is required (not null)
-            if (anchor == null) {
+            if (anchor == null)
+            {
                 throw new ArgumentNullException("anchor is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.Anchor = anchor;
             // to ensure "cipherTexts" is required (not null)
-            if (cipherTexts == null) {
+            if (cipherTexts == null)
+            {
                 throw new ArgumentNullException("cipherTexts is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.CipherTexts = cipherTexts;
             // to ensure "commitments" is required (not null)
-            if (commitments == null) {
+            if (commitments == null)
+            {
                 throw new ArgumentNullException("commitments is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.Commitments = commitments;
             // to ensure "macs" is required (not null)
-            if (macs == null) {
+            if (macs == null)
+            {
                 throw new ArgumentNullException("macs is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.Macs = macs;
             // to ensure "nullifiers" is required (not null)
-            if (nullifiers == null) {
+            if (nullifiers == null)
+            {
                 throw new ArgumentNullException("nullifiers is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.Nullifiers = nullifiers;
             // to ensure "oneTimePubKey" is required (not null)
-            if (oneTimePubKey == null) {
+            if (oneTimePubKey == null)
+            {
                 throw new ArgumentNullException("oneTimePubKey is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.OneTimePubKey = oneTimePubKey;
             // to ensure "proof" is required (not null)
-            if (proof == null) {
+            if (proof == null)
+            {
                 throw new ArgumentNullException("proof is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.Proof = proof;
             // to ensure "randomSeed" is required (not null)
-            if (randomSeed == null) {
+            if (randomSeed == null)
+            {
                 throw new ArgumentNullException("randomSeed is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.RandomSeed = randomSeed;
             // to ensure "vPubNew" is required (not null)
-            if (vPubNew == null) {
+            if (vPubNew == null)
+            {
                 throw new ArgumentNullException("vPubNew is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.VPubNew = vPubNew;
             // to ensure "vPubOld" is required (not null)
-            if (vPubOld == null) {
+            if (vPubOld == null)
+            {
                 throw new ArgumentNullException("vPubOld is a required property for ListTransactionsByBlockHashRIBSZVJoinSplit and cannot be null");
             }
             this.VPubOld = vPubOld;

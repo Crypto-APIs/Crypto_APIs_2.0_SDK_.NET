@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetLastMinedBlockRData(GetLastMinedBlockRI item = default(GetLastMinedBlockRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetLastMinedBlockRData and cannot be null");
             }
             this.Item = item;

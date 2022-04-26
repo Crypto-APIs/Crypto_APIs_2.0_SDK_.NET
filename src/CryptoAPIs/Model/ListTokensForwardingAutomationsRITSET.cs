@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public ListTokensForwardingAutomationsRITSET(string contractAddress = default(string))
         {
             // to ensure "contractAddress" is required (not null)
-            if (contractAddress == null) {
+            if (contractAddress == null)
+            {
                 throw new ArgumentNullException("contractAddress is a required property for ListTokensForwardingAutomationsRITSET and cannot be null");
             }
             this.ContractAddress = contractAddress;

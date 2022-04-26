@@ -46,17 +46,20 @@ namespace CryptoAPIs.Model
         public AddressInternalTransactionConfirmedData(string product = default(string), string _event = default(string), AddressInternalTransactionConfirmedDataItem item = default(AddressInternalTransactionConfirmedDataItem))
         {
             // to ensure "product" is required (not null)
-            if (product == null) {
+            if (product == null)
+            {
                 throw new ArgumentNullException("product is a required property for AddressInternalTransactionConfirmedData and cannot be null");
             }
             this.Product = product;
             // to ensure "_event" is required (not null)
-            if (_event == null) {
+            if (_event == null)
+            {
                 throw new ArgumentNullException("_event is a required property for AddressInternalTransactionConfirmedData and cannot be null");
             }
             this.Event = _event;
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for AddressInternalTransactionConfirmedData and cannot be null");
             }
             this.Item = item;

@@ -81,39 +81,46 @@ namespace CryptoAPIs.Model
         public AddressCoinsTransactionConfirmedEachConfirmationDataItem(string blockchain = default(string), string network = default(string), string address = default(string), AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock minedInBlock = default(AddressCoinsTransactionConfirmedEachConfirmationDataItemMinedInBlock), string transactionId = default(string), int currentConfirmations = default(int), int targetConfirmations = default(int), string amount = default(string), string unit = default(string), DirectionEnum direction = default(DirectionEnum))
         {
             // to ensure "blockchain" is required (not null)
-            if (blockchain == null) {
+            if (blockchain == null)
+            {
                 throw new ArgumentNullException("blockchain is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            if (network == null) {
+            if (network == null)
+            {
                 throw new ArgumentNullException("network is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Network = network;
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Address = address;
             // to ensure "minedInBlock" is required (not null)
-            if (minedInBlock == null) {
+            if (minedInBlock == null)
+            {
                 throw new ArgumentNullException("minedInBlock is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.MinedInBlock = minedInBlock;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.TransactionId = transactionId;
             this.CurrentConfirmations = currentConfirmations;
             this.TargetConfirmations = targetConfirmations;
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Amount = amount;
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for AddressCoinsTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Unit = unit;

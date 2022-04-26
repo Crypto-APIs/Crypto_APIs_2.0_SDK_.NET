@@ -48,6 +48,18 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSE" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSE.</param>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSE actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
         /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSBC" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSBC.</param>
@@ -60,10 +72,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
-        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC.</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSL.</param>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -96,10 +108,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
-        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSE" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSZ" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSE.</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSE actualInstance)
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSZ.</param>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSZ actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -120,34 +132,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
-        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSL" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSL.</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSL actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
-        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSX" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSX.</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSX actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
-        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSZ" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSZ.</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSZ actualInstance)
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC.</param>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -160,6 +148,18 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2.</param>
         public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2 actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBS" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDFromCallbackRIBSX" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSX.</param>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBS(GetTransactionDetailsByTransactionIDFromCallbackRIBSX actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -242,6 +242,16 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSE`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSE`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSE</returns>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSE GetGetTransactionDetailsByTransactionIDFromCallbackRIBSE()
+        {
+            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSE)this.ActualInstance;
+        }
+
+        /// <summary>
         /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSBC`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSBC`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -252,13 +262,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSL`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC</returns>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC GetGetTransactionDetailsByTransactionIDFromCallbackRIBSBSC()
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSL</returns>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSL GetGetTransactionDetailsByTransactionIDFromCallbackRIBSL()
         {
-            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC)this.ActualInstance;
+            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -282,13 +292,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSE`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSE`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSZ`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSZ`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSE</returns>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSE GetGetTransactionDetailsByTransactionIDFromCallbackRIBSE()
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSZ</returns>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSZ GetGetTransactionDetailsByTransactionIDFromCallbackRIBSZ()
         {
-            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSE)this.ActualInstance;
+            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSZ)this.ActualInstance;
         }
 
         /// <summary>
@@ -302,33 +312,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSL`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSL`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSL</returns>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSL GetGetTransactionDetailsByTransactionIDFromCallbackRIBSL()
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC</returns>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC GetGetTransactionDetailsByTransactionIDFromCallbackRIBSBSC()
         {
-            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSL)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSX`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSX`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSX</returns>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSX GetGetTransactionDetailsByTransactionIDFromCallbackRIBSX()
-        {
-            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSX)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSZ`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSZ`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSZ</returns>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSZ GetGetTransactionDetailsByTransactionIDFromCallbackRIBSZ()
-        {
-            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSZ)this.ActualInstance;
+            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>
@@ -339,6 +329,16 @@ namespace CryptoAPIs.Model
         public GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2 GetGetTransactionDetailsByTransactionIDFromCallbackRIBSZ2()
         {
             return (GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDFromCallbackRIBSX`. If the actual instance is not `GetTransactionDetailsByTransactionIDFromCallbackRIBSX`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDFromCallbackRIBSX</returns>
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSX GetGetTransactionDetailsByTransactionIDFromCallbackRIBSX()
+        {
+            return (GetTransactionDetailsByTransactionIDFromCallbackRIBSX)this.ActualInstance;
         }
 
         /// <summary>

@@ -48,17 +48,20 @@ namespace CryptoAPIs.Model
         public GetTokenDetailsByContractAddressRI(string tokenDecimals = default(string), string tokenName = default(string), string tokenSymbol = default(string), string tokenType = default(string), string totalSupply = default(string))
         {
             // to ensure "tokenDecimals" is required (not null)
-            if (tokenDecimals == null) {
+            if (tokenDecimals == null)
+            {
                 throw new ArgumentNullException("tokenDecimals is a required property for GetTokenDetailsByContractAddressRI and cannot be null");
             }
             this.TokenDecimals = tokenDecimals;
             // to ensure "tokenType" is required (not null)
-            if (tokenType == null) {
+            if (tokenType == null)
+            {
                 throw new ArgumentNullException("tokenType is a required property for GetTokenDetailsByContractAddressRI and cannot be null");
             }
             this.TokenType = tokenType;
             // to ensure "totalSupply" is required (not null)
-            if (totalSupply == null) {
+            if (totalSupply == null)
+            {
                 throw new ArgumentNullException("totalSupply is a required property for GetTokenDetailsByContractAddressRI and cannot be null");
             }
             this.TotalSupply = totalSupply;

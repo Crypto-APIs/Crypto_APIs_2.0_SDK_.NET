@@ -51,33 +51,39 @@ namespace CryptoAPIs.Model
         public GetInternalTransactionByTransactionHashAndOperationIdRI(string amount = default(string), string blockHash = default(string), int blockHeight = default(int), string operationType = default(string), string parentHash = default(string), string recipient = default(string), string sender = default(string), int timestamp = default(int))
         {
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for GetInternalTransactionByTransactionHashAndOperationIdRI and cannot be null");
             }
             this.Amount = amount;
             // to ensure "blockHash" is required (not null)
-            if (blockHash == null) {
+            if (blockHash == null)
+            {
                 throw new ArgumentNullException("blockHash is a required property for GetInternalTransactionByTransactionHashAndOperationIdRI and cannot be null");
             }
             this.BlockHash = blockHash;
             this.BlockHeight = blockHeight;
             // to ensure "operationType" is required (not null)
-            if (operationType == null) {
+            if (operationType == null)
+            {
                 throw new ArgumentNullException("operationType is a required property for GetInternalTransactionByTransactionHashAndOperationIdRI and cannot be null");
             }
             this.OperationType = operationType;
             // to ensure "parentHash" is required (not null)
-            if (parentHash == null) {
+            if (parentHash == null)
+            {
                 throw new ArgumentNullException("parentHash is a required property for GetInternalTransactionByTransactionHashAndOperationIdRI and cannot be null");
             }
             this.ParentHash = parentHash;
             // to ensure "recipient" is required (not null)
-            if (recipient == null) {
+            if (recipient == null)
+            {
                 throw new ArgumentNullException("recipient is a required property for GetInternalTransactionByTransactionHashAndOperationIdRI and cannot be null");
             }
             this.Recipient = recipient;
             // to ensure "sender" is required (not null)
-            if (sender == null) {
+            if (sender == null)
+            {
                 throw new ArgumentNullException("sender is a required property for GetInternalTransactionByTransactionHashAndOperationIdRI and cannot be null");
             }
             this.Sender = sender;

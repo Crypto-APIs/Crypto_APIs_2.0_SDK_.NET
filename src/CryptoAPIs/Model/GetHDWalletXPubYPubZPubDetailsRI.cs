@@ -41,24 +41,17 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetHDWalletXPubYPubZPubDetailsRI" /> class.
         /// </summary>
         /// <param name="confirmedBalance">Specifies the confirmed coins balance of the Wallet. (required).</param>
-        /// <param name="totalReceived">Defines the total currency received to the Wallet. (required).</param>
-        /// <param name="totalSpent">Defines the total currency spent from the Wallet. (required).</param>
+        /// <param name="totalReceived">Defines the total currency received to the Wallet..</param>
+        /// <param name="totalSpent">Defines the total currency spent from the Wallet..</param>
         public GetHDWalletXPubYPubZPubDetailsRI(string confirmedBalance = default(string), string totalReceived = default(string), string totalSpent = default(string))
         {
             // to ensure "confirmedBalance" is required (not null)
-            if (confirmedBalance == null) {
+            if (confirmedBalance == null)
+            {
                 throw new ArgumentNullException("confirmedBalance is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
             }
             this.ConfirmedBalance = confirmedBalance;
-            // to ensure "totalReceived" is required (not null)
-            if (totalReceived == null) {
-                throw new ArgumentNullException("totalReceived is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
-            }
             this.TotalReceived = totalReceived;
-            // to ensure "totalSpent" is required (not null)
-            if (totalSpent == null) {
-                throw new ArgumentNullException("totalSpent is a required property for GetHDWalletXPubYPubZPubDetailsRI and cannot be null");
-            }
             this.TotalSpent = totalSpent;
         }
 
@@ -73,14 +66,14 @@ namespace CryptoAPIs.Model
         /// Defines the total currency received to the Wallet.
         /// </summary>
         /// <value>Defines the total currency received to the Wallet.</value>
-        [DataMember(Name = "totalReceived", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "totalReceived", EmitDefaultValue = false)]
         public string TotalReceived { get; set; }
 
         /// <summary>
         /// Defines the total currency spent from the Wallet.
         /// </summary>
         /// <value>Defines the total currency spent from the Wallet.</value>
-        [DataMember(Name = "totalSpent", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "totalSpent", EmitDefaultValue = false)]
         public string TotalSpent { get; set; }
 
         /// <summary>

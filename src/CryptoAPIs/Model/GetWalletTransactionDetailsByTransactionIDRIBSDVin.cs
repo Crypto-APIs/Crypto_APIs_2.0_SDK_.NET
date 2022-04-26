@@ -48,21 +48,24 @@ namespace CryptoAPIs.Model
         /// <param name="txinwitness">txinwitness.</param>
         /// <param name="value">Represents the sent/received amount. (required).</param>
         /// <param name="vout">It refers to the index of the output address of this transaction. The index starts from 0..</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBSDVin(List<string> addresses = default(List<string>), string coinbase = default(string), GetWalletTransactionDetailsByTransactionIDRIBSDScriptSig scriptSig = default(GetWalletTransactionDetailsByTransactionIDRIBSDScriptSig), int sequence = default(int), string txid = default(string), List<string> txinwitness = default(List<string>), string value = default(string), int vout = default(int))
+        public GetWalletTransactionDetailsByTransactionIDRIBSDVin(List<string> addresses = default(List<string>), string coinbase = default(string), GetWalletTransactionDetailsByTransactionIDRIBSDScriptSig scriptSig = default(GetWalletTransactionDetailsByTransactionIDRIBSDScriptSig), long sequence = default(long), string txid = default(string), List<string> txinwitness = default(List<string>), string value = default(string), int vout = default(int))
         {
             // to ensure "addresses" is required (not null)
-            if (addresses == null) {
+            if (addresses == null)
+            {
                 throw new ArgumentNullException("addresses is a required property for GetWalletTransactionDetailsByTransactionIDRIBSDVin and cannot be null");
             }
             this.Addresses = addresses;
             // to ensure "scriptSig" is required (not null)
-            if (scriptSig == null) {
+            if (scriptSig == null)
+            {
                 throw new ArgumentNullException("scriptSig is a required property for GetWalletTransactionDetailsByTransactionIDRIBSDVin and cannot be null");
             }
             this.ScriptSig = scriptSig;
             this.Sequence = sequence;
             // to ensure "value" is required (not null)
-            if (value == null) {
+            if (value == null)
+            {
                 throw new ArgumentNullException("value is a required property for GetWalletTransactionDetailsByTransactionIDRIBSDVin and cannot be null");
             }
             this.Value = value;
@@ -96,7 +99,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the script sequence number.</value>
         [DataMember(Name = "sequence", IsRequired = true, EmitDefaultValue = false)]
-        public int Sequence { get; set; }
+        public long Sequence { get; set; }
 
         /// <summary>
         /// Represents the reference transaction identifier.

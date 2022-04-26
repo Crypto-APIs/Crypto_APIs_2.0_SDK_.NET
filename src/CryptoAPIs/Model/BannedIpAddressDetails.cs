@@ -45,12 +45,14 @@ namespace CryptoAPIs.Model
         public BannedIpAddressDetails(string attribute = default(string), string message = default(string))
         {
             // to ensure "attribute" is required (not null)
-            if (attribute == null) {
+            if (attribute == null)
+            {
                 throw new ArgumentNullException("attribute is a required property for BannedIpAddressDetails and cannot be null");
             }
             this.Attribute = attribute;
             // to ensure "message" is required (not null)
-            if (message == null) {
+            if (message == null)
+            {
                 throw new ArgumentNullException("message is a required property for BannedIpAddressDetails and cannot be null");
             }
             this.Message = message;

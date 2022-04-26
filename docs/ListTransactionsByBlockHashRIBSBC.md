@@ -5,7 +5,7 @@ Bitcoin Cash
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Locktime** | **int** | Represents the time at which a particular transaction can be added to the blockchain. | 
+**Locktime** | **long** | Represents the time at which a particular transaction can be added to the blockchain. | 
 **Size** | **int** | Represents the total size of this transaction. | 
 **_Version** | **int** | Represents transaction version number. | 
 **Vin** | [**List&lt;ListTransactionsByBlockHashRIBSBCVin&gt;**](ListTransactionsByBlockHashRIBSBCVin.md) | Represents the transaction inputs. | 

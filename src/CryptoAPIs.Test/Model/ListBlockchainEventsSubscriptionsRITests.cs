@@ -98,6 +98,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'CreatedTimestamp'
         }
         /// <summary>
+        /// Test the property 'DeactivationReasons'
+        /// </summary>
+        [Fact]
+        public void DeactivationReasonsTest()
+        {
+            // TODO unit test for the property 'DeactivationReasons'
+        }
+        /// <summary>
         /// Test the property 'EventType'
         /// </summary>
         [Fact]

@@ -46,17 +46,20 @@ namespace CryptoAPIs.Model
         public GetFeeAddressDetailsRI(string address = default(string), GetFeeAddressDetailsRIBalance balance = default(GetFeeAddressDetailsRIBalance), string minimumTransferAmount = default(string))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for GetFeeAddressDetailsRI and cannot be null");
             }
             this.Address = address;
             // to ensure "balance" is required (not null)
-            if (balance == null) {
+            if (balance == null)
+            {
                 throw new ArgumentNullException("balance is a required property for GetFeeAddressDetailsRI and cannot be null");
             }
             this.Balance = balance;
             // to ensure "minimumTransferAmount" is required (not null)
-            if (minimumTransferAmount == null) {
+            if (minimumTransferAmount == null)
+            {
                 throw new ArgumentNullException("minimumTransferAmount is a required property for GetFeeAddressDetailsRI and cannot be null");
             }
             this.MinimumTransferAmount = minimumTransferAmount;

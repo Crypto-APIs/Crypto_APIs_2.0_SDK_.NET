@@ -45,12 +45,14 @@ namespace CryptoAPIs.Model
         public ListOmniTransactionsByAddressRISenders(string address = default(string), string amount = default(string))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for ListOmniTransactionsByAddressRISenders and cannot be null");
             }
             this.Address = address;
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for ListOmniTransactionsByAddressRISenders and cannot be null");
             }
             this.Amount = amount;

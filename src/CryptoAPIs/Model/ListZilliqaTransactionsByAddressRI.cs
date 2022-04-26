@@ -56,7 +56,8 @@ namespace CryptoAPIs.Model
         public ListZilliqaTransactionsByAddressRI(GetZilliqaTransactionDetailsByTransactionIDRIFee fee = default(GetZilliqaTransactionDetailsByTransactionIDRIFee), int gasLimit = default(int), int gasPrice = default(int), int gasUsed = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), int nonce = default(int), List<ListZilliqaTransactionsByAddressRIRecipients> recipients = default(List<ListZilliqaTransactionsByAddressRIRecipients>), List<ListZilliqaTransactionsByAddressRISenders> senders = default(List<ListZilliqaTransactionsByAddressRISenders>), int timestamp = default(int), string transactionHash = default(string), int transactionIndex = default(int), string transactionStatus = default(string))
         {
             // to ensure "fee" is required (not null)
-            if (fee == null) {
+            if (fee == null)
+            {
                 throw new ArgumentNullException("fee is a required property for ListZilliqaTransactionsByAddressRI and cannot be null");
             }
             this.Fee = fee;
@@ -64,31 +65,36 @@ namespace CryptoAPIs.Model
             this.GasPrice = gasPrice;
             this.GasUsed = gasUsed;
             // to ensure "minedInBlockHash" is required (not null)
-            if (minedInBlockHash == null) {
+            if (minedInBlockHash == null)
+            {
                 throw new ArgumentNullException("minedInBlockHash is a required property for ListZilliqaTransactionsByAddressRI and cannot be null");
             }
             this.MinedInBlockHash = minedInBlockHash;
             this.MinedInBlockHeight = minedInBlockHeight;
             this.Nonce = nonce;
             // to ensure "recipients" is required (not null)
-            if (recipients == null) {
+            if (recipients == null)
+            {
                 throw new ArgumentNullException("recipients is a required property for ListZilliqaTransactionsByAddressRI and cannot be null");
             }
             this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            if (senders == null) {
+            if (senders == null)
+            {
                 throw new ArgumentNullException("senders is a required property for ListZilliqaTransactionsByAddressRI and cannot be null");
             }
             this.Senders = senders;
             this.Timestamp = timestamp;
             // to ensure "transactionHash" is required (not null)
-            if (transactionHash == null) {
+            if (transactionHash == null)
+            {
                 throw new ArgumentNullException("transactionHash is a required property for ListZilliqaTransactionsByAddressRI and cannot be null");
             }
             this.TransactionHash = transactionHash;
             this.TransactionIndex = transactionIndex;
             // to ensure "transactionStatus" is required (not null)
-            if (transactionStatus == null) {
+            if (transactionStatus == null)
+            {
                 throw new ArgumentNullException("transactionStatus is a required property for ListZilliqaTransactionsByAddressRI and cannot be null");
             }
             this.TransactionStatus = transactionStatus;

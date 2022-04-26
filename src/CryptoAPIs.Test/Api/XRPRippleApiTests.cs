@@ -134,11 +134,30 @@ namespace CryptoAPIs.Test.Api
             //string network = null;
             //string address = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //string transactionType = null;
             //var response = instance.ListXRPRippleTransactionsByAddress(network, address, context, limit, offset, transactionType);
             //Assert.IsType<ListXRPRippleTransactionsByAddressR>(response);
+        }
+
+        /// <summary>
+        /// Test ListXRPRippleTransactionsByAddressAndTimeRange
+        /// </summary>
+        [Fact]
+        public void ListXRPRippleTransactionsByAddressAndTimeRangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string network = null;
+            //string address = null;
+            //int fromTimestamp = null;
+            //int toTimestamp = null;
+            //string context = null;
+            //long? limit = null;
+            //long? offset = null;
+            //string transactionType = null;
+            //var response = instance.ListXRPRippleTransactionsByAddressAndTimeRange(network, address, fromTimestamp, toTimestamp, context, limit, offset, transactionType);
+            //Assert.IsType<ListXRPRippleTransactionsByAddressAndTimeRangeR>(response);
         }
 
         /// <summary>
@@ -151,8 +170,8 @@ namespace CryptoAPIs.Test.Api
             //string network = null;
             //string blockHash = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListXRPRippleTransactionsByBlockHash(network, blockHash, context, limit, offset);
             //Assert.IsType<ListXRPRippleTransactionsByBlockHashR>(response);
         }
@@ -165,10 +184,10 @@ namespace CryptoAPIs.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string network = null;
-            //int blockHeight = null;
+            //long blockHeight = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListXRPRippleTransactionsByBlockHeight(network, blockHeight, context, limit, offset);
             //Assert.IsType<ListXRPRippleTransactionsByBlockHeightR>(response);
         }

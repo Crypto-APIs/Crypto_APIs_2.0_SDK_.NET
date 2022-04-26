@@ -82,10 +82,16 @@ namespace CryptoAPIs.Model
             EthereumClassic = 7,
 
             /// <summary>
+            /// Enum Xrp for value: xrp
+            /// </summary>
+            [EnumMember(Value = "xrp")]
+            Xrp = 8,
+
+            /// <summary>
             /// Enum Zcash for value: zcash
             /// </summary>
             [EnumMember(Value = "zcash")]
-            Zcash = 8
+            Zcash = 9
 
         }
 
@@ -288,14 +294,16 @@ namespace CryptoAPIs.Model
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required).</param>
         /// <param name="recipients">Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. (required).</param>
         /// <param name="totalTransactionAmount">Defines the total transaction amount. (required).</param>
+        /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain..</param>
         /// <param name="transactionRequestStatus">Defines the status of the transaction request, e.g. pending. (required).</param>
         /// <param name="transactionType">Defines the transaction type, if it is for coins or tokens. (required).</param>
         /// <param name="unit">Defines the unit of the amount. (required).</param>
         /// <param name="walletId">Defines the unique ID of the Wallet. (required).</param>
-        public GetTransactionRequestDetailsRI(string additionalDetails = default(string), BlockchainEnum blockchain = default(BlockchainEnum), FeePriorityEnum feePriority = default(FeePriorityEnum), NetworkEnum network = default(NetworkEnum), List<GetTransactionRequestDetailsRIRecipients> recipients = default(List<GetTransactionRequestDetailsRIRecipients>), string totalTransactionAmount = default(string), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum), TransactionTypeEnum transactionType = default(TransactionTypeEnum), string unit = default(string), string walletId = default(string))
+        public GetTransactionRequestDetailsRI(string additionalDetails = default(string), BlockchainEnum blockchain = default(BlockchainEnum), FeePriorityEnum feePriority = default(FeePriorityEnum), NetworkEnum network = default(NetworkEnum), List<GetTransactionRequestDetailsRIRecipients> recipients = default(List<GetTransactionRequestDetailsRIRecipients>), string totalTransactionAmount = default(string), string transactionId = default(string), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum), TransactionTypeEnum transactionType = default(TransactionTypeEnum), string unit = default(string), string walletId = default(string))
         {
             // to ensure "additionalDetails" is required (not null)
-            if (additionalDetails == null) {
+            if (additionalDetails == null)
+            {
                 throw new ArgumentNullException("additionalDetails is a required property for GetTransactionRequestDetailsRI and cannot be null");
             }
             this.AdditionalDetails = additionalDetails;
@@ -303,27 +311,32 @@ namespace CryptoAPIs.Model
             this.FeePriority = feePriority;
             this.Network = network;
             // to ensure "recipients" is required (not null)
-            if (recipients == null) {
+            if (recipients == null)
+            {
                 throw new ArgumentNullException("recipients is a required property for GetTransactionRequestDetailsRI and cannot be null");
             }
             this.Recipients = recipients;
             // to ensure "totalTransactionAmount" is required (not null)
-            if (totalTransactionAmount == null) {
+            if (totalTransactionAmount == null)
+            {
                 throw new ArgumentNullException("totalTransactionAmount is a required property for GetTransactionRequestDetailsRI and cannot be null");
             }
             this.TotalTransactionAmount = totalTransactionAmount;
             this.TransactionRequestStatus = transactionRequestStatus;
             this.TransactionType = transactionType;
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for GetTransactionRequestDetailsRI and cannot be null");
             }
             this.Unit = unit;
             // to ensure "walletId" is required (not null)
-            if (walletId == null) {
+            if (walletId == null)
+            {
                 throw new ArgumentNullException("walletId is a required property for GetTransactionRequestDetailsRI and cannot be null");
             }
             this.WalletId = walletId;
+            this.TransactionId = transactionId;
         }
 
         /// <summary>
@@ -346,6 +359,13 @@ namespace CryptoAPIs.Model
         /// <value>Defines the total transaction amount.</value>
         [DataMember(Name = "totalTransactionAmount", IsRequired = true, EmitDefaultValue = false)]
         public string TotalTransactionAmount { get; set; }
+
+        /// <summary>
+        /// Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.
+        /// </summary>
+        /// <value>Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.</value>
+        [DataMember(Name = "transactionId", EmitDefaultValue = false)]
+        public string TransactionId { get; set; }
 
         /// <summary>
         /// Defines the unit of the amount.
@@ -375,6 +395,7 @@ namespace CryptoAPIs.Model
             sb.Append("  Network: ").Append(Network).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
             sb.Append("  TotalTransactionAmount: ").Append(TotalTransactionAmount).Append("\n");
+            sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("  TransactionRequestStatus: ").Append(TransactionRequestStatus).Append("\n");
             sb.Append("  TransactionType: ").Append(TransactionType).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
@@ -443,6 +464,11 @@ namespace CryptoAPIs.Model
                     this.TotalTransactionAmount.Equals(input.TotalTransactionAmount))
                 ) && 
                 (
+                    this.TransactionId == input.TransactionId ||
+                    (this.TransactionId != null &&
+                    this.TransactionId.Equals(input.TransactionId))
+                ) && 
+                (
                     this.TransactionRequestStatus == input.TransactionRequestStatus ||
                     this.TransactionRequestStatus.Equals(input.TransactionRequestStatus)
                 ) && 
@@ -485,6 +511,10 @@ namespace CryptoAPIs.Model
                 if (this.TotalTransactionAmount != null)
                 {
                     hashCode = (hashCode * 59) + this.TotalTransactionAmount.GetHashCode();
+                }
+                if (this.TransactionId != null)
+                {
+                    hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.TransactionRequestStatus.GetHashCode();
                 hashCode = (hashCode * 59) + this.TransactionType.GetHashCode();

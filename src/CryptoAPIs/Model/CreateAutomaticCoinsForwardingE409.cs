@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAutomaticCoinsForwardingE409" /> class
-        /// with the <see cref="AlreadyExists" /> class
+        /// with the <see cref="InvalidData" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of AlreadyExists.</param>
-        public CreateAutomaticCoinsForwardingE409(AlreadyExists actualInstance)
+        /// <param name="actualInstance">An instance of InvalidData.</param>
+        public CreateAutomaticCoinsForwardingE409(InvalidData actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAutomaticCoinsForwardingE409" /> class
-        /// with the <see cref="InvalidData" /> class
+        /// with the <see cref="AlreadyExists" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of InvalidData.</param>
-        public CreateAutomaticCoinsForwardingE409(InvalidData actualInstance)
+        /// <param name="actualInstance">An instance of AlreadyExists.</param>
+        public CreateAutomaticCoinsForwardingE409(AlreadyExists actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -88,16 +88,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `AlreadyExists`. If the actual instance is not `AlreadyExists`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of AlreadyExists</returns>
-        public AlreadyExists GetAlreadyExists()
-        {
-            return (AlreadyExists)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `InvalidData`. If the actual instance is not `InvalidData`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -105,6 +95,16 @@ namespace CryptoAPIs.Model
         public InvalidData GetInvalidData()
         {
             return (InvalidData)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `AlreadyExists`. If the actual instance is not `AlreadyExists`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of AlreadyExists</returns>
+        public AlreadyExists GetAlreadyExists()
+        {
+            return (AlreadyExists)this.ActualInstance;
         }
 
         /// <summary>

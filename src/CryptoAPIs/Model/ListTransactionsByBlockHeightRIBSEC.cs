@@ -49,32 +49,38 @@ namespace CryptoAPIs.Model
         public ListTransactionsByBlockHeightRIBSEC(string contract = default(string), string gasLimit = default(string), ListTransactionsByBlockHeightRIBSECGasPrice gasPrice = default(ListTransactionsByBlockHeightRIBSECGasPrice), string gasUsed = default(string), string inputData = default(string), string nonce = default(string))
         {
             // to ensure "contract" is required (not null)
-            if (contract == null) {
+            if (contract == null)
+            {
                 throw new ArgumentNullException("contract is a required property for ListTransactionsByBlockHeightRIBSEC and cannot be null");
             }
             this.Contract = contract;
             // to ensure "gasLimit" is required (not null)
-            if (gasLimit == null) {
+            if (gasLimit == null)
+            {
                 throw new ArgumentNullException("gasLimit is a required property for ListTransactionsByBlockHeightRIBSEC and cannot be null");
             }
             this.GasLimit = gasLimit;
             // to ensure "gasPrice" is required (not null)
-            if (gasPrice == null) {
+            if (gasPrice == null)
+            {
                 throw new ArgumentNullException("gasPrice is a required property for ListTransactionsByBlockHeightRIBSEC and cannot be null");
             }
             this.GasPrice = gasPrice;
             // to ensure "gasUsed" is required (not null)
-            if (gasUsed == null) {
+            if (gasUsed == null)
+            {
                 throw new ArgumentNullException("gasUsed is a required property for ListTransactionsByBlockHeightRIBSEC and cannot be null");
             }
             this.GasUsed = gasUsed;
             // to ensure "inputData" is required (not null)
-            if (inputData == null) {
+            if (inputData == null)
+            {
                 throw new ArgumentNullException("inputData is a required property for ListTransactionsByBlockHeightRIBSEC and cannot be null");
             }
             this.InputData = inputData;
             // to ensure "nonce" is required (not null)
-            if (nonce == null) {
+            if (nonce == null)
+            {
                 throw new ArgumentNullException("nonce is a required property for ListTransactionsByBlockHeightRIBSEC and cannot be null");
             }
             this.Nonce = nonce;

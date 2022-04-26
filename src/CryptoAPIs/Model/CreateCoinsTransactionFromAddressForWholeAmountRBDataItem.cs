@@ -75,7 +75,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionFromAddressForWholeAmountRBDataItem" /> class.
         /// </summary>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security)..</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs..</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;..</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
         /// <param name="note">Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request..</param>
         /// <param name="recipientAddress">Defines the specific recipient address for the transaction. (required).</param>
@@ -83,7 +83,8 @@ namespace CryptoAPIs.Model
         {
             this.FeePriority = feePriority;
             // to ensure "recipientAddress" is required (not null)
-            if (recipientAddress == null) {
+            if (recipientAddress == null)
+            {
                 throw new ArgumentNullException("recipientAddress is a required property for CreateCoinsTransactionFromAddressForWholeAmountRBDataItem and cannot be null");
             }
             this.RecipientAddress = recipientAddress;
@@ -100,9 +101,9 @@ namespace CryptoAPIs.Model
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 

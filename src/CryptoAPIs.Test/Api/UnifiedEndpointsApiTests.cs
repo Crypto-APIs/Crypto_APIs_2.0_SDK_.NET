@@ -56,6 +56,22 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test EstimateTransactionSmartFee
+        /// </summary>
+        [Fact]
+        public void EstimateTransactionSmartFeeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //int? confirmationTarget = null;
+            //string estimateMode = null;
+            //var response = instance.EstimateTransactionSmartFee(blockchain, network, context, confirmationTarget, estimateMode);
+            //Assert.IsType<EstimateTransactionSmartFeeR>(response);
+        }
+
+        /// <summary>
         /// Test GetAddressDetails
         /// </summary>
         [Fact]
@@ -129,6 +145,36 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test GetNextAvailableNonce
+        /// </summary>
+        [Fact]
+        public void GetNextAvailableNonceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //string context = null;
+            //var response = instance.GetNextAvailableNonce(blockchain, network, address, context);
+            //Assert.IsType<GetNextAvailableNonceR>(response);
+        }
+
+        /// <summary>
+        /// Test GetRawTransactionData
+        /// </summary>
+        [Fact]
+        public void GetRawTransactionDataTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string transactionId = null;
+            //string context = null;
+            //var response = instance.GetRawTransactionData(blockchain, network, transactionId, context);
+            //Assert.IsType<GetRawTransactionDataR>(response);
+        }
+
+        /// <summary>
         /// Test GetTransactionDetailsByTransactionID
         /// </summary>
         [Fact]
@@ -153,10 +199,29 @@ namespace CryptoAPIs.Test.Api
             //string blockchain = null;
             //string network = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListAllUnconfirmedTransactions(blockchain, network, context, limit, offset);
             //Assert.IsType<ListAllUnconfirmedTransactionsR>(response);
+        }
+
+        /// <summary>
+        /// Test ListConfirmedTokensTransfersByAddressAndTimeRange
+        /// </summary>
+        [Fact]
+        public void ListConfirmedTokensTransfersByAddressAndTimeRangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //int fromTimestamp = null;
+            //int toTimestamp = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListConfirmedTokensTransfersByAddressAndTimeRange(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset);
+            //Assert.IsType<ListConfirmedTokensTransfersByAddressAndTimeRangeR>(response);
         }
 
         /// <summary>
@@ -170,10 +235,48 @@ namespace CryptoAPIs.Test.Api
             //string network = null;
             //string address = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListConfirmedTransactionsByAddress(blockchain, network, address, context, limit, offset);
             //Assert.IsType<ListConfirmedTransactionsByAddressR>(response);
+        }
+
+        /// <summary>
+        /// Test ListConfirmedTransactionsByAddressAndTimeRange
+        /// </summary>
+        [Fact]
+        public void ListConfirmedTransactionsByAddressAndTimeRangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //int fromTimestamp = null;
+            //int toTimestamp = null;
+            //string context = null;
+            //long? limit = null;
+            //long? offset = null;
+            //var response = instance.ListConfirmedTransactionsByAddressAndTimeRange(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset);
+            //Assert.IsType<ListConfirmedTransactionsByAddressAndTimeRangeR>(response);
+        }
+
+        /// <summary>
+        /// Test ListInternalTransactionsByAddressAndTimeRange
+        /// </summary>
+        [Fact]
+        public void ListInternalTransactionsByAddressAndTimeRangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //int fromTimestamp = null;
+            //int toTimestamp = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListInternalTransactionsByAddressAndTimeRange(blockchain, network, address, fromTimestamp, toTimestamp, context, limit, offset);
+            //Assert.IsType<ListInternalTransactionsByAddressAndTimeRangeR>(response);
         }
 
         /// <summary>
@@ -202,8 +305,8 @@ namespace CryptoAPIs.Test.Api
             //string network = null;
             //string blockHash = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListTransactionsByBlockHash(blockchain, network, blockHash, context, limit, offset);
             //Assert.IsType<ListTransactionsByBlockHashR>(response);
         }
@@ -217,10 +320,10 @@ namespace CryptoAPIs.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string blockchain = null;
             //string network = null;
-            //int height = null;
+            //long height = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListTransactionsByBlockHeight(blockchain, network, height, context, limit, offset);
             //Assert.IsType<ListTransactionsByBlockHeightR>(response);
         }
@@ -236,10 +339,27 @@ namespace CryptoAPIs.Test.Api
             //string network = null;
             //string address = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListUnconfirmedTransactionsByAddress(blockchain, network, address, context, limit, offset);
             //Assert.IsType<ListUnconfirmedTransactionsByAddressR>(response);
+        }
+
+        /// <summary>
+        /// Test ListUnspentTransactionOutputsByAddress
+        /// </summary>
+        [Fact]
+        public void ListUnspentTransactionOutputsByAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListUnspentTransactionOutputsByAddress(blockchain, network, address, context, limit, offset);
+            //Assert.IsType<ListUnspentTransactionOutputsByAddressR>(response);
         }
     }
 }

@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public CreateFungibleTokensTransactionRequestFromAddressRBData(CreateFungibleTokensTransactionRequestFromAddressRBDataItem item = default(CreateFungibleTokensTransactionRequestFromAddressRBDataItem))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for CreateFungibleTokensTransactionRequestFromAddressRBData and cannot be null");
             }
             this.Item = item;

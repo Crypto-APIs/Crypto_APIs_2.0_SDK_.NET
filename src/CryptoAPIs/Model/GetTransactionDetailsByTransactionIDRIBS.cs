@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRIBS" /> class
-        /// with the <see cref="GetTransactionDetailsByTransactionIDRIBSBSC" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDRIBSBSC.</param>
-        public GetTransactionDetailsByTransactionIDRIBS(GetTransactionDetailsByTransactionIDRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDRIBSL.</param>
+        public GetTransactionDetailsByTransactionIDRIBS(GetTransactionDetailsByTransactionIDRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -120,10 +120,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTransactionDetailsByTransactionIDRIBS" /> class
-        /// with the <see cref="GetTransactionDetailsByTransactionIDRIBSL" /> class
+        /// with the <see cref="GetTransactionDetailsByTransactionIDRIBSBSC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDRIBSL.</param>
-        public GetTransactionDetailsByTransactionIDRIBS(GetTransactionDetailsByTransactionIDRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of GetTransactionDetailsByTransactionIDRIBSBSC.</param>
+        public GetTransactionDetailsByTransactionIDRIBS(GetTransactionDetailsByTransactionIDRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -220,13 +220,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSBSC`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSBSC`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSL`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSBSC</returns>
-        public GetTransactionDetailsByTransactionIDRIBSBSC GetGetTransactionDetailsByTransactionIDRIBSBSC()
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSL</returns>
+        public GetTransactionDetailsByTransactionIDRIBSL GetGetTransactionDetailsByTransactionIDRIBSL()
         {
-            return (GetTransactionDetailsByTransactionIDRIBSBSC)this.ActualInstance;
+            return (GetTransactionDetailsByTransactionIDRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -270,13 +270,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSL`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSL`,
+        /// Get the actual instance of `GetTransactionDetailsByTransactionIDRIBSBSC`. If the actual instance is not `GetTransactionDetailsByTransactionIDRIBSBSC`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSL</returns>
-        public GetTransactionDetailsByTransactionIDRIBSL GetGetTransactionDetailsByTransactionIDRIBSL()
+        /// <returns>An instance of GetTransactionDetailsByTransactionIDRIBSBSC</returns>
+        public GetTransactionDetailsByTransactionIDRIBSBSC GetGetTransactionDetailsByTransactionIDRIBSBSC()
         {
-            return (GetTransactionDetailsByTransactionIDRIBSL)this.ActualInstance;
+            return (GetTransactionDetailsByTransactionIDRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

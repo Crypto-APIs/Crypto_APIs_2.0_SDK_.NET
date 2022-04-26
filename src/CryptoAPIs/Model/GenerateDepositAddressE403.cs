@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateDepositAddressE403" /> class
-        /// with the <see cref="EndpointNotAllowedForApiKey" /> class
+        /// with the <see cref="EndpointNotAllowedForPlan" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of EndpointNotAllowedForApiKey.</param>
-        public GenerateDepositAddressE403(EndpointNotAllowedForApiKey actualInstance)
+        /// <param name="actualInstance">An instance of EndpointNotAllowedForPlan.</param>
+        public GenerateDepositAddressE403(EndpointNotAllowedForPlan actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateDepositAddressE403" /> class
-        /// with the <see cref="EndpointNotAllowedForPlan" /> class
+        /// with the <see cref="EndpointNotAllowedForApiKey" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of EndpointNotAllowedForPlan.</param>
-        public GenerateDepositAddressE403(EndpointNotAllowedForPlan actualInstance)
+        /// <param name="actualInstance">An instance of EndpointNotAllowedForApiKey.</param>
+        public GenerateDepositAddressE403(EndpointNotAllowedForApiKey actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -146,16 +146,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `EndpointNotAllowedForApiKey`. If the actual instance is not `EndpointNotAllowedForApiKey`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of EndpointNotAllowedForApiKey</returns>
-        public EndpointNotAllowedForApiKey GetEndpointNotAllowedForApiKey()
-        {
-            return (EndpointNotAllowedForApiKey)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `EndpointNotAllowedForPlan`. If the actual instance is not `EndpointNotAllowedForPlan`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -163,6 +153,16 @@ namespace CryptoAPIs.Model
         public EndpointNotAllowedForPlan GetEndpointNotAllowedForPlan()
         {
             return (EndpointNotAllowedForPlan)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `EndpointNotAllowedForApiKey`. If the actual instance is not `EndpointNotAllowedForApiKey`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of EndpointNotAllowedForApiKey</returns>
+        public EndpointNotAllowedForApiKey GetEndpointNotAllowedForApiKey()
+        {
+            return (EndpointNotAllowedForApiKey)this.ActualInstance;
         }
 
         /// <summary>

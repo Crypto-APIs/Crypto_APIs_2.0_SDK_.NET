@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public CreateCoinsTransactionFromAddressForWholeAmountRISenders(string address = default(string))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for CreateCoinsTransactionFromAddressForWholeAmountRISenders and cannot be null");
             }
             this.Address = address;

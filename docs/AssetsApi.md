@@ -40,7 +40,7 @@ namespace Example
 
             var apiInstance = new AssetsApi(config);
             var assetId = 5b1ea92e584bf50020130612;  // string | Defines the unique ID of the specific asset.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -127,7 +127,7 @@ namespace Example
 
             var apiInstance = new AssetsApi(config);
             var assetSymbol = BTC;  // string | Specifies the asset's unique symbol in the Crypto APIs listings.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -213,11 +213,11 @@ namespace Example
             // config.AddApiKeyPrefix("x-api-key", "Bearer");
 
             var apiInstance = new AssetsApi(config);
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var assetType = crypto;  // string | Defines the type of the supported asset. This could be either \"crypto\" or \"fiat\". (optional) 
             var cryptoType = coin;  // string | Subtype of the crypto assets. Could be COIN or TOKEN (optional) 
             var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
             var waasEnabled = true;  // bool? | Show only if WaaS is/not enabled (optional) 
 
             try

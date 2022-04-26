@@ -89,6 +89,14 @@ namespace CryptoAPIs.Test.Model
         {
             // TODO unit test for the property 'Standard'
         }
+        /// <summary>
+        /// Test the property 'FeeCushionMultiplier'
+        /// </summary>
+        [Fact]
+        public void FeeCushionMultiplierTest()
+        {
+            // TODO unit test for the property 'FeeCushionMultiplier'
+        }
 
     }
 

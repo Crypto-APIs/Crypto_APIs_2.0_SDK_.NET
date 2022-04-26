@@ -50,27 +50,32 @@ namespace CryptoAPIs.Model
         {
             this.CalculationTimestamp = calculationTimestamp;
             // to ensure "fromAssetId" is required (not null)
-            if (fromAssetId == null) {
+            if (fromAssetId == null)
+            {
                 throw new ArgumentNullException("fromAssetId is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
             }
             this.FromAssetId = fromAssetId;
             // to ensure "fromAssetSymbol" is required (not null)
-            if (fromAssetSymbol == null) {
+            if (fromAssetSymbol == null)
+            {
                 throw new ArgumentNullException("fromAssetSymbol is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
             }
             this.FromAssetSymbol = fromAssetSymbol;
             // to ensure "rate" is required (not null)
-            if (rate == null) {
+            if (rate == null)
+            {
                 throw new ArgumentNullException("rate is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
             }
             this.Rate = rate;
             // to ensure "toAssetId" is required (not null)
-            if (toAssetId == null) {
+            if (toAssetId == null)
+            {
                 throw new ArgumentNullException("toAssetId is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
             }
             this.ToAssetId = toAssetId;
             // to ensure "toAssetSymbol" is required (not null)
-            if (toAssetSymbol == null) {
+            if (toAssetSymbol == null)
+            {
                 throw new ArgumentNullException("toAssetSymbol is a required property for GetExchangeRateByAssetsIDsRI and cannot be null");
             }
             this.ToAssetSymbol = toAssetSymbol;

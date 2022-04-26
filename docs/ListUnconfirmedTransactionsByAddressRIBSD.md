@@ -5,7 +5,7 @@ Dogecoin
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Locktime** | **int** | Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid. | 
+**Locktime** | **long** | Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid. | 
 **Size** | **int** | Represents the total size of this transaction. | 
 **_Version** | **int** | Numeric representation of the transaction version | 
 **Vin** | [**List&lt;ListUnconfirmedTransactionsByAddressRIBSDVin&gt;**](ListUnconfirmedTransactionsByAddressRIBSDVin.md) | Represents the transaction inputs. | 

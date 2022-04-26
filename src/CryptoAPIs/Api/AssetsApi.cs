@@ -36,8 +36,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAssetDetailsByAssetIDR</returns>
-        GetAssetDetailsByAssetIDR GetAssetDetailsByAssetID(string assetId, string context = default(string));
+        GetAssetDetailsByAssetIDR GetAssetDetailsByAssetID(string assetId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Asset Details By Asset ID
@@ -48,8 +49,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAssetDetailsByAssetIDR</returns>
-        ApiResponse<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDWithHttpInfo(string assetId, string context = default(string));
+        ApiResponse<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDWithHttpInfo(string assetId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Asset Details By Asset Symbol
         /// </summary>
@@ -59,8 +61,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAssetDetailsByAssetSymbolR</returns>
-        GetAssetDetailsByAssetSymbolR GetAssetDetailsByAssetSymbol(string assetSymbol, string context = default(string));
+        GetAssetDetailsByAssetSymbolR GetAssetDetailsByAssetSymbol(string assetSymbol, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Asset Details By Asset Symbol
@@ -71,8 +74,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAssetDetailsByAssetSymbolR</returns>
-        ApiResponse<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolWithHttpInfo(string assetSymbol, string context = default(string));
+        ApiResponse<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolWithHttpInfo(string assetSymbol, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Assets Details
         /// </summary>
@@ -86,8 +90,9 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAssetsDetailsR</returns>
-        ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?));
+        ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// List Assets Details
@@ -102,8 +107,9 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAssetsDetailsR</returns>
-        ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?));
+        ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -122,9 +128,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAssetDetailsByAssetIDR</returns>
-        System.Threading.Tasks.Task<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDAsync(string assetId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDAsync(string assetId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Asset Details By Asset ID
@@ -135,9 +142,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAssetDetailsByAssetIDR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAssetDetailsByAssetIDR>> GetAssetDetailsByAssetIDWithHttpInfoAsync(string assetId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetAssetDetailsByAssetIDR>> GetAssetDetailsByAssetIDWithHttpInfoAsync(string assetId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Asset Details By Asset Symbol
         /// </summary>
@@ -147,9 +155,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAssetDetailsByAssetSymbolR</returns>
-        System.Threading.Tasks.Task<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolAsync(string assetSymbol, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolAsync(string assetSymbol, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Asset Details By Asset Symbol
@@ -160,9 +169,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAssetDetailsByAssetSymbolR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAssetDetailsByAssetSymbolR>> GetAssetDetailsByAssetSymbolWithHttpInfoAsync(string assetSymbol, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetAssetDetailsByAssetSymbolR>> GetAssetDetailsByAssetSymbolWithHttpInfoAsync(string assetSymbol, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Assets Details
         /// </summary>
@@ -176,9 +186,10 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAssetsDetailsR</returns>
-        System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Assets Details
@@ -193,9 +204,10 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAssetsDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -322,8 +334,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAssetDetailsByAssetIDR</returns>
-        public GetAssetDetailsByAssetIDR GetAssetDetailsByAssetID(string assetId, string context = default(string))
+        public GetAssetDetailsByAssetIDR GetAssetDetailsByAssetID(string assetId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetIDR> localVarResponse = GetAssetDetailsByAssetIDWithHttpInfo(assetId, context);
             return localVarResponse.Data;
@@ -335,8 +348,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAssetDetailsByAssetIDR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDWithHttpInfo(string assetId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDWithHttpInfo(string assetId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'assetId' is set
             if (assetId == null)
@@ -371,6 +385,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "AssetsApi.GetAssetDetailsByAssetID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -398,11 +415,12 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAssetDetailsByAssetIDR</returns>
-        public async System.Threading.Tasks.Task<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDAsync(string assetId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetAssetDetailsByAssetIDR> GetAssetDetailsByAssetIDAsync(string assetId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetIDR> localVarResponse = await GetAssetDetailsByAssetIDWithHttpInfoAsync(assetId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetIDR> localVarResponse = await GetAssetDetailsByAssetIDWithHttpInfoAsync(assetId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -412,9 +430,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetId">Defines the unique ID of the specific asset.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAssetDetailsByAssetIDR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetIDR>> GetAssetDetailsByAssetIDWithHttpInfoAsync(string assetId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetIDR>> GetAssetDetailsByAssetIDWithHttpInfoAsync(string assetId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'assetId' is set
             if (assetId == null)
@@ -450,6 +469,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "AssetsApi.GetAssetDetailsByAssetID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -478,8 +500,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetAssetDetailsByAssetSymbolR</returns>
-        public GetAssetDetailsByAssetSymbolR GetAssetDetailsByAssetSymbol(string assetSymbol, string context = default(string))
+        public GetAssetDetailsByAssetSymbolR GetAssetDetailsByAssetSymbol(string assetSymbol, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetSymbolR> localVarResponse = GetAssetDetailsByAssetSymbolWithHttpInfo(assetSymbol, context);
             return localVarResponse.Data;
@@ -491,8 +514,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetAssetDetailsByAssetSymbolR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolWithHttpInfo(string assetSymbol, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolWithHttpInfo(string assetSymbol, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'assetSymbol' is set
             if (assetSymbol == null)
@@ -527,6 +551,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "AssetsApi.GetAssetDetailsByAssetSymbol";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -554,11 +581,12 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetAssetDetailsByAssetSymbolR</returns>
-        public async System.Threading.Tasks.Task<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolAsync(string assetSymbol, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetAssetDetailsByAssetSymbolR> GetAssetDetailsByAssetSymbolAsync(string assetSymbol, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetSymbolR> localVarResponse = await GetAssetDetailsByAssetSymbolWithHttpInfoAsync(assetSymbol, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetSymbolR> localVarResponse = await GetAssetDetailsByAssetSymbolWithHttpInfoAsync(assetSymbol, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -568,9 +596,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetSymbol">Specifies the asset&#39;s unique symbol in the Crypto APIs listings.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetAssetDetailsByAssetSymbolR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetSymbolR>> GetAssetDetailsByAssetSymbolWithHttpInfoAsync(string assetSymbol, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetAssetDetailsByAssetSymbolR>> GetAssetDetailsByAssetSymbolWithHttpInfoAsync(string assetSymbol, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'assetSymbol' is set
             if (assetSymbol == null)
@@ -606,6 +635,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "AssetsApi.GetAssetDetailsByAssetSymbol";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -638,8 +670,9 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListAssetsDetailsR</returns>
-        public ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?))
+        public ListAssetsDetailsR ListAssetsDetails(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> localVarResponse = ListAssetsDetailsWithHttpInfo(context, assetType, cryptoType, limit, offset, waasEnabled);
             return localVarResponse.Data;
@@ -655,8 +688,9 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListAssetsDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?))
+        public CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> ListAssetsDetailsWithHttpInfo(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0)
         {
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
 
@@ -704,6 +738,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "waasEnabled", waasEnabled));
             }
+
+            localVarRequestOptions.Operation = "AssetsApi.ListAssetsDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -735,11 +772,12 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListAssetsDetailsR</returns>
-        public async System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListAssetsDetailsR> ListAssetsDetailsAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> localVarResponse = await ListAssetsDetailsWithHttpInfoAsync(context, assetType, cryptoType, limit, offset, waasEnabled, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR> localVarResponse = await ListAssetsDetailsWithHttpInfoAsync(context, assetType, cryptoType, limit, offset, waasEnabled, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -753,9 +791,10 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="waasEnabled">Show only if WaaS is/not enabled (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListAssetsDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListAssetsDetailsR>> ListAssetsDetailsWithHttpInfoAsync(string context = default(string), string assetType = default(string), string cryptoType = default(string), int? limit = default(int?), int? offset = default(int?), bool? waasEnabled = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
@@ -804,6 +843,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "waasEnabled", waasEnabled));
             }
+
+            localVarRequestOptions.Operation = "AssetsApi.ListAssetsDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

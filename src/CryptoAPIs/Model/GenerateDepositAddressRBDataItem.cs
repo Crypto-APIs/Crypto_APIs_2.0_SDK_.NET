@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GenerateDepositAddressRBDataItem(string label = default(string))
         {
             // to ensure "label" is required (not null)
-            if (label == null) {
+            if (label == null)
+            {
                 throw new ArgumentNullException("label is a required property for GenerateDepositAddressRBDataItem and cannot be null");
             }
             this.Label = label;

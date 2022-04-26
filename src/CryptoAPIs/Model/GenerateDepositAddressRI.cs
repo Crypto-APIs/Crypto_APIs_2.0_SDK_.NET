@@ -46,13 +46,15 @@ namespace CryptoAPIs.Model
         public GenerateDepositAddressRI(string address = default(string), int createdTimestamp = default(int), string label = default(string))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for GenerateDepositAddressRI and cannot be null");
             }
             this.Address = address;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "label" is required (not null)
-            if (label == null) {
+            if (label == null)
+            {
                 throw new ArgumentNullException("label is a required property for GenerateDepositAddressRI and cannot be null");
             }
             this.Label = label;

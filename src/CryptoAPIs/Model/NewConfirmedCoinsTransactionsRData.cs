@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public NewConfirmedCoinsTransactionsRData(NewConfirmedCoinsTransactionsRI item = default(NewConfirmedCoinsTransactionsRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for NewConfirmedCoinsTransactionsRData and cannot be null");
             }
             this.Item = item;

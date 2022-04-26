@@ -58,6 +58,14 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Address'
+        /// </summary>
+        [Fact]
+        public void AddressTest()
+        {
+            // TODO unit test for the property 'Address'
+        }
+        /// <summary>
         /// Test the property 'CallbackSecretKey'
         /// </summary>
         [Fact]

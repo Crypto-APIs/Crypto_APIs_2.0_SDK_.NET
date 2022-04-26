@@ -36,8 +36,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetLatestMinedXRPRippleBlockR</returns>
-        GetLatestMinedXRPRippleBlockR GetLatestMinedXRPRippleBlock(string network, string context = default(string));
+        GetLatestMinedXRPRippleBlockR GetLatestMinedXRPRippleBlock(string network, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Latest Mined XRP (Ripple) Block
@@ -48,8 +49,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetLatestMinedXRPRippleBlockR</returns>
-        ApiResponse<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockWithHttpInfo(string network, string context = default(string));
+        ApiResponse<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockWithHttpInfo(string network, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get XRP (Ripple) Address Details
         /// </summary>
@@ -60,8 +62,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleAddressDetailsR</returns>
-        GetXRPRippleAddressDetailsR GetXRPRippleAddressDetails(string network, string address, string context = default(string));
+        GetXRPRippleAddressDetailsR GetXRPRippleAddressDetails(string network, string address, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get XRP (Ripple) Address Details
@@ -73,8 +76,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleAddressDetailsR</returns>
-        ApiResponse<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsWithHttpInfo(string network, string address, string context = default(string));
+        ApiResponse<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsWithHttpInfo(string network, string address, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Hash
         /// </summary>
@@ -85,8 +89,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleBlockDetailsByBlockHashR</returns>
-        GetXRPRippleBlockDetailsByBlockHashR GetXRPRippleBlockDetailsByBlockHash(string network, string blockHash, string context = default(string));
+        GetXRPRippleBlockDetailsByBlockHashR GetXRPRippleBlockDetailsByBlockHash(string network, string blockHash, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Hash
@@ -98,8 +103,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleBlockDetailsByBlockHashR</returns>
-        ApiResponse<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string));
+        ApiResponse<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Height
         /// </summary>
@@ -110,8 +116,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string blockHeight, string context = default(string));
+        GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string blockHeight, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Height
@@ -123,8 +130,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string blockHeight, string context = default(string));
+        ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string blockHeight, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get XRP (Ripple) Transaction Details By Transaction ID
         /// </summary>
@@ -135,8 +143,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleTransactionDetailsByTransactionIDR</returns>
-        GetXRPRippleTransactionDetailsByTransactionIDR GetXRPRippleTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string));
+        GetXRPRippleTransactionDetailsByTransactionIDR GetXRPRippleTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get XRP (Ripple) Transaction Details By Transaction ID
@@ -148,8 +157,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleTransactionDetailsByTransactionIDR</returns>
-        ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string));
+        ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List XRP (Ripple) Transactions by Address
         /// </summary>
@@ -163,8 +173,9 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListXRPRippleTransactionsByAddressR</returns>
-        ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string));
+        ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0);
 
         /// <summary>
         /// List XRP (Ripple) Transactions by Address
@@ -179,8 +190,46 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListXRPRippleTransactionsByAddressR</returns>
-        ApiResponse<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string));
+        ApiResponse<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0);
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListXRPRippleTransactionsByAddressAndTimeRangeR</returns>
+        ListXRPRippleTransactionsByAddressAndTimeRangeR ListXRPRippleTransactionsByAddressAndTimeRange(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListXRPRippleTransactionsByAddressAndTimeRangeR</returns>
+        ApiResponse<ListXRPRippleTransactionsByAddressAndTimeRangeR> ListXRPRippleTransactionsByAddressAndTimeRangeWithHttpInfo(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0);
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Hash
         /// </summary>
@@ -193,8 +242,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListXRPRippleTransactionsByBlockHashR</returns>
-        ListXRPRippleTransactionsByBlockHashR ListXRPRippleTransactionsByBlockHash(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListXRPRippleTransactionsByBlockHashR ListXRPRippleTransactionsByBlockHash(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Hash
@@ -208,8 +258,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListXRPRippleTransactionsByBlockHashR</returns>
-        ApiResponse<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Height
         /// </summary>
@@ -222,8 +273,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListXRPRippleTransactionsByBlockHeightR</returns>
-        ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Height
@@ -237,8 +289,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListXRPRippleTransactionsByBlockHeightR</returns>
-        ApiResponse<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightWithHttpInfo(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -257,9 +310,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetLatestMinedXRPRippleBlockR</returns>
-        System.Threading.Tasks.Task<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Latest Mined XRP (Ripple) Block
@@ -270,9 +324,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetLatestMinedXRPRippleBlockR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetLatestMinedXRPRippleBlockR>> GetLatestMinedXRPRippleBlockWithHttpInfoAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetLatestMinedXRPRippleBlockR>> GetLatestMinedXRPRippleBlockWithHttpInfoAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get XRP (Ripple) Address Details
         /// </summary>
@@ -283,9 +338,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleAddressDetailsR</returns>
-        System.Threading.Tasks.Task<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get XRP (Ripple) Address Details
@@ -297,9 +353,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleAddressDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleAddressDetailsR>> GetXRPRippleAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleAddressDetailsR>> GetXRPRippleAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Hash
         /// </summary>
@@ -310,9 +367,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleBlockDetailsByBlockHashR</returns>
-        System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Hash
@@ -324,9 +382,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleBlockDetailsByBlockHashR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleBlockDetailsByBlockHashR>> GetXRPRippleBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleBlockDetailsByBlockHashR>> GetXRPRippleBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Height
         /// </summary>
@@ -337,9 +396,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get XRP (Ripple) Block Details By Block Height
@@ -351,9 +411,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleBlockDetailsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get XRP (Ripple) Transaction Details By Transaction ID
         /// </summary>
@@ -364,9 +425,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleTransactionDetailsByTransactionIDR</returns>
-        System.Threading.Tasks.Task<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get XRP (Ripple) Transaction Details By Transaction ID
@@ -378,9 +440,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleTransactionDetailsByTransactionIDR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR>> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR>> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List XRP (Ripple) Transactions by Address
         /// </summary>
@@ -394,9 +457,10 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListXRPRippleTransactionsByAddressR</returns>
-        System.Threading.Tasks.Task<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressAsync(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List XRP (Ripple) Transactions by Address
@@ -411,9 +475,49 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByAddressR>> ListXRPRippleTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByAddressR>> ListXRPRippleTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListXRPRippleTransactionsByAddressAndTimeRangeR</returns>
+        System.Threading.Tasks.Task<ListXRPRippleTransactionsByAddressAndTimeRangeR> ListXRPRippleTransactionsByAddressAndTimeRangeAsync(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range
+        /// </summary>
+        /// <remarks>
+        /// Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByAddressAndTimeRangeR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByAddressAndTimeRangeR>> ListXRPRippleTransactionsByAddressAndTimeRangeWithHttpInfoAsync(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Hash
         /// </summary>
@@ -426,9 +530,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListXRPRippleTransactionsByBlockHashR</returns>
-        System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Hash
@@ -442,9 +547,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByBlockHashR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByBlockHashR>> ListXRPRippleTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByBlockHashR>> ListXRPRippleTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Height
         /// </summary>
@@ -457,9 +563,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListXRPRippleTransactionsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightAsync(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List XRP (Ripple) Transactions By Block Height
@@ -473,9 +580,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByBlockHeightR>> ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListXRPRippleTransactionsByBlockHeightR>> ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -602,8 +710,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetLatestMinedXRPRippleBlockR</returns>
-        public GetLatestMinedXRPRippleBlockR GetLatestMinedXRPRippleBlock(string network, string context = default(string))
+        public GetLatestMinedXRPRippleBlockR GetLatestMinedXRPRippleBlock(string network, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetLatestMinedXRPRippleBlockR> localVarResponse = GetLatestMinedXRPRippleBlockWithHttpInfo(network, context);
             return localVarResponse.Data;
@@ -615,8 +724,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetLatestMinedXRPRippleBlockR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockWithHttpInfo(string network, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockWithHttpInfo(string network, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -651,6 +761,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetLatestMinedXRPRippleBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -678,11 +791,12 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetLatestMinedXRPRippleBlockR</returns>
-        public async System.Threading.Tasks.Task<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetLatestMinedXRPRippleBlockR> GetLatestMinedXRPRippleBlockAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetLatestMinedXRPRippleBlockR> localVarResponse = await GetLatestMinedXRPRippleBlockWithHttpInfoAsync(network, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetLatestMinedXRPRippleBlockR> localVarResponse = await GetLatestMinedXRPRippleBlockWithHttpInfoAsync(network, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -692,9 +806,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetLatestMinedXRPRippleBlockR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetLatestMinedXRPRippleBlockR>> GetLatestMinedXRPRippleBlockWithHttpInfoAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetLatestMinedXRPRippleBlockR>> GetLatestMinedXRPRippleBlockWithHttpInfoAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -730,6 +845,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetLatestMinedXRPRippleBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -759,8 +877,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleAddressDetailsR</returns>
-        public GetXRPRippleAddressDetailsR GetXRPRippleAddressDetails(string network, string address, string context = default(string))
+        public GetXRPRippleAddressDetailsR GetXRPRippleAddressDetails(string network, string address, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetXRPRippleAddressDetailsR> localVarResponse = GetXRPRippleAddressDetailsWithHttpInfo(network, address, context);
             return localVarResponse.Data;
@@ -773,8 +892,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleAddressDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsWithHttpInfo(string network, string address, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsWithHttpInfo(string network, string address, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -816,6 +936,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -844,11 +967,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleAddressDetailsR</returns>
-        public async System.Threading.Tasks.Task<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetXRPRippleAddressDetailsR> GetXRPRippleAddressDetailsAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetXRPRippleAddressDetailsR> localVarResponse = await GetXRPRippleAddressDetailsWithHttpInfoAsync(network, address, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetXRPRippleAddressDetailsR> localVarResponse = await GetXRPRippleAddressDetailsWithHttpInfoAsync(network, address, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -859,9 +983,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleAddressDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleAddressDetailsR>> GetXRPRippleAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleAddressDetailsR>> GetXRPRippleAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -904,6 +1029,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -933,8 +1061,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleBlockDetailsByBlockHashR</returns>
-        public GetXRPRippleBlockDetailsByBlockHashR GetXRPRippleBlockDetailsByBlockHash(string network, string blockHash, string context = default(string))
+        public GetXRPRippleBlockDetailsByBlockHashR GetXRPRippleBlockDetailsByBlockHash(string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHashR> localVarResponse = GetXRPRippleBlockDetailsByBlockHashWithHttpInfo(network, blockHash, context);
             return localVarResponse.Data;
@@ -947,8 +1076,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleBlockDetailsByBlockHashR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -990,6 +1120,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleBlockDetailsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1018,11 +1151,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleBlockDetailsByBlockHashR</returns>
-        public async System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHashR> GetXRPRippleBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHashR> localVarResponse = await GetXRPRippleBlockDetailsByBlockHashWithHttpInfoAsync(network, blockHash, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHashR> localVarResponse = await GetXRPRippleBlockDetailsByBlockHashWithHttpInfoAsync(network, blockHash, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1033,9 +1167,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleBlockDetailsByBlockHashR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHashR>> GetXRPRippleBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHashR>> GetXRPRippleBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1078,6 +1213,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleBlockDetailsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1107,8 +1245,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        public GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string blockHeight, string context = default(string))
+        public GetXRPRippleBlockDetailsByBlockHeightR GetXRPRippleBlockDetailsByBlockHeight(string network, string blockHeight, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> localVarResponse = GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(network, blockHeight, context);
             return localVarResponse.Data;
@@ -1121,8 +1260,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string blockHeight, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfo(string network, string blockHeight, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1164,6 +1304,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleBlockDetailsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1192,11 +1335,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleBlockDetailsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetXRPRippleBlockDetailsByBlockHeightR> GetXRPRippleBlockDetailsByBlockHeightAsync(string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> localVarResponse = await GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR> localVarResponse = await GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1207,9 +1351,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleBlockDetailsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleBlockDetailsByBlockHeightR>> GetXRPRippleBlockDetailsByBlockHeightWithHttpInfoAsync(string network, string blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1252,6 +1397,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleBlockDetailsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1281,8 +1429,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetXRPRippleTransactionDetailsByTransactionIDR</returns>
-        public GetXRPRippleTransactionDetailsByTransactionIDR GetXRPRippleTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string))
+        public GetXRPRippleTransactionDetailsByTransactionIDR GetXRPRippleTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR> localVarResponse = GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfo(network, transactionHash, context);
             return localVarResponse.Data;
@@ -1295,8 +1444,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetXRPRippleTransactionDetailsByTransactionIDR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1338,6 +1488,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1366,11 +1519,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetXRPRippleTransactionDetailsByTransactionIDR</returns>
-        public async System.Threading.Tasks.Task<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetXRPRippleTransactionDetailsByTransactionIDR> GetXRPRippleTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR> localVarResponse = await GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfoAsync(network, transactionHash, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR> localVarResponse = await GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfoAsync(network, transactionHash, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1381,9 +1535,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetXRPRippleTransactionDetailsByTransactionIDR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR>> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetXRPRippleTransactionDetailsByTransactionIDR>> GetXRPRippleTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1426,6 +1581,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.GetXRPRippleTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1458,8 +1616,9 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListXRPRippleTransactionsByAddressR</returns>
-        public ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string))
+        public ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressR> localVarResponse = ListXRPRippleTransactionsByAddressWithHttpInfo(network, address, context, limit, offset, transactionType);
             return localVarResponse.Data;
@@ -1475,8 +1634,9 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListXRPRippleTransactionsByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string))
+        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1530,6 +1690,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "transactionType", transactionType));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1561,11 +1724,12 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListXRPRippleTransactionsByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByAddressR> ListXRPRippleTransactionsByAddressAsync(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressR> localVarResponse = await ListXRPRippleTransactionsByAddressWithHttpInfoAsync(network, address, context, limit, offset, transactionType, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressR> localVarResponse = await ListXRPRippleTransactionsByAddressWithHttpInfoAsync(network, address, context, limit, offset, transactionType, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1579,9 +1743,10 @@ namespace CryptoAPIs.Api
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="transactionType"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressR>> ListXRPRippleTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), string transactionType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressR>> ListXRPRippleTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1637,6 +1802,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "transactionType", transactionType));
             }
 
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -1659,6 +1827,238 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListXRPRippleTransactionsByAddressAndTimeRangeR</returns>
+        public ListXRPRippleTransactionsByAddressAndTimeRangeR ListXRPRippleTransactionsByAddressAndTimeRange(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressAndTimeRangeR> localVarResponse = ListXRPRippleTransactionsByAddressAndTimeRangeWithHttpInfo(network, address, fromTimestamp, toTimestamp, context, limit, offset, transactionType);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListXRPRippleTransactionsByAddressAndTimeRangeR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressAndTimeRangeR> ListXRPRippleTransactionsByAddressAndTimeRangeWithHttpInfo(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling XRPRippleApi->ListXRPRippleTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling XRPRippleApi->ListXRPRippleTransactionsByAddressAndTimeRange");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+            if (transactionType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "transactionType", transactionType));
+            }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListXRPRippleTransactionsByAddressAndTimeRangeR>("/blockchain-data/xrp-specific/{network}/addresses/{address}/transactions-by-time-range", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListXRPRippleTransactionsByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListXRPRippleTransactionsByAddressAndTimeRangeR</returns>
+        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByAddressAndTimeRangeR> ListXRPRippleTransactionsByAddressAndTimeRangeAsync(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressAndTimeRangeR> localVarResponse = await ListXRPRippleTransactionsByAddressAndTimeRangeWithHttpInfoAsync(network, address, fromTimestamp, toTimestamp, context, limit, offset, transactionType, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List XRP (Ripple) Transactions By Address And Time Range Тhis endpoint lists XRP transactions by the attribute &#x60;address&#x60; and the query parameters &#x60;fromTimestamp&#x60; and &#x60;toTimestamp&#x60;  which gives customers the opportunity to filter the results by a specified time period.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="address">Represents the public address, which is a compressed and shortened form of a public key.</param>
+        /// <param name="fromTimestamp">Defines the specific time/date from which the results will start being listed.</param>
+        /// <param name="toTimestamp">Defines the specific time/date to which the results will be listed.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="transactionType">Defines the transaction type. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByAddressAndTimeRangeR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByAddressAndTimeRangeR>> ListXRPRippleTransactionsByAddressAndTimeRangeWithHttpInfoAsync(string network, string address, int fromTimestamp, int toTimestamp, string context = default(string), long? limit = default(long?), long? offset = default(long?), string transactionType = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling XRPRippleApi->ListXRPRippleTransactionsByAddressAndTimeRange");
+            }
+
+            // verify the required parameter 'address' is set
+            if (address == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'address' when calling XRPRippleApi->ListXRPRippleTransactionsByAddressAndTimeRange");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            localVarRequestOptions.PathParameters.Add("address", CryptoAPIs.Client.ClientUtils.ParameterToString(address)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "fromTimestamp", fromTimestamp));
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+            localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "toTimestamp", toTimestamp));
+            if (transactionType != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "transactionType", transactionType));
+            }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByAddressAndTimeRange";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListXRPRippleTransactionsByAddressAndTimeRangeR>("/blockchain-data/xrp-specific/{network}/addresses/{address}/transactions-by-time-range", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListXRPRippleTransactionsByAddressAndTimeRange", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List XRP (Ripple) Transactions By Block Hash This endpoint will list transactions by an attribute &#x60;blockHash&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn&#39;t unified.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1667,8 +2067,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListXRPRippleTransactionsByBlockHashR</returns>
-        public ListXRPRippleTransactionsByBlockHashR ListXRPRippleTransactionsByBlockHash(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListXRPRippleTransactionsByBlockHashR ListXRPRippleTransactionsByBlockHash(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHashR> localVarResponse = ListXRPRippleTransactionsByBlockHashWithHttpInfo(network, blockHash, context, limit, offset);
             return localVarResponse.Data;
@@ -1683,8 +2084,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListXRPRippleTransactionsByBlockHashR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1734,6 +2136,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1764,11 +2169,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListXRPRippleTransactionsByBlockHashR</returns>
-        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHashR> ListXRPRippleTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHashR> localVarResponse = await ListXRPRippleTransactionsByBlockHashWithHttpInfoAsync(network, blockHash, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHashR> localVarResponse = await ListXRPRippleTransactionsByBlockHashWithHttpInfoAsync(network, blockHash, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1781,9 +2187,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByBlockHashR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHashR>> ListXRPRippleTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHashR>> ListXRPRippleTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1834,6 +2241,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1865,8 +2275,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListXRPRippleTransactionsByBlockHeightR</returns>
-        public ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> localVarResponse = ListXRPRippleTransactionsByBlockHeightWithHttpInfo(network, blockHeight, context, limit, offset);
             return localVarResponse.Data;
@@ -1881,8 +2292,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListXRPRippleTransactionsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightWithHttpInfo(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1926,6 +2338,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1956,11 +2371,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListXRPRippleTransactionsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListXRPRippleTransactionsByBlockHeightR> ListXRPRippleTransactionsByBlockHeightAsync(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> localVarResponse = await ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR> localVarResponse = await ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1973,9 +2389,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListXRPRippleTransactionsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR>> ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListXRPRippleTransactionsByBlockHeightR>> ListXRPRippleTransactionsByBlockHeightWithHttpInfoAsync(string network, long blockHeight, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -2020,6 +2437,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "XRPRippleApi.ListXRPRippleTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

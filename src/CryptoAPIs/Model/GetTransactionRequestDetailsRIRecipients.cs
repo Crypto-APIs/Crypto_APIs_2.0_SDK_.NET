@@ -41,25 +41,32 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="GetTransactionRequestDetailsRIRecipients" /> class.
         /// </summary>
         /// <param name="address">The address which receives this transaction. In UTXO-based protocols like Bitcoin there could be several senders while in account-based protocols like Ethereum there is always only one recipient. (required).</param>
+        /// <param name="addressTag">Defines a specific Tag that is an additional XRP address feature. It helps identify a transaction recipient beyond a wallet address. The tag that was encoded into the x-Address along with the Classic Address..</param>
         /// <param name="amount">Represents the amount received to this address. (required).</param>
+        /// <param name="classicAddress">Represents the public address, which is a compressed and shortened form of a public key. A classic address is shown when the destination address is an x-Address..</param>
         /// <param name="unit">Defines the unit of the amount. (required).</param>
-        public GetTransactionRequestDetailsRIRecipients(string address = default(string), string amount = default(string), string unit = default(string))
+        public GetTransactionRequestDetailsRIRecipients(string address = default(string), int addressTag = default(int), string amount = default(string), string classicAddress = default(string), string unit = default(string))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for GetTransactionRequestDetailsRIRecipients and cannot be null");
             }
             this.Address = address;
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for GetTransactionRequestDetailsRIRecipients and cannot be null");
             }
             this.Amount = amount;
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for GetTransactionRequestDetailsRIRecipients and cannot be null");
             }
             this.Unit = unit;
+            this.AddressTag = addressTag;
+            this.ClassicAddress = classicAddress;
         }
 
         /// <summary>
@@ -70,11 +77,25 @@ namespace CryptoAPIs.Model
         public string Address { get; set; }
 
         /// <summary>
+        /// Defines a specific Tag that is an additional XRP address feature. It helps identify a transaction recipient beyond a wallet address. The tag that was encoded into the x-Address along with the Classic Address.
+        /// </summary>
+        /// <value>Defines a specific Tag that is an additional XRP address feature. It helps identify a transaction recipient beyond a wallet address. The tag that was encoded into the x-Address along with the Classic Address.</value>
+        [DataMember(Name = "addressTag", EmitDefaultValue = false)]
+        public int AddressTag { get; set; }
+
+        /// <summary>
         /// Represents the amount received to this address.
         /// </summary>
         /// <value>Represents the amount received to this address.</value>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
         public string Amount { get; set; }
+
+        /// <summary>
+        /// Represents the public address, which is a compressed and shortened form of a public key. A classic address is shown when the destination address is an x-Address.
+        /// </summary>
+        /// <value>Represents the public address, which is a compressed and shortened form of a public key. A classic address is shown when the destination address is an x-Address.</value>
+        [DataMember(Name = "classicAddress", EmitDefaultValue = false)]
+        public string ClassicAddress { get; set; }
 
         /// <summary>
         /// Defines the unit of the amount.
@@ -92,7 +113,9 @@ namespace CryptoAPIs.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class GetTransactionRequestDetailsRIRecipients {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  AddressTag: ").Append(AddressTag).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  ClassicAddress: ").Append(ClassicAddress).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -135,9 +158,18 @@ namespace CryptoAPIs.Model
                     this.Address.Equals(input.Address))
                 ) && 
                 (
+                    this.AddressTag == input.AddressTag ||
+                    this.AddressTag.Equals(input.AddressTag)
+                ) && 
+                (
                     this.Amount == input.Amount ||
                     (this.Amount != null &&
                     this.Amount.Equals(input.Amount))
+                ) && 
+                (
+                    this.ClassicAddress == input.ClassicAddress ||
+                    (this.ClassicAddress != null &&
+                    this.ClassicAddress.Equals(input.ClassicAddress))
                 ) && 
                 (
                     this.Unit == input.Unit ||
@@ -159,9 +191,14 @@ namespace CryptoAPIs.Model
                 {
                     hashCode = (hashCode * 59) + this.Address.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.AddressTag.GetHashCode();
                 if (this.Amount != null)
                 {
                     hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
+                if (this.ClassicAddress != null)
+                {
+                    hashCode = (hashCode * 59) + this.ClassicAddress.GetHashCode();
                 }
                 if (this.Unit != null)
                 {

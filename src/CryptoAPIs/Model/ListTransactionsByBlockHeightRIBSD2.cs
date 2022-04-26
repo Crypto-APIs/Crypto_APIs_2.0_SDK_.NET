@@ -45,18 +45,20 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents transaction version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public ListTransactionsByBlockHeightRIBSD2(int locktime = default(int), int size = default(int), int version = default(int), List<ListTransactionsByBlockHeightRIBSD2Vin> vin = default(List<ListTransactionsByBlockHeightRIBSD2Vin>), List<ListTransactionsByBlockHashRIBSDVout> vout = default(List<ListTransactionsByBlockHashRIBSDVout>))
+        public ListTransactionsByBlockHeightRIBSD2(long locktime = default(long), int size = default(int), int version = default(int), List<ListTransactionsByBlockHeightRIBSD2Vin> vin = default(List<ListTransactionsByBlockHeightRIBSD2Vin>), List<ListTransactionsByBlockHashRIBSDVout> vout = default(List<ListTransactionsByBlockHashRIBSDVout>))
         {
             this.Locktime = locktime;
             this.Size = size;
             this._Version = version;
             // to ensure "vin" is required (not null)
-            if (vin == null) {
+            if (vin == null)
+            {
                 throw new ArgumentNullException("vin is a required property for ListTransactionsByBlockHeightRIBSD2 and cannot be null");
             }
             this.Vin = vin;
             // to ensure "vout" is required (not null)
-            if (vout == null) {
+            if (vout == null)
+            {
                 throw new ArgumentNullException("vout is a required property for ListTransactionsByBlockHeightRIBSD2 and cannot be null");
             }
             this.Vout = vout;
@@ -67,7 +69,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the time at which a particular transaction can be added to the blockchain.</value>
         [DataMember(Name = "locktime", IsRequired = true, EmitDefaultValue = false)]
-        public int Locktime { get; set; }
+        public long Locktime { get; set; }
 
         /// <summary>
         /// Represents the total size of this transaction.

@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public MinedTransactionRData(MinedTransactionRI item = default(MinedTransactionRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for MinedTransactionRData and cannot be null");
             }
             this.Item = item;

@@ -153,6 +153,14 @@ namespace CryptoAPIs.Test.Model
         {
             // TODO unit test for the property 'TransactionTimestamp'
         }
+        /// <summary>
+        /// Test the property 'TransactionFee'
+        /// </summary>
+        [Fact]
+        public void TransactionFeeTest()
+        {
+            // TODO unit test for the property 'TransactionFee'
+        }
 
     }
 

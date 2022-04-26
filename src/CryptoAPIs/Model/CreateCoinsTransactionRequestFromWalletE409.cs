@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromWalletE409" /> class
-        /// with the <see cref="WalletAsAServiceNoDepositAddressesFound" /> class
+        /// with the <see cref="WalletAsAServiceWalletBalanceNotEnough" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of WalletAsAServiceNoDepositAddressesFound.</param>
-        public CreateCoinsTransactionRequestFromWalletE409(WalletAsAServiceNoDepositAddressesFound actualInstance)
+        /// <param name="actualInstance">An instance of WalletAsAServiceWalletBalanceNotEnough.</param>
+        public CreateCoinsTransactionRequestFromWalletE409(WalletAsAServiceWalletBalanceNotEnough actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -60,10 +60,22 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromWalletE409" /> class
-        /// with the <see cref="WalletAsAServiceWalletBalanceNotEnough" /> class
+        /// with the <see cref="WalletAsAServiceAddressBalanceNotEnough" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of WalletAsAServiceWalletBalanceNotEnough.</param>
-        public CreateCoinsTransactionRequestFromWalletE409(WalletAsAServiceWalletBalanceNotEnough actualInstance)
+        /// <param name="actualInstance">An instance of WalletAsAServiceAddressBalanceNotEnough.</param>
+        public CreateCoinsTransactionRequestFromWalletE409(WalletAsAServiceAddressBalanceNotEnough actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateCoinsTransactionRequestFromWalletE409" /> class
+        /// with the <see cref="WalletAsAServiceNoDepositAddressesFound" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of WalletAsAServiceNoDepositAddressesFound.</param>
+        public CreateCoinsTransactionRequestFromWalletE409(WalletAsAServiceNoDepositAddressesFound actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -88,6 +100,10 @@ namespace CryptoAPIs.Model
                 {
                     this._actualInstance = value;
                 }
+                else if (value.GetType() == typeof(WalletAsAServiceAddressBalanceNotEnough))
+                {
+                    this._actualInstance = value;
+                }
                 else if (value.GetType() == typeof(WalletAsAServiceNoDepositAddressesFound))
                 {
                     this._actualInstance = value;
@@ -98,7 +114,7 @@ namespace CryptoAPIs.Model
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid instance found. Must be the following types: InvalidData, WalletAsAServiceNoDepositAddressesFound, WalletAsAServiceWalletBalanceNotEnough");
+                    throw new ArgumentException("Invalid instance found. Must be the following types: InvalidData, WalletAsAServiceAddressBalanceNotEnough, WalletAsAServiceNoDepositAddressesFound, WalletAsAServiceWalletBalanceNotEnough");
                 }
             }
         }
@@ -114,16 +130,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `WalletAsAServiceNoDepositAddressesFound`. If the actual instance is not `WalletAsAServiceNoDepositAddressesFound`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of WalletAsAServiceNoDepositAddressesFound</returns>
-        public WalletAsAServiceNoDepositAddressesFound GetWalletAsAServiceNoDepositAddressesFound()
-        {
-            return (WalletAsAServiceNoDepositAddressesFound)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `WalletAsAServiceWalletBalanceNotEnough`. If the actual instance is not `WalletAsAServiceWalletBalanceNotEnough`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -131,6 +137,26 @@ namespace CryptoAPIs.Model
         public WalletAsAServiceWalletBalanceNotEnough GetWalletAsAServiceWalletBalanceNotEnough()
         {
             return (WalletAsAServiceWalletBalanceNotEnough)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `WalletAsAServiceAddressBalanceNotEnough`. If the actual instance is not `WalletAsAServiceAddressBalanceNotEnough`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of WalletAsAServiceAddressBalanceNotEnough</returns>
+        public WalletAsAServiceAddressBalanceNotEnough GetWalletAsAServiceAddressBalanceNotEnough()
+        {
+            return (WalletAsAServiceAddressBalanceNotEnough)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `WalletAsAServiceNoDepositAddressesFound`. If the actual instance is not `WalletAsAServiceNoDepositAddressesFound`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of WalletAsAServiceNoDepositAddressesFound</returns>
+        public WalletAsAServiceNoDepositAddressesFound GetWalletAsAServiceNoDepositAddressesFound()
+        {
+            return (WalletAsAServiceNoDepositAddressesFound)this.ActualInstance;
         }
 
         /// <summary>
@@ -189,6 +215,26 @@ namespace CryptoAPIs.Model
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into InvalidData: {1}", jsonString, exception.ToString()));
+            }
+
+            try
+            {
+                // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
+                if (typeof(WalletAsAServiceAddressBalanceNotEnough).GetProperty("AdditionalProperties") == null)
+                {
+                    newCreateCoinsTransactionRequestFromWalletE409 = new CreateCoinsTransactionRequestFromWalletE409(JsonConvert.DeserializeObject<WalletAsAServiceAddressBalanceNotEnough>(jsonString, CreateCoinsTransactionRequestFromWalletE409.SerializerSettings));
+                }
+                else
+                {
+                    newCreateCoinsTransactionRequestFromWalletE409 = new CreateCoinsTransactionRequestFromWalletE409(JsonConvert.DeserializeObject<WalletAsAServiceAddressBalanceNotEnough>(jsonString, CreateCoinsTransactionRequestFromWalletE409.AdditionalPropertiesSerializerSettings));
+                }
+                matchedTypes.Add("WalletAsAServiceAddressBalanceNotEnough");
+                match++;
+            }
+            catch (Exception exception)
+            {
+                // deserialization failed, try the next one
+                System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into WalletAsAServiceAddressBalanceNotEnough: {1}", jsonString, exception.ToString()));
             }
 
             try

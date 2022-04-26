@@ -45,18 +45,20 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction&#39;s version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public ListConfirmedTransactionsByAddressRIBSD2(int locktime = default(int), int size = default(int), int version = default(int), List<ListConfirmedTransactionsByAddressRIBSD2Vin> vin = default(List<ListConfirmedTransactionsByAddressRIBSD2Vin>), List<ListConfirmedTransactionsByAddressRIBSD2Vout> vout = default(List<ListConfirmedTransactionsByAddressRIBSD2Vout>))
+        public ListConfirmedTransactionsByAddressRIBSD2(long locktime = default(long), int size = default(int), int version = default(int), List<ListConfirmedTransactionsByAddressRIBSD2Vin> vin = default(List<ListConfirmedTransactionsByAddressRIBSD2Vin>), List<ListConfirmedTransactionsByAddressRIBSD2Vout> vout = default(List<ListConfirmedTransactionsByAddressRIBSD2Vout>))
         {
             this.Locktime = locktime;
             this.Size = size;
             this._Version = version;
             // to ensure "vin" is required (not null)
-            if (vin == null) {
+            if (vin == null)
+            {
                 throw new ArgumentNullException("vin is a required property for ListConfirmedTransactionsByAddressRIBSD2 and cannot be null");
             }
             this.Vin = vin;
             // to ensure "vout" is required (not null)
-            if (vout == null) {
+            if (vout == null)
+            {
                 throw new ArgumentNullException("vout is a required property for ListConfirmedTransactionsByAddressRIBSD2 and cannot be null");
             }
             this.Vout = vout;
@@ -67,7 +69,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid.</value>
         [DataMember(Name = "locktime", IsRequired = true, EmitDefaultValue = false)]
-        public int Locktime { get; set; }
+        public long Locktime { get; set; }
 
         /// <summary>
         /// Represents the total size of this transaction.

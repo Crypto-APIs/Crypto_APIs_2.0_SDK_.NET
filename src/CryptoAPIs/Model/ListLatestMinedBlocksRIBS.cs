@@ -60,10 +60,34 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListLatestMinedBlocksRIBS" /> class
-        /// with the <see cref="ListLatestMinedBlocksRIBSBSC" /> class
+        /// with the <see cref="ListLatestMinedBlocksRIBSEC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSBSC.</param>
-        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSEC.</param>
+        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSEC actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListLatestMinedBlocksRIBS" /> class
+        /// with the <see cref="ListLatestMinedBlocksRIBSE" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSE.</param>
+        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSE actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListLatestMinedBlocksRIBS" /> class
+        /// with the <see cref="ListLatestMinedBlocksRIBSL" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSL.</param>
+        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -96,34 +120,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListLatestMinedBlocksRIBS" /> class
-        /// with the <see cref="ListLatestMinedBlocksRIBSE" /> class
+        /// with the <see cref="ListLatestMinedBlocksRIBSBSC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSE.</param>
-        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSE actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ListLatestMinedBlocksRIBS" /> class
-        /// with the <see cref="ListLatestMinedBlocksRIBSEC" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSEC.</param>
-        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSEC actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ListLatestMinedBlocksRIBS" /> class
-        /// with the <see cref="ListLatestMinedBlocksRIBSL" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSL.</param>
-        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of ListLatestMinedBlocksRIBSBSC.</param>
+        public ListLatestMinedBlocksRIBS(ListLatestMinedBlocksRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -236,13 +236,33 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListLatestMinedBlocksRIBSBSC`. If the actual instance is not `ListLatestMinedBlocksRIBSBSC`,
+        /// Get the actual instance of `ListLatestMinedBlocksRIBSEC`. If the actual instance is not `ListLatestMinedBlocksRIBSEC`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListLatestMinedBlocksRIBSBSC</returns>
-        public ListLatestMinedBlocksRIBSBSC GetListLatestMinedBlocksRIBSBSC()
+        /// <returns>An instance of ListLatestMinedBlocksRIBSEC</returns>
+        public ListLatestMinedBlocksRIBSEC GetListLatestMinedBlocksRIBSEC()
         {
-            return (ListLatestMinedBlocksRIBSBSC)this.ActualInstance;
+            return (ListLatestMinedBlocksRIBSEC)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListLatestMinedBlocksRIBSE`. If the actual instance is not `ListLatestMinedBlocksRIBSE`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListLatestMinedBlocksRIBSE</returns>
+        public ListLatestMinedBlocksRIBSE GetListLatestMinedBlocksRIBSE()
+        {
+            return (ListLatestMinedBlocksRIBSE)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListLatestMinedBlocksRIBSL`. If the actual instance is not `ListLatestMinedBlocksRIBSL`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListLatestMinedBlocksRIBSL</returns>
+        public ListLatestMinedBlocksRIBSL GetListLatestMinedBlocksRIBSL()
+        {
+            return (ListLatestMinedBlocksRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -266,33 +286,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListLatestMinedBlocksRIBSE`. If the actual instance is not `ListLatestMinedBlocksRIBSE`,
+        /// Get the actual instance of `ListLatestMinedBlocksRIBSBSC`. If the actual instance is not `ListLatestMinedBlocksRIBSBSC`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListLatestMinedBlocksRIBSE</returns>
-        public ListLatestMinedBlocksRIBSE GetListLatestMinedBlocksRIBSE()
+        /// <returns>An instance of ListLatestMinedBlocksRIBSBSC</returns>
+        public ListLatestMinedBlocksRIBSBSC GetListLatestMinedBlocksRIBSBSC()
         {
-            return (ListLatestMinedBlocksRIBSE)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `ListLatestMinedBlocksRIBSEC`. If the actual instance is not `ListLatestMinedBlocksRIBSEC`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of ListLatestMinedBlocksRIBSEC</returns>
-        public ListLatestMinedBlocksRIBSEC GetListLatestMinedBlocksRIBSEC()
-        {
-            return (ListLatestMinedBlocksRIBSEC)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `ListLatestMinedBlocksRIBSL`. If the actual instance is not `ListLatestMinedBlocksRIBSL`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of ListLatestMinedBlocksRIBSL</returns>
-        public ListLatestMinedBlocksRIBSL GetListLatestMinedBlocksRIBSL()
-        {
-            return (ListLatestMinedBlocksRIBSL)this.ActualInstance;
+            return (ListLatestMinedBlocksRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetAssetDetailsByAssetSymbolRData(GetAssetDetailsByAssetSymbolRI item = default(GetAssetDetailsByAssetSymbolRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetAssetDetailsByAssetSymbolRData and cannot be null");
             }
             this.Item = item;

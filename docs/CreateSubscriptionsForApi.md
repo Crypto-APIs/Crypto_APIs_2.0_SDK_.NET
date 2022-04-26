@@ -48,7 +48,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var minedTransactionRB = new MinedTransactionRB(); // MinedTransactionRB |  (optional) 
 
             try
@@ -139,7 +139,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newBlockRB = new NewBlockRB(); // NewBlockRB |  (optional) 
 
             try
@@ -230,7 +230,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newConfirmedCoinsTransactionsRB = new NewConfirmedCoinsTransactionsRB(); // NewConfirmedCoinsTransactionsRB |  (optional) 
 
             try
@@ -321,7 +321,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newConfirmedCoinsTransactionsAndEachConfirmationRB = new NewConfirmedCoinsTransactionsAndEachConfirmationRB(); // NewConfirmedCoinsTransactionsAndEachConfirmationRB |  (optional) 
 
             try
@@ -412,7 +412,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = ethereum-classic;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = mordor;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newConfirmedInternalTransactionsRB = new NewConfirmedInternalTransactionsRB(); // NewConfirmedInternalTransactionsRB |  (optional) 
 
             try
@@ -503,7 +503,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = ethereum-classic;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = mordor;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newConfirmedInternalTransactionsAndEachConfirmationRB = new NewConfirmedInternalTransactionsAndEachConfirmationRB(); // NewConfirmedInternalTransactionsAndEachConfirmationRB |  (optional) 
 
             try
@@ -594,7 +594,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = ethereum;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newConfirmedTokensTransactionsRB = new NewConfirmedTokensTransactionsRB(); // NewConfirmedTokensTransactionsRB |  (optional) 
 
             try
@@ -685,7 +685,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = ethereum;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newConfirmedTokensTransactionsAndEachConfirmationRB = new NewConfirmedTokensTransactionsAndEachConfirmationRB(); // NewConfirmedTokensTransactionsAndEachConfirmationRB |  (optional) 
 
             try
@@ -776,7 +776,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newUnconfirmedCoinsTransactionsRB = new NewUnconfirmedCoinsTransactionsRB(); // NewUnconfirmedCoinsTransactionsRB |  (optional) 
 
             try
@@ -867,7 +867,7 @@ namespace Example
             var apiInstance = new CreateSubscriptionsForApi(config);
             var blockchain = ethereum;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var newUnconfirmedTokensTransactionsRB = new NewUnconfirmedTokensTransactionsRB(); // NewUnconfirmedTokensTransactionsRB |  (optional) 
 
             try

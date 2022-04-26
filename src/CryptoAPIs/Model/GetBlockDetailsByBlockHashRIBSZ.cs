@@ -50,28 +50,33 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHashRIBSZ(string difficulty = default(string), string nonce = default(string), int size = default(int), string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), int version = default(int))
         {
             // to ensure "difficulty" is required (not null)
-            if (difficulty == null) {
+            if (difficulty == null)
+            {
                 throw new ArgumentNullException("difficulty is a required property for GetBlockDetailsByBlockHashRIBSZ and cannot be null");
             }
             this.Difficulty = difficulty;
             // to ensure "nonce" is required (not null)
-            if (nonce == null) {
+            if (nonce == null)
+            {
                 throw new ArgumentNullException("nonce is a required property for GetBlockDetailsByBlockHashRIBSZ and cannot be null");
             }
             this.Nonce = nonce;
             this.Size = size;
             // to ensure "bits" is required (not null)
-            if (bits == null) {
+            if (bits == null)
+            {
                 throw new ArgumentNullException("bits is a required property for GetBlockDetailsByBlockHashRIBSZ and cannot be null");
             }
             this.Bits = bits;
             // to ensure "chainwork" is required (not null)
-            if (chainwork == null) {
+            if (chainwork == null)
+            {
                 throw new ArgumentNullException("chainwork is a required property for GetBlockDetailsByBlockHashRIBSZ and cannot be null");
             }
             this.Chainwork = chainwork;
             // to ensure "merkleRoot" is required (not null)
-            if (merkleRoot == null) {
+            if (merkleRoot == null)
+            {
                 throw new ArgumentNullException("merkleRoot is a required property for GetBlockDetailsByBlockHashRIBSZ and cannot be null");
             }
             this.MerkleRoot = merkleRoot;

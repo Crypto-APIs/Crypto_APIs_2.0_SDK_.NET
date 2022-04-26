@@ -40,58 +40,48 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MinedTransactionRI" /> class.
         /// </summary>
-        /// <param name="address">Represents the address of the transaction. (required).</param>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
-        /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. (required).</param>
         /// <param name="createdTimestamp">Defines the specific time/date when the subscription was created in Unix Timestamp. (required).</param>
         /// <param name="eventType">Defines the type of the specific event available for the customer to subscribe to for callback notification. (required).</param>
         /// <param name="isActive">Defines whether the subscription is active or not. Set as boolean. (required).</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription. (required).</param>
         /// <param name="transactionId">Represents the unique identification string that defines the transaction. (required).</param>
-        public MinedTransactionRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string), string transactionId = default(string))
+        public MinedTransactionRI(string callbackSecretKey = default(string), string callbackUrl = default(string), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string), string transactionId = default(string))
         {
-            // to ensure "address" is required (not null)
-            if (address == null) {
-                throw new ArgumentNullException("address is a required property for MinedTransactionRI and cannot be null");
-            }
-            this.Address = address;
             // to ensure "callbackSecretKey" is required (not null)
-            if (callbackSecretKey == null) {
+            if (callbackSecretKey == null)
+            {
                 throw new ArgumentNullException("callbackSecretKey is a required property for MinedTransactionRI and cannot be null");
             }
             this.CallbackSecretKey = callbackSecretKey;
             // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
+            if (callbackUrl == null)
+            {
                 throw new ArgumentNullException("callbackUrl is a required property for MinedTransactionRI and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
-            this.ConfirmationsCount = confirmationsCount;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "eventType" is required (not null)
-            if (eventType == null) {
+            if (eventType == null)
+            {
                 throw new ArgumentNullException("eventType is a required property for MinedTransactionRI and cannot be null");
             }
             this.EventType = eventType;
             this.IsActive = isActive;
             // to ensure "referenceId" is required (not null)
-            if (referenceId == null) {
+            if (referenceId == null)
+            {
                 throw new ArgumentNullException("referenceId is a required property for MinedTransactionRI and cannot be null");
             }
             this.ReferenceId = referenceId;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for MinedTransactionRI and cannot be null");
             }
             this.TransactionId = transactionId;
         }
-
-        /// <summary>
-        /// Represents the address of the transaction.
-        /// </summary>
-        /// <value>Represents the address of the transaction.</value>
-        [DataMember(Name = "address", IsRequired = true, EmitDefaultValue = false)]
-        public string Address { get; set; }
 
         /// <summary>
         /// Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
@@ -101,18 +91,11 @@ namespace CryptoAPIs.Model
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
-
-        /// <summary>
-        /// Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.
-        /// </summary>
-        /// <value>Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.</value>
-        [DataMember(Name = "confirmationsCount", IsRequired = true, EmitDefaultValue = false)]
-        public int ConfirmationsCount { get; set; }
 
         /// <summary>
         /// Defines the specific time/date when the subscription was created in Unix Timestamp.
@@ -157,10 +140,8 @@ namespace CryptoAPIs.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class MinedTransactionRI {\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  CallbackSecretKey: ").Append(CallbackSecretKey).Append("\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
-            sb.Append("  ConfirmationsCount: ").Append(ConfirmationsCount).Append("\n");
             sb.Append("  CreatedTimestamp: ").Append(CreatedTimestamp).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
@@ -202,11 +183,6 @@ namespace CryptoAPIs.Model
             }
             return 
                 (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
-                ) && 
-                (
                     this.CallbackSecretKey == input.CallbackSecretKey ||
                     (this.CallbackSecretKey != null &&
                     this.CallbackSecretKey.Equals(input.CallbackSecretKey))
@@ -215,10 +191,6 @@ namespace CryptoAPIs.Model
                     this.CallbackUrl == input.CallbackUrl ||
                     (this.CallbackUrl != null &&
                     this.CallbackUrl.Equals(input.CallbackUrl))
-                ) && 
-                (
-                    this.ConfirmationsCount == input.ConfirmationsCount ||
-                    this.ConfirmationsCount.Equals(input.ConfirmationsCount)
                 ) && 
                 (
                     this.CreatedTimestamp == input.CreatedTimestamp ||
@@ -254,10 +226,6 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Address != null)
-                {
-                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
-                }
                 if (this.CallbackSecretKey != null)
                 {
                     hashCode = (hashCode * 59) + this.CallbackSecretKey.GetHashCode();
@@ -266,7 +234,6 @@ namespace CryptoAPIs.Model
                 {
                     hashCode = (hashCode * 59) + this.CallbackUrl.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.ConfirmationsCount.GetHashCode();
                 hashCode = (hashCode * 59) + this.CreatedTimestamp.GetHashCode();
                 if (this.EventType != null)
                 {

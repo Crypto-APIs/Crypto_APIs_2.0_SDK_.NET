@@ -48,23 +48,27 @@ namespace CryptoAPIs.Model
         public ListAllUnconfirmedTransactionsRIBSEC(ListAllUnconfirmedTransactionsRIBSECFee fee = default(ListAllUnconfirmedTransactionsRIBSECFee), string gasLimit = default(string), ListAllUnconfirmedTransactionsRIBSECGasPrice gasPrice = default(ListAllUnconfirmedTransactionsRIBSECGasPrice), int nonce = default(int), string transactionStatus = default(string))
         {
             // to ensure "fee" is required (not null)
-            if (fee == null) {
+            if (fee == null)
+            {
                 throw new ArgumentNullException("fee is a required property for ListAllUnconfirmedTransactionsRIBSEC and cannot be null");
             }
             this.Fee = fee;
             // to ensure "gasLimit" is required (not null)
-            if (gasLimit == null) {
+            if (gasLimit == null)
+            {
                 throw new ArgumentNullException("gasLimit is a required property for ListAllUnconfirmedTransactionsRIBSEC and cannot be null");
             }
             this.GasLimit = gasLimit;
             // to ensure "gasPrice" is required (not null)
-            if (gasPrice == null) {
+            if (gasPrice == null)
+            {
                 throw new ArgumentNullException("gasPrice is a required property for ListAllUnconfirmedTransactionsRIBSEC and cannot be null");
             }
             this.GasPrice = gasPrice;
             this.Nonce = nonce;
             // to ensure "transactionStatus" is required (not null)
-            if (transactionStatus == null) {
+            if (transactionStatus == null)
+            {
                 throw new ArgumentNullException("transactionStatus is a required property for ListAllUnconfirmedTransactionsRIBSEC and cannot be null");
             }
             this.TransactionStatus = transactionStatus;

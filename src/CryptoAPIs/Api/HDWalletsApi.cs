@@ -28,6 +28,37 @@ namespace CryptoAPIs.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetHDWalletXPubYPubZPubAssetsR</returns>
+        GetHDWalletXPubYPubZPubAssetsR GetHDWalletXPubYPubZPubAssets(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetHDWalletXPubYPubZPubAssetsR</returns>
+        ApiResponse<GetHDWalletXPubYPubZPubAssetsR> GetHDWalletXPubYPubZPubAssetsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0);
+        /// <summary>
         /// Get HD Wallet (xPub, yPub, zPub) Details
         /// </summary>
         /// <remarks>
@@ -39,8 +70,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetHDWalletXPubYPubZPubDetailsR</returns>
-        GetHDWalletXPubYPubZPubDetailsR GetHDWalletXPubYPubZPubDetails(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string));
+        GetHDWalletXPubYPubZPubDetailsR GetHDWalletXPubYPubZPubDetails(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get HD Wallet (xPub, yPub, zPub) Details
@@ -54,8 +86,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetHDWalletXPubYPubZPubDetailsR</returns>
-        ApiResponse<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string));
+        ApiResponse<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0);
         /// <summary>
         /// List HD Wallet (xPub, yPub, zPub) Transactions
         /// </summary>
@@ -70,8 +103,9 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListHDWalletXPubYPubZPubTransactionsR</returns>
-        ListHDWalletXPubYPubZPubTransactionsR ListHDWalletXPubYPubZPubTransactions(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListHDWalletXPubYPubZPubTransactionsR ListHDWalletXPubYPubZPubTransactions(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List HD Wallet (xPub, yPub, zPub) Transactions
@@ -87,8 +121,44 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListHDWalletXPubYPubZPubTransactionsR</returns>
-        ApiResponse<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListHDWalletXPubYPubZPubUTXOsR</returns>
+        ListHDWalletXPubYPubZPubUTXOsR ListHDWalletXPubYPubZPubUTXOs(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+
+        /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListHDWalletXPubYPubZPubUTXOsR</returns>
+        ApiResponse<ListHDWalletXPubYPubZPubUTXOsR> ListHDWalletXPubYPubZPubUTXOsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// Sync HD Wallet (xPub, yPub, zPub)
         /// </summary>
@@ -100,8 +170,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SyncHDWalletXPubYPubZPubR</returns>
-        SyncHDWalletXPubYPubZPubR SyncHDWalletXPubYPubZPub(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB));
+        SyncHDWalletXPubYPubZPubR SyncHDWalletXPubYPubZPub(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0);
 
         /// <summary>
         /// Sync HD Wallet (xPub, yPub, zPub)
@@ -114,8 +185,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SyncHDWalletXPubYPubZPubR</returns>
-        ApiResponse<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubWithHttpInfo(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB));
+        ApiResponse<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubWithHttpInfo(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -126,6 +198,39 @@ namespace CryptoAPIs.Api
     {
         #region Asynchronous Operations
         /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetHDWalletXPubYPubZPubAssetsR</returns>
+        System.Threading.Tasks.Task<GetHDWalletXPubYPubZPubAssetsR> GetHDWalletXPubYPubZPubAssetsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetHDWalletXPubYPubZPubAssetsR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetHDWalletXPubYPubZPubAssetsR>> GetHDWalletXPubYPubZPubAssetsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Get HD Wallet (xPub, yPub, zPub) Details
         /// </summary>
         /// <remarks>
@@ -137,9 +242,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetHDWalletXPubYPubZPubDetailsR</returns>
-        System.Threading.Tasks.Task<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get HD Wallet (xPub, yPub, zPub) Details
@@ -153,9 +259,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetHDWalletXPubYPubZPubDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetHDWalletXPubYPubZPubDetailsR>> GetHDWalletXPubYPubZPubDetailsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetHDWalletXPubYPubZPubDetailsR>> GetHDWalletXPubYPubZPubDetailsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List HD Wallet (xPub, yPub, zPub) Transactions
         /// </summary>
@@ -170,9 +277,10 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListHDWalletXPubYPubZPubTransactionsR</returns>
-        System.Threading.Tasks.Task<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List HD Wallet (xPub, yPub, zPub) Transactions
@@ -188,9 +296,47 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListHDWalletXPubYPubZPubTransactionsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListHDWalletXPubYPubZPubTransactionsR>> ListHDWalletXPubYPubZPubTransactionsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListHDWalletXPubYPubZPubTransactionsR>> ListHDWalletXPubYPubZPubTransactionsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListHDWalletXPubYPubZPubUTXOsR</returns>
+        System.Threading.Tasks.Task<ListHDWalletXPubYPubZPubUTXOsR> ListHDWalletXPubYPubZPubUTXOsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListHDWalletXPubYPubZPubUTXOsR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ListHDWalletXPubYPubZPubUTXOsR>> ListHDWalletXPubYPubZPubUTXOsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Sync HD Wallet (xPub, yPub, zPub)
         /// </summary>
@@ -202,9 +348,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SyncHDWalletXPubYPubZPubR</returns>
-        System.Threading.Tasks.Task<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Sync HD Wallet (xPub, yPub, zPub)
@@ -217,9 +364,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SyncHDWalletXPubYPubZPubR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SyncHDWalletXPubYPubZPubR>> SyncHDWalletXPubYPubZPubWithHttpInfoAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SyncHDWalletXPubYPubZPubR>> SyncHDWalletXPubYPubZPubWithHttpInfoAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -341,6 +489,220 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>GetHDWalletXPubYPubZPubAssetsR</returns>
+        public GetHDWalletXPubYPubZPubAssetsR GetHDWalletXPubYPubZPubAssets(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubAssetsR> localVarResponse = GetHDWalletXPubYPubZPubAssetsWithHttpInfo(blockchain, extendedPublicKey, network, context, derivation);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of GetHDWalletXPubYPubZPubAssetsR</returns>
+        public CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubAssetsR> GetHDWalletXPubYPubZPubAssetsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling HDWalletsApi->GetHDWalletXPubYPubZPubAssets");
+            }
+
+            // verify the required parameter 'extendedPublicKey' is set
+            if (extendedPublicKey == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'extendedPublicKey' when calling HDWalletsApi->GetHDWalletXPubYPubZPubAssets");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling HDWalletsApi->GetHDWalletXPubYPubZPubAssets");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("extendedPublicKey", CryptoAPIs.Client.ClientUtils.ParameterToString(extendedPublicKey)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (derivation != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "derivation", derivation));
+            }
+
+            localVarRequestOptions.Operation = "HDWalletsApi.GetHDWalletXPubYPubZPubAssets";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<GetHDWalletXPubYPubZPubAssetsR>("/blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/assets", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetHDWalletXPubYPubZPubAssets", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of GetHDWalletXPubYPubZPubAssetsR</returns>
+        public async System.Threading.Tasks.Task<GetHDWalletXPubYPubZPubAssetsR> GetHDWalletXPubYPubZPubAssetsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubAssetsR> localVarResponse = await GetHDWalletXPubYPubZPubAssetsWithHttpInfoAsync(blockchain, extendedPublicKey, network, context, derivation, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get HD Wallet (xPub, yPub, zPub) Assets This endpoint will return details on assets we support for a specified from the customer extended public key (xPub). These could be cryptocurrencies, fungible or non-fungible (NFT) tokens. Each asset has a unique identifier - assetId, and a unique symbol in the form of a string, e.g. \&quot;USDT\&quot;.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (GetHDWalletXPubYPubZPubAssetsR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubAssetsR>> GetHDWalletXPubYPubZPubAssetsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling HDWalletsApi->GetHDWalletXPubYPubZPubAssets");
+            }
+
+            // verify the required parameter 'extendedPublicKey' is set
+            if (extendedPublicKey == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'extendedPublicKey' when calling HDWalletsApi->GetHDWalletXPubYPubZPubAssets");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling HDWalletsApi->GetHDWalletXPubYPubZPubAssets");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("extendedPublicKey", CryptoAPIs.Client.ClientUtils.ParameterToString(extendedPublicKey)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (derivation != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "derivation", derivation));
+            }
+
+            localVarRequestOptions.Operation = "HDWalletsApi.GetHDWalletXPubYPubZPubAssets";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetHDWalletXPubYPubZPubAssetsR>("/blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/assets", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetHDWalletXPubYPubZPubAssets", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Get HD Wallet (xPub, yPub, zPub) Details HD wallet details is useful endpoint to get the most important data about HD wallet without the need to do a lot of calculations, once the HD Wallet is synced using Sync endpoint we keep it up to date and we calculate these details in advance.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -349,8 +711,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetHDWalletXPubYPubZPubDetailsR</returns>
-        public GetHDWalletXPubYPubZPubDetailsR GetHDWalletXPubYPubZPubDetails(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string))
+        public GetHDWalletXPubYPubZPubDetailsR GetHDWalletXPubYPubZPubDetails(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubDetailsR> localVarResponse = GetHDWalletXPubYPubZPubDetailsWithHttpInfo(blockchain, extendedPublicKey, network, context, derivation);
             return localVarResponse.Data;
@@ -365,8 +728,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetHDWalletXPubYPubZPubDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -419,6 +783,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "derivation", derivation));
             }
+
+            localVarRequestOptions.Operation = "HDWalletsApi.GetHDWalletXPubYPubZPubDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -449,11 +816,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetHDWalletXPubYPubZPubDetailsR</returns>
-        public async System.Threading.Tasks.Task<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetHDWalletXPubYPubZPubDetailsR> GetHDWalletXPubYPubZPubDetailsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubDetailsR> localVarResponse = await GetHDWalletXPubYPubZPubDetailsWithHttpInfoAsync(blockchain, extendedPublicKey, network, context, derivation, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubDetailsR> localVarResponse = await GetHDWalletXPubYPubZPubDetailsWithHttpInfoAsync(blockchain, extendedPublicKey, network, context, derivation, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -466,9 +834,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetHDWalletXPubYPubZPubDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubDetailsR>> GetHDWalletXPubYPubZPubDetailsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetHDWalletXPubYPubZPubDetailsR>> GetHDWalletXPubYPubZPubDetailsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -522,6 +891,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "derivation", derivation));
             }
+
+            localVarRequestOptions.Operation = "HDWalletsApi.GetHDWalletXPubYPubZPubDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -555,8 +927,9 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListHDWalletXPubYPubZPubTransactionsR</returns>
-        public ListHDWalletXPubYPubZPubTransactionsR ListHDWalletXPubYPubZPubTransactions(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListHDWalletXPubYPubZPubTransactionsR ListHDWalletXPubYPubZPubTransactions(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubTransactionsR> localVarResponse = ListHDWalletXPubYPubZPubTransactionsWithHttpInfo(blockchain, extendedPublicKey, network, context, derivation, limit, offset);
             return localVarResponse.Data;
@@ -573,8 +946,9 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListHDWalletXPubYPubZPubTransactionsR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -635,6 +1009,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "HDWalletsApi.ListHDWalletXPubYPubZPubTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -667,11 +1044,12 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListHDWalletXPubYPubZPubTransactionsR</returns>
-        public async System.Threading.Tasks.Task<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListHDWalletXPubYPubZPubTransactionsR> ListHDWalletXPubYPubZPubTransactionsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubTransactionsR> localVarResponse = await ListHDWalletXPubYPubZPubTransactionsWithHttpInfoAsync(blockchain, extendedPublicKey, network, context, derivation, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubTransactionsR> localVarResponse = await ListHDWalletXPubYPubZPubTransactionsWithHttpInfoAsync(blockchain, extendedPublicKey, network, context, derivation, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -686,9 +1064,10 @@ namespace CryptoAPIs.Api
         /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListHDWalletXPubYPubZPubTransactionsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubTransactionsR>> ListHDWalletXPubYPubZPubTransactionsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubTransactionsR>> ListHDWalletXPubYPubZPubTransactionsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -751,6 +1130,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
 
+            localVarRequestOptions.Operation = "HDWalletsApi.ListHDWalletXPubYPubZPubTransactions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -773,6 +1155,244 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ListHDWalletXPubYPubZPubUTXOsR</returns>
+        public ListHDWalletXPubYPubZPubUTXOsR ListHDWalletXPubYPubZPubUTXOs(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubUTXOsR> localVarResponse = ListHDWalletXPubYPubZPubUTXOsWithHttpInfo(blockchain, extendedPublicKey, network, context, derivation, limit, offset);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ListHDWalletXPubYPubZPubUTXOsR</returns>
+        public CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubUTXOsR> ListHDWalletXPubYPubZPubUTXOsWithHttpInfo(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling HDWalletsApi->ListHDWalletXPubYPubZPubUTXOs");
+            }
+
+            // verify the required parameter 'extendedPublicKey' is set
+            if (extendedPublicKey == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'extendedPublicKey' when calling HDWalletsApi->ListHDWalletXPubYPubZPubUTXOs");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling HDWalletsApi->ListHDWalletXPubYPubZPubUTXOs");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("extendedPublicKey", CryptoAPIs.Client.ClientUtils.ParameterToString(extendedPublicKey)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (derivation != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "derivation", derivation));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            localVarRequestOptions.Operation = "HDWalletsApi.ListHDWalletXPubYPubZPubUTXOs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ListHDWalletXPubYPubZPubUTXOsR>("/blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/utxos", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListHDWalletXPubYPubZPubUTXOs", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ListHDWalletXPubYPubZPubUTXOsR</returns>
+        public async System.Threading.Tasks.Task<ListHDWalletXPubYPubZPubUTXOsR> ListHDWalletXPubYPubZPubUTXOsAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubUTXOsR> localVarResponse = await ListHDWalletXPubYPubZPubUTXOsWithHttpInfoAsync(blockchain, extendedPublicKey, network, context, derivation, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List HD Wallet (xPub, yPub, zPub) UTXOs Through this endpoint you can list HD wallet&#39;s UTXOs (Unspent Transaction Outputs) by providing extended public key of an already synced HD wallet.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="extendedPublicKey">Defines the account extended publicly known key which is used to derive all child public keys.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="derivation">The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)</param>
+        /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
+        /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ListHDWalletXPubYPubZPubUTXOsR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListHDWalletXPubYPubZPubUTXOsR>> ListHDWalletXPubYPubZPubUTXOsWithHttpInfoAsync(string blockchain, string extendedPublicKey, string network, string context = default(string), string derivation = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling HDWalletsApi->ListHDWalletXPubYPubZPubUTXOs");
+            }
+
+            // verify the required parameter 'extendedPublicKey' is set
+            if (extendedPublicKey == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'extendedPublicKey' when calling HDWalletsApi->ListHDWalletXPubYPubZPubUTXOs");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling HDWalletsApi->ListHDWalletXPubYPubZPubUTXOs");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("extendedPublicKey", CryptoAPIs.Client.ClientUtils.ParameterToString(extendedPublicKey)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            if (derivation != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "derivation", derivation));
+            }
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (offset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+            }
+
+            localVarRequestOptions.Operation = "HDWalletsApi.ListHDWalletXPubYPubZPubUTXOs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ListHDWalletXPubYPubZPubUTXOsR>("/blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/utxos", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListHDWalletXPubYPubZPubUTXOs", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Sync HD Wallet (xPub, yPub, zPub) HD wallets usually have a lot of addresses and transactions, getting the data on demand is a heavy operation. That&#39;s why we have created this feature, to be able to get HD wallet details or transactions this HD wallet must be synced first. In addition to the initial sync we keep updating the synced HD wallets all the time.
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -780,8 +1400,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SyncHDWalletXPubYPubZPubR</returns>
-        public SyncHDWalletXPubYPubZPubR SyncHDWalletXPubYPubZPub(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB))
+        public SyncHDWalletXPubYPubZPubR SyncHDWalletXPubYPubZPub(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<SyncHDWalletXPubYPubZPubR> localVarResponse = SyncHDWalletXPubYPubZPubWithHttpInfo(blockchain, network, context, syncHDWalletXPubYPubZPubRB);
             return localVarResponse.Data;
@@ -795,8 +1416,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SyncHDWalletXPubYPubZPubR</returns>
-        public CryptoAPIs.Client.ApiResponse<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubWithHttpInfo(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB))
+        public CryptoAPIs.Client.ApiResponse<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubWithHttpInfo(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -840,6 +1462,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = syncHDWalletXPubYPubZPubRB;
+
+            localVarRequestOptions.Operation = "HDWalletsApi.SyncHDWalletXPubYPubZPub";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -869,11 +1494,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SyncHDWalletXPubYPubZPubR</returns>
-        public async System.Threading.Tasks.Task<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SyncHDWalletXPubYPubZPubR> SyncHDWalletXPubYPubZPubAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<SyncHDWalletXPubYPubZPubR> localVarResponse = await SyncHDWalletXPubYPubZPubWithHttpInfoAsync(blockchain, network, context, syncHDWalletXPubYPubZPubRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<SyncHDWalletXPubYPubZPubR> localVarResponse = await SyncHDWalletXPubYPubZPubWithHttpInfoAsync(blockchain, network, context, syncHDWalletXPubYPubZPubRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -885,9 +1511,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="syncHDWalletXPubYPubZPubRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SyncHDWalletXPubYPubZPubR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<SyncHDWalletXPubYPubZPubR>> SyncHDWalletXPubYPubZPubWithHttpInfoAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<SyncHDWalletXPubYPubZPubR>> SyncHDWalletXPubYPubZPubWithHttpInfoAsync(string blockchain, string network, string context = default(string), SyncHDWalletXPubYPubZPubRB syncHDWalletXPubYPubZPubRB = default(SyncHDWalletXPubYPubZPubRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -932,6 +1559,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = syncHDWalletXPubYPubZPubRB;
+
+            localVarRequestOptions.Operation = "HDWalletsApi.SyncHDWalletXPubYPubZPub";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

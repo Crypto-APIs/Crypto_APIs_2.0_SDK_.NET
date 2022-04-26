@@ -46,17 +46,20 @@ namespace CryptoAPIs.Model
         public GetEIP1559FeeRecommendationsRI(GetEIP1559FeeRecommendationsRIBaseFeePerGas baseFeePerGas = default(GetEIP1559FeeRecommendationsRIBaseFeePerGas), GetEIP1559FeeRecommendationsRIMaxFeePerGas maxFeePerGas = default(GetEIP1559FeeRecommendationsRIMaxFeePerGas), GetEIP1559FeeRecommendationsRIMaxPriorityFeePerGas maxPriorityFeePerGas = default(GetEIP1559FeeRecommendationsRIMaxPriorityFeePerGas))
         {
             // to ensure "baseFeePerGas" is required (not null)
-            if (baseFeePerGas == null) {
+            if (baseFeePerGas == null)
+            {
                 throw new ArgumentNullException("baseFeePerGas is a required property for GetEIP1559FeeRecommendationsRI and cannot be null");
             }
             this.BaseFeePerGas = baseFeePerGas;
             // to ensure "maxFeePerGas" is required (not null)
-            if (maxFeePerGas == null) {
+            if (maxFeePerGas == null)
+            {
                 throw new ArgumentNullException("maxFeePerGas is a required property for GetEIP1559FeeRecommendationsRI and cannot be null");
             }
             this.MaxFeePerGas = maxFeePerGas;
             // to ensure "maxPriorityFeePerGas" is required (not null)
-            if (maxPriorityFeePerGas == null) {
+            if (maxPriorityFeePerGas == null)
+            {
                 throw new ArgumentNullException("maxPriorityFeePerGas is a required property for GetEIP1559FeeRecommendationsRI and cannot be null");
             }
             this.MaxPriorityFeePerGas = maxPriorityFeePerGas;

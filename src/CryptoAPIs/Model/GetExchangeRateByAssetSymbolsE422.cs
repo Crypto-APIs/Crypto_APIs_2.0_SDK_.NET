@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetExchangeRateByAssetSymbolsE422" /> class
-        /// with the <see cref="CouldNotCalculateRateForPair" /> class
+        /// with the <see cref="InvalidRequestBodyStructure" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of CouldNotCalculateRateForPair.</param>
-        public GetExchangeRateByAssetSymbolsE422(CouldNotCalculateRateForPair actualInstance)
+        /// <param name="actualInstance">An instance of InvalidRequestBodyStructure.</param>
+        public GetExchangeRateByAssetSymbolsE422(InvalidRequestBodyStructure actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetExchangeRateByAssetSymbolsE422" /> class
-        /// with the <see cref="InvalidRequestBodyStructure" /> class
+        /// with the <see cref="CouldNotCalculateRateForPair" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of InvalidRequestBodyStructure.</param>
-        public GetExchangeRateByAssetSymbolsE422(InvalidRequestBodyStructure actualInstance)
+        /// <param name="actualInstance">An instance of CouldNotCalculateRateForPair.</param>
+        public GetExchangeRateByAssetSymbolsE422(CouldNotCalculateRateForPair actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -88,16 +88,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `CouldNotCalculateRateForPair`. If the actual instance is not `CouldNotCalculateRateForPair`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of CouldNotCalculateRateForPair</returns>
-        public CouldNotCalculateRateForPair GetCouldNotCalculateRateForPair()
-        {
-            return (CouldNotCalculateRateForPair)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `InvalidRequestBodyStructure`. If the actual instance is not `InvalidRequestBodyStructure`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -105,6 +95,16 @@ namespace CryptoAPIs.Model
         public InvalidRequestBodyStructure GetInvalidRequestBodyStructure()
         {
             return (InvalidRequestBodyStructure)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `CouldNotCalculateRateForPair`. If the actual instance is not `CouldNotCalculateRateForPair`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of CouldNotCalculateRateForPair</returns>
+        public CouldNotCalculateRateForPair GetCouldNotCalculateRateForPair()
+        {
+            return (CouldNotCalculateRateForPair)this.ActualInstance;
         }
 
         /// <summary>

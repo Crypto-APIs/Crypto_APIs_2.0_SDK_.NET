@@ -39,8 +39,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GenerateDepositAddressR</returns>
-        GenerateDepositAddressR GenerateDepositAddress(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB));
+        GenerateDepositAddressR GenerateDepositAddress(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0);
 
         /// <summary>
         /// Generate Deposit Address
@@ -54,8 +55,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GenerateDepositAddressR</returns>
-        ApiResponse<GenerateDepositAddressR> GenerateDepositAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB));
+        ApiResponse<GenerateDepositAddressR> GenerateDepositAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -77,9 +79,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GenerateDepositAddressR</returns>
-        System.Threading.Tasks.Task<GenerateDepositAddressR> GenerateDepositAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GenerateDepositAddressR> GenerateDepositAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Generate Deposit Address
@@ -93,9 +96,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GenerateDepositAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GenerateDepositAddressR>> GenerateDepositAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GenerateDepositAddressR>> GenerateDepositAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -225,8 +229,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GenerateDepositAddressR</returns>
-        public GenerateDepositAddressR GenerateDepositAddress(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB))
+        public GenerateDepositAddressR GenerateDepositAddress(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> localVarResponse = GenerateDepositAddressWithHttpInfo(blockchain, network, walletId, context, generateDepositAddressRB);
             return localVarResponse.Data;
@@ -241,8 +246,9 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GenerateDepositAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> GenerateDepositAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB))
+        public CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> GenerateDepositAddressWithHttpInfo(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -293,6 +299,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = generateDepositAddressRB;
+
+            localVarRequestOptions.Operation = "GeneratingApi.GenerateDepositAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -323,11 +332,12 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GenerateDepositAddressR</returns>
-        public async System.Threading.Tasks.Task<GenerateDepositAddressR> GenerateDepositAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GenerateDepositAddressR> GenerateDepositAddressAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> localVarResponse = await GenerateDepositAddressWithHttpInfoAsync(blockchain, network, walletId, context, generateDepositAddressRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR> localVarResponse = await GenerateDepositAddressWithHttpInfoAsync(blockchain, network, walletId, context, generateDepositAddressRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -340,9 +350,10 @@ namespace CryptoAPIs.Api
         /// <param name="walletId">Represents the unique ID of the specific Wallet.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="generateDepositAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GenerateDepositAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR>> GenerateDepositAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GenerateDepositAddressR>> GenerateDepositAddressWithHttpInfoAsync(string blockchain, string network, string walletId, string context = default(string), GenerateDepositAddressRB generateDepositAddressRB = default(GenerateDepositAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -394,6 +405,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = generateDepositAddressRB;
+
+            localVarRequestOptions.Operation = "GeneratingApi.GenerateDepositAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

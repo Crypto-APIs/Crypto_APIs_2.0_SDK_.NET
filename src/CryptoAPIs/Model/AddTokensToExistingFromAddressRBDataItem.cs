@@ -75,7 +75,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="AddTokensToExistingFromAddressRBDataItem" /> class.
         /// </summary>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security)..</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. (required).</param>
         /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;SLOW\&quot;, \&quot;STANDARD\&quot; or \&quot;FAST\&quot;. (required).</param>
         /// <param name="fromAddress">Represents the hash of the address that forwards the tokens. (required).</param>
@@ -85,29 +85,34 @@ namespace CryptoAPIs.Model
         public AddTokensToExistingFromAddressRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), FeePriorityEnum feePriority = default(FeePriorityEnum), string fromAddress = default(string), string minimumTransferAmount = default(string), string toAddress = default(string), AddTokensToExistingFromAddressRBTokenData tokenData = default(AddTokensToExistingFromAddressRBTokenData))
         {
             // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
+            if (callbackUrl == null)
+            {
                 throw new ArgumentNullException("callbackUrl is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
             this.ConfirmationsCount = confirmationsCount;
             this.FeePriority = feePriority;
             // to ensure "fromAddress" is required (not null)
-            if (fromAddress == null) {
+            if (fromAddress == null)
+            {
                 throw new ArgumentNullException("fromAddress is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
             }
             this.FromAddress = fromAddress;
             // to ensure "minimumTransferAmount" is required (not null)
-            if (minimumTransferAmount == null) {
+            if (minimumTransferAmount == null)
+            {
                 throw new ArgumentNullException("minimumTransferAmount is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
             }
             this.MinimumTransferAmount = minimumTransferAmount;
             // to ensure "toAddress" is required (not null)
-            if (toAddress == null) {
+            if (toAddress == null)
+            {
                 throw new ArgumentNullException("toAddress is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
             }
             this.ToAddress = toAddress;
             // to ensure "tokenData" is required (not null)
-            if (tokenData == null) {
+            if (tokenData == null)
+            {
                 throw new ArgumentNullException("tokenData is a required property for AddTokensToExistingFromAddressRBDataItem and cannot be null");
             }
             this.TokenData = tokenData;
@@ -122,9 +127,9 @@ namespace CryptoAPIs.Model
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 

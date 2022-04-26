@@ -56,6 +56,22 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test GetHDWalletXPubYPubZPubAssets
+        /// </summary>
+        [Fact]
+        public void GetHDWalletXPubYPubZPubAssetsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string extendedPublicKey = null;
+            //string network = null;
+            //string context = null;
+            //string derivation = null;
+            //var response = instance.GetHDWalletXPubYPubZPubAssets(blockchain, extendedPublicKey, network, context, derivation);
+            //Assert.IsType<GetHDWalletXPubYPubZPubAssetsR>(response);
+        }
+
+        /// <summary>
         /// Test GetHDWalletXPubYPubZPubDetails
         /// </summary>
         [Fact]
@@ -87,6 +103,24 @@ namespace CryptoAPIs.Test.Api
             //int? offset = null;
             //var response = instance.ListHDWalletXPubYPubZPubTransactions(blockchain, extendedPublicKey, network, context, derivation, limit, offset);
             //Assert.IsType<ListHDWalletXPubYPubZPubTransactionsR>(response);
+        }
+
+        /// <summary>
+        /// Test ListHDWalletXPubYPubZPubUTXOs
+        /// </summary>
+        [Fact]
+        public void ListHDWalletXPubYPubZPubUTXOsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string extendedPublicKey = null;
+            //string network = null;
+            //string context = null;
+            //string derivation = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListHDWalletXPubYPubZPubUTXOs(blockchain, extendedPublicKey, network, context, derivation, limit, offset);
+            //Assert.IsType<ListHDWalletXPubYPubZPubUTXOsR>(response);
         }
 
         /// <summary>

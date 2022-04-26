@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**GetTransactionRequestDetails**](InformativeApi.md#gettransactionrequestdetails) | **GET** /wallet-as-a-service/transactionRequests/{transactionRequestId} | Get Transaction Request Details
 [**GetWalletAssetDetails**](InformativeApi.md#getwalletassetdetails) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network} | Get Wallet Asset Details
 [**GetWalletTransactionDetailsByTransactionID**](InformativeApi.md#getwallettransactiondetailsbytransactionid) | **GET** /wallet-as-a-service/wallets/{blockchain}/{network}/transactions/{transactionId} | Get Wallet Transaction Details By Transaction ID
+[**ListAllAssetsByWalletID**](InformativeApi.md#listallassetsbywalletid) | **GET** /wallet-as-a-service/wallets/{walletId}/assets | List All Assets By Wallet ID
+[**ListAllAssetsFromAllWallets**](InformativeApi.md#listallassetsfromallwallets) | **GET** /wallet-as-a-service/wallets/all-assets | List All Assets From All Wallets
 [**ListDepositAddresses**](InformativeApi.md#listdepositaddresses) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | List Deposit Addresses
 [**ListSupportedTokens**](InformativeApi.md#listsupportedtokens) | **GET** /wallet-as-a-service/info/{blockchain}/{network}/supported-tokens | List Supported Tokens
 [**ListWalletTransactions**](InformativeApi.md#listwallettransactions) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transactions | List Wallet Transactions
@@ -43,7 +45,7 @@ namespace Example
 
             var apiInstance = new InformativeApi(config);
             var transactionRequestId = 6115126693397c0006f78eb4;  // string | Represents the unique ID of the transaction request.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -105,7 +107,7 @@ Name | Type | Description  | Notes
 
 Get Wallet Asset Details
 
-Through this endpoint customers can obtain details about a specific Wallet/Vault.
+Through this endpoint customers can obtain details on all assets (coins, fungible tokens, non-fungible tokens) for the entire Wallet.
 
 ### Example
 ```csharp
@@ -132,7 +134,7 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var walletId = 60c9d9921c38030006675ff6;  // string | Defines the unique ID of the Wallet.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -224,7 +226,7 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var transactionId = 3e081861494aed897e589cdeab5d9e628d985e571ed1c19896d1aa698cce9d80;  // string | Represents the unique identifier of a transaction, i.e. it could be `transactionId` in UTXO-based protocols like Bitcoin, and transaction `hash` in Ethereum blockchain.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -283,6 +285,183 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="listallassetsbywalletid"></a>
+# **ListAllAssetsByWalletID**
+> ListAllAssetsByWalletIDR ListAllAssetsByWalletID (string walletId, string context = null)
+
+List All Assets By Wallet ID
+
+Through this endpoint customers can obtain information about available assets in one of their wallets, regardless of the blockchain protocol or network, by providing walletId.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
+
+namespace Example
+{
+    public class ListAllAssetsByWalletIDExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://rest.cryptoapis.io/v2";
+            // Configure API key authorization: ApiKey
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new InformativeApi(config);
+            var walletId = 60c9d9921c38030006675ff6;  // string | Defines the unique ID of the Wallet.
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+
+            try
+            {
+                // List All Assets By Wallet ID
+                ListAllAssetsByWalletIDR result = apiInstance.ListAllAssetsByWalletID(walletId, context);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling InformativeApi.ListAllAssetsByWalletID: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **walletId** | **string**| Defines the unique ID of the Wallet. | 
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+
+### Return type
+
+[**ListAllAssetsByWalletIDR**](ListAllAssetsByWalletIDR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | The request has been successful. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
+| **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
+| **403** | 403 |  -  |
+| **404** | The specified resource has not been found. |  -  |
+| **409** | The data provided seems to be invalid. |  -  |
+| **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
+| **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
+| **429** | The request limit has been reached. There can be maximum {requests} requests per {seconds} second(s) made. Please contact our team via email if you need more or upgrade your plan. |  -  |
+| **500** | An unexpected server error has occurred, we are working to fix this. Please try again later and in case it occurs again please report it to our team via email. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listallassetsfromallwallets"></a>
+# **ListAllAssetsFromAllWallets**
+> ListAllAssetsFromAllWalletsR ListAllAssetsFromAllWallets (string context = null, int? limit = null, int? offset = null)
+
+List All Assets From All Wallets
+
+Through this endpoint customers can obtain information about available assets in all of their wallets, regardless of the blockchain protocol or network.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
+
+namespace Example
+{
+    public class ListAllAssetsFromAllWalletsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://rest.cryptoapis.io/v2";
+            // Configure API key authorization: ApiKey
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new InformativeApi(config);
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+
+            try
+            {
+                // List All Assets From All Wallets
+                ListAllAssetsFromAllWalletsR result = apiInstance.ListAllAssetsFromAllWallets(context, limit, offset);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling InformativeApi.ListAllAssetsFromAllWallets: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+ **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+
+### Return type
+
+[**ListAllAssetsFromAllWalletsR**](ListAllAssetsFromAllWalletsR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | The request has been successful. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
+| **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
+| **403** | 403 |  -  |
+| **409** | The data provided seems to be invalid. |  -  |
+| **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
+| **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
+| **429** | The request limit has been reached. There can be maximum {requests} requests per {seconds} second(s) made. Please contact our team via email if you need more or upgrade your plan. |  -  |
+| **500** | An unexpected server error has occurred, we are working to fix this. Please try again later and in case it occurs again please report it to our team via email. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="listdepositaddresses"></a>
 # **ListDepositAddresses**
 > ListDepositAddressesR ListDepositAddresses (string blockchain, string network, string walletId, string context = null)
@@ -316,7 +495,7 @@ namespace Example
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var walletId = 60c9d9921c38030006675ff6;  // string | Represents the unique ID of the specific Wallet.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -407,9 +586,9 @@ namespace Example
             var apiInstance = new InformativeApi(config);
             var blockchain = ethereum;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 
             try
             {
@@ -501,7 +680,7 @@ namespace Example
             var blockchain = ethereum;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var walletId = 60c9d9921c38030006675ff6;  // string | Represents the unique ID of the specific Wallet.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
             var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 

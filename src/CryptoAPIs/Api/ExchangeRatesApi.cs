@@ -38,8 +38,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetExchangeRateByAssetSymbolsR</returns>
-        GetExchangeRateByAssetSymbolsR GetExchangeRateByAssetSymbols(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?));
+        GetExchangeRateByAssetSymbolsR GetExchangeRateByAssetSymbols(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Get Exchange Rate By Asset Symbols
@@ -52,8 +53,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetExchangeRateByAssetSymbolsR</returns>
-        ApiResponse<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsWithHttpInfo(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?));
+        ApiResponse<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsWithHttpInfo(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0);
         /// <summary>
         /// Get Exchange Rate By Assets IDs
         /// </summary>
@@ -65,8 +67,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetExchangeRateByAssetsIDsR</returns>
-        GetExchangeRateByAssetsIDsR GetExchangeRateByAssetsIDs(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?));
+        GetExchangeRateByAssetsIDsR GetExchangeRateByAssetsIDs(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// Get Exchange Rate By Assets IDs
@@ -79,8 +82,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetExchangeRateByAssetsIDsR</returns>
-        ApiResponse<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsWithHttpInfo(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?));
+        ApiResponse<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsWithHttpInfo(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -101,9 +105,10 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetExchangeRateByAssetSymbolsR</returns>
-        System.Threading.Tasks.Task<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Exchange Rate By Asset Symbols
@@ -116,9 +121,10 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetExchangeRateByAssetSymbolsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetExchangeRateByAssetSymbolsR>> GetExchangeRateByAssetSymbolsWithHttpInfoAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetExchangeRateByAssetSymbolsR>> GetExchangeRateByAssetSymbolsWithHttpInfoAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Exchange Rate By Assets IDs
         /// </summary>
@@ -130,9 +136,10 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetExchangeRateByAssetsIDsR</returns>
-        System.Threading.Tasks.Task<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Exchange Rate By Assets IDs
@@ -145,9 +152,10 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetExchangeRateByAssetsIDsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetExchangeRateByAssetsIDsR>> GetExchangeRateByAssetsIDsWithHttpInfoAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetExchangeRateByAssetsIDsR>> GetExchangeRateByAssetsIDsWithHttpInfoAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -276,8 +284,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetExchangeRateByAssetSymbolsR</returns>
-        public GetExchangeRateByAssetSymbolsR GetExchangeRateByAssetSymbols(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?))
+        public GetExchangeRateByAssetSymbolsR GetExchangeRateByAssetSymbols(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetSymbolsR> localVarResponse = GetExchangeRateByAssetSymbolsWithHttpInfo(fromAssetSymbol, toAssetSymbol, context, calculationTimestamp);
             return localVarResponse.Data;
@@ -291,8 +300,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetExchangeRateByAssetSymbolsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsWithHttpInfo(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?))
+        public CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsWithHttpInfo(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'fromAssetSymbol' is set
             if (fromAssetSymbol == null)
@@ -338,6 +348,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "calculationTimestamp", calculationTimestamp));
             }
+
+            localVarRequestOptions.Operation = "ExchangeRatesApi.GetExchangeRateByAssetSymbols";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -367,11 +380,12 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetExchangeRateByAssetSymbolsR</returns>
-        public async System.Threading.Tasks.Task<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetExchangeRateByAssetSymbolsR> GetExchangeRateByAssetSymbolsAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetSymbolsR> localVarResponse = await GetExchangeRateByAssetSymbolsWithHttpInfoAsync(fromAssetSymbol, toAssetSymbol, context, calculationTimestamp, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetSymbolsR> localVarResponse = await GetExchangeRateByAssetSymbolsWithHttpInfoAsync(fromAssetSymbol, toAssetSymbol, context, calculationTimestamp, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -383,9 +397,10 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetSymbol">Defines the relation asset symbol in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetExchangeRateByAssetSymbolsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetSymbolsR>> GetExchangeRateByAssetSymbolsWithHttpInfoAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetSymbolsR>> GetExchangeRateByAssetSymbolsWithHttpInfoAsync(string fromAssetSymbol, string toAssetSymbol, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'fromAssetSymbol' is set
             if (fromAssetSymbol == null)
@@ -432,6 +447,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "calculationTimestamp", calculationTimestamp));
             }
+
+            localVarRequestOptions.Operation = "ExchangeRatesApi.GetExchangeRateByAssetSymbols";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -462,8 +480,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetExchangeRateByAssetsIDsR</returns>
-        public GetExchangeRateByAssetsIDsR GetExchangeRateByAssetsIDs(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?))
+        public GetExchangeRateByAssetsIDsR GetExchangeRateByAssetsIDs(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetsIDsR> localVarResponse = GetExchangeRateByAssetsIDsWithHttpInfo(fromAssetId, toAssetId, context, calculationTimestamp);
             return localVarResponse.Data;
@@ -477,8 +496,9 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetExchangeRateByAssetsIDsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsWithHttpInfo(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?))
+        public CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsWithHttpInfo(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'fromAssetId' is set
             if (fromAssetId == null)
@@ -524,6 +544,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "calculationTimestamp", calculationTimestamp));
             }
+
+            localVarRequestOptions.Operation = "ExchangeRatesApi.GetExchangeRateByAssetsIDs";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -553,11 +576,12 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetExchangeRateByAssetsIDsR</returns>
-        public async System.Threading.Tasks.Task<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetExchangeRateByAssetsIDsR> GetExchangeRateByAssetsIDsAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetsIDsR> localVarResponse = await GetExchangeRateByAssetsIDsWithHttpInfoAsync(fromAssetId, toAssetId, context, calculationTimestamp, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetsIDsR> localVarResponse = await GetExchangeRateByAssetsIDsWithHttpInfoAsync(fromAssetId, toAssetId, context, calculationTimestamp, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -569,9 +593,10 @@ namespace CryptoAPIs.Api
         /// <param name="toAssetId">Defines the relation asset Reference ID in which the base asset rate will be displayed.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="calculationTimestamp">Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetExchangeRateByAssetsIDsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetsIDsR>> GetExchangeRateByAssetsIDsWithHttpInfoAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetExchangeRateByAssetsIDsR>> GetExchangeRateByAssetsIDsWithHttpInfoAsync(string fromAssetId, string toAssetId, string context = default(string), int? calculationTimestamp = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'fromAssetId' is set
             if (fromAssetId == null)
@@ -618,6 +643,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "calculationTimestamp", calculationTimestamp));
             }
+
+            localVarRequestOptions.Operation = "ExchangeRatesApi.GetExchangeRateByAssetsIDs";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

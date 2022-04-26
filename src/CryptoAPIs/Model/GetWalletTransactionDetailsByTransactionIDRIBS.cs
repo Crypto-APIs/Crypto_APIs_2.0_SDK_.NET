@@ -48,6 +48,30 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
+        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSE" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSE.</param>
+        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSE actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
+        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSL" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSL.</param>
+        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSL actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
         /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSBC" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSBC.</param>
@@ -60,10 +84,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
-        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSBSC" /> class
+        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSEC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSBSC.</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSEC.</param>
+        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSEC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -96,46 +120,22 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
-        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSE" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSE.</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSE actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
-        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSEC" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSEC.</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSEC actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
-        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSL" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSL.</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSL actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
         /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSZ" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSZ.</param>
         public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSZ actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetWalletTransactionDetailsByTransactionIDRIBS" /> class
+        /// with the <see cref="GetWalletTransactionDetailsByTransactionIDRIBSBSC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetWalletTransactionDetailsByTransactionIDRIBSBSC.</param>
+        public GetWalletTransactionDetailsByTransactionIDRIBS(GetWalletTransactionDetailsByTransactionIDRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -210,6 +210,26 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
+        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSE`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSE`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSE</returns>
+        public GetWalletTransactionDetailsByTransactionIDRIBSE GetGetWalletTransactionDetailsByTransactionIDRIBSE()
+        {
+            return (GetWalletTransactionDetailsByTransactionIDRIBSE)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSL`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSL`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSL</returns>
+        public GetWalletTransactionDetailsByTransactionIDRIBSL GetGetWalletTransactionDetailsByTransactionIDRIBSL()
+        {
+            return (GetWalletTransactionDetailsByTransactionIDRIBSL)this.ActualInstance;
+        }
+
+        /// <summary>
         /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSBC`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSBC`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -220,13 +240,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSBSC`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSBSC`,
+        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSEC`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSEC`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSBSC</returns>
-        public GetWalletTransactionDetailsByTransactionIDRIBSBSC GetGetWalletTransactionDetailsByTransactionIDRIBSBSC()
+        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSEC</returns>
+        public GetWalletTransactionDetailsByTransactionIDRIBSEC GetGetWalletTransactionDetailsByTransactionIDRIBSEC()
         {
-            return (GetWalletTransactionDetailsByTransactionIDRIBSBSC)this.ActualInstance;
+            return (GetWalletTransactionDetailsByTransactionIDRIBSEC)this.ActualInstance;
         }
 
         /// <summary>
@@ -250,36 +270,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSE`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSE`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSE</returns>
-        public GetWalletTransactionDetailsByTransactionIDRIBSE GetGetWalletTransactionDetailsByTransactionIDRIBSE()
-        {
-            return (GetWalletTransactionDetailsByTransactionIDRIBSE)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSEC`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSEC`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSEC</returns>
-        public GetWalletTransactionDetailsByTransactionIDRIBSEC GetGetWalletTransactionDetailsByTransactionIDRIBSEC()
-        {
-            return (GetWalletTransactionDetailsByTransactionIDRIBSEC)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSL`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSL`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSL</returns>
-        public GetWalletTransactionDetailsByTransactionIDRIBSL GetGetWalletTransactionDetailsByTransactionIDRIBSL()
-        {
-            return (GetWalletTransactionDetailsByTransactionIDRIBSL)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSZ`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSZ`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -287,6 +277,16 @@ namespace CryptoAPIs.Model
         public GetWalletTransactionDetailsByTransactionIDRIBSZ GetGetWalletTransactionDetailsByTransactionIDRIBSZ()
         {
             return (GetWalletTransactionDetailsByTransactionIDRIBSZ)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `GetWalletTransactionDetailsByTransactionIDRIBSBSC`. If the actual instance is not `GetWalletTransactionDetailsByTransactionIDRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetWalletTransactionDetailsByTransactionIDRIBSBSC</returns>
+        public GetWalletTransactionDetailsByTransactionIDRIBSBSC GetGetWalletTransactionDetailsByTransactionIDRIBSBSC()
+        {
+            return (GetWalletTransactionDetailsByTransactionIDRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

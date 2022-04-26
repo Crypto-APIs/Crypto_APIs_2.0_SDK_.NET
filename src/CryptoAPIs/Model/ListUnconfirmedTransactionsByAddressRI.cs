@@ -49,28 +49,33 @@ namespace CryptoAPIs.Model
         public ListUnconfirmedTransactionsByAddressRI(List<ListUnconfirmedTransactionsByAddressRIRecipients> recipients = default(List<ListUnconfirmedTransactionsByAddressRIRecipients>), List<ListUnconfirmedTransactionsByAddressRISenders> senders = default(List<ListUnconfirmedTransactionsByAddressRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListUnconfirmedTransactionsByAddressRIBS blockchainSpecific = default(ListUnconfirmedTransactionsByAddressRIBS))
         {
             // to ensure "recipients" is required (not null)
-            if (recipients == null) {
+            if (recipients == null)
+            {
                 throw new ArgumentNullException("recipients is a required property for ListUnconfirmedTransactionsByAddressRI and cannot be null");
             }
             this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            if (senders == null) {
+            if (senders == null)
+            {
                 throw new ArgumentNullException("senders is a required property for ListUnconfirmedTransactionsByAddressRI and cannot be null");
             }
             this.Senders = senders;
             this.Timestamp = timestamp;
             // to ensure "transactionHash" is required (not null)
-            if (transactionHash == null) {
+            if (transactionHash == null)
+            {
                 throw new ArgumentNullException("transactionHash is a required property for ListUnconfirmedTransactionsByAddressRI and cannot be null");
             }
             this.TransactionHash = transactionHash;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for ListUnconfirmedTransactionsByAddressRI and cannot be null");
             }
             this.TransactionId = transactionId;
             // to ensure "blockchainSpecific" is required (not null)
-            if (blockchainSpecific == null) {
+            if (blockchainSpecific == null)
+            {
                 throw new ArgumentNullException("blockchainSpecific is a required property for ListUnconfirmedTransactionsByAddressRI and cannot be null");
             }
             this.BlockchainSpecific = blockchainSpecific;

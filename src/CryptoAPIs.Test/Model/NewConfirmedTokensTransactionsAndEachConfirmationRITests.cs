@@ -66,6 +66,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Address'
         }
         /// <summary>
+        /// Test the property 'CallbackSecretKey'
+        /// </summary>
+        [Fact]
+        public void CallbackSecretKeyTest()
+        {
+            // TODO unit test for the property 'CallbackSecretKey'
+        }
+        /// <summary>
         /// Test the property 'CallbackUrl'
         /// </summary>
         [Fact]
@@ -96,6 +104,14 @@ namespace CryptoAPIs.Test.Model
         public void EventTypeTest()
         {
             // TODO unit test for the property 'EventType'
+        }
+        /// <summary>
+        /// Test the property 'IsActive'
+        /// </summary>
+        [Fact]
+        public void IsActiveTest()
+        {
+            // TODO unit test for the property 'IsActive'
         }
         /// <summary>
         /// Test the property 'ReferenceId'

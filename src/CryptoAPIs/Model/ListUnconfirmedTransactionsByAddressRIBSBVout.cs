@@ -47,12 +47,14 @@ namespace CryptoAPIs.Model
         {
             this.IsSpent = isSpent;
             // to ensure "scriptPubKey" is required (not null)
-            if (scriptPubKey == null) {
+            if (scriptPubKey == null)
+            {
                 throw new ArgumentNullException("scriptPubKey is a required property for ListUnconfirmedTransactionsByAddressRIBSBVout and cannot be null");
             }
             this.ScriptPubKey = scriptPubKey;
             // to ensure "value" is required (not null)
-            if (value == null) {
+            if (value == null)
+            {
                 throw new ArgumentNullException("value is a required property for ListUnconfirmedTransactionsByAddressRIBSBVout and cannot be null");
             }
             this.Value = value;

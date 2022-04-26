@@ -48,6 +48,30 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetLastMinedBlockRIBS" /> class
+        /// with the <see cref="GetLastMinedBlockRIBSE" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSE.</param>
+        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSE actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetLastMinedBlockRIBS" /> class
+        /// with the <see cref="GetLastMinedBlockRIBSEC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSEC.</param>
+        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSEC actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetLastMinedBlockRIBS" /> class
         /// with the <see cref="GetLastMinedBlockRIBSBC" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSBC.</param>
@@ -60,10 +84,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetLastMinedBlockRIBS" /> class
-        /// with the <see cref="GetLastMinedBlockRIBSBSC" /> class
+        /// with the <see cref="GetLastMinedBlockRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSBSC.</param>
-        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSL.</param>
+        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -96,34 +120,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetLastMinedBlockRIBS" /> class
-        /// with the <see cref="GetLastMinedBlockRIBSE" /> class
+        /// with the <see cref="GetLastMinedBlockRIBSBSC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSE.</param>
-        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSE actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetLastMinedBlockRIBS" /> class
-        /// with the <see cref="GetLastMinedBlockRIBSEC" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSEC.</param>
-        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSEC actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetLastMinedBlockRIBS" /> class
-        /// with the <see cref="GetLastMinedBlockRIBSL" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSL.</param>
-        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of GetLastMinedBlockRIBSBSC.</param>
+        public GetLastMinedBlockRIBS(GetLastMinedBlockRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -210,6 +210,26 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
+        /// Get the actual instance of `GetLastMinedBlockRIBSE`. If the actual instance is not `GetLastMinedBlockRIBSE`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetLastMinedBlockRIBSE</returns>
+        public GetLastMinedBlockRIBSE GetGetLastMinedBlockRIBSE()
+        {
+            return (GetLastMinedBlockRIBSE)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `GetLastMinedBlockRIBSEC`. If the actual instance is not `GetLastMinedBlockRIBSEC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of GetLastMinedBlockRIBSEC</returns>
+        public GetLastMinedBlockRIBSEC GetGetLastMinedBlockRIBSEC()
+        {
+            return (GetLastMinedBlockRIBSEC)this.ActualInstance;
+        }
+
+        /// <summary>
         /// Get the actual instance of `GetLastMinedBlockRIBSBC`. If the actual instance is not `GetLastMinedBlockRIBSBC`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -220,13 +240,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetLastMinedBlockRIBSBSC`. If the actual instance is not `GetLastMinedBlockRIBSBSC`,
+        /// Get the actual instance of `GetLastMinedBlockRIBSL`. If the actual instance is not `GetLastMinedBlockRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetLastMinedBlockRIBSBSC</returns>
-        public GetLastMinedBlockRIBSBSC GetGetLastMinedBlockRIBSBSC()
+        /// <returns>An instance of GetLastMinedBlockRIBSL</returns>
+        public GetLastMinedBlockRIBSL GetGetLastMinedBlockRIBSL()
         {
-            return (GetLastMinedBlockRIBSBSC)this.ActualInstance;
+            return (GetLastMinedBlockRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -250,33 +270,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `GetLastMinedBlockRIBSE`. If the actual instance is not `GetLastMinedBlockRIBSE`,
+        /// Get the actual instance of `GetLastMinedBlockRIBSBSC`. If the actual instance is not `GetLastMinedBlockRIBSBSC`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of GetLastMinedBlockRIBSE</returns>
-        public GetLastMinedBlockRIBSE GetGetLastMinedBlockRIBSE()
+        /// <returns>An instance of GetLastMinedBlockRIBSBSC</returns>
+        public GetLastMinedBlockRIBSBSC GetGetLastMinedBlockRIBSBSC()
         {
-            return (GetLastMinedBlockRIBSE)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `GetLastMinedBlockRIBSEC`. If the actual instance is not `GetLastMinedBlockRIBSEC`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetLastMinedBlockRIBSEC</returns>
-        public GetLastMinedBlockRIBSEC GetGetLastMinedBlockRIBSEC()
-        {
-            return (GetLastMinedBlockRIBSEC)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `GetLastMinedBlockRIBSL`. If the actual instance is not `GetLastMinedBlockRIBSL`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of GetLastMinedBlockRIBSL</returns>
-        public GetLastMinedBlockRIBSL GetGetLastMinedBlockRIBSL()
-        {
-            return (GetLastMinedBlockRIBSL)this.ActualInstance;
+            return (GetLastMinedBlockRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

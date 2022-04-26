@@ -51,30 +51,35 @@ namespace CryptoAPIs.Model
         public ListLatestMinedBlocksRI(string hash = default(string), int height = default(int), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), ListLatestMinedBlocksRITotalCoins totalCoins = default(ListLatestMinedBlocksRITotalCoins), ListLatestMinedBlocksRITotalFees totalFees = default(ListLatestMinedBlocksRITotalFees), ListLatestMinedBlocksRIBS blockchainSpecific = default(ListLatestMinedBlocksRIBS))
         {
             // to ensure "hash" is required (not null)
-            if (hash == null) {
+            if (hash == null)
+            {
                 throw new ArgumentNullException("hash is a required property for ListLatestMinedBlocksRI and cannot be null");
             }
             this.Hash = hash;
             this.Height = height;
             // to ensure "previousBlockHash" is required (not null)
-            if (previousBlockHash == null) {
+            if (previousBlockHash == null)
+            {
                 throw new ArgumentNullException("previousBlockHash is a required property for ListLatestMinedBlocksRI and cannot be null");
             }
             this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             this.TransactionsCount = transactionsCount;
             // to ensure "totalCoins" is required (not null)
-            if (totalCoins == null) {
+            if (totalCoins == null)
+            {
                 throw new ArgumentNullException("totalCoins is a required property for ListLatestMinedBlocksRI and cannot be null");
             }
             this.TotalCoins = totalCoins;
             // to ensure "totalFees" is required (not null)
-            if (totalFees == null) {
+            if (totalFees == null)
+            {
                 throw new ArgumentNullException("totalFees is a required property for ListLatestMinedBlocksRI and cannot be null");
             }
             this.TotalFees = totalFees;
             // to ensure "blockchainSpecific" is required (not null)
-            if (blockchainSpecific == null) {
+            if (blockchainSpecific == null)
+            {
                 throw new ArgumentNullException("blockchainSpecific is a required property for ListLatestMinedBlocksRI and cannot be null");
             }
             this.BlockchainSpecific = blockchainSpecific;

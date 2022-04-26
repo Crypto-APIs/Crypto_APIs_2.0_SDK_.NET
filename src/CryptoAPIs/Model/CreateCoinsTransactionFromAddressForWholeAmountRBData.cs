@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public CreateCoinsTransactionFromAddressForWholeAmountRBData(CreateCoinsTransactionFromAddressForWholeAmountRBDataItem item = default(CreateCoinsTransactionFromAddressForWholeAmountRBDataItem))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for CreateCoinsTransactionFromAddressForWholeAmountRBData and cannot be null");
             }
             this.Item = item;

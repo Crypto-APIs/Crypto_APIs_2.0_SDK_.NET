@@ -50,12 +50,14 @@ namespace CryptoAPIs.Model
         public TransactionRequestFailDataItem(string blockchain = default(string), string network = default(string), int requiredApprovals = default(int), int requiredRejections = default(int), int currentApprovals = default(int), int currentRejections = default(int), string errorMessage = default(string))
         {
             // to ensure "blockchain" is required (not null)
-            if (blockchain == null) {
+            if (blockchain == null)
+            {
                 throw new ArgumentNullException("blockchain is a required property for TransactionRequestFailDataItem and cannot be null");
             }
             this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            if (network == null) {
+            if (network == null)
+            {
                 throw new ArgumentNullException("network is a required property for TransactionRequestFailDataItem and cannot be null");
             }
             this.Network = network;
@@ -64,7 +66,8 @@ namespace CryptoAPIs.Model
             this.CurrentApprovals = currentApprovals;
             this.CurrentRejections = currentRejections;
             // to ensure "errorMessage" is required (not null)
-            if (errorMessage == null) {
+            if (errorMessage == null)
+            {
                 throw new ArgumentNullException("errorMessage is a required property for TransactionRequestFailDataItem and cannot be null");
             }
             this.ErrorMessage = errorMessage;

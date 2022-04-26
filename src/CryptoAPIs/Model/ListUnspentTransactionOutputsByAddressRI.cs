@@ -40,75 +40,50 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListUnspentTransactionOutputsByAddressRI" /> class.
         /// </summary>
+        /// <param name="address">Represents the address that has unspend funds per which the result is returned. (required).</param>
+        /// <param name="amount">Represents the sent/received amount. (required).</param>
         /// <param name="index">Represents the index position of the transaction in the block. (required).</param>
-        /// <param name="locktime">Represents the time at which a particular transaction can be added to the blockchain (required).</param>
-        /// <param name="minedInBlockHash">Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. (required).</param>
-        /// <param name="minedInBlockHeight">Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. (required).</param>
-        /// <param name="recipients">Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. (required).</param>
-        /// <param name="senders">Object Array representation of transaction senders (required).</param>
-        /// <param name="size">Represents the total size of this transaction (required).</param>
+        /// <param name="isConfirmed">Represents the state of the transaction whether it is confirmed or not confirmed. (required).</param>
         /// <param name="timestamp">Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. (required).</param>
-        /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions. (required).</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
-        /// <param name="version">Represents the transaction version number. (required).</param>
-        /// <param name="vin">Represents the transaction inputs. (required).</param>
-        /// <param name="vout">Represents the transaction outputs. (required).</param>
-        /// <param name="fee">fee (required).</param>
-        /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public ListUnspentTransactionOutputsByAddressRI(int index = default(int), int locktime = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetTransactionDetailsByTransactionIDRIRecipients>), List<ListUnspentTransactionOutputsByAddressRISenders> senders = default(List<ListUnspentTransactionOutputsByAddressRISenders>), int size = default(int), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), int version = default(int), List<ListUnspentTransactionOutputsByAddressRIVin> vin = default(List<ListUnspentTransactionOutputsByAddressRIVin>), List<ListConfirmedTransactionsByAddressRIBSBVout> vout = default(List<ListConfirmedTransactionsByAddressRIBSBVout>), ListUnspentTransactionOutputsByAddressRIFee fee = default(ListUnspentTransactionOutputsByAddressRIFee), ListUnspentTransactionOutputsByAddressRIBlockchainSpecific blockchainSpecific = default(ListUnspentTransactionOutputsByAddressRIBlockchainSpecific))
+        public ListUnspentTransactionOutputsByAddressRI(string address = default(string), string amount = default(string), int index = default(int), bool isConfirmed = default(bool), int timestamp = default(int), string transactionId = default(string))
         {
+            // to ensure "address" is required (not null)
+            if (address == null)
+            {
+                throw new ArgumentNullException("address is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
+            }
+            this.Address = address;
+            // to ensure "amount" is required (not null)
+            if (amount == null)
+            {
+                throw new ArgumentNullException("amount is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
+            }
+            this.Amount = amount;
             this.Index = index;
-            this.Locktime = locktime;
-            // to ensure "minedInBlockHash" is required (not null)
-            if (minedInBlockHash == null) {
-                throw new ArgumentNullException("minedInBlockHash is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.MinedInBlockHash = minedInBlockHash;
-            this.MinedInBlockHeight = minedInBlockHeight;
-            // to ensure "recipients" is required (not null)
-            if (recipients == null) {
-                throw new ArgumentNullException("recipients is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.Recipients = recipients;
-            // to ensure "senders" is required (not null)
-            if (senders == null) {
-                throw new ArgumentNullException("senders is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.Senders = senders;
-            this.Size = size;
+            this.IsConfirmed = isConfirmed;
             this.Timestamp = timestamp;
-            // to ensure "transactionHash" is required (not null)
-            if (transactionHash == null) {
-                throw new ArgumentNullException("transactionHash is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.TransactionHash = transactionHash;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
             }
             this.TransactionId = transactionId;
-            this._Version = version;
-            // to ensure "vin" is required (not null)
-            if (vin == null) {
-                throw new ArgumentNullException("vin is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.Vin = vin;
-            // to ensure "vout" is required (not null)
-            if (vout == null) {
-                throw new ArgumentNullException("vout is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.Vout = vout;
-            // to ensure "fee" is required (not null)
-            if (fee == null) {
-                throw new ArgumentNullException("fee is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.Fee = fee;
-            // to ensure "blockchainSpecific" is required (not null)
-            if (blockchainSpecific == null) {
-                throw new ArgumentNullException("blockchainSpecific is a required property for ListUnspentTransactionOutputsByAddressRI and cannot be null");
-            }
-            this.BlockchainSpecific = blockchainSpecific;
         }
+
+        /// <summary>
+        /// Represents the address that has unspend funds per which the result is returned.
+        /// </summary>
+        /// <value>Represents the address that has unspend funds per which the result is returned.</value>
+        [DataMember(Name = "address", IsRequired = true, EmitDefaultValue = false)]
+        public string Address { get; set; }
+
+        /// <summary>
+        /// Represents the sent/received amount.
+        /// </summary>
+        /// <value>Represents the sent/received amount.</value>
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
+        public string Amount { get; set; }
 
         /// <summary>
         /// Represents the index position of the transaction in the block.
@@ -118,46 +93,11 @@ namespace CryptoAPIs.Model
         public int Index { get; set; }
 
         /// <summary>
-        /// Represents the time at which a particular transaction can be added to the blockchain
+        /// Represents the state of the transaction whether it is confirmed or not confirmed.
         /// </summary>
-        /// <value>Represents the time at which a particular transaction can be added to the blockchain</value>
-        [DataMember(Name = "locktime", IsRequired = true, EmitDefaultValue = false)]
-        public int Locktime { get; set; }
-
-        /// <summary>
-        /// Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
-        /// </summary>
-        /// <value>Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</value>
-        [DataMember(Name = "minedInBlockHash", IsRequired = true, EmitDefaultValue = false)]
-        public string MinedInBlockHash { get; set; }
-
-        /// <summary>
-        /// Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block.
-        /// </summary>
-        /// <value>Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block.</value>
-        [DataMember(Name = "minedInBlockHeight", IsRequired = true, EmitDefaultValue = false)]
-        public int MinedInBlockHeight { get; set; }
-
-        /// <summary>
-        /// Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
-        /// </summary>
-        /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
-        [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIRecipients> Recipients { get; set; }
-
-        /// <summary>
-        /// Object Array representation of transaction senders
-        /// </summary>
-        /// <value>Object Array representation of transaction senders</value>
-        [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListUnspentTransactionOutputsByAddressRISenders> Senders { get; set; }
-
-        /// <summary>
-        /// Represents the total size of this transaction
-        /// </summary>
-        /// <value>Represents the total size of this transaction</value>
-        [DataMember(Name = "size", IsRequired = true, EmitDefaultValue = false)]
-        public int Size { get; set; }
+        /// <value>Represents the state of the transaction whether it is confirmed or not confirmed.</value>
+        [DataMember(Name = "isConfirmed", IsRequired = true, EmitDefaultValue = true)]
+        public bool IsConfirmed { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.
@@ -167,51 +107,11 @@ namespace CryptoAPIs.Model
         public int Timestamp { get; set; }
 
         /// <summary>
-        /// Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.
-        /// </summary>
-        /// <value>Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.</value>
-        [DataMember(Name = "transactionHash", IsRequired = true, EmitDefaultValue = false)]
-        public string TransactionHash { get; set; }
-
-        /// <summary>
         /// Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
         /// </summary>
         /// <value>Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.</value>
         [DataMember(Name = "transactionId", IsRequired = true, EmitDefaultValue = false)]
         public string TransactionId { get; set; }
-
-        /// <summary>
-        /// Represents the transaction version number.
-        /// </summary>
-        /// <value>Represents the transaction version number.</value>
-        [DataMember(Name = "version", IsRequired = true, EmitDefaultValue = false)]
-        public int _Version { get; set; }
-
-        /// <summary>
-        /// Represents the transaction inputs.
-        /// </summary>
-        /// <value>Represents the transaction inputs.</value>
-        [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListUnspentTransactionOutputsByAddressRIVin> Vin { get; set; }
-
-        /// <summary>
-        /// Represents the transaction outputs.
-        /// </summary>
-        /// <value>Represents the transaction outputs.</value>
-        [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListConfirmedTransactionsByAddressRIBSBVout> Vout { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Fee
-        /// </summary>
-        [DataMember(Name = "fee", IsRequired = true, EmitDefaultValue = false)]
-        public ListUnspentTransactionOutputsByAddressRIFee Fee { get; set; }
-
-        /// <summary>
-        /// Gets or Sets BlockchainSpecific
-        /// </summary>
-        [DataMember(Name = "blockchainSpecific", IsRequired = true, EmitDefaultValue = false)]
-        public ListUnspentTransactionOutputsByAddressRIBlockchainSpecific BlockchainSpecific { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -221,21 +121,12 @@ namespace CryptoAPIs.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ListUnspentTransactionOutputsByAddressRI {\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
-            sb.Append("  Locktime: ").Append(Locktime).Append("\n");
-            sb.Append("  MinedInBlockHash: ").Append(MinedInBlockHash).Append("\n");
-            sb.Append("  MinedInBlockHeight: ").Append(MinedInBlockHeight).Append("\n");
-            sb.Append("  Recipients: ").Append(Recipients).Append("\n");
-            sb.Append("  Senders: ").Append(Senders).Append("\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  IsConfirmed: ").Append(IsConfirmed).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            sb.Append("  TransactionHash: ").Append(TransactionHash).Append("\n");
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
-            sb.Append("  _Version: ").Append(_Version).Append("\n");
-            sb.Append("  Vin: ").Append(Vin).Append("\n");
-            sb.Append("  Vout: ").Append(Vout).Append("\n");
-            sb.Append("  Fee: ").Append(Fee).Append("\n");
-            sb.Append("  BlockchainSpecific: ").Append(BlockchainSpecific).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -272,77 +163,31 @@ namespace CryptoAPIs.Model
             }
             return 
                 (
+                    this.Address == input.Address ||
+                    (this.Address != null &&
+                    this.Address.Equals(input.Address))
+                ) && 
+                (
+                    this.Amount == input.Amount ||
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
+                ) && 
+                (
                     this.Index == input.Index ||
                     this.Index.Equals(input.Index)
                 ) && 
                 (
-                    this.Locktime == input.Locktime ||
-                    this.Locktime.Equals(input.Locktime)
-                ) && 
-                (
-                    this.MinedInBlockHash == input.MinedInBlockHash ||
-                    (this.MinedInBlockHash != null &&
-                    this.MinedInBlockHash.Equals(input.MinedInBlockHash))
-                ) && 
-                (
-                    this.MinedInBlockHeight == input.MinedInBlockHeight ||
-                    this.MinedInBlockHeight.Equals(input.MinedInBlockHeight)
-                ) && 
-                (
-                    this.Recipients == input.Recipients ||
-                    this.Recipients != null &&
-                    input.Recipients != null &&
-                    this.Recipients.SequenceEqual(input.Recipients)
-                ) && 
-                (
-                    this.Senders == input.Senders ||
-                    this.Senders != null &&
-                    input.Senders != null &&
-                    this.Senders.SequenceEqual(input.Senders)
-                ) && 
-                (
-                    this.Size == input.Size ||
-                    this.Size.Equals(input.Size)
+                    this.IsConfirmed == input.IsConfirmed ||
+                    this.IsConfirmed.Equals(input.IsConfirmed)
                 ) && 
                 (
                     this.Timestamp == input.Timestamp ||
                     this.Timestamp.Equals(input.Timestamp)
                 ) && 
                 (
-                    this.TransactionHash == input.TransactionHash ||
-                    (this.TransactionHash != null &&
-                    this.TransactionHash.Equals(input.TransactionHash))
-                ) && 
-                (
                     this.TransactionId == input.TransactionId ||
                     (this.TransactionId != null &&
                     this.TransactionId.Equals(input.TransactionId))
-                ) && 
-                (
-                    this._Version == input._Version ||
-                    this._Version.Equals(input._Version)
-                ) && 
-                (
-                    this.Vin == input.Vin ||
-                    this.Vin != null &&
-                    input.Vin != null &&
-                    this.Vin.SequenceEqual(input.Vin)
-                ) && 
-                (
-                    this.Vout == input.Vout ||
-                    this.Vout != null &&
-                    input.Vout != null &&
-                    this.Vout.SequenceEqual(input.Vout)
-                ) && 
-                (
-                    this.Fee == input.Fee ||
-                    (this.Fee != null &&
-                    this.Fee.Equals(input.Fee))
-                ) && 
-                (
-                    this.BlockchainSpecific == input.BlockchainSpecific ||
-                    (this.BlockchainSpecific != null &&
-                    this.BlockchainSpecific.Equals(input.BlockchainSpecific))
                 );
         }
 
@@ -355,47 +200,20 @@ namespace CryptoAPIs.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Address != null)
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
+                if (this.Amount != null)
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.Index.GetHashCode();
-                hashCode = (hashCode * 59) + this.Locktime.GetHashCode();
-                if (this.MinedInBlockHash != null)
-                {
-                    hashCode = (hashCode * 59) + this.MinedInBlockHash.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MinedInBlockHeight.GetHashCode();
-                if (this.Recipients != null)
-                {
-                    hashCode = (hashCode * 59) + this.Recipients.GetHashCode();
-                }
-                if (this.Senders != null)
-                {
-                    hashCode = (hashCode * 59) + this.Senders.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Size.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsConfirmed.GetHashCode();
                 hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
-                if (this.TransactionHash != null)
-                {
-                    hashCode = (hashCode * 59) + this.TransactionHash.GetHashCode();
-                }
                 if (this.TransactionId != null)
                 {
                     hashCode = (hashCode * 59) + this.TransactionId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this._Version.GetHashCode();
-                if (this.Vin != null)
-                {
-                    hashCode = (hashCode * 59) + this.Vin.GetHashCode();
-                }
-                if (this.Vout != null)
-                {
-                    hashCode = (hashCode * 59) + this.Vout.GetHashCode();
-                }
-                if (this.Fee != null)
-                {
-                    hashCode = (hashCode * 59) + this.Fee.GetHashCode();
-                }
-                if (this.BlockchainSpecific != null)
-                {
-                    hashCode = (hashCode * 59) + this.BlockchainSpecific.GetHashCode();
                 }
                 return hashCode;
             }

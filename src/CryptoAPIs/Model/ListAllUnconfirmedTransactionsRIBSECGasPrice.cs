@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public ListAllUnconfirmedTransactionsRIBSECGasPrice(string amount = default(string))
         {
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for ListAllUnconfirmedTransactionsRIBSECGasPrice and cannot be null");
             }
             this.Amount = amount;

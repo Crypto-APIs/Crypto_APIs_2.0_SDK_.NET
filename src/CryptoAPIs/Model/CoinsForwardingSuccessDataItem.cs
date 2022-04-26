@@ -53,52 +53,62 @@ namespace CryptoAPIs.Model
         public CoinsForwardingSuccessDataItem(string blockchain = default(string), string network = default(string), string fromAddress = default(string), string toAddress = default(string), string forwardedAmount = default(string), string forwardedUnit = default(string), string spentFeesAmount = default(string), string spentFeesUnit = default(string), string triggerTransactionId = default(string), string forwardingTransactionId = default(string))
         {
             // to ensure "blockchain" is required (not null)
-            if (blockchain == null) {
+            if (blockchain == null)
+            {
                 throw new ArgumentNullException("blockchain is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            if (network == null) {
+            if (network == null)
+            {
                 throw new ArgumentNullException("network is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.Network = network;
             // to ensure "fromAddress" is required (not null)
-            if (fromAddress == null) {
+            if (fromAddress == null)
+            {
                 throw new ArgumentNullException("fromAddress is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.FromAddress = fromAddress;
             // to ensure "toAddress" is required (not null)
-            if (toAddress == null) {
+            if (toAddress == null)
+            {
                 throw new ArgumentNullException("toAddress is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.ToAddress = toAddress;
             // to ensure "forwardedAmount" is required (not null)
-            if (forwardedAmount == null) {
+            if (forwardedAmount == null)
+            {
                 throw new ArgumentNullException("forwardedAmount is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.ForwardedAmount = forwardedAmount;
             // to ensure "forwardedUnit" is required (not null)
-            if (forwardedUnit == null) {
+            if (forwardedUnit == null)
+            {
                 throw new ArgumentNullException("forwardedUnit is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.ForwardedUnit = forwardedUnit;
             // to ensure "spentFeesAmount" is required (not null)
-            if (spentFeesAmount == null) {
+            if (spentFeesAmount == null)
+            {
                 throw new ArgumentNullException("spentFeesAmount is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.SpentFeesAmount = spentFeesAmount;
             // to ensure "spentFeesUnit" is required (not null)
-            if (spentFeesUnit == null) {
+            if (spentFeesUnit == null)
+            {
                 throw new ArgumentNullException("spentFeesUnit is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.SpentFeesUnit = spentFeesUnit;
             // to ensure "triggerTransactionId" is required (not null)
-            if (triggerTransactionId == null) {
+            if (triggerTransactionId == null)
+            {
                 throw new ArgumentNullException("triggerTransactionId is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.TriggerTransactionId = triggerTransactionId;
             // to ensure "forwardingTransactionId" is required (not null)
-            if (forwardingTransactionId == null) {
+            if (forwardingTransactionId == null)
+            {
                 throw new ArgumentNullException("forwardingTransactionId is a required property for CoinsForwardingSuccessDataItem and cannot be null");
             }
             this.ForwardingTransactionId = forwardingTransactionId;

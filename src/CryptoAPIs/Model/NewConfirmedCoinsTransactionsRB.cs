@@ -45,7 +45,8 @@ namespace CryptoAPIs.Model
         public NewConfirmedCoinsTransactionsRB(string context = default(string), NewConfirmedCoinsTransactionsRBData data = default(NewConfirmedCoinsTransactionsRBData))
         {
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for NewConfirmedCoinsTransactionsRB and cannot be null");
             }
             this.Data = data;

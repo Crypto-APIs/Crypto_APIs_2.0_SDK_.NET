@@ -47,17 +47,20 @@ namespace CryptoAPIs.Model
         public InlineResponse415(string apiVersion = default(string), string requestId = default(string), string context = default(string), UnsupportedMediaType error = default(UnsupportedMediaType))
         {
             // to ensure "apiVersion" is required (not null)
-            if (apiVersion == null) {
+            if (apiVersion == null)
+            {
                 throw new ArgumentNullException("apiVersion is a required property for InlineResponse415 and cannot be null");
             }
             this.ApiVersion = apiVersion;
             // to ensure "requestId" is required (not null)
-            if (requestId == null) {
+            if (requestId == null)
+            {
                 throw new ArgumentNullException("requestId is a required property for InlineResponse415 and cannot be null");
             }
             this.RequestId = requestId;
             // to ensure "error" is required (not null)
-            if (error == null) {
+            if (error == null)
+            {
                 throw new ArgumentNullException("error is a required property for InlineResponse415 and cannot be null");
             }
             this.Error = error;

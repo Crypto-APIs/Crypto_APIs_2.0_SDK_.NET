@@ -47,22 +47,26 @@ namespace CryptoAPIs.Model
         public GetEIP1559FeeRecommendationsRIMaxFeePerGas(string fast = default(string), string slow = default(string), string standard = default(string), string unit = default(string))
         {
             // to ensure "fast" is required (not null)
-            if (fast == null) {
+            if (fast == null)
+            {
                 throw new ArgumentNullException("fast is a required property for GetEIP1559FeeRecommendationsRIMaxFeePerGas and cannot be null");
             }
             this.Fast = fast;
             // to ensure "slow" is required (not null)
-            if (slow == null) {
+            if (slow == null)
+            {
                 throw new ArgumentNullException("slow is a required property for GetEIP1559FeeRecommendationsRIMaxFeePerGas and cannot be null");
             }
             this.Slow = slow;
             // to ensure "standard" is required (not null)
-            if (standard == null) {
+            if (standard == null)
+            {
                 throw new ArgumentNullException("standard is a required property for GetEIP1559FeeRecommendationsRIMaxFeePerGas and cannot be null");
             }
             this.Standard = standard;
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for GetEIP1559FeeRecommendationsRIMaxFeePerGas and cannot be null");
             }
             this.Unit = unit;

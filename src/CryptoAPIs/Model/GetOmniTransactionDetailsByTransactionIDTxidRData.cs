@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetOmniTransactionDetailsByTransactionIDTxidRData(GetOmniTransactionDetailsByTransactionIDTxidRI item = default(GetOmniTransactionDetailsByTransactionIDTxidRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetOmniTransactionDetailsByTransactionIDTxidRData and cannot be null");
             }
             this.Item = item;

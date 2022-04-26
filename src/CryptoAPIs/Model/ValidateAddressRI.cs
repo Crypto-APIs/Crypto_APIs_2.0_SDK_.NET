@@ -45,7 +45,8 @@ namespace CryptoAPIs.Model
         public ValidateAddressRI(string address = default(string), bool isValid = default(bool))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for ValidateAddressRI and cannot be null");
             }
             this.Address = address;

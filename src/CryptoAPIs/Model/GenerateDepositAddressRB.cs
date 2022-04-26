@@ -45,7 +45,8 @@ namespace CryptoAPIs.Model
         public GenerateDepositAddressRB(string context = default(string), GenerateDepositAddressRBData data = default(GenerateDepositAddressRBData))
         {
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for GenerateDepositAddressRB and cannot be null");
             }
             this.Data = data;

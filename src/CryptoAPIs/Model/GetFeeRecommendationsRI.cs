@@ -44,28 +44,39 @@ namespace CryptoAPIs.Model
         /// <param name="fast">Fast fee per byte calculated from unconfirmed transactions (required).</param>
         /// <param name="slow">Slow fee per byte calculated from unconfirmed transactions (required).</param>
         /// <param name="standard">Standard fee per byte calculated from unconfirmed transactions (required).</param>
-        public GetFeeRecommendationsRI(string unit = default(string), string fast = default(string), string slow = default(string), string standard = default(string))
+        /// <param name="feeCushionMultiplier">Represents the fee cushion multiplier used to multiply the base fee. (required).</param>
+        public GetFeeRecommendationsRI(string unit = default(string), string fast = default(string), string slow = default(string), string standard = default(string), string feeCushionMultiplier = default(string))
         {
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for GetFeeRecommendationsRI and cannot be null");
             }
             this.Unit = unit;
             // to ensure "fast" is required (not null)
-            if (fast == null) {
+            if (fast == null)
+            {
                 throw new ArgumentNullException("fast is a required property for GetFeeRecommendationsRI and cannot be null");
             }
             this.Fast = fast;
             // to ensure "slow" is required (not null)
-            if (slow == null) {
+            if (slow == null)
+            {
                 throw new ArgumentNullException("slow is a required property for GetFeeRecommendationsRI and cannot be null");
             }
             this.Slow = slow;
             // to ensure "standard" is required (not null)
-            if (standard == null) {
+            if (standard == null)
+            {
                 throw new ArgumentNullException("standard is a required property for GetFeeRecommendationsRI and cannot be null");
             }
             this.Standard = standard;
+            // to ensure "feeCushionMultiplier" is required (not null)
+            if (feeCushionMultiplier == null)
+            {
+                throw new ArgumentNullException("feeCushionMultiplier is a required property for GetFeeRecommendationsRI and cannot be null");
+            }
+            this.FeeCushionMultiplier = feeCushionMultiplier;
         }
 
         /// <summary>
@@ -97,6 +108,13 @@ namespace CryptoAPIs.Model
         public string Standard { get; set; }
 
         /// <summary>
+        /// Represents the fee cushion multiplier used to multiply the base fee.
+        /// </summary>
+        /// <value>Represents the fee cushion multiplier used to multiply the base fee.</value>
+        [DataMember(Name = "feeCushionMultiplier", IsRequired = true, EmitDefaultValue = false)]
+        public string FeeCushionMultiplier { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -108,6 +126,7 @@ namespace CryptoAPIs.Model
             sb.Append("  Fast: ").Append(Fast).Append("\n");
             sb.Append("  Slow: ").Append(Slow).Append("\n");
             sb.Append("  Standard: ").Append(Standard).Append("\n");
+            sb.Append("  FeeCushionMultiplier: ").Append(FeeCushionMultiplier).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -162,6 +181,11 @@ namespace CryptoAPIs.Model
                     this.Standard == input.Standard ||
                     (this.Standard != null &&
                     this.Standard.Equals(input.Standard))
+                ) && 
+                (
+                    this.FeeCushionMultiplier == input.FeeCushionMultiplier ||
+                    (this.FeeCushionMultiplier != null &&
+                    this.FeeCushionMultiplier.Equals(input.FeeCushionMultiplier))
                 );
         }
 
@@ -189,6 +213,10 @@ namespace CryptoAPIs.Model
                 if (this.Standard != null)
                 {
                     hashCode = (hashCode * 59) + this.Standard.GetHashCode();
+                }
+                if (this.FeeCushionMultiplier != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeeCushionMultiplier.GetHashCode();
                 }
                 return hashCode;
             }

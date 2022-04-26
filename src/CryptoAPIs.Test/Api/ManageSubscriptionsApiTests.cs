@@ -85,6 +85,19 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test GetBlockchainEventSubscriptionDetailsByReferenceID
+        /// </summary>
+        [Fact]
+        public void GetBlockchainEventSubscriptionDetailsByReferenceIDTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string referenceId = null;
+            //string context = null;
+            //var response = instance.GetBlockchainEventSubscriptionDetailsByReferenceID(referenceId, context);
+            //Assert.IsType<GetBlockchainEventSubscriptionDetailsByReferenceIDR>(response);
+        }
+
+        /// <summary>
         /// Test ListBlockchainEventsSubscriptions
         /// </summary>
         [Fact]

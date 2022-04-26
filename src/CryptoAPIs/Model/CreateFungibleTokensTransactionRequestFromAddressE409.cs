@@ -48,6 +48,18 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateFungibleTokensTransactionRequestFromAddressE409" /> class
+        /// with the <see cref="WalletAsAServiceWalletBalanceNotEnough" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of WalletAsAServiceWalletBalanceNotEnough.</param>
+        public CreateFungibleTokensTransactionRequestFromAddressE409(WalletAsAServiceWalletBalanceNotEnough actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateFungibleTokensTransactionRequestFromAddressE409" /> class
         /// with the <see cref="WalletAsAServiceAddressBalanceNotEnough" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of WalletAsAServiceAddressBalanceNotEnough.</param>
@@ -64,18 +76,6 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="actualInstance">An instance of WalletAsAServiceTokenNotSupported.</param>
         public CreateFungibleTokensTransactionRequestFromAddressE409(WalletAsAServiceTokenNotSupported actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateFungibleTokensTransactionRequestFromAddressE409" /> class
-        /// with the <see cref="WalletAsAServiceWalletBalanceNotEnough" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of WalletAsAServiceWalletBalanceNotEnough.</param>
-        public CreateFungibleTokensTransactionRequestFromAddressE409(WalletAsAServiceWalletBalanceNotEnough actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -130,6 +130,16 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
+        /// Get the actual instance of `WalletAsAServiceWalletBalanceNotEnough`. If the actual instance is not `WalletAsAServiceWalletBalanceNotEnough`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of WalletAsAServiceWalletBalanceNotEnough</returns>
+        public WalletAsAServiceWalletBalanceNotEnough GetWalletAsAServiceWalletBalanceNotEnough()
+        {
+            return (WalletAsAServiceWalletBalanceNotEnough)this.ActualInstance;
+        }
+
+        /// <summary>
         /// Get the actual instance of `WalletAsAServiceAddressBalanceNotEnough`. If the actual instance is not `WalletAsAServiceAddressBalanceNotEnough`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -147,16 +157,6 @@ namespace CryptoAPIs.Model
         public WalletAsAServiceTokenNotSupported GetWalletAsAServiceTokenNotSupported()
         {
             return (WalletAsAServiceTokenNotSupported)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `WalletAsAServiceWalletBalanceNotEnough`. If the actual instance is not `WalletAsAServiceWalletBalanceNotEnough`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of WalletAsAServiceWalletBalanceNotEnough</returns>
-        public WalletAsAServiceWalletBalanceNotEnough GetWalletAsAServiceWalletBalanceNotEnough()
-        {
-            return (WalletAsAServiceWalletBalanceNotEnough)this.ActualInstance;
         }
 
         /// <summary>

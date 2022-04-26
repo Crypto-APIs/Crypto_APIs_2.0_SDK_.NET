@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public CreateAutomaticTokensForwardingRData(CreateAutomaticTokensForwardingRI item = default(CreateAutomaticTokensForwardingRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for CreateAutomaticTokensForwardingRData and cannot be null");
             }
             this.Item = item;

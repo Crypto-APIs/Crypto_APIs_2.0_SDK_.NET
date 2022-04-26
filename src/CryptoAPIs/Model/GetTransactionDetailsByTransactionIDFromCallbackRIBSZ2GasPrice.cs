@@ -42,11 +42,12 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="amount">Defines the price of the gas. (required).</param>
         /// <param name="unit">Defines the unit of the gas price amount, e.g. BTC, ETH, XRP. (required).</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2GasPrice(int amount = default(int), string unit = default(string))
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2GasPrice(long amount = default(long), string unit = default(string))
         {
             this.Amount = amount;
             // to ensure "unit" is required (not null)
-            if (unit == null) {
+            if (unit == null)
+            {
                 throw new ArgumentNullException("unit is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2GasPrice and cannot be null");
             }
             this.Unit = unit;
@@ -57,7 +58,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the price of the gas.</value>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
-        public int Amount { get; set; }
+        public long Amount { get; set; }
 
         /// <summary>
         /// Defines the unit of the gas price amount, e.g. BTC, ETH, XRP.

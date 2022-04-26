@@ -42,37 +42,44 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="address">Represents the address of the transaction, per which the result is returned. (required).</param>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. (required).</param>
         /// <param name="createdTimestamp">Defines the specific time/date when the subscription was created in Unix Timestamp. (required).</param>
         /// <param name="eventType">Defines the type of the specific event available for the customer to subscribe to for callback notification. (required).</param>
         /// <param name="isActive">Defines whether the subscription is active or not. Set as boolean. (required).</param>
+        /// <param name="receiveCallbackOn">Represents the exact confirmation, on which the user wants to receive callback. (required).</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription. (required).</param>
-        public NewConfirmedTokensTransactionsRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string))
+        public NewConfirmedTokensTransactionsRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int createdTimestamp = default(int), string eventType = default(string), bool isActive = default(bool), int receiveCallbackOn = default(int), string referenceId = default(string))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
             }
             this.Address = address;
             // to ensure "callbackSecretKey" is required (not null)
-            if (callbackSecretKey == null) {
+            if (callbackSecretKey == null)
+            {
                 throw new ArgumentNullException("callbackSecretKey is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
             }
             this.CallbackSecretKey = callbackSecretKey;
             // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
+            if (callbackUrl == null)
+            {
                 throw new ArgumentNullException("callbackUrl is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "eventType" is required (not null)
-            if (eventType == null) {
+            if (eventType == null)
+            {
                 throw new ArgumentNullException("eventType is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
             }
             this.EventType = eventType;
             this.IsActive = isActive;
+            this.ReceiveCallbackOn = receiveCallbackOn;
             // to ensure "referenceId" is required (not null)
-            if (referenceId == null) {
+            if (referenceId == null)
+            {
                 throw new ArgumentNullException("referenceId is a required property for NewConfirmedTokensTransactionsRI and cannot be null");
             }
             this.ReferenceId = referenceId;
@@ -93,9 +100,9 @@ namespace CryptoAPIs.Model
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 
@@ -121,6 +128,13 @@ namespace CryptoAPIs.Model
         public bool IsActive { get; set; }
 
         /// <summary>
+        /// Represents the exact confirmation, on which the user wants to receive callback.
+        /// </summary>
+        /// <value>Represents the exact confirmation, on which the user wants to receive callback.</value>
+        [DataMember(Name = "receiveCallbackOn", IsRequired = true, EmitDefaultValue = false)]
+        public int ReceiveCallbackOn { get; set; }
+
+        /// <summary>
         /// Represents a unique ID used to reference the specific callback subscription.
         /// </summary>
         /// <value>Represents a unique ID used to reference the specific callback subscription.</value>
@@ -141,6 +155,7 @@ namespace CryptoAPIs.Model
             sb.Append("  CreatedTimestamp: ").Append(CreatedTimestamp).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
+            sb.Append("  ReceiveCallbackOn: ").Append(ReceiveCallbackOn).Append("\n");
             sb.Append("  ReferenceId: ").Append(ReferenceId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -206,6 +221,10 @@ namespace CryptoAPIs.Model
                     this.IsActive.Equals(input.IsActive)
                 ) && 
                 (
+                    this.ReceiveCallbackOn == input.ReceiveCallbackOn ||
+                    this.ReceiveCallbackOn.Equals(input.ReceiveCallbackOn)
+                ) && 
+                (
                     this.ReferenceId == input.ReferenceId ||
                     (this.ReferenceId != null &&
                     this.ReferenceId.Equals(input.ReferenceId))
@@ -239,6 +258,7 @@ namespace CryptoAPIs.Model
                     hashCode = (hashCode * 59) + this.EventType.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.IsActive.GetHashCode();
+                hashCode = (hashCode * 59) + this.ReceiveCallbackOn.GetHashCode();
                 if (this.ReferenceId != null)
                 {
                     hashCode = (hashCode * 59) + this.ReferenceId.GetHashCode();

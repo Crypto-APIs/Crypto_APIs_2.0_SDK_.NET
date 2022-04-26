@@ -44,23 +44,26 @@ namespace CryptoAPIs.Model
         /// <param name="confirmedBalance">confirmedBalance (required).</param>
         /// <param name="totalReceived">totalReceived (required).</param>
         /// <param name="totalSpent">totalSpent (required).</param>
-        /// <param name="incomingTransactionsCount">Defines the count of the incoming transactions. (required).</param>
-        /// <param name="outgoingTransactionsCount">Defines the count of the outgoing transactions. (required).</param>
+        /// <param name="incomingTransactionsCount">Defines the received transaction count to the address. (required).</param>
+        /// <param name="outgoingTransactionsCount">Defines the sent transaction count from the address. (required).</param>
         public GetAddressDetailsRI(int transactionsCount = default(int), GetAddressDetailsRIConfirmedBalance confirmedBalance = default(GetAddressDetailsRIConfirmedBalance), GetAddressDetailsRITotalReceived totalReceived = default(GetAddressDetailsRITotalReceived), GetAddressDetailsRITotalSpent totalSpent = default(GetAddressDetailsRITotalSpent), int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int))
         {
             this.TransactionsCount = transactionsCount;
             // to ensure "confirmedBalance" is required (not null)
-            if (confirmedBalance == null) {
+            if (confirmedBalance == null)
+            {
                 throw new ArgumentNullException("confirmedBalance is a required property for GetAddressDetailsRI and cannot be null");
             }
             this.ConfirmedBalance = confirmedBalance;
             // to ensure "totalReceived" is required (not null)
-            if (totalReceived == null) {
+            if (totalReceived == null)
+            {
                 throw new ArgumentNullException("totalReceived is a required property for GetAddressDetailsRI and cannot be null");
             }
             this.TotalReceived = totalReceived;
             // to ensure "totalSpent" is required (not null)
-            if (totalSpent == null) {
+            if (totalSpent == null)
+            {
                 throw new ArgumentNullException("totalSpent is a required property for GetAddressDetailsRI and cannot be null");
             }
             this.TotalSpent = totalSpent;
@@ -94,16 +97,16 @@ namespace CryptoAPIs.Model
         public GetAddressDetailsRITotalSpent TotalSpent { get; set; }
 
         /// <summary>
-        /// Defines the count of the incoming transactions.
+        /// Defines the received transaction count to the address.
         /// </summary>
-        /// <value>Defines the count of the incoming transactions.</value>
+        /// <value>Defines the received transaction count to the address.</value>
         [DataMember(Name = "incomingTransactionsCount", IsRequired = true, EmitDefaultValue = false)]
         public int IncomingTransactionsCount { get; set; }
 
         /// <summary>
-        /// Defines the count of the outgoing transactions.
+        /// Defines the sent transaction count from the address.
         /// </summary>
-        /// <value>Defines the count of the outgoing transactions.</value>
+        /// <value>Defines the sent transaction count from the address.</value>
         [DataMember(Name = "outgoingTransactionsCount", IsRequired = true, EmitDefaultValue = false)]
         public int OutgoingTransactionsCount { get; set; }
 

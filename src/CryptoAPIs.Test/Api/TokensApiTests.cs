@@ -120,5 +120,22 @@ namespace CryptoAPIs.Test.Api
             //var response = instance.ListTokensTransfersByTransactionHash(blockchain, network, transactionHash, context, limit, offset);
             //Assert.IsType<ListTokensTransfersByTransactionHashR>(response);
         }
+
+        /// <summary>
+        /// Test ListUnconfirmedTokensTransfersByAddress
+        /// </summary>
+        [Fact]
+        public void ListUnconfirmedTokensTransfersByAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string address = null;
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListUnconfirmedTokensTransfersByAddress(blockchain, network, address, context, limit, offset);
+            //Assert.IsType<ListUnconfirmedTokensTransfersByAddressR>(response);
+        }
     }
 }

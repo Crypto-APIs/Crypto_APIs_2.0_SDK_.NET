@@ -40,7 +40,7 @@ namespace Example
             var apiInstance = new ExchangeRatesApi(config);
             var fromAssetSymbol = btc;  // string | Defines the base asset symbol to get a rate for.
             var toAssetSymbol = usd;  // string | Defines the relation asset symbol in which the base asset rate will be displayed.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var calculationTimestamp = 1635514425;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional) 
 
             try
@@ -131,7 +131,7 @@ namespace Example
             var apiInstance = new ExchangeRatesApi(config);
             var fromAssetId = 5b1ea92e584bf50020130612;  // string | Defines the base asset Reference ID to get a rate for.
             var toAssetId = 5b1ea92e584bf50020130615;  // string | Defines the relation asset Reference ID in which the base asset rate will be displayed.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var calculationTimestamp = 1618577849;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional) 
 
             try

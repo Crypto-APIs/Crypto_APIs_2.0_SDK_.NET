@@ -47,22 +47,26 @@ namespace CryptoAPIs.Model
         public GetWalletAssetDetailsRIFungibleTokens(string confirmedAmount = default(string), string identifier = default(string), string symbol = default(string), string type = default(string))
         {
             // to ensure "confirmedAmount" is required (not null)
-            if (confirmedAmount == null) {
+            if (confirmedAmount == null)
+            {
                 throw new ArgumentNullException("confirmedAmount is a required property for GetWalletAssetDetailsRIFungibleTokens and cannot be null");
             }
             this.ConfirmedAmount = confirmedAmount;
             // to ensure "identifier" is required (not null)
-            if (identifier == null) {
+            if (identifier == null)
+            {
                 throw new ArgumentNullException("identifier is a required property for GetWalletAssetDetailsRIFungibleTokens and cannot be null");
             }
             this.Identifier = identifier;
             // to ensure "symbol" is required (not null)
-            if (symbol == null) {
+            if (symbol == null)
+            {
                 throw new ArgumentNullException("symbol is a required property for GetWalletAssetDetailsRIFungibleTokens and cannot be null");
             }
             this.Symbol = symbol;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for GetWalletAssetDetailsRIFungibleTokens and cannot be null");
             }
             this.Type = type;

@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NewUnconfirmedCoinsTransactionsE401" /> class
-        /// with the <see cref="InvalidApiKey" /> class
+        /// with the <see cref="MissingApiKey" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of InvalidApiKey.</param>
-        public NewUnconfirmedCoinsTransactionsE401(InvalidApiKey actualInstance)
+        /// <param name="actualInstance">An instance of MissingApiKey.</param>
+        public NewUnconfirmedCoinsTransactionsE401(MissingApiKey actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NewUnconfirmedCoinsTransactionsE401" /> class
-        /// with the <see cref="MissingApiKey" /> class
+        /// with the <see cref="InvalidApiKey" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of MissingApiKey.</param>
-        public NewUnconfirmedCoinsTransactionsE401(MissingApiKey actualInstance)
+        /// <param name="actualInstance">An instance of InvalidApiKey.</param>
+        public NewUnconfirmedCoinsTransactionsE401(InvalidApiKey actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -88,16 +88,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `InvalidApiKey`. If the actual instance is not `InvalidApiKey`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of InvalidApiKey</returns>
-        public InvalidApiKey GetInvalidApiKey()
-        {
-            return (InvalidApiKey)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `MissingApiKey`. If the actual instance is not `MissingApiKey`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -105,6 +95,16 @@ namespace CryptoAPIs.Model
         public MissingApiKey GetMissingApiKey()
         {
             return (MissingApiKey)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `InvalidApiKey`. If the actual instance is not `InvalidApiKey`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of InvalidApiKey</returns>
+        public InvalidApiKey GetInvalidApiKey()
+        {
+            return (InvalidApiKey)this.ActualInstance;
         }
 
         /// <summary>

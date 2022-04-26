@@ -49,20 +49,23 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHeightFromCallbackRI(string hash = default(string), int height = default(int), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), GetBlockDetailsByBlockHeightFromCallbackRIBS blockchainSpecific = default(GetBlockDetailsByBlockHeightFromCallbackRIBS))
         {
             // to ensure "hash" is required (not null)
-            if (hash == null) {
+            if (hash == null)
+            {
                 throw new ArgumentNullException("hash is a required property for GetBlockDetailsByBlockHeightFromCallbackRI and cannot be null");
             }
             this.Hash = hash;
             this.Height = height;
             // to ensure "previousBlockHash" is required (not null)
-            if (previousBlockHash == null) {
+            if (previousBlockHash == null)
+            {
                 throw new ArgumentNullException("previousBlockHash is a required property for GetBlockDetailsByBlockHeightFromCallbackRI and cannot be null");
             }
             this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             this.TransactionsCount = transactionsCount;
             // to ensure "blockchainSpecific" is required (not null)
-            if (blockchainSpecific == null) {
+            if (blockchainSpecific == null)
+            {
                 throw new ArgumentNullException("blockchainSpecific is a required property for GetBlockDetailsByBlockHeightFromCallbackRI and cannot be null");
             }
             this.BlockchainSpecific = blockchainSpecific;

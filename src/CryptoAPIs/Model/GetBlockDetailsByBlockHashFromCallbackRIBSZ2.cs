@@ -49,22 +49,26 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHashFromCallbackRIBSZ2(string bits = default(string), string chainwork = default(string), string merkleRoot = default(string), string nonce = default(string), int size = default(int), int version = default(int))
         {
             // to ensure "bits" is required (not null)
-            if (bits == null) {
+            if (bits == null)
+            {
                 throw new ArgumentNullException("bits is a required property for GetBlockDetailsByBlockHashFromCallbackRIBSZ2 and cannot be null");
             }
             this.Bits = bits;
             // to ensure "chainwork" is required (not null)
-            if (chainwork == null) {
+            if (chainwork == null)
+            {
                 throw new ArgumentNullException("chainwork is a required property for GetBlockDetailsByBlockHashFromCallbackRIBSZ2 and cannot be null");
             }
             this.Chainwork = chainwork;
             // to ensure "merkleRoot" is required (not null)
-            if (merkleRoot == null) {
+            if (merkleRoot == null)
+            {
                 throw new ArgumentNullException("merkleRoot is a required property for GetBlockDetailsByBlockHashFromCallbackRIBSZ2 and cannot be null");
             }
             this.MerkleRoot = merkleRoot;
             // to ensure "nonce" is required (not null)
-            if (nonce == null) {
+            if (nonce == null)
+            {
                 throw new ArgumentNullException("nonce is a required property for GetBlockDetailsByBlockHashFromCallbackRIBSZ2 and cannot be null");
             }
             this.Nonce = nonce;

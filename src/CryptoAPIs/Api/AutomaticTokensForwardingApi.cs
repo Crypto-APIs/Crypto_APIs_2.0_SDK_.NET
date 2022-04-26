@@ -38,8 +38,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AddTokensToExistingFromAddressR</returns>
-        AddTokensToExistingFromAddressR AddTokensToExistingFromAddress(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB));
+        AddTokensToExistingFromAddressR AddTokensToExistingFromAddress(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0);
 
         /// <summary>
         /// Add Tokens To Existing fromAddress
@@ -52,8 +53,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AddTokensToExistingFromAddressR</returns>
-        ApiResponse<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressWithHttpInfo(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB));
+        ApiResponse<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressWithHttpInfo(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0);
         /// <summary>
         /// Create Automatic Tokens Forwarding
         /// </summary>
@@ -65,8 +67,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateAutomaticTokensForwardingR</returns>
-        CreateAutomaticTokensForwardingR CreateAutomaticTokensForwarding(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB));
+        CreateAutomaticTokensForwardingR CreateAutomaticTokensForwarding(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0);
 
         /// <summary>
         /// Create Automatic Tokens Forwarding
@@ -79,8 +82,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateAutomaticTokensForwardingR</returns>
-        ApiResponse<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB));
+        ApiResponse<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0);
         /// <summary>
         /// Delete Automatic Tokens Forwarding
         /// </summary>
@@ -92,8 +96,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteAutomaticTokensForwardingR</returns>
-        DeleteAutomaticTokensForwardingR DeleteAutomaticTokensForwarding(string blockchain, string network, string referenceId, string context = default(string));
+        DeleteAutomaticTokensForwardingR DeleteAutomaticTokensForwarding(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Delete Automatic Tokens Forwarding
@@ -106,8 +111,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteAutomaticTokensForwardingR</returns>
-        ApiResponse<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string));
+        ApiResponse<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Fee Address Details
         /// </summary>
@@ -118,8 +124,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetFeeAddressDetailsR</returns>
-        GetFeeAddressDetailsR GetFeeAddressDetails(string blockchain, string network, string context = default(string));
+        GetFeeAddressDetailsR GetFeeAddressDetails(string blockchain, string network, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Fee Address Details
@@ -131,8 +138,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetFeeAddressDetailsR</returns>
-        ApiResponse<GetFeeAddressDetailsR> GetFeeAddressDetailsWithHttpInfo(string blockchain, string network, string context = default(string));
+        ApiResponse<GetFeeAddressDetailsR> GetFeeAddressDetailsWithHttpInfo(string blockchain, string network, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Tokens Forwarding Automations
         /// </summary>
@@ -145,8 +153,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTokensForwardingAutomationsR</returns>
-        ListTokensForwardingAutomationsR ListTokensForwardingAutomations(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListTokensForwardingAutomationsR ListTokensForwardingAutomations(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Tokens Forwarding Automations
@@ -160,8 +169,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTokensForwardingAutomationsR</returns>
-        ApiResponse<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -182,9 +192,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AddTokensToExistingFromAddressR</returns>
-        System.Threading.Tasks.Task<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Add Tokens To Existing fromAddress
@@ -197,9 +208,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AddTokensToExistingFromAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AddTokensToExistingFromAddressR>> AddTokensToExistingFromAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AddTokensToExistingFromAddressR>> AddTokensToExistingFromAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Automatic Tokens Forwarding
         /// </summary>
@@ -211,9 +223,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateAutomaticTokensForwardingR</returns>
-        System.Threading.Tasks.Task<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Automatic Tokens Forwarding
@@ -226,9 +239,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateAutomaticTokensForwardingR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateAutomaticTokensForwardingR>> CreateAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateAutomaticTokensForwardingR>> CreateAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Automatic Tokens Forwarding
         /// </summary>
@@ -240,9 +254,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteAutomaticTokensForwardingR</returns>
-        System.Threading.Tasks.Task<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Automatic Tokens Forwarding
@@ -255,9 +270,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteAutomaticTokensForwardingR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteAutomaticTokensForwardingR>> DeleteAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeleteAutomaticTokensForwardingR>> DeleteAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Fee Address Details
         /// </summary>
@@ -268,9 +284,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetFeeAddressDetailsR</returns>
-        System.Threading.Tasks.Task<GetFeeAddressDetailsR> GetFeeAddressDetailsAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetFeeAddressDetailsR> GetFeeAddressDetailsAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Fee Address Details
@@ -282,9 +299,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetFeeAddressDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetFeeAddressDetailsR>> GetFeeAddressDetailsWithHttpInfoAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetFeeAddressDetailsR>> GetFeeAddressDetailsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Tokens Forwarding Automations
         /// </summary>
@@ -297,9 +315,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTokensForwardingAutomationsR</returns>
-        System.Threading.Tasks.Task<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Tokens Forwarding Automations
@@ -313,9 +332,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTokensForwardingAutomationsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListTokensForwardingAutomationsR>> ListTokensForwardingAutomationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListTokensForwardingAutomationsR>> ListTokensForwardingAutomationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -444,8 +464,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AddTokensToExistingFromAddressR</returns>
-        public AddTokensToExistingFromAddressR AddTokensToExistingFromAddress(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB))
+        public AddTokensToExistingFromAddressR AddTokensToExistingFromAddress(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<AddTokensToExistingFromAddressR> localVarResponse = AddTokensToExistingFromAddressWithHttpInfo(blockchain, network, context, addTokensToExistingFromAddressRB);
             return localVarResponse.Data;
@@ -459,8 +480,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AddTokensToExistingFromAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressWithHttpInfo(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB))
+        public CryptoAPIs.Client.ApiResponse<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressWithHttpInfo(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -504,6 +526,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = addTokensToExistingFromAddressRB;
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.AddTokensToExistingFromAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -533,11 +558,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AddTokensToExistingFromAddressR</returns>
-        public async System.Threading.Tasks.Task<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AddTokensToExistingFromAddressR> AddTokensToExistingFromAddressAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<AddTokensToExistingFromAddressR> localVarResponse = await AddTokensToExistingFromAddressWithHttpInfoAsync(blockchain, network, context, addTokensToExistingFromAddressRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<AddTokensToExistingFromAddressR> localVarResponse = await AddTokensToExistingFromAddressWithHttpInfoAsync(blockchain, network, context, addTokensToExistingFromAddressRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -549,9 +575,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="addTokensToExistingFromAddressRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AddTokensToExistingFromAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<AddTokensToExistingFromAddressR>> AddTokensToExistingFromAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<AddTokensToExistingFromAddressR>> AddTokensToExistingFromAddressWithHttpInfoAsync(string blockchain, string network, string context = default(string), AddTokensToExistingFromAddressRB addTokensToExistingFromAddressRB = default(AddTokensToExistingFromAddressRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -596,6 +623,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = addTokensToExistingFromAddressRB;
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.AddTokensToExistingFromAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -626,8 +656,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateAutomaticTokensForwardingR</returns>
-        public CreateAutomaticTokensForwardingR CreateAutomaticTokensForwarding(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB))
+        public CreateAutomaticTokensForwardingR CreateAutomaticTokensForwarding(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<CreateAutomaticTokensForwardingR> localVarResponse = CreateAutomaticTokensForwardingWithHttpInfo(blockchain, network, context, createAutomaticTokensForwardingRB);
             return localVarResponse.Data;
@@ -641,8 +672,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateAutomaticTokensForwardingR</returns>
-        public CryptoAPIs.Client.ApiResponse<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB))
+        public CryptoAPIs.Client.ApiResponse<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -686,6 +718,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createAutomaticTokensForwardingRB;
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.CreateAutomaticTokensForwarding";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -715,11 +750,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateAutomaticTokensForwardingR</returns>
-        public async System.Threading.Tasks.Task<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateAutomaticTokensForwardingR> CreateAutomaticTokensForwardingAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<CreateAutomaticTokensForwardingR> localVarResponse = await CreateAutomaticTokensForwardingWithHttpInfoAsync(blockchain, network, context, createAutomaticTokensForwardingRB, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<CreateAutomaticTokensForwardingR> localVarResponse = await CreateAutomaticTokensForwardingWithHttpInfoAsync(blockchain, network, context, createAutomaticTokensForwardingRB, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -731,9 +767,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="createAutomaticTokensForwardingRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateAutomaticTokensForwardingR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateAutomaticTokensForwardingR>> CreateAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<CreateAutomaticTokensForwardingR>> CreateAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string context = default(string), CreateAutomaticTokensForwardingRB createAutomaticTokensForwardingRB = default(CreateAutomaticTokensForwardingRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -778,6 +815,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
             localVarRequestOptions.Data = createAutomaticTokensForwardingRB;
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.CreateAutomaticTokensForwarding";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -808,8 +848,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteAutomaticTokensForwardingR</returns>
-        public DeleteAutomaticTokensForwardingR DeleteAutomaticTokensForwarding(string blockchain, string network, string referenceId, string context = default(string))
+        public DeleteAutomaticTokensForwardingR DeleteAutomaticTokensForwarding(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<DeleteAutomaticTokensForwardingR> localVarResponse = DeleteAutomaticTokensForwardingWithHttpInfo(blockchain, network, referenceId, context);
             return localVarResponse.Data;
@@ -823,8 +864,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteAutomaticTokensForwardingR</returns>
-        public CryptoAPIs.Client.ApiResponse<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingWithHttpInfo(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -873,6 +915,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.DeleteAutomaticTokensForwarding";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -902,11 +947,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteAutomaticTokensForwardingR</returns>
-        public async System.Threading.Tasks.Task<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeleteAutomaticTokensForwardingR> DeleteAutomaticTokensForwardingAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<DeleteAutomaticTokensForwardingR> localVarResponse = await DeleteAutomaticTokensForwardingWithHttpInfoAsync(blockchain, network, referenceId, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<DeleteAutomaticTokensForwardingR> localVarResponse = await DeleteAutomaticTokensForwardingWithHttpInfoAsync(blockchain, network, referenceId, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -918,9 +964,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteAutomaticTokensForwardingR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<DeleteAutomaticTokensForwardingR>> DeleteAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<DeleteAutomaticTokensForwardingR>> DeleteAutomaticTokensForwardingWithHttpInfoAsync(string blockchain, string network, string referenceId, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -971,6 +1018,9 @@ namespace CryptoAPIs.Api
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
 
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.DeleteAutomaticTokensForwarding";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
             {
@@ -999,8 +1049,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetFeeAddressDetailsR</returns>
-        public GetFeeAddressDetailsR GetFeeAddressDetails(string blockchain, string network, string context = default(string))
+        public GetFeeAddressDetailsR GetFeeAddressDetails(string blockchain, string network, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetFeeAddressDetailsR> localVarResponse = GetFeeAddressDetailsWithHttpInfo(blockchain, network, context);
             return localVarResponse.Data;
@@ -1013,8 +1064,9 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetFeeAddressDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetFeeAddressDetailsR> GetFeeAddressDetailsWithHttpInfo(string blockchain, string network, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetFeeAddressDetailsR> GetFeeAddressDetailsWithHttpInfo(string blockchain, string network, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1056,6 +1108,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.GetFeeAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1084,11 +1139,12 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetFeeAddressDetailsR</returns>
-        public async System.Threading.Tasks.Task<GetFeeAddressDetailsR> GetFeeAddressDetailsAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetFeeAddressDetailsR> GetFeeAddressDetailsAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetFeeAddressDetailsR> localVarResponse = await GetFeeAddressDetailsWithHttpInfoAsync(blockchain, network, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetFeeAddressDetailsR> localVarResponse = await GetFeeAddressDetailsWithHttpInfoAsync(blockchain, network, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1099,9 +1155,10 @@ namespace CryptoAPIs.Api
         /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetFeeAddressDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetFeeAddressDetailsR>> GetFeeAddressDetailsWithHttpInfoAsync(string blockchain, string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetFeeAddressDetailsR>> GetFeeAddressDetailsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1144,6 +1201,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.GetFeeAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1175,8 +1235,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTokensForwardingAutomationsR</returns>
-        public ListTokensForwardingAutomationsR ListTokensForwardingAutomations(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListTokensForwardingAutomationsR ListTokensForwardingAutomations(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListTokensForwardingAutomationsR> localVarResponse = ListTokensForwardingAutomationsWithHttpInfo(blockchain, network, context, limit, offset);
             return localVarResponse.Data;
@@ -1191,8 +1252,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTokensForwardingAutomationsR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsWithHttpInfo(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1242,6 +1304,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.ListTokensForwardingAutomations";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1272,11 +1337,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTokensForwardingAutomationsR</returns>
-        public async System.Threading.Tasks.Task<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListTokensForwardingAutomationsR> ListTokensForwardingAutomationsAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListTokensForwardingAutomationsR> localVarResponse = await ListTokensForwardingAutomationsWithHttpInfoAsync(blockchain, network, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListTokensForwardingAutomationsR> localVarResponse = await ListTokensForwardingAutomationsWithHttpInfoAsync(blockchain, network, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1289,9 +1355,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTokensForwardingAutomationsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTokensForwardingAutomationsR>> ListTokensForwardingAutomationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTokensForwardingAutomationsR>> ListTokensForwardingAutomationsWithHttpInfoAsync(string blockchain, string network, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1342,6 +1409,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "AutomaticTokensForwardingApi.ListTokensForwardingAutomations";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

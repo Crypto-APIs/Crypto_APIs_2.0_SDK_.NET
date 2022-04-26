@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHeightFromCallbackRData(GetBlockDetailsByBlockHeightFromCallbackRI item = default(GetBlockDetailsByBlockHeightFromCallbackRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetBlockDetailsByBlockHeightFromCallbackRData and cannot be null");
             }
             this.Item = item;

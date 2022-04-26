@@ -51,29 +51,34 @@ namespace CryptoAPIs.Model
         public GetXRPRippleBlockDetailsByBlockHeightRI(string blockHash = default(string), int blockHeight = default(int), string nextBlockHash = default(string), string previousBlockHash = default(string), int timestamp = default(int), GetXRPRippleBlockDetailsByBlockHeightRITotalCoins totalCoins = default(GetXRPRippleBlockDetailsByBlockHeightRITotalCoins), GetXRPRippleBlockDetailsByBlockHeightRITotalFees totalFees = default(GetXRPRippleBlockDetailsByBlockHeightRITotalFees), int transactionsCount = default(int))
         {
             // to ensure "blockHash" is required (not null)
-            if (blockHash == null) {
+            if (blockHash == null)
+            {
                 throw new ArgumentNullException("blockHash is a required property for GetXRPRippleBlockDetailsByBlockHeightRI and cannot be null");
             }
             this.BlockHash = blockHash;
             this.BlockHeight = blockHeight;
             // to ensure "nextBlockHash" is required (not null)
-            if (nextBlockHash == null) {
+            if (nextBlockHash == null)
+            {
                 throw new ArgumentNullException("nextBlockHash is a required property for GetXRPRippleBlockDetailsByBlockHeightRI and cannot be null");
             }
             this.NextBlockHash = nextBlockHash;
             // to ensure "previousBlockHash" is required (not null)
-            if (previousBlockHash == null) {
+            if (previousBlockHash == null)
+            {
                 throw new ArgumentNullException("previousBlockHash is a required property for GetXRPRippleBlockDetailsByBlockHeightRI and cannot be null");
             }
             this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             // to ensure "totalCoins" is required (not null)
-            if (totalCoins == null) {
+            if (totalCoins == null)
+            {
                 throw new ArgumentNullException("totalCoins is a required property for GetXRPRippleBlockDetailsByBlockHeightRI and cannot be null");
             }
             this.TotalCoins = totalCoins;
             // to ensure "totalFees" is required (not null)
-            if (totalFees == null) {
+            if (totalFees == null)
+            {
                 throw new ArgumentNullException("totalFees is a required property for GetXRPRippleBlockDetailsByBlockHeightRI and cannot be null");
             }
             this.TotalFees = totalFees;

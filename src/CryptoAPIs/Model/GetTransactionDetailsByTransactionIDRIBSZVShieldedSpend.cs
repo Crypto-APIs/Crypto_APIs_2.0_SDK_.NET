@@ -49,32 +49,38 @@ namespace CryptoAPIs.Model
         public GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend(string anchor = default(string), string cv = default(string), string nullifier = default(string), string proof = default(string), string rk = default(string), string spendAuthSig = default(string))
         {
             // to ensure "anchor" is required (not null)
-            if (anchor == null) {
+            if (anchor == null)
+            {
                 throw new ArgumentNullException("anchor is a required property for GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend and cannot be null");
             }
             this.Anchor = anchor;
             // to ensure "cv" is required (not null)
-            if (cv == null) {
+            if (cv == null)
+            {
                 throw new ArgumentNullException("cv is a required property for GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend and cannot be null");
             }
             this.Cv = cv;
             // to ensure "nullifier" is required (not null)
-            if (nullifier == null) {
+            if (nullifier == null)
+            {
                 throw new ArgumentNullException("nullifier is a required property for GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend and cannot be null");
             }
             this.Nullifier = nullifier;
             // to ensure "proof" is required (not null)
-            if (proof == null) {
+            if (proof == null)
+            {
                 throw new ArgumentNullException("proof is a required property for GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend and cannot be null");
             }
             this.Proof = proof;
             // to ensure "rk" is required (not null)
-            if (rk == null) {
+            if (rk == null)
+            {
                 throw new ArgumentNullException("rk is a required property for GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend and cannot be null");
             }
             this.Rk = rk;
             // to ensure "spendAuthSig" is required (not null)
-            if (spendAuthSig == null) {
+            if (spendAuthSig == null)
+            {
                 throw new ArgumentNullException("spendAuthSig is a required property for GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend and cannot be null");
             }
             this.SpendAuthSig = spendAuthSig;

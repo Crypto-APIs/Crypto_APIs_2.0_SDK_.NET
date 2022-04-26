@@ -47,17 +47,20 @@ namespace CryptoAPIs.Model
         public InlineResponse4005(string apiVersion = default(string), string requestId = default(string), string context = default(string), ListOmniTransactionsByAddressE400 error = default(ListOmniTransactionsByAddressE400))
         {
             // to ensure "apiVersion" is required (not null)
-            if (apiVersion == null) {
+            if (apiVersion == null)
+            {
                 throw new ArgumentNullException("apiVersion is a required property for InlineResponse4005 and cannot be null");
             }
             this.ApiVersion = apiVersion;
             // to ensure "requestId" is required (not null)
-            if (requestId == null) {
+            if (requestId == null)
+            {
                 throw new ArgumentNullException("requestId is a required property for InlineResponse4005 and cannot be null");
             }
             this.RequestId = requestId;
             // to ensure "error" is required (not null)
-            if (error == null) {
+            if (error == null)
+            {
                 throw new ArgumentNullException("error is a required property for InlineResponse4005 and cannot be null");
             }
             this.Error = error;

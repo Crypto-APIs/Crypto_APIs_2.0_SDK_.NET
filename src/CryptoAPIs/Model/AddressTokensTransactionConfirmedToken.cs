@@ -36,18 +36,6 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedToken" /> class
-        /// with the <see cref="AddressTokensTransactionConfirmedBep20" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedBep20.</param>
-        public AddressTokensTransactionConfirmedToken(AddressTokensTransactionConfirmedBep20 actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedToken" /> class
         /// with the <see cref="AddressTokensTransactionConfirmedErc20" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedErc20.</param>
@@ -76,6 +64,18 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedOmni.</param>
         public AddressTokensTransactionConfirmedToken(AddressTokensTransactionConfirmedOmni actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedToken" /> class
+        /// with the <see cref="AddressTokensTransactionConfirmedBep20" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedBep20.</param>
+        public AddressTokensTransactionConfirmedToken(AddressTokensTransactionConfirmedBep20 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -120,16 +120,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionConfirmedBep20`. If the actual instance is not `AddressTokensTransactionConfirmedBep20`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of AddressTokensTransactionConfirmedBep20</returns>
-        public AddressTokensTransactionConfirmedBep20 GetAddressTokensTransactionConfirmedBep20()
-        {
-            return (AddressTokensTransactionConfirmedBep20)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `AddressTokensTransactionConfirmedErc20`. If the actual instance is not `AddressTokensTransactionConfirmedErc20`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -157,6 +147,16 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionConfirmedOmni GetAddressTokensTransactionConfirmedOmni()
         {
             return (AddressTokensTransactionConfirmedOmni)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `AddressTokensTransactionConfirmedBep20`. If the actual instance is not `AddressTokensTransactionConfirmedBep20`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of AddressTokensTransactionConfirmedBep20</returns>
+        public AddressTokensTransactionConfirmedBep20 GetAddressTokensTransactionConfirmedBep20()
+        {
+            return (AddressTokensTransactionConfirmedBep20)this.ActualInstance;
         }
 
         /// <summary>

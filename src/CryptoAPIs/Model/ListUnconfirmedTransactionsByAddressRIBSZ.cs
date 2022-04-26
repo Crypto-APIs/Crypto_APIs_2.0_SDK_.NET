@@ -55,21 +55,24 @@ namespace CryptoAPIs.Model
         /// <param name="versionGroupId">Represents the transaction version group ID. (required).</param>
         /// <param name="vin">Object Array representation of transaction inputs (required).</param>
         /// <param name="vout">Object Array representation of transaction outputs (required).</param>
-        public ListUnconfirmedTransactionsByAddressRIBSZ(string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), int locktime = default(int), bool overwintered = default(bool), int size = default(int), List<ListConfirmedTransactionsByAddressRIBSZVJoinSplit> vJoinSplit = default(List<ListConfirmedTransactionsByAddressRIBSZVJoinSplit>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput> vShieldedOutput = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend> vShieldedSpend = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend>), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<GetTransactionDetailsByTransactionIDRIBSZVin> vin = default(List<GetTransactionDetailsByTransactionIDRIBSZVin>), List<GetTransactionDetailsByTransactionIDRIBSZVout> vout = default(List<GetTransactionDetailsByTransactionIDRIBSZVout>))
+        public ListUnconfirmedTransactionsByAddressRIBSZ(string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), long locktime = default(long), bool overwintered = default(bool), int size = default(int), List<ListConfirmedTransactionsByAddressRIBSZVJoinSplit> vJoinSplit = default(List<ListConfirmedTransactionsByAddressRIBSZVJoinSplit>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput> vShieldedOutput = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend> vShieldedSpend = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend>), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<GetTransactionDetailsByTransactionIDRIBSZVin> vin = default(List<GetTransactionDetailsByTransactionIDRIBSZVin>), List<GetTransactionDetailsByTransactionIDRIBSZVout> vout = default(List<GetTransactionDetailsByTransactionIDRIBSZVout>))
         {
             // to ensure "bindingSig" is required (not null)
-            if (bindingSig == null) {
+            if (bindingSig == null)
+            {
                 throw new ArgumentNullException("bindingSig is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.BindingSig = bindingSig;
             this.ExpiryHeight = expiryHeight;
             // to ensure "joinSplitPubKey" is required (not null)
-            if (joinSplitPubKey == null) {
+            if (joinSplitPubKey == null)
+            {
                 throw new ArgumentNullException("joinSplitPubKey is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.JoinSplitPubKey = joinSplitPubKey;
             // to ensure "joinSplitSig" is required (not null)
-            if (joinSplitSig == null) {
+            if (joinSplitSig == null)
+            {
                 throw new ArgumentNullException("joinSplitSig is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.JoinSplitSig = joinSplitSig;
@@ -77,38 +80,45 @@ namespace CryptoAPIs.Model
             this.Overwintered = overwintered;
             this.Size = size;
             // to ensure "vJoinSplit" is required (not null)
-            if (vJoinSplit == null) {
+            if (vJoinSplit == null)
+            {
                 throw new ArgumentNullException("vJoinSplit is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.VJoinSplit = vJoinSplit;
             // to ensure "vShieldedOutput" is required (not null)
-            if (vShieldedOutput == null) {
+            if (vShieldedOutput == null)
+            {
                 throw new ArgumentNullException("vShieldedOutput is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.VShieldedOutput = vShieldedOutput;
             // to ensure "vShieldedSpend" is required (not null)
-            if (vShieldedSpend == null) {
+            if (vShieldedSpend == null)
+            {
                 throw new ArgumentNullException("vShieldedSpend is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.VShieldedSpend = vShieldedSpend;
             // to ensure "valueBalance" is required (not null)
-            if (valueBalance == null) {
+            if (valueBalance == null)
+            {
                 throw new ArgumentNullException("valueBalance is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.ValueBalance = valueBalance;
             this._Version = version;
             // to ensure "versionGroupId" is required (not null)
-            if (versionGroupId == null) {
+            if (versionGroupId == null)
+            {
                 throw new ArgumentNullException("versionGroupId is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.VersionGroupId = versionGroupId;
             // to ensure "vin" is required (not null)
-            if (vin == null) {
+            if (vin == null)
+            {
                 throw new ArgumentNullException("vin is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.Vin = vin;
             // to ensure "vout" is required (not null)
-            if (vout == null) {
+            if (vout == null)
+            {
                 throw new ArgumentNullException("vout is a required property for ListUnconfirmedTransactionsByAddressRIBSZ and cannot be null");
             }
             this.Vout = vout;
@@ -147,7 +157,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid.</value>
         [DataMember(Name = "locktime", IsRequired = true, EmitDefaultValue = false)]
-        public int Locktime { get; set; }
+        public long Locktime { get; set; }
 
         /// <summary>
         /// \&quot;Overwinter\&quot; is the network upgrade for the Zcash blockchain.

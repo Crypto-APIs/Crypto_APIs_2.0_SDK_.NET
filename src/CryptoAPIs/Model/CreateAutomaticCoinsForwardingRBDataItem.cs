@@ -75,7 +75,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="CreateAutomaticCoinsForwardingRBDataItem" /> class.
         /// </summary>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. (required).</param>
         /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
         /// <param name="feePriority">Represents the fee priority of the automation, whether it is \&quot;slow\&quot;, \&quot;standard\&quot; or \&quot;fast\&quot;. (required).</param>
         /// <param name="minimumTransferAmount">Represents the minimum transfer amount of the currency in the &#x60;fromAddress&#x60; that can be allowed for an automatic forwarding. (required).</param>
@@ -83,24 +83,28 @@ namespace CryptoAPIs.Model
         public CreateAutomaticCoinsForwardingRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), FeePriorityEnum feePriority = default(FeePriorityEnum), string minimumTransferAmount = default(string), string toAddress = default(string))
         {
             // to ensure "callbackSecretKey" is required (not null)
-            if (callbackSecretKey == null) {
+            if (callbackSecretKey == null)
+            {
                 throw new ArgumentNullException("callbackSecretKey is a required property for CreateAutomaticCoinsForwardingRBDataItem and cannot be null");
             }
             this.CallbackSecretKey = callbackSecretKey;
             // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
+            if (callbackUrl == null)
+            {
                 throw new ArgumentNullException("callbackUrl is a required property for CreateAutomaticCoinsForwardingRBDataItem and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
             this.ConfirmationsCount = confirmationsCount;
             this.FeePriority = feePriority;
             // to ensure "minimumTransferAmount" is required (not null)
-            if (minimumTransferAmount == null) {
+            if (minimumTransferAmount == null)
+            {
                 throw new ArgumentNullException("minimumTransferAmount is a required property for CreateAutomaticCoinsForwardingRBDataItem and cannot be null");
             }
             this.MinimumTransferAmount = minimumTransferAmount;
             // to ensure "toAddress" is required (not null)
-            if (toAddress == null) {
+            if (toAddress == null)
+            {
                 throw new ArgumentNullException("toAddress is a required property for CreateAutomaticCoinsForwardingRBDataItem and cannot be null");
             }
             this.ToAddress = toAddress;
@@ -114,9 +118,9 @@ namespace CryptoAPIs.Model
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 

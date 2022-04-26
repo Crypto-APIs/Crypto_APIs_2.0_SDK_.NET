@@ -48,27 +48,32 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionUnconfirmedOmni(string name = default(string), string propertyId = default(string), string transactionType = default(string), string createdByTransactionId = default(string), string amount = default(string))
         {
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for AddressTokensTransactionUnconfirmedOmni and cannot be null");
             }
             this.Name = name;
             // to ensure "propertyId" is required (not null)
-            if (propertyId == null) {
+            if (propertyId == null)
+            {
                 throw new ArgumentNullException("propertyId is a required property for AddressTokensTransactionUnconfirmedOmni and cannot be null");
             }
             this.PropertyId = propertyId;
             // to ensure "transactionType" is required (not null)
-            if (transactionType == null) {
+            if (transactionType == null)
+            {
                 throw new ArgumentNullException("transactionType is a required property for AddressTokensTransactionUnconfirmedOmni and cannot be null");
             }
             this.TransactionType = transactionType;
             // to ensure "createdByTransactionId" is required (not null)
-            if (createdByTransactionId == null) {
+            if (createdByTransactionId == null)
+            {
                 throw new ArgumentNullException("createdByTransactionId is a required property for AddressTokensTransactionUnconfirmedOmni and cannot be null");
             }
             this.CreatedByTransactionId = createdByTransactionId;
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for AddressTokensTransactionUnconfirmedOmni and cannot be null");
             }
             this.Amount = amount;

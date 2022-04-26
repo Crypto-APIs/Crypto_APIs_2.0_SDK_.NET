@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetTransactionRequestDetailsRData(GetTransactionRequestDetailsRI item = default(GetTransactionRequestDetailsRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetTransactionRequestDetailsRData and cannot be null");
             }
             this.Item = item;

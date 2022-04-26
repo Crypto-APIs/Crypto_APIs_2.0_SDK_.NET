@@ -48,22 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListTransactionsByBlockHeightRIBS" /> class
-        /// with the <see cref="ListTransactionsByBlockHeightRIBSBC" /> class
+        /// with the <see cref="ListTransactionsByBlockHeightRIBSE" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSBC.</param>
-        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSBC actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ListTransactionsByBlockHeightRIBS" /> class
-        /// with the <see cref="ListTransactionsByBlockHeightRIBSBSC" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSBSC.</param>
-        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSE.</param>
+        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSE actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -96,10 +84,22 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListTransactionsByBlockHeightRIBS" /> class
-        /// with the <see cref="ListTransactionsByBlockHeightRIBSE" /> class
+        /// with the <see cref="ListTransactionsByBlockHeightRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSE.</param>
-        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSE actualInstance)
+        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSL.</param>
+        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSL actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListTransactionsByBlockHeightRIBS" /> class
+        /// with the <see cref="ListTransactionsByBlockHeightRIBSBC" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSBC.</param>
+        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSBC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -120,10 +120,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListTransactionsByBlockHeightRIBS" /> class
-        /// with the <see cref="ListTransactionsByBlockHeightRIBSL" /> class
+        /// with the <see cref="ListTransactionsByBlockHeightRIBSBSC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSL.</param>
-        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of ListTransactionsByBlockHeightRIBSBSC.</param>
+        public ListTransactionsByBlockHeightRIBS(ListTransactionsByBlockHeightRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -210,23 +210,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSBC`. If the actual instance is not `ListTransactionsByBlockHeightRIBSBC`,
+        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSE`. If the actual instance is not `ListTransactionsByBlockHeightRIBSE`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListTransactionsByBlockHeightRIBSBC</returns>
-        public ListTransactionsByBlockHeightRIBSBC GetListTransactionsByBlockHeightRIBSBC()
+        /// <returns>An instance of ListTransactionsByBlockHeightRIBSE</returns>
+        public ListTransactionsByBlockHeightRIBSE GetListTransactionsByBlockHeightRIBSE()
         {
-            return (ListTransactionsByBlockHeightRIBSBC)this.ActualInstance;
-        }
-
-        /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSBSC`. If the actual instance is not `ListTransactionsByBlockHeightRIBSBSC`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of ListTransactionsByBlockHeightRIBSBSC</returns>
-        public ListTransactionsByBlockHeightRIBSBSC GetListTransactionsByBlockHeightRIBSBSC()
-        {
-            return (ListTransactionsByBlockHeightRIBSBSC)this.ActualInstance;
+            return (ListTransactionsByBlockHeightRIBSE)this.ActualInstance;
         }
 
         /// <summary>
@@ -250,13 +240,23 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSE`. If the actual instance is not `ListTransactionsByBlockHeightRIBSE`,
+        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSL`. If the actual instance is not `ListTransactionsByBlockHeightRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListTransactionsByBlockHeightRIBSE</returns>
-        public ListTransactionsByBlockHeightRIBSE GetListTransactionsByBlockHeightRIBSE()
+        /// <returns>An instance of ListTransactionsByBlockHeightRIBSL</returns>
+        public ListTransactionsByBlockHeightRIBSL GetListTransactionsByBlockHeightRIBSL()
         {
-            return (ListTransactionsByBlockHeightRIBSE)this.ActualInstance;
+            return (ListTransactionsByBlockHeightRIBSL)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSBC`. If the actual instance is not `ListTransactionsByBlockHeightRIBSBC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListTransactionsByBlockHeightRIBSBC</returns>
+        public ListTransactionsByBlockHeightRIBSBC GetListTransactionsByBlockHeightRIBSBC()
+        {
+            return (ListTransactionsByBlockHeightRIBSBC)this.ActualInstance;
         }
 
         /// <summary>
@@ -270,13 +270,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSL`. If the actual instance is not `ListTransactionsByBlockHeightRIBSL`,
+        /// Get the actual instance of `ListTransactionsByBlockHeightRIBSBSC`. If the actual instance is not `ListTransactionsByBlockHeightRIBSBSC`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListTransactionsByBlockHeightRIBSL</returns>
-        public ListTransactionsByBlockHeightRIBSL GetListTransactionsByBlockHeightRIBSL()
+        /// <returns>An instance of ListTransactionsByBlockHeightRIBSBSC</returns>
+        public ListTransactionsByBlockHeightRIBSBSC GetListTransactionsByBlockHeightRIBSBSC()
         {
-            return (ListTransactionsByBlockHeightRIBSL)this.ActualInstance;
+            return (ListTransactionsByBlockHeightRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

@@ -45,12 +45,14 @@ namespace CryptoAPIs.Model
         public GetBlockDetailsByBlockHeightFromCallbackRIBSX(GetLatestMinedXRPRippleBlockRITotalCoins totalCoins = default(GetLatestMinedXRPRippleBlockRITotalCoins), GetLatestMinedXRPRippleBlockRITotalFees totalFees = default(GetLatestMinedXRPRippleBlockRITotalFees))
         {
             // to ensure "totalCoins" is required (not null)
-            if (totalCoins == null) {
+            if (totalCoins == null)
+            {
                 throw new ArgumentNullException("totalCoins is a required property for GetBlockDetailsByBlockHeightFromCallbackRIBSX and cannot be null");
             }
             this.TotalCoins = totalCoins;
             // to ensure "totalFees" is required (not null)
-            if (totalFees == null) {
+            if (totalFees == null)
+            {
                 throw new ArgumentNullException("totalFees is a required property for GetBlockDetailsByBlockHeightFromCallbackRIBSX and cannot be null");
             }
             this.TotalFees = totalFees;

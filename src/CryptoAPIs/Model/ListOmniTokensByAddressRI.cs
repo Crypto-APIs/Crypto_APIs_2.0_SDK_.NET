@@ -48,23 +48,27 @@ namespace CryptoAPIs.Model
         public ListOmniTokensByAddressRI(string balance = default(string), string frozen = default(string), string name = default(string), int propertyId = default(int), string reserved = default(string))
         {
             // to ensure "balance" is required (not null)
-            if (balance == null) {
+            if (balance == null)
+            {
                 throw new ArgumentNullException("balance is a required property for ListOmniTokensByAddressRI and cannot be null");
             }
             this.Balance = balance;
             // to ensure "frozen" is required (not null)
-            if (frozen == null) {
+            if (frozen == null)
+            {
                 throw new ArgumentNullException("frozen is a required property for ListOmniTokensByAddressRI and cannot be null");
             }
             this.Frozen = frozen;
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for ListOmniTokensByAddressRI and cannot be null");
             }
             this.Name = name;
             this.PropertyId = propertyId;
             // to ensure "reserved" is required (not null)
-            if (reserved == null) {
+            if (reserved == null)
+            {
                 throw new ArgumentNullException("reserved is a required property for ListOmniTokensByAddressRI and cannot be null");
             }
             this.Reserved = reserved;

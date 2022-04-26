@@ -106,6 +106,14 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'IsActive'
         }
         /// <summary>
+        /// Test the property 'ReceiveCallbackOn'
+        /// </summary>
+        [Fact]
+        public void ReceiveCallbackOnTest()
+        {
+            // TODO unit test for the property 'ReceiveCallbackOn'
+        }
+        /// <summary>
         /// Test the property 'ReferenceId'
         /// </summary>
         [Fact]

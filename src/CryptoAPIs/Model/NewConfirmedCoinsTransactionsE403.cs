@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NewConfirmedCoinsTransactionsE403" /> class
-        /// with the <see cref="BlockchainEventsCallbacksLimitReached" /> class
+        /// with the <see cref="EndpointNotAllowedForPlan" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of BlockchainEventsCallbacksLimitReached.</param>
-        public NewConfirmedCoinsTransactionsE403(BlockchainEventsCallbacksLimitReached actualInstance)
+        /// <param name="actualInstance">An instance of EndpointNotAllowedForPlan.</param>
+        public NewConfirmedCoinsTransactionsE403(EndpointNotAllowedForPlan actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -72,10 +72,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NewConfirmedCoinsTransactionsE403" /> class
-        /// with the <see cref="EndpointNotAllowedForPlan" /> class
+        /// with the <see cref="FeatureMainnetsNotAllowedForPlan" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of EndpointNotAllowedForPlan.</param>
-        public NewConfirmedCoinsTransactionsE403(EndpointNotAllowedForPlan actualInstance)
+        /// <param name="actualInstance">An instance of FeatureMainnetsNotAllowedForPlan.</param>
+        public NewConfirmedCoinsTransactionsE403(FeatureMainnetsNotAllowedForPlan actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -84,10 +84,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NewConfirmedCoinsTransactionsE403" /> class
-        /// with the <see cref="FeatureMainnetsNotAllowedForPlan" /> class
+        /// with the <see cref="BlockchainEventsCallbacksLimitReached" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of FeatureMainnetsNotAllowedForPlan.</param>
-        public NewConfirmedCoinsTransactionsE403(FeatureMainnetsNotAllowedForPlan actualInstance)
+        /// <param name="actualInstance">An instance of BlockchainEventsCallbacksLimitReached.</param>
+        public NewConfirmedCoinsTransactionsE403(BlockchainEventsCallbacksLimitReached actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -146,13 +146,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `BlockchainEventsCallbacksLimitReached`. If the actual instance is not `BlockchainEventsCallbacksLimitReached`,
+        /// Get the actual instance of `EndpointNotAllowedForPlan`. If the actual instance is not `EndpointNotAllowedForPlan`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of BlockchainEventsCallbacksLimitReached</returns>
-        public BlockchainEventsCallbacksLimitReached GetBlockchainEventsCallbacksLimitReached()
+        /// <returns>An instance of EndpointNotAllowedForPlan</returns>
+        public EndpointNotAllowedForPlan GetEndpointNotAllowedForPlan()
         {
-            return (BlockchainEventsCallbacksLimitReached)this.ActualInstance;
+            return (EndpointNotAllowedForPlan)this.ActualInstance;
         }
 
         /// <summary>
@@ -166,16 +166,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `EndpointNotAllowedForPlan`. If the actual instance is not `EndpointNotAllowedForPlan`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of EndpointNotAllowedForPlan</returns>
-        public EndpointNotAllowedForPlan GetEndpointNotAllowedForPlan()
-        {
-            return (EndpointNotAllowedForPlan)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `FeatureMainnetsNotAllowedForPlan`. If the actual instance is not `FeatureMainnetsNotAllowedForPlan`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -183,6 +173,16 @@ namespace CryptoAPIs.Model
         public FeatureMainnetsNotAllowedForPlan GetFeatureMainnetsNotAllowedForPlan()
         {
             return (FeatureMainnetsNotAllowedForPlan)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `BlockchainEventsCallbacksLimitReached`. If the actual instance is not `BlockchainEventsCallbacksLimitReached`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of BlockchainEventsCallbacksLimitReached</returns>
+        public BlockchainEventsCallbacksLimitReached GetBlockchainEventsCallbacksLimitReached()
+        {
+            return (BlockchainEventsCallbacksLimitReached)this.ActualInstance;
         }
 
         /// <summary>

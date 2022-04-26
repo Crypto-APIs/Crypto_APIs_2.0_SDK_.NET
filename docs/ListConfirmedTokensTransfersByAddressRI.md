@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **TokensAmount** | **string** | Defines the token amount of the transfer. | [optional] 
 **TransactionHash** | **string** | Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. | 
 **TransactionTimestamp** | **int** | Defines the specific time/date when the transaction was created in Unix Timestamp. | 
+**TransactionFee** | [**ListTokensTransfersByTransactionHashRITransactionFee**](ListTokensTransfersByTransactionHashRITransactionFee.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

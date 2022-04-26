@@ -47,13 +47,14 @@ namespace CryptoAPIs.Model
         /// <param name="totalReceived">totalReceived.</param>
         /// <param name="totalSpent">totalSpent.</param>
         /// <param name="sequence">Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime..</param>
-        public GetAddressDetailsFromCallbackRI(int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int), int transactionsCount = default(int), GetAddressDetailsRIConfirmedBalance confirmedBalance = default(GetAddressDetailsRIConfirmedBalance), GetAddressDetailsFromCallbackRITotalReceived totalReceived = default(GetAddressDetailsFromCallbackRITotalReceived), GetAddressDetailsFromCallbackRITotalSpent totalSpent = default(GetAddressDetailsFromCallbackRITotalSpent), int sequence = default(int))
+        public GetAddressDetailsFromCallbackRI(int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int), int transactionsCount = default(int), GetAddressDetailsRIConfirmedBalance confirmedBalance = default(GetAddressDetailsRIConfirmedBalance), GetAddressDetailsFromCallbackRITotalReceived totalReceived = default(GetAddressDetailsFromCallbackRITotalReceived), GetAddressDetailsFromCallbackRITotalSpent totalSpent = default(GetAddressDetailsFromCallbackRITotalSpent), long sequence = default(long))
         {
             this.IncomingTransactionsCount = incomingTransactionsCount;
             this.OutgoingTransactionsCount = outgoingTransactionsCount;
             this.TransactionsCount = transactionsCount;
             // to ensure "confirmedBalance" is required (not null)
-            if (confirmedBalance == null) {
+            if (confirmedBalance == null)
+            {
                 throw new ArgumentNullException("confirmedBalance is a required property for GetAddressDetailsFromCallbackRI and cannot be null");
             }
             this.ConfirmedBalance = confirmedBalance;
@@ -106,7 +107,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime.</value>
         [DataMember(Name = "sequence", EmitDefaultValue = false)]
-        public int Sequence { get; set; }
+        public long Sequence { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

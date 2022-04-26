@@ -121,27 +121,32 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionConfirmedEachConfirmationDataItem(string blockchain = default(string), string network = default(string), string address = default(string), AddressTokensTransactionConfirmedDataItemMinedInBlock minedInBlock = default(AddressTokensTransactionConfirmedDataItemMinedInBlock), string transactionId = default(string), int currentConfirmations = default(int), int targetConfirmations = default(int), TokenTypeEnum tokenType = default(TokenTypeEnum), AddressTokensTransactionConfirmedEachConfirmationToken token = default(AddressTokensTransactionConfirmedEachConfirmationToken), DirectionEnum direction = default(DirectionEnum))
         {
             // to ensure "blockchain" is required (not null)
-            if (blockchain == null) {
+            if (blockchain == null)
+            {
                 throw new ArgumentNullException("blockchain is a required property for AddressTokensTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            if (network == null) {
+            if (network == null)
+            {
                 throw new ArgumentNullException("network is a required property for AddressTokensTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Network = network;
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for AddressTokensTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Address = address;
             // to ensure "minedInBlock" is required (not null)
-            if (minedInBlock == null) {
+            if (minedInBlock == null)
+            {
                 throw new ArgumentNullException("minedInBlock is a required property for AddressTokensTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.MinedInBlock = minedInBlock;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for AddressTokensTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.TransactionId = transactionId;
@@ -149,7 +154,8 @@ namespace CryptoAPIs.Model
             this.TargetConfirmations = targetConfirmations;
             this.TokenType = tokenType;
             // to ensure "token" is required (not null)
-            if (token == null) {
+            if (token == null)
+            {
                 throw new ArgumentNullException("token is a required property for AddressTokensTransactionConfirmedEachConfirmationDataItem and cannot be null");
             }
             this.Token = token;

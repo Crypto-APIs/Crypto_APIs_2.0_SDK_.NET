@@ -48,18 +48,21 @@ namespace CryptoAPIs.Model
         public BlockMinedDataItem(string blockchain = default(string), string network = default(string), int height = default(int), string hash = default(string), int timestamp = default(int))
         {
             // to ensure "blockchain" is required (not null)
-            if (blockchain == null) {
+            if (blockchain == null)
+            {
                 throw new ArgumentNullException("blockchain is a required property for BlockMinedDataItem and cannot be null");
             }
             this.Blockchain = blockchain;
             // to ensure "network" is required (not null)
-            if (network == null) {
+            if (network == null)
+            {
                 throw new ArgumentNullException("network is a required property for BlockMinedDataItem and cannot be null");
             }
             this.Network = network;
             this.Height = height;
             // to ensure "hash" is required (not null)
-            if (hash == null) {
+            if (hash == null)
+            {
                 throw new ArgumentNullException("hash is a required property for BlockMinedDataItem and cannot be null");
             }
             this.Hash = hash;

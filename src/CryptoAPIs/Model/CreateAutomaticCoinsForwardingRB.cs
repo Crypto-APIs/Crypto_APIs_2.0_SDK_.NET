@@ -45,7 +45,8 @@ namespace CryptoAPIs.Model
         public CreateAutomaticCoinsForwardingRB(string context = default(string), CreateAutomaticCoinsForwardingRBData data = default(CreateAutomaticCoinsForwardingRBData))
         {
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for CreateAutomaticCoinsForwardingRB and cannot be null");
             }
             this.Data = data;

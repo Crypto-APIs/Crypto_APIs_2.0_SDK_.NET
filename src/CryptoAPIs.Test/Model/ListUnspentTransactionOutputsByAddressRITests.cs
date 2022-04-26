@@ -58,6 +58,22 @@ namespace CryptoAPIs.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Address'
+        /// </summary>
+        [Fact]
+        public void AddressTest()
+        {
+            // TODO unit test for the property 'Address'
+        }
+        /// <summary>
+        /// Test the property 'Amount'
+        /// </summary>
+        [Fact]
+        public void AmountTest()
+        {
+            // TODO unit test for the property 'Amount'
+        }
+        /// <summary>
         /// Test the property 'Index'
         /// </summary>
         [Fact]
@@ -66,52 +82,12 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Index'
         }
         /// <summary>
-        /// Test the property 'Locktime'
+        /// Test the property 'IsConfirmed'
         /// </summary>
         [Fact]
-        public void LocktimeTest()
+        public void IsConfirmedTest()
         {
-            // TODO unit test for the property 'Locktime'
-        }
-        /// <summary>
-        /// Test the property 'MinedInBlockHash'
-        /// </summary>
-        [Fact]
-        public void MinedInBlockHashTest()
-        {
-            // TODO unit test for the property 'MinedInBlockHash'
-        }
-        /// <summary>
-        /// Test the property 'MinedInBlockHeight'
-        /// </summary>
-        [Fact]
-        public void MinedInBlockHeightTest()
-        {
-            // TODO unit test for the property 'MinedInBlockHeight'
-        }
-        /// <summary>
-        /// Test the property 'Recipients'
-        /// </summary>
-        [Fact]
-        public void RecipientsTest()
-        {
-            // TODO unit test for the property 'Recipients'
-        }
-        /// <summary>
-        /// Test the property 'Senders'
-        /// </summary>
-        [Fact]
-        public void SendersTest()
-        {
-            // TODO unit test for the property 'Senders'
-        }
-        /// <summary>
-        /// Test the property 'Size'
-        /// </summary>
-        [Fact]
-        public void SizeTest()
-        {
-            // TODO unit test for the property 'Size'
+            // TODO unit test for the property 'IsConfirmed'
         }
         /// <summary>
         /// Test the property 'Timestamp'
@@ -122,60 +98,12 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Timestamp'
         }
         /// <summary>
-        /// Test the property 'TransactionHash'
-        /// </summary>
-        [Fact]
-        public void TransactionHashTest()
-        {
-            // TODO unit test for the property 'TransactionHash'
-        }
-        /// <summary>
         /// Test the property 'TransactionId'
         /// </summary>
         [Fact]
         public void TransactionIdTest()
         {
             // TODO unit test for the property 'TransactionId'
-        }
-        /// <summary>
-        /// Test the property '_Version'
-        /// </summary>
-        [Fact]
-        public void _VersionTest()
-        {
-            // TODO unit test for the property '_Version'
-        }
-        /// <summary>
-        /// Test the property 'Vin'
-        /// </summary>
-        [Fact]
-        public void VinTest()
-        {
-            // TODO unit test for the property 'Vin'
-        }
-        /// <summary>
-        /// Test the property 'Vout'
-        /// </summary>
-        [Fact]
-        public void VoutTest()
-        {
-            // TODO unit test for the property 'Vout'
-        }
-        /// <summary>
-        /// Test the property 'Fee'
-        /// </summary>
-        [Fact]
-        public void FeeTest()
-        {
-            // TODO unit test for the property 'Fee'
-        }
-        /// <summary>
-        /// Test the property 'BlockchainSpecific'
-        /// </summary>
-        [Fact]
-        public void BlockchainSpecificTest()
-        {
-            // TODO unit test for the property 'BlockchainSpecific'
         }
 
     }

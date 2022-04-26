@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListAllUnconfirmedTransactionsRIBS" /> class
-        /// with the <see cref="ListAllUnconfirmedTransactionsRIBSBSC" /> class
+        /// with the <see cref="ListAllUnconfirmedTransactionsRIBSL" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListAllUnconfirmedTransactionsRIBSBSC.</param>
-        public ListAllUnconfirmedTransactionsRIBS(ListAllUnconfirmedTransactionsRIBSBSC actualInstance)
+        /// <param name="actualInstance">An instance of ListAllUnconfirmedTransactionsRIBSL.</param>
+        public ListAllUnconfirmedTransactionsRIBS(ListAllUnconfirmedTransactionsRIBSL actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -120,10 +120,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListAllUnconfirmedTransactionsRIBS" /> class
-        /// with the <see cref="ListAllUnconfirmedTransactionsRIBSL" /> class
+        /// with the <see cref="ListAllUnconfirmedTransactionsRIBSZ" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListAllUnconfirmedTransactionsRIBSL.</param>
-        public ListAllUnconfirmedTransactionsRIBS(ListAllUnconfirmedTransactionsRIBSL actualInstance)
+        /// <param name="actualInstance">An instance of ListAllUnconfirmedTransactionsRIBSZ.</param>
+        public ListAllUnconfirmedTransactionsRIBS(ListAllUnconfirmedTransactionsRIBSZ actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -132,10 +132,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ListAllUnconfirmedTransactionsRIBS" /> class
-        /// with the <see cref="ListAllUnconfirmedTransactionsRIBSZ" /> class
+        /// with the <see cref="ListAllUnconfirmedTransactionsRIBSBSC" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of ListAllUnconfirmedTransactionsRIBSZ.</param>
-        public ListAllUnconfirmedTransactionsRIBS(ListAllUnconfirmedTransactionsRIBSZ actualInstance)
+        /// <param name="actualInstance">An instance of ListAllUnconfirmedTransactionsRIBSBSC.</param>
+        public ListAllUnconfirmedTransactionsRIBS(ListAllUnconfirmedTransactionsRIBSBSC actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -220,13 +220,13 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListAllUnconfirmedTransactionsRIBSBSC`. If the actual instance is not `ListAllUnconfirmedTransactionsRIBSBSC`,
+        /// Get the actual instance of `ListAllUnconfirmedTransactionsRIBSL`. If the actual instance is not `ListAllUnconfirmedTransactionsRIBSL`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of ListAllUnconfirmedTransactionsRIBSBSC</returns>
-        public ListAllUnconfirmedTransactionsRIBSBSC GetListAllUnconfirmedTransactionsRIBSBSC()
+        /// <returns>An instance of ListAllUnconfirmedTransactionsRIBSL</returns>
+        public ListAllUnconfirmedTransactionsRIBSL GetListAllUnconfirmedTransactionsRIBSL()
         {
-            return (ListAllUnconfirmedTransactionsRIBSBSC)this.ActualInstance;
+            return (ListAllUnconfirmedTransactionsRIBSL)this.ActualInstance;
         }
 
         /// <summary>
@@ -270,16 +270,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `ListAllUnconfirmedTransactionsRIBSL`. If the actual instance is not `ListAllUnconfirmedTransactionsRIBSL`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of ListAllUnconfirmedTransactionsRIBSL</returns>
-        public ListAllUnconfirmedTransactionsRIBSL GetListAllUnconfirmedTransactionsRIBSL()
-        {
-            return (ListAllUnconfirmedTransactionsRIBSL)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `ListAllUnconfirmedTransactionsRIBSZ`. If the actual instance is not `ListAllUnconfirmedTransactionsRIBSZ`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -287,6 +277,16 @@ namespace CryptoAPIs.Model
         public ListAllUnconfirmedTransactionsRIBSZ GetListAllUnconfirmedTransactionsRIBSZ()
         {
             return (ListAllUnconfirmedTransactionsRIBSZ)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `ListAllUnconfirmedTransactionsRIBSBSC`. If the actual instance is not `ListAllUnconfirmedTransactionsRIBSBSC`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of ListAllUnconfirmedTransactionsRIBSBSC</returns>
+        public ListAllUnconfirmedTransactionsRIBSBSC GetListAllUnconfirmedTransactionsRIBSBSC()
+        {
+            return (ListAllUnconfirmedTransactionsRIBSBSC)this.ActualInstance;
         }
 
         /// <summary>

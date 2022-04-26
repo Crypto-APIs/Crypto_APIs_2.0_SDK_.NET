@@ -57,36 +57,42 @@ namespace CryptoAPIs.Model
         public GetOmniTransactionDetailsByTransactionIDTxidRI(string amount = default(string), bool divisible = default(bool), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), int propertyId = default(int), List<ListOmniTransactionsByAddressRIRecipients> recipients = default(List<ListOmniTransactionsByAddressRIRecipients>), List<GetOmniTransactionDetailsByTransactionIDTxidRISenders> senders = default(List<GetOmniTransactionDetailsByTransactionIDTxidRISenders>), int timestamp = default(int), string transactionId = default(string), string type = default(string), int typeInt = default(int), bool valid = default(bool), int version = default(int), ListUnconfirmedOmniTransactionsByAddressRIFee fee = default(ListUnconfirmedOmniTransactionsByAddressRIFee))
         {
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for GetOmniTransactionDetailsByTransactionIDTxidRI and cannot be null");
             }
             this.Amount = amount;
             this.Divisible = divisible;
             // to ensure "minedInBlockHash" is required (not null)
-            if (minedInBlockHash == null) {
+            if (minedInBlockHash == null)
+            {
                 throw new ArgumentNullException("minedInBlockHash is a required property for GetOmniTransactionDetailsByTransactionIDTxidRI and cannot be null");
             }
             this.MinedInBlockHash = minedInBlockHash;
             this.MinedInBlockHeight = minedInBlockHeight;
             this.PropertyId = propertyId;
             // to ensure "recipients" is required (not null)
-            if (recipients == null) {
+            if (recipients == null)
+            {
                 throw new ArgumentNullException("recipients is a required property for GetOmniTransactionDetailsByTransactionIDTxidRI and cannot be null");
             }
             this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            if (senders == null) {
+            if (senders == null)
+            {
                 throw new ArgumentNullException("senders is a required property for GetOmniTransactionDetailsByTransactionIDTxidRI and cannot be null");
             }
             this.Senders = senders;
             this.Timestamp = timestamp;
             // to ensure "transactionId" is required (not null)
-            if (transactionId == null) {
+            if (transactionId == null)
+            {
                 throw new ArgumentNullException("transactionId is a required property for GetOmniTransactionDetailsByTransactionIDTxidRI and cannot be null");
             }
             this.TransactionId = transactionId;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for GetOmniTransactionDetailsByTransactionIDTxidRI and cannot be null");
             }
             this.Type = type;
@@ -94,7 +100,8 @@ namespace CryptoAPIs.Model
             this.Valid = valid;
             this._Version = version;
             // to ensure "fee" is required (not null)
-            if (fee == null) {
+            if (fee == null)
+            {
                 throw new ArgumentNullException("fee is a required property for GetOmniTransactionDetailsByTransactionIDTxidRI and cannot be null");
             }
             this.Fee = fee;

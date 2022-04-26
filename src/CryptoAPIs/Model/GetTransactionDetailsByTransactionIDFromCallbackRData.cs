@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetTransactionDetailsByTransactionIDFromCallbackRData(GetTransactionDetailsByTransactionIDFromCallbackRI item = default(GetTransactionDetailsByTransactionIDFromCallbackRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetTransactionDetailsByTransactionIDFromCallbackRData and cannot be null");
             }
             this.Item = item;

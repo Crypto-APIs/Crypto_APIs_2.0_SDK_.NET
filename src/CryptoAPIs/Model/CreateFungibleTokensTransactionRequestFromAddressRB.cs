@@ -45,7 +45,8 @@ namespace CryptoAPIs.Model
         public CreateFungibleTokensTransactionRequestFromAddressRB(string context = default(string), CreateFungibleTokensTransactionRequestFromAddressRBData data = default(CreateFungibleTokensTransactionRequestFromAddressRBData))
         {
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for CreateFungibleTokensTransactionRequestFromAddressRB and cannot be null");
             }
             this.Data = data;

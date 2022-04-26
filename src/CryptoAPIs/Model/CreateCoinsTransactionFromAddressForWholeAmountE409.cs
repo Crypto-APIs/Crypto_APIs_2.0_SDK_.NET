@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionFromAddressForWholeAmountE409" /> class
-        /// with the <see cref="WalletAsAServiceAddressBalanceNotEnough" /> class
+        /// with the <see cref="WalletAsAServiceWalletBalanceNotEnough" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of WalletAsAServiceAddressBalanceNotEnough.</param>
-        public CreateCoinsTransactionFromAddressForWholeAmountE409(WalletAsAServiceAddressBalanceNotEnough actualInstance)
+        /// <param name="actualInstance">An instance of WalletAsAServiceWalletBalanceNotEnough.</param>
+        public CreateCoinsTransactionFromAddressForWholeAmountE409(WalletAsAServiceWalletBalanceNotEnough actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -60,10 +60,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCoinsTransactionFromAddressForWholeAmountE409" /> class
-        /// with the <see cref="WalletAsAServiceWalletBalanceNotEnough" /> class
+        /// with the <see cref="WalletAsAServiceAddressBalanceNotEnough" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of WalletAsAServiceWalletBalanceNotEnough.</param>
-        public CreateCoinsTransactionFromAddressForWholeAmountE409(WalletAsAServiceWalletBalanceNotEnough actualInstance)
+        /// <param name="actualInstance">An instance of WalletAsAServiceAddressBalanceNotEnough.</param>
+        public CreateCoinsTransactionFromAddressForWholeAmountE409(WalletAsAServiceAddressBalanceNotEnough actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -114,16 +114,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `WalletAsAServiceAddressBalanceNotEnough`. If the actual instance is not `WalletAsAServiceAddressBalanceNotEnough`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of WalletAsAServiceAddressBalanceNotEnough</returns>
-        public WalletAsAServiceAddressBalanceNotEnough GetWalletAsAServiceAddressBalanceNotEnough()
-        {
-            return (WalletAsAServiceAddressBalanceNotEnough)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `WalletAsAServiceWalletBalanceNotEnough`. If the actual instance is not `WalletAsAServiceWalletBalanceNotEnough`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -131,6 +121,16 @@ namespace CryptoAPIs.Model
         public WalletAsAServiceWalletBalanceNotEnough GetWalletAsAServiceWalletBalanceNotEnough()
         {
             return (WalletAsAServiceWalletBalanceNotEnough)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `WalletAsAServiceAddressBalanceNotEnough`. If the actual instance is not `WalletAsAServiceAddressBalanceNotEnough`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of WalletAsAServiceAddressBalanceNotEnough</returns>
+        public WalletAsAServiceAddressBalanceNotEnough GetWalletAsAServiceAddressBalanceNotEnough()
+        {
+            return (WalletAsAServiceAddressBalanceNotEnough)this.ActualInstance;
         }
 
         /// <summary>

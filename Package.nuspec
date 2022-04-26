@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CryptoAPIs</id>
-    <version>1.4.0</version>
+    <version>1.5.0</version>
     <authors>CryptoAPIs Team</authors>
     <owners>CryptoAPIs Team</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,7 +11,67 @@
     <icon>logo.png</icon>
     <description>the C# library for the Crypto APIs</description>
     <releaseNotes>
-        v1.4.0
+        New Endpoints:
+
+        Estimate Gas Limit
+        Estimate Token Gas Limit
+        List Unconfirmed Tokens Transfers By Address
+        List HD Wallet (xPub, yPub, zPub) UTXOs
+        List Unspent Transaction Outputs By Address
+        List All Assets From All Wallets
+        List All Assets By Wallet ID
+        List XRP (Ripple) Transactions by Address And Time Range
+        Get Raw Transaction Data
+        List Internal Transactions By Address And Time Range
+        List Confirmed Tokens Transfers By Address And Time Range
+        List Confirmed Transactions By Address And Time Range
+        Get Next Available Nonce
+        Decode raw transaction
+        Get Blockchain Event Subscription Details By Reference ID
+        Get HD Wallet (xPub, yPub, zPub) Assets
+        Derive HD (xPub, yPub, zPub) Change Or Receiving Addresses
+        Estimate Transaction Smart Fee
+        Encode X-Address
+        Decode X-Address
+
+
+        Endpoint Updates:
+
+        Total Supply has been updated in the Get Token Details by Contract Address endpoint.
+        List Unspent Transaction Outputs endpoint has been hidden from documentation because it is being modified.
+        Improvements done to Tech Doc texts regarding Callbacks, Pagination and Credits.
+        Estimate Gas Limit - propper error messages were added.
+        Example": "2.0" was changed to 2.0.0  at the example responses.
+        BSC has been added to New unconfirmed tokens transactions and Validate Address endponts.
+        Add missing blockchains to xPub Endpoints.
+        New Unconfirmed Coins Transactions -  missing "address"  response atribute has been added.
+        New Confirmed Tokens Transactions And Each Confirmation missing "callbackSecretKey" and "isActive" response attributes have been added.
+        XRP has been added to Sync HD Wallet (xPub, yPub, zPub), Get HD Wallet (xPub, yPub, zPub) Details and List HD Wallet (xPub, yPub, zPub) Transactions.
+        Get Transaction Request Details - transactionId has been added as an optional response attribute.
+        X address support for XRP has been added to the following endpoints:
+         - Create Coins Transaction Request from Address
+         - Get Transaction Request Details
+        The "receiveCallbackOn" attribute for specification of the exact confirmation on which will be recieved a callback has been added for the following endpoints:
+         - New confirmed coins transactions
+         - New confirmed tokens transactions
+         - New confirmed internal transactions
+        Token Ballance Decimals have been restricted to 8 decimals.
+        XRP has been added to:
+         - Generate Deposit Address
+         - List Deposit Addresses
+         - Create Coins Transaction Request from Address
+         - Get Wallet Asset Details
+         - List Wallet Transactions
+         - Get HD Wallet (xPub, yPub, zPub) Assets
+        List Blockchain Events Subscriptions updates:
+         - "deactivationReasons" attribute has been added
+         - "callbackSecretKey" and "transactionId" were removed from required response attributes
+        New possible values have been added to the endpoints Sync HD Wallet (xPub, yPub, zPub), Get HD Wallet (xPub, yPub, zPub) Details and List HD Wallet (xPub, yPub, zPub) Transactions:
+         - "ethereum-classic",
+         - "binance-smart-chain"
+         - "ethereum"
+         - "ropsten"
+         - "mordor"
    </releaseNotes>
     <copyright>Copyright 2021</copyright>
     <tags>Crypto Blockchain</tags>

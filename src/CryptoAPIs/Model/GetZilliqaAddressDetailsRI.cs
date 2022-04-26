@@ -47,7 +47,8 @@ namespace CryptoAPIs.Model
         public GetZilliqaAddressDetailsRI(GetZilliqaAddressDetailsRIBalance balance = default(GetZilliqaAddressDetailsRIBalance), int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int), int transactionsCount = default(int))
         {
             // to ensure "balance" is required (not null)
-            if (balance == null) {
+            if (balance == null)
+            {
                 throw new ArgumentNullException("balance is a required property for GetZilliqaAddressDetailsRI and cannot be null");
             }
             this.Balance = balance;

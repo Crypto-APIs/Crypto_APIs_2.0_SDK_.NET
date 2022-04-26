@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Offset** | **int** | The starting index of the response items, i.e. where the response should start listing the returned items. | 
 **Limit** | **int** | Defines how many items should be returned in the response per page basis. | 
+**Offset** | **int** | The starting index of the response items, i.e. where the response should start listing the returned items. | 
 **Total** | **int** | Defines the total number of items returned in the response. | 
 **Items** | [**List&lt;ListLatestMinedBlocksRI&gt;**](ListLatestMinedBlocksRI.md) |  | 
 

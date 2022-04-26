@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**GetXRPRippleBlockDetailsByBlockHeight**](XRPRippleApi.md#getxrprippleblockdetailsbyblockheight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight} | Get XRP (Ripple) Block Details By Block Height
 [**GetXRPRippleTransactionDetailsByTransactionID**](XRPRippleApi.md#getxrprippletransactiondetailsbytransactionid) | **GET** /blockchain-data/xrp-specific/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID
 [**ListXRPRippleTransactionsByAddress**](XRPRippleApi.md#listxrprippletransactionsbyaddress) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address
+[**ListXRPRippleTransactionsByAddressAndTimeRange**](XRPRippleApi.md#listxrprippletransactionsbyaddressandtimerange) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions-by-time-range | List XRP (Ripple) Transactions By Address And Time Range
 [**ListXRPRippleTransactionsByBlockHash**](XRPRippleApi.md#listxrprippletransactionsbyblockhash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash
 [**ListXRPRippleTransactionsByBlockHeight**](XRPRippleApi.md#listxrprippletransactionsbyblockheight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions | List XRP (Ripple) Transactions By Block Height
 
@@ -45,7 +46,7 @@ namespace Example
 
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -134,7 +135,7 @@ namespace Example
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
             var address = rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z;  // string | Represents the public address, which is a compressed and shortened form of a public key.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -223,7 +224,7 @@ namespace Example
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var blockHash = 1ab0614d2a438da8b23086cbceef7d443edbd295d9c7619fc8a19c7618bc22c9;  // string | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -313,7 +314,7 @@ namespace Example
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
             var blockHeight = 15886156;  // string | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -403,7 +404,7 @@ namespace Example
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var transactionHash = 36a1737481edec87bacc3101dfb752ae2c76f9171e7edebe587e330c1ea77c8d;  // string | Represents the same as `transactionId` for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols `hash` is different from `transactionId` for SegWit transactions.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
             {
@@ -463,7 +464,7 @@ Name | Type | Description  | Notes
 
 <a name="listxrprippletransactionsbyaddress"></a>
 # **ListXRPRippleTransactionsByAddress**
-> ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress (string network, string address, string context = null, int? limit = null, int? offset = null, string transactionType = null)
+> ListXRPRippleTransactionsByAddressR ListXRPRippleTransactionsByAddress (string network, string address, string context = null, long? limit = null, long? offset = null, string transactionType = null)
 
 List XRP (Ripple) Transactions by Address
 
@@ -493,9 +494,9 @@ namespace Example
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var address = rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z;  // string | Represents the public address, which is a compressed and shortened form of a public key.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var limit = 50;  // long? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
             var transactionType = payment;  // string |  (optional) 
 
             try
@@ -522,8 +523,8 @@ Name | Type | Description  | Notes
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. | 
  **address** | **string**| Represents the public address, which is a compressed and shortened form of a public key. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
- **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+ **limit** | **long?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **long?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
  **transactionType** | **string**|  | [optional] 
 
 ### Return type
@@ -556,9 +557,108 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="listxrprippletransactionsbyaddressandtimerange"></a>
+# **ListXRPRippleTransactionsByAddressAndTimeRange**
+> ListXRPRippleTransactionsByAddressAndTimeRangeR ListXRPRippleTransactionsByAddressAndTimeRange (string network, string address, int fromTimestamp, int toTimestamp, string context = null, long? limit = null, long? offset = null, string transactionType = null)
+
+List XRP (Ripple) Transactions By Address And Time Range
+
+Тhis endpoint lists XRP transactions by the attribute `address` and the query parameters `fromTimestamp` and `toTimestamp`  which gives customers the opportunity to filter the results by a specified time period.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
+
+namespace Example
+{
+    public class ListXRPRippleTransactionsByAddressAndTimeRangeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://rest.cryptoapis.io/v2";
+            // Configure API key authorization: ApiKey
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new XRPRippleApi(config);
+            var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+            var address = rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z;  // string | Represents the public address, which is a compressed and shortened form of a public key.
+            var fromTimestamp = 1616347862;  // int | Defines the specific time/date from which the results will start being listed.
+            var toTimestamp = 1616347870;  // int | Defines the specific time/date to which the results will be listed.
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var limit = 50;  // long? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var transactionType = payment;  // string | Defines the transaction type. (optional) 
+
+            try
+            {
+                // List XRP (Ripple) Transactions By Address And Time Range
+                ListXRPRippleTransactionsByAddressAndTimeRangeR result = apiInstance.ListXRPRippleTransactionsByAddressAndTimeRange(network, address, fromTimestamp, toTimestamp, context, limit, offset, transactionType);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling XRPRippleApi.ListXRPRippleTransactionsByAddressAndTimeRange: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. | 
+ **address** | **string**| Represents the public address, which is a compressed and shortened form of a public key. | 
+ **fromTimestamp** | **int**| Defines the specific time/date from which the results will start being listed. | 
+ **toTimestamp** | **int**| Defines the specific time/date to which the results will be listed. | 
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+ **limit** | **long?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **long?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+ **transactionType** | **string**| Defines the transaction type. | [optional] 
+
+### Return type
+
+[**ListXRPRippleTransactionsByAddressAndTimeRangeR**](ListXRPRippleTransactionsByAddressAndTimeRangeR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | The request has been successful. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
+| **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
+| **403** | 403 |  -  |
+| **409** | The data provided seems to be invalid. |  -  |
+| **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
+| **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
+| **429** | The request limit has been reached. There can be maximum {requests} requests per {seconds} second(s) made. Please contact our team via email if you need more or upgrade your plan. |  -  |
+| **500** | An unexpected server error has occurred, we are working to fix this. Please try again later and in case it occurs again please report it to our team via email. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="listxrprippletransactionsbyblockhash"></a>
 # **ListXRPRippleTransactionsByBlockHash**
-> ListXRPRippleTransactionsByBlockHashR ListXRPRippleTransactionsByBlockHash (string network, string blockHash, string context = null, int? limit = null, int? offset = null)
+> ListXRPRippleTransactionsByBlockHashR ListXRPRippleTransactionsByBlockHash (string network, string blockHash, string context = null, long? limit = null, long? offset = null)
 
 List XRP (Ripple) Transactions By Block Hash
 
@@ -588,9 +688,9 @@ namespace Example
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var blockHash = 14754656235f865a74eba27791fd41a47bdfe07fe811ff6d78f53db32e129e39;  // string | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var limit = 50;  // long? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 
             try
             {
@@ -616,8 +716,8 @@ Name | Type | Description  | Notes
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. | 
  **blockHash** | **string**| Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
- **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+ **limit** | **long?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **long?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
 
 ### Return type
 
@@ -651,7 +751,7 @@ Name | Type | Description  | Notes
 
 <a name="listxrprippletransactionsbyblockheight"></a>
 # **ListXRPRippleTransactionsByBlockHeight**
-> ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight (string network, int blockHeight, string context = null, int? limit = null, int? offset = null)
+> ListXRPRippleTransactionsByBlockHeightR ListXRPRippleTransactionsByBlockHeight (string network, long blockHeight, string context = null, long? limit = null, long? offset = null)
 
 List XRP (Ripple) Transactions By Block Height
 
@@ -680,10 +780,10 @@ namespace Example
 
             var apiInstance = new XRPRippleApi(config);
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var blockHeight = 15971358;  // int | 
-            var context = context_example;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 10;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var blockHeight = 15971358;  // long | 
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var limit = 50;  // long? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 
             try
             {
@@ -707,10 +807,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. | 
- **blockHeight** | **int**|  | 
+ **blockHeight** | **long**|  | 
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
- **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+ **limit** | **long?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **long?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
 
 ### Return type
 

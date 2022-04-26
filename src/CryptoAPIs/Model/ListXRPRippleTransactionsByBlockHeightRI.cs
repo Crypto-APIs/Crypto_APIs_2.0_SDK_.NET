@@ -55,58 +55,68 @@ namespace CryptoAPIs.Model
         /// <param name="offer">offer (required).</param>
         /// <param name="receive">receive (required).</param>
         /// <param name="value">value (required).</param>
-        public ListXRPRippleTransactionsByBlockHeightRI(string additionalData = default(string), int destinationTag = default(int), int index = default(int), string minedInBlockHash = default(string), List<ListXRPRippleTransactionsByBlockHeightRIRecipients> recipients = default(List<ListXRPRippleTransactionsByBlockHeightRIRecipients>), List<ListXRPRippleTransactionsByBlockHeightRISenders> senders = default(List<ListXRPRippleTransactionsByBlockHeightRISenders>), int sequence = default(int), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), ListXRPRippleTransactionsByBlockHeightRIFee fee = default(ListXRPRippleTransactionsByBlockHeightRIFee), ListXRPRippleTransactionsByBlockHeightRIOffer offer = default(ListXRPRippleTransactionsByBlockHeightRIOffer), ListXRPRippleTransactionsByBlockHeightRIReceive receive = default(ListXRPRippleTransactionsByBlockHeightRIReceive), ListXRPRippleTransactionsByBlockHeightRIValue value = default(ListXRPRippleTransactionsByBlockHeightRIValue))
+        public ListXRPRippleTransactionsByBlockHeightRI(string additionalData = default(string), long destinationTag = default(long), int index = default(int), string minedInBlockHash = default(string), List<ListXRPRippleTransactionsByBlockHeightRIRecipients> recipients = default(List<ListXRPRippleTransactionsByBlockHeightRIRecipients>), List<ListXRPRippleTransactionsByBlockHeightRISenders> senders = default(List<ListXRPRippleTransactionsByBlockHeightRISenders>), long sequence = default(long), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), ListXRPRippleTransactionsByBlockHeightRIFee fee = default(ListXRPRippleTransactionsByBlockHeightRIFee), ListXRPRippleTransactionsByBlockHeightRIOffer offer = default(ListXRPRippleTransactionsByBlockHeightRIOffer), ListXRPRippleTransactionsByBlockHeightRIReceive receive = default(ListXRPRippleTransactionsByBlockHeightRIReceive), ListXRPRippleTransactionsByBlockHeightRIValue value = default(ListXRPRippleTransactionsByBlockHeightRIValue))
         {
             this.Index = index;
             // to ensure "minedInBlockHash" is required (not null)
-            if (minedInBlockHash == null) {
+            if (minedInBlockHash == null)
+            {
                 throw new ArgumentNullException("minedInBlockHash is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.MinedInBlockHash = minedInBlockHash;
             // to ensure "recipients" is required (not null)
-            if (recipients == null) {
+            if (recipients == null)
+            {
                 throw new ArgumentNullException("recipients is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Recipients = recipients;
             // to ensure "senders" is required (not null)
-            if (senders == null) {
+            if (senders == null)
+            {
                 throw new ArgumentNullException("senders is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Senders = senders;
             this.Sequence = sequence;
             // to ensure "status" is required (not null)
-            if (status == null) {
+            if (status == null)
+            {
                 throw new ArgumentNullException("status is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Status = status;
             this.Timestamp = timestamp;
             // to ensure "transactionHash" is required (not null)
-            if (transactionHash == null) {
+            if (transactionHash == null)
+            {
                 throw new ArgumentNullException("transactionHash is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.TransactionHash = transactionHash;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Type = type;
             // to ensure "fee" is required (not null)
-            if (fee == null) {
+            if (fee == null)
+            {
                 throw new ArgumentNullException("fee is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Fee = fee;
             // to ensure "offer" is required (not null)
-            if (offer == null) {
+            if (offer == null)
+            {
                 throw new ArgumentNullException("offer is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Offer = offer;
             // to ensure "receive" is required (not null)
-            if (receive == null) {
+            if (receive == null)
+            {
                 throw new ArgumentNullException("receive is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Receive = receive;
             // to ensure "value" is required (not null)
-            if (value == null) {
+            if (value == null)
+            {
                 throw new ArgumentNullException("value is a required property for ListXRPRippleTransactionsByBlockHeightRI and cannot be null");
             }
             this.Value = value;
@@ -124,7 +134,7 @@ namespace CryptoAPIs.Model
         /// Gets or Sets DestinationTag
         /// </summary>
         [DataMember(Name = "destinationTag", EmitDefaultValue = false)]
-        public int DestinationTag { get; set; }
+        public long DestinationTag { get; set; }
 
         /// <summary>
         /// Gets or Sets Index
@@ -156,7 +166,7 @@ namespace CryptoAPIs.Model
         /// Gets or Sets Sequence
         /// </summary>
         [DataMember(Name = "sequence", IsRequired = true, EmitDefaultValue = false)]
-        public int Sequence { get; set; }
+        public long Sequence { get; set; }
 
         /// <summary>
         /// Gets or Sets Status

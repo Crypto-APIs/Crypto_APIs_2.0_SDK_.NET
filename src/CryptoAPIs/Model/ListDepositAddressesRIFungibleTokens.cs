@@ -49,28 +49,33 @@ namespace CryptoAPIs.Model
         public ListDepositAddressesRIFungibleTokens(string amount = default(string), string identifier = default(string), string name = default(string), string symbol = default(string), int tokenDecimals = default(int), string type = default(string))
         {
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for ListDepositAddressesRIFungibleTokens and cannot be null");
             }
             this.Amount = amount;
             // to ensure "identifier" is required (not null)
-            if (identifier == null) {
+            if (identifier == null)
+            {
                 throw new ArgumentNullException("identifier is a required property for ListDepositAddressesRIFungibleTokens and cannot be null");
             }
             this.Identifier = identifier;
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for ListDepositAddressesRIFungibleTokens and cannot be null");
             }
             this.Name = name;
             // to ensure "symbol" is required (not null)
-            if (symbol == null) {
+            if (symbol == null)
+            {
                 throw new ArgumentNullException("symbol is a required property for ListDepositAddressesRIFungibleTokens and cannot be null");
             }
             this.Symbol = symbol;
             this.TokenDecimals = tokenDecimals;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ListDepositAddressesRIFungibleTokens and cannot be null");
             }
             this.Type = type;

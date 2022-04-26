@@ -36,8 +36,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetLatestMinedZilliqaBlockR</returns>
-        GetLatestMinedZilliqaBlockR GetLatestMinedZilliqaBlock(string network, string context = default(string));
+        GetLatestMinedZilliqaBlockR GetLatestMinedZilliqaBlock(string network, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Latest Mined Zilliqa Block
@@ -48,8 +49,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetLatestMinedZilliqaBlockR</returns>
-        ApiResponse<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockWithHttpInfo(string network, string context = default(string));
+        ApiResponse<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockWithHttpInfo(string network, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Zilliqa Address Details
         /// </summary>
@@ -60,8 +62,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaAddressDetailsR</returns>
-        GetZilliqaAddressDetailsR GetZilliqaAddressDetails(string network, string address, string context = default(string));
+        GetZilliqaAddressDetailsR GetZilliqaAddressDetails(string network, string address, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Zilliqa Address Details
@@ -73,8 +76,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaAddressDetailsR</returns>
-        ApiResponse<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsWithHttpInfo(string network, string address, string context = default(string));
+        ApiResponse<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsWithHttpInfo(string network, string address, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Zilliqa Block Details By Block Hash
         /// </summary>
@@ -85,8 +89,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaBlockDetailsByBlockHashR</returns>
-        GetZilliqaBlockDetailsByBlockHashR GetZilliqaBlockDetailsByBlockHash(string network, string blockHash, string context = default(string));
+        GetZilliqaBlockDetailsByBlockHashR GetZilliqaBlockDetailsByBlockHash(string network, string blockHash, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Zilliqa Block Details By Block Hash
@@ -98,8 +103,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaBlockDetailsByBlockHashR</returns>
-        ApiResponse<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string));
+        ApiResponse<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Zilliqa Block Details By Block Height
         /// </summary>
@@ -110,8 +116,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaBlockDetailsByBlockHeightR</returns>
-        GetZilliqaBlockDetailsByBlockHeightR GetZilliqaBlockDetailsByBlockHeight(string network, int blockHeight, string context = default(string));
+        GetZilliqaBlockDetailsByBlockHeightR GetZilliqaBlockDetailsByBlockHeight(string network, int blockHeight, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Zilliqa Block Details By Block Height
@@ -123,8 +130,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaBlockDetailsByBlockHeightR</returns>
-        ApiResponse<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string));
+        ApiResponse<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// Get Zilliqa Transaction Details by Transaction ID
         /// </summary>
@@ -135,8 +143,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaTransactionDetailsByTransactionIDR</returns>
-        GetZilliqaTransactionDetailsByTransactionIDR GetZilliqaTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string));
+        GetZilliqaTransactionDetailsByTransactionIDR GetZilliqaTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Get Zilliqa Transaction Details by Transaction ID
@@ -148,8 +157,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaTransactionDetailsByTransactionIDR</returns>
-        ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string));
+        ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string), int operationIndex = 0);
         /// <summary>
         /// List Zilliqa Transactions by Address
         /// </summary>
@@ -162,8 +172,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListZilliqaTransactionsByAddressR</returns>
-        ListZilliqaTransactionsByAddressR ListZilliqaTransactionsByAddress(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListZilliqaTransactionsByAddressR ListZilliqaTransactionsByAddress(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Zilliqa Transactions by Address
@@ -177,8 +188,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListZilliqaTransactionsByAddressR</returns>
-        ApiResponse<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Zilliqa Transactions By Block Hash
         /// </summary>
@@ -191,8 +203,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListZilliqaTransactionsByBlockHashR</returns>
-        ListZilliqaTransactionsByBlockHashR ListZilliqaTransactionsByBlockHash(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListZilliqaTransactionsByBlockHashR ListZilliqaTransactionsByBlockHash(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Zilliqa Transactions By Block Hash
@@ -206,8 +219,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListZilliqaTransactionsByBlockHashR</returns>
-        ApiResponse<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// List Zilliqa Transactions By Block Height
         /// </summary>
@@ -220,8 +234,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListZilliqaTransactionsByBlockHeightR</returns>
-        ListZilliqaTransactionsByBlockHeightR ListZilliqaTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ListZilliqaTransactionsByBlockHeightR ListZilliqaTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Zilliqa Transactions By Block Height
@@ -235,8 +250,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListZilliqaTransactionsByBlockHeightR</returns>
-        ApiResponse<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?));
+        ApiResponse<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -255,9 +271,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetLatestMinedZilliqaBlockR</returns>
-        System.Threading.Tasks.Task<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Latest Mined Zilliqa Block
@@ -268,9 +285,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetLatestMinedZilliqaBlockR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetLatestMinedZilliqaBlockR>> GetLatestMinedZilliqaBlockWithHttpInfoAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetLatestMinedZilliqaBlockR>> GetLatestMinedZilliqaBlockWithHttpInfoAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Zilliqa Address Details
         /// </summary>
@@ -281,9 +299,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaAddressDetailsR</returns>
-        System.Threading.Tasks.Task<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Zilliqa Address Details
@@ -295,9 +314,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaAddressDetailsR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetZilliqaAddressDetailsR>> GetZilliqaAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetZilliqaAddressDetailsR>> GetZilliqaAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Zilliqa Block Details By Block Hash
         /// </summary>
@@ -308,9 +328,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaBlockDetailsByBlockHashR</returns>
-        System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Zilliqa Block Details By Block Hash
@@ -322,9 +343,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaBlockDetailsByBlockHashR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetZilliqaBlockDetailsByBlockHashR>> GetZilliqaBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetZilliqaBlockDetailsByBlockHashR>> GetZilliqaBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Zilliqa Block Details By Block Height
         /// </summary>
@@ -335,9 +357,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaBlockDetailsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightAsync(string network, int blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Zilliqa Block Details By Block Height
@@ -349,9 +372,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaBlockDetailsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetZilliqaBlockDetailsByBlockHeightR>> GetZilliqaBlockDetailsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetZilliqaBlockDetailsByBlockHeightR>> GetZilliqaBlockDetailsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Zilliqa Transaction Details by Transaction ID
         /// </summary>
@@ -362,9 +386,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaTransactionDetailsByTransactionIDR</returns>
-        System.Threading.Tasks.Task<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Zilliqa Transaction Details by Transaction ID
@@ -376,9 +401,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaTransactionDetailsByTransactionIDR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR>> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR>> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Zilliqa Transactions by Address
         /// </summary>
@@ -391,9 +417,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListZilliqaTransactionsByAddressR</returns>
-        System.Threading.Tasks.Task<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Zilliqa Transactions by Address
@@ -407,9 +434,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListZilliqaTransactionsByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListZilliqaTransactionsByAddressR>> ListZilliqaTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListZilliqaTransactionsByAddressR>> ListZilliqaTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Zilliqa Transactions By Block Hash
         /// </summary>
@@ -422,9 +450,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListZilliqaTransactionsByBlockHashR</returns>
-        System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Zilliqa Transactions By Block Hash
@@ -438,9 +467,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListZilliqaTransactionsByBlockHashR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListZilliqaTransactionsByBlockHashR>> ListZilliqaTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListZilliqaTransactionsByBlockHashR>> ListZilliqaTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Zilliqa Transactions By Block Height
         /// </summary>
@@ -453,9 +483,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListZilliqaTransactionsByBlockHeightR</returns>
-        System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Zilliqa Transactions By Block Height
@@ -469,9 +500,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListZilliqaTransactionsByBlockHeightR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListZilliqaTransactionsByBlockHeightR>> ListZilliqaTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListZilliqaTransactionsByBlockHeightR>> ListZilliqaTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -598,8 +630,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetLatestMinedZilliqaBlockR</returns>
-        public GetLatestMinedZilliqaBlockR GetLatestMinedZilliqaBlock(string network, string context = default(string))
+        public GetLatestMinedZilliqaBlockR GetLatestMinedZilliqaBlock(string network, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetLatestMinedZilliqaBlockR> localVarResponse = GetLatestMinedZilliqaBlockWithHttpInfo(network, context);
             return localVarResponse.Data;
@@ -611,8 +644,9 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetLatestMinedZilliqaBlockR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockWithHttpInfo(string network, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockWithHttpInfo(string network, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -647,6 +681,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetLatestMinedZilliqaBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -674,11 +711,12 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetLatestMinedZilliqaBlockR</returns>
-        public async System.Threading.Tasks.Task<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetLatestMinedZilliqaBlockR> GetLatestMinedZilliqaBlockAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetLatestMinedZilliqaBlockR> localVarResponse = await GetLatestMinedZilliqaBlockWithHttpInfoAsync(network, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetLatestMinedZilliqaBlockR> localVarResponse = await GetLatestMinedZilliqaBlockWithHttpInfoAsync(network, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -688,9 +726,10 @@ namespace CryptoAPIs.Api
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetLatestMinedZilliqaBlockR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetLatestMinedZilliqaBlockR>> GetLatestMinedZilliqaBlockWithHttpInfoAsync(string network, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetLatestMinedZilliqaBlockR>> GetLatestMinedZilliqaBlockWithHttpInfoAsync(string network, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -726,6 +765,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetLatestMinedZilliqaBlock";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -755,8 +797,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaAddressDetailsR</returns>
-        public GetZilliqaAddressDetailsR GetZilliqaAddressDetails(string network, string address, string context = default(string))
+        public GetZilliqaAddressDetailsR GetZilliqaAddressDetails(string network, string address, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetZilliqaAddressDetailsR> localVarResponse = GetZilliqaAddressDetailsWithHttpInfo(network, address, context);
             return localVarResponse.Data;
@@ -769,8 +812,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaAddressDetailsR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsWithHttpInfo(string network, string address, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsWithHttpInfo(string network, string address, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -812,6 +856,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -840,11 +887,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaAddressDetailsR</returns>
-        public async System.Threading.Tasks.Task<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetZilliqaAddressDetailsR> GetZilliqaAddressDetailsAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetZilliqaAddressDetailsR> localVarResponse = await GetZilliqaAddressDetailsWithHttpInfoAsync(network, address, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetZilliqaAddressDetailsR> localVarResponse = await GetZilliqaAddressDetailsWithHttpInfoAsync(network, address, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -855,9 +903,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="address">Defines the specific transaction&#39;s address.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaAddressDetailsR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaAddressDetailsR>> GetZilliqaAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaAddressDetailsR>> GetZilliqaAddressDetailsWithHttpInfoAsync(string network, string address, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -900,6 +949,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaAddressDetails";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -929,8 +981,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaBlockDetailsByBlockHashR</returns>
-        public GetZilliqaBlockDetailsByBlockHashR GetZilliqaBlockDetailsByBlockHash(string network, string blockHash, string context = default(string))
+        public GetZilliqaBlockDetailsByBlockHashR GetZilliqaBlockDetailsByBlockHash(string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHashR> localVarResponse = GetZilliqaBlockDetailsByBlockHashWithHttpInfo(network, blockHash, context);
             return localVarResponse.Data;
@@ -943,8 +996,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaBlockDetailsByBlockHashR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -986,6 +1040,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaBlockDetailsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1014,11 +1071,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaBlockDetailsByBlockHashR</returns>
-        public async System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHashR> GetZilliqaBlockDetailsByBlockHashAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHashR> localVarResponse = await GetZilliqaBlockDetailsByBlockHashWithHttpInfoAsync(network, blockHash, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHashR> localVarResponse = await GetZilliqaBlockDetailsByBlockHashWithHttpInfoAsync(network, blockHash, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1029,9 +1087,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHash">Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaBlockDetailsByBlockHashR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHashR>> GetZilliqaBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHashR>> GetZilliqaBlockDetailsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1074,6 +1133,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaBlockDetailsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1103,8 +1165,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaBlockDetailsByBlockHeightR</returns>
-        public GetZilliqaBlockDetailsByBlockHeightR GetZilliqaBlockDetailsByBlockHeight(string network, int blockHeight, string context = default(string))
+        public GetZilliqaBlockDetailsByBlockHeightR GetZilliqaBlockDetailsByBlockHeight(string network, int blockHeight, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHeightR> localVarResponse = GetZilliqaBlockDetailsByBlockHeightWithHttpInfo(network, blockHeight, context);
             return localVarResponse.Data;
@@ -1117,8 +1180,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaBlockDetailsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1154,6 +1218,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaBlockDetailsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1182,11 +1249,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaBlockDetailsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightAsync(string network, int blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetZilliqaBlockDetailsByBlockHeightR> GetZilliqaBlockDetailsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHeightR> localVarResponse = await GetZilliqaBlockDetailsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHeightR> localVarResponse = await GetZilliqaBlockDetailsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1197,9 +1265,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="blockHeight">Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaBlockDetailsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHeightR>> GetZilliqaBlockDetailsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaBlockDetailsByBlockHeightR>> GetZilliqaBlockDetailsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1236,6 +1305,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaBlockDetailsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1265,8 +1337,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetZilliqaTransactionDetailsByTransactionIDR</returns>
-        public GetZilliqaTransactionDetailsByTransactionIDR GetZilliqaTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string))
+        public GetZilliqaTransactionDetailsByTransactionIDR GetZilliqaTransactionDetailsByTransactionID(string network, string transactionHash, string context = default(string), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR> localVarResponse = GetZilliqaTransactionDetailsByTransactionIDWithHttpInfo(network, transactionHash, context);
             return localVarResponse.Data;
@@ -1279,8 +1352,9 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetZilliqaTransactionDetailsByTransactionIDR</returns>
-        public CryptoAPIs.Client.ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string))
+        public CryptoAPIs.Client.ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfo(string network, string transactionHash, string context = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1322,6 +1396,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1350,11 +1427,12 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetZilliqaTransactionDetailsByTransactionIDR</returns>
-        public async System.Threading.Tasks.Task<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetZilliqaTransactionDetailsByTransactionIDR> GetZilliqaTransactionDetailsByTransactionIDAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR> localVarResponse = await GetZilliqaTransactionDetailsByTransactionIDWithHttpInfoAsync(network, transactionHash, context, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR> localVarResponse = await GetZilliqaTransactionDetailsByTransactionIDWithHttpInfoAsync(network, transactionHash, context, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1365,9 +1443,10 @@ namespace CryptoAPIs.Api
         /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
         /// <param name="transactionHash">String identifier of the transaction</param>
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetZilliqaTransactionDetailsByTransactionIDR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR>> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<GetZilliqaTransactionDetailsByTransactionIDR>> GetZilliqaTransactionDetailsByTransactionIDWithHttpInfoAsync(string network, string transactionHash, string context = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1410,6 +1489,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.GetZilliqaTransactionDetailsByTransactionID";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1441,8 +1523,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListZilliqaTransactionsByAddressR</returns>
-        public ListZilliqaTransactionsByAddressR ListZilliqaTransactionsByAddress(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListZilliqaTransactionsByAddressR ListZilliqaTransactionsByAddress(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByAddressR> localVarResponse = ListZilliqaTransactionsByAddressWithHttpInfo(network, address, context, limit, offset);
             return localVarResponse.Data;
@@ -1457,8 +1540,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListZilliqaTransactionsByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressWithHttpInfo(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1508,6 +1592,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.ListZilliqaTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1538,11 +1625,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListZilliqaTransactionsByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListZilliqaTransactionsByAddressR> ListZilliqaTransactionsByAddressAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByAddressR> localVarResponse = await ListZilliqaTransactionsByAddressWithHttpInfoAsync(network, address, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByAddressR> localVarResponse = await ListZilliqaTransactionsByAddressWithHttpInfoAsync(network, address, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1555,9 +1643,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListZilliqaTransactionsByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByAddressR>> ListZilliqaTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByAddressR>> ListZilliqaTransactionsByAddressWithHttpInfoAsync(string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1608,6 +1697,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.ListZilliqaTransactionsByAddress";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1639,8 +1731,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListZilliqaTransactionsByBlockHashR</returns>
-        public ListZilliqaTransactionsByBlockHashR ListZilliqaTransactionsByBlockHash(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListZilliqaTransactionsByBlockHashR ListZilliqaTransactionsByBlockHash(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHashR> localVarResponse = ListZilliqaTransactionsByBlockHashWithHttpInfo(network, blockHash, context, limit, offset);
             return localVarResponse.Data;
@@ -1655,8 +1748,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListZilliqaTransactionsByBlockHashR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashWithHttpInfo(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1706,6 +1800,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.ListZilliqaTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1736,11 +1833,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListZilliqaTransactionsByBlockHashR</returns>
-        public async System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHashR> ListZilliqaTransactionsByBlockHashAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHashR> localVarResponse = await ListZilliqaTransactionsByBlockHashWithHttpInfoAsync(network, blockHash, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHashR> localVarResponse = await ListZilliqaTransactionsByBlockHashWithHttpInfoAsync(network, blockHash, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1753,9 +1851,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListZilliqaTransactionsByBlockHashR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHashR>> ListZilliqaTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHashR>> ListZilliqaTransactionsByBlockHashWithHttpInfoAsync(string network, string blockHash, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1806,6 +1905,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.ListZilliqaTransactionsByBlockHash";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1837,8 +1939,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListZilliqaTransactionsByBlockHeightR</returns>
-        public ListZilliqaTransactionsByBlockHeightR ListZilliqaTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public ListZilliqaTransactionsByBlockHeightR ListZilliqaTransactionsByBlockHeight(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHeightR> localVarResponse = ListZilliqaTransactionsByBlockHeightWithHttpInfo(network, blockHeight, context, limit, offset);
             return localVarResponse.Data;
@@ -1853,8 +1956,9 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListZilliqaTransactionsByBlockHeightR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?))
+        public CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightWithHttpInfo(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1898,6 +2002,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.ListZilliqaTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
@@ -1928,11 +2035,12 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListZilliqaTransactionsByBlockHeightR</returns>
-        public async System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListZilliqaTransactionsByBlockHeightR> ListZilliqaTransactionsByBlockHeightAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHeightR> localVarResponse = await ListZilliqaTransactionsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, limit, offset, cancellationToken).ConfigureAwait(false);
+            CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHeightR> localVarResponse = await ListZilliqaTransactionsByBlockHeightWithHttpInfoAsync(network, blockHeight, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1945,9 +2053,10 @@ namespace CryptoAPIs.Api
         /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
         /// <param name="limit">Defines how many items should be returned in the response per page basis. (optional, default to 50)</param>
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListZilliqaTransactionsByBlockHeightR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHeightR>> ListZilliqaTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListZilliqaTransactionsByBlockHeightR>> ListZilliqaTransactionsByBlockHeightWithHttpInfoAsync(string network, int blockHeight, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'network' is set
             if (network == null)
@@ -1992,6 +2101,9 @@ namespace CryptoAPIs.Api
             {
                 localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
+
+            localVarRequestOptions.Operation = "ZilliqaApi.ListZilliqaTransactionsByBlockHeight";
+            localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (ApiKey) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))

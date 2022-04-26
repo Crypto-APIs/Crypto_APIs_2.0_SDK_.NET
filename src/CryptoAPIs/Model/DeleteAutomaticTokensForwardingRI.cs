@@ -74,7 +74,7 @@ namespace CryptoAPIs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteAutomaticTokensForwardingRI" /> class.
         /// </summary>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. (required).</param>
         /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
         /// <param name="createdTimestamp">Defines the specific time/date when the automatic forwarding was created in Unix Timestamp. (required).</param>
         /// <param name="feeAddress">Represents the specific fee address, which is always automatically generated. Users must fund it. (required).</param>
@@ -87,49 +87,56 @@ namespace CryptoAPIs.Model
         public DeleteAutomaticTokensForwardingRI(string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), string feeAddress = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string fromAddress = default(string), string minimumTransferAmount = default(string), string referenceId = default(string), string toAddress = default(string), DeleteAutomaticTokensForwardingRITS tokenData = default(DeleteAutomaticTokensForwardingRITS))
         {
             // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
+            if (callbackUrl == null)
+            {
                 throw new ArgumentNullException("callbackUrl is a required property for DeleteAutomaticTokensForwardingRI and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
             this.ConfirmationsCount = confirmationsCount;
             this.CreatedTimestamp = createdTimestamp;
             // to ensure "feeAddress" is required (not null)
-            if (feeAddress == null) {
+            if (feeAddress == null)
+            {
                 throw new ArgumentNullException("feeAddress is a required property for DeleteAutomaticTokensForwardingRI and cannot be null");
             }
             this.FeeAddress = feeAddress;
             this.FeePriority = feePriority;
             // to ensure "fromAddress" is required (not null)
-            if (fromAddress == null) {
+            if (fromAddress == null)
+            {
                 throw new ArgumentNullException("fromAddress is a required property for DeleteAutomaticTokensForwardingRI and cannot be null");
             }
             this.FromAddress = fromAddress;
             // to ensure "minimumTransferAmount" is required (not null)
-            if (minimumTransferAmount == null) {
+            if (minimumTransferAmount == null)
+            {
                 throw new ArgumentNullException("minimumTransferAmount is a required property for DeleteAutomaticTokensForwardingRI and cannot be null");
             }
             this.MinimumTransferAmount = minimumTransferAmount;
             // to ensure "referenceId" is required (not null)
-            if (referenceId == null) {
+            if (referenceId == null)
+            {
                 throw new ArgumentNullException("referenceId is a required property for DeleteAutomaticTokensForwardingRI and cannot be null");
             }
             this.ReferenceId = referenceId;
             // to ensure "toAddress" is required (not null)
-            if (toAddress == null) {
+            if (toAddress == null)
+            {
                 throw new ArgumentNullException("toAddress is a required property for DeleteAutomaticTokensForwardingRI and cannot be null");
             }
             this.ToAddress = toAddress;
             // to ensure "tokenData" is required (not null)
-            if (tokenData == null) {
+            if (tokenData == null)
+            {
                 throw new ArgumentNullException("tokenData is a required property for DeleteAutomaticTokensForwardingRI and cannot be null");
             }
             this.TokenData = tokenData;
         }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 

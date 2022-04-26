@@ -49,28 +49,33 @@ namespace CryptoAPIs.Model
         public ListUnconfirmedTransactionsByAddressRIBSE(ListUnconfirmedTransactionsByAddressRIBSEFee fee = default(ListUnconfirmedTransactionsByAddressRIBSEFee), string gasLimit = default(string), ListConfirmedTransactionsByAddressRIBSEGasPrice gasPrice = default(ListConfirmedTransactionsByAddressRIBSEGasPrice), string inputData = default(string), int nonce = default(int), string transactionStatus = default(string))
         {
             // to ensure "fee" is required (not null)
-            if (fee == null) {
+            if (fee == null)
+            {
                 throw new ArgumentNullException("fee is a required property for ListUnconfirmedTransactionsByAddressRIBSE and cannot be null");
             }
             this.Fee = fee;
             // to ensure "gasLimit" is required (not null)
-            if (gasLimit == null) {
+            if (gasLimit == null)
+            {
                 throw new ArgumentNullException("gasLimit is a required property for ListUnconfirmedTransactionsByAddressRIBSE and cannot be null");
             }
             this.GasLimit = gasLimit;
             // to ensure "gasPrice" is required (not null)
-            if (gasPrice == null) {
+            if (gasPrice == null)
+            {
                 throw new ArgumentNullException("gasPrice is a required property for ListUnconfirmedTransactionsByAddressRIBSE and cannot be null");
             }
             this.GasPrice = gasPrice;
             // to ensure "inputData" is required (not null)
-            if (inputData == null) {
+            if (inputData == null)
+            {
                 throw new ArgumentNullException("inputData is a required property for ListUnconfirmedTransactionsByAddressRIBSE and cannot be null");
             }
             this.InputData = inputData;
             this.Nonce = nonce;
             // to ensure "transactionStatus" is required (not null)
-            if (transactionStatus == null) {
+            if (transactionStatus == null)
+            {
                 throw new ArgumentNullException("transactionStatus is a required property for ListUnconfirmedTransactionsByAddressRIBSE and cannot be null");
             }
             this.TransactionStatus = transactionStatus;

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **ExpiryHeight** | **int** | Represents a block height after which the transaction will expire. | 
 **JoinSplitPubKey** | **string** | Represents an encoding of a JoinSplitSig public validating key. | 
 **JoinSplitSig** | **string** | Is used to sign transactions that contain at least one JoinSplit description. | 
-**Locktime** | **int** | Represents the time at which a particular transaction can be added to the blockchain. | 
+**Locktime** | **long** | Represents the time at which a particular transaction can be added to the blockchain. | 
 **Overwintered** | **bool** | \&quot;Overwinter\&quot; is the network upgrade for the Zcash blockchain. | 
 **Size** | **int** | Represents the total size of this transaction. | 
 **VJoinSplit** | [**List&lt;GetTransactionDetailsByTransactionIDRIBSZVJoinSplit&gt;**](GetTransactionDetailsByTransactionIDRIBSZVJoinSplit.md) | Represents a sequence of JoinSplit descriptions using BCTV14 proofs. | [optional] 

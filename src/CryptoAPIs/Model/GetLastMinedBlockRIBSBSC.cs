@@ -53,44 +53,52 @@ namespace CryptoAPIs.Model
         public GetLastMinedBlockRIBSBSC(string difficulty = default(string), string nonce = default(string), int size = default(int), string extraData = default(string), string gasLimit = default(string), string gasUsed = default(string), int minedInSeconds = default(int), string sha3Uncles = default(string), string totalDifficulty = default(string), List<string> uncles = default(List<string>))
         {
             // to ensure "difficulty" is required (not null)
-            if (difficulty == null) {
+            if (difficulty == null)
+            {
                 throw new ArgumentNullException("difficulty is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.Difficulty = difficulty;
             // to ensure "nonce" is required (not null)
-            if (nonce == null) {
+            if (nonce == null)
+            {
                 throw new ArgumentNullException("nonce is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.Nonce = nonce;
             this.Size = size;
             // to ensure "extraData" is required (not null)
-            if (extraData == null) {
+            if (extraData == null)
+            {
                 throw new ArgumentNullException("extraData is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.ExtraData = extraData;
             // to ensure "gasLimit" is required (not null)
-            if (gasLimit == null) {
+            if (gasLimit == null)
+            {
                 throw new ArgumentNullException("gasLimit is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.GasLimit = gasLimit;
             // to ensure "gasUsed" is required (not null)
-            if (gasUsed == null) {
+            if (gasUsed == null)
+            {
                 throw new ArgumentNullException("gasUsed is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.GasUsed = gasUsed;
             this.MinedInSeconds = minedInSeconds;
             // to ensure "sha3Uncles" is required (not null)
-            if (sha3Uncles == null) {
+            if (sha3Uncles == null)
+            {
                 throw new ArgumentNullException("sha3Uncles is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.Sha3Uncles = sha3Uncles;
             // to ensure "totalDifficulty" is required (not null)
-            if (totalDifficulty == null) {
+            if (totalDifficulty == null)
+            {
                 throw new ArgumentNullException("totalDifficulty is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.TotalDifficulty = totalDifficulty;
             // to ensure "uncles" is required (not null)
-            if (uncles == null) {
+            if (uncles == null)
+            {
                 throw new ArgumentNullException("uncles is a required property for GetLastMinedBlockRIBSBSC and cannot be null");
             }
             this.Uncles = uncles;

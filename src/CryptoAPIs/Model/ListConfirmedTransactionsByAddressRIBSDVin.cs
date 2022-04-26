@@ -51,32 +51,38 @@ namespace CryptoAPIs.Model
         public ListConfirmedTransactionsByAddressRIBSDVin(List<string> addresses = default(List<string>), string coinbase = default(string), ListConfirmedTransactionsByAddressRIBSDScriptSig scriptSig = default(ListConfirmedTransactionsByAddressRIBSDScriptSig), string sequence = default(string), string txid = default(string), List<string> txinwitness = default(List<string>), string value = default(string), int vout = default(int))
         {
             // to ensure "addresses" is required (not null)
-            if (addresses == null) {
+            if (addresses == null)
+            {
                 throw new ArgumentNullException("addresses is a required property for ListConfirmedTransactionsByAddressRIBSDVin and cannot be null");
             }
             this.Addresses = addresses;
             // to ensure "coinbase" is required (not null)
-            if (coinbase == null) {
+            if (coinbase == null)
+            {
                 throw new ArgumentNullException("coinbase is a required property for ListConfirmedTransactionsByAddressRIBSDVin and cannot be null");
             }
             this.Coinbase = coinbase;
             // to ensure "scriptSig" is required (not null)
-            if (scriptSig == null) {
+            if (scriptSig == null)
+            {
                 throw new ArgumentNullException("scriptSig is a required property for ListConfirmedTransactionsByAddressRIBSDVin and cannot be null");
             }
             this.ScriptSig = scriptSig;
             // to ensure "sequence" is required (not null)
-            if (sequence == null) {
+            if (sequence == null)
+            {
                 throw new ArgumentNullException("sequence is a required property for ListConfirmedTransactionsByAddressRIBSDVin and cannot be null");
             }
             this.Sequence = sequence;
             // to ensure "txinwitness" is required (not null)
-            if (txinwitness == null) {
+            if (txinwitness == null)
+            {
                 throw new ArgumentNullException("txinwitness is a required property for ListConfirmedTransactionsByAddressRIBSDVin and cannot be null");
             }
             this.Txinwitness = txinwitness;
             // to ensure "value" is required (not null)
-            if (value == null) {
+            if (value == null)
+            {
                 throw new ArgumentNullException("value is a required property for ListConfirmedTransactionsByAddressRIBSDVin and cannot be null");
             }
             this.Value = value;

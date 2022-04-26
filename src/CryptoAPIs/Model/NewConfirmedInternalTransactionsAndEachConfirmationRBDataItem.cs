@@ -43,23 +43,26 @@ namespace CryptoAPIs.Model
         /// <param name="address">Defines the specific address of the internal transaction. (required).</param>
         /// <param name="allowDuplicates">Specifies a flag that permits or denies the creation of duplicate addresses. (required) (default to false).</param>
         /// <param name="callbackSecretKey">Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security). (required).</param>
-        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. (required).</param>
+        /// <param name="callbackUrl">Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. (required).</param>
         /// <param name="confirmationsCount">Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. (required).</param>
         public NewConfirmedInternalTransactionsAndEachConfirmationRBDataItem(string address = default(string), bool allowDuplicates = false, string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int))
         {
             // to ensure "address" is required (not null)
-            if (address == null) {
+            if (address == null)
+            {
                 throw new ArgumentNullException("address is a required property for NewConfirmedInternalTransactionsAndEachConfirmationRBDataItem and cannot be null");
             }
             this.Address = address;
             this.AllowDuplicates = allowDuplicates;
             // to ensure "callbackSecretKey" is required (not null)
-            if (callbackSecretKey == null) {
+            if (callbackSecretKey == null)
+            {
                 throw new ArgumentNullException("callbackSecretKey is a required property for NewConfirmedInternalTransactionsAndEachConfirmationRBDataItem and cannot be null");
             }
             this.CallbackSecretKey = callbackSecretKey;
             // to ensure "callbackUrl" is required (not null)
-            if (callbackUrl == null) {
+            if (callbackUrl == null)
+            {
                 throw new ArgumentNullException("callbackUrl is a required property for NewConfirmedInternalTransactionsAndEachConfirmationRBDataItem and cannot be null");
             }
             this.CallbackUrl = callbackUrl;
@@ -88,9 +91,9 @@ namespace CryptoAPIs.Model
         public string CallbackSecretKey { get; set; }
 
         /// <summary>
-        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+        /// Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.
         /// </summary>
-        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.</value>
+        /// <value>Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;.</value>
         [DataMember(Name = "callbackUrl", IsRequired = true, EmitDefaultValue = false)]
         public string CallbackUrl { get; set; }
 

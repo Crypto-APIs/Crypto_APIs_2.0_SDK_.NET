@@ -66,12 +66,28 @@ namespace CryptoAPIs.Test.Model
             // TODO unit test for the property 'Address'
         }
         /// <summary>
+        /// Test the property 'AddressTag'
+        /// </summary>
+        [Fact]
+        public void AddressTagTest()
+        {
+            // TODO unit test for the property 'AddressTag'
+        }
+        /// <summary>
         /// Test the property 'Amount'
         /// </summary>
         [Fact]
         public void AmountTest()
         {
             // TODO unit test for the property 'Amount'
+        }
+        /// <summary>
+        /// Test the property 'ClassicAddress'
+        /// </summary>
+        [Fact]
+        public void ClassicAddressTest()
+        {
+            // TODO unit test for the property 'ClassicAddress'
         }
         /// <summary>
         /// Test the property 'Unit'

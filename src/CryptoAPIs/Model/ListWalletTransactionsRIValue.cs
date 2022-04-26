@@ -47,22 +47,26 @@ namespace CryptoAPIs.Model
         public ListWalletTransactionsRIValue(string amount = default(string), string convertedAmount = default(string), string exchangeRateUnit = default(string), string symbol = default(string))
         {
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for ListWalletTransactionsRIValue and cannot be null");
             }
             this.Amount = amount;
             // to ensure "convertedAmount" is required (not null)
-            if (convertedAmount == null) {
+            if (convertedAmount == null)
+            {
                 throw new ArgumentNullException("convertedAmount is a required property for ListWalletTransactionsRIValue and cannot be null");
             }
             this.ConvertedAmount = convertedAmount;
             // to ensure "exchangeRateUnit" is required (not null)
-            if (exchangeRateUnit == null) {
+            if (exchangeRateUnit == null)
+            {
                 throw new ArgumentNullException("exchangeRateUnit is a required property for ListWalletTransactionsRIValue and cannot be null");
             }
             this.ExchangeRateUnit = exchangeRateUnit;
             // to ensure "symbol" is required (not null)
-            if (symbol == null) {
+            if (symbol == null)
+            {
                 throw new ArgumentNullException("symbol is a required property for ListWalletTransactionsRIValue and cannot be null");
             }
             this.Symbol = symbol;

@@ -45,7 +45,8 @@ namespace CryptoAPIs.Model
         public AddTokensToExistingFromAddressRB(string context = default(string), AddTokensToExistingFromAddressRBData data = default(AddTokensToExistingFromAddressRBData))
         {
             // to ensure "data" is required (not null)
-            if (data == null) {
+            if (data == null)
+            {
                 throw new ArgumentNullException("data is a required property for AddTokensToExistingFromAddressRB and cannot be null");
             }
             this.Data = data;

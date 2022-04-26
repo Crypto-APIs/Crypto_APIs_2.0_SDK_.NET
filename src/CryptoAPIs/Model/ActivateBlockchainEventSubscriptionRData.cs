@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public ActivateBlockchainEventSubscriptionRData(ActivateBlockchainEventSubscriptionRI item = default(ActivateBlockchainEventSubscriptionRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for ActivateBlockchainEventSubscriptionRData and cannot be null");
             }
             this.Item = item;

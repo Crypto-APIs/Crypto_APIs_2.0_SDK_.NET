@@ -99,6 +99,33 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test ListAllAssetsByWalletID
+        /// </summary>
+        [Fact]
+        public void ListAllAssetsByWalletIDTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string walletId = null;
+            //string context = null;
+            //var response = instance.ListAllAssetsByWalletID(walletId, context);
+            //Assert.IsType<ListAllAssetsByWalletIDR>(response);
+        }
+
+        /// <summary>
+        /// Test ListAllAssetsFromAllWallets
+        /// </summary>
+        [Fact]
+        public void ListAllAssetsFromAllWalletsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string context = null;
+            //int? limit = null;
+            //int? offset = null;
+            //var response = instance.ListAllAssetsFromAllWallets(context, limit, offset);
+            //Assert.IsType<ListAllAssetsFromAllWalletsR>(response);
+        }
+
+        /// <summary>
         /// Test ListDepositAddresses
         /// </summary>
         [Fact]

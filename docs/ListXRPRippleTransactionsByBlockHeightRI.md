@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdditionalData** | **string** |  | [optional] 
-**DestinationTag** | **int** |  | [optional] 
+**DestinationTag** | **long** |  | [optional] 
 **Index** | **int** |  | 
 **MinedInBlockHash** | **string** |  | 
 **Recipients** | [**List&lt;ListXRPRippleTransactionsByBlockHeightRIRecipients&gt;**](ListXRPRippleTransactionsByBlockHeightRIRecipients.md) | Object Array representation of transaction receivers | 
 **Senders** | [**List&lt;ListXRPRippleTransactionsByBlockHeightRISenders&gt;**](ListXRPRippleTransactionsByBlockHeightRISenders.md) | Object Array representation of transaction senders | 
-**Sequence** | **int** |  | 
+**Sequence** | **long** |  | 
 **Status** | **string** |  | 
 **Timestamp** | **int** | Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. | 
 **TransactionHash** | **string** |  | 

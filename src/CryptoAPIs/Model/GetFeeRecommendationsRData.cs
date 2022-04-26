@@ -44,7 +44,8 @@ namespace CryptoAPIs.Model
         public GetFeeRecommendationsRData(GetFeeRecommendationsRI item = default(GetFeeRecommendationsRI))
         {
             // to ensure "item" is required (not null)
-            if (item == null) {
+            if (item == null)
+            {
                 throw new ArgumentNullException("item is a required property for GetFeeRecommendationsRData and cannot be null");
             }
             this.Item = item;

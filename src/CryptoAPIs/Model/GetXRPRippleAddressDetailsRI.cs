@@ -45,10 +45,11 @@ namespace CryptoAPIs.Model
         /// <param name="outgoingTransactionsCount">Defines the count of all confirmed outgoing transactions for coins. This applies to coins only, not to tokens transfers (required).</param>
         /// <param name="sequence">Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime. (required).</param>
         /// <param name="transactionsCount">Represents the total number of all transactions as part of this block. (required).</param>
-        public GetXRPRippleAddressDetailsRI(GetXRPRippleAddressDetailsRIBalance balance = default(GetXRPRippleAddressDetailsRIBalance), int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int), int sequence = default(int), int transactionsCount = default(int))
+        public GetXRPRippleAddressDetailsRI(GetXRPRippleAddressDetailsRIBalance balance = default(GetXRPRippleAddressDetailsRIBalance), int incomingTransactionsCount = default(int), int outgoingTransactionsCount = default(int), long sequence = default(long), int transactionsCount = default(int))
         {
             // to ensure "balance" is required (not null)
-            if (balance == null) {
+            if (balance == null)
+            {
                 throw new ArgumentNullException("balance is a required property for GetXRPRippleAddressDetailsRI and cannot be null");
             }
             this.Balance = balance;
@@ -83,7 +84,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime.</value>
         [DataMember(Name = "sequence", IsRequired = true, EmitDefaultValue = false)]
-        public int Sequence { get; set; }
+        public long Sequence { get; set; }
 
         /// <summary>
         /// Represents the total number of all transactions as part of this block.

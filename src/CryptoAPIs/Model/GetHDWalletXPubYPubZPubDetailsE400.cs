@@ -36,10 +36,10 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetHDWalletXPubYPubZPubDetailsE400" /> class
-        /// with the <see cref="InvalidBlockchain" /> class
+        /// with the <see cref="UriNotFound" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of InvalidBlockchain.</param>
-        public GetHDWalletXPubYPubZPubDetailsE400(InvalidBlockchain actualInstance)
+        /// <param name="actualInstance">An instance of UriNotFound.</param>
+        public GetHDWalletXPubYPubZPubDetailsE400(UriNotFound actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -48,10 +48,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetHDWalletXPubYPubZPubDetailsE400" /> class
-        /// with the <see cref="InvalidNetwork" /> class
+        /// with the <see cref="LimitGreaterThanAllowed" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of InvalidNetwork.</param>
-        public GetHDWalletXPubYPubZPubDetailsE400(InvalidNetwork actualInstance)
+        /// <param name="actualInstance">An instance of LimitGreaterThanAllowed.</param>
+        public GetHDWalletXPubYPubZPubDetailsE400(LimitGreaterThanAllowed actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -84,10 +84,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetHDWalletXPubYPubZPubDetailsE400" /> class
-        /// with the <see cref="LimitGreaterThanAllowed" /> class
+        /// with the <see cref="InvalidBlockchain" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of LimitGreaterThanAllowed.</param>
-        public GetHDWalletXPubYPubZPubDetailsE400(LimitGreaterThanAllowed actualInstance)
+        /// <param name="actualInstance">An instance of InvalidBlockchain.</param>
+        public GetHDWalletXPubYPubZPubDetailsE400(InvalidBlockchain actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -96,10 +96,10 @@ namespace CryptoAPIs.Model
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetHDWalletXPubYPubZPubDetailsE400" /> class
-        /// with the <see cref="UriNotFound" /> class
+        /// with the <see cref="InvalidNetwork" /> class
         /// </summary>
-        /// <param name="actualInstance">An instance of UriNotFound.</param>
-        public GetHDWalletXPubYPubZPubDetailsE400(UriNotFound actualInstance)
+        /// <param name="actualInstance">An instance of InvalidNetwork.</param>
+        public GetHDWalletXPubYPubZPubDetailsE400(InvalidNetwork actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -168,23 +168,23 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `InvalidBlockchain`. If the actual instance is not `InvalidBlockchain`,
+        /// Get the actual instance of `UriNotFound`. If the actual instance is not `UriNotFound`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of InvalidBlockchain</returns>
-        public InvalidBlockchain GetInvalidBlockchain()
+        /// <returns>An instance of UriNotFound</returns>
+        public UriNotFound GetUriNotFound()
         {
-            return (InvalidBlockchain)this.ActualInstance;
+            return (UriNotFound)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `InvalidNetwork`. If the actual instance is not `InvalidNetwork`,
+        /// Get the actual instance of `LimitGreaterThanAllowed`. If the actual instance is not `LimitGreaterThanAllowed`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of InvalidNetwork</returns>
-        public InvalidNetwork GetInvalidNetwork()
+        /// <returns>An instance of LimitGreaterThanAllowed</returns>
+        public LimitGreaterThanAllowed GetLimitGreaterThanAllowed()
         {
-            return (InvalidNetwork)this.ActualInstance;
+            return (LimitGreaterThanAllowed)this.ActualInstance;
         }
 
         /// <summary>
@@ -208,23 +208,23 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `LimitGreaterThanAllowed`. If the actual instance is not `LimitGreaterThanAllowed`,
+        /// Get the actual instance of `InvalidBlockchain`. If the actual instance is not `InvalidBlockchain`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of LimitGreaterThanAllowed</returns>
-        public LimitGreaterThanAllowed GetLimitGreaterThanAllowed()
+        /// <returns>An instance of InvalidBlockchain</returns>
+        public InvalidBlockchain GetInvalidBlockchain()
         {
-            return (LimitGreaterThanAllowed)this.ActualInstance;
+            return (InvalidBlockchain)this.ActualInstance;
         }
 
         /// <summary>
-        /// Get the actual instance of `UriNotFound`. If the actual instance is not `UriNotFound`,
+        /// Get the actual instance of `InvalidNetwork`. If the actual instance is not `InvalidNetwork`,
         /// the InvalidClassException will be thrown
         /// </summary>
-        /// <returns>An instance of UriNotFound</returns>
-        public UriNotFound GetUriNotFound()
+        /// <returns>An instance of InvalidNetwork</returns>
+        public InvalidNetwork GetInvalidNetwork()
         {
-            return (UriNotFound)this.ActualInstance;
+            return (InvalidNetwork)this.ActualInstance;
         }
 
         /// <summary>

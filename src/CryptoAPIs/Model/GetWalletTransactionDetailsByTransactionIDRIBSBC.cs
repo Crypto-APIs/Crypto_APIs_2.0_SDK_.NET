@@ -45,18 +45,20 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction version number. (required).</param>
         /// <param name="vin">Object Array representation of transaction inputs (required).</param>
         /// <param name="vout">Object Array representation of transaction outputs (required).</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBSBC(int locktime = default(int), int size = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSBCVin> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBCVin>), List<GetWalletTransactionDetailsByTransactionIDRIBSBCVout> vout = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBCVout>))
+        public GetWalletTransactionDetailsByTransactionIDRIBSBC(long locktime = default(long), int size = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSBCVin> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBCVin>), List<GetWalletTransactionDetailsByTransactionIDRIBSBCVout> vout = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBCVout>))
         {
             this.Locktime = locktime;
             this.Size = size;
             this._Version = version;
             // to ensure "vin" is required (not null)
-            if (vin == null) {
+            if (vin == null)
+            {
                 throw new ArgumentNullException("vin is a required property for GetWalletTransactionDetailsByTransactionIDRIBSBC and cannot be null");
             }
             this.Vin = vin;
             // to ensure "vout" is required (not null)
-            if (vout == null) {
+            if (vout == null)
+            {
                 throw new ArgumentNullException("vout is a required property for GetWalletTransactionDetailsByTransactionIDRIBSBC and cannot be null");
             }
             this.Vout = vout;
@@ -67,7 +69,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the time at which a particular transaction can be added to the blockchain.</value>
         [DataMember(Name = "locktime", IsRequired = true, EmitDefaultValue = false)]
-        public int Locktime { get; set; }
+        public long Locktime { get; set; }
 
         /// <summary>
         /// Represents the total size of this transaction.

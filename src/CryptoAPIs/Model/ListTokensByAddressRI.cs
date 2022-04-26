@@ -48,27 +48,32 @@ namespace CryptoAPIs.Model
         public ListTokensByAddressRI(string confirmedBalance = default(string), string contractAddress = default(string), string name = default(string), string symbol = default(string), string type = default(string))
         {
             // to ensure "confirmedBalance" is required (not null)
-            if (confirmedBalance == null) {
+            if (confirmedBalance == null)
+            {
                 throw new ArgumentNullException("confirmedBalance is a required property for ListTokensByAddressRI and cannot be null");
             }
             this.ConfirmedBalance = confirmedBalance;
             // to ensure "contractAddress" is required (not null)
-            if (contractAddress == null) {
+            if (contractAddress == null)
+            {
                 throw new ArgumentNullException("contractAddress is a required property for ListTokensByAddressRI and cannot be null");
             }
             this.ContractAddress = contractAddress;
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for ListTokensByAddressRI and cannot be null");
             }
             this.Name = name;
             // to ensure "symbol" is required (not null)
-            if (symbol == null) {
+            if (symbol == null)
+            {
                 throw new ArgumentNullException("symbol is a required property for ListTokensByAddressRI and cannot be null");
             }
             this.Symbol = symbol;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ListTokensByAddressRI and cannot be null");
             }
             this.Type = type;

@@ -50,25 +50,29 @@ namespace CryptoAPIs.Model
         public GetLatestMinedXRPRippleBlockRI(string blockHash = default(string), int blockHeight = default(int), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int), GetLatestMinedXRPRippleBlockRITotalCoins totalCoins = default(GetLatestMinedXRPRippleBlockRITotalCoins), GetLatestMinedXRPRippleBlockRITotalFees totalFees = default(GetLatestMinedXRPRippleBlockRITotalFees))
         {
             // to ensure "blockHash" is required (not null)
-            if (blockHash == null) {
+            if (blockHash == null)
+            {
                 throw new ArgumentNullException("blockHash is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
             }
             this.BlockHash = blockHash;
             this.BlockHeight = blockHeight;
             // to ensure "previousBlockHash" is required (not null)
-            if (previousBlockHash == null) {
+            if (previousBlockHash == null)
+            {
                 throw new ArgumentNullException("previousBlockHash is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
             }
             this.PreviousBlockHash = previousBlockHash;
             this.Timestamp = timestamp;
             this.TransactionsCount = transactionsCount;
             // to ensure "totalCoins" is required (not null)
-            if (totalCoins == null) {
+            if (totalCoins == null)
+            {
                 throw new ArgumentNullException("totalCoins is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
             }
             this.TotalCoins = totalCoins;
             // to ensure "totalFees" is required (not null)
-            if (totalFees == null) {
+            if (totalFees == null)
+            {
                 throw new ArgumentNullException("totalFees is a required property for GetLatestMinedXRPRippleBlockRI and cannot be null");
             }
             this.TotalFees = totalFees;

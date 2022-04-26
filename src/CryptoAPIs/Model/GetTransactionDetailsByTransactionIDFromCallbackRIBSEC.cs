@@ -49,27 +49,32 @@ namespace CryptoAPIs.Model
         public GetTransactionDetailsByTransactionIDFromCallbackRIBSEC(string contract = default(string), string gasLimit = default(string), GetTransactionDetailsByTransactionIDRIBSECGasPrice gasPrice = default(GetTransactionDetailsByTransactionIDRIBSECGasPrice), string gasUsed = default(string), string inputData = default(string), int nonce = default(int))
         {
             // to ensure "contract" is required (not null)
-            if (contract == null) {
+            if (contract == null)
+            {
                 throw new ArgumentNullException("contract is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSEC and cannot be null");
             }
             this.Contract = contract;
             // to ensure "gasLimit" is required (not null)
-            if (gasLimit == null) {
+            if (gasLimit == null)
+            {
                 throw new ArgumentNullException("gasLimit is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSEC and cannot be null");
             }
             this.GasLimit = gasLimit;
             // to ensure "gasPrice" is required (not null)
-            if (gasPrice == null) {
+            if (gasPrice == null)
+            {
                 throw new ArgumentNullException("gasPrice is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSEC and cannot be null");
             }
             this.GasPrice = gasPrice;
             // to ensure "gasUsed" is required (not null)
-            if (gasUsed == null) {
+            if (gasUsed == null)
+            {
                 throw new ArgumentNullException("gasUsed is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSEC and cannot be null");
             }
             this.GasUsed = gasUsed;
             // to ensure "inputData" is required (not null)
-            if (inputData == null) {
+            if (inputData == null)
+            {
                 throw new ArgumentNullException("inputData is a required property for GetTransactionDetailsByTransactionIDFromCallbackRIBSEC and cannot be null");
             }
             this.InputData = inputData;

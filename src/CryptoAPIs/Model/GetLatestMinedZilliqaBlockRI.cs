@@ -55,36 +55,42 @@ namespace CryptoAPIs.Model
         public GetLatestMinedZilliqaBlockRI(string blockHash = default(string), int blockHeight = default(int), string difficulty = default(string), int dsBlock = default(int), string dsDifficulty = default(string), string dsLeader = default(string), int gasLimit = default(int), int gasUsed = default(int), List<string> microBlocks = default(List<string>), string previousBlockHash = default(string), int timestamp = default(int), int transactionsCount = default(int))
         {
             // to ensure "blockHash" is required (not null)
-            if (blockHash == null) {
+            if (blockHash == null)
+            {
                 throw new ArgumentNullException("blockHash is a required property for GetLatestMinedZilliqaBlockRI and cannot be null");
             }
             this.BlockHash = blockHash;
             this.BlockHeight = blockHeight;
             // to ensure "difficulty" is required (not null)
-            if (difficulty == null) {
+            if (difficulty == null)
+            {
                 throw new ArgumentNullException("difficulty is a required property for GetLatestMinedZilliqaBlockRI and cannot be null");
             }
             this.Difficulty = difficulty;
             this.DsBlock = dsBlock;
             // to ensure "dsDifficulty" is required (not null)
-            if (dsDifficulty == null) {
+            if (dsDifficulty == null)
+            {
                 throw new ArgumentNullException("dsDifficulty is a required property for GetLatestMinedZilliqaBlockRI and cannot be null");
             }
             this.DsDifficulty = dsDifficulty;
             // to ensure "dsLeader" is required (not null)
-            if (dsLeader == null) {
+            if (dsLeader == null)
+            {
                 throw new ArgumentNullException("dsLeader is a required property for GetLatestMinedZilliqaBlockRI and cannot be null");
             }
             this.DsLeader = dsLeader;
             this.GasLimit = gasLimit;
             this.GasUsed = gasUsed;
             // to ensure "microBlocks" is required (not null)
-            if (microBlocks == null) {
+            if (microBlocks == null)
+            {
                 throw new ArgumentNullException("microBlocks is a required property for GetLatestMinedZilliqaBlockRI and cannot be null");
             }
             this.MicroBlocks = microBlocks;
             // to ensure "previousBlockHash" is required (not null)
-            if (previousBlockHash == null) {
+            if (previousBlockHash == null)
+            {
                 throw new ArgumentNullException("previousBlockHash is a required property for GetLatestMinedZilliqaBlockRI and cannot be null");
             }
             this.PreviousBlockHash = previousBlockHash;

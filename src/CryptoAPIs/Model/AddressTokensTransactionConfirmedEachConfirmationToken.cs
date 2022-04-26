@@ -36,18 +36,6 @@ namespace CryptoAPIs.Model
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedEachConfirmationToken" /> class
-        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationBep20" /> class
-        /// </summary>
-        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationBep20.</param>
-        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationBep20 actualInstance)
-        {
-            this.IsNullable = false;
-            this.SchemaType= "oneOf";
-            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedEachConfirmationToken" /> class
         /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationErc20" /> class
         /// </summary>
         /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationErc20.</param>
@@ -76,6 +64,18 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationOmni.</param>
         public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationOmni actualInstance)
+        {
+            this.IsNullable = false;
+            this.SchemaType= "oneOf";
+            this.ActualInstance = actualInstance ?? throw new ArgumentException("Invalid instance found. Must not be null.");
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AddressTokensTransactionConfirmedEachConfirmationToken" /> class
+        /// with the <see cref="AddressTokensTransactionConfirmedEachConfirmationBep20" /> class
+        /// </summary>
+        /// <param name="actualInstance">An instance of AddressTokensTransactionConfirmedEachConfirmationBep20.</param>
+        public AddressTokensTransactionConfirmedEachConfirmationToken(AddressTokensTransactionConfirmedEachConfirmationBep20 actualInstance)
         {
             this.IsNullable = false;
             this.SchemaType= "oneOf";
@@ -120,16 +120,6 @@ namespace CryptoAPIs.Model
         }
 
         /// <summary>
-        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationBep20`. If the actual instance is not `AddressTokensTransactionConfirmedEachConfirmationBep20`,
-        /// the InvalidClassException will be thrown
-        /// </summary>
-        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationBep20</returns>
-        public AddressTokensTransactionConfirmedEachConfirmationBep20 GetAddressTokensTransactionConfirmedEachConfirmationBep20()
-        {
-            return (AddressTokensTransactionConfirmedEachConfirmationBep20)this.ActualInstance;
-        }
-
-        /// <summary>
         /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationErc20`. If the actual instance is not `AddressTokensTransactionConfirmedEachConfirmationErc20`,
         /// the InvalidClassException will be thrown
         /// </summary>
@@ -157,6 +147,16 @@ namespace CryptoAPIs.Model
         public AddressTokensTransactionConfirmedEachConfirmationOmni GetAddressTokensTransactionConfirmedEachConfirmationOmni()
         {
             return (AddressTokensTransactionConfirmedEachConfirmationOmni)this.ActualInstance;
+        }
+
+        /// <summary>
+        /// Get the actual instance of `AddressTokensTransactionConfirmedEachConfirmationBep20`. If the actual instance is not `AddressTokensTransactionConfirmedEachConfirmationBep20`,
+        /// the InvalidClassException will be thrown
+        /// </summary>
+        /// <returns>An instance of AddressTokensTransactionConfirmedEachConfirmationBep20</returns>
+        public AddressTokensTransactionConfirmedEachConfirmationBep20 GetAddressTokensTransactionConfirmedEachConfirmationBep20()
+        {
+            return (AddressTokensTransactionConfirmedEachConfirmationBep20)this.ActualInstance;
         }
 
         /// <summary>

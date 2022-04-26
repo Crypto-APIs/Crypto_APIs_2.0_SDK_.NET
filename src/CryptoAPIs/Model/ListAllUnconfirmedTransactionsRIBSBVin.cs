@@ -50,17 +50,20 @@ namespace CryptoAPIs.Model
         public ListAllUnconfirmedTransactionsRIBSBVin(List<string> addresses = default(List<string>), ListAllUnconfirmedTransactionsRIBSBScriptSig scriptSig = default(ListAllUnconfirmedTransactionsRIBSBScriptSig), string sequence = default(string), string txid = default(string), List<string> txinwitness = default(List<string>), string value = default(string), int vout = default(int))
         {
             // to ensure "addresses" is required (not null)
-            if (addresses == null) {
+            if (addresses == null)
+            {
                 throw new ArgumentNullException("addresses is a required property for ListAllUnconfirmedTransactionsRIBSBVin and cannot be null");
             }
             this.Addresses = addresses;
             // to ensure "scriptSig" is required (not null)
-            if (scriptSig == null) {
+            if (scriptSig == null)
+            {
                 throw new ArgumentNullException("scriptSig is a required property for ListAllUnconfirmedTransactionsRIBSBVin and cannot be null");
             }
             this.ScriptSig = scriptSig;
             // to ensure "sequence" is required (not null)
-            if (sequence == null) {
+            if (sequence == null)
+            {
                 throw new ArgumentNullException("sequence is a required property for ListAllUnconfirmedTransactionsRIBSBVin and cannot be null");
             }
             this.Sequence = sequence;
