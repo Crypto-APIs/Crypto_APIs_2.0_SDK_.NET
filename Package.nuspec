@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CryptoAPIs</id>
-    <version>1.5.0</version>
+    <version>1.5.1</version>
     <authors>CryptoAPIs Team</authors>
     <owners>CryptoAPIs Team</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -73,6 +73,7 @@
          - "ropsten"
          - "mordor"
    </releaseNotes>
+   <readme>README.md</readme>
     <copyright>Copyright 2021</copyright>
     <tags>Crypto Blockchain</tags>
     <dependencies>
@@ -81,4 +82,8 @@
       </group>
     </dependencies>
   </metadata>
+  <files>
+      <file src="README.md" target="" />
+      <file src="logo.png" target="" />
+  </files>
 </package>
