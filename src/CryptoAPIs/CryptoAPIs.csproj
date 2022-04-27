@@ -12,7 +12,7 @@
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>CryptoAPIs</RootNamespace>
-    <Version>1.5.0</Version>
+    <Version>1.5.1</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\CryptoAPIs.xml</DocumentationFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_.NET.git</RepositoryUrl>
