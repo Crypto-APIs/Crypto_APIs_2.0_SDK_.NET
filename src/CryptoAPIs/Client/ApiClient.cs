@@ -512,6 +512,10 @@ namespace CryptoAPIs.Client
             {
                 response.Data = (T)(object)new MemoryStream(response.RawBytes);
             }
+            else if (typeof(T).Name == "Byte[]") // for byte response
+            {
+                response.Data = (T)(object)response.RawBytes;
+            }
 
             InterceptResponse(req, response);
 
@@ -624,6 +628,10 @@ namespace CryptoAPIs.Client
             else if (typeof(T).Name == "Stream") // for binary response
             {
                 response.Data = (T)(object)new MemoryStream(response.RawBytes);
+            }
+            else if (typeof(T).Name == "Byte[]") // for byte response
+            {
+                response.Data = (T)(object)response.RawBytes;
             }
 
             InterceptResponse(req, response);

@@ -684,7 +684,7 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetBlockDetailsByBlockHashFromCallbackR>("/blockcain-events/{blockchain}/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetBlockDetailsByBlockHashFromCallbackR>("/blockchain-events/{blockchain}/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetBlockDetailsByBlockHashFromCallback", localVarResponse);
@@ -786,7 +786,7 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetBlockDetailsByBlockHashFromCallbackR>("/blockcain-events/{blockchain}/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetBlockDetailsByBlockHashFromCallbackR>("/blockchain-events/{blockchain}/{network}/blocks/hash/{blockHash}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -886,7 +886,7 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<GetBlockDetailsByBlockHeightFromCallbackR>("/blockcain-events/{blockchain}/{network}/blocks/height/{blockHeight}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<GetBlockDetailsByBlockHeightFromCallbackR>("/blockchain-events/{blockchain}/{network}/blocks/height/{blockHeight}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetBlockDetailsByBlockHeightFromCallback", localVarResponse);
@@ -988,7 +988,7 @@ namespace CryptoAPIs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<GetBlockDetailsByBlockHeightFromCallbackR>("/blockcain-events/{blockchain}/{network}/blocks/height/{blockHeight}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<GetBlockDetailsByBlockHeightFromCallbackR>("/blockchain-events/{blockchain}/{network}/blocks/height/{blockHeight}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

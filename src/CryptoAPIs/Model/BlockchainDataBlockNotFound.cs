@@ -43,7 +43,7 @@ namespace CryptoAPIs.Model
         /// <param name="code">Specifies an error code, e.g. error 404. (required).</param>
         /// <param name="message">Specifies the message of the error, i.e. why the error was returned, e.g. error 404 stands for “not found”. (required).</param>
         /// <param name="details">details.</param>
-        public BlockchainDataBlockNotFound(string code = default(string), string message = default(string), List<BannedIpAddressDetails> details = default(List<BannedIpAddressDetails>))
+        public BlockchainDataBlockNotFound(string code = default(string), string message = default(string), List<BannedIpAddressDetailsInner> details = default(List<BannedIpAddressDetailsInner>))
         {
             // to ensure "code" is required (not null)
             if (code == null)
@@ -78,7 +78,7 @@ namespace CryptoAPIs.Model
         /// Gets or Sets Details
         /// </summary>
         [DataMember(Name = "details", EmitDefaultValue = false)]
-        public List<BannedIpAddressDetails> Details { get; set; }
+        public List<BannedIpAddressDetailsInner> Details { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

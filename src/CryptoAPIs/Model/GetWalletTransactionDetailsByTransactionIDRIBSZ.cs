@@ -55,7 +55,7 @@ namespace CryptoAPIs.Model
         /// <param name="versionGroupId">Represents the transaction version group ID. (required).</param>
         /// <param name="vin">Object Array representation of transaction inputs (required).</param>
         /// <param name="vout">Object Array representation of transaction outputs (required).</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBSZ(string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), long locktime = default(long), bool overwintered = default(bool), int size = default(int), List<GetTransactionDetailsByTransactionIDRIBSZVJoinSplit> vJoinSplit = default(List<GetTransactionDetailsByTransactionIDRIBSZVJoinSplit>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput> vShieldedOutput = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend> vShieldedSpend = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend>), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<GetWalletTransactionDetailsByTransactionIDRIBSZVin> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSZVin>), List<ListTransactionsByBlockHeightRIBSZVout> vout = default(List<ListTransactionsByBlockHeightRIBSZVout>))
+        public GetWalletTransactionDetailsByTransactionIDRIBSZ(string bindingSig = default(string), int expiryHeight = default(int), string joinSplitPubKey = default(string), string joinSplitSig = default(string), long locktime = default(long), bool overwintered = default(bool), int size = default(int), List<GetTransactionDetailsByTransactionIDRIBSZVJoinSplitInner> vJoinSplit = default(List<GetTransactionDetailsByTransactionIDRIBSZVJoinSplitInner>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutputInner> vShieldedOutput = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutputInner>), List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendInner> vShieldedSpend = default(List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendInner>), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<GetWalletTransactionDetailsByTransactionIDRIBSZVinInner> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSZVinInner>), List<ListTransactionsByBlockHeightRIBSZVoutInner> vout = default(List<ListTransactionsByBlockHeightRIBSZVoutInner>))
         {
             // to ensure "bindingSig" is required (not null)
             if (bindingSig == null)
@@ -163,21 +163,21 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a sequence of JoinSplit descriptions using BCTV14 proofs.</value>
         [DataMember(Name = "vJoinSplit", EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSZVJoinSplit> VJoinSplit { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSZVJoinSplitInner> VJoinSplit { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction output descriptions
         /// </summary>
         /// <value>Object Array representation of transaction output descriptions</value>
         [DataMember(Name = "vShieldedOutput", EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput> VShieldedOutput { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSZVShieldedOutputInner> VShieldedOutput { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction spend descriptions
         /// </summary>
         /// <value>Object Array representation of transaction spend descriptions</value>
         [DataMember(Name = "vShieldedSpend", EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend> VShieldedSpend { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendInner> VShieldedSpend { get; set; }
 
         /// <summary>
         /// String representation of the transaction value balance
@@ -205,14 +205,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Object Array representation of transaction inputs</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletTransactionDetailsByTransactionIDRIBSZVin> Vin { get; set; }
+        public List<GetWalletTransactionDetailsByTransactionIDRIBSZVinInner> Vin { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction outputs
         /// </summary>
         /// <value>Object Array representation of transaction outputs</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListTransactionsByBlockHeightRIBSZVout> Vout { get; set; }
+        public List<ListTransactionsByBlockHeightRIBSZVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

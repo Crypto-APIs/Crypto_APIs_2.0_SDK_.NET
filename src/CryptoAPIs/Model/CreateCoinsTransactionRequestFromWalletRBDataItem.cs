@@ -108,7 +108,7 @@ namespace CryptoAPIs.Model
         /// <param name="note">Represents an optional note to add a free text in, explaining or providing additional detail on the transaction request..</param>
         /// <param name="prepareStrategy">Refers to a model of a UTXO spending strategy, where customers can choose how to spend their transaction outputs from multiple Bitcoin addresses. Two options available - \&quot;minimize-dust\&quot; (select lower amounts from multiple addresses) or \&quot;optimize-size\&quot; (select higher amounts from less addresses). (default to PrepareStrategyEnum.MinimizeDust).</param>
         /// <param name="recipients">Defines the destination of the transaction, whether it is incoming or outgoing. (required).</param>
-        public CreateCoinsTransactionRequestFromWalletRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), PrepareStrategyEnum? prepareStrategy = PrepareStrategyEnum.MinimizeDust, List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients> recipients = default(List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients>))
+        public CreateCoinsTransactionRequestFromWalletRBDataItem(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), PrepareStrategyEnum? prepareStrategy = PrepareStrategyEnum.MinimizeDust, List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipientsInner> recipients = default(List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipientsInner>))
         {
             this.FeePriority = feePriority;
             // to ensure "recipients" is required (not null)
@@ -149,7 +149,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the destination of the transaction, whether it is incoming or outgoing.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipients> Recipients { get; set; }
+        public List<CreateCoinsTransactionRequestFromWalletRBDataItemRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

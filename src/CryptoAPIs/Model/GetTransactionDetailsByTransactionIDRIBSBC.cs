@@ -45,7 +45,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents transaction version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public GetTransactionDetailsByTransactionIDRIBSBC(long locktime = default(long), int size = default(int), int version = default(int), List<GetTransactionDetailsByTransactionIDRIBSBCVin> vin = default(List<GetTransactionDetailsByTransactionIDRIBSBCVin>), List<GetTransactionDetailsByTransactionIDRIBSBCVout> vout = default(List<GetTransactionDetailsByTransactionIDRIBSBCVout>))
+        public GetTransactionDetailsByTransactionIDRIBSBC(long locktime = default(long), int size = default(int), int version = default(int), List<GetTransactionDetailsByTransactionIDRIBSBCVinInner> vin = default(List<GetTransactionDetailsByTransactionIDRIBSBCVinInner>), List<GetTransactionDetailsByTransactionIDRIBSBCVoutInner> vout = default(List<GetTransactionDetailsByTransactionIDRIBSBCVoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -90,14 +90,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction inputs.</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSBCVin> Vin { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSBCVinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the transaction outputs.
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSBCVout> Vout { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSBCVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

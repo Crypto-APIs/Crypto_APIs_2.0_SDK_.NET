@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **DestinationTag** | **long** |  | [optional] 
 **Index** | **int** |  | 
 **MinedInBlockHash** | **string** |  | 
-**Recipients** | [**List&lt;ListXRPRippleTransactionsByBlockHeightRIRecipients&gt;**](ListXRPRippleTransactionsByBlockHeightRIRecipients.md) | Object Array representation of transaction receivers | 
-**Senders** | [**List&lt;ListXRPRippleTransactionsByBlockHeightRISenders&gt;**](ListXRPRippleTransactionsByBlockHeightRISenders.md) | Object Array representation of transaction senders | 
+**Recipients** | [**List&lt;ListXRPRippleTransactionsByBlockHeightRIRecipientsInner&gt;**](ListXRPRippleTransactionsByBlockHeightRIRecipientsInner.md) | Object Array representation of transaction receivers | 
+**Senders** | [**List&lt;ListXRPRippleTransactionsByBlockHeightRISendersInner&gt;**](ListXRPRippleTransactionsByBlockHeightRISendersInner.md) | Object Array representation of transaction senders | 
 **Sequence** | **long** |  | 
 **Status** | **string** |  | 
 **Timestamp** | **int** | Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. | 

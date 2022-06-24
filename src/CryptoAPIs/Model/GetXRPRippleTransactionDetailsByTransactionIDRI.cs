@@ -56,7 +56,7 @@ namespace CryptoAPIs.Model
         /// <param name="type">Defines the type of the transaction. (required).</param>
         /// <param name="fee">fee (required).</param>
         /// <param name="value">value (required).</param>
-        public GetXRPRippleTransactionDetailsByTransactionIDRI(string additionalData = default(string), long destinationTag = default(long), string index = default(string), string minedInBlockHash = default(string), string minedInBlockHeight = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIOffer offer = default(GetXRPRippleTransactionDetailsByTransactionIDRIOffer), GetXRPRippleTransactionDetailsByTransactionIDRIReceive receive = default(GetXRPRippleTransactionDetailsByTransactionIDRIReceive), List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients>), List<GetXRPRippleTransactionDetailsByTransactionIDRISenders> senders = default(List<GetXRPRippleTransactionDetailsByTransactionIDRISenders>), long sequence = default(long), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIFee fee = default(GetXRPRippleTransactionDetailsByTransactionIDRIFee), GetXRPRippleTransactionDetailsByTransactionIDRIValue value = default(GetXRPRippleTransactionDetailsByTransactionIDRIValue))
+        public GetXRPRippleTransactionDetailsByTransactionIDRI(string additionalData = default(string), long destinationTag = default(long), string index = default(string), string minedInBlockHash = default(string), string minedInBlockHeight = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIOffer offer = default(GetXRPRippleTransactionDetailsByTransactionIDRIOffer), GetXRPRippleTransactionDetailsByTransactionIDRIReceive receive = default(GetXRPRippleTransactionDetailsByTransactionIDRIReceive), List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipientsInner> recipients = default(List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipientsInner>), List<GetXRPRippleTransactionDetailsByTransactionIDRISendersInner> senders = default(List<GetXRPRippleTransactionDetailsByTransactionIDRISendersInner>), long sequence = default(long), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), GetXRPRippleTransactionDetailsByTransactionIDRIFee fee = default(GetXRPRippleTransactionDetailsByTransactionIDRIFee), GetXRPRippleTransactionDetailsByTransactionIDRIValue value = default(GetXRPRippleTransactionDetailsByTransactionIDRIValue))
         {
             // to ensure "additionalData" is required (not null)
             if (additionalData == null)
@@ -187,14 +187,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents an object of addresses that receive the transactions.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipients> Recipients { get; set; }
+        public List<GetXRPRippleTransactionDetailsByTransactionIDRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents an object of addresses that provide the funds.
         /// </summary>
         /// <value>Represents an object of addresses that provide the funds.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetXRPRippleTransactionDetailsByTransactionIDRISenders> Senders { get; set; }
+        public List<GetXRPRippleTransactionDetailsByTransactionIDRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime.

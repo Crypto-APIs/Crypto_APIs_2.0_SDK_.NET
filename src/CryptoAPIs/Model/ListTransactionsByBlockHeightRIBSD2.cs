@@ -45,7 +45,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents transaction version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public ListTransactionsByBlockHeightRIBSD2(long locktime = default(long), int size = default(int), int version = default(int), List<ListTransactionsByBlockHeightRIBSD2Vin> vin = default(List<ListTransactionsByBlockHeightRIBSD2Vin>), List<ListTransactionsByBlockHashRIBSDVout> vout = default(List<ListTransactionsByBlockHashRIBSDVout>))
+        public ListTransactionsByBlockHeightRIBSD2(long locktime = default(long), int size = default(int), int version = default(int), List<ListTransactionsByBlockHeightRIBSD2VinInner> vin = default(List<ListTransactionsByBlockHeightRIBSD2VinInner>), List<ListTransactionsByBlockHashRIBSDVoutInner> vout = default(List<ListTransactionsByBlockHashRIBSDVoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -90,14 +90,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction inputs.</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListTransactionsByBlockHeightRIBSD2Vin> Vin { get; set; }
+        public List<ListTransactionsByBlockHeightRIBSD2VinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the transaction outputs.
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListTransactionsByBlockHashRIBSDVout> Vout { get; set; }
+        public List<ListTransactionsByBlockHashRIBSDVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

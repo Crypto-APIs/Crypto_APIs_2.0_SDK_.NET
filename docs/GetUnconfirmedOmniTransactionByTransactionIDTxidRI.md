@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **Divisible** | **bool** | Defines whether the attribute can be divisible or not, as boolean. E.g., if it is \&quot;true\&quot;, the attribute is divisible. | 
 **Mined** | **bool** | Defines whether the transaction has been mined or not, as boolean. E.g. if set to \&quot;true\&quot;, it means the transaction is mined. | 
 **PropertyId** | **int** | Represents the identifier of the tokens to send. | 
-**Recipients** | [**List&lt;GetUnconfirmedOmniTransactionByTransactionIDTxidRIRecipients&gt;**](GetUnconfirmedOmniTransactionByTransactionIDTxidRIRecipients.md) | Represents an object of addresses that receive the transactions. | 
-**Senders** | [**List&lt;GetUnconfirmedOmniTransactionByTransactionIDTxidRISenders&gt;**](GetUnconfirmedOmniTransactionByTransactionIDTxidRISenders.md) | Represents an object of addresses that provide the funds. | 
+**Recipients** | [**List&lt;GetUnconfirmedOmniTransactionByTransactionIDTxidRIRecipientsInner&gt;**](GetUnconfirmedOmniTransactionByTransactionIDTxidRIRecipientsInner.md) | Represents an object of addresses that receive the transactions. | 
+**Senders** | [**List&lt;GetUnconfirmedOmniTransactionByTransactionIDTxidRISendersInner&gt;**](GetUnconfirmedOmniTransactionByTransactionIDTxidRISendersInner.md) | Represents an object of addresses that provide the funds. | 
 **Sent** | **bool** | Defines whether the transaction has been sent or not, as boolean. E.g. if set to \&quot;true\&quot;, it means the transaction is sent. | 
 **Timestamp** | **int** | Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. | 
 **TransactionId** | **string** | String representation of the transaction identifier (txid) | 

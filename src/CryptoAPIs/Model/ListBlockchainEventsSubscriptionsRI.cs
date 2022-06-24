@@ -50,7 +50,7 @@ namespace CryptoAPIs.Model
         /// <param name="isActive">Defines whether the subscription is active or not. Set as boolean. (required).</param>
         /// <param name="referenceId">Represents a unique ID used to reference the specific callback subscription. (required).</param>
         /// <param name="transactionId">Represents the unique identification string that defines the transaction..</param>
-        public ListBlockchainEventsSubscriptionsRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), List<ListBlockchainEventsSubscriptionsRIDeactivationReasons> deactivationReasons = default(List<ListBlockchainEventsSubscriptionsRIDeactivationReasons>), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string), string transactionId = default(string))
+        public ListBlockchainEventsSubscriptionsRI(string address = default(string), string callbackSecretKey = default(string), string callbackUrl = default(string), int confirmationsCount = default(int), int createdTimestamp = default(int), List<ListBlockchainEventsSubscriptionsRIDeactivationReasonsInner> deactivationReasons = default(List<ListBlockchainEventsSubscriptionsRIDeactivationReasonsInner>), string eventType = default(string), bool isActive = default(bool), string referenceId = default(string), string transactionId = default(string))
         {
             // to ensure "address" is required (not null)
             if (address == null)
@@ -124,7 +124,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the deactivation reason details, available when a blockchain event subscription has status isActive - false.</value>
         [DataMember(Name = "deactivationReasons", EmitDefaultValue = false)]
-        public List<ListBlockchainEventsSubscriptionsRIDeactivationReasons> DeactivationReasons { get; set; }
+        public List<ListBlockchainEventsSubscriptionsRIDeactivationReasonsInner> DeactivationReasons { get; set; }
 
         /// <summary>
         /// Defines the type of the specific event available for the customer to subscribe to for callback notification.

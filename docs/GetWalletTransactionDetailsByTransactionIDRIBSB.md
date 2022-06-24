@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **Size** | **int** | Represents the total size of this transaction. | 
 **VSize** | **int** | Represents the virtual size of this transaction. | 
 **_Version** | **int** | Represents the transaction version number. | 
-**Vin** | [**List&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVin&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVin.md) | Object Array representation of transaction inputs | 
-**Vout** | [**List&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVout&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVout.md) | Represents the transaction outputs. | 
+**Vin** | [**List&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVinInner&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVinInner.md) | Object Array representation of transaction inputs | 
+**Vout** | [**List&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVoutInner&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVoutInner.md) | Represents the transaction outputs. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

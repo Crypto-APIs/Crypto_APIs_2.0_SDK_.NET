@@ -47,7 +47,7 @@ namespace CryptoAPIs.Model
         /// <param name="nonFungibleTokens">Represents non-fungible tokens&#39;es detailed information. (required).</param>
         /// <param name="recievedConfirmedAmount">recievedConfirmedAmount (required).</param>
         /// <param name="sentConfirmedAmount">sentConfirmedAmount (required).</param>
-        public GetWalletAssetDetailsRI(GetWalletAssetDetailsRIConfirmedBalance confirmedBalance = default(GetWalletAssetDetailsRIConfirmedBalance), int depositAddressesCount = default(int), List<GetWalletAssetDetailsRIFungibleTokens> fungibleTokens = default(List<GetWalletAssetDetailsRIFungibleTokens>), string name = default(string), List<GetWalletAssetDetailsRINonFungibleTokens> nonFungibleTokens = default(List<GetWalletAssetDetailsRINonFungibleTokens>), GetWalletAssetDetailsRIRecievedConfirmedAmount recievedConfirmedAmount = default(GetWalletAssetDetailsRIRecievedConfirmedAmount), GetWalletAssetDetailsRISentConfirmedAmount sentConfirmedAmount = default(GetWalletAssetDetailsRISentConfirmedAmount))
+        public GetWalletAssetDetailsRI(GetWalletAssetDetailsRIConfirmedBalance confirmedBalance = default(GetWalletAssetDetailsRIConfirmedBalance), int depositAddressesCount = default(int), List<GetWalletAssetDetailsRIFungibleTokensInner> fungibleTokens = default(List<GetWalletAssetDetailsRIFungibleTokensInner>), string name = default(string), List<GetWalletAssetDetailsRINonFungibleTokensInner> nonFungibleTokens = default(List<GetWalletAssetDetailsRINonFungibleTokensInner>), GetWalletAssetDetailsRIRecievedConfirmedAmount recievedConfirmedAmount = default(GetWalletAssetDetailsRIRecievedConfirmedAmount), GetWalletAssetDetailsRISentConfirmedAmount sentConfirmedAmount = default(GetWalletAssetDetailsRISentConfirmedAmount))
         {
             // to ensure "confirmedBalance" is required (not null)
             if (confirmedBalance == null)
@@ -106,7 +106,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents fungible tokens&#39;es detailed information</value>
         [DataMember(Name = "fungibleTokens", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletAssetDetailsRIFungibleTokens> FungibleTokens { get; set; }
+        public List<GetWalletAssetDetailsRIFungibleTokensInner> FungibleTokens { get; set; }
 
         /// <summary>
         /// Defines the name of the Wallet given to it by the user.
@@ -120,7 +120,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
         [DataMember(Name = "nonFungibleTokens", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletAssetDetailsRINonFungibleTokens> NonFungibleTokens { get; set; }
+        public List<GetWalletAssetDetailsRINonFungibleTokensInner> NonFungibleTokens { get; set; }
 
         /// <summary>
         /// Gets or Sets RecievedConfirmedAmount

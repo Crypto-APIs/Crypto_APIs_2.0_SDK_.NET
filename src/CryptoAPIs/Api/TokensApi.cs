@@ -104,7 +104,7 @@ namespace CryptoAPIs.Api
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTokensByAddressR</returns>
-        ListTokensByAddressR ListTokensByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        ListTokensByAddressR ListTokensByAddress(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
 
         /// <summary>
         /// List Tokens By Address
@@ -121,7 +121,7 @@ namespace CryptoAPIs.Api
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTokensByAddressR</returns>
-        ApiResponse<ListTokensByAddressR> ListTokensByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        ApiResponse<ListTokensByAddressR> ListTokensByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0);
         /// <summary>
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
@@ -279,7 +279,7 @@ namespace CryptoAPIs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTokensByAddressR</returns>
-        System.Threading.Tasks.Task<ListTokensByAddressR> ListTokensByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ListTokensByAddressR> ListTokensByAddressAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Tokens By Address
@@ -297,7 +297,7 @@ namespace CryptoAPIs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTokensByAddressR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListTokensByAddressR>> ListTokensByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ListTokensByAddressR>> ListTokensByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Tokens Transfers By Transaction Hash
         /// </summary>
@@ -928,7 +928,7 @@ namespace CryptoAPIs.Api
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ListTokensByAddressR</returns>
-        public ListTokensByAddressR ListTokensByAddress(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        public ListTokensByAddressR ListTokensByAddress(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             CryptoAPIs.Client.ApiResponse<ListTokensByAddressR> localVarResponse = ListTokensByAddressWithHttpInfo(blockchain, network, address, context, limit, offset);
             return localVarResponse.Data;
@@ -946,7 +946,7 @@ namespace CryptoAPIs.Api
         /// <param name="offset">The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ListTokensByAddressR</returns>
-        public CryptoAPIs.Client.ApiResponse<ListTokensByAddressR> ListTokensByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        public CryptoAPIs.Client.ApiResponse<ListTokensByAddressR> ListTokensByAddressWithHttpInfo(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0)
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)
@@ -1040,7 +1040,7 @@ namespace CryptoAPIs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ListTokensByAddressR</returns>
-        public async System.Threading.Tasks.Task<ListTokensByAddressR> ListTokensByAddressAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ListTokensByAddressR> ListTokensByAddressAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             CryptoAPIs.Client.ApiResponse<ListTokensByAddressR> localVarResponse = await ListTokensByAddressWithHttpInfoAsync(blockchain, network, address, context, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1059,7 +1059,7 @@ namespace CryptoAPIs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListTokensByAddressR)</returns>
-        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTokensByAddressR>> ListTokensByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<ListTokensByAddressR>> ListTokensByAddressWithHttpInfoAsync(string blockchain, string network, string address, string context = default(string), long? limit = default(long?), long? offset = default(long?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'blockchain' is set
             if (blockchain == null)

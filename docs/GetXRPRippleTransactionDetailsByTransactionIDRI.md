@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **MinedInBlockHeight** | **string** | Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. | 
 **Offer** | [**GetXRPRippleTransactionDetailsByTransactionIDRIOffer**](GetXRPRippleTransactionDetailsByTransactionIDRIOffer.md) |  | 
 **Receive** | [**GetXRPRippleTransactionDetailsByTransactionIDRIReceive**](GetXRPRippleTransactionDetailsByTransactionIDRIReceive.md) |  | 
-**Recipients** | [**List&lt;GetXRPRippleTransactionDetailsByTransactionIDRIRecipients&gt;**](GetXRPRippleTransactionDetailsByTransactionIDRIRecipients.md) | Represents an object of addresses that receive the transactions. | 
-**Senders** | [**List&lt;GetXRPRippleTransactionDetailsByTransactionIDRISenders&gt;**](GetXRPRippleTransactionDetailsByTransactionIDRISenders.md) | Represents an object of addresses that provide the funds. | 
+**Recipients** | [**List&lt;GetXRPRippleTransactionDetailsByTransactionIDRIRecipientsInner&gt;**](GetXRPRippleTransactionDetailsByTransactionIDRIRecipientsInner.md) | Represents an object of addresses that receive the transactions. | 
+**Senders** | [**List&lt;GetXRPRippleTransactionDetailsByTransactionIDRISendersInner&gt;**](GetXRPRippleTransactionDetailsByTransactionIDRISendersInner.md) | Represents an object of addresses that provide the funds. | 
 **Sequence** | **long** | Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime. | 
 **Status** | **string** | Defines the status of the transaction. | [optional] 
 **Timestamp** | **int** | Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. | 

@@ -45,7 +45,7 @@ namespace CryptoAPIs.Model
         /// <param name="nonFungibleTokens">Represents non-fungible tokens&#39;es detailed information. (required).</param>
         /// <param name="walletId">Defines the unique ID of the Wallet. (required).</param>
         /// <param name="walletName">Represents the name of the wallet. (required).</param>
-        public ListAllAssetsFromAllWalletsRI(List<ListAllAssetsFromAllWalletsRICoins> coins = default(List<ListAllAssetsFromAllWalletsRICoins>), List<ListAllAssetsFromAllWalletsRIFungibleTokens> fungibleTokens = default(List<ListAllAssetsFromAllWalletsRIFungibleTokens>), List<ListAllAssetsFromAllWalletsRINonFungibleTokens> nonFungibleTokens = default(List<ListAllAssetsFromAllWalletsRINonFungibleTokens>), string walletId = default(string), string walletName = default(string))
+        public ListAllAssetsFromAllWalletsRI(List<ListAllAssetsFromAllWalletsRICoinsInner> coins = default(List<ListAllAssetsFromAllWalletsRICoinsInner>), List<ListAllAssetsFromAllWalletsRIFungibleTokensInner> fungibleTokens = default(List<ListAllAssetsFromAllWalletsRIFungibleTokensInner>), List<ListAllAssetsFromAllWalletsRINonFungibleTokensInner> nonFungibleTokens = default(List<ListAllAssetsFromAllWalletsRINonFungibleTokensInner>), string walletId = default(string), string walletName = default(string))
         {
             // to ensure "coins" is required (not null)
             if (coins == null)
@@ -83,21 +83,21 @@ namespace CryptoAPIs.Model
         /// Gets or Sets Coins
         /// </summary>
         [DataMember(Name = "coins", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListAllAssetsFromAllWalletsRICoins> Coins { get; set; }
+        public List<ListAllAssetsFromAllWalletsRICoinsInner> Coins { get; set; }
 
         /// <summary>
         /// Represents fungible tokens&#39;es detailed information
         /// </summary>
         /// <value>Represents fungible tokens&#39;es detailed information</value>
         [DataMember(Name = "fungibleTokens", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListAllAssetsFromAllWalletsRIFungibleTokens> FungibleTokens { get; set; }
+        public List<ListAllAssetsFromAllWalletsRIFungibleTokensInner> FungibleTokens { get; set; }
 
         /// <summary>
         /// Represents non-fungible tokens&#39;es detailed information.
         /// </summary>
         /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
         [DataMember(Name = "nonFungibleTokens", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListAllAssetsFromAllWalletsRINonFungibleTokens> NonFungibleTokens { get; set; }
+        public List<ListAllAssetsFromAllWalletsRINonFungibleTokensInner> NonFungibleTokens { get; set; }
 
         /// <summary>
         /// Defines the unique ID of the Wallet.

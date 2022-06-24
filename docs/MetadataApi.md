@@ -2,10 +2,9 @@
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ListSupportedAssets**](MetadataApi.md#listsupportedassets) | **GET** /market-data/assets/supported | List Supported Assets
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**ListSupportedAssets**](MetadataApi.md#listsupportedassets) | **GET** /market-data/assets/supported | List Supported Assets |
 
 <a name="listsupportedassets"></a>
 # **ListSupportedAssets**
@@ -50,8 +49,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MetadataApi.ListSupportedAssets: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MetadataApi.ListSupportedAssets: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -59,14 +58,34 @@ namespace Example
 }
 ```
 
+#### Using the ListSupportedAssetsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Supported Assets
+    ApiResponse<ListSupportedAssetsR> response = apiInstance.ListSupportedAssetsWithHttpInfo(context, assetType, limit, offset);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MetadataApi.ListSupportedAssetsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **assetType** | **string**| Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. | [optional] 
- **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
- **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
+| **assetType** | **string** | Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. | [optional]  |
+| **limit** | **int?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
+| **offset** | **int?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
 
 ### Return type
 

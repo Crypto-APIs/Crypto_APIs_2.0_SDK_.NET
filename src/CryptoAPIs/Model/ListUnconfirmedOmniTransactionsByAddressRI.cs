@@ -53,7 +53,7 @@ namespace CryptoAPIs.Model
         /// <param name="typeInt">Defines the type of the transaction as a number. (required).</param>
         /// <param name="version">Defines the specific version. (required).</param>
         /// <param name="fee">fee (required).</param>
-        public ListUnconfirmedOmniTransactionsByAddressRI(string amount = default(string), bool divisible = default(bool), bool mined = default(bool), int propertyId = default(int), List<ListOmniTransactionsByAddressRIRecipients> recipients = default(List<ListOmniTransactionsByAddressRIRecipients>), List<ListUnconfirmedOmniTransactionsByAddressRISenders> senders = default(List<ListUnconfirmedOmniTransactionsByAddressRISenders>), bool sent = default(bool), int timestamp = default(int), string transactionId = default(string), string type = default(string), int typeInt = default(int), int version = default(int), ListUnconfirmedOmniTransactionsByAddressRIFee fee = default(ListUnconfirmedOmniTransactionsByAddressRIFee))
+        public ListUnconfirmedOmniTransactionsByAddressRI(string amount = default(string), bool divisible = default(bool), bool mined = default(bool), int propertyId = default(int), List<ListOmniTransactionsByAddressRIRecipientsInner> recipients = default(List<ListOmniTransactionsByAddressRIRecipientsInner>), List<ListUnconfirmedOmniTransactionsByAddressRISendersInner> senders = default(List<ListUnconfirmedOmniTransactionsByAddressRISendersInner>), bool sent = default(bool), int timestamp = default(int), string transactionId = default(string), string type = default(string), int typeInt = default(int), int version = default(int), ListUnconfirmedOmniTransactionsByAddressRIFee fee = default(ListUnconfirmedOmniTransactionsByAddressRIFee))
         {
             // to ensure "amount" is required (not null)
             if (amount == null)
@@ -133,14 +133,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents an object of addresses that receive the transactions.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListOmniTransactionsByAddressRIRecipients> Recipients { get; set; }
+        public List<ListOmniTransactionsByAddressRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents an object of addresses that provide the funds.
         /// </summary>
         /// <value>Represents an object of addresses that provide the funds.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListUnconfirmedOmniTransactionsByAddressRISenders> Senders { get; set; }
+        public List<ListUnconfirmedOmniTransactionsByAddressRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines whether the transaction has been sent or not, as boolean. E.g. if set to \&quot;true\&quot;, it means the transaction is sent.

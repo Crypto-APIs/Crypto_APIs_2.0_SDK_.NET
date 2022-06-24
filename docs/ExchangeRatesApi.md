@@ -2,11 +2,10 @@
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetExchangeRateByAssetSymbols**](ExchangeRatesApi.md#getexchangeratebyassetsymbols) | **GET** /market-data/exchange-rates/by-symbols/{fromAssetSymbol}/{toAssetSymbol} | Get Exchange Rate By Asset Symbols
-[**GetExchangeRateByAssetsIDs**](ExchangeRatesApi.md#getexchangeratebyassetsids) | **GET** /market-data/exchange-rates/by-asset-ids/{fromAssetId}/{toAssetId} | Get Exchange Rate By Assets IDs
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetExchangeRateByAssetSymbols**](ExchangeRatesApi.md#getexchangeratebyassetsymbols) | **GET** /market-data/exchange-rates/by-symbols/{fromAssetSymbol}/{toAssetSymbol} | Get Exchange Rate By Asset Symbols |
+| [**GetExchangeRateByAssetsIDs**](ExchangeRatesApi.md#getexchangeratebyassetsids) | **GET** /market-data/exchange-rates/by-asset-ids/{fromAssetId}/{toAssetId} | Get Exchange Rate By Assets IDs |
 
 <a name="getexchangeratebyassetsymbols"></a>
 # **GetExchangeRateByAssetSymbols**
@@ -51,8 +50,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ExchangeRatesApi.GetExchangeRateByAssetSymbols: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ExchangeRatesApi.GetExchangeRateByAssetSymbols: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -60,14 +59,34 @@ namespace Example
 }
 ```
 
+#### Using the GetExchangeRateByAssetSymbolsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Exchange Rate By Asset Symbols
+    ApiResponse<GetExchangeRateByAssetSymbolsR> response = apiInstance.GetExchangeRateByAssetSymbolsWithHttpInfo(fromAssetSymbol, toAssetSymbol, context, calculationTimestamp);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ExchangeRatesApi.GetExchangeRateByAssetSymbolsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fromAssetSymbol** | **string**| Defines the base asset symbol to get a rate for. | 
- **toAssetSymbol** | **string**| Defines the relation asset symbol in which the base asset rate will be displayed. | 
- **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **calculationTimestamp** | **int?**| Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **fromAssetSymbol** | **string** | Defines the base asset symbol to get a rate for. |  |
+| **toAssetSymbol** | **string** | Defines the relation asset symbol in which the base asset rate will be displayed. |  |
+| **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
+| **calculationTimestamp** | **int?** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional]  |
 
 ### Return type
 
@@ -142,8 +161,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ExchangeRatesApi.GetExchangeRateByAssetsIDs: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ExchangeRatesApi.GetExchangeRateByAssetsIDs: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -151,14 +170,34 @@ namespace Example
 }
 ```
 
+#### Using the GetExchangeRateByAssetsIDsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Exchange Rate By Assets IDs
+    ApiResponse<GetExchangeRateByAssetsIDsR> response = apiInstance.GetExchangeRateByAssetsIDsWithHttpInfo(fromAssetId, toAssetId, context, calculationTimestamp);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ExchangeRatesApi.GetExchangeRateByAssetsIDsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fromAssetId** | **string**| Defines the base asset Reference ID to get a rate for. | 
- **toAssetId** | **string**| Defines the relation asset Reference ID in which the base asset rate will be displayed. | 
- **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **calculationTimestamp** | **int?**| Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **fromAssetId** | **string** | Defines the base asset Reference ID to get a rate for. |  |
+| **toAssetId** | **string** | Defines the relation asset Reference ID in which the base asset rate will be displayed. |  |
+| **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
+| **calculationTimestamp** | **int?** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional]  |
 
 ### Return type
 

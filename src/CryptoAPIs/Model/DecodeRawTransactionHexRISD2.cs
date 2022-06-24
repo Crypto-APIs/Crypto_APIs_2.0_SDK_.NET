@@ -47,7 +47,7 @@ namespace CryptoAPIs.Model
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
         /// <param name="weight">Represents the size of a block, measured in weight units and including the segwit discount..</param>
-        public DecodeRawTransactionHexRISD2(int locktime = default(int), string transactionHash = default(string), int vSize = default(int), int version = default(int), List<DecodeRawTransactionHexRISD2Vin> vin = default(List<DecodeRawTransactionHexRISD2Vin>), List<DecodeRawTransactionHexRISD2Vout> vout = default(List<DecodeRawTransactionHexRISD2Vout>), int weight = default(int))
+        public DecodeRawTransactionHexRISD2(int locktime = default(int), string transactionHash = default(string), int vSize = default(int), int version = default(int), List<DecodeRawTransactionHexRISD2VinInner> vin = default(List<DecodeRawTransactionHexRISD2VinInner>), List<DecodeRawTransactionHexRISD2VoutInner> vout = default(List<DecodeRawTransactionHexRISD2VoutInner>), int weight = default(int))
         {
             this.Locktime = locktime;
             // to ensure "transactionHash" is required (not null)
@@ -106,14 +106,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction inputs.</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<DecodeRawTransactionHexRISD2Vin> Vin { get; set; }
+        public List<DecodeRawTransactionHexRISD2VinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the transaction outputs.
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<DecodeRawTransactionHexRISD2Vout> Vout { get; set; }
+        public List<DecodeRawTransactionHexRISD2VoutInner> Vout { get; set; }
 
         /// <summary>
         /// Represents the size of a block, measured in weight units and including the segwit discount.

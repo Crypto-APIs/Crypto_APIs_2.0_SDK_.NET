@@ -45,7 +45,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction version number. (required).</param>
         /// <param name="vin">Object Array representation of transaction inputs (required).</param>
         /// <param name="vout">Object Array representation of transaction outputs (required).</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBSD2(long locktime = default(long), int size = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSD2Vin> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSD2Vin>), List<GetTransactionDetailsByTransactionIDRIBSD2Vout> vout = default(List<GetTransactionDetailsByTransactionIDRIBSD2Vout>))
+        public GetWalletTransactionDetailsByTransactionIDRIBSD2(long locktime = default(long), int size = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSD2VinInner> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSD2VinInner>), List<GetTransactionDetailsByTransactionIDRIBSD2VoutInner> vout = default(List<GetTransactionDetailsByTransactionIDRIBSD2VoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -90,14 +90,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Object Array representation of transaction inputs</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletTransactionDetailsByTransactionIDRIBSD2Vin> Vin { get; set; }
+        public List<GetWalletTransactionDetailsByTransactionIDRIBSD2VinInner> Vin { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction outputs
         /// </summary>
         /// <value>Object Array representation of transaction outputs</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSD2Vout> Vout { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSD2VoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

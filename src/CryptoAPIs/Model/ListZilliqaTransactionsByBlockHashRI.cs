@@ -52,7 +52,7 @@ namespace CryptoAPIs.Model
         /// <param name="transactionHash">Represents the hash of the transaction, which is its unique identifier. (required).</param>
         /// <param name="transactionIndex">Defines the numeric representation of the transaction index. (required).</param>
         /// <param name="transactionStatus">Defines the status of the transaction, whether it is e.g. pending or complete. (required).</param>
-        public ListZilliqaTransactionsByBlockHashRI(GetZilliqaTransactionDetailsByTransactionIDRIFee fee = default(GetZilliqaTransactionDetailsByTransactionIDRIFee), int gasLimit = default(int), int gasPrice = default(int), int gasUsed = default(int), int minedInBlockHeight = default(int), int nonce = default(int), List<ListZilliqaTransactionsByAddressRIRecipients> recipients = default(List<ListZilliqaTransactionsByAddressRIRecipients>), List<ListZilliqaTransactionsByAddressRISenders> senders = default(List<ListZilliqaTransactionsByAddressRISenders>), int timestamp = default(int), string transactionHash = default(string), int transactionIndex = default(int), string transactionStatus = default(string))
+        public ListZilliqaTransactionsByBlockHashRI(GetZilliqaTransactionDetailsByTransactionIDRIFee fee = default(GetZilliqaTransactionDetailsByTransactionIDRIFee), int gasLimit = default(int), int gasPrice = default(int), int gasUsed = default(int), int minedInBlockHeight = default(int), int nonce = default(int), List<ListZilliqaTransactionsByAddressRIRecipientsInner> recipients = default(List<ListZilliqaTransactionsByAddressRIRecipientsInner>), List<ListZilliqaTransactionsByAddressRISendersInner> senders = default(List<ListZilliqaTransactionsByAddressRISendersInner>), int timestamp = default(int), string transactionHash = default(string), int transactionIndex = default(int), string transactionStatus = default(string))
         {
             // to ensure "fee" is required (not null)
             if (fee == null)
@@ -139,14 +139,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines an object array of the transaction recipients.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListZilliqaTransactionsByAddressRIRecipients> Recipients { get; set; }
+        public List<ListZilliqaTransactionsByAddressRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents an object of addresses that provide the funds.
         /// </summary>
         /// <value>Represents an object of addresses that provide the funds.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListZilliqaTransactionsByAddressRISenders> Senders { get; set; }
+        public List<ListZilliqaTransactionsByAddressRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time when this block was mined in Unix Timestamp.

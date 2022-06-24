@@ -43,7 +43,7 @@ namespace CryptoAPIs.Model
         /// <param name="fungibleTokens">Represents fungible tokens&#39;es detailed information.</param>
         /// <param name="nonFungibleTokens">Represents non-fungible tokens&#39;es detailed information..</param>
         /// <param name="confirmedBalance">confirmedBalance (required).</param>
-        public GetHDWalletXPubYPubZPubAssetsRI(List<GetHDWalletXPubYPubZPubAssetsRIFungibleTokens> fungibleTokens = default(List<GetHDWalletXPubYPubZPubAssetsRIFungibleTokens>), List<GetHDWalletXPubYPubZPubAssetsRINonFungibleTokens> nonFungibleTokens = default(List<GetHDWalletXPubYPubZPubAssetsRINonFungibleTokens>), GetHDWalletXPubYPubZPubAssetsRIConfirmedBalance confirmedBalance = default(GetHDWalletXPubYPubZPubAssetsRIConfirmedBalance))
+        public GetHDWalletXPubYPubZPubAssetsRI(List<GetHDWalletXPubYPubZPubAssetsRIFungibleTokensInner> fungibleTokens = default(List<GetHDWalletXPubYPubZPubAssetsRIFungibleTokensInner>), List<GetHDWalletXPubYPubZPubAssetsRINonFungibleTokensInner> nonFungibleTokens = default(List<GetHDWalletXPubYPubZPubAssetsRINonFungibleTokensInner>), GetHDWalletXPubYPubZPubAssetsRIConfirmedBalance confirmedBalance = default(GetHDWalletXPubYPubZPubAssetsRIConfirmedBalance))
         {
             // to ensure "confirmedBalance" is required (not null)
             if (confirmedBalance == null)
@@ -60,14 +60,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents fungible tokens&#39;es detailed information</value>
         [DataMember(Name = "fungibleTokens", EmitDefaultValue = false)]
-        public List<GetHDWalletXPubYPubZPubAssetsRIFungibleTokens> FungibleTokens { get; set; }
+        public List<GetHDWalletXPubYPubZPubAssetsRIFungibleTokensInner> FungibleTokens { get; set; }
 
         /// <summary>
         /// Represents non-fungible tokens&#39;es detailed information.
         /// </summary>
         /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
         [DataMember(Name = "nonFungibleTokens", EmitDefaultValue = false)]
-        public List<GetHDWalletXPubYPubZPubAssetsRINonFungibleTokens> NonFungibleTokens { get; set; }
+        public List<GetHDWalletXPubYPubZPubAssetsRINonFungibleTokensInner> NonFungibleTokens { get; set; }
 
         /// <summary>
         /// Gets or Sets ConfirmedBalance

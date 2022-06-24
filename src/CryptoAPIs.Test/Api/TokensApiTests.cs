@@ -98,8 +98,8 @@ namespace CryptoAPIs.Test.Api
             //string network = null;
             //string address = null;
             //string context = null;
-            //int? limit = null;
-            //int? offset = null;
+            //long? limit = null;
+            //long? offset = null;
             //var response = instance.ListTokensByAddress(blockchain, network, address, context, limit, offset);
             //Assert.IsType<ListTokensByAddressR>(response);
         }

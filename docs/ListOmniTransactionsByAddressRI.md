@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **MinedInBlockHash** | **string** | Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. | 
 **MinedInBlockHeight** | **int** | Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. | 
 **PropertyId** | **int** | Represents the identifier of the tokens to send. | 
-**Recipients** | [**List&lt;ListOmniTransactionsByAddressRIRecipients&gt;**](ListOmniTransactionsByAddressRIRecipients.md) | Represents an object of addresses that receive the transactions. | 
-**Senders** | [**List&lt;ListOmniTransactionsByAddressRISenders&gt;**](ListOmniTransactionsByAddressRISenders.md) | Represents an object of addresses that provide the funds. | 
+**Recipients** | [**List&lt;ListOmniTransactionsByAddressRIRecipientsInner&gt;**](ListOmniTransactionsByAddressRIRecipientsInner.md) | Represents an object of addresses that receive the transactions. | 
+**Senders** | [**List&lt;ListOmniTransactionsByAddressRISendersInner&gt;**](ListOmniTransactionsByAddressRISendersInner.md) | Represents an object of addresses that provide the funds. | 
 **Timestamp** | **int** | Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. | 
 **TransactionId** | **string** | Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. | 
 **Type** | **string** | Defines the type of the transaction as a string. | 

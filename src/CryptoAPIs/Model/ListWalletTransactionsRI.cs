@@ -51,7 +51,7 @@ namespace CryptoAPIs.Model
         /// <param name="timestamp">Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed. (required).</param>
         /// <param name="transactionId">Represents the unique TD of the transaction. (required).</param>
         /// <param name="value">value (required).</param>
-        public ListWalletTransactionsRI(string direction = default(string), ListWalletTransactionsRIFee fee = default(ListWalletTransactionsRIFee), List<ListWalletTransactionsRIFungibleTokens> fungibleTokens = default(List<ListWalletTransactionsRIFungibleTokens>), List<ListWalletTransactionsRIInternalTransactions> internalTransactions = default(List<ListWalletTransactionsRIInternalTransactions>), List<ListWalletTransactionsRINonFungibleTokens> nonFungibleTokens = default(List<ListWalletTransactionsRINonFungibleTokens>), List<ListWalletTransactionsRIRecipients> recipients = default(List<ListWalletTransactionsRIRecipients>), List<ListWalletTransactionsRISenders> senders = default(List<ListWalletTransactionsRISenders>), string status = default(string), int timestamp = default(int), string transactionId = default(string), ListWalletTransactionsRIValue value = default(ListWalletTransactionsRIValue))
+        public ListWalletTransactionsRI(string direction = default(string), ListWalletTransactionsRIFee fee = default(ListWalletTransactionsRIFee), List<ListWalletTransactionsRIFungibleTokensInner> fungibleTokens = default(List<ListWalletTransactionsRIFungibleTokensInner>), List<ListWalletTransactionsRIInternalTransactionsInner> internalTransactions = default(List<ListWalletTransactionsRIInternalTransactionsInner>), List<ListWalletTransactionsRINonFungibleTokensInner> nonFungibleTokens = default(List<ListWalletTransactionsRINonFungibleTokensInner>), List<ListWalletTransactionsRIRecipientsInner> recipients = default(List<ListWalletTransactionsRIRecipientsInner>), List<ListWalletTransactionsRISendersInner> senders = default(List<ListWalletTransactionsRISendersInner>), string status = default(string), int timestamp = default(int), string transactionId = default(string), ListWalletTransactionsRIValue value = default(ListWalletTransactionsRIValue))
         {
             // to ensure "direction" is required (not null)
             if (direction == null)
@@ -119,34 +119,34 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents fungible tokens&#39;es detailed information</value>
         [DataMember(Name = "fungibleTokens", EmitDefaultValue = false)]
-        public List<ListWalletTransactionsRIFungibleTokens> FungibleTokens { get; set; }
+        public List<ListWalletTransactionsRIFungibleTokensInner> FungibleTokens { get; set; }
 
         /// <summary>
         /// Gets or Sets InternalTransactions
         /// </summary>
         [DataMember(Name = "internalTransactions", EmitDefaultValue = false)]
-        public List<ListWalletTransactionsRIInternalTransactions> InternalTransactions { get; set; }
+        public List<ListWalletTransactionsRIInternalTransactionsInner> InternalTransactions { get; set; }
 
         /// <summary>
         /// Represents non-fungible tokens&#39;es detailed information.
         /// </summary>
         /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
         [DataMember(Name = "nonFungibleTokens", EmitDefaultValue = false)]
-        public List<ListWalletTransactionsRINonFungibleTokens> NonFungibleTokens { get; set; }
+        public List<ListWalletTransactionsRINonFungibleTokensInner> NonFungibleTokens { get; set; }
 
         /// <summary>
         /// Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
         /// </summary>
         /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListWalletTransactionsRIRecipients> Recipients { get; set; }
+        public List<ListWalletTransactionsRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
         /// </summary>
         /// <value>Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListWalletTransactionsRISenders> Senders { get; set; }
+        public List<ListWalletTransactionsRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the status of the transaction, if it is confirmed or unconfirmed.

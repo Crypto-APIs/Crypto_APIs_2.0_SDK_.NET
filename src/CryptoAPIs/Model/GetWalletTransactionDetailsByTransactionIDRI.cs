@@ -51,7 +51,7 @@ namespace CryptoAPIs.Model
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="fee">fee (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public GetWalletTransactionDetailsByTransactionIDRI(int index = default(int), bool isConfirmed = default(bool), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetWalletTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetWalletTransactionDetailsByTransactionIDRIRecipients>), List<GetWalletTransactionDetailsByTransactionIDRISenders> senders = default(List<GetWalletTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), GetWalletTransactionDetailsByTransactionIDRIFee fee = default(GetWalletTransactionDetailsByTransactionIDRIFee), GetWalletTransactionDetailsByTransactionIDRIBS blockchainSpecific = default(GetWalletTransactionDetailsByTransactionIDRIBS))
+        public GetWalletTransactionDetailsByTransactionIDRI(int index = default(int), bool isConfirmed = default(bool), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetWalletTransactionDetailsByTransactionIDRIRecipientsInner> recipients = default(List<GetWalletTransactionDetailsByTransactionIDRIRecipientsInner>), List<GetWalletTransactionDetailsByTransactionIDRISendersInner> senders = default(List<GetWalletTransactionDetailsByTransactionIDRISendersInner>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), GetWalletTransactionDetailsByTransactionIDRIFee fee = default(GetWalletTransactionDetailsByTransactionIDRIFee), GetWalletTransactionDetailsByTransactionIDRIBS blockchainSpecific = default(GetWalletTransactionDetailsByTransactionIDRIBS))
         {
             this.Index = index;
             this.IsConfirmed = isConfirmed;
@@ -129,14 +129,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Object Array representation of transaction receivers</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletTransactionDetailsByTransactionIDRIRecipients> Recipients { get; set; }
+        public List<GetWalletTransactionDetailsByTransactionIDRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction senders
         /// </summary>
         /// <value>Object Array representation of transaction senders</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletTransactionDetailsByTransactionIDRISenders> Senders { get; set; }
+        public List<GetWalletTransactionDetailsByTransactionIDRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.

@@ -45,7 +45,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction version number. (required).</param>
         /// <param name="vin">Object Array representation of transaction inputs (required).</param>
         /// <param name="vout">Object Array representation of transaction outputs (required).</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBSD(long locktime = default(long), int size = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSDVin> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSDVin>), List<GetTransactionDetailsByTransactionIDRIBSDVout> vout = default(List<GetTransactionDetailsByTransactionIDRIBSDVout>))
+        public GetWalletTransactionDetailsByTransactionIDRIBSD(long locktime = default(long), int size = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSDVinInner> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSDVinInner>), List<GetTransactionDetailsByTransactionIDRIBSDVoutInner> vout = default(List<GetTransactionDetailsByTransactionIDRIBSDVoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -90,14 +90,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Object Array representation of transaction inputs</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletTransactionDetailsByTransactionIDRIBSDVin> Vin { get; set; }
+        public List<GetWalletTransactionDetailsByTransactionIDRIBSDVinInner> Vin { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction outputs
         /// </summary>
         /// <value>Object Array representation of transaction outputs</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSDVout> Vout { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSDVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

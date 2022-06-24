@@ -46,7 +46,7 @@ namespace CryptoAPIs.Model
         /// <param name="transactionHash">String representation of the transaction hash (required).</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public ListAllUnconfirmedTransactionsRI(List<ListUnconfirmedTransactionsByAddressRIRecipients> recipients = default(List<ListUnconfirmedTransactionsByAddressRIRecipients>), List<ListUnconfirmedTransactionsByAddressRISenders> senders = default(List<ListUnconfirmedTransactionsByAddressRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListAllUnconfirmedTransactionsRIBS blockchainSpecific = default(ListAllUnconfirmedTransactionsRIBS))
+        public ListAllUnconfirmedTransactionsRI(List<ListUnconfirmedTransactionsByAddressRIRecipientsInner> recipients = default(List<ListUnconfirmedTransactionsByAddressRIRecipientsInner>), List<ListUnconfirmedTransactionsByAddressRISendersInner> senders = default(List<ListUnconfirmedTransactionsByAddressRISendersInner>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListAllUnconfirmedTransactionsRIBS blockchainSpecific = default(ListAllUnconfirmedTransactionsRIBS))
         {
             // to ensure "recipients" is required (not null)
             if (recipients == null)
@@ -86,14 +86,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListUnconfirmedTransactionsByAddressRIRecipients> Recipients { get; set; }
+        public List<ListUnconfirmedTransactionsByAddressRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
         /// </summary>
         /// <value>Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListUnconfirmedTransactionsByAddressRISenders> Senders { get; set; }
+        public List<ListUnconfirmedTransactionsByAddressRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.

@@ -50,7 +50,7 @@ namespace CryptoAPIs.Model
         /// <param name="fee">fee (required).</param>
         /// <param name="isConfirmed">isConfirmed (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDFromCallbackRIRecipients> recipients = default(List<GetTransactionDetailsByTransactionIDFromCallbackRIRecipients>), List<GetTransactionDetailsByTransactionIDFromCallbackRISenders> senders = default(List<GetTransactionDetailsByTransactionIDFromCallbackRISenders>), int timestamp = default(int), string transactionHash = default(string), GetTransactionDetailsByTransactionIDFromCallbackRIFee fee = default(GetTransactionDetailsByTransactionIDFromCallbackRIFee), bool isConfirmed = default(bool), GetTransactionDetailsByTransactionIDFromCallbackRIBS blockchainSpecific = default(GetTransactionDetailsByTransactionIDFromCallbackRIBS))
+        public GetTransactionDetailsByTransactionIDFromCallbackRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDFromCallbackRIRecipientsInner> recipients = default(List<GetTransactionDetailsByTransactionIDFromCallbackRIRecipientsInner>), List<GetTransactionDetailsByTransactionIDFromCallbackRISendersInner> senders = default(List<GetTransactionDetailsByTransactionIDFromCallbackRISendersInner>), int timestamp = default(int), string transactionHash = default(string), GetTransactionDetailsByTransactionIDFromCallbackRIFee fee = default(GetTransactionDetailsByTransactionIDFromCallbackRIFee), bool isConfirmed = default(bool), GetTransactionDetailsByTransactionIDFromCallbackRIBS blockchainSpecific = default(GetTransactionDetailsByTransactionIDFromCallbackRIBS))
         {
             this.Index = index;
             // to ensure "minedInBlockHash" is required (not null)
@@ -120,14 +120,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDFromCallbackRIRecipients> Recipients { get; set; }
+        public List<GetTransactionDetailsByTransactionIDFromCallbackRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
         /// </summary>
         /// <value>Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDFromCallbackRISenders> Senders { get; set; }
+        public List<GetTransactionDetailsByTransactionIDFromCallbackRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.

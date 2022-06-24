@@ -55,7 +55,7 @@ namespace CryptoAPIs.Model
         /// <param name="offer">offer (required).</param>
         /// <param name="receive">receive (required).</param>
         /// <param name="value">value (required).</param>
-        public ListXRPRippleTransactionsByBlockHashRI(string additionalData = default(string), long destinationTag = default(long), int index = default(int), int minedInBlockHeight = default(int), List<ListXRPRippleTransactionsByBlockHashRIRecipients> recipients = default(List<ListXRPRippleTransactionsByBlockHashRIRecipients>), List<ListXRPRippleTransactionsByBlockHashRISenders> senders = default(List<ListXRPRippleTransactionsByBlockHashRISenders>), long sequence = default(long), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), ListXRPRippleTransactionsByBlockHashRIFee fee = default(ListXRPRippleTransactionsByBlockHashRIFee), ListXRPRippleTransactionsByBlockHashRIOffer offer = default(ListXRPRippleTransactionsByBlockHashRIOffer), ListXRPRippleTransactionsByBlockHashRIReceive receive = default(ListXRPRippleTransactionsByBlockHashRIReceive), ListXRPRippleTransactionsByBlockHashRIValue value = default(ListXRPRippleTransactionsByBlockHashRIValue))
+        public ListXRPRippleTransactionsByBlockHashRI(string additionalData = default(string), long destinationTag = default(long), int index = default(int), int minedInBlockHeight = default(int), List<ListXRPRippleTransactionsByBlockHashRIRecipientsInner> recipients = default(List<ListXRPRippleTransactionsByBlockHashRIRecipientsInner>), List<ListXRPRippleTransactionsByBlockHashRISendersInner> senders = default(List<ListXRPRippleTransactionsByBlockHashRISendersInner>), long sequence = default(long), string status = default(string), int timestamp = default(int), string transactionHash = default(string), string type = default(string), ListXRPRippleTransactionsByBlockHashRIFee fee = default(ListXRPRippleTransactionsByBlockHashRIFee), ListXRPRippleTransactionsByBlockHashRIOffer offer = default(ListXRPRippleTransactionsByBlockHashRIOffer), ListXRPRippleTransactionsByBlockHashRIReceive receive = default(ListXRPRippleTransactionsByBlockHashRIReceive), ListXRPRippleTransactionsByBlockHashRIValue value = default(ListXRPRippleTransactionsByBlockHashRIValue))
         {
             this.Index = index;
             this.MinedInBlockHeight = minedInBlockHeight;
@@ -151,14 +151,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents an object of addresses that receive the transactions.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListXRPRippleTransactionsByBlockHashRIRecipients> Recipients { get; set; }
+        public List<ListXRPRippleTransactionsByBlockHashRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents an object of addresses that provide the funds.
         /// </summary>
         /// <value>Represents an object of addresses that provide the funds.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListXRPRippleTransactionsByBlockHashRISenders> Senders { get; set; }
+        public List<ListXRPRippleTransactionsByBlockHashRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the transaction input&#39;s sequence as an integer, which is is used when transactions are replaced with newer versions before LockTime.

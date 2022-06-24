@@ -2,12 +2,11 @@
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetAssetDetailsByAssetID**](AssetsApi.md#getassetdetailsbyassetid) | **GET** /market-data/assets/assetId/{assetId} | Get Asset Details By Asset ID
-[**GetAssetDetailsByAssetSymbol**](AssetsApi.md#getassetdetailsbyassetsymbol) | **GET** /market-data/assets/{assetSymbol} | Get Asset Details By Asset Symbol
-[**ListAssetsDetails**](AssetsApi.md#listassetsdetails) | **GET** /market-data/assets/details | List Assets Details
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetAssetDetailsByAssetID**](AssetsApi.md#getassetdetailsbyassetid) | **GET** /market-data/assets/assetId/{assetId} | Get Asset Details By Asset ID |
+| [**GetAssetDetailsByAssetSymbol**](AssetsApi.md#getassetdetailsbyassetsymbol) | **GET** /market-data/assets/{assetSymbol} | Get Asset Details By Asset Symbol |
+| [**ListAssetsDetails**](AssetsApi.md#listassetsdetails) | **GET** /market-data/assets/details | List Assets Details |
 
 <a name="getassetdetailsbyassetid"></a>
 # **GetAssetDetailsByAssetID**
@@ -50,8 +49,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AssetsApi.GetAssetDetailsByAssetID: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AssetsApi.GetAssetDetailsByAssetID: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -59,12 +58,32 @@ namespace Example
 }
 ```
 
+#### Using the GetAssetDetailsByAssetIDWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Asset Details By Asset ID
+    ApiResponse<GetAssetDetailsByAssetIDR> response = apiInstance.GetAssetDetailsByAssetIDWithHttpInfo(assetId, context);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AssetsApi.GetAssetDetailsByAssetIDWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **assetId** | **string**| Defines the unique ID of the specific asset. | 
- **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **assetId** | **string** | Defines the unique ID of the specific asset. |  |
+| **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
 
 ### Return type
 
@@ -137,8 +156,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AssetsApi.GetAssetDetailsByAssetSymbol: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AssetsApi.GetAssetDetailsByAssetSymbol: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -146,12 +165,32 @@ namespace Example
 }
 ```
 
+#### Using the GetAssetDetailsByAssetSymbolWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Asset Details By Asset Symbol
+    ApiResponse<GetAssetDetailsByAssetSymbolR> response = apiInstance.GetAssetDetailsByAssetSymbolWithHttpInfo(assetSymbol, context);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AssetsApi.GetAssetDetailsByAssetSymbolWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **assetSymbol** | **string**| Specifies the asset&#39;s unique symbol in the Crypto APIs listings. | 
- **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **assetSymbol** | **string** | Specifies the asset&#39;s unique symbol in the Crypto APIs listings. |  |
+| **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
 
 ### Return type
 
@@ -228,8 +267,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AssetsApi.ListAssetsDetails: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AssetsApi.ListAssetsDetails: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -237,16 +276,36 @@ namespace Example
 }
 ```
 
+#### Using the ListAssetsDetailsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Assets Details
+    ApiResponse<ListAssetsDetailsR> response = apiInstance.ListAssetsDetailsWithHttpInfo(context, assetType, cryptoType, limit, offset, waasEnabled);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AssetsApi.ListAssetsDetailsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] 
- **assetType** | **string**| Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. | [optional] 
- **cryptoType** | **string**| Subtype of the crypto assets. Could be COIN or TOKEN | [optional] 
- **limit** | **int?**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
- **offset** | **int?**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
- **waasEnabled** | **bool?**| Show only if WaaS is/not enabled | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
+| **assetType** | **string** | Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. | [optional]  |
+| **cryptoType** | **string** | Subtype of the crypto assets. Could be COIN or TOKEN | [optional]  |
+| **limit** | **int?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
+| **offset** | **int?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
+| **waasEnabled** | **bool?** | Show only if WaaS is/not enabled | [optional]  |
 
 ### Return type
 

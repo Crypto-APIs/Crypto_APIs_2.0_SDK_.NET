@@ -45,7 +45,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction&#39;s version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Object Array representation of transaction outputs (required).</param>
-        public ListAllUnconfirmedTransactionsRIBSBC(long locktime = default(long), int size = default(int), int version = default(int), List<ListAllUnconfirmedTransactionsRIBSBCVin> vin = default(List<ListAllUnconfirmedTransactionsRIBSBCVin>), List<ListAllUnconfirmedTransactionsRIBSBCVout> vout = default(List<ListAllUnconfirmedTransactionsRIBSBCVout>))
+        public ListAllUnconfirmedTransactionsRIBSBC(long locktime = default(long), int size = default(int), int version = default(int), List<ListAllUnconfirmedTransactionsRIBSBCVinInner> vin = default(List<ListAllUnconfirmedTransactionsRIBSBCVinInner>), List<ListAllUnconfirmedTransactionsRIBSBCVoutInner> vout = default(List<ListAllUnconfirmedTransactionsRIBSBCVoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -90,14 +90,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction inputs.</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListAllUnconfirmedTransactionsRIBSBCVin> Vin { get; set; }
+        public List<ListAllUnconfirmedTransactionsRIBSBCVinInner> Vin { get; set; }
 
         /// <summary>
         /// Object Array representation of transaction outputs
         /// </summary>
         /// <value>Object Array representation of transaction outputs</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListAllUnconfirmedTransactionsRIBSBCVout> Vout { get; set; }
+        public List<ListAllUnconfirmedTransactionsRIBSBCVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

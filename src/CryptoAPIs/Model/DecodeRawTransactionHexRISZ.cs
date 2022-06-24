@@ -50,7 +50,7 @@ namespace CryptoAPIs.Model
         /// <param name="versionGroupId">Represents the transaction version group ID (required).</param>
         /// <param name="vin">Represents the Inputs of the transaction (required).</param>
         /// <param name="vout">Represents the Inputs of the transaction (required).</param>
-        public DecodeRawTransactionHexRISZ(int expiryHeight = default(int), int locktime = default(int), bool overwintered = default(bool), bool saplinged = default(bool), string transactionHash = default(string), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<DecodeRawTransactionHexRISZVin> vin = default(List<DecodeRawTransactionHexRISZVin>), List<DecodeRawTransactionHexRISZVout> vout = default(List<DecodeRawTransactionHexRISZVout>))
+        public DecodeRawTransactionHexRISZ(int expiryHeight = default(int), int locktime = default(int), bool overwintered = default(bool), bool saplinged = default(bool), string transactionHash = default(string), string valueBalance = default(string), int version = default(int), string versionGroupId = default(string), List<DecodeRawTransactionHexRISZVinInner> vin = default(List<DecodeRawTransactionHexRISZVinInner>), List<DecodeRawTransactionHexRISZVoutInner> vout = default(List<DecodeRawTransactionHexRISZVoutInner>))
         {
             this.ExpiryHeight = expiryHeight;
             this.Locktime = locktime;
@@ -150,14 +150,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the Inputs of the transaction</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<DecodeRawTransactionHexRISZVin> Vin { get; set; }
+        public List<DecodeRawTransactionHexRISZVinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the Inputs of the transaction
         /// </summary>
         /// <value>Represents the Inputs of the transaction</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<DecodeRawTransactionHexRISZVout> Vout { get; set; }
+        public List<DecodeRawTransactionHexRISZVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

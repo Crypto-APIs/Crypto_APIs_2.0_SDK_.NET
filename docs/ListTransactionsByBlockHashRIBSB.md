@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **Size** | **int** | Represents the total size of this transaction. | 
 **VSize** | **int** | Represents the virtual size of this transaction. | 
 **_Version** | **int** | Represents the transaction version number. | 
-**Vin** | [**List&lt;ListTransactionsByBlockHashRIBSBVin&gt;**](ListTransactionsByBlockHashRIBSBVin.md) | Represents the transaction inputs. | 
-**Vout** | [**List&lt;ListTransactionsByBlockHashRIBSBVout&gt;**](ListTransactionsByBlockHashRIBSBVout.md) | Represents the transaction outputs. | 
+**Vin** | [**List&lt;ListTransactionsByBlockHashRIBSBVinInner&gt;**](ListTransactionsByBlockHashRIBSBVinInner.md) | Represents the transaction inputs. | 
+**Vout** | [**List&lt;ListTransactionsByBlockHashRIBSBVoutInner&gt;**](ListTransactionsByBlockHashRIBSBVoutInner.md) | Represents the transaction outputs. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

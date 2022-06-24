@@ -46,7 +46,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction&#39;s version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public ListUnconfirmedTransactionsByAddressRIBSL(long locktime = default(long), int size = default(int), int vSize = default(int), int version = default(int), List<ListUnconfirmedTransactionsByAddressRIBSLVin> vin = default(List<ListUnconfirmedTransactionsByAddressRIBSLVin>), List<ListUnconfirmedTransactionsByAddressRIBSLVout> vout = default(List<ListUnconfirmedTransactionsByAddressRIBSLVout>))
+        public ListUnconfirmedTransactionsByAddressRIBSL(long locktime = default(long), int size = default(int), int vSize = default(int), int version = default(int), List<ListUnconfirmedTransactionsByAddressRIBSLVinInner> vin = default(List<ListUnconfirmedTransactionsByAddressRIBSLVinInner>), List<ListUnconfirmedTransactionsByAddressRIBSLVoutInner> vout = default(List<ListUnconfirmedTransactionsByAddressRIBSLVoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -99,14 +99,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction inputs.</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListUnconfirmedTransactionsByAddressRIBSLVin> Vin { get; set; }
+        public List<ListUnconfirmedTransactionsByAddressRIBSLVinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the transaction outputs.
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListUnconfirmedTransactionsByAddressRIBSLVout> Vout { get; set; }
+        public List<ListUnconfirmedTransactionsByAddressRIBSLVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

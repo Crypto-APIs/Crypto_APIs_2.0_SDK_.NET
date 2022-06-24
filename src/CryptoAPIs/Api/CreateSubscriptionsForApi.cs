@@ -144,6 +144,35 @@ namespace CryptoAPIs.Api
         /// <returns>ApiResponse of NewConfirmedCoinsTransactionsAndEachConfirmationR</returns>
         ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0);
         /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NewConfirmedCoinsTransactionsForSpecificAmountR</returns>
+        NewConfirmedCoinsTransactionsForSpecificAmountR NewConfirmedCoinsTransactionsForSpecificAmount(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0);
+
+        /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NewConfirmedCoinsTransactionsForSpecificAmountR</returns>
+        ApiResponse<NewConfirmedCoinsTransactionsForSpecificAmountR> NewConfirmedCoinsTransactionsForSpecificAmountWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0);
+        /// <summary>
         /// New confirmed internal transactions
         /// </summary>
         /// <remarks>
@@ -201,6 +230,64 @@ namespace CryptoAPIs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NewConfirmedInternalTransactionsAndEachConfirmationR</returns>
         ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0);
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NewConfirmedInternalTransactionsForSpecificAmountR</returns>
+        NewConfirmedInternalTransactionsForSpecificAmountR NewConfirmedInternalTransactionsForSpecificAmount(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0);
+
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NewConfirmedInternalTransactionsForSpecificAmountR</returns>
+        ApiResponse<NewConfirmedInternalTransactionsForSpecificAmountR> NewConfirmedInternalTransactionsForSpecificAmountWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0);
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NewConfirmedTokenTransactionsForSpecificAmountR</returns>
+        NewConfirmedTokenTransactionsForSpecificAmountR NewConfirmedTokenTransactionsForSpecificAmount(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0);
+
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NewConfirmedTokenTransactionsForSpecificAmountR</returns>
+        ApiResponse<NewConfirmedTokenTransactionsForSpecificAmountR> NewConfirmedTokenTransactionsForSpecificAmountWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0);
         /// <summary>
         /// New confirmed tokens transactions
         /// </summary>
@@ -451,6 +538,37 @@ namespace CryptoAPIs.Api
         /// <returns>Task of ApiResponse (NewConfirmedCoinsTransactionsAndEachConfirmationR)</returns>
         System.Threading.Tasks.Task<ApiResponse<NewConfirmedCoinsTransactionsAndEachConfirmationR>> NewConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsAndEachConfirmationRB newConfirmedCoinsTransactionsAndEachConfirmationRB = default(NewConfirmedCoinsTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NewConfirmedCoinsTransactionsForSpecificAmountR</returns>
+        System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsForSpecificAmountR> NewConfirmedCoinsTransactionsForSpecificAmountAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NewConfirmedCoinsTransactionsForSpecificAmountR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedCoinsTransactionsForSpecificAmountR>> NewConfirmedCoinsTransactionsForSpecificAmountWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// New confirmed internal transactions
         /// </summary>
         /// <remarks>
@@ -512,6 +630,68 @@ namespace CryptoAPIs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NewConfirmedInternalTransactionsAndEachConfirmationR)</returns>
         System.Threading.Tasks.Task<ApiResponse<NewConfirmedInternalTransactionsAndEachConfirmationR>> NewConfirmedInternalTransactionsAndEachConfirmationWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = default(NewConfirmedInternalTransactionsAndEachConfirmationRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NewConfirmedInternalTransactionsForSpecificAmountR</returns>
+        System.Threading.Tasks.Task<NewConfirmedInternalTransactionsForSpecificAmountR> NewConfirmedInternalTransactionsForSpecificAmountAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NewConfirmedInternalTransactionsForSpecificAmountR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedInternalTransactionsForSpecificAmountR>> NewConfirmedInternalTransactionsForSpecificAmountWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NewConfirmedTokenTransactionsForSpecificAmountR</returns>
+        System.Threading.Tasks.Task<NewConfirmedTokenTransactionsForSpecificAmountR> NewConfirmedTokenTransactionsForSpecificAmountAsync(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount
+        /// </summary>
+        /// <remarks>
+        /// Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </remarks>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NewConfirmedTokenTransactionsForSpecificAmountR)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NewConfirmedTokenTransactionsForSpecificAmountR>> NewConfirmedTokenTransactionsForSpecificAmountWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// New confirmed tokens transactions
         /// </summary>
@@ -1525,6 +1705,198 @@ namespace CryptoAPIs.Api
         }
 
         /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NewConfirmedCoinsTransactionsForSpecificAmountR</returns>
+        public NewConfirmedCoinsTransactionsForSpecificAmountR NewConfirmedCoinsTransactionsForSpecificAmount(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsForSpecificAmountR> localVarResponse = NewConfirmedCoinsTransactionsForSpecificAmountWithHttpInfo(blockchain, network, context, newConfirmedCoinsTransactionsForSpecificAmountRB);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NewConfirmedCoinsTransactionsForSpecificAmountR</returns>
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsForSpecificAmountR> NewConfirmedCoinsTransactionsForSpecificAmountWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsForSpecificAmount");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsForSpecificAmount");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = newConfirmedCoinsTransactionsForSpecificAmountRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedCoinsTransactionsForSpecificAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<NewConfirmedCoinsTransactionsForSpecificAmountR>("/blockchain-events/{blockchain}/{network}/subscriptions/coins-transactions-for-specific-amount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NewConfirmedCoinsTransactionsForSpecificAmount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NewConfirmedCoinsTransactionsForSpecificAmountR</returns>
+        public async System.Threading.Tasks.Task<NewConfirmedCoinsTransactionsForSpecificAmountR> NewConfirmedCoinsTransactionsForSpecificAmountAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsForSpecificAmountR> localVarResponse = await NewConfirmedCoinsTransactionsForSpecificAmountWithHttpInfoAsync(blockchain, network, context, newConfirmedCoinsTransactionsForSpecificAmountRB, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// New Confirmed Coins Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedCoinsTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NewConfirmedCoinsTransactionsForSpecificAmountR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedCoinsTransactionsForSpecificAmountR>> NewConfirmedCoinsTransactionsForSpecificAmountWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = default(NewConfirmedCoinsTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsForSpecificAmount");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedCoinsTransactionsForSpecificAmount");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = newConfirmedCoinsTransactionsForSpecificAmountRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedCoinsTransactionsForSpecificAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedCoinsTransactionsForSpecificAmountR>("/blockchain-events/{blockchain}/{network}/subscriptions/coins-transactions-for-specific-amount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NewConfirmedCoinsTransactionsForSpecificAmount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// New confirmed internal transactions Through this endpoint customers can create callback subscriptions for a specific event. In this case the event is when there are new confirmed internal transactions. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs.    Being confirmed means that the transactions are verified by miners and added to the next block.    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
         /// </summary>
         /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1899,6 +2271,390 @@ namespace CryptoAPIs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NewConfirmedInternalTransactionsAndEachConfirmation", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NewConfirmedInternalTransactionsForSpecificAmountR</returns>
+        public NewConfirmedInternalTransactionsForSpecificAmountR NewConfirmedInternalTransactionsForSpecificAmount(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsForSpecificAmountR> localVarResponse = NewConfirmedInternalTransactionsForSpecificAmountWithHttpInfo(blockchain, network, context, newConfirmedInternalTransactionsForSpecificAmountRB);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NewConfirmedInternalTransactionsForSpecificAmountR</returns>
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsForSpecificAmountR> NewConfirmedInternalTransactionsForSpecificAmountWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsForSpecificAmount");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsForSpecificAmount");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = newConfirmedInternalTransactionsForSpecificAmountRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedInternalTransactionsForSpecificAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<NewConfirmedInternalTransactionsForSpecificAmountR>("/blockchain-events/{blockchain}/{network}/subscriptions/internal-transactions-for-specific-amount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NewConfirmedInternalTransactionsForSpecificAmount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NewConfirmedInternalTransactionsForSpecificAmountR</returns>
+        public async System.Threading.Tasks.Task<NewConfirmedInternalTransactionsForSpecificAmountR> NewConfirmedInternalTransactionsForSpecificAmountAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsForSpecificAmountR> localVarResponse = await NewConfirmedInternalTransactionsForSpecificAmountWithHttpInfoAsync(blockchain, network, context, newConfirmedInternalTransactionsForSpecificAmountRB, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// New Confirmed Internal Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedInternalTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NewConfirmedInternalTransactionsForSpecificAmountR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedInternalTransactionsForSpecificAmountR>> NewConfirmedInternalTransactionsForSpecificAmountWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = default(NewConfirmedInternalTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsForSpecificAmount");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedInternalTransactionsForSpecificAmount");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = newConfirmedInternalTransactionsForSpecificAmountRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedInternalTransactionsForSpecificAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedInternalTransactionsForSpecificAmountR>("/blockchain-events/{blockchain}/{network}/subscriptions/internal-transactions-for-specific-amount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NewConfirmedInternalTransactionsForSpecificAmount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NewConfirmedTokenTransactionsForSpecificAmountR</returns>
+        public NewConfirmedTokenTransactionsForSpecificAmountR NewConfirmedTokenTransactionsForSpecificAmount(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0)
+        {
+            CryptoAPIs.Client.ApiResponse<NewConfirmedTokenTransactionsForSpecificAmountR> localVarResponse = NewConfirmedTokenTransactionsForSpecificAmountWithHttpInfo(blockchain, network, context, newConfirmedTokenTransactionsForSpecificAmountRB);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NewConfirmedTokenTransactionsForSpecificAmountR</returns>
+        public CryptoAPIs.Client.ApiResponse<NewConfirmedTokenTransactionsForSpecificAmountR> NewConfirmedTokenTransactionsForSpecificAmountWithHttpInfo(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0)
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedTokenTransactionsForSpecificAmount");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedTokenTransactionsForSpecificAmount");
+            }
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = newConfirmedTokenTransactionsForSpecificAmountRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedTokenTransactionsForSpecificAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<NewConfirmedTokenTransactionsForSpecificAmountR>("/blockchain-events/{blockchain}/{network}/subscriptions/tokens-transfers-for-specific-amount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NewConfirmedTokenTransactionsForSpecificAmount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NewConfirmedTokenTransactionsForSpecificAmountR</returns>
+        public async System.Threading.Tasks.Task<NewConfirmedTokenTransactionsForSpecificAmountR> NewConfirmedTokenTransactionsForSpecificAmountAsync(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            CryptoAPIs.Client.ApiResponse<NewConfirmedTokenTransactionsForSpecificAmountR> localVarResponse = await NewConfirmedTokenTransactionsForSpecificAmountWithHttpInfoAsync(blockchain, network, context, newConfirmedTokenTransactionsForSpecificAmountRB, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// New Confirmed Token Transactions For Specific Amount Through this endpoint customers can create callback subscriptions for a specific event and \&quot;amountHigherThan\&quot; value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+        /// </summary>
+        /// <exception cref="CryptoAPIs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="blockchain">Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.</param>
+        /// <param name="network">Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks.</param>
+        /// <param name="context">In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)</param>
+        /// <param name="newConfirmedTokenTransactionsForSpecificAmountRB"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NewConfirmedTokenTransactionsForSpecificAmountR)</returns>
+        public async System.Threading.Tasks.Task<CryptoAPIs.Client.ApiResponse<NewConfirmedTokenTransactionsForSpecificAmountR>> NewConfirmedTokenTransactionsForSpecificAmountWithHttpInfoAsync(string blockchain, string network, string context = default(string), NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = default(NewConfirmedTokenTransactionsForSpecificAmountRB), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'blockchain' is set
+            if (blockchain == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'blockchain' when calling CreateSubscriptionsForApi->NewConfirmedTokenTransactionsForSpecificAmount");
+            }
+
+            // verify the required parameter 'network' is set
+            if (network == null)
+            {
+                throw new CryptoAPIs.Client.ApiException(400, "Missing required parameter 'network' when calling CreateSubscriptionsForApi->NewConfirmedTokenTransactionsForSpecificAmount");
+            }
+
+
+            CryptoAPIs.Client.RequestOptions localVarRequestOptions = new CryptoAPIs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = CryptoAPIs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = CryptoAPIs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("blockchain", CryptoAPIs.Client.ClientUtils.ParameterToString(blockchain)); // path parameter
+            localVarRequestOptions.PathParameters.Add("network", CryptoAPIs.Client.ClientUtils.ParameterToString(network)); // path parameter
+            if (context != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(CryptoAPIs.Client.ClientUtils.ParameterToMultiMap("", "context", context));
+            }
+            localVarRequestOptions.Data = newConfirmedTokenTransactionsForSpecificAmountRB;
+
+            localVarRequestOptions.Operation = "CreateSubscriptionsForApi.NewConfirmedTokenTransactionsForSpecificAmount";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("x-api-key")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("x-api-key", this.Configuration.GetApiKeyWithPrefix("x-api-key"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<NewConfirmedTokenTransactionsForSpecificAmountR>("/blockchain-events/{blockchain}/{network}/subscriptions/tokens-transfers-for-specific-amount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NewConfirmedTokenTransactionsForSpecificAmount", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

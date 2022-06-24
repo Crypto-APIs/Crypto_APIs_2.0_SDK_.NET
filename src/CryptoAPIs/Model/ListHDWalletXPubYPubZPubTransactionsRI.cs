@@ -49,7 +49,7 @@ namespace CryptoAPIs.Model
         /// <param name="transactionHash">Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions. (required).</param>
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="fee">fee (required).</param>
-        public ListHDWalletXPubYPubZPubTransactionsRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<ListHDWalletXPubYPubZPubTransactionsRIRecipients> recipients = default(List<ListHDWalletXPubYPubZPubTransactionsRIRecipients>), List<ListHDWalletXPubYPubZPubTransactionsRISenders> senders = default(List<ListHDWalletXPubYPubZPubTransactionsRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListHDWalletXPubYPubZPubTransactionsRIFee fee = default(ListHDWalletXPubYPubZPubTransactionsRIFee))
+        public ListHDWalletXPubYPubZPubTransactionsRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<ListHDWalletXPubYPubZPubTransactionsRIRecipientsInner> recipients = default(List<ListHDWalletXPubYPubZPubTransactionsRIRecipientsInner>), List<ListHDWalletXPubYPubZPubTransactionsRISendersInner> senders = default(List<ListHDWalletXPubYPubZPubTransactionsRISendersInner>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListHDWalletXPubYPubZPubTransactionsRIFee fee = default(ListHDWalletXPubYPubZPubTransactionsRIFee))
         {
             this.Index = index;
             // to ensure "minedInBlockHash" is required (not null)
@@ -118,14 +118,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListHDWalletXPubYPubZPubTransactionsRIRecipients> Recipients { get; set; }
+        public List<ListHDWalletXPubYPubZPubTransactionsRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
         /// </summary>
         /// <value>Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListHDWalletXPubYPubZPubTransactionsRISenders> Senders { get; set; }
+        public List<ListHDWalletXPubYPubZPubTransactionsRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.

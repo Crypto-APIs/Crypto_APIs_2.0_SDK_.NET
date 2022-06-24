@@ -47,7 +47,7 @@ namespace CryptoAPIs.Model
         /// <param name="index">Represents the index of the address in the wallet. (required).</param>
         /// <param name="label">Represents a custom tag that customers can set up for their Wallets and addresses. E.g. custom label named \&quot;Special addresses\&quot;. (required).</param>
         /// <param name="nonFungibleTokens">Represents non-fungible tokens&#39;es detailed information. (required).</param>
-        public ListDepositAddressesRI(string address = default(string), ListDepositAddressesRIConfirmedBalance confirmedBalance = default(ListDepositAddressesRIConfirmedBalance), int createdTimestamp = default(int), List<ListDepositAddressesRIFungibleTokens> fungibleTokens = default(List<ListDepositAddressesRIFungibleTokens>), string index = default(string), string label = default(string), List<ListDepositAddressesRINonFungibleTokens> nonFungibleTokens = default(List<ListDepositAddressesRINonFungibleTokens>))
+        public ListDepositAddressesRI(string address = default(string), ListDepositAddressesRIConfirmedBalance confirmedBalance = default(ListDepositAddressesRIConfirmedBalance), int createdTimestamp = default(int), List<ListDepositAddressesRIFungibleTokensInner> fungibleTokens = default(List<ListDepositAddressesRIFungibleTokensInner>), string index = default(string), string label = default(string), List<ListDepositAddressesRINonFungibleTokensInner> nonFungibleTokens = default(List<ListDepositAddressesRINonFungibleTokensInner>))
         {
             // to ensure "address" is required (not null)
             if (address == null)
@@ -113,7 +113,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents fungible tokens&#39;es detailed information</value>
         [DataMember(Name = "fungibleTokens", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListDepositAddressesRIFungibleTokens> FungibleTokens { get; set; }
+        public List<ListDepositAddressesRIFungibleTokensInner> FungibleTokens { get; set; }
 
         /// <summary>
         /// Represents the index of the address in the wallet.
@@ -134,7 +134,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents non-fungible tokens&#39;es detailed information.</value>
         [DataMember(Name = "nonFungibleTokens", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListDepositAddressesRINonFungibleTokens> NonFungibleTokens { get; set; }
+        public List<ListDepositAddressesRINonFungibleTokensInner> NonFungibleTokens { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

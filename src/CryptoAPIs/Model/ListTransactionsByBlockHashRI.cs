@@ -50,7 +50,7 @@ namespace CryptoAPIs.Model
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="fee">fee (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public ListTransactionsByBlockHashRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<ListTransactionsByBlockHashRIRecipients> recipients = default(List<ListTransactionsByBlockHashRIRecipients>), List<ListTransactionsByBlockHashRISenders> senders = default(List<ListTransactionsByBlockHashRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListTransactionsByBlockHashRIFee fee = default(ListTransactionsByBlockHashRIFee), ListTransactionsByBlockHashRIBS blockchainSpecific = default(ListTransactionsByBlockHashRIBS))
+        public ListTransactionsByBlockHashRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<ListTransactionsByBlockHashRIRecipientsInner> recipients = default(List<ListTransactionsByBlockHashRIRecipientsInner>), List<ListTransactionsByBlockHashRISendersInner> senders = default(List<ListTransactionsByBlockHashRISendersInner>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListTransactionsByBlockHashRIFee fee = default(ListTransactionsByBlockHashRIFee), ListTransactionsByBlockHashRIBS blockchainSpecific = default(ListTransactionsByBlockHashRIBS))
         {
             this.Index = index;
             // to ensure "minedInBlockHash" is required (not null)
@@ -125,14 +125,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListTransactionsByBlockHashRIRecipients> Recipients { get; set; }
+        public List<ListTransactionsByBlockHashRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
         /// </summary>
         /// <value>Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListTransactionsByBlockHashRISenders> Senders { get; set; }
+        public List<ListTransactionsByBlockHashRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.

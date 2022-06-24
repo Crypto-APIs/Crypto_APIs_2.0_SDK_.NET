@@ -160,7 +160,7 @@ namespace CryptoAPIs.Model
         /// <param name="senders">senders (required).</param>
         /// <param name="transactionRequestId">Represents a unique identifier of the transaction request (the request sent to make a transaction), which helps in identifying which callback and which &#x60;referenceId&#x60; concern that specific transaction request. (required).</param>
         /// <param name="transactionRequestStatus">Defines the status of the transaction request, e.g. \&quot;created, \&quot;await_approval\&quot;, \&quot;pending\&quot;, \&quot;prepared\&quot;, \&quot;signed\&quot;, \&quot;broadcasted\&quot;, \&quot;success\&quot;, \&quot;failed\&quot;, \&quot;rejected\&quot;, mined\&quot;. (required).</param>
-        public CreateCoinsTransactionRequestFromAddressRI(int addressTag = default(int), string callbackSecretKey = default(string), string callbackUrl = default(string), string classicAddress = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), List<CreateCoinsTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateCoinsTransactionRequestFromAddressRIRecipients>), CreateCoinsTransactionRequestFromAddressRISenders senders = default(CreateCoinsTransactionRequestFromAddressRISenders), string transactionRequestId = default(string), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum))
+        public CreateCoinsTransactionRequestFromAddressRI(int addressTag = default(int), string callbackSecretKey = default(string), string callbackUrl = default(string), string classicAddress = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), List<CreateCoinsTransactionRequestFromAddressRIRecipientsInner> recipients = default(List<CreateCoinsTransactionRequestFromAddressRIRecipientsInner>), CreateCoinsTransactionRequestFromAddressRISenders senders = default(CreateCoinsTransactionRequestFromAddressRISenders), string transactionRequestId = default(string), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum))
         {
             this.FeePriority = feePriority;
             // to ensure "recipients" is required (not null)
@@ -229,7 +229,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the destination for the transaction, i.e. the recipient(s).</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<CreateCoinsTransactionRequestFromAddressRIRecipients> Recipients { get; set; }
+        public List<CreateCoinsTransactionRequestFromAddressRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Gets or Sets Senders

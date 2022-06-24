@@ -299,7 +299,7 @@ namespace CryptoAPIs.Model
         /// <param name="transactionType">Defines the transaction type, if it is for coins or tokens. (required).</param>
         /// <param name="unit">Defines the unit of the amount. (required).</param>
         /// <param name="walletId">Defines the unique ID of the Wallet. (required).</param>
-        public GetTransactionRequestDetailsRI(string additionalDetails = default(string), BlockchainEnum blockchain = default(BlockchainEnum), FeePriorityEnum feePriority = default(FeePriorityEnum), NetworkEnum network = default(NetworkEnum), List<GetTransactionRequestDetailsRIRecipients> recipients = default(List<GetTransactionRequestDetailsRIRecipients>), string totalTransactionAmount = default(string), string transactionId = default(string), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum), TransactionTypeEnum transactionType = default(TransactionTypeEnum), string unit = default(string), string walletId = default(string))
+        public GetTransactionRequestDetailsRI(string additionalDetails = default(string), BlockchainEnum blockchain = default(BlockchainEnum), FeePriorityEnum feePriority = default(FeePriorityEnum), NetworkEnum network = default(NetworkEnum), List<GetTransactionRequestDetailsRIRecipientsInner> recipients = default(List<GetTransactionRequestDetailsRIRecipientsInner>), string totalTransactionAmount = default(string), string transactionId = default(string), TransactionRequestStatusEnum transactionRequestStatus = default(TransactionRequestStatusEnum), TransactionTypeEnum transactionType = default(TransactionTypeEnum), string unit = default(string), string walletId = default(string))
         {
             // to ensure "additionalDetails" is required (not null)
             if (additionalDetails == null)
@@ -351,7 +351,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionRequestDetailsRIRecipients> Recipients { get; set; }
+        public List<GetTransactionRequestDetailsRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Defines the total transaction amount.

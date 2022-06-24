@@ -54,7 +54,7 @@ namespace CryptoAPIs.Model
         /// <param name="valid">Defines whether the transaction is valid or not, as boolean. E.g. if set to \&quot;true\&quot;, it means the transaction is valid. (required).</param>
         /// <param name="version">Defines the specific version. (required).</param>
         /// <param name="fee">fee (required).</param>
-        public GetOmniTransactionDetailsByTransactionIDTxidRI(string amount = default(string), bool divisible = default(bool), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), int propertyId = default(int), List<ListOmniTransactionsByAddressRIRecipients> recipients = default(List<ListOmniTransactionsByAddressRIRecipients>), List<GetOmniTransactionDetailsByTransactionIDTxidRISenders> senders = default(List<GetOmniTransactionDetailsByTransactionIDTxidRISenders>), int timestamp = default(int), string transactionId = default(string), string type = default(string), int typeInt = default(int), bool valid = default(bool), int version = default(int), ListUnconfirmedOmniTransactionsByAddressRIFee fee = default(ListUnconfirmedOmniTransactionsByAddressRIFee))
+        public GetOmniTransactionDetailsByTransactionIDTxidRI(string amount = default(string), bool divisible = default(bool), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), int propertyId = default(int), List<ListOmniTransactionsByAddressRIRecipientsInner> recipients = default(List<ListOmniTransactionsByAddressRIRecipientsInner>), List<GetOmniTransactionDetailsByTransactionIDTxidRISendersInner> senders = default(List<GetOmniTransactionDetailsByTransactionIDTxidRISendersInner>), int timestamp = default(int), string transactionId = default(string), string type = default(string), int typeInt = default(int), bool valid = default(bool), int version = default(int), ListUnconfirmedOmniTransactionsByAddressRIFee fee = default(ListUnconfirmedOmniTransactionsByAddressRIFee))
         {
             // to ensure "amount" is required (not null)
             if (amount == null)
@@ -147,14 +147,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents an object of addresses that receive the transactions.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<ListOmniTransactionsByAddressRIRecipients> Recipients { get; set; }
+        public List<ListOmniTransactionsByAddressRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents an object of addresses that provide the funds.
         /// </summary>
         /// <value>Represents an object of addresses that provide the funds.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetOmniTransactionDetailsByTransactionIDTxidRISenders> Senders { get; set; }
+        public List<GetOmniTransactionDetailsByTransactionIDTxidRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.

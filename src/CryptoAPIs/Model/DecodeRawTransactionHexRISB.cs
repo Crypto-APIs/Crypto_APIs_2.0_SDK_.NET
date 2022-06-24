@@ -47,7 +47,7 @@ namespace CryptoAPIs.Model
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
         /// <param name="weight">Represents the size of Bitcoin block, measured in weight units and including the segwit discount..</param>
-        public DecodeRawTransactionHexRISB(int locktime = default(int), string transactionHash = default(string), int vSize = default(int), int version = default(int), List<DecodeRawTransactionHexRISBVin> vin = default(List<DecodeRawTransactionHexRISBVin>), List<DecodeRawTransactionHexRISBVout> vout = default(List<DecodeRawTransactionHexRISBVout>), int weight = default(int))
+        public DecodeRawTransactionHexRISB(int locktime = default(int), string transactionHash = default(string), int vSize = default(int), int version = default(int), List<DecodeRawTransactionHexRISBVinInner> vin = default(List<DecodeRawTransactionHexRISBVinInner>), List<DecodeRawTransactionHexRISBVoutInner> vout = default(List<DecodeRawTransactionHexRISBVoutInner>), int weight = default(int))
         {
             this.Locktime = locktime;
             // to ensure "transactionHash" is required (not null)
@@ -106,14 +106,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction inputs.</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<DecodeRawTransactionHexRISBVin> Vin { get; set; }
+        public List<DecodeRawTransactionHexRISBVinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the transaction outputs.
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<DecodeRawTransactionHexRISBVout> Vout { get; set; }
+        public List<DecodeRawTransactionHexRISBVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Represents the size of Bitcoin block, measured in weight units and including the segwit discount.

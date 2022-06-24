@@ -41,7 +41,7 @@ namespace CryptoAPIs.Model
         /// Initializes a new instance of the <see cref="DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRI" /> class.
         /// </summary>
         /// <param name="addresses">Represents the address details. (required).</param>
-        public DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRI(List<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddresses> addresses = default(List<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddresses>))
+        public DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRI(List<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddressesInner> addresses = default(List<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddressesInner>))
         {
             // to ensure "addresses" is required (not null)
             if (addresses == null)
@@ -56,7 +56,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the address details.</value>
         [DataMember(Name = "addresses", IsRequired = true, EmitDefaultValue = false)]
-        public List<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddresses> Addresses { get; set; }
+        public List<DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddressesInner> Addresses { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

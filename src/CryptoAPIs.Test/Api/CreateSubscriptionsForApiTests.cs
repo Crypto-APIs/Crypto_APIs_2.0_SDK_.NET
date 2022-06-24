@@ -116,6 +116,21 @@ namespace CryptoAPIs.Test.Api
         }
 
         /// <summary>
+        /// Test NewConfirmedCoinsTransactionsForSpecificAmount
+        /// </summary>
+        [Fact]
+        public void NewConfirmedCoinsTransactionsForSpecificAmountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //NewConfirmedCoinsTransactionsForSpecificAmountRB newConfirmedCoinsTransactionsForSpecificAmountRB = null;
+            //var response = instance.NewConfirmedCoinsTransactionsForSpecificAmount(blockchain, network, context, newConfirmedCoinsTransactionsForSpecificAmountRB);
+            //Assert.IsType<NewConfirmedCoinsTransactionsForSpecificAmountR>(response);
+        }
+
+        /// <summary>
         /// Test NewConfirmedInternalTransactions
         /// </summary>
         [Fact]
@@ -143,6 +158,36 @@ namespace CryptoAPIs.Test.Api
             //NewConfirmedInternalTransactionsAndEachConfirmationRB newConfirmedInternalTransactionsAndEachConfirmationRB = null;
             //var response = instance.NewConfirmedInternalTransactionsAndEachConfirmation(blockchain, network, context, newConfirmedInternalTransactionsAndEachConfirmationRB);
             //Assert.IsType<NewConfirmedInternalTransactionsAndEachConfirmationR>(response);
+        }
+
+        /// <summary>
+        /// Test NewConfirmedInternalTransactionsForSpecificAmount
+        /// </summary>
+        [Fact]
+        public void NewConfirmedInternalTransactionsForSpecificAmountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //NewConfirmedInternalTransactionsForSpecificAmountRB newConfirmedInternalTransactionsForSpecificAmountRB = null;
+            //var response = instance.NewConfirmedInternalTransactionsForSpecificAmount(blockchain, network, context, newConfirmedInternalTransactionsForSpecificAmountRB);
+            //Assert.IsType<NewConfirmedInternalTransactionsForSpecificAmountR>(response);
+        }
+
+        /// <summary>
+        /// Test NewConfirmedTokenTransactionsForSpecificAmount
+        /// </summary>
+        [Fact]
+        public void NewConfirmedTokenTransactionsForSpecificAmountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string blockchain = null;
+            //string network = null;
+            //string context = null;
+            //NewConfirmedTokenTransactionsForSpecificAmountRB newConfirmedTokenTransactionsForSpecificAmountRB = null;
+            //var response = instance.NewConfirmedTokenTransactionsForSpecificAmount(blockchain, network, context, newConfirmedTokenTransactionsForSpecificAmountRB);
+            //Assert.IsType<NewConfirmedTokenTransactionsForSpecificAmountR>(response);
         }
 
         /// <summary>

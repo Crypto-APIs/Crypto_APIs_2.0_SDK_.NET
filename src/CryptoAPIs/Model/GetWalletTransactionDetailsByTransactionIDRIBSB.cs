@@ -46,7 +46,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents the transaction version number. (required).</param>
         /// <param name="vin">Object Array representation of transaction inputs (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public GetWalletTransactionDetailsByTransactionIDRIBSB(long locktime = default(long), int size = default(int), int vSize = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSBVin> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBVin>), List<GetWalletTransactionDetailsByTransactionIDRIBSBVout> vout = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBVout>))
+        public GetWalletTransactionDetailsByTransactionIDRIBSB(long locktime = default(long), int size = default(int), int vSize = default(int), int version = default(int), List<GetWalletTransactionDetailsByTransactionIDRIBSBVinInner> vin = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBVinInner>), List<GetWalletTransactionDetailsByTransactionIDRIBSBVoutInner> vout = default(List<GetWalletTransactionDetailsByTransactionIDRIBSBVoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -99,14 +99,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Object Array representation of transaction inputs</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletTransactionDetailsByTransactionIDRIBSBVin> Vin { get; set; }
+        public List<GetWalletTransactionDetailsByTransactionIDRIBSBVinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the transaction outputs.
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetWalletTransactionDetailsByTransactionIDRIBSBVout> Vout { get; set; }
+        public List<GetWalletTransactionDetailsByTransactionIDRIBSBVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -82,7 +82,7 @@ namespace CryptoAPIs.Model
         /// <param name="senders">senders (required).</param>
         /// <param name="tokenTypeSpecificData">tokenTypeSpecificData (required).</param>
         /// <param name="transactionRequestId">Represents a unique identifier of the transaction request (the request sent to make a transaction), which helps in identifying which callback and which &#x60;referenceId&#x60; concern that specific transaction request. (required).</param>
-        public CreateFungibleTokensTransactionRequestFromAddressRI(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), List<CreateFungibleTokensTransactionRequestFromAddressRIRecipients> recipients = default(List<CreateFungibleTokensTransactionRequestFromAddressRIRecipients>), CreateFungibleTokensTransactionRequestFromAddressRISenders senders = default(CreateFungibleTokensTransactionRequestFromAddressRISenders), CreateFungibleTokensTransactionRequestFromAddressRIS tokenTypeSpecificData = default(CreateFungibleTokensTransactionRequestFromAddressRIS), string transactionRequestId = default(string))
+        public CreateFungibleTokensTransactionRequestFromAddressRI(string callbackSecretKey = default(string), string callbackUrl = default(string), FeePriorityEnum feePriority = default(FeePriorityEnum), string note = default(string), List<CreateFungibleTokensTransactionRequestFromAddressRIRecipientsInner> recipients = default(List<CreateFungibleTokensTransactionRequestFromAddressRIRecipientsInner>), CreateFungibleTokensTransactionRequestFromAddressRISenders senders = default(CreateFungibleTokensTransactionRequestFromAddressRISenders), CreateFungibleTokensTransactionRequestFromAddressRIS tokenTypeSpecificData = default(CreateFungibleTokensTransactionRequestFromAddressRIS), string transactionRequestId = default(string))
         {
             // to ensure "callbackSecretKey" is required (not null)
             if (callbackSecretKey == null)
@@ -150,7 +150,7 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Defines the destination for the transaction, i.e. the recipient(s).</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<CreateFungibleTokensTransactionRequestFromAddressRIRecipients> Recipients { get; set; }
+        public List<CreateFungibleTokensTransactionRequestFromAddressRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Gets or Sets Senders

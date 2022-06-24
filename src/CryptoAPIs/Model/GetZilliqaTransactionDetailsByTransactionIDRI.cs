@@ -52,7 +52,7 @@ namespace CryptoAPIs.Model
         /// <param name="timestamp">Defines the exact date/time when this block was mined in Unix Timestamp. (required).</param>
         /// <param name="transactionIndex">Defines the numeric representation of the transaction index. (required).</param>
         /// <param name="transactionStatus">Defines the status of the transaction, whether it is e.g. pending or complete. (required).</param>
-        public GetZilliqaTransactionDetailsByTransactionIDRI(GetZilliqaTransactionDetailsByTransactionIDRIFee fee = default(GetZilliqaTransactionDetailsByTransactionIDRIFee), int gasLimit = default(int), int gasPrice = default(int), int gasUsed = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), int nonce = default(int), List<GetZilliqaTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetZilliqaTransactionDetailsByTransactionIDRIRecipients>), List<GetZilliqaTransactionDetailsByTransactionIDRISenders> senders = default(List<GetZilliqaTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), int transactionIndex = default(int), string transactionStatus = default(string))
+        public GetZilliqaTransactionDetailsByTransactionIDRI(GetZilliqaTransactionDetailsByTransactionIDRIFee fee = default(GetZilliqaTransactionDetailsByTransactionIDRIFee), int gasLimit = default(int), int gasPrice = default(int), int gasUsed = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), int nonce = default(int), List<GetZilliqaTransactionDetailsByTransactionIDRIRecipientsInner> recipients = default(List<GetZilliqaTransactionDetailsByTransactionIDRIRecipientsInner>), List<GetZilliqaTransactionDetailsByTransactionIDRISendersInner> senders = default(List<GetZilliqaTransactionDetailsByTransactionIDRISendersInner>), int timestamp = default(int), int transactionIndex = default(int), string transactionStatus = default(string))
         {
             // to ensure "fee" is required (not null)
             if (fee == null)
@@ -146,14 +146,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents an object of addresses that receive the transactions.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetZilliqaTransactionDetailsByTransactionIDRIRecipients> Recipients { get; set; }
+        public List<GetZilliqaTransactionDetailsByTransactionIDRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents an object of addresses that provide the funds.
         /// </summary>
         /// <value>Represents an object of addresses that provide the funds.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetZilliqaTransactionDetailsByTransactionIDRISenders> Senders { get; set; }
+        public List<GetZilliqaTransactionDetailsByTransactionIDRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time when this block was mined in Unix Timestamp.

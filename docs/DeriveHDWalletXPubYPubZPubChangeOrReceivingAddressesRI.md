@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Addresses** | [**List&lt;DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddresses&gt;**](DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddresses.md) | Represents the address details. | 
+**Addresses** | [**List&lt;DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddressesInner&gt;**](DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddressesInner.md) | Represents the address details. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

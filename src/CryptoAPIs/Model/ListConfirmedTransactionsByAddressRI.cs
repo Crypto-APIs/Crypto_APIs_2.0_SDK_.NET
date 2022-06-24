@@ -50,7 +50,7 @@ namespace CryptoAPIs.Model
         /// <param name="transactionId">Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. (required).</param>
         /// <param name="fee">fee (required).</param>
         /// <param name="blockchainSpecific">blockchainSpecific (required).</param>
-        public ListConfirmedTransactionsByAddressRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDRIRecipients> recipients = default(List<GetTransactionDetailsByTransactionIDRIRecipients>), List<GetTransactionDetailsByTransactionIDRISenders> senders = default(List<GetTransactionDetailsByTransactionIDRISenders>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListConfirmedTransactionsByAddressRIFee fee = default(ListConfirmedTransactionsByAddressRIFee), ListConfirmedTransactionsByAddressRIBS blockchainSpecific = default(ListConfirmedTransactionsByAddressRIBS))
+        public ListConfirmedTransactionsByAddressRI(int index = default(int), string minedInBlockHash = default(string), int minedInBlockHeight = default(int), List<GetTransactionDetailsByTransactionIDRIRecipientsInner> recipients = default(List<GetTransactionDetailsByTransactionIDRIRecipientsInner>), List<GetTransactionDetailsByTransactionIDRISendersInner> senders = default(List<GetTransactionDetailsByTransactionIDRISendersInner>), int timestamp = default(int), string transactionHash = default(string), string transactionId = default(string), ListConfirmedTransactionsByAddressRIFee fee = default(ListConfirmedTransactionsByAddressRIFee), ListConfirmedTransactionsByAddressRIBS blockchainSpecific = default(ListConfirmedTransactionsByAddressRIBS))
         {
             this.Index = index;
             // to ensure "recipients" is required (not null)
@@ -120,14 +120,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "recipients", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIRecipients> Recipients { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIRecipientsInner> Recipients { get; set; }
 
         /// <summary>
         /// Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
         /// </summary>
         /// <value>Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.</value>
         [DataMember(Name = "senders", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRISenders> Senders { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRISendersInner> Senders { get; set; }
 
         /// <summary>
         /// Defines the exact date/time in Unix Timestamp when this transaction was mined, confirmed or first seen in Mempool, if it is unconfirmed.

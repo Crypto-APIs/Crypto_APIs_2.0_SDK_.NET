@@ -46,7 +46,7 @@ namespace CryptoAPIs.Model
         /// <param name="version">Represents transaction version number. (required).</param>
         /// <param name="vin">Represents the transaction inputs. (required).</param>
         /// <param name="vout">Represents the transaction outputs. (required).</param>
-        public GetTransactionDetailsByTransactionIDFromCallbackRIBSL(long locktime = default(long), int size = default(int), int vSize = default(int), int version = default(int), List<GetTransactionDetailsByTransactionIDRIBSLVin> vin = default(List<GetTransactionDetailsByTransactionIDRIBSLVin>), List<GetTransactionDetailsByTransactionIDRIBSLVout> vout = default(List<GetTransactionDetailsByTransactionIDRIBSLVout>))
+        public GetTransactionDetailsByTransactionIDFromCallbackRIBSL(long locktime = default(long), int size = default(int), int vSize = default(int), int version = default(int), List<GetTransactionDetailsByTransactionIDRIBSLVinInner> vin = default(List<GetTransactionDetailsByTransactionIDRIBSLVinInner>), List<GetTransactionDetailsByTransactionIDRIBSLVoutInner> vout = default(List<GetTransactionDetailsByTransactionIDRIBSLVoutInner>))
         {
             this.Locktime = locktime;
             this.Size = size;
@@ -99,14 +99,14 @@ namespace CryptoAPIs.Model
         /// </summary>
         /// <value>Represents the transaction inputs.</value>
         [DataMember(Name = "vin", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSLVin> Vin { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSLVinInner> Vin { get; set; }
 
         /// <summary>
         /// Represents the transaction outputs.
         /// </summary>
         /// <value>Represents the transaction outputs.</value>
         [DataMember(Name = "vout", IsRequired = true, EmitDefaultValue = false)]
-        public List<GetTransactionDetailsByTransactionIDRIBSLVout> Vout { get; set; }
+        public List<GetTransactionDetailsByTransactionIDRIBSLVoutInner> Vout { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
