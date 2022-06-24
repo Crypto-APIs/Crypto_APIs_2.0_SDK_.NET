@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>Crypto APIs</id>
+    <id>CryptoAPIs</id>
     <version>1.6.0</version>
     <authors>Crypto APIs Team</authors>
     <owners>Crypto APIs Team</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <license type="expression">MIT</license>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_.NET</projectUrl>
-    <icon>logo.png</icon>
+    <iconUrl>https://cryptoapis.io/favicon.png</iconUrl>
     <description>the C# library for the Crypto APIs</description>
     <releaseNotes>
         New Endpoints:
@@ -17,16 +17,19 @@
         New Confirmed Token Transactions For Specific Amount
         New Confirmed Coins Transactions For Specific Amount
 
-
         Endpoint Updates:
 
         New attributes `transactionFee`, `amount` and `unit` were added to List Tokens Transfers By Transaction Hash and List Confirmed Tokens Transfers By Address endponts.
         XRP protocol and `feeMultiplier` attribute was added to Get Fee Recommendations.
         Attributes `transactionFee`, `amount` and `unit` were added to List Tokens Transfers By Transaction Hash and List Confirmed Tokens Transfers By Address
    </releaseNotes>
-   <readme>README.md</readme>
     <copyright>Copyright 2021</copyright>
     <tags>Crypto Blockchain</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="SampleDependency" version="1.0.0" />
+      </group>
+    </dependencies>
   </metadata>
   <files>
       <file src="README.md" target="" />
