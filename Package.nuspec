@@ -25,6 +25,7 @@
     </releaseNotes>
     <copyright>Crypto APIs 2018 - 2022</copyright>
     <tags>Crypto Blockchain</tags>
+    <readme>README.md</readme>
     <dependencies>
       <dependency id="SampleDependency" version="1.0" />
     </dependencies>
