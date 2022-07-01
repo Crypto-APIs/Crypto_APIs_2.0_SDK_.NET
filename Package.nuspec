@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <package >
   <metadata>
     <id>CryptoAPIs</id>
     <version>1.6.0</version>
     <authors>Crypto APIs Team</authors>
     <owners>Crypto APIs Team</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_.NET</projectUrl>
     <iconUrl>https://cryptoapis.io/favicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>the C# library for the Crypto APIs</description>
     <releaseNotes>
         New Endpoints:
@@ -22,13 +22,11 @@
         New attributes `transactionFee`, `amount` and `unit` were added to List Tokens Transfers By Transaction Hash and List Confirmed Tokens Transfers By Address endponts.
         XRP protocol and `feeMultiplier` attribute was added to Get Fee Recommendations.
         Attributes `transactionFee`, `amount` and `unit` were added to List Tokens Transfers By Transaction Hash and List Confirmed Tokens Transfers By Address
-   </releaseNotes>
-    <copyright>Copyright 2021</copyright>
+    </releaseNotes>
+    <copyright>Crypto APIs 2018 - 2022</copyright>
     <tags>Crypto Blockchain</tags>
     <dependencies>
-      <group targetFramework=".NETStandard2.1">
-        <dependency id="SampleDependency" version="1.0.0" />
-      </group>
+      <dependency id="SampleDependency" version="1.0" />
     </dependencies>
   </metadata>
   <files>
