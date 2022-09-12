@@ -1,6 +1,6 @@
 # CryptoAPIs.Api.TokensApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -33,7 +33,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -123,7 +123,7 @@ catch (ApiException e)
 
 <a name="listconfirmedtokenstransfersbyaddress"></a>
 # **ListConfirmedTokensTransfersByAddress**
-> ListConfirmedTokensTransfersByAddressR ListConfirmedTokensTransfersByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
+> ListConfirmedTokensTransfersByAddressR ListConfirmedTokensTransfersByAddress (string blockchain, string network, string address, string context = null, long? limit = null, long? offset = null)
 
 List Confirmed Tokens Transfers By Address
 
@@ -144,7 +144,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -155,8 +155,8 @@ namespace Example
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var address = 0x033ef6db9fbd0ee60e2931906b987fe0280471a0;  // string | Represents the public address, which is a compressed and shortened form of a public key.
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var limit = 50;  // long? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 
             try
             {
@@ -203,8 +203,8 @@ catch (ApiException e)
 | **network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
 | **address** | **string** | Represents the public address, which is a compressed and shortened form of a public key. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
-| **limit** | **int?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
-| **offset** | **int?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
+| **limit** | **long?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
+| **offset** | **long?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
 
 ### Return type
 
@@ -259,7 +259,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -353,7 +353,7 @@ catch (ApiException e)
 
 <a name="listtokenstransfersbytransactionhash"></a>
 # **ListTokensTransfersByTransactionHash**
-> ListTokensTransfersByTransactionHashR ListTokensTransfersByTransactionHash (string blockchain, string network, string transactionHash, string context = null, int? limit = null, int? offset = null)
+> ListTokensTransfersByTransactionHashR ListTokensTransfersByTransactionHash (string blockchain, string network, string transactionHash, string context = null, long? limit = null, long? offset = null)
 
 List Tokens Transfers By Transaction Hash
 
@@ -374,7 +374,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -385,8 +385,8 @@ namespace Example
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var transactionHash = 0xbe38781783b1b9d480219255ff98e20335a39e13979a66112efa33f05fde0a33;  // string | Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var limit = 50;  // long? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 
             try
             {
@@ -433,8 +433,8 @@ catch (ApiException e)
 | **network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
 | **transactionHash** | **string** | Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
-| **limit** | **int?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
-| **offset** | **int?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
+| **limit** | **long?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
+| **offset** | **long?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
 
 ### Return type
 
@@ -468,7 +468,7 @@ catch (ApiException e)
 
 <a name="listunconfirmedtokenstransfersbyaddress"></a>
 # **ListUnconfirmedTokensTransfersByAddress**
-> ListUnconfirmedTokensTransfersByAddressR ListUnconfirmedTokensTransfersByAddress (string blockchain, string network, string address, string context = null, int? limit = null, int? offset = null)
+> ListUnconfirmedTokensTransfersByAddressR ListUnconfirmedTokensTransfersByAddress (string blockchain, string network, string address, string context = null, long? limit = null, long? offset = null)
 
 List Unconfirmed Tokens Transfers By Address
 
@@ -489,7 +489,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -500,8 +500,8 @@ namespace Example
             var network = ropsten;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var address = 0x033ef6db9fbd0ee60e2931906b987fe0280471a0;  // string | Represents the public address, which is a compressed and shortened form of a public key.
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var limit = 50;  // int? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
-            var offset = 0;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
+            var limit = 50;  // long? | Defines how many items should be returned in the response per page basis. (optional)  (default to 50)
+            var offset = 0;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional)  (default to 0)
 
             try
             {
@@ -548,8 +548,8 @@ catch (ApiException e)
 | **network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
 | **address** | **string** | Represents the public address, which is a compressed and shortened form of a public key. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
-| **limit** | **int?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
-| **offset** | **int?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
+| **limit** | **long?** | Defines how many items should be returned in the response per page basis. | [optional] [default to 50] |
+| **offset** | **long?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0] |
 
 ### Return type
 

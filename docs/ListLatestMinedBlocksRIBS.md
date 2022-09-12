@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 **DsDifficulty** | **string** | Defines how difficult it is to mine the dsBlocks. | 
 **DsLeader** | **string** | Represents a part of the DS Committee which leads the consensus protocol for the epoch. | 
 **MicroBlocks** | **List&lt;string&gt;** |  | 
+**TotalCoins** | [**ListLatestMinedBlocksRIBSXTotalCoins**](ListLatestMinedBlocksRIBSXTotalCoins.md) |  | [optional] 
+**TotalFees** | [**ListLatestMinedBlocksRIBSXTotalFees**](ListLatestMinedBlocksRIBSXTotalFees.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

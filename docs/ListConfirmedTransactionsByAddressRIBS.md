@@ -15,7 +15,9 @@ Name | Type | Description | Notes
 **GasPrice** | [**ListConfirmedTransactionsByAddressRIBSBSCGasPrice**](ListConfirmedTransactionsByAddressRIBSBSCGasPrice.md) |  | 
 **GasUsed** | **string** | Represents the exact unit of gas that was used for the transaction. | 
 **InputData** | **string** | Represents additional information that is required for the transaction. | 
+**InternalTransactionsCount** | **int** | Represents the total internal transactions count. | 
 **Nonce** | **int** | Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. | 
+**TokenTransfersCount** | **int** | Represents the total token transfers count. | 
 **TransactionStatus** | **string** | String representation of the transaction status | 
 **BindingSig** | **string** | It is used to enforce balance of Spend and Output transfers, in order to prevent their replay across transactions. | 
 **ExpiryHeight** | **int** | Represents a block height after which the transaction will expire. | 

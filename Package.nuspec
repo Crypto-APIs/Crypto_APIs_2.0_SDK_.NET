@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CryptoAPIs</id>
-    <version>1.6.0</version>
+    <version>1.7.0</version>
     <authors>Crypto APIs Team</authors>
     <owners>Crypto APIs Team</owners>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
@@ -13,19 +13,51 @@
     <releaseNotes>
         New Endpoints:
 
-        New Confirmed Internal Transactions For Specific Amount
-        New Confirmed Token Transactions For Specific Amount
-        New Confirmed Coins Transactions For Specific Amount
+        Block Height Reached
+        Create Single Transaction Request From Address Without Fee Priority
+        Create Fungible Token Transaction Request From Address Without Fee Priority
+        List Synce dAddresses
+        Sync New HD Wallet (xPub, yPub, zPub)
+        Derive And Sync New Receiving Addresses
+        Derive And Sync New Change Addresses
+        Prepare A UTXO-Based Transaction From HD Wallet (xPub, yPub, zPub)
+        Prepare An Account-Based Transaction From HD Wallet (xPub, yPub, zPub)
+        Get Address Balance
+        Convert Bitcoin Cash Address
 
         Endpoint Updates:
 
-        New attributes `transactionFee`, `amount` and `unit` were added to List Tokens Transfers By Transaction Hash and List Confirmed Tokens Transfers By Address endponts.
-        XRP protocol and `feeMultiplier` attribute was added to Get Fee Recommendations.
-        Attributes `transactionFee`, `amount` and `unit` were added to List Tokens Transfers By Transaction Hash and List Confirmed Tokens Transfers By Address
+        List Latest Mined Blocks endpoint - `totalCoins` and `totalFees` are now blockchainSpecific attributes
+
+        TRON protocol has been added to the following endpoints:
+        List Supported Tokens
+        Validate Address
+        Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
+        Generate Deposit Address
+        List Deposit Addresses
+        Get Wallet Asset Details
+        List Wallet Transactions
+        Get Wallet Transaction Details By Transaction ID
+        New confirmed coins transactions
+        New confirmed coins transactions and each confirmation
+        Mined transaction
+        New Block
+        New confirmed tokens transactions
+        New confirmed tokens transactions and each confirmation
+        New confirmed internal transactions
+        New confirmed internal transactions and each confirmation
+
+        Prepare An Account-Based Transaction From HD Wallet (xPub, yPub, zPub) path has been changed to - /blockchain-data/${blockchain}/${network}/transactions/prepare-account-based-transaction
+        Prepare A UTXO-Based Transaction From HD Wallet (xPub, yPub, zPub) path has been changed to - /blockchain-data/${blockchain}/${network}/transactions/prepare-utxo-transaction
+
+        Ethereum Goerli has replaced Ropsten in all endpoints
+
+        Removed Endpoint:
+
+        List all unconfirmed transactions
     </releaseNotes>
     <copyright>Crypto APIs 2018 - 2022</copyright>
     <tags>Crypto Blockchain</tags>
-    <readme>README.md</readme>
     <dependencies>
       <dependency id="SampleDependency" version="1.0" />
     </dependencies>

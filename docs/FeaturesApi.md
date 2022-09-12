@@ -1,10 +1,11 @@
 # CryptoAPIs.Api.FeaturesApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**BroadcastLocallySignedTransaction**](FeaturesApi.md#broadcastlocallysignedtransaction) | **POST** /blockchain-tools/{blockchain}/{network}/transactions/broadcast | Broadcast Locally Signed Transaction |
+| [**ConvertBitcoinCashAddress**](FeaturesApi.md#convertbitcoincashaddress) | **POST** /blockchain-tools/{blockchain}/{network}/address/convert | Convert Bitcoin Cash Address |
 | [**DecodeRawTransactionHex**](FeaturesApi.md#decoderawtransactionhex) | **POST** /blockchain-tools/{blockchain}/{network}/decode-raw-transaction | Decode Raw Transaction Hex |
 | [**DecodeXAddress**](FeaturesApi.md#decodexaddress) | **GET** /blockchain-tools/{blockchain}/{network}/decode-x-address/{xAddress} | Decode X-Address |
 | [**DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses**](FeaturesApi.md#derivehdwalletxpubypubzpubchangeorreceivingaddresses) | **GET** /blockchain-tools/{blockchain}/{network}/hd/{extendedPublicKey}/addresses/derive-address | Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses |
@@ -37,7 +38,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -126,6 +127,117 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="convertbitcoincashaddress"></a>
+# **ConvertBitcoinCashAddress**
+> ConvertBitcoinCashAddressR ConvertBitcoinCashAddress (string blockchain, string network, string context = null, ConvertBitcoinCashAddressRB convertBitcoinCashAddressRB = null)
+
+Convert Bitcoin Cash Address
+
+Through this endpoint customers will be able to convert addresses for the BCH (Bitcoin Cash) protocol from BCH legacy to cash address and vice versa.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CryptoAPIs.Api;
+using CryptoAPIs.Client;
+using CryptoAPIs.Model;
+
+namespace Example
+{
+    public class ConvertBitcoinCashAddressExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://rest.cryptoapis.io";
+            // Configure API key authorization: ApiKey
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new FeaturesApi(config);
+            var blockchain = bitcoin-cash;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+            var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+            var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
+            var convertBitcoinCashAddressRB = new ConvertBitcoinCashAddressRB(); // ConvertBitcoinCashAddressRB |  (optional) 
+
+            try
+            {
+                // Convert Bitcoin Cash Address
+                ConvertBitcoinCashAddressR result = apiInstance.ConvertBitcoinCashAddress(blockchain, network, context, convertBitcoinCashAddressRB);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling FeaturesApi.ConvertBitcoinCashAddress: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ConvertBitcoinCashAddressWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Convert Bitcoin Cash Address
+    ApiResponse<ConvertBitcoinCashAddressR> response = apiInstance.ConvertBitcoinCashAddressWithHttpInfo(blockchain, network, context, convertBitcoinCashAddressRB);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FeaturesApi.ConvertBitcoinCashAddressWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **blockchain** | **string** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
+| **convertBitcoinCashAddressRB** | [**ConvertBitcoinCashAddressRB**](ConvertBitcoinCashAddressRB.md) |  | [optional]  |
+
+### Return type
+
+[**ConvertBitcoinCashAddressR**](ConvertBitcoinCashAddressR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | The request has been successful. |  -  |
+| **400** | 400 |  -  |
+| **401** | 401 |  -  |
+| **402** | You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email. |  -  |
+| **403** | 403 |  -  |
+| **409** | The data provided seems to be invalid. |  -  |
+| **415** | The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;. |  -  |
+| **422** | Your request body for POST requests must have a structure of { data: { item: [...properties] } } |  -  |
+| **429** | The request limit has been reached. There can be maximum {requests} requests per {seconds} second(s) made. Please contact our team via email if you need more or upgrade your plan. |  -  |
+| **500** | An unexpected server error has occurred, we are working to fix this. Please try again later and in case it occurs again please report it to our team via email. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="decoderawtransactionhex"></a>
 # **DecodeRawTransactionHex**
 > DecodeRawTransactionHexR DecodeRawTransactionHex (string blockchain, string network, string context = null, DecodeRawTransactionHexRB decodeRawTransactionHexRB = null)
@@ -149,7 +261,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -260,7 +372,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -350,7 +462,7 @@ catch (ApiException e)
 
 <a name="derivehdwalletxpubypubzpubchangeorreceivingaddresses"></a>
 # **DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses**
-> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses (string blockchain, string extendedPublicKey, string network, string context = null, string addressFormat = null, int? addressesCount = null, bool? isChange = null, int? startIndex = null)
+> DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR DeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses (string blockchain, string extendedPublicKey, string network, string context = null, string addressFormat = null, long? addressesCount = null, bool? isChange = null, long? startIndex = null)
 
 Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
 
@@ -371,7 +483,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -383,9 +495,9 @@ namespace Example
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
             var addressFormat = p2sh;  // string | Represents the format of the address. (optional) 
-            var addressesCount = 2;  // int? | Represents the addresses count. (optional) 
+            var addressesCount = 2;  // long? | Represents the addresses count. (optional) 
             var isChange = true;  // bool? | Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. (optional) 
-            var startIndex = 3;  // int? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional) 
+            var startIndex = 3;  // long? | The starting index of the response items, i.e. where the response should start listing the returned items. (optional) 
 
             try
             {
@@ -433,9 +545,9 @@ catch (ApiException e)
 | **network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
 | **addressFormat** | **string** | Represents the format of the address. | [optional]  |
-| **addressesCount** | **int?** | Represents the addresses count. | [optional]  |
+| **addressesCount** | **long?** | Represents the addresses count. | [optional]  |
 | **isChange** | **bool?** | Defines if the specific address is a change or deposit address. If the value is True - it is a change address, if it is False - it is a Deposit address. | [optional]  |
-| **startIndex** | **int?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional]  |
+| **startIndex** | **long?** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional]  |
 
 ### Return type
 
@@ -490,7 +602,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -603,7 +715,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -715,7 +827,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -826,7 +938,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -936,7 +1048,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

@@ -9,8 +9,6 @@ Name | Type | Description | Notes
 **PreviousBlockHash** | **string** | Represents the hash of the previous block, also known as the parent block. | 
 **Timestamp** | **int** | Defines the exact date/time when this block was mined in Unix Timestamp. | 
 **TransactionsCount** | **int** | Represents the total number of all transactions as part of this block. | 
-**TotalCoins** | [**ListLatestMinedBlocksRITotalCoins**](ListLatestMinedBlocksRITotalCoins.md) |  | 
-**TotalFees** | [**ListLatestMinedBlocksRITotalFees**](ListLatestMinedBlocksRITotalFees.md) |  | 
 **BlockchainSpecific** | [**ListLatestMinedBlocksRIBS**](ListLatestMinedBlocksRIBS.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

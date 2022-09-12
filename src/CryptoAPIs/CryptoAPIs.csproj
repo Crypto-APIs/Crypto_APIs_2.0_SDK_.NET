@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>CryptoAPIs</AssemblyName>
     <PackageId>CryptoAPIs</PackageId>
@@ -12,7 +12,7 @@
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>CryptoAPIs</RootNamespace>
-    <Version>1.6.0</Version>
+    <Version>1.7.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\CryptoAPIs.xml</DocumentationFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_.NET.git</RepositoryUrl>

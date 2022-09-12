@@ -1,6 +1,6 @@
 # CryptoAPIs.Api.CallbackDataApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -32,7 +32,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -144,7 +144,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -256,7 +256,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -265,7 +265,7 @@ namespace Example
             var apiInstance = new CallbackDataApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var blockHeight = "blockHeight_example";  // string | Numeric representation of the block height
+            var blockHeight = 673852;  // string | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
@@ -311,7 +311,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **blockchain** | **string** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
-| **blockHeight** | **string** | Numeric representation of the block height |  |
+| **blockHeight** | **string** | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
 
 ### Return type
@@ -368,7 +368,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -377,7 +377,7 @@ namespace Example
             var apiInstance = new CallbackDataApi(config);
             var blockchain = bitcoin;  // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
             var network = testnet;  // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-            var transactionId = 8888f6c8168ff69aaf6438ab185c690e8c76c63e5f9c472c1c86f08406ea74f2;  // string | String identifier of the transaction
+            var transactionId = 8888f6c8168ff69aaf6438ab185c690e8c76c63e5f9c472c1c86f08406ea74f2;  // string | Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
 
             try
@@ -423,7 +423,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **blockchain** | **string** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **string** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
-| **transactionId** | **string** | String identifier of the transaction |  |
+| **transactionId** | **string** | Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
 
 ### Return type

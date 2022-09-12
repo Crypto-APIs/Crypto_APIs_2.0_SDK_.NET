@@ -1,6 +1,6 @@
 # CryptoAPIs.Api.GeneratingApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -29,7 +29,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

@@ -9,11 +9,11 @@ Name | Type | Description | Notes
 **VSize** | **int** | Represents the virtual size of this transaction. | 
 **_Version** | **int** | Defines the version of the transaction. | 
 **Vin** | [**List&lt;GetTransactionDetailsByTransactionIDRIBSZVinInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVinInner.md) | Object Array representation of transaction inputs | 
-**Vout** | [**List&lt;GetTransactionDetailsByTransactionIDRIBSZVoutInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVoutInner.md) | Object Array representation of transaction outputs | 
-**Contract** | **string** | Represents the specific transaction contract | 
+**Vout** | [**List&lt;GetTransactionDetailsByTransactionIDFromCallbackRIBSZVoutInner&gt;**](GetTransactionDetailsByTransactionIDFromCallbackRIBSZVoutInner.md) | Object Array representation of transaction outputs | 
+**Contract** | **string** | Represents the specific transaction contract. | 
 **GasLimit** | **int** | Represents the maximum amount of gas allowed in the block in order to determine how many transactions it can fit. | 
-**GasPrice** | [**GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2GasPrice**](GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2GasPrice.md) |  | 
-**GasUsed** | **int** | Defines how much of the gas for the block has been used. | 
+**GasPrice** | **string** | Represents the price offered to the miner to purchase this amount of gas. | 
+**GasUsed** | **string** | Represents the exact unit of gas that was used for the transaction. | 
 **InputData** | **string** | Represents additional information that is required for the transaction. | 
 **Nonce** | **int** | Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. | 
 **TransactionStatus** | **string** | Represents the status of this transaction. | 
@@ -35,6 +35,16 @@ Name | Type | Description | Notes
 **Status** | **string** | Defines the status of the transaction. | 
 **Type** | **string** | Defines the type of the transaction. | 
 **Value** | [**GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue**](GetTransactionDetailsByTransactionIDFromCallbackRIBSXValue.md) |  | 
+**Amount** | **string** | Representation of the amount value. | 
+**BandwidthUsed** | [**GetTransactionDetailsByTransactionIDFromCallbackRIBSTBandwidthUsed**](GetTransactionDetailsByTransactionIDFromCallbackRIBSTBandwidthUsed.md) |  | 
+**EnergyUsed** | [**GetTransactionDetailsByTransactionIDFromCallbackRIBSTEnergyUsed**](GetTransactionDetailsByTransactionIDFromCallbackRIBSTEnergyUsed.md) |  | 
+**HasInternalTransactions** | **bool** | Defines if the transaction includes internal transactions (true) or not (false). | 
+**HasTokenTransfers** | **string** | Defines if the transaction includes token transfers (true) or not (false). | 
+**Input** | **string** | Represents additional information that is required for the transaction. | 
+**Recipients** | **string** | Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. | 
+**Senders** | **string** | Represents a list of sender addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list. | 
+**Gas** | **string** | Represents the price offered to the miner to purchase this amount of gas. | 
+**Txid** | **string** | Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

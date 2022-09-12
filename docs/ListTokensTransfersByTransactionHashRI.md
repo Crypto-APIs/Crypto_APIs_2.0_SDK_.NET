@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ContractAddress** | **string** | Represents the contract address of the token, which controls its logic. It is not the address that holds the tokens. | 
-**MinedInBlockHeight** | **int** | Defines the block height in which this transaction was confirmed/mined. | 
+**MinedInBlockHeight** | **long** | Defines the block height in which this transaction was confirmed/mined. | 
 **RecipientAddress** | **string** | Defines the address to which the recipient receives the transferred tokens. | 
 **SenderAddress** | **string** | Defines the address from which the sender transfers tokens. | 
 **TokenDecimals** | **int** | Defines the decimals of the token, i.e. the number of digits that come after the decimal coma of the token. | 

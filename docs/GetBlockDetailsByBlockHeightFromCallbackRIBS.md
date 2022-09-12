@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Bits** | **string** | Represents a specific sub-unit of Zcash. Bits have two-decimal precision | 
 **Chainwork** | **string** | Represents a hexadecimal number of all the hashes necessary to produce the current chain. E.g., when converting 0000000000000000000000000000000000000000000086859f7a841475b236fd to a decimal you get 635262017308958427068157 hashes, or 635262 exahashes. | 
-**Difficulty** | **string** | Defines how difficult it is for a specific miner to mine the block. | 
+**Difficulty** | **string** | Represents a mathematical value of how hard it is to find a valid hash for this block. | 
 **MerkleRoot** | **string** | Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. | 
-**Nonce** | **string** | Represents a random value that can be adjusted to satisfy the proof of work | 
+**Nonce** | **string** | Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. | 
 **Size** | **int** | Represents the total size of the block in Bytes. | 
 **StrippedSize** | **int** | Defines the numeric representation of the block size excluding the witness data. | 
 **_Version** | **int** | Represents the transaction version number. | 
@@ -16,18 +16,21 @@ Name | Type | Description | Notes
 **Weight** | **int** | Represents a measurement to compare the size of different transactions to each other in proportion to the block size limit. | 
 **Strippedsize** | **int** | Defines the numeric representation of the block size excluding the witness data. | 
 **ExtraData** | **string** | Represents any data that can be included by the miner in the block. | 
-**GasLimit** | **int** | Represents the maximum amount of gas allowed in the block in order to determine how many transactions it can fit. | 
-**GasUsed** | **int** | Defines how much of the gas for the block has been used. | 
+**GasLimit** | **string** | Represents the amount of gas used by this specific transaction alone. | 
+**GasUsed** | **string** | Represents the exact unit of gas that was used for the transaction. | 
 **MinedInSeconds** | **int** | Specifies the amount of time required for the block to be mined in seconds. | 
 **Sha3Uncles** | **string** | Defines the combined hash of all uncles for a given parent. | 
 **TotalDifficulty** | **string** | Defines the total difficulty of the chain until this block, i.e. how difficult it is for a specific miner to mine a new block. | 
-**Uncles** | **List&lt;string&gt;** |  | [optional] 
+**Uncles** | **List&lt;string&gt;** |  | 
 **DsBlock** | **int** | Represents the Directory Service block which contains metadata about the miners who participate in the consensus protocol. | 
 **DsDifficulty** | **string** | Defines how difficult it is to mine the dsBlocks. | 
 **DsLeader** | **string** | Represents a part of the DS Committee which leads the consensus protocol for the epoch. | 
 **MicroBlocks** | **List&lt;string&gt;** |  | 
 **TotalCoins** | [**GetLatestMinedXRPRippleBlockRITotalCoins**](GetLatestMinedXRPRippleBlockRITotalCoins.md) |  | 
 **TotalFees** | [**GetLatestMinedXRPRippleBlockRITotalFees**](GetLatestMinedXRPRippleBlockRITotalFees.md) |  | 
+**BandwidthUsed** | **string** | Represents the bandwidth used for the transaction. | 
+**BurnedTrx** | **string** | Represents the block burned TRX. | 
+**EnergyUsed** | **string** | Representats the used energy for the transaction. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **_Version** | **int** | Defines the version of the transaction. | 
 **VersionGroupId** | **string** | Represents the transaction version group ID | 
 **Vin** | [**List&lt;GetTransactionDetailsByTransactionIDRIBSZVinInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVinInner.md) | Object Array representation of transaction inputs | 
-**Vout** | [**List&lt;GetTransactionDetailsByTransactionIDRIBSZVoutInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVoutInner.md) | Object Array representation of transaction outputs | 
+**Vout** | [**List&lt;GetTransactionDetailsByTransactionIDFromCallbackRIBSZVoutInner&gt;**](GetTransactionDetailsByTransactionIDFromCallbackRIBSZVoutInner.md) | Object Array representation of transaction outputs | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

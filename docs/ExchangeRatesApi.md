@@ -1,6 +1,6 @@
 # CryptoAPIs.Api.ExchangeRatesApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -40,7 +40,7 @@ namespace Example
             var fromAssetSymbol = btc;  // string | Defines the base asset symbol to get a rate for.
             var toAssetSymbol = usd;  // string | Defines the relation asset symbol in which the base asset rate will be displayed.
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var calculationTimestamp = 1635514425;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional) 
+            var calculationTimestamp = 1635514425;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. Oldest possible timestamp is 30 days. (optional) 
 
             try
             {
@@ -86,7 +86,7 @@ catch (ApiException e)
 | **fromAssetSymbol** | **string** | Defines the base asset symbol to get a rate for. |  |
 | **toAssetSymbol** | **string** | Defines the relation asset symbol in which the base asset rate will be displayed. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
-| **calculationTimestamp** | **int?** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional]  |
+| **calculationTimestamp** | **int?** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. Oldest possible timestamp is 30 days. | [optional]  |
 
 ### Return type
 
@@ -141,7 +141,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://rest.cryptoapis.io/v2";
+            config.BasePath = "https://rest.cryptoapis.io";
             // Configure API key authorization: ApiKey
             config.AddApiKey("x-api-key", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -151,7 +151,7 @@ namespace Example
             var fromAssetId = 5b1ea92e584bf50020130612;  // string | Defines the base asset Reference ID to get a rate for.
             var toAssetId = 5b1ea92e584bf50020130615;  // string | Defines the relation asset Reference ID in which the base asset rate will be displayed.
             var context = yourExampleString;  // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user. (optional) 
-            var calculationTimestamp = 1618577849;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. (optional) 
+            var calculationTimestamp = 1618577849;  // int? | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. Oldest possible timestamp is 30 days. (optional) 
 
             try
             {
@@ -197,7 +197,7 @@ catch (ApiException e)
 | **fromAssetId** | **string** | Defines the base asset Reference ID to get a rate for. |  |
 | **toAssetId** | **string** | Defines the relation asset Reference ID in which the base asset rate will be displayed. |  |
 | **context** | **string** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]  |
-| **calculationTimestamp** | **int?** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional]  |
+| **calculationTimestamp** | **int?** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. Oldest possible timestamp is 30 days. | [optional]  |
 
 ### Return type
 
